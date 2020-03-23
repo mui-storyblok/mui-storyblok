@@ -8,7 +8,7 @@ const MuiTypography = lazy(() => import('../MuiTypography/MuiTypography'));
 const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
 const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
 const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHerf = lazy(() => import('../MuiButtonHerf/MuiButtonHerf'));
+const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
 const MuiMenu = lazy(() => import('../MuiMenu/MuiMenu'));
 
 const MuiAppBar = ({
@@ -24,7 +24,7 @@ const MuiAppBar = ({
     MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiButtonRedirect,
-    MuiButtonHerf,
+    MuiButtonHref,
     MuiMenu,
   };
 
@@ -87,7 +87,7 @@ MuiAppBar.propTypes = {
     MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiButtonRedirect,
-    MuiButtonHerf,
+    MuiButtonHref,
     MuiMenu,
    */
   content: PropTypes.arrayOf(PropTypes.shape({

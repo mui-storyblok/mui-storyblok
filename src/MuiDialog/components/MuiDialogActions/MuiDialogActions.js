@@ -7,7 +7,7 @@ const MuiIconButtonRedirect = lazy(() => import('../../../MuiIconButtonRedirect/
 const MuiIconButtonHref = lazy(() => import('../../../MuiIconButtonHref/MuiIconButtonHref'));
 const MuiIconButtonDownload = lazy(() => import('../../../MuiIconButtonDownload/MuiIconButtonDownload'));
 const MuiButtonRedirect = lazy(() => import('../../../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHerf = lazy(() => import('../../../MuiButtonHerf/MuiButtonHerf'));
+const MuiButtonHref = lazy(() => import('../../../MuiButtonHref/MuiButtonHref'));
 const MuiButtonDownload = lazy(() => import('../../../MuiButtonDownload/MuiButtonDownload'));
 
 const MuiDialogActions = ({
@@ -19,7 +19,7 @@ const MuiDialogActions = ({
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiButtonRedirect,
-    MuiButtonHerf,
+    MuiButtonHref,
     MuiButtonDownload,
   };
 

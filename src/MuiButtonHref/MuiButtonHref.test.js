@@ -2,18 +2,18 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import MuiButtonHerf from './MuiButtonHerf';
+import MuiButtonHref from './MuiButtonHref';
 
 function setup() {
   const props = {
     herf: 'google.com',
   };
-  const comp = shallow(<MuiButtonHerf {...props} />);
+  const comp = shallow(<MuiButtonHref {...props} />);
   return { comp, props };
 }
 
-describe('<MuiButtonHerf />', () => {
-  it('renders MuiButtonHerf', () => {
+describe('<MuiButtonHref />', () => {
+  it('renders MuiButtonHref', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
@@ -33,7 +33,7 @@ describe('<MuiButtonHerf />', () => {
     const { props } = setup();
     const tree = renderer.create((
       <MemoryRouter>
-        <MuiButtonHerf {...props} />
+        <MuiButtonHref {...props} />
       </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();

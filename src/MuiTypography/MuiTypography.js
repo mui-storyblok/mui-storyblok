@@ -11,7 +11,7 @@ const MuiIconButtonDownload = lazy(() => import('../MuiIconButtonDownload/MuiIco
 const MuiIconButtonDialog = lazy(() => import('../MuiIconButtonDialog/MuiIconButtonDialog'));
 
 const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHerf = lazy(() => import('../MuiButtonHerf/MuiButtonHerf'));
+const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
 const MuiButtonDownload = lazy(() => import('../MuiButtonDownload/MuiButtonDownload'));
 const MuiButtonDialog = lazy(() => import('../MuiButtonDialog/MuiButtonDialog'));
 
@@ -38,7 +38,7 @@ export const MuiTypography = ({
     MuiIconButtonDownload,
     MuiIconButtonDialog,
     MuiButtonRedirect,
-    MuiButtonHerf,
+    MuiButtonHref,
     MuiButtonDownload,
     MuiButtonDialog,
     MuiTooltip,

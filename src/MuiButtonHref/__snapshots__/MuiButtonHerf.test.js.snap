@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiButtonHerf /> snapshot 1`] = `
+exports[`<MuiButtonHref /> snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-4 MuiButton-textSecondary"
   disabled={false}
