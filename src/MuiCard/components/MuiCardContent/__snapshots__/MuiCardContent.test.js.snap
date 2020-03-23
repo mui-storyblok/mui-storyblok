@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiCardContent /> snapshot 1`] = `
+<div
+  className="MuiCardContent-root makeStyles-root-3"
+>
+  <div />
+</div>
+`;
