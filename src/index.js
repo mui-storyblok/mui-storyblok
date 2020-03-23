@@ -1,22 +1,35 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { BrowserRouter } from 'react-router-dom';
+import styles from './styles.css';
 
-import styles from './styles.css'
+import StoryBlokPage from './StoryBlokPage/StoryBlokPage';
+
 
 export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
   render() {
     const {
-      text
-    } = this.props
+      theme,
+    } = this.props;
+
+    const muiTheme = createMuiTheme(theme);
 
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
+      <MuiThemeProvider theme={muiTheme}>
+        <BrowserRouter>
+          <StoryBlokPage />
+        </BrowserRouter>
+      </MuiThemeProvider>
+    );
   }
 }
+
+ExampleComponent.propTypes = {
+  theme: PropTypes.shape(),
+
+};
+
+ExampleComponent.defaultProps = {
+  theme: {},
+};
