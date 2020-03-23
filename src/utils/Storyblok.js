@@ -32,6 +32,19 @@ class StoryBlock {
       throw new Error(err);
     }
   }
+
+  // takes a array of strings in key value pars and returns mui with style strings
+  // ex ['color: black'] = { color: 'black' }
+  static arrayToMuiStyles(array = [], defaultStyles = {}, styleKey = 'root') {
+    const stylesObj = {};
+    array.forEach((pair) => {
+      const [key, value] = pair.split(': ');
+      stylesObj[key.trim()] = value.trim();
+    });
+
+    const useStyles = makeStyles({ [styleKey]: { ...stylesObj, ...defaultStyles } });
+    return useStyles();
+  }
 }
 
 export default StoryBlock;
