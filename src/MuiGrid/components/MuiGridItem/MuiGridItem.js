@@ -42,6 +42,7 @@ const MuiGridItem = ({
   return (
     <Grid
       item
+      container
       alignContent={alignContent}
       alignItems={alignItems}
       className={styles.root}
