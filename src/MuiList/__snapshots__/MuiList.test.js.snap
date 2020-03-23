@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiList /> snapshot 1`] = `
+<ul
+  className="MuiList-root makeStyles-root-3 MuiList-padding"
+>
+  <div />
+</ul>
+`;

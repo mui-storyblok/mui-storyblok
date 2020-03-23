@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
+<div
+  className="MuiListItemSecondaryAction-root makeStyles-root-3"
+>
+  <div />
+</div>
+`;
