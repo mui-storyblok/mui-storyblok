@@ -8,7 +8,7 @@ import Storyblok from '../utils/Storyblok';
 import Blok from './components/Blok/Blok';
 import styles from './StoryBlokPage.module.scss';
 
-class StoryBlokPage extends Component {
+export class StoryBlokPage extends Component {
   state = {
     story: [],
     loading: true,
@@ -20,6 +20,16 @@ class StoryBlokPage extends Component {
   }
 
   async componentDidMount() {
+    await this.getPage();
+  }
+
+  async componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      await this.getPage();
+    }
+  }
+
+  getPage = async () => {
     try {
       const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
       const story = await Storyblok.get(route);
@@ -27,19 +37,7 @@ class StoryBlokPage extends Component {
     } catch (err) {
       await this.pageNotFound();
     }
-  }
-
-  async componentDidUpdate(prevProps) {
-    if (prevProps.location.pathname !== this.props.location.pathname) {
-      try {
-        const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
-        const story = await Storyblok.get(route);
-        this.setStory(story);
-      } catch (err) {
-        await this.pageNotFound();
-      }
-    }
-  }
+  };
 
   pageNotFound = async () => {
     try {
@@ -56,7 +54,7 @@ class StoryBlokPage extends Component {
     // scroll to top of page when setting a new story
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    this.setState({ loading: false, error: '', story });
+    this.setState({ loading: false, story });
   };
 
   render() {
