@@ -90,7 +90,7 @@ MuiGrid.propTypes = {
    */
   wrap: PropTypes.string,
   /**
-   * Content passed to MuiGrid to render
+   * Content passed to render
    * components: MuiGridItem, MuiAppBar
    */
   content: PropTypes.arrayOf(PropTypes.shape({

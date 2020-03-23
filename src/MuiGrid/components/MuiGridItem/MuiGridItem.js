@@ -81,7 +81,7 @@ MuiGridItem.propTypes = {
   alignItems: PropTypes.string,
   /**
    * stroyblok multiselect of css classes
-   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /*
