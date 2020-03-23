@@ -1,6 +1,6 @@
 import React, { createElement, lazy, Suspense } from 'react';
-import Storyblok from 'utils/Storyblok';
 import PropTypes from 'prop-types';
+import Storyblok from '../utils/Storyblok';
 
 const DropDownMenu = lazy(() => import('./components/DropDownMenu/DropDownMenu'));
 const MuiMenuItem = lazy(() => import('./components/MuiMenuItem/MuiMenuItem'));
