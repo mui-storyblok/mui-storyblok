@@ -6,11 +6,12 @@ import styles from './styles.css';
 
 import StoryBlokPage from './StoryBlokPage/StoryBlokPage';
 
-
-export default class ExampleComponent extends Component {
+export default class MuiStoryblok extends Component {
   render() {
     const {
       theme,
+      accessToken,
+      version,
     } = this.props;
 
     const muiTheme = createMuiTheme(theme);
@@ -18,18 +19,27 @@ export default class ExampleComponent extends Component {
     return (
       <MuiThemeProvider theme={muiTheme}>
         <BrowserRouter>
-          <StoryBlokPage />
+          <StoryBlokPage
+            accessToken={accessToken}
+            version={version}
+          />
         </BrowserRouter>
       </MuiThemeProvider>
     );
   }
 }
 
-ExampleComponent.propTypes = {
+MuiStoryblok.propTypes = {
+  /** theme for mui */
   theme: PropTypes.shape(),
+  /** storyblok prop  'production' ? 'published' : 'draft' */
+  version: PropTypes.string,
 
+  /** acess key from storyblok you can make them in storyblok settings */
+  accessToken: PropTypes.string.isRequired,
 };
 
-ExampleComponent.defaultProps = {
+MuiStoryblok.defaultProps = {
   theme: {},
+  version: 'draft',
 };
