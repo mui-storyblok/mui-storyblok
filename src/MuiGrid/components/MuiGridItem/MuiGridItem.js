@@ -9,21 +9,23 @@ const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'))
 const MuiMenu = lazy(() => import('../../../MuiMenu/MuiMenu'));
 const MuiIcon = lazy(() => import('../../../MuiIcon/MuiIcon'));
 const MuiExpansionPanel = lazy(() => import('../../../MuiExpansionPanel/MuiExpansionPanel'));
-// const MuiList = lazy(() => import('../../../MuiList/MuiList'));
+const MuiList = lazy(() => import('../../../MuiList/MuiList'));
 
 const MuiGridItem = ({
-  sizeGrid,
-  content,
+  alignContent,
+  alignItems,
+  rootClass,
   direction,
   justify,
-  alignItems,
-  xl,
   lg,
   md,
   sm,
-  xs,
+  wrap,
   spacing,
-  rootClass,
+  xs,
+  xl,
+  content,
+  sizeGrid,
 }) => {
   const components = {
     MuiButtonRedirect,
@@ -32,25 +34,26 @@ const MuiGridItem = ({
     MuiMenu,
     MuiIcon,
     MuiExpansionPanel,
-    // MuiList,
+    MuiList,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
 
   return (
     <Grid
-      className={styles.root}
-      container
       item
+      alignContent={alignContent}
+      alignItems={alignItems}
+      className={styles.root}
       direction={direction}
       justify={justify}
-      alignItems={alignItems}
-      spacing={(Number(spacing))}
-      xl={sizeGrid(xl)}
       lg={sizeGrid(lg)}
       md={sizeGrid(md)}
       sm={sizeGrid(sm)}
+      wrap={wrap}
+      spacing={Number(spacing)}
       xs={sizeGrid(xs)}
+      xl={sizeGrid(xl)}
     >
       <Suspense fallback={<div />}>
         {content.map((item, index) => createElement(
@@ -65,45 +68,96 @@ const MuiGridItem = ({
 export default MuiGridItem;
 
 MuiGridItem.propTypes = {
-  // mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  direction: PropTypes.string,
-  // mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
-  justify: PropTypes.string,
-  // mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'
+  /**
+   * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'
+   * Defines the align-content style property. It's applied for all screen sizes.
+   */
+  alignContent: PropTypes.string,
+  /**
+   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'
+   * Defines the align-items style property. It's applied for all screen sizes.
+   */
   alignItems: PropTypes.string,
-  // mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-  spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  // mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  xl: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  // mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  lg: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  // mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  md: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  // mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  sm: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  // mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-  xs: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-
-  /** prop from parent compoent to render corect type for grid size */
-  sizeGrid: PropTypes.func.isRequired,
-
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  /*
+  * mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
+  * Defines the flex-direction style property. It is applied for all screen sizes.
+  */
+  direction: PropTypes.string,
+  /**
+   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
+   * Defines the justify-content style property. It is applied for all screen sizes.
+   */
+  justify: PropTypes.string,
+  /**
+   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   */
+  lg: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  /**
+   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   */
+  md: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  /**
+   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   */
+  sm: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  /**
+   * mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+   * Defines the space between the type item component. It can only be used on a type container component.
+   */
+  spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * mui prop: 'nowrap' | 'wrap' | 'wrap-reverse'
+   * Defines the flex-wrap style property. It's applied for all screen sizes.
+   */
+  wrap: PropTypes.string,
+  /**
+   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   */
+  xs: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  /**
+   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   */
+  xl: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 
+  /**
+   * Content passed to MuiGrid to render
+   * components: MuiButtonRedirect,
+    MuiCard,
+    MuiTypography,
+    MuiMenu,
+    MuiIcon,
+    MuiExpansionPanel,
+    MuiList
+   */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
+
+  /** prop passed down from parent not in storyblok */
+  sizeGrid: PropTypes.func.isRequired,
 };
 
 MuiGridItem.defaultProps = {
+  alignContent: 'stretch',
+  alignItems: 'center',
   rootClass: [],
-  xl: false,
+  direction: 'row',
+  justify: 'center',
   lg: false,
   md: false,
   sm: false,
+  spacing: '2',
+  wrap: 'wrap',
+  xl: false,
   xs: false,
-  direction: 'row',
-  justify: 'center',
-  alignItems: 'center',
-  spacing: 2,
 };
