@@ -32,7 +32,7 @@ export class StoryBlokPage extends Component {
   getPage = async () => {
     try {
       const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
-      const story = await Storyblok.get(route);
+      const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
       this.setStory(story);
     } catch (err) {
       await this.pageNotFound();
@@ -41,7 +41,7 @@ export class StoryBlokPage extends Component {
 
   pageNotFound = async () => {
     try {
-      const story = await Storyblok.get('page-not-found');
+      const story = await Storyblok.get('page-not-found', this.props.accessToken, this.props.version);
       this.setStory(story);
     } catch (err) {
       this.setState({
@@ -86,6 +86,8 @@ export class StoryBlokPage extends Component {
 export default withRouter(StoryBlokPage);
 
 StoryBlokPage.propTypes = {
+  accessToken: PropTypes.string.isRequired,
+  version: PropTypes.string.isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string,
   }).isRequired,
