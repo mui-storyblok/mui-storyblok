@@ -1,25 +1,15 @@
 import StoryblokClient from 'storyblok-js-client';
 import { makeStyles } from '@material-ui/core/styles';
 
-const accessToken = () => {
-  if (process.env.REACT_APP_ENV === 'production') {
-    return '4KWRQxfTx3WVCmJC13fXUwtt';
-  }
-
-  if (process.env.REACT_APP_ENV === 'stage') {
-    return 'OusGlkeBv0HLadri7lZZtQtt';
-  }
-
-  return 'kC3FAVf9oA1KtsFLtRdzDgtt';
+const storyblokClient = (accessToken) => {
+  return new StoryblokClient({
+    accessToken,
+    cache: {
+      clear: 'auto',
+      type: 'memory',
+    },
+  });
 };
-
-const client = new StoryblokClient({
-  accessToken: accessToken(),
-  cache: {
-    clear: 'auto',
-    type: 'memory',
-  },
-});
 
 const checkForMetaTag = (id, property = null, name = null) => {
   let element = document.getElementById(id);
@@ -30,7 +20,6 @@ const checkForMetaTag = (id, property = null, name = null) => {
   }
   return element;
 };
-
 
 const setMetadata = (res) => {
   if (res.data.story.content.seo) {
@@ -75,11 +64,10 @@ const setMetadata = (res) => {
   }
 };
 
-const version = process.env.REACT_APP_ENV === 'production' ? 'published' : 'draft';
-
 class StoryBlock {
-  static async get(route, options = {}) {
+  static async get(route, accesstoken, version, options = {}) {
     try {
+      const client = storyblokClient(accesstoken);
       const res = await client.get(`cdn/stories/${route}`, Object.assign({ version }, options));
       setMetadata(res);
       return res.data.story.content.body;
