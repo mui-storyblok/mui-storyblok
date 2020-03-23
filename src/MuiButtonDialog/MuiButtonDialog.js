@@ -11,7 +11,7 @@ const MuiDialog = lazy(() => import('../MuiDialog/MuiDialog'));
 
 /**
  * MuiButtonDialog controls Dialog open state from true to false.
- * More docs and demos at https://material-ui.com/api/button/
+ * More docs and demos at https://material-ui.com/api/button/ and  https://material-ui.com/api/dialog/
  * Uses MuiButton and MuiDialog
  */
 
