@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 import DialogContent from '@material-ui/core/DialogContent';
 import Storyblok from '../../../utils/Storyblok';
 
+const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'));
+const MuiExpansionPanel = lazy(() => import('../../../MuiExpansionPanel/MuiExpansionPanel'));
+
 const MuiDialogContent = ({
   dividers,
   content,
   rootClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-  const components = {};
+  const components = {
+    MuiTypography,
+    MuiExpansionPanel,
+  };
 
   return (
     <DialogContent
