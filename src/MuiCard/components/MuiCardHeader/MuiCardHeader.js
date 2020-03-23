@@ -31,6 +31,8 @@ export const MuiCardHeader = ({
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const muiavatar = avatar[0];
+  const muiaction = action[0];
 
   return (
     <CardHeader
@@ -40,20 +42,24 @@ export const MuiCardHeader = ({
       avatar={(
         <Suspense fallback={<div />}>
           {
-            avatar.map((item, index) => createElement(
-              components[item.component],
-              Object.assign(item, { key: index }),
-            ))
+            muiavatar
+              ? createElement(
+                components[muiavatar.component],
+                muiavatar,
+              )
+              : null
           }
         </Suspense>
       )}
       action={(
         <Suspense fallback={<div />}>
           {
-            action.map((item, index) => createElement(
-              components[item.component],
-              Object.assign(item, { key: index }),
-            ))
+            muiaction
+              ? createElement(
+                components[muiaction.component],
+                muiaction,
+              )
+              : null
           }
         </Suspense>
       )}
@@ -64,23 +70,37 @@ export const MuiCardHeader = ({
 export default MuiCardHeader;
 
 MuiCardHeader.propTypes = {
-  /** title text for card header */
+  /**
+   * The content of the Card Title.
+   */
   title: PropTypes.string.isRequired,
-  /** subheader text for card header */
+  /**
+   * The content of the component.
+  */
   subheader: PropTypes.string,
-  /** stroyblok multiselect of css classes */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
-
+  /**
+   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, MuiTooltip,
+   * Allowed maximum: 1
+   * The action to display in the card header.
+   * */
   action: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
 
   /**
    * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, MuiTooltip,
-   * Allowed maximum: 1 */
+   * Allowed maximum: 1
+   * The Avatar for the Card Header.
+   * */
   avatar: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
+
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 MuiCardHeader.defaultProps = {

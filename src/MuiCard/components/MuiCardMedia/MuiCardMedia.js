@@ -29,15 +29,24 @@ export const MuiCardMedia = ({
 export default MuiCardMedia;
 
 MuiCardMedia.propTypes = {
-  /** height in px  */
+  /** 
+   * height is requred for media to display
+   * value in px
+   */
   height: PropTypes.string,
   /** alt text for image */
   alt: PropTypes.string.isRequired,
   /** title text for image */
   title: PropTypes.string.isRequired,
-  /** url for image */
+  /**
+   * url for image
+   * Image to be displayed as a background image
+   * */
   image: PropTypes.string.isRequired,
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 };
 

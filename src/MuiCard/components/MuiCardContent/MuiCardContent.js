@@ -1,11 +1,11 @@
 import React, { createElement, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import Storyblok from '../../../utils/Storyblok';
 import CardContent from '@material-ui/core/CardContent';
+import Storyblok from '../../../utils/Storyblok';
 
 const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'));
 const MuiExpansionPanel = lazy(() => import('../../../MuiExpansionPanel/MuiExpansionPanel'));
-// const MuiList = lazy(() => import('../../../MuiList/MuiList'));
+const MuiList = lazy(() => import('../../../MuiList/MuiList'));
 
 const MuiCardContent = ({
   content,
@@ -14,7 +14,7 @@ const MuiCardContent = ({
   const components = {
     MuiTypography,
     MuiExpansionPanel,
-    // MuiList,
+    MuiList,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -36,9 +36,18 @@ const MuiCardContent = ({
 export default MuiCardContent;
 
 MuiCardContent.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component.
+   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
+  /**
+   * Content passed to render
+   * components: MuiTypography,
+    MuiExpansionPanel,
+    MuiList,
+   */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

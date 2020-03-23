@@ -36,11 +36,25 @@ const MuiCard = ({ rootClass, raised, content }) => {
 export default MuiCard;
 
 MuiCard.propTypes = {
-  // mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  raised: PropTypes.bool,
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component.
+   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  // mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
+  /**
+   * mui prop: true | false
+   * If true, the card will use raised styling.
+   */
+  raised: PropTypes.bool,
 
+  /**
+   * Content passed to render
+   * components:  MuiCardActions,
+    MuiCardContent,
+    MuiCardHeader,
+    MuiCardMedia,
+   */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
