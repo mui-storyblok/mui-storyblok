@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiTooltip /> snapshot 1`] = `
+<button
+  aria-describedby={null}
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-root-3"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={undefined}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  title="android"
+  type="button"
+>
+  <span
+    className="MuiIconButton-label"
+  >
+    <div />
+  </span>
+  <span
+    className="MuiTouchRipple-root"
+  />
+</button>
+`;
