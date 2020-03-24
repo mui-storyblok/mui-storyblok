@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiDialogActions /> snapshot 1`] = `
+<div
+  className="MuiDialogActions-root makeStyles-root-3 MuiDialogActions-spacing"
+>
+  <div />
+</div>
+`;

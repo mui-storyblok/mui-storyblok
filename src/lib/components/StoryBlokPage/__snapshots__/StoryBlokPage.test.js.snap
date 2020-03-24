@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StoryBlokPage /> snapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+>
+  <span
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    Unable to fetch page content please refresh and try again or check to make sure you are at the right url
+  </span>
+</div>
+`;
