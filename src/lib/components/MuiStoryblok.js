@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
+import StoryBlokPage from './StoryBlokPage/StoryBlokPage';
 
 export default class MuiStoryblok extends Component {
   render() {
@@ -16,10 +16,10 @@ export default class MuiStoryblok extends Component {
 
     return (
       <MuiThemeProvider theme={muiTheme}>
-        <StoryBlokPage
-          accessToken={accessToken}
-          version={version}
-        />
+          <StoryBlokPage
+            accessToken={accessToken}
+            version={version}
+          />
       </MuiThemeProvider>
     );
   }

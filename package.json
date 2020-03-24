@@ -13,7 +13,81 @@
   "files": [
     "dist"
   ],
+  "eslintConfig": {
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "plugins": [
+      "import"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ],
+          "paths": [
+            "src"
+          ]
+        }
+      }
+    },
+    "env": {
+      "jest": true
+    },
+    "globals": {
+      "document": false,
+      "window": true
+    },
+    "rules": {
+      "react/destructuring-assignment": [
+        0,
+        {
+          "extensions": [
+            ".jsx"
+          ]
+        }
+      ],
+      "import/no-named-as-default": [
+        0
+      ],
+      "import/no-extraneous-dependencies": [
+        0,
+        {
+          "devDependencies": true
+        }
+      ],
+      "react/prefer-stateless-function": [
+        0,
+        {
+          "ignorePureComponents": true
+        }
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react/jsx-tag-spacing": [
+        1
+      ],
+      "jsx-a11y/label-has-for": [
+        1
+      ],
+      "react/jsx-boolean-value": [
+        0
+      ],
+      "react/no-array-index-key": [
+        0
+      ]
+    }
+  },
   "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@material-ui/core": "^4.9.4",
