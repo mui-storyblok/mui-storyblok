@@ -1,3 +1,3 @@
-import MuiStoryblok from "./components/MuiStoryblok";
+import MuiStoryblok from "./components/MuiStoryblok/MuiStoryblok";
 
 export default MuiStoryblok;
