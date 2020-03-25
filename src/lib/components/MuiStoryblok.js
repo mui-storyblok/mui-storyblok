@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import '../styles/styles.scss';
 
 import StoryBlokPage from './StoryBlokPage/StoryBlokPage';
 
