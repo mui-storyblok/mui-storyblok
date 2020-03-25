@@ -29,8 +29,8 @@ const MuiExpansionPanel = ({
   const [expanded, setExpanded] = useState(expand);
   const handleChange = () => setExpanded(!expanded);
 
-  const panelDetails = expansionPanelDetails[0];
   const panelSummary = expansionPanelSummary[0];
+  const panelDetails = expansionPanelDetails[0];
   return (
     <Suspense fallback={<div />}>
       <ExpansionPanel

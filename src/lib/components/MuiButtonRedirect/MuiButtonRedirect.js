@@ -7,6 +7,7 @@ const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
 /**
  * MuiButtonRedirect onClick will redirect you to a new route in the current App
  * More docs and demos at https://material-ui.com/api/button/
+ * cant redirect in docs
  */
 
 export const MuiButtonRedirect = ({
