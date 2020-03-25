@@ -1,8 +1,8 @@
 import React, { createElement, lazy, Suspense } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Storyblok from '../../utils/Storyblok';
 import IconButton from '@material-ui/core/IconButton';
+import Storyblok from '../../utils/Storyblok';
 
 const MuiIcon = lazy(() => import('../MuiIcon/MuiIcon'));
 
@@ -27,9 +27,7 @@ export const MuiIconButtonRedirect = ({
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  const onClick = async () => {
-    return history.push(redirectRoute);
-  };
+  const onClick = async () => history.push(redirectRoute);
 
   return (
     <IconButton
