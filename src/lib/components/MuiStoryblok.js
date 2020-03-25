@@ -17,10 +17,10 @@ export default class MuiStoryblok extends Component {
 
     return (
       <MuiThemeProvider theme={muiTheme}>
-          <StoryBlokPage
-            accessToken={accessToken}
-            version={version}
-          />
+        <StoryBlokPage
+          accessToken={accessToken}
+          version={version}
+        />
       </MuiThemeProvider>
     );
   }
