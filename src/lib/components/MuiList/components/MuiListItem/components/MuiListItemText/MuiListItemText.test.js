@@ -1,9 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import configureMockStore from 'redux-mock-store';
 import MuiListItemText from './MuiListItemText';
 
 function setup() {
@@ -24,14 +22,10 @@ describe('<MuiListItemText />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const mockstore = configureMockStore();
-    const store = mockstore({});
     const tree = renderer.create((
-      <Provider store={store}>
-        <MemoryRouter>
-          <MuiListItemText {...props} />
-        </MemoryRouter>
-      </Provider>
+      <MemoryRouter>
+        <MuiListItemText {...props} />
+      </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();
   });

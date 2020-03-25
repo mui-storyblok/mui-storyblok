@@ -2,13 +2,12 @@
 
 exports[`<DropDownMenu /> snapshot with auth 1`] = `
 <div
-  className={undefined}
+  className="dropdown"
 >
   <button
     className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary"
     disabled={false}
     onBlur={[Function]}
-    onClick={undefined}
     onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -32,7 +31,6 @@ exports[`<DropDownMenu /> snapshot with auth 1`] = `
         <svg
           aria-hidden="true"
           className="MuiSvgIcon-root"
-          color={undefined}
           focusable="false"
           role="presentation"
           viewBox="0 0 24 24"
@@ -40,12 +38,16 @@ exports[`<DropDownMenu /> snapshot with auth 1`] = `
           <path
             d="M7 10l5 5 5-5z"
           />
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
         </svg>
       </span>
     </span>
   </button>
   <div
-    className="MuiPaper-root MuiPaper-outlined MuiPaper-rounded"
+    className="MuiPaper-root dropdownContent MuiPaper-outlined MuiPaper-rounded"
   >
     <p>
       here

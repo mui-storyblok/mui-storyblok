@@ -6,7 +6,10 @@ import MuiButtonDialog from './MuiButtonDialog';
 
 function setup() {
   const props = {
-    buttonText: 'buttonText',
+    button: [{
+      component: 'MuiButton',
+      buttonText: 'buttonText',
+    }],
     dialog: [{
       component: 'MuiDialog',
       content: [{

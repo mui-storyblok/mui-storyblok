@@ -2,7 +2,7 @@
 
 exports[`<MuiButtonDownload /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-fullWidth"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -21,6 +21,8 @@ exports[`<MuiButtonDownload /> snapshot 1`] = `
 >
   <span
     className="MuiButton-label"
-  />
+  >
+    buttonText
+  </span>
 </button>
 `;
