@@ -83,7 +83,7 @@ MuiTab.propTypes = {
    * MuiIcon Allowed maximum: 1 */
   icon: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
-  })).isRequired,
+  })),
   /**
    * mui prop : true | false
    * Tab labels appear in a single row. They can use a second line if needed.
@@ -105,6 +105,7 @@ MuiTab.propTypes = {
 
 MuiTab.defaultProps = {
   rootClass: [],
+  icon: [],
   disableFocusRipple: false,
   disableRipple: false,
   wrapped: false,
