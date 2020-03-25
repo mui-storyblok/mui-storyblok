@@ -4,7 +4,6 @@ exports[`<MuiCardMedia /> snapshot 1`] = `
 <div
   alt="alt"
   className="MuiCardMedia-root makeStyles-root-3"
-  src={undefined}
   style={
     Object {
       "backgroundImage": "url(\\"img.com\\")",

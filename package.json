@@ -86,6 +86,25 @@
       ]
     }
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/interceptors.js",
+      "!src/utils/SessionStorage.js",
+      "!src/utils/GoogleHelpers.js",
+      "!src/utils/Storyblok.js",
+      "!src/serviceWorker.js",
+      "!src/setupTests.js",
+      "!src/theme.js",
+      "!src/index.js",
+      "!src/testUtils/LocalStorageMock.js",
+      "!src/styleguide/*"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  },
   "devDependencies": {
     "eslint-config-airbnb": "^17.1.0",
     "@babel/cli": "^7.0.0",
@@ -136,5 +155,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "moxios": "^0.4.0"
   }
 }

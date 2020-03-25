@@ -5,6 +5,7 @@ import Storyblok from '../../utils/Storyblok';
 
 const MuiGridItem = lazy(() => import('./components/MuiGridItem/MuiGridItem'));
 const MuiAppBar = lazy(() => import('../MuiAppBar/MuiAppBar'));
+const MuiTabs = lazy(() => import('../MuiTabs/MuiTabs'));
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -26,6 +27,7 @@ const MuiGrid = ({
   const components = {
     MuiGridItem,
     MuiAppBar,
+    MuiTabs,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });

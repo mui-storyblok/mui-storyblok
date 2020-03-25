@@ -1,19 +1,22 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiButtonRedirect } from './MuiButtonRedirect';
 
 function setup(legacyRedirect = true) {
   const props = {
-    buttonText: 'buttonText',
+    button: [{
+      component: 'MuiButton',
+      buttonText: 'buttonText',
+    }],
     redirectRoute: 'page-welcome',
     legacyRedirect,
     history: {
       push: jest.fn(),
     },
   };
-  const comp = shallow(<MuiButtonRedirect {...props} />);
+  const comp = mount(<MuiButtonRedirect {...props} />);
 
   return { comp, props };
 }

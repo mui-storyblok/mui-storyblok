@@ -9,7 +9,7 @@ const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
  * More docs and demos at https://material-ui.com/api/button/
  */
 
-export const MuiButtonDownload = ({
+const MuiButtonDownload = ({
   button,
   herf,
   fileName,

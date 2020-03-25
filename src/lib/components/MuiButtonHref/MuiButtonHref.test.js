@@ -1,14 +1,18 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonHref from './MuiButtonHref';
 
 function setup() {
   const props = {
+    button: [{
+      component: 'MuiButton',
+      buttonText: 'buttonText',
+    }],
     herf: 'google.com',
   };
-  const comp = shallow(<MuiButtonHref {...props} />);
+  const comp = mount(<MuiButtonHref {...props} />);
   return { comp, props };
 }
 
