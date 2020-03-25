@@ -29,7 +29,7 @@ export default class MuiStoryblok extends Component {
 MuiStoryblok.propTypes = {
   /** theme for mui */
   theme: PropTypes.shape(),
-  /** storyblok prop  'production' ? 'published' : 'draft' */
+  /** storyblok prop  'published' : 'draft' */
   version: PropTypes.string,
 
   /** acess key from storyblok you can make them in storyblok settings */
