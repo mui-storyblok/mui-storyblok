@@ -37,11 +37,17 @@ const MuiList = ({
 export default MuiList;
 
 MuiList.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** mui prop: true | false */
   disablePadding: PropTypes.bool,
-  /** mui prop: true | false */
+  /**
+   * mui prop: true | false
+   * If true, compact vertical padding designed for keyboard and mouse input will be used for the list and list items. The prop is available to descendant components as the dense context.
+   * */
   dense: PropTypes.bool,
   /** width of list */
   width: PropTypes.string,

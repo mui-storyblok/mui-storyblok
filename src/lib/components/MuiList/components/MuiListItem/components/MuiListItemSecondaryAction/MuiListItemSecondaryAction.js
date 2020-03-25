@@ -42,10 +42,13 @@ export const MuiListItemSecondaryAction = ({
 export default MuiListItemSecondaryAction;
 
 MuiListItemSecondaryAction.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
-  /** 
+  /**
    * components: MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiIconButtonDownload,

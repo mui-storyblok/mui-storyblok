@@ -1,4 +1,4 @@
-MuiButton example:
+MuiButtonHref example:
 
 ```js noeditor
 import MuiButtonHref from './MuiButtonHref';

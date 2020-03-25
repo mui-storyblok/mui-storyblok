@@ -61,12 +61,27 @@ MuiTooltip.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** text for tooltip */
   title: PropTypes.string.isRequired,
-  /** If true, adds an arrow to the tooltip. */
+  /**
+   * mui prop: true | false
+   * If true, adds an arrow to the tooltip.
+   * */
   arrow: PropTypes.bool,
-  /** mui prop: 'bottom-end' | 'bottom-start' | 'bottom' | 'left-end' | 'left-start' | 'left' | 'right-end' | 'right-start' | 'right' | 'top-end' | 'top-start' | 'top' */
+  /**
+   * mui prop: 'bottom-end' | 'bottom-start' | 'bottom' | 'left-end' | 'left-start' | 'left' | 'right-end' | 'right-start' | 'right' | 'top-end' | 'top-start' | 'top'
+   * Tooltip placement.
+   * */
   placement: PropTypes.string,
 
-  /** MuiButtonRedirect; Allowed maximum: 1 */
+  /** Allowed maximum: 1
+   *  MuiIconButtonRedirect,
+    MuiIconButtonHref,
+    MuiIconButtonDownload,
+    MuiIconButtonDialog,
+    MuiButtonRedirect,
+    MuiButtonHref,
+    MuiButtonDownload,
+    MuiButtonDialog,
+  */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

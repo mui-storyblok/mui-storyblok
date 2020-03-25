@@ -37,7 +37,10 @@ export const MuiListItemAvatar = ({
 export default MuiListItemAvatar;
 
 MuiListItemAvatar.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** MuiIcon Allowed maximum: 1 */

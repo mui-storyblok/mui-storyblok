@@ -1,4 +1,4 @@
-MuiButton example:
+MuiButtonRedirect example:
 
 ```js noeditor
 import MuiButtonRedirect from './MuiButtonRedirect';

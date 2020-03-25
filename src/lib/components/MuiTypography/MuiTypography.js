@@ -71,18 +71,30 @@ export const MuiTypography = ({
 export default MuiTypography;
 
 MuiTypography.propTypes = {
-  /** mui prop: 'inherit' | 'left' | 'center' | 'right' | 'justify' */
+  /**
+   * mui prop: 'inherit' | 'left' | 'center' | 'right' | 'justify'
+   * Set the text-align on the component.
+   * */
   align: PropTypes.string,
-  /** 'initial'| 'inherit'| 'primary'| 'secondary'| 'textPrimary'| 'textSecondary'| 'error' */
+  /**
+   * mui prop: 'initial'| 'inherit'| 'primary'| 'secondary'| 'textPrimary'| 'textSecondary'| 'error'
+   * The color of the component. It supports those theme colors that make sense for this component.
+   * */
   color: PropTypes.string,
-  /** 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'caption' | 'button' | 'overline' | 'srOnly' | 'inherit' */
+  /**
+   * mui prop: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'caption' | 'button' | 'overline' | 'srOnly' | 'inherit'
+   * Applies the theme typography styles.
+   * */
   variant: PropTypes.string,
+
   /** hight of the Typography element */
   height: PropTypes.string,
   /** width of the Typography element */
   width: PropTypes.string,
-
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   content: PropTypes.arrayOf(PropTypes.shape({

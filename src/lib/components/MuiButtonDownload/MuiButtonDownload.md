@@ -1,4 +1,4 @@
-MuiButton example:
+MuiButtonDownload example:
 
 ```js noeditor
 import MuiButtonDownload from './MuiButtonDownload';

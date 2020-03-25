@@ -1,4 +1,4 @@
-MuiButton example:
+MuiExpansionPanel example:
 
 ```js noeditor
 import MuiExpansionPanel from './MuiExpansionPanel';

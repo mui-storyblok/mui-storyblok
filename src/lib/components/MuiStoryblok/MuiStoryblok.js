@@ -30,7 +30,6 @@ MuiStoryblok.propTypes = {
   theme: PropTypes.shape(),
   /** storyblok prop  'production' ? 'published' : 'draft' */
   version: PropTypes.string,
-
   /** acess key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
 };

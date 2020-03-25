@@ -30,7 +30,10 @@ MuiListItemText.propTypes = {
   primary: PropTypes.string.isRequired,
   /** secondary text */
   secondary: PropTypes.string,
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 };
 

@@ -1,4 +1,4 @@
-MuiButton example:
+MuiCard example:
 
 ```js noeditor
 import MuiCard from './MuiCard';
