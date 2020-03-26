@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { createElement, lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
-import MuiGrid from '../../../MuiGrid/MuiGrid';
+
+const MuiGrid = lazy(() => import('../../../MuiGrid/MuiGrid'));
+const MuiHeroHeader = lazy(() => import('../../../MuiHeroHeader/MuiHeroHeader'));
+const MuiAppBar = lazy(() => import('../../../MuiAppBar/MuiAppBar'));
 
 const components = {
   MuiGrid,
+  MuiHeroHeader,
+  MuiAppBar,
 };
 
 export const Block = ({
@@ -12,11 +17,13 @@ export const Block = ({
   only,
 }) => (
   <Hidden only={only}>
-    {content.map((item, index) => React.createElement(
-      components[item.component],
-      Object.assign(item, { key: index }),
-    ))
-    }
+    <Suspense fallback={<div />}>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))
+      }
+    </Suspense>
   </Hidden>
 );
 
