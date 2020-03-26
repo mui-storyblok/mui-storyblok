@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, createElement } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Storyblok from '../../utils/Storyblok';
-
 import Blok from './components/Blok/Blok';
 import styles from './StoryBlokPage.module.scss';
 
@@ -59,12 +57,7 @@ export class StoryBlokPage extends Component {
 
   render() {
     return (
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-      >
+      <>
         {this.state.loading && !this.state.error && (
           <CircularProgress />
         )}
@@ -72,13 +65,13 @@ export class StoryBlokPage extends Component {
         {!this.state.loading && (
           <div className={styles.container}>
             {this.state.story && this.state.story.map((item, index) => (
-              <div key={index} className={styles.list}>
-                {React.createElement(this.components[item.component], item)}
+              <div key={index} >
+                {createElement(this.components[item.component], item)}
               </div>
             ))}
           </div>
         )}
-      </Grid>
+      </>
     );
   }
 }

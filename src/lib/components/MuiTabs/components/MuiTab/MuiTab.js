@@ -42,8 +42,8 @@ const MuiTab = ({
         icon={(
           <Suspense fallback={<div />}>
             {muiIcon
-          && createElement(components[muiIcon.component], muiIcon)
-        }
+              && createElement(components[muiIcon.component], muiIcon)
+            }
           </Suspense>
         )}
       />

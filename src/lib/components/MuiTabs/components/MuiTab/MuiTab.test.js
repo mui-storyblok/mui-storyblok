@@ -4,6 +4,10 @@ import MuiTab from './MuiTab';
 
 function setup() {
   const props = {
+    label: 'goku',
+    value: 1,
+    index: 1,
+    handleChange: jest.fn(),
     content: [{
       component: 'MuiGrid',
       content: [{
