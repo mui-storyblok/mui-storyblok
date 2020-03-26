@@ -4,6 +4,7 @@ import React, {
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
+const MuiHeroHeader = lazy(() => import('../../../../../MuiHeroHeader/MuiHeroHeader'));
 const MuiGrid = lazy(() => import('../../../../../MuiGrid/MuiGrid'));
 const MuiIcon = lazy(() => import('../../../../../MuiIcon/MuiIcon'));
 
@@ -34,6 +35,7 @@ const TabPannal = ({
   const components = {
     MuiGrid,
     MuiIcon,
+    MuiHeroHeader,
   };
   useEffect(() => {
     tabPannal = document.getElementById('TabPannal');

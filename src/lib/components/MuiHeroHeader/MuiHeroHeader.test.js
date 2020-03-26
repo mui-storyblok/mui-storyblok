@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import TabPannal from './TabPannal';
+import MuiHeroHeader from './MuiHeroHeader';
 
 function setup() {
   const props = {
-    value: 1,
-    index: 1,
+    backgroundImageUrl: 'backgroundImageUrl.png',
     content: [{
       component: 'MuiGrid',
       content: [{
@@ -17,12 +16,12 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<TabPannal {...props} />);
+  const comp = shallow(<MuiHeroHeader {...props} />);
   return { comp, props };
 }
 
-describe('<TabPannal />', () => {
-  it('renders TabPannal', () => {
+describe('<MuiHeroHeader />', () => {
+  it('renders MuiHeroHeader', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
