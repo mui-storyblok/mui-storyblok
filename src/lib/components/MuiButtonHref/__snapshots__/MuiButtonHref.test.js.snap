@@ -2,7 +2,7 @@
 
 exports[`<MuiButtonHref /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-fullWidth"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-46 MuiButton-textSecondary MuiButton-fullWidth"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -16,7 +16,6 @@ exports[`<MuiButtonHref /> snapshot 1`] = `
   onTouchEnd={[Function]}
   onTouchMove={[Function]}
   onTouchStart={[Function]}
-  rootClass="makeStyles-root-46"
   tabIndex={0}
   type="button"
 >

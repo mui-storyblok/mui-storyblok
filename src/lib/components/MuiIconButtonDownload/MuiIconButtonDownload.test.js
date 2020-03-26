@@ -10,7 +10,7 @@ Storyblok.arrayToMuiStyles = jest.fn(() => ({}));
 
 function setup() {
   const props = {
-    url: 'google.com',
+    href: 'google.com',
     fileName: 'fileName.png',
     icon: [{
       component: 'MuiIcon',

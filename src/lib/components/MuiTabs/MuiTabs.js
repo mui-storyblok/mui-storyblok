@@ -4,6 +4,7 @@ import React, {
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
+import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
 
 const MuiTab = lazy(() => import('./components/MuiTab/MuiTab'));
@@ -29,34 +30,65 @@ const MuiTabs = ({
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
+  const positionAppBar = position => {
+    if (position === 'vertical') {
+      return 'row';
+    }
+    if (position === 'horizontal') {
+      return 'row';
+    }
+
+    if (position === 'bottom') {
+      return 'column-reverse';
+    }
+  };
+
   return (
-    <>
-      <AppBar position="static">
-        <Suspense fallback={<div />}>
-          <Tabs
-            // value={value} // bug with currently selected so removing it for now
-            onChange={handleChange}
-            className={styles.root}
-            indicatorColor={indicatorColor}
-            orientation={orientation}
-            scrollButtons={scrollButtons}
-            textColor={textColor}
-            variant={variant}
-          >
-            {tabs.map((item, index) => createElement(
-              components[item.component],
-              Object.assign(item, {
-                key: index,
-                index,
-                value,
-                handleChange,
-              }),
-            ))}
-          </Tabs>
-        </Suspense>
-      </AppBar>
-      <div id="TabPannal" />
-    </>
+    <Grid
+      // direction={orientation === 'vertical' ? 'row' : 'column'}
+      container
+      direction={positionAppBar(orientation)}
+      justify="center"
+      alignItems="center"
+    >
+      <Grid
+        item
+        xs={orientation === 'vertical' ? 2 : 12}
+        style={{ width: '100%' }}
+      >
+        <AppBar
+          position="relative"
+          style={{ width: '100%' }}
+        >
+          <Suspense fallback={<div />}>
+            <Tabs
+              // value={value} // bug with currently selected so removing it for now
+              value={false}
+              onChange={handleChange}
+              className={styles.root}
+              indicatorColor={indicatorColor}
+              orientation={orientation}
+              scrollButtons={scrollButtons}
+              textColor={textColor}
+              variant={variant}
+            >
+              {tabs.map((item, index) => createElement(
+                components[item.component],
+                Object.assign(item, {
+                  key: index,
+                  index,
+                  value,
+                  handleChange,
+                }),
+              ))}
+            </Tabs>
+          </Suspense>
+        </AppBar>
+      </Grid>
+      <Grid item xs={orientation === 'vertical' ? 10 : 12}>
+        <div id="TabPannal" style={{ }} />
+      </Grid>
+    </Grid>
   );
 };
 
@@ -105,7 +137,7 @@ MuiTabs.propTypes = {
 MuiTabs.defaultProps = {
   rootClass: [],
   indicatorColor: 'secondary',
-  orientation: 'horizontal',
+  orientation: 'vertical',
   scrollButtons: 'auto',
   textColor: 'inherit',
   variant: 'standard',

@@ -21,7 +21,7 @@ export const MuiIconButtonDownload = ({
   size,
   rootClass,
   icon,
-  herf,
+  href,
   fileName,
 }) => {
   const components = {
@@ -30,7 +30,7 @@ export const MuiIconButtonDownload = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const onClick = () => {
-    downloadUrl(herf, fileName);
+    downloadUrl(href, fileName);
   };
 
   return (
@@ -67,7 +67,7 @@ MuiIconButtonDownload.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** url of the file you want to be downloaded */
-  herf: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   /** name of file */
   fileName: PropTypes.string.isRequired,
 

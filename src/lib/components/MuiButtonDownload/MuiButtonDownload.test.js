@@ -13,7 +13,7 @@ function setup() {
       component: 'MuiButton',
       buttonText: 'buttonText',
     }],
-    url: 'google.com',
+    href: 'google.com',
     fileName: 'fileName.png',
   };
   const comp = mount(<MuiButtonDownload {...props} />);

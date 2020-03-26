@@ -11,7 +11,7 @@ const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
 
 const MuiButtonDownload = ({
   button,
-  herf,
+  href,
   fileName,
 }) => {
   const components = {
@@ -19,7 +19,7 @@ const MuiButtonDownload = ({
   };
 
   const onClick = async () => {
-    downloadUrl(herf, fileName);
+    downloadUrl(href, fileName);
   };
 
   const muibutton = button[0];
@@ -47,7 +47,7 @@ MuiButtonDownload.propTypes = {
   })).isRequired,
 
   /** url of the file you want to be downloaded */
-  herf: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   /** name of file */
   fileName: PropTypes.string.isRequired,
 };

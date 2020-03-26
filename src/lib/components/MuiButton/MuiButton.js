@@ -32,7 +32,7 @@ export const MuiButton = ({
 
   return (
     <Button
-      rootClass={styles.root}
+      className={styles.root}
       color={color}
       disableElevation={disableElevation}
       disableFocusRipple={disableFocusRipple}

@@ -8,6 +8,8 @@ import Storyblok from '../../utils/Storyblok';
 
 function setup() {
   const props = {
+    accessToken: 'accessToken',
+    version: 'draft',
     location: {
       pathname: 'page-welcome',
     },
