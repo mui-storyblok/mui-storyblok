@@ -4,11 +4,12 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Storyblok from '../../utils/Storyblok';
 
-const MuiTypography = lazy(() => import('../MuiTypography/MuiTypography'));
-const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
 const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
 const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
+
+const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
+const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
+
 const MuiMenu = lazy(() => import('../MuiMenu/MuiMenu'));
 
 const MuiAppBar = ({
@@ -20,11 +21,10 @@ const MuiAppBar = ({
   disableGutters,
 }) => {
   const components = {
-    MuiTypography,
-    MuiIconButtonRedirect,
-    MuiIconButtonHref,
     MuiButtonRedirect,
     MuiButtonHref,
+    MuiIconButtonRedirect,
+    MuiIconButtonHref,
     MuiMenu,
   };
 
@@ -60,7 +60,7 @@ MuiAppBar.propTypes = {
   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: 'default' | 'inherit' | 'primary' | 'secondary' | 'transparent' 
+   * mui props: 'default' | 'inherit' | 'primary' | 'secondary' | 'transparent'
    * AppBar: The color of the component. It supports those theme colors that make sense for this component.
    * */
   color: PropTypes.string,
