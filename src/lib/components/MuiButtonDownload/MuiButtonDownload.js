@@ -1,8 +1,7 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import downloadUrl from '../../utils/downloadUrl';
-
-const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
+import downloadUrl from 'lib/utils/downloadUrl';
+import MuiButton from 'lib/components/MuiButton/MuiButton';
 
 /**
  * MuiButtonDownload onClick bug is opening url in a new tab in the browser instead of dowloading.
@@ -25,7 +24,7 @@ const MuiButtonDownload = ({
   const muibutton = button[0];
 
   return (
-    <Suspense fallback={<div />}>
+    <>
       {
       muibutton
         ? createElement(
@@ -34,7 +33,7 @@ const MuiButtonDownload = ({
         )
         : null
     }
-    </Suspense>
+    </>
   );
 };
 

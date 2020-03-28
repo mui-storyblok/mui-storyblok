@@ -1,7 +1,6 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-
-const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
+import MuiButton from 'lib/components/MuiButton/MuiButton';
 
 /**
  * MuiButtonHref takes a href to redirect to
@@ -23,7 +22,7 @@ export const MuiButtonHref = ({
   const muibutton = button[0];
 
   return (
-    <Suspense fallback={<div />}>
+    <>
       {
       muibutton
         ? createElement(
@@ -32,7 +31,7 @@ export const MuiButtonHref = ({
         )
         : null
     }
-    </Suspense>
+    </>
   );
 };
 

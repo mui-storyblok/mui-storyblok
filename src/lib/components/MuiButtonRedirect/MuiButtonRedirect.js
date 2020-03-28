@@ -1,8 +1,7 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-
-const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
+import MuiButton from 'lib/components/MuiButton/MuiButton';
 
 /**
  * MuiButtonRedirect onClick will redirect you to a new route in the current App
@@ -26,7 +25,7 @@ export const MuiButtonRedirect = ({
   const muibutton = button[0];
 
   return (
-    <Suspense fallback={<div />}>
+    <>
       {
       muibutton
         ? createElement(
@@ -35,7 +34,7 @@ export const MuiButtonRedirect = ({
         )
         : null
     }
-    </Suspense>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonDialog from './MuiButtonDialog';
@@ -36,7 +36,7 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<MuiButtonDialog {...props} />);
+  const comp = mount(<MuiButtonDialog {...props} />);
 
   return { comp, props };
 }
@@ -45,6 +45,14 @@ describe('<MuiButtonDialog />', () => {
   it('renders MuiButtonDialog', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
+  });
+
+  describe('click', () => {
+    it('onClick to be called', () => {
+      const { comp } = setup();
+      comp.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
+      expect(comp.find('WithStyles(ForwardRef(Dialog))').length).toEqual(1);
+    });
   });
 
   test('snapshot', () => {

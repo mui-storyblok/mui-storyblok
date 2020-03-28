@@ -1,17 +1,12 @@
-import React, {
-  lazy,
-  Suspense,
-} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import Storyblok from '../../utils/Storyblok';
-
-const MuiIcon = lazy(() => import('../MuiIcon/MuiIcon'));
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from 'lib/utils/Storyblok';
 
 /**
    * MuiButton controls Dialog open state from true to false.
    * More docs and demos at https://material-ui.com/api/button/
-   * Uses MuiIcon and MuiDialog
    */
 
 export const MuiButton = ({
@@ -38,16 +33,14 @@ export const MuiButton = ({
       disableFocusRipple={disableFocusRipple}
       disableRipple={disableRipple}
       endIcon={endIcon ? (
-        <Suspense fallback={<div />}>
-          <MuiIcon iconName={endIcon} />
-        </Suspense>
+        // TODO: swap out for MuiIcon as a storybolk component
+        <MuiIcon iconName={endIcon} />
       ) : null}
       fullWidth={fullWidth}
       size={size}
       startIcon={startIcon ? (
-        <Suspense fallback={<div />}>
-          <MuiIcon iconName={startIcon} />
-        </Suspense>
+        // TODO: swap out for MuiIcon as a storybolk component
+        <MuiIcon iconName={startIcon} />
       ) : null}
       variant={variant}
       onClick={onClick}
