@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
 import './TabPannal.module.scss';
 
 const MuiHeroHeader = lazy(() => import('../../../../../MuiHeroHeader/MuiHeroHeader'));

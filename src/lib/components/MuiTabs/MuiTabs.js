@@ -4,11 +4,7 @@ import React, {
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Storyblok from '../../utils/Storyblok';
-// import styles from './MuiTabs.module.scss';
-
 import MuiTab from './components/MuiTab/MuiTab';
-// const DesktopTabs = lazy(() => import('./components/DesktopTabs/DesktopTabs'));
-
 
 // make string with uuid to render tabs to correct portal
 const tabPannalId = `${[...Array(10)].map(i => (~~(Math.random() * 36)).toString(36)).join('')}TabPannal`;
@@ -145,7 +141,7 @@ MuiTabs.propTypes = {
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-  /** MuiTabItem */
+  /** MuiTab */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
