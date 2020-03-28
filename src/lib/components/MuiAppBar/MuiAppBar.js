@@ -1,16 +1,30 @@
-import React, { createElement, lazy, Suspense } from 'react';
+// import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Storyblok from '../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
-const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
+import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
+import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
+import MuiMenu from 'lib/components/MuiMenu/MuiMenu';
 
-const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
+// Styleguidist uses react-docgen and they do not support ImportExpression yet and was unable to generat docs for props
+// leaving code her as a reminder that it needs to be done once support comes out for it
+// const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
+// const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
+// const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
+// const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
+// const MuiMenu = lazy(() => import('../MuiMenu/MuiMenu'));
 
-const MuiMenu = lazy(() => import('../MuiMenu/MuiMenu'));
+// <Suspense fallback={<div />}>
+//   {content.map((item, index) => createElement(
+//     components[item.component],
+//     Object.assign(item, { key: index }),
+//   ))}
+// </Suspense>;
 
 const MuiAppBar = ({
   rootClass,
@@ -40,12 +54,10 @@ const MuiAppBar = ({
         variant={variant}
         disableGutters={disableGutters}
       >
-        <Suspense fallback={<div />}>
-          {content.map((item, index) => createElement(
-            components[item.component],
-            Object.assign(item, { key: index }),
-          ))}
-        </Suspense>
+        {content.map((item, index) => createElement(
+          components[item.component],
+          Object.assign(item, { key: index }),
+        ))}
       </Toolbar>
     </AppBar>
   );
