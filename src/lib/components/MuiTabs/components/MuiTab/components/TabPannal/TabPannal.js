@@ -4,19 +4,22 @@ import React, {
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
+import './TabPannal.module.scss';
+
 const MuiHeroHeader = lazy(() => import('../../../../../MuiHeroHeader/MuiHeroHeader'));
 const MuiGrid = lazy(() => import('../../../../../MuiGrid/MuiGrid'));
 const MuiIcon = lazy(() => import('../../../../../MuiIcon/MuiIcon'));
 
 let tabPannal = null;
 const el = document.createElement('div');
+el.className = 'pannal';
 
 export const handleCleanup = (
   value,
   index,
   element = el,
 ) => {
-  if (tabPannal.children.length && element && value !== index) {
+  if (element && value !== index) {
     tabPannal.removeChild(element);
   }
 };
@@ -31,6 +34,7 @@ const TabPannal = ({
   content,
   value,
   index,
+  tabPannalId,
 }) => {
   const components = {
     MuiGrid,
@@ -38,7 +42,7 @@ const TabPannal = ({
     MuiHeroHeader,
   };
   useEffect(() => {
-    tabPannal = document.getElementById('TabPannal');
+    tabPannal = document.getElementById(tabPannalId);
     if (value === index) {
       handlePropChange();
     }
@@ -74,6 +78,8 @@ TabPannal.propTypes = {
   value: PropTypes.number.isRequired,
   /** passed down form parent TabPannal */
   index: PropTypes.number.isRequired,
+  /** tabPannalId uuid to render tabs to correct portal */
+  tabPannalId: PropTypes.string.isRequired,
 };
 
 TabPannal.defaultProps = {
