@@ -8,6 +8,8 @@ function setup() {
     value: 1,
     index: 1,
     handleChange: jest.fn(),
+    handleChangeIndex: jest.fn(),
+    tabsLength: 2,
     content: [{
       component: 'MuiGrid',
       content: [{

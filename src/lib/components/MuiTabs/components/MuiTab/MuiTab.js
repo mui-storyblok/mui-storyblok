@@ -5,10 +5,13 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 import Storyblok from '../../../../utils/Storyblok';
+import TabPannal from './components/TabPannal/TabPannal';
 
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const MuiIcon = lazy(() => import('../../../MuiIcon/MuiIcon'));
-const TabPannal = lazy(() => import('./components/TabPannal/TabPannal'));
 
 const MuiTab = ({
   label,
@@ -21,6 +24,11 @@ const MuiTab = ({
   content,
   index,
   handleChange,
+  tabsLength,
+  handleChangeIndex,
+  autoplay,
+  interval,
+  tabPannalId,
 }) => {
   const components = {
     MuiIcon,
@@ -28,11 +36,14 @@ const MuiTab = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   const muiIcon = icon[0];
 
+  const tabs = Array.apply(null, Array(tabsLength));
+
   return (
-    <>
+    <div id={index}>
       <Tab
         id={index}
         // value={index} // bug with currently selected so removing it for now
+        value={false}
         onClick={e => handleChange(e, index)}
         className={styles.root}
         label={label}
@@ -47,12 +58,33 @@ const MuiTab = ({
           </Suspense>
         )}
       />
-      <TabPannal
-        content={content}
-        value={value}
-        index={index}
-      />
-    </>
+      <AutoPlaySwipeableViews
+        index={value}
+        onChangeIndex={handleChangeIndex}
+        autoplay={autoplay}
+        interval={typeof interval === 'string' ? Number(interval) : interval}
+      >
+        {/*
+          I do not like this but the only way I could think to avoid
+          Warning: react-swipeable-view: the new index: 2 is out of bounds: [0-1]
+          render to TabPannal will render to react portal else we will render a empty div
+        */}
+        {tabs.map((item, i) => {
+          if (i === 0) {
+            return (
+              <TabPannal
+                key={i}
+                tabPannalId={tabPannalId}
+                content={content}
+                value={value}
+                index={index}
+              />
+            );
+          }
+          return <div key={i} />;
+        })}
+      </AutoPlaySwipeableViews>
+    </div>
   );
 };
 
@@ -90,17 +122,34 @@ MuiTab.propTypes = {
    */
   wrapped: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 
+  // /** autoplay will incroment tabs by a interval */
+  // autoplay: PropTypes.bool,
+  // /** interval to incroment tabs: time in millaseconds */
+  // interval: PropTypes.string,
+
   /** MuiGrid */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
 
-  /** passed down form parent MuiTab */
+
+  /** autoplay will incroment tabs by a interval */
+  autoplay: PropTypes.bool,
+  /** interval to incroment tabs: time in millaseconds */
+  interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+  /** passed down form parent MuiTab the current value or selected index in tabs */
   value: PropTypes.number.isRequired,
-  /** passed down form parent MuiTab */
+  /** passed down form parent MuiTab callback to set the current value */
   handleChange: PropTypes.func.isRequired,
-  /** passed down form parent MuiTab */
+  /** passed down form parent MuiTab index of tab that is rendered */
   index: PropTypes.number.isRequired,
+  /** passed down form parent MuiTab to make a array for AutoPlaySwipeableViews to use */
+  tabsLength: PropTypes.number.isRequired,
+  /** passed down form parent MuiTab callback to set the current value */
+  handleChangeIndex: PropTypes.func.isRequired,
+  /** tabPannalId uuid to render tabs to correct portal */
+  tabPannalId: PropTypes.string.isRequired,
 };
 
 MuiTab.defaultProps = {
@@ -109,4 +158,6 @@ MuiTab.defaultProps = {
   disableFocusRipple: false,
   disableRipple: false,
   wrapped: false,
+  autoplay: false,
+  interval: 3000,
 };

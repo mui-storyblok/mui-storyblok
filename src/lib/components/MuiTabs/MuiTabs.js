@@ -1,13 +1,13 @@
 import React, {
-  useState, createElement, lazy, Suspense,
+  useState, createElement,
 } from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
-import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
+import MuiTab from './components/MuiTab/MuiTab';
 
-const MuiTab = lazy(() => import('./components/MuiTab/MuiTab'));
+// make string with uuid to render tabs to correct portal
+const tabPannalId = `${[...Array(10)].map(i => (~~(Math.random() * 36)).toString(36)).join('')}TabPannal`;
 
 const MuiTabs = ({
   rootClass,
@@ -17,78 +17,80 @@ const MuiTabs = ({
   textColor,
   variant,
   tabs,
+  autoplay,
+  interval,
 }) => {
   const components = {
     MuiTab,
   };
 
-  const [value, setValue] = useState(0);
+  const [state, setState] = useState({ value: 0, autoplay, tabsLength: tabs.length });
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setState({ ...state, value: newValue });
+  };
+
+  const handleChangeIndex = () => {
+    const tabsLength = tabs.length - 1;
+    if (state.value >= tabsLength) {
+      return handleChange({}, 0);
+    }
+    return handleChange({}, state.value + 1);
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  const positionAppBar = position => {
-    if (position === 'vertical') {
-      return 'row';
-    }
-    if (position === 'horizontal') {
-      return 'row';
-    }
 
-    if (position === 'bottom') {
-      return 'column-reverse';
+  const onMouseEnter = () => {
+    if (autoplay) {
+      setState({ ...state, autoplay: false });
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (autoplay) {
+      setState({ ...state, autoplay: true });
     }
   };
 
   return (
-    <Grid
-      // direction={orientation === 'vertical' ? 'row' : 'column'}
-      container
-      direction={positionAppBar(orientation)}
-      justify="center"
-      alignItems="center"
+    <div
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      style={{
+        flexGrow: 1,
+        display: orientation === 'vertical' ? 'flex' : 'block',
+      }}
     >
-      <Grid
-        item
-        xs={orientation === 'vertical' ? 2 : 12}
-        style={{ width: '100%' }}
+      <Tabs
+          // value={state.value} // bug with currently selected so removing it for now
+        className={styles.root}
+        value={false}
+        onChange={handleChange}
+        indicatorColor={indicatorColor}
+        orientation={orientation}
+        scrollButtons={scrollButtons}
+        textColor={textColor}
+        variant={variant}
       >
-        <AppBar
-          position="relative"
-          style={{ width: '100%' }}
-        >
-          <Suspense fallback={<div />}>
-            <Tabs
-              // value={value} // bug with currently selected so removing it for now
-              value={false}
-              onChange={handleChange}
-              className={styles.root}
-              indicatorColor={indicatorColor}
-              orientation={orientation}
-              scrollButtons={scrollButtons}
-              textColor={textColor}
-              variant={variant}
-            >
-              {tabs.map((item, index) => createElement(
-                components[item.component],
-                Object.assign(item, {
-                  key: index,
-                  index,
-                  value,
-                  handleChange,
-                }),
-              ))}
-            </Tabs>
-          </Suspense>
-        </AppBar>
-      </Grid>
-      <Grid item xs={orientation === 'vertical' ? 10 : 12}>
-        <div id="TabPannal" style={{ }} />
-      </Grid>
-    </Grid>
+        {tabs.map((item, index) => createElement(
+          components[item.component],
+          Object.assign(item, {
+            key: index,
+            index,
+            autoplay,
+            interval,
+            value: state.value,
+            handleChangeIndex,
+            handleChange,
+            tabPannalId,
+            tabsLength: state.tabsLength,
+          }),
+        ))}
+      </Tabs>
+
+      <div style={{ height: '100%', width: '100%' }} id={tabPannalId} />
+    </div>
   );
 };
 
@@ -113,7 +115,10 @@ MuiTabs.propTypes = {
   /**
    * mui prop: 'auto' | 'desktop' | 'on' | 'off'
    * Determine behavior of scroll buttons when tabs are set to scroll:
-- auto will only present them when not all the items are visible. - desktop will only present them on medium and larger viewports. - on will always present them. - off will never present them.
+   * - auto will only present them when not all the items are visible.
+   * - desktop will only present them on medium and larger viewports.
+   * - on will always present them.
+   * - off will never present them.
    */
   scrollButtons: PropTypes.string,
   /**
@@ -124,11 +129,19 @@ MuiTabs.propTypes = {
   /**
    * mui prop:  'standard'| 'scrollable'| 'fullWidth'
    * Determines additional display behavior of the tabs:
-- scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar. -fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile. - standard will render the default state.
+   * - scrollable will invoke scrolling properties and allow for
+    horizontally scrolling (or swiping) of the tab bar.
+   * -fullWidth will make the tabs grow to use all the available space,
+    which should be used for small views, like on mobile.
+    - standard will render the default state.
    */
   variant: PropTypes.string,
+  /** autoplay will incroment tabs by a interval */
+  autoplay: PropTypes.bool,
+  /** interval to incroment tabs: time in millaseconds */
+  interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-  /** MuiTabItem */
+  /** MuiTab */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
@@ -141,4 +154,6 @@ MuiTabs.defaultProps = {
   scrollButtons: 'auto',
   textColor: 'inherit',
   variant: 'standard',
+  autoplay: false,
+  interval: 3000,
 };
