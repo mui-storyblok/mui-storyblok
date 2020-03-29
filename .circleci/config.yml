@@ -36,7 +36,6 @@ jobs:
             - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
-
             - run: npm run deploy-docs
             - run: npm run publish-npm
 workflows:
