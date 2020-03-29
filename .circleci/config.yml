@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
@@ -22,8 +22,16 @@ jobs:
             # Run tests
             - run: ./cc-test-reporter before-build
             - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
+  deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm run deploy-docs
+            - run: npm run publish-npm
 workflows:
-  version: 2
     build-and-test:
       jobs:
         - build-and-test
