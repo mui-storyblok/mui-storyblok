@@ -35,7 +35,7 @@ const MuiListItem = ({
   const icon = listItemIcon[0];
   const secondaryAction = listItemSecondaryAction[0];
   const text = listItemText[0];
-
+console.log(icon)
   return (
     <ListItem
       className={styles.root}

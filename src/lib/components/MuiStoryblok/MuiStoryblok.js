@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
-import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
+import StoryBlokPage from 'lib/components/StoryBlokPage/StoryBlokPage';
 
 export default class MuiStoryblok extends Component {
   render() {

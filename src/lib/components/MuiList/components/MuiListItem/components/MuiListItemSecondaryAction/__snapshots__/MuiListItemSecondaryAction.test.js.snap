@@ -4,6 +4,34 @@ exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
 <div
   className="MuiListItemSecondaryAction-root makeStyles-root-3"
 >
-  <div />
+  <button
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-5"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-18 MuiIcon-colorSecondary"
+      >
+        star
+      </span>
+    </span>
+  </button>
 </div>
 `;

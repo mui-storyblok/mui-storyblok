@@ -7,7 +7,12 @@ exports[`<MuiListItemAvatar /> snapshot 1`] = `
   <div
     className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
   >
-    <div />
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-13 MuiIcon-colorSecondary"
+    >
+      android
+    </span>
   </div>
 </div>
 `;

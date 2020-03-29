@@ -5,6 +5,76 @@ exports[`<MuiListItem /> snapshot 1`] = `
   className="MuiListItem-root makeStyles-root-3 MuiListItem-gutters"
   disabled={false}
 >
-  <div />
+  <div
+    className="MuiListItemAvatar-root makeStyles-root-15"
+  >
+    <div
+      className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-25 MuiIcon-colorSecondary"
+      >
+        android
+      </span>
+    </div>
+  </div>
+  <div
+    className="MuiListItemIcon-root makeStyles-root-35"
+  >
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-38 MuiIcon-colorSecondary"
+    >
+      android
+    </span>
+  </div>
+  <div
+    className="MuiListItemText-root makeStyles-root-39 MuiListItemText-multiline"
+  >
+    <span
+      className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+    >
+      primary
+    </span>
+    <p
+      className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+    >
+      
+    </p>
+  </div>
+  <div
+    className="MuiListItemSecondaryAction-root makeStyles-root-76"
+  >
+    <button
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-78"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <span
+          aria-hidden={true}
+          className="material-icons MuiIcon-root makeStyles-root-91 MuiIcon-colorSecondary"
+        >
+          star
+        </span>
+      </span>
+    </button>
+  </div>
 </li>
 `;

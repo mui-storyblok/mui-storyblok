@@ -54,14 +54,83 @@ exports[`<MuiGridItem /> snapshot 1`] = `
   >
     text
   </p>
-  <div />
   <div
-    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-187 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+    className="dropdown"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-186"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        btnText
+        <span
+          className="MuiButton-endIcon MuiButton-iconSizeMedium"
+        >
+          <svg
+            aria-hidden="true"
+            className="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+          </svg>
+        </span>
+      </span>
+    </button>
+    <div
+      className="MuiPaper-root dropdownContent MuiPaper-outlined MuiPaper-rounded"
+    >
+      <li
+        aria-disabled={false}
+        className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root makeStyles-root-224 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        role="menuitem"
+        tabIndex={-1}
+      >
+        buttonText
+      </li>
+    </div>
+  </div>
+  <div
+    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-240 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       aria-disabled={false}
       aria-expanded={false}
-      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-220"
+      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-245"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -82,7 +151,7 @@ exports[`<MuiGridItem /> snapshot 1`] = `
       >
         <span
           aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-227 MuiIcon-colorSecondary"
+          className="material-icons MuiIcon-root makeStyles-root-252 MuiIcon-colorSecondary"
         >
           android
         </span>
@@ -110,7 +179,7 @@ exports[`<MuiGridItem /> snapshot 1`] = `
         >
           <span
             aria-hidden={true}
-            className="material-icons MuiIcon-root makeStyles-root-237 MuiIcon-colorSecondary"
+            className="material-icons MuiIcon-root makeStyles-root-262 MuiIcon-colorSecondary"
           >
             android
           </span>
@@ -135,10 +204,10 @@ exports[`<MuiGridItem /> snapshot 1`] = `
             role="region"
           >
             <div
-              className="MuiExpansionPanelDetails-root makeStyles-root-243"
+              className="MuiExpansionPanelDetails-root makeStyles-root-268"
             >
               <p
-                className="MuiTypography-root makeStyles-root-245 MuiTypography-body1"
+                className="MuiTypography-root makeStyles-root-270 MuiTypography-body1"
               >
                 text
               </p>
