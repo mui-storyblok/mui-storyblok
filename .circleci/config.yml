@@ -32,10 +32,15 @@ jobs:
             - run: npm run deploy-docs
             - run: npm run publish-npm
 
-    build-and-test:
-      jobs:
-        - build-and-test
-        - deploy
-          branches:
-            only:
-              - master
+    workflows:
+      version: 2.1
+      build-and-test:
+        jobs:
+          - build-and-test
+          - deploy:
+              requires:
+                - build-and-test
+              filters:
+                branches:
+                  only:
+                    - master
