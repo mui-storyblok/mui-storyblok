@@ -36,12 +36,14 @@ jobs:
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
             - run: npm run deploy-docs
 
-            # Login to npm to publish 
+            - attach_workspace:
+              at: ~/repo
             - run:
-              name: Authenticate with registry
-              command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/rep
-              
-            - run: npm run publish-npm
+                name: Authenticate with registry
+                command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+            - run:
+                name: Publish package
+                command: npm publish
 workflows:
     build-and-deploy:
       jobs:
