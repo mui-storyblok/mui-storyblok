@@ -23,7 +23,7 @@ jobs:
             # Run tests
             - run: ./cc-test-reporter before-build
             - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
-  deploy:
+  deploy-docs:
     executor:
       name: node/default
     steps:
@@ -35,15 +35,6 @@ jobs:
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
             - run: npm run deploy-docs
-
-            - attach_workspace:
-              at: ~/repo
-            - run:
-                name: Authenticate with registry
-                command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-            - run:
-                name: Publish package
-                command: npm publish
 workflows:
     build-and-deploy:
       jobs:
