@@ -11,30 +11,6 @@ function setup() {
       content: [{
         component: 'MuiText',
         text: 'text',
-      }, {
-        component: 'MuiExpansionPanel',
-        expansionPanelSummary: [{
-          component: 'MuiExpansionPanelSummary',
-          content: [{
-            component: 'MuiIcon',
-            iconName: 'android',
-          }],
-          expandIcon: [{
-            component: 'MuiIcon',
-            iconName: 'android',
-          }],
-        }],
-
-        expansionPanelDetails: [{
-          component: 'MuiExpansionPanelDetails',
-          content: [{
-            component: 'MuiTypography',
-            content: [{
-              component: 'MuiText',
-              text: 'text',
-            }],
-          }],
-        }],
       }],
     }],
   };

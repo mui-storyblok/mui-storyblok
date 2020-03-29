@@ -1,14 +1,14 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogActions from '@material-ui/core/DialogActions';
-import Storyblok from '../../../../utils/Storyblok';
 
-const MuiIconButtonRedirect = lazy(() => import('../../../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-const MuiIconButtonHref = lazy(() => import('../../../MuiIconButtonHref/MuiIconButtonHref'));
-const MuiIconButtonDownload = lazy(() => import('../../../MuiIconButtonDownload/MuiIconButtonDownload'));
-const MuiButtonRedirect = lazy(() => import('../../../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHref = lazy(() => import('../../../MuiButtonHref/MuiButtonHref'));
-const MuiButtonDownload = lazy(() => import('../../../MuiButtonDownload/MuiButtonDownload'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
+import MuiButtonDownload from 'lib/components/MuiButtonDownload/MuiButtonDownload';
 
 const MuiDialogActions = ({
   content,
@@ -29,12 +29,10 @@ const MuiDialogActions = ({
     <DialogActions
       className={styles.root}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </DialogActions>
   );
 };

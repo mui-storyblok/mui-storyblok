@@ -25,8 +25,12 @@ function setup() {
         component: 'MuiDialogActions',
         content: [{
           component: 'MuiButtonRedirect',
-          buttonText: 'buttonText',
-          redirectRoute: 'page-welcome',
+          href: 'google.com',
+          fileName: 'fileName.png',
+          button: [{
+            component: 'MuiButton',
+            buttonText: 'here',
+          }],
         }],
       }],
       dialogTitle: [{
@@ -45,14 +49,6 @@ describe('<MuiButtonDialog />', () => {
   it('renders MuiButtonDialog', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
-  });
-
-  describe('click', () => {
-    it('onClick to be called', () => {
-      const { comp } = setup();
-      comp.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
-      expect(comp.find('WithStyles(ForwardRef(Dialog))').length).toEqual(1);
-    });
   });
 
   test('snapshot', () => {

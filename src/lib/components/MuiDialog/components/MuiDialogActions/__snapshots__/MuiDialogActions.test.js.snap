@@ -4,6 +4,29 @@ exports[`<MuiDialogActions /> snapshot 1`] = `
 <div
   className="MuiDialogActions-root makeStyles-root-3 MuiDialogActions-spacing"
 >
-  <div />
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-6 MuiButton-textSecondary MuiButton-fullWidth"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      buttonText
+    </span>
+  </button>
 </div>
 `;
