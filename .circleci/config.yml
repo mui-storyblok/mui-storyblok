@@ -41,8 +41,8 @@ workflows:
       jobs:
         - build-and-test
     deploy:
-      branches:
-        only:
-          - master
       jobs:
         - deploy
+        branches:
+          only:
+            - master
