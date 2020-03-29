@@ -5,6 +5,8 @@ jobs:
   build-and-test:
     executor:
       name: node/default
+    environment:
+      CC_TEST_REPORTER_ID: 6e4f8c280bdfcb40ff1cf5ff07d39fc6293715e81a6a0d7b54a0acf2b88f401a
     steps:
       - checkout
       - node/with-cache:
@@ -13,8 +15,6 @@ jobs:
             # Setup Code Climate
             - run:
                 name: "Setup Code Climate Test-Reporter"
-                environment:
-                  CC_TEST_REPORTER_ID: 6e4f8c280bdfcb40ff1cf5ff07d39fc6293715e81a6a0d7b54a0acf2b88f401a
                 command: |
                   # download test reporter as a static binary
                   curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
