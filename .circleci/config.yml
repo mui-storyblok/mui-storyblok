@@ -35,10 +35,7 @@ jobs:
     build-and-test:
       jobs:
         - build-and-test
-        - deploy:
-          requires:
-            - build-and-test
-          filters:
-            branches:
-              only:
-                - master
+        - deploy
+          branches:
+            only:
+              - master
