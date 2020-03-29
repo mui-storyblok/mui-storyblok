@@ -23,9 +23,6 @@ jobs:
             - run: ./cc-test-reporter before-build
             - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
   deploy:
-    branches:
-      only:
-        - master
     executor:
       name: node/default
     steps:
@@ -45,4 +42,7 @@ workflows:
         - build-and-test
     deploy:
       jobs:
-        - deploy
+        build:
+          branches:
+            only:
+              - master
