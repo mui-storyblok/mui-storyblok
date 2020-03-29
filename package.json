@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -142,7 +142,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components"
+    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
+    "publish-npm": "npm run build && npm publish"
   },
   "browserslist": {
     "production": [
