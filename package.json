@@ -142,7 +142,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "publish": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && npm publish"
+    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components"
   },
   "browserslist": {
     "production": [
