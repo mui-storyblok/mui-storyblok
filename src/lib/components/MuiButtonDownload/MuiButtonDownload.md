@@ -5,7 +5,6 @@ import MuiButtonDownload from './MuiButtonDownload';
 ```
 
 ```js
-
 const button = [{
     component: 'MuiButton',
     buttonText: 'buttonText',

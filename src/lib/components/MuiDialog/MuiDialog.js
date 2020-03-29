@@ -1,15 +1,14 @@
 import React, {
   createElement,
-  lazy,
-  Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiDialogActions = lazy(() => import('./components/MuiDialogActions/MuiDialogActions'));
-const MuiDialogTitle = lazy(() => import('./components/MuiDialogTitle/MuiDialogTitle'));
-const MuiDialogContent = lazy(() => import('./components/MuiDialogContent/MuiDialogContent'));
+import Storyblok from 'lib/utils/Storyblok';
+
+import MuiDialogActions from './components/MuiDialogActions/MuiDialogActions';
+import MuiDialogTitle from './components/MuiDialogTitle/MuiDialogTitle';
+import MuiDialogContent from './components/MuiDialogContent/MuiDialogContent';
 
 const MuiDialog = ({
   open,
@@ -31,14 +30,11 @@ const MuiDialog = ({
       className={dialogStyles.root}
       open={open}
     >
-      <Suspense fallback={<div />}>
-        {title ? createElement(components[title.component], { ...title, toggleDialog }) : null}
-
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {title ? createElement(components[title.component], { ...title, toggleDialog }) : null}
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </Dialog>
   );
 };

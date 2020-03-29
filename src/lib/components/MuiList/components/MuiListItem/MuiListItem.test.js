@@ -30,9 +30,11 @@ function setup() {
     listItemSecondaryAction: [{
       component: 'MuiListItemSecondaryAction',
       content: [{
-        component: 'MuiButtonRedirect',
-        buttonText: 'buttonText',
-        redirectRoute: 'page-welcome',
+        component: 'MuiIconButtonRedirect',
+        icon: [{
+          component: 'MuiIcon',
+          iconName: 'star',
+        }],
       }],
     }],
   };

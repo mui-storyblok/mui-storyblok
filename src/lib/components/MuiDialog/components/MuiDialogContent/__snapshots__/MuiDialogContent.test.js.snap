@@ -4,6 +4,10 @@ exports[`<MuiDialogContent /> snapshot 1`] = `
 <div
   className="MuiDialogContent-root makeStyles-root-3"
 >
-  <div />
+  <p
+    className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+  >
+    text
+  </p>
 </div>
 `;

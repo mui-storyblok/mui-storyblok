@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
+exports[`<MuiCardActions /> snapshot 1`] = `
 <div
-  className="MuiListItemSecondaryAction-root makeStyles-root-3"
+  className="MuiCardActions-root makeStyles-root-3 MuiCardActions-spacing"
 >
   <button
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-5"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-6"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
@@ -27,7 +27,7 @@ exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-18 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-19 MuiIcon-colorSecondary"
       >
         star
       </span>

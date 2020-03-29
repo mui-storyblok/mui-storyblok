@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiIconButtonDownload /> snapshot 1`] = `
+exports[`<MuiButton /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiIconButton-root"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-fullWidth"
   disabled={false}
   onBlur={[Function]}
-  onClick={[Function]}
+  onClick={[MockFunction]}
   onDragLeave={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
@@ -20,14 +20,9 @@ exports[`<MuiIconButtonDownload /> snapshot 1`] = `
   type="button"
 >
   <span
-    className="MuiIconButton-label"
+    className="MuiButton-label"
   >
-    <span
-      aria-hidden={true}
-      className="material-icons MuiIcon-root MuiIcon-colorSecondary"
-    >
-      android
-    </span>
+    buttonText
   </span>
 </button>
 `;

@@ -1,12 +1,12 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Grid';
-import Storyblok from '../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
-const MuiCardActions = lazy(() => import('./components/MuiCardActions/MuiCardActions'));
-const MuiCardContent = lazy(() => import('./components/MuiCardContent/MuiCardContent'));
-const MuiCardHeader = lazy(() => import('./components/MuiCardHeader/MuiCardHeader'));
-const MuiCardMedia = lazy(() => import('./components/MuiCardMedia/MuiCardMedia'));
+import MuiCardActions from './components/MuiCardActions/MuiCardActions';
+import MuiCardContent from './components/MuiCardContent/MuiCardContent';
+import MuiCardHeader from './components/MuiCardHeader/MuiCardHeader';
+import MuiCardMedia from './components/MuiCardMedia/MuiCardMedia';
 
 const MuiCard = ({ rootClass, raised, content }) => {
   const components = {
@@ -23,12 +23,10 @@ const MuiCard = ({ rootClass, raised, content }) => {
       className={styles.root}
       raised={raised.toString()}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </Card>
   );
 };

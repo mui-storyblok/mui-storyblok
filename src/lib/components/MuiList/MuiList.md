@@ -5,8 +5,6 @@ import MuiList from './MuiList';
 ```
 
 ```js
-import MuiList from './MuiList';
-
 const listItemAvatar = {
     component: 'MuiListItemAvatar',
     content: [{

@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
-import Storyblok from '../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 import MuiTab from './components/MuiTab/MuiTab';
 
 // make string with uuid to render tabs to correct portal

@@ -1,11 +1,11 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
-import Storyblok from '../../../../utils/Storyblok';
 
-const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'));
-const MuiExpansionPanel = lazy(() => import('../../../MuiExpansionPanel/MuiExpansionPanel'));
-const MuiList = lazy(() => import('../../../MuiList/MuiList'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
+import MuiExpansionPanel from 'lib/components/MuiExpansionPanel/MuiExpansionPanel';
+import MuiList from 'lib/components/MuiList/MuiList';
 
 const MuiCardContent = ({
   content,
@@ -23,12 +23,10 @@ const MuiCardContent = ({
     <CardContent
       className={styles.root}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </CardContent>
   );
 };

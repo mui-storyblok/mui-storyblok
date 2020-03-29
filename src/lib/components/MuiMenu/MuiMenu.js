@@ -1,9 +1,9 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import Storyblok from '../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
-const DropDownMenu = lazy(() => import('./components/DropDownMenu/DropDownMenu'));
-const MuiMenuItem = lazy(() => import('./components/MuiMenuItem/MuiMenuItem'));
+import DropDownMenu from './components/DropDownMenu/DropDownMenu';
+import MuiMenuItem from './components/MuiMenuItem/MuiMenuItem';
 
 const MuiMenu = ({
   content,
@@ -19,19 +19,17 @@ const MuiMenu = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <Suspense fallback={<div />}>
-      <DropDownMenu
-        rootClass={styles.root}
-        btnTxt={btnText}
-        size={size}
-        color={color}
-      >
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </DropDownMenu>
-    </Suspense>
+    <DropDownMenu
+      rootClass={styles.root}
+      btnTxt={btnText}
+      size={size}
+      color={color}
+    >
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
+    </DropDownMenu>
   );
 };
 

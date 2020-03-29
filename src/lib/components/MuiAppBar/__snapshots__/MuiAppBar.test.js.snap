@@ -7,7 +7,30 @@ exports[`<MuiAppBar /> snapshot 1`] = `
   <div
     className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
   >
-    <div />
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-47 MuiButton-textSecondary MuiButton-fullWidth"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        here
+      </span>
+    </button>
   </div>
 </header>
 `;

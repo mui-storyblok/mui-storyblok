@@ -1,11 +1,13 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiGridItem = lazy(() => import('./components/MuiGridItem/MuiGridItem'));
-const MuiAppBar = lazy(() => import('../MuiAppBar/MuiAppBar'));
-const MuiTabs = lazy(() => import('../MuiTabs/MuiTabs'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
+import MuiTabs from 'lib/components/MuiTabs/MuiTabs';
+
+import MuiGridItem from './components/MuiGridItem/MuiGridItem';
+
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -43,12 +45,10 @@ const MuiGrid = ({
       wrap={wrap}
       spacing={Number(spacing)}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index, sizeGrid }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index, sizeGrid }),
+      ))}
     </Grid>
   );
 };

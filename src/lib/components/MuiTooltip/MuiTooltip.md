@@ -5,10 +5,10 @@ import MuiTooltip from './MuiTooltip';
 ```
 
 ```js
-  const icon = {
-      component: 'MuiIcon',
-      iconName: 'done_all',
-  };
+const icon = {
+    component: 'MuiIcon',
+    iconName: 'done_all',
+};
 
 const iconButtonDownload = {
     component: 'MuiIconButtonDownload',
@@ -17,10 +17,10 @@ const iconButtonDownload = {
     icon: [icon],
 };
 
-  const content = [iconButtonDownload];
+const content = [iconButtonDownload];
 
-  <MuiTooltip
-    title="tool tip title"
-    content={content}
-  />
+<MuiTooltip
+  title="tool tip title"
+  content={content}
+/>
 ```

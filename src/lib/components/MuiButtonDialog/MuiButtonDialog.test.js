@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonDialog from './MuiButtonDialog';
@@ -25,8 +25,12 @@ function setup() {
         component: 'MuiDialogActions',
         content: [{
           component: 'MuiButtonRedirect',
-          buttonText: 'buttonText',
-          redirectRoute: 'page-welcome',
+          href: 'google.com',
+          fileName: 'fileName.png',
+          button: [{
+            component: 'MuiButton',
+            buttonText: 'here',
+          }],
         }],
       }],
       dialogTitle: [{
@@ -36,7 +40,7 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<MuiButtonDialog {...props} />);
+  const comp = mount(<MuiButtonDialog {...props} />);
 
   return { comp, props };
 }

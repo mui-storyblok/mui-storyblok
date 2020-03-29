@@ -5,9 +5,6 @@ import MuiIconButtonRedirect from './MuiIconButtonRedirect';
 ```
 
 ```js
-import MuiIconButtonRedirect from './MuiIconButtonRedirect';
-
-
   const icon = [{
       component: 'MuiIcon',
       iconName: 'done_all',

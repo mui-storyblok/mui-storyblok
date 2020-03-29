@@ -8,8 +8,10 @@ function setup() {
   const props = {
     content: [{
       component: 'MuiIconButtonRedirect',
-      buttonText: 'buttonText',
-      redirectRoute: 'page-welcome',
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'star',
+      }],
     }],
   };
   const comp = shallow(<MuiListItemSecondaryAction {...props} />);

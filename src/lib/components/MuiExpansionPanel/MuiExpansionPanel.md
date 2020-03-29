@@ -5,7 +5,6 @@ import MuiExpansionPanel from './MuiExpansionPanel';
 ```
 
 ```js
-
     const expansionPanelSummary = [{
        component: 'MuiExpansionPanelSummary',
        expandIcon: [{

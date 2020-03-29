@@ -1,13 +1,11 @@
 import React, {
   createElement,
   useState,
-  lazy,
-  Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
 
-const MuiButton = lazy(() => import('../MuiButton/MuiButton'));
-const MuiDialog = lazy(() => import('../MuiDialog/MuiDialog'));
+import MuiButton from 'lib/components/MuiButton/MuiButton';
+import MuiDialog from 'lib/components/MuiDialog/MuiDialog';
 
 /**
  * MuiButtonDialog controls Dialog open state from true to false.
@@ -30,7 +28,7 @@ export const MuiButtonDialog = ({
   const muibutton = button[0];
 
   return (
-    <Suspense fallback={<div />}>
+    <>
       {
       muibutton
         ? createElement(
@@ -47,7 +45,7 @@ export const MuiButtonDialog = ({
         )
         : null
     }
-    </Suspense>
+    </>
   );
 };
 

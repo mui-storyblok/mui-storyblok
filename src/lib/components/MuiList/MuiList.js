@@ -1,9 +1,9 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiListItem = lazy(() => import('./components/MuiListItem/MuiListItem'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiListItem from './components/MuiListItem/MuiListItem';
 
 const MuiList = ({
   rootClass,
@@ -24,12 +24,10 @@ const MuiList = ({
       dense={dense}
       disablePadding={disablePadding}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </List>
   );
 };

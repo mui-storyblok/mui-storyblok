@@ -5,7 +5,6 @@ import MuiButtonHref from './MuiButtonHref';
 ```
 
 ```js
-
 const button = [{
     component: 'MuiButton',
     buttonText: 'buttonText',

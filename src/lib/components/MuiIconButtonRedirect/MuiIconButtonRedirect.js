@@ -1,10 +1,10 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiIcon = lazy(() => import('../MuiIcon/MuiIcon'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 
 /**
  * MuiIconButtonRedirect is used in storyblok redirect to react routes
@@ -39,9 +39,7 @@ export const MuiIconButtonRedirect = ({
       edge={edge === 'false' ? false : edge}
       size={size}
     >
-      <Suspense fallback={<div />}>
-        {icon[0] ? createElement(components[icon[0].component], { ...icon[0] }) : null}
-      </Suspense>
+      {icon[0] ? createElement(components[icon[0].component], { ...icon[0] }) : null}
     </IconButton>
   );
 };

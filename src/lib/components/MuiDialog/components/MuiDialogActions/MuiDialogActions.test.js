@@ -8,8 +8,11 @@ function setup() {
   const props = {
     content: [{
       component: 'MuiButtonRedirect',
-      buttonText: 'buttonText',
       redirectRoute: 'page-welcome',
+      button: [{
+        component: 'MuiButton',
+        buttonText: 'buttonText',
+      }],
     }],
   };
   const comp = shallow(<MuiDialogActions {...props} />);

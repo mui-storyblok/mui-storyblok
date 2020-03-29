@@ -2,36 +2,35 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import MuiTooltip from './MuiTooltip';
+import MuiCardActions from './MuiCardActions';
 
 function setup() {
   const props = {
-    title: 'title text',
     content: [{
-      component: 'MuiIconButtonHref',
-      herf: 'wasd.com',
+      component: 'MuiIconButtonDownload',
+      herf: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
+      fileName: 'cool.jpeg',
       icon: [{
         component: 'MuiIcon',
-        iconName: 'android',
+        iconName: 'star',
       }],
     }],
   };
-  const comp = shallow(<MuiTooltip {...props} />);
+  const comp = shallow(<MuiCardActions {...props} />);
   return { comp, props };
 }
 
-describe('<MuiTooltip />', () => {
-  it('renders MuiTooltip', () => {
+describe('<MuiCardActions />', () => {
+  it('renders MuiCardActions', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
 
   test('snapshot', () => {
     const { props } = setup();
-
     const tree = renderer.create((
       <MemoryRouter>
-        <MuiTooltip {...props} />
+        <MuiCardActions {...props} />
       </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();

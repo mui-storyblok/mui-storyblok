@@ -5,7 +5,6 @@ import MuiButtonRedirect from './MuiButtonRedirect';
 ```
 
 ```js
-
 const button = [{
     component: 'MuiButton',
     buttonText: 'buttonText',

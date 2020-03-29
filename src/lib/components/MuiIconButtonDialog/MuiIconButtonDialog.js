@@ -1,15 +1,13 @@
 import React, {
   createElement,
   useState,
-  lazy,
-  Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiDialog = lazy(() => import('../MuiDialog/MuiDialog'));
-const MuiIcon = lazy(() => import('../MuiIcon/MuiIcon'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiDialog from 'lib/components/MuiDialog/MuiDialog';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 
 const MuiIconButtonDialog = ({
   color,
@@ -43,17 +41,15 @@ const MuiIconButtonDialog = ({
       edge={edge === 'false' ? false : edge}
       size={size}
     >
-      <Suspense fallback={<div />}>
-        {muiicon ? createElement(components[muiicon.component], { ...muiicon }) : null}
-        {
-          muidialog
-            ? createElement(
-              components[muidialog.component],
-              { ...muidialog, open: state.open, toggleDialog },
-            )
-            : null
-        }
-      </Suspense>
+      {muiicon ? createElement(components[muiicon.component], { ...muiicon }) : null}
+      {
+        muidialog
+          ? createElement(
+            components[muidialog.component],
+            { ...muidialog, open: state.open, toggleDialog },
+          )
+          : null
+      }
     </IconButton>
   );
 };

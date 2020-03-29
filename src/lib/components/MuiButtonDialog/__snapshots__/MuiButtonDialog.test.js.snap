@@ -1,3 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiButtonDialog /> snapshot 1`] = `<div />`;
+exports[`<MuiButtonDialog /> snapshot 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-62 MuiButton-textSecondary MuiButton-fullWidth"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    buttonText
+  </span>
+</button>
+`;

@@ -4,6 +4,11 @@ exports[`<MuiListItemIcon /> snapshot 1`] = `
 <div
   className="MuiListItemIcon-root makeStyles-root-3"
 >
-  <div />
+  <span
+    aria-hidden={true}
+    className="material-icons MuiIcon-root makeStyles-root-6 MuiIcon-colorSecondary"
+  >
+    android
+  </span>
 </div>
 `;

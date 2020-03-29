@@ -1,15 +1,13 @@
 import React, {
   createElement,
   useState,
-  lazy,
-  Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import Storyblok from '../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
-const MuiExpansionPanelSummary = lazy(() => import('./components/MuiExpansionPanelSummary/MuiExpansionPanelSummary'));
-const MuiExpansionPanelDetails = lazy(() => import('./components/MuiExpansionPanelDetails/MuiExpansionPanelDetails'));
+import MuiExpansionPanelSummary from './components/MuiExpansionPanelSummary/MuiExpansionPanelSummary';
+import MuiExpansionPanelDetails from './components/MuiExpansionPanelDetails/MuiExpansionPanelDetails';
 
 const MuiExpansionPanel = ({
   rootClass,
@@ -32,17 +30,14 @@ const MuiExpansionPanel = ({
   const panelSummary = expansionPanelSummary[0];
   const panelDetails = expansionPanelDetails[0];
   return (
-    <Suspense fallback={<div />}>
-      <ExpansionPanel
-        className={styles.root}
-        expanded={expanded}
-        onChange={handleChange}
-      >
-        {createElement(components[panelSummary.component], panelSummary)}
-        {createElement(components[panelDetails.component], panelDetails)}
-      </ExpansionPanel>
-    </Suspense>
-
+    <ExpansionPanel
+      className={styles.root}
+      expanded={expanded}
+      onChange={handleChange}
+    >
+      {createElement(components[panelSummary.component], panelSummary)}
+      {createElement(components[panelDetails.component], panelDetails)}
+    </ExpansionPanel>
   );
 };
 

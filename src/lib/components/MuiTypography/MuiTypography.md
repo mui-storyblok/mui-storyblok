@@ -5,7 +5,6 @@ import MuiTypography from './MuiTypography';
 ```
 
 ```js
-
 const muiText = {
     component: 'MuiText',
     text: 'you can concatenate stings',
@@ -28,9 +27,9 @@ const muiText2 = {
     text: 'like this',
 }
 
-  const content = [muiText, iconButtonDownload, muiText2];
+const content = [muiText, iconButtonDownload, muiText2];
 
-  <MuiTypography
-    content={content}
-  />
+<MuiTypography
+  content={content}
+/>
 ```

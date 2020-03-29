@@ -1,17 +1,15 @@
 import React, {
   createElement,
-  lazy,
-  Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Storyblok from '../../../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 import TabPannal from './components/TabPannal/TabPannal';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
-const MuiIcon = lazy(() => import('../../../MuiIcon/MuiIcon'));
 
 const MuiTab = ({
   label,
@@ -35,7 +33,6 @@ const MuiTab = ({
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   const muiIcon = icon[0];
-
   const tabs = Array.apply(null, Array(tabsLength));
 
   return (
@@ -51,11 +48,11 @@ const MuiTab = ({
         disableRipple={disableRipple}
         wrapped={wrapped}
         icon={(
-          <Suspense fallback={<div />}>
+          <>
             {muiIcon
               && createElement(components[muiIcon.component], muiIcon)
             }
-          </Suspense>
+          </>
         )}
       />
       <AutoPlaySwipeableViews

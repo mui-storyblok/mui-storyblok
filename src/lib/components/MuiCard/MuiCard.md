@@ -5,7 +5,6 @@ import MuiCard from './MuiCard';
 ```
 
 ```js
-
 const header = {
         component: 'MuiCardHeader',
         title: 'this is a card',

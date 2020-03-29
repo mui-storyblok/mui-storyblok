@@ -5,16 +5,14 @@ import MuiAppBar from './MuiAppBar';
 ```
 
 ```js
-import MuiAppBar from './MuiAppBar';
-
 const content = [{
-  component: 'MuiTypography',
-  content: [{
-    component: 'MuiText',
-    text: 'here',
+  component: 'MuiButtonRedirect',
+  redirectRoute: '',
+  button: [{
+    component: 'MuiButton',
+    buttonText: 'here',
   }],
 }];
-
 
   <MuiAppBar
     position="relative"

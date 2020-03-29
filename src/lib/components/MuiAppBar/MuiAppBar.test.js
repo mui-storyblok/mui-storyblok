@@ -7,10 +7,11 @@ import MuiAppBar from './MuiAppBar';
 function setup() {
   const props = {
     content: [{
-      component: 'MuiTypography',
-      content: [{
-        component: 'MuiText',
-        text: 'this is text',
+      component: 'MuiButtonRedirect',
+      redirectRoute: '',
+      button: [{
+        component: 'MuiButton',
+        buttonText: 'here',
       }],
     }],
   };

@@ -4,6 +4,24 @@ exports[`<MuiList /> snapshot 1`] = `
 <ul
   className="MuiList-root makeStyles-root-3 MuiList-padding"
 >
-  <div />
+  <li
+    className="MuiListItem-root makeStyles-root-8 MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemText-root makeStyles-root-20 MuiListItemText-multiline"
+    >
+      <span
+        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+      >
+        primary
+      </span>
+      <p
+        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+      >
+        
+      </p>
+    </div>
+  </li>
 </ul>
 `;

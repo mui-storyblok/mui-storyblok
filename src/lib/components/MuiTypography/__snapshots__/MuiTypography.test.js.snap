@@ -4,6 +4,50 @@ exports[`<MuiTypography /> snapshot 1`] = `
 <p
   className="MuiTypography-root makeStyles-root-3 MuiTypography-body1"
 >
-  <div />
+  this is text
+  <a
+    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-34 MuiTypography-colorPrimary"
+    href="#"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+  >
+    btn
+  </a>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-41"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-54 MuiIcon-colorSecondary"
+      >
+        star
+      </span>
+    </span>
+  </button>
+  <span
+    aria-hidden={true}
+    className="material-icons MuiIcon-root makeStyles-root-64 MuiIcon-colorSecondary"
+  >
+    android
+  </span>
 </p>
 `;

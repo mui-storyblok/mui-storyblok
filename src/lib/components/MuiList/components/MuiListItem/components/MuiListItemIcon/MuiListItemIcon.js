@@ -1,9 +1,8 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Storyblok from '../../../../../../utils/Storyblok';
-
-const MuiIcon = lazy(() => import('../../../../../MuiIcon/MuiIcon'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 
 /**
  * MuiListItemIcon is used in storyblok redirect to react routes
@@ -21,12 +20,10 @@ export const MuiListItemIcon = ({
 
   return (
     <ListItemIcon className={styles.root}>
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </ListItemIcon>
   );
 };
