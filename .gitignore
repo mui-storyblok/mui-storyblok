@@ -8,6 +8,7 @@
 
 # production
 /build
+/styleguide
 
 # misc
 .DS_Store
@@ -21,3 +22,8 @@ yarn-debug.log*
 yarn-error.log*
 
 /dist
+
+
+# terraform
+terraform/.terraform/
+terraform/tfplan
