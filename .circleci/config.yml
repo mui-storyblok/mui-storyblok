@@ -57,4 +57,10 @@ workflows:
             filters:
               branches:
                 only: master
+        - deploy-npm:
+            requires:
+              - deploy-docs
+            filters:
+              branches:
+                only: master
 
