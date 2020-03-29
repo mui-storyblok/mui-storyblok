@@ -22,7 +22,12 @@ exports[`<MuiIconButtonRedirect /> snapshot 1`] = `
   <span
     className="MuiIconButton-label"
   >
-    <div />
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-17 MuiIcon-colorSecondary"
+    >
+      android
+    </span>
   </span>
 </button>
 `;

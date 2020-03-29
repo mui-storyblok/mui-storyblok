@@ -12,8 +12,11 @@ function setup() {
       iconName: 'android',
     }, {
       component: 'MuiButtonRedirect',
-      buttonText: 'buttonText',
       redirectRoute: 'page-welcome',
+      button: [{
+        component: 'MuiButton',
+        buttonText: 'buttonText',
+      }],
     }, {
       component: 'MuiCard',
       content: [{

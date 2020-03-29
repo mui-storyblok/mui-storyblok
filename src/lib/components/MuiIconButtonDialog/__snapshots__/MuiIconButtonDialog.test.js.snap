@@ -22,7 +22,12 @@ exports[`<MuiIconButtonDialog /> snapshot 1`] = `
   <span
     className="MuiIconButton-label"
   >
-    <div />
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-16 MuiIcon-colorSecondary"
+    >
+      star
+    </span>
   </span>
 </button>
 `;

@@ -1,9 +1,9 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Storyblok from '../../../../utils/Storyblok';
 
-const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
 
 const MuiExpansionPanelDetails = ({ rootClass, content }) => {
   const components = {
@@ -16,12 +16,10 @@ const MuiExpansionPanelDetails = ({ rootClass, content }) => {
     <ExpansionPanelDetails
       className={styles.root}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </ExpansionPanelDetails>
   );
 };

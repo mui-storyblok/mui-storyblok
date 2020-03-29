@@ -25,7 +25,12 @@ exports[`<MuiCardActions /> snapshot 1`] = `
     <span
       className="MuiIconButton-label"
     >
-      <div />
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-19 MuiIcon-colorSecondary"
+      >
+        star
+      </span>
     </span>
   </button>
 </div>

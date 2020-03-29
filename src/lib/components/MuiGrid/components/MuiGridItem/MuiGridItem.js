@@ -1,15 +1,15 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Storyblok from '../../../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
-const MuiButtonRedirect = lazy(() => import('../../../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiCard = lazy(() => import('../../../MuiCard/MuiCard'));
-const MuiTypography = lazy(() => import('../../../MuiTypography/MuiTypography'));
-const MuiMenu = lazy(() => import('../../../MuiMenu/MuiMenu'));
-const MuiIcon = lazy(() => import('../../../MuiIcon/MuiIcon'));
-const MuiExpansionPanel = lazy(() => import('../../../MuiExpansionPanel/MuiExpansionPanel'));
-const MuiList = lazy(() => import('../../../MuiList/MuiList'));
+import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
+import MuiCard from 'lib/components/MuiCard/MuiCard';
+import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
+import MuiMenu from 'lib/components/MuiMenu/MuiMenu';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import MuiExpansionPanel from 'lib/components/MuiExpansionPanel/MuiExpansionPanel';
+import MuiList from 'lib/components/MuiList/MuiList';
 
 const MuiGridItem = ({
   alignContent,
@@ -56,12 +56,10 @@ const MuiGridItem = ({
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </Grid>
   );
 };
