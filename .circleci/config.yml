@@ -25,6 +25,11 @@ jobs:
   deploy:
     executor:
       name: node/default
+    requires:
+      - build-and-test
+    branches:
+      only:
+        - master
     steps:
       - checkout
       - node/with-cache:
@@ -33,16 +38,13 @@ jobs:
             - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
+
             - run: npm run deploy-docs
             - run: npm run publish-npm
-  workflows:
-    version: 2
+workflows:
     build-and-test:
       jobs:
         - build-and-test
-        - deploy:
-            requires:
-              - build-and-test
-            filters:
-              branches:
-                only: master
+    deploy:
+      jobs:
+        - deploy
