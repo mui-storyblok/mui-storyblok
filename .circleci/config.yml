@@ -1,50 +1,42 @@
-version: 2.1
-orbs:
-  node: circleci/node@1.1.6
+version: 2
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
-    environment:
-      CC_TEST_REPORTER_ID: 6e4f8c280bdfcb40ff1cf5ff07d39fc6293715e81a6a0d7b54a0acf2b88f401a
+  build:
+    docker:
+      - image: circleci/node:13
+        environment:
+          CC_TEST_REPORTER_ID: 6e4f8c280bdfcb40ff1cf5ff07d39fc6293715e81a6a0d7b54a0acf2b88f401a
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            # Setup Code Climate
-            - run:
-                name: "Setup Code Climate Test-Reporter"
-                command: |
-                  # download test reporter as a static binary
-                  curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-                  chmod +x ./cc-test-reporter
-            # Run tests
-            - run: ./cc-test-reporter before-build
-            - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
+      - run: npm install
+      # Setup Code Climate
+      - run:
+          name: "Setup Code Climate Test-Reporter"
+          command: |
+            # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      # Run tests
+      - run: ./cc-test-reporter before-build
+      - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
   deploy:
-    branches:
-      only:
-        - master
-    executor:
-      name: node/default
+    docker:
+      - image: circleci/node:13
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: sudo apt-get update && sudo apt-get install -y python-dev
-            - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
-            - run: sudo python get-pip.py
-            - run: sudo -H pip install awscli --upgrade --ignore-installed six
-            - run: npm run deploy-docs
-            - run: npm run publish-npm
+      - run: sudo apt-get update && sudo apt-get install -y python-dev
+      - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
+      - run: sudo python get-pip.py
+      - run: sudo -H pip install awscli --upgrade --ignore-installed six
+      - run: npm run deploy-docs
+      - run: npm run publish-npm
 workflows:
+  version: 2
   build_and_deploy:
     jobs:
-      - build-and-test
+      - build
       - deploy:
           requires:
-            - build-and-test
+            - build
           filters:
             branches:
               only:
