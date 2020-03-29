@@ -23,6 +23,7 @@ jobs:
             - run: ./cc-test-reporter before-build
             - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
 workflows:
+  version: 2
     build-and-test:
       jobs:
         - build-and-test
