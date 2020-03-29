@@ -36,7 +36,8 @@ jobs:
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
             - run: npm run deploy-docs
   deploy-npm:
-    <<: *defaults
+    executor:
+      name: node/default
     steps:
       - attach_workspace:
           at: ~/repo
