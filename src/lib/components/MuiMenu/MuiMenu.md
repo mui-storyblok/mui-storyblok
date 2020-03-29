@@ -5,8 +5,6 @@ import MuiMenu from './MuiMenu';
 ```
 
 ```js
-import MuiMenu from './MuiMenu';
-
 const menuItem = {
     component: 'MuiMenuItem',
     buttonText: 'button',
@@ -19,10 +17,10 @@ const menuItem2 = {
     redirectRoute: '',
 };
 
-  const content = [menuItem, menuItem2];
+const content = [menuItem, menuItem2];
 
-  <MuiMenu
-    btnText="drop down menu"
-    content={content}
-  />
+<MuiMenu
+  btnText="drop down menu"
+  content={content}
+/>
 ```

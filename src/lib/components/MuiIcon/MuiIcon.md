@@ -5,7 +5,6 @@ import MuiIcon from './MuiIcon';
 ```
 
 ```js
-
   <MuiIcon
     iconName="accessibility"
   />

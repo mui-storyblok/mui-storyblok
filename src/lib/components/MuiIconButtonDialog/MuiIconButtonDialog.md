@@ -5,8 +5,6 @@ import MuiIconButtonDialog from './MuiIconButtonDialog';
 ```
 
 ```js
-import MuiIconButtonDialog from './MuiIconButtonDialog';
-
 const dialog = [{
     component: 'MuiDialog',
     content: [{
