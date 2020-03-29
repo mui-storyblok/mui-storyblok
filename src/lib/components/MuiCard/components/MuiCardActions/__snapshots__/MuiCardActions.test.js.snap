@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiCardActions /> snapshot 1`] = `
+<div
+  className="MuiCardActions-root makeStyles-root-3 MuiCardActions-spacing"
+>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-6"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <div />
+    </span>
+  </button>
+</div>
+`;

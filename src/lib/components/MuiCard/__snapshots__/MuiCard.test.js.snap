@@ -5,6 +5,76 @@ exports[`<MuiCard /> snapshot 1`] = `
   className="MuiGrid-root makeStyles-root-3"
   raised="false"
 >
-  <div />
+  <div
+    className="MuiCardActions-root makeStyles-root-107 MuiCardActions-spacing"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-110 MuiButton-textSecondary MuiButton-fullWidth"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        buttonText
+      </span>
+    </button>
+  </div>
+  <div
+    className="MuiCardContent-root makeStyles-root-143"
+  >
+    <p
+      className="MuiTypography-root makeStyles-root-145 MuiTypography-body1"
+    >
+      text
+    </p>
+  </div>
+  <div
+    className="MuiCardHeader-root makeStyles-root-176"
+  >
+    <div
+      className="MuiCardHeader-avatar"
+    />
+    <div
+      className="MuiCardHeader-content"
+    >
+      <span
+        className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+      >
+        title
+      </span>
+      <span
+        className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+      >
+        
+      </span>
+    </div>
+    <div
+      className="MuiCardHeader-action"
+    />
+  </div>
+  <div
+    alt="alt"
+    className="MuiCardMedia-root makeStyles-root-183"
+    style={
+      Object {
+        "backgroundImage": "url(\\"img.com\\")",
+      }
+    }
+    title="title"
+  />
 </div>
 `;

@@ -4,6 +4,11 @@ exports[`<MuiCardContent /> snapshot 1`] = `
 <div
   className="MuiCardContent-root makeStyles-root-3"
 >
+  <p
+    className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+  >
+    text
+  </p>
   <div />
 </div>
 `;
