@@ -9,7 +9,6 @@ import Storyblok from 'lib/utils/Storyblok';
 import MuiDialog from 'lib/components/MuiDialog/MuiDialog';
 import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 
-
 const MuiIconButtonDialog = ({
   color,
   disableFocusRipple,

@@ -1,13 +1,12 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import Storyblok from '../../../../../../utils/Storyblok';
-
-const MuiIconButtonRedirect = lazy(() => import('../../../../../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-const MuiIconButtonHref = lazy(() => import('../../../../../MuiIconButtonHref/MuiIconButtonHref'));
-const MuiIconButtonDownload = lazy(() => import('../../../../../MuiIconButtonDownload/MuiIconButtonDownload'));
-const MuiIconButtonDialog = lazy(() => import('../../../../../MuiIconButtonDialog/MuiIconButtonDialog'));
-const MuiTooltip = lazy(() => import('../../../../../MuiTooltip/MuiTooltip'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiIconButtonDialog from 'lib/components/MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiTooltip from 'lib/components/MuiTooltip/MuiTooltip';
 
 /**
  * MuiListItemSecondaryAction is used in storyblok redirect to react routes
@@ -29,12 +28,10 @@ export const MuiListItemSecondaryAction = ({
 
   return (
     <ListItemSecondaryAction className={styles.root}>
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </ListItemSecondaryAction>
   );
 };
