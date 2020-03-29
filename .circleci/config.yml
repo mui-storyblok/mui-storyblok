@@ -34,11 +34,16 @@ jobs:
             - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
-
             - run: npm run deploy-docs
+
+            # Login to npm to publish 
+            - run:
+              name: Authenticate with registry
+              command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/rep
+              
             - run: npm run publish-npm
 workflows:
-    build-and-test:
+    build-and-deploy:
       jobs:
         - build-and-test
         - deploy:
