@@ -29,6 +29,11 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: sudo apt-get update && sudo apt-get install -y python-dev
+            - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
+            - run: sudo python get-pip.py
+            - run: sudo -H pip install awscli --upgrade --ignore-installed six
+            
             - run: npm run deploy-docs
             - run: npm run publish-npm
 workflows:
