@@ -27,9 +27,6 @@ jobs:
       name: node/default
     requires:
       - build-and-test
-    branches:
-      only:
-        - master
     steps:
       - checkout
       - node/with-cache:
