@@ -1,0 +1,32 @@
+engines:
+  eslint:
+    enabled: true
+    checks:
+      import/extensions:
+        enabled: false
+      import/no-absolute-path:
+        enabled: false
+      import/no-duplicates:
+        enabled: false
+      import/no-named-as-default:
+        enabled: false
+      import/no-named-as-default-member:
+        enabled: false
+  csslint:
+    enabled: true
+  duplication:
+    enabled: false
+    config:
+      languages:
+      - javascript
+ratings:
+  paths:
+  - src/**
+  - "**.js"
+  - "**.jsx"
+exclude_paths:
+- scripts/**
+- src/examples/**
+- public/**
+- config/**
+- "**.test.js"
