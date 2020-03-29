@@ -31,7 +31,6 @@ jobs:
           steps:
             - run: npm run deploy-docs
             - run: npm run publish-npm
-
     workflows:
       version: 2
       build-and-test:
