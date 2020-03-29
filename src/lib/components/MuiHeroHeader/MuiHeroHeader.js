@@ -1,9 +1,9 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiGrid = lazy(() => import('../MuiGrid/MuiGrid'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -51,12 +51,10 @@ const MuiHeroHeader = ({
       spacing={Number(spacing)}
       style={heroClass}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index, sizeGrid }),
-        ))}
-      </Suspense>
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index, sizeGrid }),
+      ))}
     </Grid>
   );
 };
