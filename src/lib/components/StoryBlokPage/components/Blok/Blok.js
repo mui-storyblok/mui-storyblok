@@ -1,31 +1,31 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
 
-const MuiGrid = lazy(() => import('../../../MuiGrid/MuiGrid'));
-const MuiHeroHeader = lazy(() => import('../../../MuiHeroHeader/MuiHeroHeader'));
-const MuiAppBar = lazy(() => import('../../../MuiAppBar/MuiAppBar'));
-
-const components = {
-  MuiGrid,
-  MuiHeroHeader,
-  MuiAppBar,
-};
+import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
+import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
+import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
 
 export const Block = ({
   content,
   only,
-}) => (
-  <Hidden only={only}>
-    <Suspense fallback={<div />}>
+}) => {
+  const components = {
+    MuiGrid,
+    MuiHeroHeader,
+    MuiAppBar,
+  };
+
+  return (
+    <Hidden only={only}>
       {content.map((item, index) => createElement(
         components[item.component],
         Object.assign(item, { key: index }),
       ))
-      }
-    </Suspense>
-  </Hidden>
-);
+    }
+    </Hidden>
+  );
+};
 
 export default Block;
 

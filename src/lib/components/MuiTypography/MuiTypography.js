@@ -1,21 +1,19 @@
-import React, { createElement, lazy, Suspense } from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import Storyblok from '../../utils/Storyblok';
 
-const MuiLink = lazy(() => import('./components/MuiLink/MuiLink'));
-const MuiIcon = lazy(() => import('../MuiIcon/MuiIcon'));
-const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
-const MuiIconButtonDownload = lazy(() => import('../MuiIconButtonDownload/MuiIconButtonDownload'));
-const MuiIconButtonDialog = lazy(() => import('../MuiIconButtonDialog/MuiIconButtonDialog'));
-
-const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
-const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
-const MuiButtonDownload = lazy(() => import('../MuiButtonDownload/MuiButtonDownload'));
-const MuiButtonDialog = lazy(() => import('../MuiButtonDialog/MuiButtonDialog'));
-
-const MuiTooltip = lazy(() => import('../MuiTooltip/MuiTooltip'));
+import Storyblok from 'lib/utils/Storyblok';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiIconButtonDialog from 'lib/components/MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
+import MuiButtonDownload from 'lib/components/MuiButtonDownload/MuiButtonDownload';
+import MuiButtonDialog from 'lib/components/MuiButtonDialog/MuiButtonDialog';
+import MuiTooltip from 'lib/components/MuiTooltip/MuiTooltip';
+import MuiLink from './components/MuiLink/MuiLink';
 
 /**
  * MuiTypography is used in storyblok redirect to react routes
@@ -57,13 +55,11 @@ export const MuiTypography = ({
       align={align}
       color={color}
     >
-      <Suspense fallback={<div />}>
-        {content.map((item, index) => {
-          // MuiText is in storyblok and only returns text
-          if (item.component === 'MuiText') return item.text;
-          return createElement(components[item.component], Object.assign(item, { key: index }));
-        })}
-      </Suspense>
+      {content.map((item, index) => {
+        // MuiText is in storyblok and only returns text
+        if (item.component === 'MuiText') return item.text;
+        return createElement(components[item.component], Object.assign(item, { key: index }));
+      })}
     </Typography>
   );
 };

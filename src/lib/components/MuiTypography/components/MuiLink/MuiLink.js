@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '@material-ui/core/Link';
-import Storyblok from '../../../../utils/Storyblok';
+import Storyblok from 'lib/utils/Storyblok';
 
 /**
  * MuiLink is used in storyblok redirect to react routes

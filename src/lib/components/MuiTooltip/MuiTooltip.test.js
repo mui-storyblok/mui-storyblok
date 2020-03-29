@@ -6,11 +6,11 @@ import MuiTooltip from './MuiTooltip';
 
 function setup() {
   const props = {
-    title: 'android',
+    title: 'title text',
     content: [{
       component: 'MuiIconButtonHref',
       herf: 'wasd.com',
-      content: [{
+      icon: [{
         component: 'MuiIcon',
         iconName: 'android',
       }],

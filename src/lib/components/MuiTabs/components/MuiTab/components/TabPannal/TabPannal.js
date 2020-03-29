@@ -1,13 +1,15 @@
 import React, {
-  createElement, lazy, Suspense, useEffect,
+  createElement,
+  useEffect,
 } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import './TabPannal.module.scss';
 
-const MuiHeroHeader = lazy(() => import('../../../../../MuiHeroHeader/MuiHeroHeader'));
-const MuiGrid = lazy(() => import('../../../../../MuiGrid/MuiGrid'));
-const MuiIcon = lazy(() => import('../../../../../MuiIcon/MuiIcon'));
+import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
+import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
+import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+
+import './TabPannal.module.scss';
 
 let tabPannal = null;
 const el = document.createElement('div');
@@ -55,12 +57,12 @@ const TabPannal = ({
 
   if (value !== index) return null;
   return ReactDOM.createPortal(
-    <Suspense fallback={<div />}>
+    <>
       {content.map((item, i) => createElement(
         components[item.component],
         Object.assign(item, { key: i }),
       ))}
-    </Suspense>,
+    </>,
     el,
   );
 };

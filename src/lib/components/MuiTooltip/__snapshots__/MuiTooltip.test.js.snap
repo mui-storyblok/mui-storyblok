@@ -18,13 +18,44 @@ exports[`<MuiTooltip /> snapshot 1`] = `
   onTouchMove={[Function]}
   onTouchStart={[Function]}
   tabIndex={0}
-  title="android"
+  title="title text"
   type="button"
 >
   <span
     className="MuiIconButton-label"
   >
-    <div />
+    <button
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-27"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label"
+      >
+        <span
+          aria-hidden={true}
+          className="material-icons MuiIcon-root makeStyles-root-28 MuiIcon-colorSecondary"
+        >
+          android
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root"
+      />
+    </button>
   </span>
   <span
     className="MuiTouchRipple-root"
