@@ -78,7 +78,7 @@ const MuiTabs = ({
           Object.assign(item, {
             key: index,
             index,
-            autoplay,
+            // autoplay: state.autoplay, // autoplay false bug will cause hard transition when onMouseLeave
             interval,
             value: state.value,
             handleChangeIndex,
