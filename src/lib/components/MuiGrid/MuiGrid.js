@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Storyblok from 'lib/utils/Storyblok';
 import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
 import MuiTabs from 'lib/components/MuiTabs/MuiTabs';
+import MuiMobileStepper from 'lib/components/MuiMobileStepper/MuiMobileStepper';
 
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 
@@ -30,6 +31,7 @@ const MuiGrid = ({
     MuiGridItem,
     MuiAppBar,
     MuiTabs,
+    MuiMobileStepper,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
