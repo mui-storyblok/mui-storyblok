@@ -31,10 +31,16 @@ function setup() {
         toggleDialog: jest.fn(),
       }],
     }],
-    icon: [{
-      component: 'MuiIcon',
-      iconName: 'star',
+
+    iconButton: [{
+      component: 'MuiIconButton',
+      onClick: jest.fn(),
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'star',
+      }],
     }],
+
   };
   const comp = shallow(<MuiIconButtonDialog {...props} />);
 

@@ -31,9 +31,12 @@ function setup() {
       component: 'MuiListItemSecondaryAction',
       content: [{
         component: 'MuiIconButtonRedirect',
-        icon: [{
-          component: 'MuiIcon',
-          iconName: 'star',
+        iconButton: [{
+          component: 'MuiIconButton',
+          icon: [{
+            component: 'MuiIcon',
+            iconName: 'star',
+          }],
         }],
       }],
     }],

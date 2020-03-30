@@ -8,9 +8,12 @@ function setup() {
   const props = {
     content: [{
       component: 'MuiIconButtonRedirect',
-      icon: [{
-        component: 'MuiIcon',
-        iconName: 'star',
+      iconButton: [{
+        component: 'MuiIconButton',
+        icon: [{
+          component: 'MuiIcon',
+          iconName: 'star',
+        }],
       }],
     }],
   };

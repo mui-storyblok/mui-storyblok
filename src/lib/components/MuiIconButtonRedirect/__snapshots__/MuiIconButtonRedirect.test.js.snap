@@ -2,7 +2,7 @@
 
 exports[`<MuiIconButtonRedirect /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiIconButton-root makeStyles-root-4"
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-root-38"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
@@ -24,9 +24,9 @@ exports[`<MuiIconButtonRedirect /> snapshot 1`] = `
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-17 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-39 MuiIcon-colorSecondary"
     >
-      android
+      star
     </span>
   </span>
 </button>

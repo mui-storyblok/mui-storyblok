@@ -1,18 +1,20 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiIconButtonRedirect } from './MuiIconButtonRedirect';
 
 function setup(legacyRedirect = true) {
   const props = {
-
     redirectRoute: 'page-welcome',
     legacyRedirect,
-    
-    icon: [{
-      component: 'MuiIcon',
-      iconName: 'android',
+    iconButton: [{
+      component: 'MuiIconButton',
+      onClick: jest.fn(),
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'star',
+      }],
     }],
 
     history: {
@@ -20,7 +22,7 @@ function setup(legacyRedirect = true) {
     },
 
   };
-  const comp = shallow(<MuiIconButtonRedirect {...props} />);
+  const comp = mount(<MuiIconButtonRedirect {...props} />);
 
   return { comp, props };
 }

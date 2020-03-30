@@ -49,7 +49,7 @@ exports[`<MuiTooltip /> snapshot 1`] = `
           aria-hidden={true}
           className="material-icons MuiIcon-root makeStyles-root-28 MuiIcon-colorSecondary"
         >
-          android
+          star
         </span>
       </span>
       <span
