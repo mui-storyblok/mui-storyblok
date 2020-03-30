@@ -1,10 +1,9 @@
-import React, { createElement } from 'react';
+
+import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
 
 /**
  * MuiIconButtonRedirect is used in storyblok redirect to react routes
@@ -12,58 +11,29 @@ import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
 
 export const MuiIconButtonRedirect = ({
   history,
-  color,
-  disableFocusRipple,
-  disableRipple,
-  edge,
-  size,
-  rootClass,
-  icon,
   redirectRoute,
+  iconButton,
 }) => {
-  const components = {
-    MuiIcon,
-  };
-
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
-
   const onClick = async () => history.push(redirectRoute);
 
+  const muiIconButton = iconButton[0];
+
   return (
-    <IconButton
+    <MuiIconButton
+      {...muiIconButton}
       onClick={onClick}
-      className={styles.root}
-      color={color}
-      disableFocusRipple={disableFocusRipple}
-      disableRipple={disableRipple}
-      edge={edge === 'false' ? false : edge}
-      size={size}
-    >
-      {icon[0] ? createElement(components[icon[0].component], { ...icon[0] }) : null}
-    </IconButton>
+    />
   );
 };
 
 export default withRouter(MuiIconButtonRedirect);
 
 MuiIconButtonRedirect.propTypes = {
-  /** mui prop: 'default'| 'inherit'| 'primary'| 'secondary' */
-  color: PropTypes.string,
-  /* mui prop: If true, the keyboard focus ripple will be disabled. disableRipple must also be true. */
-  disableFocusRipple: PropTypes.bool,
-  /* mui prop: If true, the ripple effect will be disabled. */
-  disableRipple: PropTypes.bool,
-  /* mui prop: 'start' | 'end' | false */
-  edge: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  /** mui prop: 'small' | "medium" */
-  size: PropTypes.string,
-  /** stroyblok multiselect of css classes */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
 
-  icon: PropTypes.arrayOf(PropTypes.shape({
+  /** MuiIconButton Allowed maximum: 1 */
+  iconButton: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
 
@@ -73,11 +43,4 @@ MuiIconButtonRedirect.propTypes = {
   }).isRequired,
 };
 
-MuiIconButtonRedirect.defaultProps = {
-  color: 'default',
-  disableFocusRipple: false,
-  disableRipple: false,
-  edge: false,
-  size: 'medium',
-  rootClass: [],
-};
+MuiIconButtonRedirect.defaultProps = {};
