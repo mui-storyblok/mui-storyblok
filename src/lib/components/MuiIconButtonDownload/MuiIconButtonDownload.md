@@ -5,14 +5,17 @@ import MuiIconButtonDownload from './MuiIconButtonDownload';
 ```
 
 ```js
-  const icon = [{
-      component: 'MuiIcon',
-      iconName: 'done_all',
-  }];
+const iconButton = [{
+  component: 'MuiIconButton',
+  icon: [{
+    component: 'MuiIcon',
+    iconName: 'android',
+  }],
+}];
 
-  <MuiIconButtonDownload
-    herf="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-    fileName="cool.jpeg"
-    icon={icon}
-  />
+<MuiIconButtonDownload
+  href="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+  fileName="cool.jpeg"
+  iconButton={iconButton}
+/>
 ```

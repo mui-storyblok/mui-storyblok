@@ -12,7 +12,7 @@ const button = [{
 
   <MuiButtonDownload
     button={button}
-    herf="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
+    href="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
     fileName="cool.jpeg"
   />
 ```

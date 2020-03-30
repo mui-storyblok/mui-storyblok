@@ -5,13 +5,16 @@ import MuiIconButtonRedirect from './MuiIconButtonRedirect';
 ```
 
 ```js
-  const icon = [{
-      component: 'MuiIcon',
-      iconName: 'done_all',
-  }];
+const iconButton = [{
+  component: 'MuiIconButton',
+  icon: [{
+    component: 'MuiIcon',
+    iconName: 'history',
+  }],
+}];
 
-  <MuiIconButtonRedirect
-    redirectRoute=""
-    icon={icon}
-  />
+<MuiIconButtonRedirect
+  redirectRoute=""
+  iconButton={iconButton}
+/>
 ```
