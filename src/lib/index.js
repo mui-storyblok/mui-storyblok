@@ -2,7 +2,6 @@ import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import StoryBlokPage from './components/StoryBlokPage/StoryBlokPage';
-import './styles/styles.scss';
 
 export const MuiStoryblok = ({
   theme,
