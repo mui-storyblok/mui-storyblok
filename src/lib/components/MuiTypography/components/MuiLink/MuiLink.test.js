@@ -6,7 +6,7 @@ import MuiLink from './MuiLink';
 
 function setup() {
   const props = {
-    herf: 'herf.com',
+    href: 'href.com',
     text: 'text',
   };
   const comp = shallow(<MuiLink {...props} />);

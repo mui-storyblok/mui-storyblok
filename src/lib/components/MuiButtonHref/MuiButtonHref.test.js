@@ -10,7 +10,7 @@ function setup() {
       component: 'MuiButton',
       buttonText: 'buttonText',
     }],
-    herf: 'google.com',
+    href: 'google.com',
   };
   const comp = mount(<MuiButtonHref {...props} />);
   return { comp, props };

@@ -12,14 +12,16 @@ function setup() {
     }, {
       component: 'MuiLink',
       text: 'btn',
-      herf: 'google.com',
+      href: 'google.com',
     }, {
       component: 'MuiIconButtonRedirect',
-      buttonText: 'btn',
       redirectRoute: 'page-welcom',
-      icon: [{
-        component: 'MuiIcon',
-        iconName: 'star',
+      iconButton: [{
+        component: 'MuiIconButton',
+        icon: [{
+          component: 'MuiIcon',
+          iconName: 'star',
+        }],
       }],
     }, {
       component: 'MuiIcon',

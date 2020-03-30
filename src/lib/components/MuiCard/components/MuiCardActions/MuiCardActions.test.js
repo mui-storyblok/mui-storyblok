@@ -8,11 +8,14 @@ function setup() {
   const props = {
     content: [{
       component: 'MuiIconButtonDownload',
-      herf: 'https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg',
-      fileName: 'cool.jpeg',
-      icon: [{
-        component: 'MuiIcon',
-        iconName: 'star',
+      href: 'google.com',
+      fileName: 'fileName.png',
+      iconButton: [{
+        component: 'MuiIconButton',
+        icon: [{
+          component: 'MuiIcon',
+          iconName: 'star',
+        }],
       }],
     }],
   };

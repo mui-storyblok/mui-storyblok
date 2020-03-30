@@ -12,6 +12,6 @@ const button = [{
 
   <MuiButtonHref
     button={button}
-    herf="https://github.com/apjames93/mui-storyblok"
+    href="https://github.com/apjames93/mui-storyblok"
   />
 ```

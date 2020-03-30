@@ -9,10 +9,13 @@ function setup() {
     title: 'title text',
     content: [{
       component: 'MuiIconButtonHref',
-      herf: 'wasd.com',
-      icon: [{
-        component: 'MuiIcon',
-        iconName: 'android',
+      href: 'wasd.com',
+      iconButton: [{
+        component: 'MuiIconButton',
+        icon: [{
+          component: 'MuiIcon',
+          iconName: 'star',
+        }],
       }],
     }],
   };

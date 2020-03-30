@@ -9,14 +9,14 @@ import MuiButton from 'lib/components/MuiButton/MuiButton';
 
 export const MuiButtonHref = ({
   button,
-  herf,
+  href,
 }) => {
   const components = {
     MuiButton,
   };
 
   const onClick = async () => {
-    window.location.assign(herf);
+    window.location.assign(href);
   };
 
   const muibutton = button[0];
@@ -44,7 +44,7 @@ MuiButtonHref.propTypes = {
   })).isRequired,
 
   /** url to redirect to */
-  herf: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
 };
 
 MuiButtonHref.defaultProps = {};

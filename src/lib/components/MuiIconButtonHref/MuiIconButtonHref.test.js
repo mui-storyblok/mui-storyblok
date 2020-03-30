@@ -1,19 +1,22 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiIconButtonHref from './MuiIconButtonHref';
 
 function setup() {
   const props = {
-    herf: 'google.com',
-    buttonText: 'buttonText',
-    icon: [{
-      component: 'MuiIcon',
-      iconName: 'star',
+    href: 'google.com',
+    iconButton: [{
+      component: 'MuiIconButton',
+      onClick: jest.fn(),
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'star',
+      }],
     }],
   };
-  const comp = shallow(<MuiIconButtonHref {...props} />);
+  const comp = mount(<MuiIconButtonHref {...props} />);
   return { comp, props };
 }
 

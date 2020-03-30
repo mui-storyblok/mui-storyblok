@@ -10,14 +10,14 @@ import Storyblok from 'lib/utils/Storyblok';
 export const MuiLink = ({
   text,
   color,
-  herf,
+  href,
   underline,
   rootClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const onClick = () => {
-    window.location.replace(herf);
+    window.location.replace(href);
   };
 
   return (
@@ -42,7 +42,7 @@ MuiLink.propTypes = {
   /* mui prop:'none' | 'hover' | 'always' */
   underline: PropTypes.string,
   /* url for redirect */
-  herf: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   /* text to click on */
   text: PropTypes.string.isRequired,
   /** stroyblok multiselect of css classes */

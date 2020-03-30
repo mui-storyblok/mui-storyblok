@@ -23,20 +23,16 @@ const dialog = [{
     }],
   }];
 
-const button = [{
-    component: 'MuiButton',
-    buttonText: 'buttonText',
-}];
-
-  const icon = [{
+  const iconButton = [{
+    component: 'MuiIconButton',
+    icon: [{
       component: 'MuiIcon',
-      iconName: 'extension',
+      iconName: 'star',
+    }],
   }];
-
 
   <MuiIconButtonDialog
     dialog={dialog}
-    button={button}
-    icon={icon}
+    iconButton={iconButton}
   />
 ```

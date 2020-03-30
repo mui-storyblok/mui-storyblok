@@ -1,23 +1,23 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import Storyblok from 'lib/utils/Storyblok';
-
 import MuiIconButtonDownload from './MuiIconButtonDownload';
-
-Storyblok.arrayToMuiStyles = jest.fn(() => ({}));
 
 function setup() {
   const props = {
     href: 'google.com',
     fileName: 'fileName.png',
-    icon: [{
-      component: 'MuiIcon',
-      iconName: 'android',
+    iconButton: [{
+      component: 'MuiIconButton',
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'android',
+      }],
     }],
   };
-  const comp = shallow(<MuiIconButtonDownload {...props} />);
+
+  const comp = mount(<MuiIconButtonDownload {...props} />);
   return { comp, props };
 }
 
@@ -41,6 +41,7 @@ describe('<MuiIconButtonDownload />', () => {
 
 describe('clicks', () => {
   it('handleClick and call download', () => {
+    const { comp } = setup();
     const { createElement } = document;
     const { createObjectURL } = window.URL;
 
@@ -50,8 +51,6 @@ describe('clicks', () => {
       click: jest.fn(),
       remove: jest.fn(),
     }));
-
-    const { comp } = setup('contact', true);
     comp.find('WithStyles(ForwardRef(IconButton))').at(0).simulate('click');
     expect(document.createElement).toBeCalled();
     document.createElement = createElement;
