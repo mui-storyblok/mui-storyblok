@@ -60,6 +60,7 @@ const MuiTab = ({
         onChangeIndex={handleChangeIndex}
         autoplay={autoplay}
         interval={typeof interval === 'string' ? Number(interval) : interval}
+        enableMouseEvents
       >
         {/*
           I do not like this but the only way I could think to avoid
