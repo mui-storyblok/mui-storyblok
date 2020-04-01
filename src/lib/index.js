@@ -1,13 +1,18 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import GoogleApis from 'lib/utils/GoogleApis';
 import StoryBlokPage from './components/StoryBlokPage/StoryBlokPage';
 
 export const MuiStoryblok = ({
   theme,
   accessToken,
   version,
+  googleapisKey,
 }) => {
+  // set GoogleApis instance to window to use in GeocodeTabs
+  if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
+
   const muiTheme = createMuiTheme(theme);
   return (
     <MuiThemeProvider theme={muiTheme}>
@@ -29,9 +34,13 @@ MuiStoryblok.propTypes = {
 
   /** acess key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
+
+  /** key for google apis Key to use geocode if here will make  */
+  googleapisKey: PropTypes.string,
 };
 
 MuiStoryblok.defaultProps = {
   theme: {},
   version: 'draft',
+  googleapisKey: '',
 };
