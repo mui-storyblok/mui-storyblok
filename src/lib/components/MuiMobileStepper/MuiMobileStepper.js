@@ -156,7 +156,7 @@ MuiMobileStepper.propTypes = {
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
   geocode: PropTypes.bool,
-  /** MuiHeroHeader */
+  /** MuiMobileTab */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
     geocodeState: PropTypes.string,
