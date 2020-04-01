@@ -35,7 +35,6 @@ const MuiListItem = ({
   const icon = listItemIcon[0];
   const secondaryAction = listItemSecondaryAction[0];
   const text = listItemText[0];
-console.log(icon)
   return (
     <ListItem
       className={styles.root}
@@ -62,16 +61,27 @@ export default MuiListItem;
 MuiListItem.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-  /** mui prop: 'flex-start'| 'center' */
+  /** mui prop: 'flex-start'| 'center'
+   * Defines the align-items style property.
+  */
   alignItems: PropTypes.string,
-  /** mui prop: If true, compact vertical padding designed for keyboard and mouse input will be used. */
+  /** mui prop: true | false
+   * If true, compact vertical padding designed for keyboard and mouse input will be used.
+   * */
   dense: PropTypes.bool,
-  /** mui prop: If true, the left and right padding is removed. */
+  /** mui prop: true | false
+   * If true, the left and right padding is removed.
+   * */
   disableGutters: PropTypes.bool,
-  /** mui prop: If true, a 1px light border is added to the bottom of the list item. */
+  /** mui prop: true | false
+   * If true, a 1px light border is added to the bottom of the list item.
+   * */
   divider: PropTypes.bool,
-  /** mui prop: Use to apply selected styling. */
+  /** mui prop: true | false
+   * Use to apply selected styling.
+   * */
   selected: PropTypes.bool,
+
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,

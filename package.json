@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -146,7 +146,12 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
-    "publish-npm": "npm run build && npm publish"
+    "publish-npm": "npm run build && npm publish",
+    "migrate-storyblok": "sh ./migrateStoryblok.sh",
+    "export-storyblok": "npx storyblok-component-export"
+  },
+  "bin": {
+    "migrate-storyblok": "sh ./migrateStoryblok.sh"
   },
   "browserslist": {
     "production": [
@@ -164,6 +169,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "moxios": "^0.4.0",
-    "react-swipeable-views": "^0.13.9"
+    "react-swipeable-views": "^0.13.9",
+    "storyblok-migrate": "^0.3.3"
   }
 }

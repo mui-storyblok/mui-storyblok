@@ -62,6 +62,12 @@ const MuiHeroHeader = ({
 export default MuiHeroHeader;
 
 MuiHeroHeader.propTypes = {
+  /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
+
   /** url for background img */
   backgroundImageUrl: PropTypes.string.isRequired,
   /** height of the container */
@@ -76,11 +82,6 @@ MuiHeroHeader.propTypes = {
    * Defines the align-items style property. It's applied for all screen sizes.
    */
   alignItems: PropTypes.string,
-  /**
-   * stroyblok multiselect of css classes
-   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
-   */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
   /*
   * mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
   * Defines the flex-direction style property. It is applied for all screen sizes.

@@ -1,5 +1,4 @@
 import React, {
-  createElement,
   useState,
 } from 'react';
 import PropTypes from 'prop-types';
@@ -16,11 +15,6 @@ const MuiExpansionPanel = ({
   defaultExpanded,
   width,
 }) => {
-  const components = {
-    MuiExpansionPanelDetails,
-    MuiExpansionPanelSummary,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { width });
 
   const expand = defaultExpanded === 'true';
@@ -35,8 +29,8 @@ const MuiExpansionPanel = ({
       expanded={expanded}
       onChange={handleChange}
     >
-      {createElement(components[panelSummary.component], panelSummary)}
-      {createElement(components[panelDetails.component], panelDetails)}
+      <MuiExpansionPanelSummary {...panelSummary} />
+      <MuiExpansionPanelDetails {...panelDetails} />
     </ExpansionPanel>
   );
 };

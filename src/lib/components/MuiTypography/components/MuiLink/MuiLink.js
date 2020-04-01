@@ -4,7 +4,7 @@ import Link from '@material-ui/core/Link';
 import Storyblok from 'lib/utils/Storyblok';
 
 /**
- * MuiLink is used in storyblok redirect to react routes
+ * MuiLink is used in storyblok redirect to a href
  */
 
 export const MuiLink = ({
@@ -37,16 +37,22 @@ export const MuiLink = ({
 export default MuiLink;
 
 MuiLink.propTypes = {
-  /* mui prop: 'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error' */
+  /** stroyblok multiselect of css classes */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * mui prop: 'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+   * The color of the component. It supports those theme colors that make sense for this component.
+   * */
   color: PropTypes.string,
-  /* mui prop:'none' | 'hover' | 'always' */
+  /*
+  * mui prop:'none' | 'hover' | 'always'
+  * underline text
+  */
   underline: PropTypes.string,
   /* url for redirect */
   href: PropTypes.string.isRequired,
   /* text to click on */
   text: PropTypes.string.isRequired,
-  /** stroyblok multiselect of css classes */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
 };
 
 MuiLink.defaultProps = {

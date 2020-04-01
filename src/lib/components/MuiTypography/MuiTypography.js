@@ -68,6 +68,11 @@ export default MuiTypography;
 
 MuiTypography.propTypes = {
   /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component
+   * */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
+  /**
    * mui prop: 'inherit' | 'left' | 'center' | 'right' | 'justify'
    * Set the text-align on the component.
    * */
@@ -82,16 +87,10 @@ MuiTypography.propTypes = {
    * Applies the theme typography styles.
    * */
   variant: PropTypes.string,
-
   /** hight of the Typography element */
   height: PropTypes.string,
   /** width of the Typography element */
   width: PropTypes.string,
-  /**
-   * stroyblok multiselect of css classes
-   * Override or extend the styles applied to the component
-   * */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
 
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,

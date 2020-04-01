@@ -6,7 +6,7 @@ const App = () => (
   <BrowserRouter>
     <MuiStoryblok
       theme={{}}
-      accessToken="kC3FAVf9oA1KtsFLtRdzDgtt"
+      accessToken="9K1dqG8gQkc1jeVbOWRDUAtt"
       version="draft"
     />
   </BrowserRouter>

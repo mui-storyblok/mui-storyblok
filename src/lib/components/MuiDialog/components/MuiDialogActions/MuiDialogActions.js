@@ -43,7 +43,13 @@ MuiDialogActions.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
-  /** MuiButtonRedirect */
+  /** MuiIconButtonRedirect,
+    MuiIconButtonHref,
+    MuiIconButtonDownload,
+    MuiButtonRedirect,
+    MuiButtonHref,
+    MuiButtonDownload,
+    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

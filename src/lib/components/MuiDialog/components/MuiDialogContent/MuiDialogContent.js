@@ -33,11 +33,17 @@ const MuiDialogContent = ({
 export default MuiDialogContent;
 
 MuiDialogContent.propTypes = {
-  /** mui prop: true | false */
-  dividers: PropTypes.bool,
-  /** stroyblok multiselect of css classes */
+  /**
+   * stroyblok multiselect of css classes
+   * Override or extend the styles applied to the component.
+   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
+  /**
+   * mui prop: true | false
+   * Display the top and bottom dividers.
+   * */
+  dividers: PropTypes.bool,
+  /** MuiTypography MuiExpansionPanel */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

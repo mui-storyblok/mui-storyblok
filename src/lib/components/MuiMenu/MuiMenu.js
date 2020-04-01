@@ -36,11 +36,19 @@ const MuiMenu = ({
 export default MuiMenu;
 
 MuiMenu.propTypes = {
+  /**
+   * mui prop: 'small' | 'medium' | 'large'
+   */
   size: PropTypes.string,
+  /**
+   * mui prop: default | inherit | primary | secondary
+   */
   color: PropTypes.string,
+  /** text for the btn */
   btnText: PropTypes.string.isRequired,
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  /** MuiMenuItem */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

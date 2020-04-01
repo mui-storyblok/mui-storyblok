@@ -6,7 +6,7 @@ import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
 import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
 import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
 
-export const Block = ({
+export const Blok = ({
   content,
   only,
 }) => {
@@ -27,17 +27,25 @@ export const Block = ({
   );
 };
 
-export default Block;
+export default Blok;
 
-Block.propTypes = {
-  /* mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'   */
+Blok.propTypes = {
+  /**
+   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+   * Hide the given breakpoint(s).
+   * */
   only: PropTypes.arrayOf(PropTypes.string),
 
+  /**
+   * MuiGrid,
+  *  MuiHeroHeader,
+  *  MuiAppBar,
+  */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
 };
 
-Block.defaultProps = {
+Blok.defaultProps = {
   only: [],
 };
