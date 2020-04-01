@@ -52,6 +52,23 @@ export default Page;
   <Route path="/page**" component={Page} exact />
 ```
 
+## Storyblok
+
+Set `STORYBLOK_OAUTH_TOKEN` and `STORYBLOK_SPACE_ID` in your `.env` file. link to docs below
+
+> [create-react-app custom environment variables docs ](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+
+> [STORYBLOK_OAUTH_TOKEN docs ](https://www.storyblok.com/docs/api/management#topics/authentication)
+
+> [STORYBLOK_SPACE_ID docs ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
+
+
+once env is configured run cmd: `npm migrate-storyblok` this will add all componets to your storyblok account
+
+
 ## License
 
 MIT © [apjames93](https://github.com/apjames93)
+
+
+
