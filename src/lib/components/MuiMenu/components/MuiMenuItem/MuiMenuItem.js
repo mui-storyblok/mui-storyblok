@@ -30,13 +30,12 @@ export default withRouter(MuiMenuItem);
 
 
 MuiMenuItem.propTypes = {
+  /** stroyblok multiselect of css classes */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
   /** button text */
   buttonText: PropTypes.string.isRequired,
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
-
-  /** stroyblok multiselect of css classes */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** react prop not used in storyblok */
   history: PropTypes.shape({

@@ -6,9 +6,7 @@ import Storyblok from 'lib/utils/Storyblok';
 import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
 import MuiTabs from 'lib/components/MuiTabs/MuiTabs';
 import MuiMobileStepper from 'lib/components/MuiMobileStepper/MuiMobileStepper';
-
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
-
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -59,6 +57,11 @@ export default MuiGrid;
 
 MuiGrid.propTypes = {
   /**
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
+  /**
    * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'
    * Defines the align-content style property. It's applied for all screen sizes.
    */
@@ -68,11 +71,6 @@ MuiGrid.propTypes = {
    * Defines the align-items style property. It's applied for all screen sizes.
    */
   alignItems: PropTypes.string,
-  /**
-   * stroyblok multiselect of css classes
-   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
-   */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
   /*
   * mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
   * Defines the flex-direction style property. It is applied for all screen sizes.

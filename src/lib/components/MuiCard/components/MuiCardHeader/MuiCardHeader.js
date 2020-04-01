@@ -75,7 +75,7 @@ MuiCardHeader.propTypes = {
    */
   title: PropTypes.string.isRequired,
   /**
-   * The content of the component.
+   * subheader.
   */
   subheader: PropTypes.string,
   /**

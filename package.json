@@ -147,7 +147,8 @@
     "styleguide:build": "styleguidist build",
     "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
     "publish-npm": "npm run build && npm publish",
-    "migrate-storyblok": "sh ./migrateStoryblok.sh"
+    "migrate-storyblok": "sh ./migrateStoryblok.sh",
+    "export-storyblok": "npx storyblok-component-export"
   },
   "browserslist": {
     "production": [
