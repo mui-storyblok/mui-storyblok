@@ -5,15 +5,18 @@ import MuiMobileStepper from './MuiMobileStepper';
 function setup() {
   const props = {
     tabs: [{
-      component: 'MuiHeroHeader',
-      backgroundImageUrl: 'backgroundImageUrl.png',
-      content: [{
-        component: 'MuiGrid',
+      component: 'MuiMobileTab',
+      tab: [{
+        component: 'MuiHeroHeader',
+        backgroundImageUrl: 'backgroundImageUrl.png',
         content: [{
-          component: 'MuiGridItem',
+          component: 'MuiGrid',
           content: [{
-            component: 'MuiIcon',
-            iconName: 'android',
+            component: 'MuiGridItem',
+            content: [{
+              component: 'MuiIcon',
+              iconName: 'android',
+            }],
           }],
         }],
       }],

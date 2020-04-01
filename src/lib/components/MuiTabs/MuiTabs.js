@@ -1,5 +1,5 @@
 import React, {
-  useState, createElement,
+  useState, createElement, useEffect,
 } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
@@ -19,6 +19,8 @@ const MuiTabs = ({
   tabs,
   autoplay,
   interval,
+  geocode,
+
 }) => {
   const components = {
     MuiTab,
@@ -52,6 +54,24 @@ const MuiTabs = ({
       setState({ ...state, autoplay: true });
     }
   };
+
+  const setLocation = (json) => {
+    if (json.results.length) {
+      tabs.forEach((tab, i) => {
+        if (json.results[0].formatted_address.includes(tab.geocodeState)) {
+          return setState({ value: i });
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    (async () => {
+      if (geocode) {
+        await window.muistoryblokgoogleapis.geocode(setLocation);
+      }
+    })();
+  }, [geocode]);
 
   return (
     <div
@@ -141,6 +161,9 @@ MuiTabs.propTypes = {
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
+  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
+  geocode: PropTypes.bool,
+
   /** MuiTab */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -156,4 +179,5 @@ MuiTabs.defaultProps = {
   variant: 'standard',
   autoplay: false,
   interval: 3000,
+  geocode: false,
 };
