@@ -136,6 +136,12 @@ MuiTab.propTypes = {
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
+  /**
+   * State you would like to show if user is in this state need to have MuiTabs geocode true
+   *  this prop is used in parent component
+   * */
+  geocodeState: PropTypes.string,
+
   /** passed down form parent MuiTab the current value or selected index in tabs */
   value: PropTypes.number.isRequired,
   /** passed down form parent MuiTab callback to set the current value */
@@ -158,4 +164,5 @@ MuiTab.defaultProps = {
   wrapped: false,
   autoplay: false,
   interval: 3000,
+  geocodeState: '',
 };
