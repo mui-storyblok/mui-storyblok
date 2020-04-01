@@ -1,14 +1,13 @@
-import React, { createElement, useState } from 'react';
+import React, { createElement, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Storyblok from 'lib/utils/Storyblok';
-
 import MobileStepper from '@material-ui/core/MobileStepper';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-
 import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
 import MuiButton from 'lib/components/MuiButton/MuiButton';
 import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
+import MuiMobileTab from './components/MuiMobileTab/MuiMobileTab';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -21,6 +20,7 @@ const MuiMobileStepper = ({
   variant,
   autoplay,
   interval,
+  geocode,
 }) => {
   const components = {
     MuiIconButton,
@@ -48,7 +48,7 @@ const MuiMobileStepper = ({
     return setState({ ...state, activeStep: nextStep });
   };
 
-  const handleStepChange = (step) => {
+  const onChangeIndex = (step) => {
     setState({ ...state, activeStep: step });
   };
 
@@ -64,6 +64,24 @@ const MuiMobileStepper = ({
     }
   };
 
+  const setLocation = (json) => {
+    if (json.results.length) {
+      tabs.forEach((tab, i) => {
+        if (json.results[0].formatted_address.includes(tab.geocodeState)) {
+          return setState({ activeStep: i });
+        }
+      });
+    }
+  };
+
+  useEffect(() => {
+    (async () => {
+      if (geocode) {
+        await window.muistoryblokgoogleapis.geocode(setLocation);
+      }
+    })();
+  }, [geocode]);
+
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const back = backBtn[0];
@@ -78,14 +96,16 @@ const MuiMobileStepper = ({
         autoplay={state.autoplay}
         interval={typeof interval === 'string' ? Number(interval) : interval}
         index={state.activeStep}
-        onChangeIndex={handleStepChange}
+        onChangeIndex={onChangeIndex}
         enableMouseEvents
       >
-        {tabs.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
+        {tabs.map(tab => (
+          <MuiMobileTab
+            tab={tab.tab[0]}
+          />
         ))}
       </AutoPlaySwipeableViews>
+
       <MobileStepper
         className={styles.root}
         steps={maxSteps}
@@ -130,23 +150,28 @@ MuiMobileStepper.propTypes = {
    * Set the variant type.
    */
   variant: PropTypes.string,
-
   /** autoplay will incroment tabs by a interval */
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
+  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
+  geocode: PropTypes.bool,
   /** MuiHeroHeader */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
+    geocodeState: PropTypes.string,
   })).isRequired,
-
-  /** MuiHeroHeader */
+  /**
+   * MuiIconButton,
+    MuiButton,
+   */
   nextBtn: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-
-  /** MuiHeroHeader */
+  /**
+   * MuiIconButton,
+  * MuiButton,
+  */
   backBtn: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
@@ -158,4 +183,5 @@ MuiMobileStepper.defaultProps = {
   variant: 'dots',
   autoplay: false,
   interval: 3000,
+  geocode: false,
 };
