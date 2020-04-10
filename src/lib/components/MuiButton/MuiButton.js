@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
-import Storyblok from 'lib/utils/Storyblok';
+import MuiIcon from '../MuiIcon/MuiIcon';
+import Storyblok from '../../utils/Storyblok';
 
 /**
    * MuiButton controls Dialog open state from true to false.

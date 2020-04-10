@@ -63,7 +63,7 @@ Set `STORYBLOK_OAUTH_TOKEN` and `STORYBLOK_SPACE_ID` in your `.env` file. link t
 > [STORYBLOK_SPACE_ID docs ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
 
-once env is configured run cmd: `npm migrate-storyblok` this will add all componets to your storyblok account
+once env is configured run cmd: `npx migrate-storyblok` this will add all componets to your storyblok account
 
 
 ## License

@@ -3,8 +3,8 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import Storyblok from 'lib/utils/Storyblok';
 
+import Storyblok from '../../utils/Storyblok';
 import MuiExpansionPanelSummary from './components/MuiExpansionPanelSummary/MuiExpansionPanelSummary';
 import MuiExpansionPanelDetails from './components/MuiExpansionPanelDetails/MuiExpansionPanelDetails';
 

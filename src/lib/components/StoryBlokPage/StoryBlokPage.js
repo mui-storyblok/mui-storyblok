@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../utils/Storyblok';
 import Blok from './components/Blok/Blok';
 import styles from './StoryBlokPage.module.scss';
 

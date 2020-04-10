@@ -3,7 +3,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
 /**
  * MuiIconButtonRedirect is used in storyblok redirect to react routes

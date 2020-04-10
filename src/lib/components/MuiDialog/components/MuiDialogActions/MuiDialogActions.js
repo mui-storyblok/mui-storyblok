@@ -2,13 +2,13 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogActions from '@material-ui/core/DialogActions';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
-import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
-import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
-import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
-import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
-import MuiButtonDownload from 'lib/components/MuiButtonDownload/MuiButtonDownload';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
+import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
 
 const MuiDialogActions = ({
   content,

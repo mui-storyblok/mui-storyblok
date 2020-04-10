@@ -2,7 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../utils/Storyblok';
 import MuiListItem from './components/MuiListItem/MuiListItem';
 
 const MuiList = ({

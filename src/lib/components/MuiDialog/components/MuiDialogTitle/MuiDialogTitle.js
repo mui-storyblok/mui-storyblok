@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../../../utils/Storyblok';
 
 const MuiDialogTitle = ({
   toggleDialog,

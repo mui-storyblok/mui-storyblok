@@ -1,12 +1,13 @@
 import React, { createElement, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Storyblok from 'lib/utils/Storyblok';
+
 import MobileStepper from '@material-ui/core/MobileStepper';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
-import MuiButton from 'lib/components/MuiButton/MuiButton';
-import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
+import MuiButton from '../MuiButton/MuiButton';
+import MuiHeroHeader from '../MuiHeroHeader/MuiHeroHeader';
+import Storyblok from '../../utils/Storyblok';
 import MuiMobileTab from './components/MuiMobileTab/MuiMobileTab';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);

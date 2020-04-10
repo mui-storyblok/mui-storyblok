@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../utils/Storyblok';
 // import styles for icons in styleguide
-import 'lib/styles/styles.scss';
+import '../../styles/styles.scss';
 
 /**
  * MuiIcon is used in storyblok redirect to react routes

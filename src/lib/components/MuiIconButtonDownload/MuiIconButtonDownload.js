@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import downloadUrl from 'lib/utils/downloadUrl';
-import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
+import downloadUrl from '../../utils/downloadUrl';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
 /**
  * MuiIconButtonDownload is used in storyblok that will download a href

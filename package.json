@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.13",
+  "version": "1.0.20",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -141,17 +141,18 @@
     "build-examples": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build-stoyblok-schema": "NODE_ENV=production babel storyblok --out-dir dist/storyblok --copy-files && NODE_ENV=production babel cli.js --out-file dist/cli.js && chmod +x dist/cli.js",
+    "build-app": "NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build": "rm -rf dist && npm run build-app && npm run build-stoyblok-schema",
+    "publish-npm": "npm run build && npm publish",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
-    "publish-npm": "npm run build && npm publish",
-    "migrate-storyblok": "sh ./migrateStoryblok.sh",
     "export-storyblok": "npx storyblok-component-export"
   },
   "bin": {
-    "migrate-storyblok": "sh ./migrateStoryblok.sh"
+    "migrate-storyblok": "./cli.js"
   },
   "browserslist": {
     "production": [

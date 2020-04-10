@@ -2,10 +2,10 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
-import MuiExpansionPanel from 'lib/components/MuiExpansionPanel/MuiExpansionPanel';
-import MuiList from 'lib/components/MuiList/MuiList';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiTypography from '../../../MuiTypography/MuiTypography';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiList from '../../../MuiList/MuiList';
 
 const MuiCardContent = ({
   content,

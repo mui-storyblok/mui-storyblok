@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import moxios from 'moxios';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../utils/Storyblok';
 import { StoryBlokPage } from './StoryBlokPage';
 
 function setup() {

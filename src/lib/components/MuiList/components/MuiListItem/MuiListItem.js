@@ -2,8 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 
-import Storyblok from 'lib/utils/Storyblok';
-
+import Storyblok from '../../../../utils/Storyblok';
 import MuiListItemAvatar from './components/MuiListItemAvatar/MuiListItemAvatar';
 import MuiListItemIcon from './components/MuiListItemIcon/MuiListItemIcon';
 import MuiListItemSecondaryAction from './components/MuiListItemSecondaryAction/MuiListItemSecondaryAction';

@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import Storyblok from 'lib/utils/Storyblok';
 
+import Storyblok from '../../utils/Storyblok';
 import DropDownMenu from './components/DropDownMenu/DropDownMenu';
 import MuiMenuItem from './components/MuiMenuItem/MuiMenuItem';
 

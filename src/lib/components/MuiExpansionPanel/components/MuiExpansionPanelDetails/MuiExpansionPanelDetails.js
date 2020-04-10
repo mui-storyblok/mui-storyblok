@@ -2,8 +2,8 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiTypography from '../../../MuiTypography/MuiTypography';
 
 const MuiExpansionPanelDetails = ({ rootClass, content }) => {
   const components = {

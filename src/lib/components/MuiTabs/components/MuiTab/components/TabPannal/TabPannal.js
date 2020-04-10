@@ -5,9 +5,9 @@ import React, {
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
-import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import MuiHeroHeader from '../../../../../MuiHeroHeader/MuiHeroHeader';
+import MuiGrid from '../../../../../MuiGrid/MuiGrid';
+import MuiIcon from '../../../../../MuiIcon/MuiIcon';
 
 import './TabPannal.module.scss';
 

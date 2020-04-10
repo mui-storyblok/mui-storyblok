@@ -2,13 +2,13 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardHeader from '@material-ui/core/CardHeader';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
-import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
-import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
-import MuiIconButtonDialog from 'lib/components/MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiTooltip from 'lib/components/MuiTooltip/MuiTooltip';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiTooltip from '../../../MuiTooltip/MuiTooltip';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 /**
  * MuiCardHeader is used in storyblok redirect to react routes

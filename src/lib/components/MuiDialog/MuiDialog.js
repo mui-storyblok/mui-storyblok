@@ -4,8 +4,7 @@ import React, {
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 
-import Storyblok from 'lib/utils/Storyblok';
-
+import Storyblok from '../../utils/Storyblok';
 import MuiDialogActions from './components/MuiDialogActions/MuiDialogActions';
 import MuiDialogTitle from './components/MuiDialogTitle/MuiDialogTitle';
 import MuiDialogContent from './components/MuiDialogContent/MuiDialogContent';

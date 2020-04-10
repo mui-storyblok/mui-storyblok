@@ -1,9 +1,9 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import Storyblok from 'lib/utils/Storyblok';
-import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiTypography from '../../../MuiTypography/MuiTypography';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 const MuiExpansionPanelSummary = ({
   rootClass,

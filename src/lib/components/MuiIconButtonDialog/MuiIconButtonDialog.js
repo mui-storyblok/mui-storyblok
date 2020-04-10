@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import MuiDialog from 'lib/components/MuiDialog/MuiDialog';
-import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
+import MuiDialog from '../MuiDialog/MuiDialog';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
 const MuiIconButtonDialog = ({
   dialog,

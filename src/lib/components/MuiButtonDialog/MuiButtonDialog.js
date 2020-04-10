@@ -4,8 +4,8 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
-import MuiButton from 'lib/components/MuiButton/MuiButton';
-import MuiDialog from 'lib/components/MuiDialog/MuiDialog';
+import MuiButton from '../MuiButton/MuiButton';
+import MuiDialog from '../MuiDialog/MuiDialog';
 
 /**
  * MuiButtonDialog controls Dialog open state from true to false.

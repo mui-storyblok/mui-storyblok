@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from '../../utils/Storyblok';
+import MuiIcon from '../MuiIcon/MuiIcon';
 
 /**
 * MuiIconButton for more docs check out https://material-ui.com/api/icon-button/#iconbutton-api

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import GoogleApis from 'lib/utils/GoogleApis';
+import GoogleApis from './utils/GoogleApis';
 import StoryBlokPage from './components/StoryBlokPage/StoryBlokPage';
 
 export const MuiStoryblok = ({

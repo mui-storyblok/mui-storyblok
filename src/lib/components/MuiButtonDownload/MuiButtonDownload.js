@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import downloadUrl from 'lib/utils/downloadUrl';
-import MuiButton from 'lib/components/MuiButton/MuiButton';
+import downloadUrl from '../../utils/downloadUrl';
+import MuiButton from '../MuiButton/MuiButton';
 
 /**
  * MuiButtonDownload onClick bug is opening url in a new tab in the browser instead of dowloading.

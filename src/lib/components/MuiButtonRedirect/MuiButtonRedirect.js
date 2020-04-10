@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import MuiButton from 'lib/components/MuiButton/MuiButton';
+import MuiButton from '../MuiButton/MuiButton';
 
 /**
  * MuiButtonRedirect onClick will redirect you to a new route in the current App
