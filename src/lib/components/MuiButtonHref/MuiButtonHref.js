@@ -1,6 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import MuiButton from 'lib/components/MuiButton/MuiButton';
+import MuiButton from '../MuiButton/MuiButton';
 
 /**
  * MuiButtonHref takes a href to redirect to

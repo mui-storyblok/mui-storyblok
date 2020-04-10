@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
 import TabPannal from './components/TabPannal/TabPannal';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);

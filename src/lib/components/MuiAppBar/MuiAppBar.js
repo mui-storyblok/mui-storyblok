@@ -3,13 +3,13 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Storyblok from 'lib/utils/Storyblok';
 
-import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
-import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
-import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
-import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
-import MuiMenu from 'lib/components/MuiMenu/MuiMenu';
+import Storyblok from '../../utils/Storyblok';
+import MuiButtonRedirect from '../MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
+import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from '../MuiIconButtonHref/MuiIconButtonHref';
+import MuiMenu from '../MuiMenu/MuiMenu';
 
 // Styleguidist uses react-docgen and they do not support ImportExpression yet and was unable to generat docs for props
 // leaving code her as a reminder that it needs to be done once support comes out for it

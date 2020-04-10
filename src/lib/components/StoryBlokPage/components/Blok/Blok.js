@@ -2,9 +2,9 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
 
-import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
-import MuiHeroHeader from 'lib/components/MuiHeroHeader/MuiHeroHeader';
-import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
+import MuiGrid from '../../../MuiGrid/MuiGrid';
+import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
+import MuiAppBar from '../../../MuiAppBar/MuiAppBar';
 
 export const Blok = ({
   content,

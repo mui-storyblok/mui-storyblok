@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MuiIconButton from 'lib/components/MuiIconButton/MuiIconButton';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
 /**
  * MuiIconButtonHref is used in storyblok redirect to react routes

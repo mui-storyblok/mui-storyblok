@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
+import Storyblok from '../../../../../../utils/Storyblok';
+import MuiIcon from '../../../../../MuiIcon/MuiIcon';
 
 /**
  * MuiListItemAvatar is used in storyblok redirect to react routes

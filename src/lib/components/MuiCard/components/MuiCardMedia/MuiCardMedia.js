@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CardMedia from '@material-ui/core/CardMedia';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../../../utils/Storyblok';
 
 /**
  * MuiCardMedia is used in storyblok redirect to react routes

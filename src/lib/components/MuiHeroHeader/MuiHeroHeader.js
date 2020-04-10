@@ -2,8 +2,8 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiGrid from 'lib/components/MuiGrid/MuiGrid';
+import Storyblok from '../../utils/Storyblok';
+import MuiGrid from '../MuiGrid/MuiGrid';
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;

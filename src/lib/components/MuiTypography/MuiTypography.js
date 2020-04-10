@@ -2,17 +2,17 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
-import MuiIconButtonRedirect from 'lib/components/MuiIconButtonRedirect/MuiIconButtonRedirect';
-import MuiIconButtonHref from 'lib/components/MuiIconButtonHref/MuiIconButtonHref';
-import MuiIconButtonDownload from 'lib/components/MuiIconButtonDownload/MuiIconButtonDownload';
-import MuiIconButtonDialog from 'lib/components/MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
-import MuiButtonHref from 'lib/components/MuiButtonHref/MuiButtonHref';
-import MuiButtonDownload from 'lib/components/MuiButtonDownload/MuiButtonDownload';
-import MuiButtonDialog from 'lib/components/MuiButtonDialog/MuiButtonDialog';
-import MuiTooltip from 'lib/components/MuiTooltip/MuiTooltip';
+import Storyblok from '../../utils/Storyblok';
+import MuiIcon from '../MuiIcon/MuiIcon';
+import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import MuiIconButtonHref from '../MuiIconButtonHref/MuiIconButtonHref';
+import MuiIconButtonDownload from '../MuiIconButtonDownload/MuiIconButtonDownload';
+import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiButtonRedirect from '../MuiButtonRedirect/MuiButtonRedirect';
+import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
+import MuiButtonDownload from '../MuiButtonDownload/MuiButtonDownload';
+import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
+import MuiTooltip from '../MuiTooltip/MuiTooltip';
 import MuiLink from './components/MuiLink/MuiLink';
 
 /**

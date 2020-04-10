@@ -1,15 +1,15 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import Storyblok from 'lib/utils/Storyblok';
 
-import MuiButtonRedirect from 'lib/components/MuiButtonRedirect/MuiButtonRedirect';
-import MuiCard from 'lib/components/MuiCard/MuiCard';
-import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
-import MuiMenu from 'lib/components/MuiMenu/MuiMenu';
-import MuiIcon from 'lib/components/MuiIcon/MuiIcon';
-import MuiExpansionPanel from 'lib/components/MuiExpansionPanel/MuiExpansionPanel';
-import MuiList from 'lib/components/MuiList/MuiList';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
+import MuiCard from '../../../MuiCard/MuiCard';
+import MuiTypography from '../../../MuiTypography/MuiTypography';
+import MuiMenu from '../../../MuiMenu/MuiMenu';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiList from '../../../MuiList/MuiList';
 
 const MuiGridItem = ({
   alignContent,

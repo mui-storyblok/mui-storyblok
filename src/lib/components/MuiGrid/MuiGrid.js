@@ -2,10 +2,10 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiAppBar from 'lib/components/MuiAppBar/MuiAppBar';
-import MuiTabs from 'lib/components/MuiTabs/MuiTabs';
-import MuiMobileStepper from 'lib/components/MuiMobileStepper/MuiMobileStepper';
+import Storyblok from '../../utils/Storyblok';
+import MuiAppBar from '../MuiAppBar/MuiAppBar';
+import MuiTabs from '../MuiTabs/MuiTabs';
+import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 
 export const sizeGrid = (value) => {

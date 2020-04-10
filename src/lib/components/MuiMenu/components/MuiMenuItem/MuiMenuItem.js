@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import { withRouter } from 'react-router-dom';
-import Storyblok from 'lib/utils/Storyblok';
+import Storyblok from '../../../../utils/Storyblok';
 
 const MuiMenuItem = ({
   redirectRoute,

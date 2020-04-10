@@ -2,9 +2,9 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogContent from '@material-ui/core/DialogContent';
 
-import Storyblok from 'lib/utils/Storyblok';
-import MuiTypography from 'lib/components/MuiTypography/MuiTypography';
-import MuiExpansionPanel from 'lib/components/MuiExpansionPanel/MuiExpansionPanel';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiTypography from '../../../MuiTypography/MuiTypography';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
 
 const MuiDialogContent = ({
   dividers,
