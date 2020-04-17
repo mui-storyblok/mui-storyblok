@@ -6,7 +6,9 @@ import Storyblok from '../../utils/Storyblok';
 import MuiAppBar from '../MuiAppBar/MuiAppBar';
 import MuiTabs from '../MuiTabs/MuiTabs';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
+import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -30,6 +32,7 @@ const MuiGrid = ({
     MuiAppBar,
     MuiTabs,
     MuiMobileStepper,
+    MuiCircularProgress,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
@@ -49,6 +52,7 @@ const MuiGrid = ({
         components[item.component],
         Object.assign(item, { key: index, sizeGrid }),
       ))}
+      {/* <CircularProgress />  */}
     </Grid>
   );
 };
