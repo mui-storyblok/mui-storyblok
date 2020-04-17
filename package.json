@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -171,6 +171,10 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "moxios": "^0.4.0",
     "react-swipeable-views": "^0.13.9",
-    "storyblok-migrate": "^0.3.3"
+    "storyblok-migrate": "^0.3.3",
+    "react-router-dom": "^4.3.1",
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^3.0.2",
+    "node-sass": "^4.13.1"
   }
 }
