@@ -1,597 +1,599 @@
 module.exports = {
-  name: 'MuiGridItem',
-  display_name: null,
-  updated_at: '2020-03-31T18:27:08.721Z',
-  schema: {
-    alignContent: {
-      type: 'option',
-      pos: 0,
-      use_uuid: true,
-      options: [
+  "name": "MuiGridItem",
+  "display_name": null,
+  "updated_at": "2020-04-21T20:57:46.815Z",
+  "schema": {
+    "alignContent": {
+      "type": "option",
+      "pos": 0,
+      "use_uuid": true,
+      "options": [
         {
-          value: 'stretch',
-          name: 'stretch',
+          "value": "stretch",
+          "name": "stretch"
         },
         {
-          value: 'center',
-          name: 'center',
+          "value": "center",
+          "name": "center"
         },
         {
-          value: 'flex-start',
-          name: 'flex-start',
+          "value": "flex-start",
+          "name": "flex-start"
         },
         {
-          value: 'flex-end',
-          name: 'flex-end',
+          "value": "flex-end",
+          "name": "flex-end"
         },
         {
-          value: 'space-between',
-          name: 'space-between',
+          "value": "space-between",
+          "name": "space-between"
         },
         {
-          value: 'space-around',
-          name: 'space-around',
-        },
+          "value": "space-around",
+          "name": "space-around"
+        }
       ],
-      required: true,
-      description: "Defines the align-content style property. It's applied for all screen sizes.",
-      default_value: 'stretch',
+      "required": true,
+      "description": "Defines the align-content style property. It's applied for all screen sizes.",
+      "default_value": "stretch"
     },
-    alignItems: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "alignItems": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'flex-start',
-          name: 'flex-start',
+          "value": "flex-start",
+          "name": "flex-start"
         },
         {
-          value: 'center',
-          name: 'center',
+          "value": "center",
+          "name": "center"
         },
         {
-          value: 'flex-end',
-          name: 'flex-end',
+          "value": "flex-end",
+          "name": "flex-end"
         },
         {
-          value: 'stretch',
-          name: 'stretch',
+          "value": "stretch",
+          "name": "stretch"
         },
         {
-          value: 'baseline',
-          name: 'baseline',
-        },
+          "value": "baseline",
+          "name": "baseline"
+        }
       ],
-      default_value: 'center',
-      required: true,
-      pos: 1,
-      description: "Defines the align-items style property. It's applied for all screen sizes.",
+      "default_value": "center",
+      "required": true,
+      "pos": 1,
+      "description": "Defines the align-items style property. It's applied for all screen sizes."
     },
-    rootClass: {
-      type: 'options',
-      pos: 2,
-      options: [
+    "rootClass": {
+      "type": "options",
+      "pos": 2,
+      "options": [
         {
-          value: 'color: blue',
-          name: 'whatever blue color',
+          "value": "color: blue",
+          "name": "whatever blue color"
         },
         {
-          value: '',
-          name: '',
+          "value": "",
+          "name": ""
+        }
+      ]
+    },
+    "direction": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
+        {
+          "value": "row",
+          "name": "row"
         },
+        {
+          "value": "row-reverse",
+          "name": "row-reverse"
+        },
+        {
+          "value": "column",
+          "name": "column"
+        },
+        {
+          "value": "column-reverse",
+          "name": "column-reverse"
+        }
       ],
+      "default_value": "row",
+      "required": true,
+      "pos": 3,
+      "description": "Defines the flex-direction style property. It is applied for all screen sizes."
     },
-    direction: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "justify": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'row',
-          name: 'row',
+          "value": "flex-start",
+          "name": "flex-start"
         },
         {
-          value: 'row-reverse',
-          name: 'row-reverse',
+          "value": "center",
+          "name": "center"
         },
         {
-          value: 'column',
-          name: 'column',
+          "value": "flex-end",
+          "name": "flex-end"
         },
         {
-          value: 'column-reverse',
-          name: 'column-reverse',
+          "value": "space-between",
+          "name": "space-between"
         },
+        {
+          "value": "space-around",
+          "name": "space-around"
+        },
+        {
+          "value": "space-evenly",
+          "name": "space-evenly"
+        }
       ],
-      default_value: 'row',
-      required: true,
-      pos: 3,
-      description: 'Defines the flex-direction style property. It is applied for all screen sizes.',
+      "description": "Defines the justify-content style property. It is applied for all screen sizes.",
+      "default_value": "center",
+      "required": true,
+      "pos": 4
     },
-    justify: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "lg": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'flex-start',
-          name: 'flex-start',
+          "value": "auto",
+          "name": "auto"
         },
         {
-          value: 'center',
-          name: 'center',
+          "value": "false",
+          "name": "false"
         },
         {
-          value: 'flex-end',
-          name: 'flex-end',
+          "value": "true",
+          "name": "true"
         },
         {
-          value: 'space-between',
-          name: 'space-between',
+          "value": "1",
+          "name": "1"
         },
         {
-          value: 'space-around',
-          name: 'space-around',
+          "value": "2",
+          "name": "2"
         },
         {
-          value: 'space-evenly',
-          name: 'space-evenly',
+          "value": "3",
+          "name": "3"
         },
+        {
+          "value": "4",
+          "name": "4"
+        },
+        {
+          "value": "5",
+          "name": "5"
+        },
+        {
+          "value": "6",
+          "name": "6"
+        },
+        {
+          "value": "7",
+          "name": "7"
+        },
+        {
+          "value": "8",
+          "name": "8"
+        },
+        {
+          "value": "9",
+          "name": "9"
+        },
+        {
+          "value": "10",
+          "name": "10"
+        },
+        {
+          "value": "11",
+          "name": "11"
+        },
+        {
+          "value": "12",
+          "name": "12"
+        }
       ],
-      description: 'Defines the justify-content style property. It is applied for all screen sizes.',
-      default_value: 'center',
-      required: true,
-      pos: 4,
+      "required": true,
+      "default_value": "false",
+      "pos": 5,
+      "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
-    lg: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "md": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'auto',
-          name: 'auto',
+          "value": "false",
+          "name": "false"
         },
         {
-          value: 'false',
-          name: 'false',
+          "value": "auto",
+          "name": "auto"
         },
         {
-          value: 'true',
-          name: 'true',
+          "value": "true",
+          "name": "true"
         },
         {
-          value: '1',
-          name: '1',
+          "value": "1",
+          "name": "1"
         },
         {
-          value: '2',
-          name: '2',
+          "value": "2",
+          "name": "2"
         },
         {
-          value: '3',
-          name: '3',
+          "value": "3",
+          "name": "3"
         },
         {
-          value: '4',
-          name: '4',
+          "value": "4",
+          "name": "4"
         },
         {
-          value: '5',
-          name: '5',
+          "value": "5",
+          "name": "5"
         },
         {
-          value: '6',
-          name: '6',
+          "value": "6",
+          "name": "6"
         },
         {
-          value: '7',
-          name: '7',
+          "value": "7",
+          "name": "7"
         },
         {
-          value: '8',
-          name: '8',
+          "value": "8",
+          "name": "8"
         },
         {
-          value: '9',
-          name: '9',
+          "value": "9",
+          "name": "9"
         },
         {
-          value: '10',
-          name: '10',
+          "value": "10",
+          "name": "10"
         },
         {
-          value: '11',
-          name: '11',
+          "value": "11",
+          "name": "11"
         },
         {
-          value: '12',
-          name: '12',
-        },
+          "value": "12",
+          "name": "12"
+        }
       ],
-      required: true,
-      default_value: 'false',
-      pos: 5,
-      description: "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.",
+      "required": true,
+      "default_value": "false",
+      "pos": 6,
+      "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
-    md: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "sm": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'false',
-          name: 'false',
+          "value": "false",
+          "name": "false"
         },
         {
-          value: 'auto',
-          name: 'auto',
+          "value": "auto",
+          "name": "auto"
         },
         {
-          value: 'true',
-          name: 'true',
+          "value": "true",
+          "name": "true"
         },
         {
-          value: '1',
-          name: '1',
+          "value": "1",
+          "name": "1"
         },
         {
-          value: '2',
-          name: '2',
+          "value": "2",
+          "name": "2"
         },
         {
-          value: '3',
-          name: '3',
+          "value": "3",
+          "name": "3"
         },
         {
-          value: '4',
-          name: '4',
+          "value": "4",
+          "name": "4"
         },
         {
-          value: '5',
-          name: '5',
+          "value": "5",
+          "name": "5"
         },
         {
-          value: '6',
-          name: '6',
+          "value": "6",
+          "name": "6"
         },
         {
-          value: '7',
-          name: '7',
+          "value": "7",
+          "name": "7"
         },
         {
-          value: '8',
-          name: '8',
+          "value": "8",
+          "name": "8"
         },
         {
-          value: '9',
-          name: '9',
+          "value": "9",
+          "name": "9"
         },
         {
-          value: '10',
-          name: '10',
+          "value": "10",
+          "name": "10"
         },
         {
-          value: '11',
-          name: '11',
+          "value": "11",
+          "name": "11"
         },
         {
-          value: '12',
-          name: '12',
-        },
+          "value": "12",
+          "name": "12"
+        }
       ],
-      required: true,
-      default_value: 'false',
-      pos: 6,
-      description: "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.",
+      "required": true,
+      "default_value": "false",
+      "pos": 7,
+      "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
-    sm: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "spacing": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'false',
-          name: 'false',
+          "value": "0",
+          "name": "0"
         },
         {
-          value: 'auto',
-          name: 'auto',
+          "value": "1",
+          "name": "1"
         },
         {
-          value: 'true',
-          name: 'true',
+          "value": "2",
+          "name": "2"
         },
         {
-          value: '1',
-          name: '1',
+          "value": "3",
+          "name": "3"
         },
         {
-          value: '2',
-          name: '2',
+          "value": "4",
+          "name": "4"
         },
         {
-          value: '3',
-          name: '3',
+          "value": "5",
+          "name": "5"
         },
         {
-          value: '4',
-          name: '4',
+          "value": "6",
+          "name": "6"
         },
         {
-          value: '5',
-          name: '5',
+          "value": "7",
+          "name": "7"
         },
         {
-          value: '6',
-          name: '6',
+          "value": "8",
+          "name": "8"
         },
         {
-          value: '7',
-          name: '7',
+          "value": "9",
+          "name": "9"
         },
         {
-          value: '8',
-          name: '8',
-        },
-        {
-          value: '9',
-          name: '9',
-        },
-        {
-          value: '10',
-          name: '10',
-        },
-        {
-          value: '11',
-          name: '11',
-        },
-        {
-          value: '12',
-          name: '12',
-        },
+          "value": "10",
+          "name": "10"
+        }
       ],
-      required: true,
-      default_value: 'false',
-      pos: 7,
-      description: "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.",
+      "display_name": "",
+      "default_value": "2",
+      "required": true,
+      "pos": 8,
+      "description": "Defines the space between the type item component. It can only be used on a type container component."
     },
-    spacing: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "wrap": {
+      "type": "option",
+      "pos": 9,
+      "use_uuid": true,
+      "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
+      "options": [
         {
-          value: '0',
-          name: '0',
+          "value": "nowrap",
+          "name": "nowrap"
         },
         {
-          value: '1',
-          name: '1',
+          "value": "wrap",
+          "name": "wrap"
         },
         {
-          value: '2',
-          name: '2',
-        },
-        {
-          value: '3',
-          name: '3',
-        },
-        {
-          value: '4',
-          name: '4',
-        },
-        {
-          value: '5',
-          name: '5',
-        },
-        {
-          value: '6',
-          name: '6',
-        },
-        {
-          value: '7',
-          name: '7',
-        },
-        {
-          value: '8',
-          name: '8',
-        },
-        {
-          value: '9',
-          name: '9',
-        },
-        {
-          value: '10',
-          name: '10',
-        },
+          "value": "wrap-reverse",
+          "name": "wrap-reverse"
+        }
       ],
-      display_name: '',
-      default_value: '2',
-      required: true,
-      pos: 8,
-      description: 'Defines the space between the type item component. It can only be used on a type container component.',
+      "required": true,
+      "default_value": "wrap"
     },
-    wrap: {
-      type: 'option',
-      pos: 9,
-      use_uuid: true,
-      description: "Defines the flex-wrap style property. It's applied for all screen sizes.",
-      options: [
+    "xl": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'nowrap',
-          name: 'nowrap',
+          "value": "false",
+          "name": "false"
         },
         {
-          value: 'wrap',
-          name: 'wrap',
+          "value": "auto",
+          "name": "auto"
         },
         {
-          value: 'wrap-reverse',
-          name: 'wrap-reverse',
+          "value": "true",
+          "name": "true"
         },
+        {
+          "value": "1",
+          "name": "1"
+        },
+        {
+          "value": "2",
+          "name": "2"
+        },
+        {
+          "value": "3",
+          "name": "3"
+        },
+        {
+          "value": "4",
+          "name": "4"
+        },
+        {
+          "value": "5",
+          "name": "5"
+        },
+        {
+          "value": "6",
+          "name": "6"
+        },
+        {
+          "value": "7",
+          "name": "7"
+        },
+        {
+          "value": "8",
+          "name": "8"
+        },
+        {
+          "value": "9",
+          "name": "9"
+        },
+        {
+          "value": "10",
+          "name": "10"
+        },
+        {
+          "value": "11",
+          "name": "11"
+        },
+        {
+          "value": "12",
+          "name": "12"
+        }
       ],
-      required: true,
-      default_value: 'wrap',
+      "required": true,
+      "default_value": "false",
+      "pos": 10,
+      "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
-    xl: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "xs": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'false',
-          name: 'false',
+          "value": "false",
+          "name": "false"
         },
         {
-          value: 'auto',
-          name: 'auto',
+          "value": "auto",
+          "name": "auto"
         },
         {
-          value: 'true',
-          name: 'true',
+          "value": "true",
+          "name": "true"
         },
         {
-          value: '1',
-          name: '1',
+          "value": "1",
+          "name": "1"
         },
         {
-          value: '2',
-          name: '2',
+          "value": "2",
+          "name": "2"
         },
         {
-          value: '3',
-          name: '3',
+          "value": "3",
+          "name": "3"
         },
         {
-          value: '4',
-          name: '4',
+          "value": "4",
+          "name": "4"
         },
         {
-          value: '5',
-          name: '5',
+          "value": "5",
+          "name": "5"
         },
         {
-          value: '6',
-          name: '6',
+          "value": "6",
+          "name": "6"
         },
         {
-          value: '7',
-          name: '7',
+          "value": "7",
+          "name": "7"
         },
         {
-          value: '8',
-          name: '8',
+          "value": "8",
+          "name": "8"
         },
         {
-          value: '9',
-          name: '9',
+          "value": "9",
+          "name": "9"
         },
         {
-          value: '10',
-          name: '10',
+          "value": "10",
+          "name": "10"
         },
         {
-          value: '11',
-          name: '11',
+          "value": "11",
+          "name": "11"
         },
         {
-          value: '12',
-          name: '12',
-        },
+          "value": "12",
+          "name": "12"
+        }
       ],
-      required: true,
-      default_value: 'false',
-      pos: 10,
-      description: "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.",
+      "required": true,
+      "default_value": "false",
+      "pos": 11
     },
-    xs: {
-      type: 'option',
-      use_uuid: true,
-      options: [
-        {
-          value: 'false',
-          name: 'false',
-        },
-        {
-          value: 'auto',
-          name: 'auto',
-        },
-        {
-          value: 'true',
-          name: 'true',
-        },
-        {
-          value: '1',
-          name: '1',
-        },
-        {
-          value: '2',
-          name: '2',
-        },
-        {
-          value: '3',
-          name: '3',
-        },
-        {
-          value: '4',
-          name: '4',
-        },
-        {
-          value: '5',
-          name: '5',
-        },
-        {
-          value: '6',
-          name: '6',
-        },
-        {
-          value: '7',
-          name: '7',
-        },
-        {
-          value: '8',
-          name: '8',
-        },
-        {
-          value: '9',
-          name: '9',
-        },
-        {
-          value: '10',
-          name: '10',
-        },
-        {
-          value: '11',
-          name: '11',
-        },
-        {
-          value: '12',
-          name: '12',
-        },
+    "content": {
+      "type": "bloks",
+      "maximum": "",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiButtonRedirect",
+        "MuiCard",
+        "MuiTypography",
+        "MuiMenu",
+        "MuiIcon",
+        "MuiExpansionPanel",
+        "MuiList",
+        "MuiTable",
+        "MuiPaginationTable"
       ],
-      required: true,
-      default_value: 'false',
-      pos: 11,
-    },
-    content: {
-      type: 'bloks',
-      maximum: '',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiButtonRedirect',
-        'MuiCard',
-        'MuiTypography',
-        'MuiMenu',
-        'MuiIcon',
-        'MuiExpansionPanel',
-        'MuiList',
-      ],
-      pos: 12,
-      description: 'Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,',
-      required: true,
-    },
+      "pos": 12,
+      "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
+      "required": true
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiGridItem',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiGridItem",
+  "component_group_uuid": null
+}

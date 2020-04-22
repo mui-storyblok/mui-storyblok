@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiGrid',
   display_name: null,
-  updated_at: '2020-03-31T18:27:08.919Z',
+  updated_at: '2020-04-21T20:57:29.124Z',
   schema: {
     alignContent: {
       type: 'option',
@@ -77,6 +77,10 @@ module.exports = {
         {
           value: 'color: white',
           name: 'color',
+        },
+        {
+          value: 'margin-top: 50px',
+          name: 'margin-top',
         },
       ],
       pos: 2,
@@ -225,6 +229,7 @@ module.exports = {
         'MuiAppBar',
         'MuiTabs',
         'MuiMobileStepper',
+        'MuiCircularProgress',
       ],
       pos: 12,
       required: true,
