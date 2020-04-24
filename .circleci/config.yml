@@ -34,6 +34,7 @@ jobs:
             - run: sudo curl -O https://bootstrap.pypa.io/get-pip.py
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
+            - run: npm uninstall node-sass -g && npm cache clean --force && npm install node-sass
             - run: npm run deploy-docs
   deploy-npm:
     executor:
