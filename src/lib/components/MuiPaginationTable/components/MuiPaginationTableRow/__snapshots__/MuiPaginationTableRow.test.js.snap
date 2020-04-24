@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiPaginationTableRow /> snapshot 1`] = `
+<tr
+  className="MuiTableRow-root makeStyles-root-2"
+>
+  <td
+    aria-sort="ascending"
+    className="MuiTableCell-root makeStyles-root-8 MuiTableCell-alignCenter"
+  >
+    <p
+      className="MuiTypography-root makeStyles-root-21 MuiTypography-body1"
+    >
+      Single table row
+    </p>
+  </td>
+</tr>
+`;

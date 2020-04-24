@@ -1,99 +1,99 @@
 module.exports = {
-  name: 'MuiMobileStepper',
-  display_name: null,
-  updated_at: '2020-03-31T18:27:01.310Z',
-  schema: {
-    rootClass: {
-      type: 'options',
-      description: 'Override or extend the styles applied to the component',
+  "name": "MuiMobileStepper",
+  "display_name": null,
+  "updated_at": "2020-03-31T18:27:01.310Z",
+  "schema": {
+    "rootClass": {
+      "type": "options",
+      "description": "Override or extend the styles applied to the component"
     },
-    position: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "position": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'bottom',
-          name: 'bottom',
+          "value": "bottom",
+          "name": "bottom"
         },
         {
-          value: 'static',
-          name: 'static',
+          "value": "static",
+          "name": "static"
         },
         {
-          value: 'top',
-          name: 'top',
-        },
+          "value": "top",
+          "name": "top"
+        }
       ],
-      description: 'Set the positioning type.',
-      default_value: 'static',
-      required: true,
+      "description": "Set the positioning type.",
+      "default_value": "static",
+      "required": true
     },
-    variant: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "variant": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'dots',
-          name: 'dots',
+          "value": "dots",
+          "name": "dots"
         },
         {
-          value: 'progress',
-          name: 'progress',
+          "value": "progress",
+          "name": "progress"
         },
         {
-          value: 'text',
-          name: 'text',
-        },
+          "value": "text",
+          "name": "text"
+        }
       ],
-      description: 'Set the variant type.',
-      display_name: '',
-      default_value: 'dots',
-      required: true,
+      "description": "Set the variant type.",
+      "display_name": "",
+      "default_value": "dots",
+      "required": true
     },
-    autoplay: {
-      type: 'boolean',
+    "autoplay": {
+      "type": "boolean"
     },
-    interval: {
-      type: 'text',
-      required: true,
-      default_value: '3000',
+    "interval": {
+      "type": "text",
+      "required": true,
+      "default_value": "3000"
     },
-    tabs: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiMobileTab',
+    "tabs": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiMobileTab"
       ],
-      required: true,
+      "required": true
     },
-    nextBtn: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiButton',
-        'MuiIconButton',
+    "nextBtn": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiButton",
+        "MuiIconButton"
       ],
-      required: true,
-      maximum: '1',
+      "required": true,
+      "maximum": "1"
     },
-    backBtn: {
-      type: 'bloks',
-      maximum: '1',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiButton',
-        'MuiIconButton',
+    "backBtn": {
+      "type": "bloks",
+      "maximum": "1",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiButton",
+        "MuiIconButton"
       ],
-      required: true,
-    },
+      "required": true
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiMobileStepper',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiMobileStepper",
+  "component_group_uuid": null
+}

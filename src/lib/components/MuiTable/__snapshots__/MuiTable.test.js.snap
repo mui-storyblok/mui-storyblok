@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiCard /> snapshot 1`] = `
+<table
+  className="MuiTable-root makeStyles-root-2"
+>
+  <thead
+    className="MuiTableHead-root makeStyles-root-5"
+  >
+    <tr
+      className="MuiTableRow-root makeStyles-root-7 MuiTableRow-head"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-head makeStyles-root-13"
+        scope="col"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-26 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root makeStyles-root-57"
+  >
+    <tr
+      className="MuiTableRow-root makeStyles-root-59"
+    >
+      <td
+        aria-sort="ascending"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-60 MuiTableCell-alignCenter"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-61 MuiTypography-body1 MuiTypography-colorInherit"
+        >
+          table body 1
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

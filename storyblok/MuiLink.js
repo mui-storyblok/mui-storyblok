@@ -1,74 +1,74 @@
 module.exports = {
-  name: 'MuiLink',
-  display_name: null,
-  updated_at: '2020-03-31T18:27:01.489Z',
-  schema: {
-    color: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+  "name": "MuiLink",
+  "display_name": null,
+  "updated_at": "2020-03-31T18:27:01.489Z",
+  "schema": {
+    "color": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'initial',
-          name: 'initial',
+          "value": "initial",
+          "name": "initial"
         },
         {
-          value: 'inherit',
-          name: 'inherit',
+          "value": "inherit",
+          "name": "inherit"
         },
         {
-          value: 'primary',
-          name: 'primary',
+          "value": "primary",
+          "name": "primary"
         },
         {
-          value: 'secondary',
-          name: 'secondary',
+          "value": "secondary",
+          "name": "secondary"
         },
         {
-          value: 'textPrimary',
-          name: 'textPrimary',
-        },
+          "value": "textPrimary",
+          "name": "textPrimary"
+        }
       ],
-      required: true,
-      default_value: 'primary',
+      "required": true,
+      "default_value": "primary"
     },
-    underline: {
-      type: 'option',
-      required: true,
-      restrict_components: true,
-      use_uuid: true,
-      options: [
+    "underline": {
+      "type": "option",
+      "required": true,
+      "restrict_components": true,
+      "use_uuid": true,
+      "options": [
         {
-          value: 'none',
-          name: 'none',
+          "value": "none",
+          "name": "none"
         },
         {
-          value: 'hover',
-          name: 'hover',
+          "value": "hover",
+          "name": "hover"
         },
         {
-          value: 'always',
-          name: 'always',
-        },
+          "value": "always",
+          "name": "always"
+        }
       ],
-      default_value: 'hover',
+      "default_value": "hover"
     },
-    text: {
-      type: 'text',
-      required: true,
-      description: 'text to display',
+    "text": {
+      "type": "text",
+      "required": true,
+      "description": "text to display"
     },
-    href: {
-      type: 'text',
-      required: true,
-    },
+    "href": {
+      "type": "text",
+      "required": true
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiLink',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiLink",
+  "component_group_uuid": null
+}

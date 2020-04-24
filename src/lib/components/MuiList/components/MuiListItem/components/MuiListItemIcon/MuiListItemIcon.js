@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Storyblok from '../../../../../../utils/Storyblok';
@@ -12,18 +12,11 @@ export const MuiListItemIcon = ({
   content,
   rootClass,
 }) => {
-  const components = {
-    MuiIcon,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
     <ListItemIcon className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      <MuiIcon {...content[0]} />
     </ListItemIcon>
   );
 };
