@@ -28,3 +28,4 @@ exclude_paths:
 - src/examples/**
 - public/**
 - "**.test.js"
+- "sotryblok/**"
