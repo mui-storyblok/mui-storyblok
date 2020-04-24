@@ -1,7 +1,7 @@
 module.exports = {
   "name": "page",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:09.876Z",
+  "updated_at": "2020-04-01T16:53:24.379Z",
   "schema": {
     "seo": {
       "type": "custom",
