@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiTableHead /> snapshot 1`] = `
+<thead
+  className="MuiTableHead-root makeStyles-root-2"
+>
+  <tr
+    className="MuiTableRow-root makeStyles-root-4 MuiTableRow-head"
+  >
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-head makeStyles-root-10"
+      scope="col"
+    >
+      <p
+        className="MuiTypography-root makeStyles-root-23 MuiTypography-body1"
+      >
+        wooo
+      </p>
+    </th>
+  </tr>
+</thead>
+`;

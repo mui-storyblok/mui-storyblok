@@ -103,15 +103,21 @@
     "coverageReporters": [
       "lcov",
       "text"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^17.1.0",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
+    "@testing-library/react": "^10.0.3",
+    "@testing-library/react-hooks": "^3.2.1",
     "axios": "^0.18.0",
+    "enzyme-to-json": "^3.4.4",
+    "eslint-config-airbnb": "^17.1.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.5.4",
     "react": "^16.13.1",

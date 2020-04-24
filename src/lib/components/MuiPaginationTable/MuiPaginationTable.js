@@ -106,7 +106,7 @@ MuiPaginationTable.propTypes = {
    * Customizes the options of the rows per page select field.
    * If less than two options are available, no select field will be displayed.
    */
-  rowsPerPageOptions: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
 };
 
 MuiPaginationTable.defaultProps = {
