@@ -1,0 +1,400 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiPaginationTable /> snapshot 1`] = `
+<table
+  className="MuiTable-root makeStyles-root-208"
+>
+  <thead
+    className="MuiTableHead-root makeStyles-root-209"
+  >
+    <tr
+      className="MuiTableRow-root makeStyles-root-210 MuiTableRow-head"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-head makeStyles-root-211"
+        scope="col"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-212 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root makeStyles-root-213"
+  >
+    <tr
+      className="MuiTableRow-root makeStyles-root-214"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-215"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-216 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-217"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-218"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-219 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-220"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-221"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-222 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-223"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-224"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-225 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-226"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-227"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-228 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-229"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-230"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-231 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-232"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-233"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-234 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-235"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-236"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-237 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-238"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-239"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-240 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+    <tr
+      className="MuiTableRow-root makeStyles-root-241"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-242"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-243 MuiTypography-body1"
+        >
+          wooo
+        </p>
+      </td>
+    </tr>
+  </tbody>
+  <tfoot
+    className="MuiTableFooter-root makeStyles-root-244"
+  >
+    <tr
+      className="MuiTableRow-root MuiTableRow-footer"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-245"
+        colSpan={1000}
+      >
+        <div
+          className="MuiToolbar-root MuiToolbar-regular MuiTablePagination-toolbar MuiToolbar-gutters"
+        >
+          <div
+            className="MuiTablePagination-spacer"
+          />
+          <p
+            className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+          >
+            Rows per page:
+          </p>
+          <div
+            className="MuiInputBase-root MuiTablePagination-input MuiTablePagination-selectRoot"
+            onClick={[Function]}
+          >
+            <div
+              aria-haspopup="listbox"
+              aria-labelledby=" "
+              className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onMouseDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              10
+            </div>
+            <input
+              onAnimationStart={[Function]}
+              type="hidden"
+              value={10}
+            />
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+          </div>
+          <p
+            className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
+          >
+            0-0 of 0
+          </p>
+          <div
+            className="makeStyles-root-246"
+          >
+            <button
+              aria-label="first page"
+              className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              data-testid="firstButton"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"
+                  />
+                  <path
+                    d="M24 24H0V0h24v24z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              aria-label="previous page"
+              className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              data-testid="previousButton"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              aria-label="next page"
+              className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              data-testid="nextButton"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              aria-label="last page"
+              className="MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled"
+              data-testid="lastButton"
+              disabled={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={-1}
+              type="button"
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M5.59 7.41L10.18 12l-4.59 4.59L7 18l6-6-6-6zM16 6h2v12h-2z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+`;

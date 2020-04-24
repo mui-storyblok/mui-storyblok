@@ -63,11 +63,11 @@ MuiPaginationTableFooter.propTypes = {
    */
   rowsPerPage: PropTypes.number,
   /**
-   * mui prop: [10, 25, 50, { label: 'All', value: -1 }]
+   * mui prop: [10, 25, 50, 100]
    * Customizes the options of the rows per page select field.
    * If less than two options are available, no select field will be displayed.
    */
-  rowsPerPageOptions: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
   /**
    * mui prop: 0
    * Number of rows in table.

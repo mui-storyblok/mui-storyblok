@@ -20,7 +20,7 @@ const MuiPaginationTable = ({
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   const [numRows, setNumRows] = useState(0);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(rowsPerPageOptions[0]);
+  const [rowsPerPage, setRowsPerPage] = useState(parseInt(rowsPerPageOptions[0], 10));
 
   const handleRowNums = (totalRows) => {
     setNumRows(totalRows);
@@ -48,7 +48,7 @@ const MuiPaginationTable = ({
         {...tBody[0]}
         handleRowNums={handleRowNums}
         numRows={numRows}
-        rowsPerPage={rowsPerPage}
+        rowsPerPage={parseInt(rowsPerPage, 10)}
         page={page}
       />
       <MuiPaginationTableFooter
@@ -57,7 +57,7 @@ const MuiPaginationTable = ({
         numRows={numRows}
         page={page}
         handleChangeRows={handleChangeRows}
-        rowsPerPage={rowsPerPage}
+        rowsPerPage={parseInt(rowsPerPage, 10)}
         handlePageChange={handlePageChange}
       />
     </Table>
@@ -106,7 +106,7 @@ MuiPaginationTable.propTypes = {
    * Customizes the options of the rows per page select field.
    * If less than two options are available, no select field will be displayed.
    */
-  rowsPerPageOptions: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
 };
 
 MuiPaginationTable.defaultProps = {

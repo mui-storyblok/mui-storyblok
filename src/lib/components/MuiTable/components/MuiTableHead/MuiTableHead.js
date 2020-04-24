@@ -13,6 +13,7 @@ const MuiTableHead = ({
   };
 
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
+
   return (
     <TableHead className={styles.root}>
       {content.map((item, index) => createElement(

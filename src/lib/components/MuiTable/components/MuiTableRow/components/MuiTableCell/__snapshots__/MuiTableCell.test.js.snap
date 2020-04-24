@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiTableCell /> snapshot 1`] = `
+<td
+  aria-sort="ascending"
+  className="MuiTableCell-root makeStyles-root-2"
+>
+  <p
+    className="MuiTypography-root makeStyles-root-15 MuiTypography-body1"
+  >
+    Single table row
+  </p>
+</td>
+`;

@@ -24,7 +24,7 @@ const MuiTablePagination = ({
       labelDisplayedRows={labelDisplayedRows}
       labelRowsPerPage={labelRowsPerPage}
       page={page}
-      rowsPerPage={rowsPerPage}
+      rowsPerPage={parseInt(rowsPerPage, 10)}
       rowsPerPageOptions={rowsPerPageOptions}
       onChangePage={handlePageChange}
       onChangeRowsPerPage={handleChangeRows}
@@ -57,7 +57,7 @@ MuiTablePagination.propTypes = {
    * Customizes the options of the rows per page select field.
    * If less than two options are available, no select field will be displayed.
    */
-  rowsPerPageOptions: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  rowsPerPageOptions: PropTypes.arrayOf(PropTypes.number),
   /**
    * mui prop: 0
    * Number of rows on the table.
