@@ -26,6 +26,7 @@ exports[`<MuiTooltip /> snapshot 1`] = `
   >
     <button
       className="MuiButtonBase-root MuiIconButton-root makeStyles-root-27"
+      data-testid="muiIconButton"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}

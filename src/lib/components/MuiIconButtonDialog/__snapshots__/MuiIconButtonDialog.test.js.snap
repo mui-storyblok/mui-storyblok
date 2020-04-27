@@ -3,6 +3,7 @@
 exports[`<MuiIconButtonDialog /> snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiIconButton-root makeStyles-root-1"
+  data-testid="muiIconButton"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}

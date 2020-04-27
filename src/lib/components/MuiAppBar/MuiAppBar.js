@@ -10,6 +10,8 @@ import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
 import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../MuiIconButtonHref/MuiIconButtonHref';
 import MuiMenu from '../MuiMenu/MuiMenu';
+import MuiButtonDrawer from '../MuiButtonDrawer/MuiButtonDrawer';
+import MuiIconButtonDrawer from '../MuiIconButtonDrawer/MuiIconButtonDrawer';
 
 // Styleguidist uses react-docgen and they do not support ImportExpression yet and was unable to generat docs for props
 // leaving code her as a reminder that it needs to be done once support comes out for it
@@ -40,6 +42,8 @@ const MuiAppBar = ({
     MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiMenu,
+    MuiButtonDrawer,
+    MuiIconButtonDrawer,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);

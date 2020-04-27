@@ -19,7 +19,6 @@ export const MuiIconButton = ({
   onClick,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-
   return (
     <IconButton
       onClick={onClick}
@@ -29,10 +28,9 @@ export const MuiIconButton = ({
       disableRipple={disableRipple}
       edge={edge === 'false' ? false : edge}
       size={size}
+      data-testid="muiIconButton"
     >
-      <MuiIcon
-        {...icon[0]}
-      />
+      <MuiIcon {...icon[0]} />
     </IconButton>
   );
 };
@@ -76,7 +74,7 @@ MuiIconButton.propTypes = {
     iconName: PropTypes.string.isRequired,
     color: PropTypes.string,
     fontSize: PropTypes.string,
-    rootClass: PropTypes.string,
+    rootClass: PropTypes.arrayOf(PropTypes.string),
   })).isRequired,
 
   /** not in storyblok passed down from parent component */

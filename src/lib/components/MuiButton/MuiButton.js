@@ -44,6 +44,7 @@ export const MuiButton = ({
       ) : null}
       variant={variant}
       onClick={onClick}
+      data-testid="muiButton"
     >
       {buttonText}
     </Button>

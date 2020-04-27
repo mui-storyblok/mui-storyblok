@@ -3,6 +3,7 @@
 exports[`<MuiIconButton /> snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiIconButton-root"
+  data-testid="muiIconButton"
   disabled={false}
   onBlur={[Function]}
   onClick={[MockFunction]}

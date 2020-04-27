@@ -12,6 +12,7 @@ exports[`<MuiGridItem /> snapshot 1`] = `
   </span>
   <button
     className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-117 MuiButton-textSecondary MuiButton-fullWidth"
+    data-testid="muiButton"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}

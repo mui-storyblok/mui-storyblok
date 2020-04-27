@@ -3,6 +3,7 @@
 exports[`<MuiButtonDialog /> snapshot 1`] = `
 <button
   className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-62 MuiButton-textSecondary MuiButton-fullWidth"
+  data-testid="muiButton"
   disabled={false}
   onBlur={[Function]}
   onClick={[Function]}
