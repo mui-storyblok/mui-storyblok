@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiButtonDownload /> snapshot 1`] = `
+exports[`<MuiButtonDrawer /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-fullWidth"
+  className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-58 MuiButton-textSecondary MuiButton-fullWidth"
   data-testid="muiButton"
   disabled={false}
   onBlur={[Function]}
@@ -23,7 +23,7 @@ exports[`<MuiButtonDownload /> snapshot 1`] = `
   <span
     className="MuiButton-label"
   >
-    buttonText
+    test text
   </span>
 </button>
 `;

@@ -16,6 +16,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
   </a>
   <button
     className="MuiButtonBase-root MuiIconButton-root makeStyles-root-41"
+    data-testid="muiIconButton"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}

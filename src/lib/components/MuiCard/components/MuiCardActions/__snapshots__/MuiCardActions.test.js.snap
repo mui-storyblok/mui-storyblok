@@ -6,6 +6,7 @@ exports[`<MuiCardActions /> snapshot 1`] = `
 >
   <button
     className="MuiButtonBase-root MuiIconButton-root makeStyles-root-6"
+    data-testid="muiIconButton"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}

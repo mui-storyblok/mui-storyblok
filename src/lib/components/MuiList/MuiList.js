@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
@@ -16,13 +17,15 @@ const MuiList = ({
     MuiListItem,
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { width });
+  // const styles = Storyblok.arrayToMuiStyles(rootClass, { width, minWidth: '32vw' });
+  const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
     <List
       className={styles.root}
       dense={dense}
       disablePadding={disablePadding}
+      width={width}
     >
       {content.map((item, index) => createElement(
         components[item.component],

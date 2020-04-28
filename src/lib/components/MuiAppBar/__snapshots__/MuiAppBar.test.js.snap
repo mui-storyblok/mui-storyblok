@@ -9,6 +9,7 @@ exports[`<MuiAppBar /> snapshot 1`] = `
   >
     <button
       className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-47 MuiButton-textSecondary MuiButton-fullWidth"
+      data-testid="muiButton"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
