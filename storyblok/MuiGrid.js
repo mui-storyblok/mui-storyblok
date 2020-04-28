@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiGrid',
   display_name: null,
-  updated_at: '2020-04-21T20:57:29.124Z',
+  updated_at: '2020-04-28T17:29:38.894Z',
   schema: {
     alignContent: {
       type: 'option',
@@ -81,6 +81,10 @@ module.exports = {
         {
           value: 'margin-top: 50px',
           name: 'margin-top',
+        },
+        {
+          value: 'padding-top: 100px; padding-bottom: 100px',
+          name: 'paddingStrip',
         },
       ],
       pos: 2,
@@ -230,6 +234,7 @@ module.exports = {
         'MuiTabs',
         'MuiMobileStepper',
         'MuiCircularProgress',
+        'MuiGridList',
       ],
       pos: 12,
       required: true,

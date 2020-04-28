@@ -66,7 +66,7 @@ function setup() {
   return { comp, props };
 }
 
-describe('<MuiCard />', () => {
+describe('<MuiTable />', () => {
   test('snapshot', () => {
     const { props } = setup();
     const tree = renderer.create(

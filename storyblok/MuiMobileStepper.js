@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiMobileStepper',
   display_name: null,
-  updated_at: '2020-04-01T16:44:24.879Z',
+  updated_at: '2020-03-31T18:27:01.310Z',
   schema: {
     rootClass: {
       type: 'options',

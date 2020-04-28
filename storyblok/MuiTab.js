@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiTab',
   display_name: null,
-  updated_at: '2020-04-01T16:44:25.719Z',
+  updated_at: '2020-03-31T18:27:03.523Z',
   schema: {
     label: {
       type: 'text',
