@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiIconButtonDownload',
   display_name: null,
-  updated_at: '2020-04-01T16:44:19.538Z',
+  updated_at: '2020-03-31T18:27:02.949Z',
   schema: {
     fileName: {
       type: 'text',

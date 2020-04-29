@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiPaginationTable',
   display_name: null,
-  updated_at: '2020-04-21T23:44:22.967Z',
+  updated_at: '2020-04-22T16:56:36.911Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -43,6 +43,29 @@ module.exports = {
       max_length: '',
       description: "* mui prop: 'Rows per page:'\n* Customize the rows per page label.",
       default_value: 'Rows per page:',
+    },
+    rowsPerPageOptions: {
+      type: 'options',
+      options: [
+        {
+          value: '10',
+          name: 'rows10',
+        },
+        {
+          value: '25',
+          name: 'rows25',
+        },
+        {
+          value: '50',
+          name: 'rows50',
+        },
+        {
+          value: '100',
+          name: 'rows100',
+        },
+      ],
+      description: '   * Customizes the options of the rows per page select field.\n   * If less than two options are available, no select field will be displayed.',
+      default_value: '',
     },
   },
   image: null,

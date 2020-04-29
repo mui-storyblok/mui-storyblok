@@ -1,10 +1,16 @@
 module.exports = {
   name: 'MuiList',
   display_name: null,
-  updated_at: '2020-04-01T16:44:21.446Z',
+  updated_at: '2020-04-24T21:57:42.360Z',
   schema: {
     rootClass: {
       type: 'options',
+      options: [
+        {
+          value: 'padding-right: 100px',
+          name: 'paddingRight',
+        },
+      ],
     },
     disablePadding: {
       type: 'boolean',
@@ -19,6 +25,12 @@ module.exports = {
         'MuiListItem',
       ],
       required: true,
+    },
+    width: {
+      type: 'text',
+      required: true,
+      description: '* width of list',
+      default_value: '100%',
     },
   },
   image: null,

@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiText',
   display_name: null,
-  updated_at: '2020-04-01T16:44:27.011Z',
+  updated_at: '2020-03-31T18:27:07.467Z',
   schema: {
     text: {
       type: 'text',

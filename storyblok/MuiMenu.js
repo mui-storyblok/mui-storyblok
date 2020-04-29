@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiMenu',
   display_name: null,
-  updated_at: '2020-04-01T16:44:23.918Z',
+  updated_at: '2020-03-31T18:27:09.530Z',
   schema: {
     btnText: {
       type: 'text',
