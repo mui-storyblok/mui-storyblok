@@ -88,6 +88,17 @@ class StoryBlock {
     const useStyles = makeStyles({ [styleKey]: { ...stylesObj, ...defaultStyles } });
     return useStyles();
   }
+
+  static anchorOrginToObj(array) {
+    const splitArr = array[0].split(',');
+    const obj = {};
+    splitArr.forEach((pair) => {
+      const [key, value] = pair.split(': ');
+      obj[key.trim()] = value.trim();
+    });
+    return obj;
+  }
 }
+
 
 export default StoryBlock;
