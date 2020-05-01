@@ -51,7 +51,7 @@ describe('<MuiButtonSnackbar />', () => {
     expect(comp).toBeDefined();
   });
 
-  it('should open snackbar when button is clicked', () => {
+  it('should open snackbar when button is clicked and close when closeIcon clicked', () => {
     const { comp } = setup();
     expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(false);
     const btn = comp.find('[data-testid="muiButton"]');
