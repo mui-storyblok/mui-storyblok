@@ -10,7 +10,6 @@ import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 import MuiGridList from '../MuiGridList/MuiGridList';
 
-
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
   if (value === 'false') return false;
@@ -54,7 +53,6 @@ const MuiGrid = ({
         components[item.component],
         Object.assign(item, { key: index, sizeGrid }),
       ))}
-      {/* <CircularProgress />  */}
     </Grid>
   );
 };

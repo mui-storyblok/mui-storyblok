@@ -6,7 +6,6 @@ import MuiIconButtonDrawer from './MuiIconButtonDrawer';
 
 function setup() {
   const props = {
-    anchor: 'left',
     elevation: 16,
     variant: 'temporary',
     icon: [{
