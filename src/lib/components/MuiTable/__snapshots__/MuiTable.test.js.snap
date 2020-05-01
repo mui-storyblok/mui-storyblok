@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiCard /> snapshot 1`] = `
+exports[`<MuiTable /> snapshot 1`] = `
 <table
   className="MuiTable-root makeStyles-root-2"
 >

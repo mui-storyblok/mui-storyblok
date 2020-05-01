@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiListItemText',
   display_name: null,
-  updated_at: '2020-04-01T16:44:23.519Z',
+  updated_at: '2020-03-31T18:27:05.819Z',
   schema: {
     primary: {
       type: 'text',

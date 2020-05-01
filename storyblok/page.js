@@ -1,7 +1,11 @@
 module.exports = {
   name: 'page',
   display_name: null,
+<<<<<<< HEAD
   updated_at: '2020-04-01T16:53:24.379Z',
+=======
+  updated_at: '2020-03-31T18:27:09.876Z',
+>>>>>>> af1144e94152edf443d8ee89c7ed7ca43ba1cd9d
   schema: {
     seo: {
       type: 'custom',

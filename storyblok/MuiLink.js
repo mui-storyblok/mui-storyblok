@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiLink',
   display_name: null,
-  updated_at: '2020-04-01T16:44:21.042Z',
+  updated_at: '2020-03-31T18:27:01.489Z',
   schema: {
     color: {
       type: 'option',

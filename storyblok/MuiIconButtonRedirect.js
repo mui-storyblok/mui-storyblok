@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiIconButtonRedirect',
   display_name: null,
-  updated_at: '2020-04-01T16:44:20.507Z',
+  updated_at: '2020-03-31T18:27:04.758Z',
   schema: {
     redirectRoute: {
       type: 'text',

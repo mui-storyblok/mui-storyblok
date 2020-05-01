@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiMobileTab',
   display_name: null,
-  updated_at: '2020-04-01T16:44:25.313Z',
+  updated_at: '2020-03-31T18:27:00.955Z',
   schema: {
     tab: {
       type: 'bloks',

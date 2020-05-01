@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiListItem',
   display_name: null,
-  updated_at: '2020-04-01T16:44:21.858Z',
+  updated_at: '2020-03-31T18:27:05.135Z',
   schema: {
     listItemText: {
       type: 'bloks',

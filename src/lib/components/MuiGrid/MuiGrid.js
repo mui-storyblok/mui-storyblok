@@ -8,6 +8,11 @@ import MuiTabs from '../MuiTabs/MuiTabs';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
+<<<<<<< HEAD
+=======
+import MuiGridList from '../MuiGridList/MuiGridList';
+
+>>>>>>> af1144e94152edf443d8ee89c7ed7ca43ba1cd9d
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -32,6 +37,7 @@ const MuiGrid = ({
     MuiTabs,
     MuiMobileStepper,
     MuiCircularProgress,
+    MuiGridList,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
