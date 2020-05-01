@@ -8,17 +8,8 @@ import MuiTabs from '../MuiTabs/MuiTabs';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import MuiGridList from '../MuiGridList/MuiGridList';
 
->>>>>>> af1144e94152edf443d8ee89c7ed7ca43ba1cd9d
-
-=======
-import MuiGridList from '../MuiGridList/MuiGridList';
-
->>>>>>> f0f2f75df8e52bbfe76b27c7c5c0336a8b4572c7
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
   if (value === 'false') return false;
