@@ -8,6 +8,7 @@ function setup() {
   const props = {
     message: 'a Snackbar message',
     anchorOrigin: ['horizontal: center, vertical: bottom'],
+    autoHideDuration: '6000',
     button: [
       {
         buttonText: 'snackBar',
@@ -56,5 +57,8 @@ describe('<MuiButtonSnackbar />', () => {
     const btn = comp.find('[data-testid="muiButton"]');
     btn.first().simulate('click');
     expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(true);
+    const iconBtn = comp.find('[data-testid="muiIconButton"]');
+    iconBtn.first().simulate('click');
+    expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(false);
   });
 });

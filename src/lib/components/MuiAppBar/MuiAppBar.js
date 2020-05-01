@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // import React, { createElement, lazy, Suspense } from 'react';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
