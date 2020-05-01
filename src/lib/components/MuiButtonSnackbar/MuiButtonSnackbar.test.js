@@ -67,6 +67,8 @@ describe('<MuiButtonSnackbar />', () => {
   it('should return if reason is clickaway', () => {
     const { comp } = setup();
     const handleClose = comp.find('ForwardRef(Snackbar)').first().props().onClose;
+    const btn = comp.find('[data-testid="muiButton"]');
+    btn.first().simulate('click');
     handleClose({}, 'clickaway');
     expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(true);
   });
