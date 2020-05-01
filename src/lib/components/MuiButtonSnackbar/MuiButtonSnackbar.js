@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Snackbar } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
 import MuiButton from '../MuiButton/MuiButton';
+import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
 const MuiButtonSnackbar = ({
   rootClass,
@@ -12,16 +13,11 @@ const MuiButtonSnackbar = ({
   autoHideDuration,
   disableWindowBlurListener,
   resumeHideDuration,
+  closingIcon,
 }) => {
   const [open, setOpen] = useState(false);
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  console.log(rootClass);
-  console.log('anchor origin: ', anchorOrigin);
-  console.log('autoHideDuration: ', autoHideDuration);
-  console.log('message: ', message);
-
   const anchorOriginObj = StoryBlok.anchorOrginToObj(anchorOrigin);
-  console.log('*********************', anchorOriginObj);
 
   const handleClick = () => {
     setOpen(true);
@@ -48,6 +44,9 @@ const MuiButtonSnackbar = ({
         resumeHideDuration={+resumeHideDuration}
         open={open}
         onClose={handleClose}
+        action={
+          closingIcon ? <MuiIconButton {...closingIcon[0]} onClick={handleClose} /> : null
+        }
       />
     </>
   );
@@ -105,13 +104,20 @@ MuiButtonSnackbar.propTypes = {
   button: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
+  /**
+   * components:
+   * MuiIconButton
+   */
+  closingIcon: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 MuiButtonSnackbar.defaultProps = {
   rootClass: [],
   message: '',
   anchorOrigin: { vertical: 'bottom', horizontal: 'center' },
-  autoHideDuration: 6000,
+  autoHideDuration: '6000',
   disableWindowBlurListener: false,
-  resumeHideDuration: 0,
+  resumeHideDuration: '0',
 };
