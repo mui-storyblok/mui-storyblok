@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiAppBar',
   display_name: null,
-  updated_at: '2020-04-27T15:56:53.446Z',
+  updated_at: '2020-04-29T22:37:42.747Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -99,6 +99,7 @@ module.exports = {
         'MuiButtonDrawer',
         'MuiIconButton',
         'MuiIconButtonDrawer',
+        'MuiButtonSnackbar',
       ],
       required: true,
     },

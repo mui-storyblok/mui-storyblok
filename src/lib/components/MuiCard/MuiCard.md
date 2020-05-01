@@ -31,7 +31,7 @@ const cardcontent = {
         }],
     }],
 }
-    
+
 
 const action = {
     component: 'MuiCardActions',
@@ -55,4 +55,39 @@ const content = [header, media, cardcontent, action];
   <MuiCard
     content={content}
   />
+
+
+const cardcontent2 = {
+    component: 'MuiCardContent',
+    content: [{
+        component: 'MuiTypography',
+        content: [{
+            component: 'MuiText',
+            text: "hahaha",
+        }],
+    }],
+}
+
+const action2 = {
+    component: 'MuiCardActions',
+    content: [{
+        component: 'MuiIconButtonDownload',
+        href: "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg",
+        fileName: "cool.jpeg",
+        iconButton: [{
+        component: 'MuiIconButton',
+        icon: [{
+            component: 'MuiIcon',
+            iconName: 'android',
+        }],
+      }],
+    }]
+};
+
+const content2 = [cardcontent2, action2];
+
+  <MuiCard
+    content={content2}
+  />
+
 ```
