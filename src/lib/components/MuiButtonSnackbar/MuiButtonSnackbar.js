@@ -110,7 +110,7 @@ MuiButtonSnackbar.propTypes = {
    */
   closingIcon: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
-  })).isRequired,
+  })),
 };
 
 MuiButtonSnackbar.defaultProps = {
@@ -120,4 +120,5 @@ MuiButtonSnackbar.defaultProps = {
   autoHideDuration: '6000',
   disableWindowBlurListener: false,
   resumeHideDuration: '0',
+  closingIcon: null,
 };

@@ -4,7 +4,19 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonSnackbar from './MuiButtonSnackbar';
 
-function setup() {
+const initialClosingIcon = [
+  {
+    component: 'MuiIconButton',
+    icon: [
+      {
+        component: 'MuiIcon',
+        iconName: 'close',
+      },
+    ],
+  },
+];
+
+function setup(closingIcon = initialClosingIcon) {
   const props = {
     message: 'a Snackbar message',
     anchorOrigin: ['horizontal: center, vertical: bottom'],
@@ -15,17 +27,7 @@ function setup() {
         component: 'MuiButton',
       },
     ],
-    closingIcon: [
-      {
-        component: 'MuiIconButton',
-        icon: [
-          {
-            component: 'MuiIcon',
-            iconName: 'close',
-          },
-        ],
-      },
-    ],
+    closingIcon,
   };
   const comp = mount(
     <MemoryRouter>
@@ -60,5 +62,22 @@ describe('<MuiButtonSnackbar />', () => {
     const iconBtn = comp.find('[data-testid="muiIconButton"]');
     iconBtn.first().simulate('click');
     expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(false);
+  });
+
+  it('should return if reason is clickaway', () => {
+    const { comp } = setup();
+    const handleClose = comp.find('ForwardRef(Snackbar)').first().props().onClose;
+    handleClose({}, 'clickaway');
+    expect(comp.find('WithStyles(ForwardRef(Snackbar))').first().props().open).toEqual(true);
+  });
+
+  it('should return null if no action icon is added', () => {
+    const { comp } = setup(null);
+    expect(comp.find('ForwardRef(Snackbar)').first().props().action).toEqual(null);
+  });
+
+  it('should return iconButton if action icon is added', () => {
+    const { comp } = setup();
+    expect(comp.find('ForwardRef(Snackbar)').first().props().action).toBeDefined();
   });
 });
