@@ -1,7 +1,7 @@
 module.exports = {
   name: 'Blok',
   display_name: null,
-  updated_at: '2020-03-31T18:27:08.530Z',
+  updated_at: '2020-04-28T17:23:53.697Z',
   schema: {
     only: {
       type: 'options',

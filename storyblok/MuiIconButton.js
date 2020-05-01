@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiIconButton',
   display_name: null,
-  updated_at: '2020-04-01T16:44:17.520Z',
+  updated_at: '2020-03-31T18:27:02.029Z',
   schema: {
     rootClass: {
       type: 'options',
