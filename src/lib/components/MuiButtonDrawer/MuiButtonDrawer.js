@@ -27,8 +27,6 @@ const MuiButtonDrawer = ({
     setOpen(!isOpen);
   };
 
-  console.log(content);
-
   return (
     <>
       <MuiButton {...button[0]} onClick={e => handleToggleDrawer(e)} />
