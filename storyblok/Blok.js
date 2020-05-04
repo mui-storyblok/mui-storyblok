@@ -1,7 +1,7 @@
 module.exports = {
   name: 'Blok',
   display_name: null,
-  updated_at: '2020-04-28T17:23:53.697Z',
+  updated_at: '2020-05-01T19:50:15.318Z',
   schema: {
     only: {
       type: 'options',
@@ -37,6 +37,7 @@ module.exports = {
         'MuiGrid',
         'MuiHeroHeader',
         'MuiAppBar',
+        'MuiBottomNavigation',
       ],
     },
   },
