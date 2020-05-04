@@ -5,6 +5,7 @@ import Hidden from '@material-ui/core/Hidden';
 import MuiGrid from '../../../MuiGrid/MuiGrid';
 import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 import MuiAppBar from '../../../MuiAppBar/MuiAppBar';
+import MuiBottomNavigation from '../../../MuiBottomNavigation/MuiBottomNavigation';
 
 export const Blok = ({
   content,
@@ -14,6 +15,7 @@ export const Blok = ({
     MuiGrid,
     MuiHeroHeader,
     MuiAppBar,
+    MuiBottomNavigation,
   };
 
   return (
