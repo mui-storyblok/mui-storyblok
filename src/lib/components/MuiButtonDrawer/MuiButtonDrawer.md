@@ -44,19 +44,66 @@ const content = [
   },
 ];
 
-const button = [
+const leftButton = [
   {
-    buttonText: 'Open Drawer',
+    buttonText: 'Left Drawer',
     component: 'MuiButton',
   },
 ];
 
-<MuiButtonDrawer
-  anchor='left'
-  content={content}
-  button={button}
-  elevation='16'
-  variant='temporary'
-/>
+const topButton = [
+  {
+    buttonText: 'Top Drawer',
+    component: 'MuiButton',
+  },
+];
+
+const rightButton = [
+  {
+    buttonText: 'Right Drawer',
+    component: 'MuiButton',
+  },
+];
+
+const bottomButton = [
+  {
+    buttonText: 'Bottom Drawer',
+    component: 'MuiButton',
+  },
+];
+
+<div style={{display: 'flex', flexDirection: 'row'}}>
+  <MuiButtonDrawer
+    anchor='left'
+    content={content}
+    button={leftButton}
+    elevation='16'
+    variant='temporary'
+  />
+
+  <MuiButtonDrawer
+    anchor='top'
+    content={content}
+    button={topButton}
+    elevation='16'
+    variant='temporary'
+  />
+
+  <MuiButtonDrawer
+    anchor='right'
+    content={content}
+    button={rightButton}
+    elevation='16'
+    variant='temporary'
+  />
+
+  <MuiButtonDrawer
+    anchor='bottom'
+    content={content}
+    button={bottomButton}
+    elevation='16'
+    variant='temporary'
+  />
+</div>
 
 ```
