@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiBottomNavigation /> snapshot 1`] = `
+<div
+  className="MuiBottomNavigation-root makeStyles-root-41"
+>
+  <MuiBottomNavigationAction
+    aria-disabled={false}
+    className="MuiButtonBase-root MuiBottomNavigationAction-root MuiBottomNavigationAction-iconOnly"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    <span
+      className="MuiBottomNavigationAction-wrapper"
+    >
+      <button
+        className="MuiButtonBase-root MuiIconButton-root makeStyles-root-42"
+        data-testid="muiIconButton"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label"
+        >
+          <span
+            aria-hidden={true}
+            className="material-icons MuiIcon-root makeStyles-root-43 MuiIcon-colorSecondary"
+          >
+            home
+          </span>
+        </span>
+      </button>
+      <span
+        className="MuiBottomNavigationAction-label MuiBottomNavigationAction-iconOnly"
+      >
+        home
+      </span>
+    </span>
+  </MuiBottomNavigationAction>
+</div>
+`;
