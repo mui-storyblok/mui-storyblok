@@ -27,7 +27,7 @@ const MuiButtonDrawer = ({
     setOpen(!isOpen);
   };
 
-  // console.log(content[0].content[0].listItemSecondaryAction[0]);
+  console.log(content);
 
   return (
     <>
