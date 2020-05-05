@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "mui-storyblok",
   "version": "1.0.26",
   "description": "use react and mui to build pages with storyblok",
