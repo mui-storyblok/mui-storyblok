@@ -30,7 +30,7 @@ const MuiGridList = ({
 }) => {
   const classes = useStyles();
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { width: +width, height: +height });
-  console.log('***************: ', content);
+
   return (
     <div className={classes.root}>
       <GridList
