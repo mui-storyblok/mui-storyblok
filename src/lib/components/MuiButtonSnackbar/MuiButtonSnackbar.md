@@ -1,6 +1,7 @@
 MuiButtonSnackbar Example:
 
 ```js noeditor
+import React from 'react';
 import MuiButtonSnackbar from './MuiButtonSnackbar';
 ```
 
