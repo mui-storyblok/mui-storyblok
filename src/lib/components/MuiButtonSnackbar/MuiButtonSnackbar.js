@@ -31,8 +31,6 @@ const MuiButtonSnackbar = ({
     setOpen(false);
   };
 
-  console.log(closingIcon);
-
   return (
     <>
       <MuiButton {...button[0]} onClick={handleClick} />
