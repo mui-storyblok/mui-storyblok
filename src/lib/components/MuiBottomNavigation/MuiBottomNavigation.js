@@ -10,6 +10,8 @@ const MuiBottomNavigation = ({
   showLabels,
   navActions,
   width,
+  position,
+  bottom,
 }) => {
   const components = {
     MuiIconButton,
@@ -18,8 +20,8 @@ const MuiBottomNavigation = ({
 
   const styles = StoryBlok.arrayToMuiStyles(rootClass, {
     width: parseInt(width, 10),
-    position: 'absolute',
-    bottom: 25,
+    position,
+    bottom: parseInt(bottom, 10),
   });
   const [value, setValue] = useState(0);
 
@@ -66,6 +68,16 @@ MuiBottomNavigation.propTypes = {
    */
   width: PropTypes.string,
   /**
+   * absolute | fixed
+   * Position of the Mui Bottom Navigation.
+   */
+  position: PropTypes.string,
+  /**
+   * mui prop: number
+   * Number of pixels from the bottom the nav bar is set to.
+   */
+  bottom: PropTypes.string,
+  /**
    * components:
    * MuiBottomNavigationAction
    */
@@ -78,4 +90,6 @@ MuiBottomNavigation.defaultProps = {
   rootClass: [],
   showLabels: false,
   width: '500',
+  position: 'fiixed',
+  bottom: '30',
 };
