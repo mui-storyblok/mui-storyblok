@@ -3,11 +3,9 @@
 exports[`<MuiPaginationTableHead /> snapshot 1`] = `
 <thead
   className="MuiTableHead-root makeStyles-root-2"
-  role={null}
 >
   <tr
     className="MuiTableRow-root makeStyles-root-4 MuiTableRow-head"
-    role={null}
   >
     <th
       aria-sort={null}

@@ -3,15 +3,12 @@
 exports[`<MuiTable /> snapshot 1`] = `
 <table
   className="MuiTable-root makeStyles-root-2"
-  role={null}
 >
   <thead
     className="MuiTableHead-root makeStyles-root-5"
-    role={null}
   >
     <tr
       className="MuiTableRow-root makeStyles-root-7 MuiTableRow-head"
-      role={null}
     >
       <th
         aria-sort={null}
@@ -28,11 +25,9 @@ exports[`<MuiTable /> snapshot 1`] = `
   </thead>
   <tbody
     className="MuiTableBody-root makeStyles-root-57"
-    role={null}
   >
     <tr
       className="MuiTableRow-root makeStyles-root-59"
-      role={null}
     >
       <td
         aria-sort="ascending"
