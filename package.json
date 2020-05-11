@@ -146,8 +146,8 @@
     "build": "rm -rf dist && npm run build-app && npm run build-storyblok-schema",
     "publish-npm": "npm run build && npm publish",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build",
+    "styleguide": "npx styleguidist server",
+    "styleguide:build": "npx styleguidist build",
     "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
     "export-storyblok": "npx storyblok-component-export"
   },
