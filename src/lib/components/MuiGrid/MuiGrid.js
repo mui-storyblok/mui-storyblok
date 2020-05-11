@@ -9,7 +9,6 @@ import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 import MuiGridList from '../MuiGridList/MuiGridList';
-import MuiCollapse from '../MuiTransitions/MuiCollapse/MuiCollapse';
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -35,7 +34,6 @@ const MuiGrid = ({
     MuiMobileStepper,
     MuiCircularProgress,
     MuiGridList,
-    MuiCollapse,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
