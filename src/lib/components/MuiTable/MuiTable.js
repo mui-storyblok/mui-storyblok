@@ -15,7 +15,6 @@ const MuiTable = ({
   tBody,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  console.log('table head: ', tHead);
 
   return (
     <Table
