@@ -23,7 +23,7 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-labelledby=" "
+        aria-label="Rows per page:"
         className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -46,10 +46,9 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
         value={0}
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path
@@ -89,10 +88,9 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
           className="MuiIconButton-label"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -129,10 +127,9 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
           className="MuiIconButton-label"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -169,10 +166,9 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
           className="MuiIconButton-label"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -209,10 +205,9 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
           className="MuiIconButton-label"
         >
           <svg
-            aria-hidden="true"
+            aria-hidden={true}
             className="MuiSvgIcon-root"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
