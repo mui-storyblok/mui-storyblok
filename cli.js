@@ -17,13 +17,10 @@ const asyncCmd = (cmd) => {
   });
 };
 
+const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
 
-let files;
-if (process.env.NODE_ENV === 'production') {
-  files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
-} else {
-  files = fs.readdirSync('storyblok');
-}
+// for developemnt use
+// const files = fs.readdirSync('storyblok');
 
 const fileNames = files.map((file) => {
   if (!file.includes('config')) {
