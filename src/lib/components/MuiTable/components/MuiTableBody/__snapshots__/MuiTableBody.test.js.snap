@@ -3,9 +3,11 @@
 exports[`<MuiTableBody /> snapshot 1`] = `
 <tbody
   className="MuiTableBody-root makeStyles-root-2"
+  role={null}
 >
   <tr
     className="MuiTableRow-root makeStyles-root-4"
+    role={null}
   >
     <td
       aria-sort={null}
