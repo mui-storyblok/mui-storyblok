@@ -1,13 +1,13 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from '@material-ui/core';
+import { Zoom } from '@material-ui/core';
 import StoryBlok from '../../../utils/Storyblok';
 import MuiGridList from '../../MuiGridList/MuiGridList';
 
-const MuiFade = ({
+const MuiZoom = ({
   rootClass,
   content,
-  fadeIn,
+  zoomIn,
   timeout,
 }) => {
   const components = {
@@ -18,8 +18,8 @@ const MuiFade = ({
 
   return (
     <div className={styles.root}>
-      <Fade
-        in={fadeIn}
+      <Zoom
+        in={zoomIn}
         timeout={timeout}
       >
         <div>
@@ -28,14 +28,14 @@ const MuiFade = ({
             Object.assign(item, { key: index }),
           ))}
         </div>
-      </Fade>
+      </Zoom>
     </div>
   );
 };
 
-export default MuiFade;
+export default MuiZoom;
 
-MuiFade.propTypes = {
+MuiZoom.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -45,7 +45,7 @@ MuiFade.propTypes = {
    * mui props: bool
    * If true, the component will transition in.
    */
-  fadeIn: PropTypes.bool,
+  zoomIn: PropTypes.bool,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
@@ -62,8 +62,8 @@ MuiFade.propTypes = {
   })).isRequired,
 };
 
-MuiFade.defaultProps = {
-  fadeIn: true,
+MuiZoom.defaultProps = {
+  zoomIn: true,
   timeout: 'auto',
   rootClass: [],
 };

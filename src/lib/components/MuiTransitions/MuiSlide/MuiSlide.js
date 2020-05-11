@@ -1,13 +1,14 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from '@material-ui/core';
+import { Slide } from '@material-ui/core';
 import StoryBlok from '../../../utils/Storyblok';
 import MuiGridList from '../../MuiGridList/MuiGridList';
 
-const MuiFade = ({
+const MuiSlide = ({
   rootClass,
+  direction,
   content,
-  fadeIn,
+  slideIn,
   timeout,
 }) => {
   const components = {
@@ -18,9 +19,10 @@ const MuiFade = ({
 
   return (
     <div className={styles.root}>
-      <Fade
-        in={fadeIn}
+      <Slide
+        in={slideIn}
         timeout={timeout}
+        direction={direction}
       >
         <div>
           {content.map((item, index) => createElement(
@@ -28,14 +30,14 @@ const MuiFade = ({
             Object.assign(item, { key: index }),
           ))}
         </div>
-      </Fade>
+      </Slide>
     </div>
   );
 };
 
-export default MuiFade;
+export default MuiSlide;
 
-MuiFade.propTypes = {
+MuiSlide.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -45,7 +47,12 @@ MuiFade.propTypes = {
    * mui props: bool
    * If true, the component will transition in.
    */
-  fadeIn: PropTypes.bool,
+  slideIn: PropTypes.bool,
+  /**
+   * mui props: 'down' | 'left' | 'right' | 'up'
+   * Direction the child node will enter from.
+   */
+  direction: PropTypes.string,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
@@ -62,8 +69,9 @@ MuiFade.propTypes = {
   })).isRequired,
 };
 
-MuiFade.defaultProps = {
-  fadeIn: true,
+MuiSlide.defaultProps = {
+  slideIn: true,
+  direction: 'down',
   timeout: 'auto',
   rootClass: [],
 };
