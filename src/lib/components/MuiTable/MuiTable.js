@@ -15,7 +15,6 @@ const MuiTable = ({
   tBody,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  console.log('table head: ', tHead);
 
   return (
     <Table
@@ -55,17 +54,13 @@ MuiTable.propTypes = {
   stickyHeader: PropTypes.bool,
 
   /**  MuiTableHead limit of 1 */
-  tHead: PropTypes.arrayOf(
-    PropTypes.shape({
-      component: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  tHead: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })).isRequired,
   /**  MuiTableBody limit of 1 */
-  tBody: PropTypes.arrayOf(
-    PropTypes.shape({
-      component: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  tBody: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 MuiTable.defaultProps = {
