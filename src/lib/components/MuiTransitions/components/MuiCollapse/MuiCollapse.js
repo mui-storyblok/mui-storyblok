@@ -1,15 +1,15 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import { Slide } from '@material-ui/core';
-import StoryBlok from '../../../utils/Storyblok';
-import MuiGridList from '../../MuiGridList/MuiGridList';
+import { Collapse } from '@material-ui/core';
+import StoryBlok from '../../../../utils/Storyblok';
+import MuiGridList from '../../../MuiGridList/MuiGridList';
 
-const MuiSlide = ({
+const MuiCollapse = ({
   rootClass,
-  direction,
+  collapsedHeight,
+  transitionIn,
+  timeOut,
   content,
-  slideIn,
-  timeout,
 }) => {
   const components = {
     MuiGridList,
@@ -19,10 +19,10 @@ const MuiSlide = ({
 
   return (
     <div className={styles.root}>
-      <Slide
-        in={slideIn}
-        timeout={timeout}
-        direction={direction}
+      <Collapse
+        collapsedHeight={collapsedHeight}
+        in={transitionIn}
+        timeOut={timeOut}
       >
         <div>
           {content.map((item, index) => createElement(
@@ -30,36 +30,36 @@ const MuiSlide = ({
             Object.assign(item, { key: index }),
           ))}
         </div>
-      </Slide>
+      </Collapse>
     </div>
   );
 };
 
-export default MuiSlide;
+export default MuiCollapse;
 
-MuiSlide.propTypes = {
+MuiCollapse.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: bool
-   * If true, the component will transition in.
+   * mui props: number | string
+   * The height of the container when collapsed.
    */
-  slideIn: PropTypes.bool,
-  /**
-   * mui props: 'down' | 'left' | 'right' | 'up'
-   * Direction the child node will enter from.
-   */
-  direction: PropTypes.string,
+  collapsedHeight: PropTypes.string,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
    * Set to 'auto' to automatically calculate transition time based on height.
    */
-  timeout: PropTypes.string,
+  timeOut: PropTypes.string,
+  /**
+   * mui props: bool
+   * If true, the component will transition in.
+   */
+  transitionIn: PropTypes.bool,
   /**
    * Content passed to render
    * components: MuiGridList
@@ -69,9 +69,9 @@ MuiSlide.propTypes = {
   })).isRequired,
 };
 
-MuiSlide.defaultProps = {
-  slideIn: true,
-  direction: 'down',
-  timeout: 'auto',
+MuiCollapse.defaultProps = {
+  collapsedHeight: '0px',
+  timeOut: 'auto',
+  transitionIn: true,
   rootClass: [],
 };

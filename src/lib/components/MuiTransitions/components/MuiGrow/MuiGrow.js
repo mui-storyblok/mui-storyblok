@@ -1,25 +1,25 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import { Fade } from '@material-ui/core';
-import StoryBlok from '../../../utils/Storyblok';
-import MuiGridList from '../../MuiGridList/MuiGridList';
+import { Grow } from '@material-ui/core';
+import StoryBlok from '../../../../utils/Storyblok';
+import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
-const MuiFade = ({
+const MuiGrow = ({
   rootClass,
   content,
-  fadeIn,
+  growIn,
   timeout,
 }) => {
   const components = {
-    MuiGridList,
+    Blok,
   };
 
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
 
   return (
     <div className={styles.root}>
-      <Fade
-        in={fadeIn}
+      <Grow
+        in={growIn}
         timeout={timeout}
       >
         <div>
@@ -28,14 +28,14 @@ const MuiFade = ({
             Object.assign(item, { key: index }),
           ))}
         </div>
-      </Fade>
+      </Grow>
     </div>
   );
 };
 
-export default MuiFade;
+export default MuiGrow;
 
-MuiFade.propTypes = {
+MuiGrow.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -45,7 +45,7 @@ MuiFade.propTypes = {
    * mui props: bool
    * If true, the component will transition in.
    */
-  fadeIn: PropTypes.bool,
+  growIn: PropTypes.bool,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
@@ -62,8 +62,8 @@ MuiFade.propTypes = {
   })).isRequired,
 };
 
-MuiFade.defaultProps = {
-  fadeIn: true,
+MuiGrow.defaultProps = {
+  growIn: true,
   timeout: 'auto',
   rootClass: [],
 };

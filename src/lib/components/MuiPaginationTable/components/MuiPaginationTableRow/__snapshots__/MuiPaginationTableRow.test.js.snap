@@ -3,7 +3,6 @@
 exports[`<MuiPaginationTableRow /> snapshot 1`] = `
 <tr
   className="MuiTableRow-root makeStyles-root-2"
-  role={null}
 >
   <td
     aria-sort="ascending"

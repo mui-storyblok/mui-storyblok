@@ -3,15 +3,12 @@
 exports[`<MuiPaginationTable /> snapshot 1`] = `
 <table
   className="MuiTable-root makeStyles-root-208"
-  role={null}
 >
   <thead
     className="MuiTableHead-root makeStyles-root-209"
-    role={null}
   >
     <tr
       className="MuiTableRow-root makeStyles-root-210 MuiTableRow-head"
-      role={null}
     >
       <th
         aria-sort={null}
@@ -28,11 +25,9 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
   </thead>
   <tbody
     className="MuiTableBody-root makeStyles-root-213"
-    role={null}
   >
     <tr
       className="MuiTableRow-root makeStyles-root-214"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -47,7 +42,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-217"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -62,7 +56,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-220"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -77,7 +70,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-223"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -92,7 +84,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-226"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -107,7 +98,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-229"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -122,7 +112,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-232"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -137,7 +126,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-235"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -152,7 +140,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-238"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -167,7 +154,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-241"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -183,11 +169,9 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
   </tbody>
   <tfoot
     className="MuiTableFooter-root makeStyles-root-244"
-    role={null}
   >
     <tr
       className="MuiTableRow-root MuiTableRow-footer"
-      role={null}
     >
       <td
         aria-sort={null}
@@ -211,7 +195,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-label="Rows per page:"
+              aria-labelledby=" "
               className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
               onBlur={[Function]}
               onFocus={[Function]}
@@ -228,9 +212,10 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
               value={10}
             />
             <svg
-              aria-hidden={true}
+              aria-hidden="true"
               className="MuiSvgIcon-root MuiSelect-icon MuiTablePagination-selectIcon"
               focusable="false"
+              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -270,9 +255,10 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
                 className="MuiIconButton-label"
               >
                 <svg
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
+                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -309,9 +295,10 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
                 className="MuiIconButton-label"
               >
                 <svg
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
+                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -348,9 +335,10 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
                 className="MuiIconButton-label"
               >
                 <svg
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
+                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -387,9 +375,10 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
                 className="MuiIconButton-label"
               >
                 <svg
-                  aria-hidden={true}
+                  aria-hidden="true"
                   className="MuiSvgIcon-root"
                   focusable="false"
+                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path

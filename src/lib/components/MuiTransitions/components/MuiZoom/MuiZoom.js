@@ -1,15 +1,14 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import { Collapse } from '@material-ui/core';
-import StoryBlok from '../../../utils/Storyblok';
-import MuiGridList from '../../MuiGridList/MuiGridList';
+import { Zoom } from '@material-ui/core';
+import StoryBlok from '../../../../utils/Storyblok';
+import MuiGridList from '../../../MuiGridList/MuiGridList';
 
-const MuiCollapse = ({
+const MuiZoom = ({
   rootClass,
-  collapsedHeight,
-  transitionIn,
-  timeOut,
   content,
+  zoomIn,
+  timeout,
 }) => {
   const components = {
     MuiGridList,
@@ -19,10 +18,9 @@ const MuiCollapse = ({
 
   return (
     <div className={styles.root}>
-      <Collapse
-        collapsedHeight={collapsedHeight}
-        in={transitionIn}
-        timeOut={timeOut}
+      <Zoom
+        in={zoomIn}
+        timeout={timeout}
       >
         <div>
           {content.map((item, index) => createElement(
@@ -30,36 +28,31 @@ const MuiCollapse = ({
             Object.assign(item, { key: index }),
           ))}
         </div>
-      </Collapse>
+      </Zoom>
     </div>
   );
 };
 
-export default MuiCollapse;
+export default MuiZoom;
 
-MuiCollapse.propTypes = {
+MuiZoom.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: number | string
-   * The height of the container when collapsed.
+   * mui props: bool
+   * If true, the component will transition in.
    */
-  collapsedHeight: PropTypes.string,
+  zoomIn: PropTypes.bool,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
    * Set to 'auto' to automatically calculate transition time based on height.
    */
-  timeOut: PropTypes.string,
-  /**
-   * mui props: bool
-   * If true, the component will transition in.
-   */
-  transitionIn: PropTypes.bool,
+  timeout: PropTypes.string,
   /**
    * Content passed to render
    * components: MuiGridList
@@ -69,9 +62,8 @@ MuiCollapse.propTypes = {
   })).isRequired,
 };
 
-MuiCollapse.defaultProps = {
-  collapsedHeight: '0px',
-  timeOut: 'auto',
-  transitionIn: true,
+MuiZoom.defaultProps = {
+  zoomIn: true,
+  timeout: 'auto',
   rootClass: [],
 };

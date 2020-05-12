@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import StoryblokClient from 'storyblok-js-client';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -23,7 +24,6 @@ const checkForMetaTag = (id, property = null, name = null) => {
 
 const setMetadata = (res) => {
   if (res.data.story.content.seo) {
-
     const metadataTag = checkForMetaTag('metadataTitle');
     const metaOgTitle = checkForMetaTag('metaOgTitle', 'og:title');
     const metaOgImage = checkForMetaTag('metaOgImage', 'og:image');
@@ -76,7 +76,7 @@ class StoryBlock {
     }
   }
 
-  // takes a array of strings in key value pars and returns mui with style strings
+  // takes a array of strings in key value pairs and returns mui with style strings
   // ex ['color: black'] = { color: 'black' }
   static arrayToMuiStyles(array = [], defaultStyles = {}, styleKey = 'root') {
     const stylesObj = {};
