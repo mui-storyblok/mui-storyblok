@@ -1,8 +1,8 @@
-import React, { createElement } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
 import StoryBlok from '../../../../utils/Storyblok';
-import MuiGridList from '../../../MuiGridList/MuiGridList';
+import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
 const MuiCollapse = ({
   rootClass,
@@ -11,25 +11,25 @@ const MuiCollapse = ({
   timeOut,
   content,
 }) => {
-  const components = {
-    MuiGridList,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setChecked(prev => !prev);
+    }, +transitionIn);
+  }, []);
 
   return (
     <div className={styles.root}>
       <Collapse
         collapsedHeight={collapsedHeight}
-        in={transitionIn}
+        in={checked}
         timeOut={timeOut}
       >
-        <div>
-          {content.map((item, index) => createElement(
-            components[item.component],
-            Object.assign(item, { key: index }),
-          ))}
-        </div>
+        {content.map((item, index) => (
+          <Blok {...item} key={index} />
+        ))}
       </Collapse>
     </div>
   );
@@ -39,7 +39,7 @@ export default MuiCollapse;
 
 MuiCollapse.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
@@ -56,13 +56,13 @@ MuiCollapse.propTypes = {
    */
   timeOut: PropTypes.string,
   /**
-   * mui props: bool
-   * If true, the component will transition in.
+   * mui props: number
+   * Number of milliseconds for component to transition in.
    */
-  transitionIn: PropTypes.bool,
+  transitionIn: PropTypes.string,
   /**
    * Content passed to render
-   * components: MuiGridList
+   * components: Blok
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -72,6 +72,6 @@ MuiCollapse.propTypes = {
 MuiCollapse.defaultProps = {
   collapsedHeight: '0px',
   timeOut: 'auto',
-  transitionIn: true,
+  transitionIn: 300,
   rootClass: [],
 };

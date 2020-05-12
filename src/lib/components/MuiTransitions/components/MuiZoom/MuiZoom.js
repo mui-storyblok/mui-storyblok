@@ -1,8 +1,8 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Zoom } from '@material-ui/core';
 import StoryBlok from '../../../../utils/Storyblok';
-import MuiGridList from '../../../MuiGridList/MuiGridList';
+import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
 const MuiZoom = ({
   rootClass,
@@ -10,10 +10,6 @@ const MuiZoom = ({
   zoomIn,
   timeout,
 }) => {
-  const components = {
-    MuiGridList,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
 
   return (
@@ -23,9 +19,8 @@ const MuiZoom = ({
         timeout={timeout}
       >
         <div>
-          {content.map((item, index) => createElement(
-            components[item.component],
-            Object.assign(item, { key: index }),
+          {content.map((item, index) => (
+            <Blok {...item} key={index} />
           ))}
         </div>
       </Zoom>
@@ -55,7 +50,7 @@ MuiZoom.propTypes = {
   timeout: PropTypes.string,
   /**
    * Content passed to render
-   * components: MuiGridList
+   * components: Blok
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,

@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Grow } from '@material-ui/core';
 import StoryBlok from '../../../../utils/Storyblok';
@@ -10,22 +10,24 @@ const MuiGrow = ({
   growIn,
   timeout,
 }) => {
-  const components = {
-    Blok,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setChecked(prev => !prev);
+    }, +growIn);
+  }, []);
 
   return (
     <div className={styles.root}>
       <Grow
-        in={growIn}
+        in={checked}
         timeout={timeout}
       >
         <div>
-          {content.map((item, index) => createElement(
-            components[item.component],
-            Object.assign(item, { key: index }),
+          {content.map((item, index) => (
+            <Blok {...item} key={index} />
           ))}
         </div>
       </Grow>
@@ -42,10 +44,10 @@ MuiGrow.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: bool
-   * If true, the component will transition in.
+   * mui props: number
+   * Number of milliseconds for component to transition in.
    */
-  growIn: PropTypes.bool,
+  growIn: PropTypes.string,
   /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
@@ -55,7 +57,7 @@ MuiGrow.propTypes = {
   timeout: PropTypes.string,
   /**
    * Content passed to render
-   * components: MuiGridList
+   * components: Blok
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -63,7 +65,7 @@ MuiGrow.propTypes = {
 };
 
 MuiGrow.defaultProps = {
-  growIn: true,
+  growIn: 300,
   timeout: 'auto',
   rootClass: [],
 };

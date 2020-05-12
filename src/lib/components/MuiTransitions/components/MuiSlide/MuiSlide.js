@@ -1,8 +1,8 @@
-import React, { createElement } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Slide } from '@material-ui/core';
 import StoryBlok from '../../../../utils/Storyblok';
-import MuiGridList from '../../../MuiGridList/MuiGridList';
+import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
 const MuiSlide = ({
   rootClass,
@@ -11,23 +11,25 @@ const MuiSlide = ({
   slideIn,
   timeout,
 }) => {
-  const components = {
-    MuiGridList,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setChecked(prev => !prev);
+    }, +slideIn);
+  }, []);
 
   return (
     <div className={styles.root}>
       <Slide
-        in={slideIn}
+        in={checked}
         timeout={timeout}
         direction={direction}
       >
         <div>
-          {content.map((item, index) => createElement(
-            components[item.component],
-            Object.assign(item, { key: index }),
+          {content.map((item, index) => (
+            <Blok {...item} key={index} />
           ))}
         </div>
       </Slide>
@@ -44,10 +46,10 @@ MuiSlide.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: bool
-   * If true, the component will transition in.
+   * mui props: number
+   * Number of milliseconds for component to transition in.
    */
-  slideIn: PropTypes.bool,
+  slideIn: PropTypes.string,
   /**
    * mui props: 'down' | 'left' | 'right' | 'up'
    * Direction the child node will enter from.
@@ -62,7 +64,7 @@ MuiSlide.propTypes = {
   timeout: PropTypes.string,
   /**
    * Content passed to render
-   * components: MuiGridList
+   * components: Blok
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -70,7 +72,7 @@ MuiSlide.propTypes = {
 };
 
 MuiSlide.defaultProps = {
-  slideIn: true,
+  slideIn: 300,
   direction: 'down',
   timeout: 'auto',
   rootClass: [],
