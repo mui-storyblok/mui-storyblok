@@ -8,7 +8,8 @@ const MuiFade = ({
   rootClass,
   content,
   fadeIn,
-  timeout,
+  enter,
+  exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   const [checked, setChecked] = useState(false);
@@ -23,7 +24,10 @@ const MuiFade = ({
     <div className={styles.root}>
       <Fade
         in={checked}
-        timeout={timeout}
+        timeout={{
+          enter: +enter,
+          exit: +exit,
+        }}
       >
         <div>
           {content.map((item, index) => (
@@ -49,12 +53,15 @@ MuiFade.propTypes = {
    */
   fadeIn: PropTypes.string,
   /**
-   * mui props: number | string
-   * The duration for the transition, in milliseconds.
-   * You may specify a single timeout for all transitions, or individually with an object.
-   * Set to 'auto' to automatically calculate transition time based on height.
+   * mui props: number
+   * Number of milliseconds for component to effect on screen.
    */
-  timeout: PropTypes.string,
+  enter: PropTypes.string,
+  /**
+   * mui props: number
+   * Number of milliseconds for component to effect off screen.
+   */
+  exit: PropTypes.string,
   /**
    * Content passed to render
    * components: Blok
@@ -66,6 +73,7 @@ MuiFade.propTypes = {
 
 MuiFade.defaultProps = {
   fadeIn: 300,
-  timeout: 'auto',
+  enter: 1500,
+  exit: 1500,
   rootClass: [],
 };
