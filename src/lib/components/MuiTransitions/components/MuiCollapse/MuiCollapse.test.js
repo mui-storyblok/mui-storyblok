@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiCollapse from './MuiCollapse';
 
-function setup() {
+function setup(enterTime = 1500) {
   const props = {
-    enter: 1500,
+    enter: enterTime,
     exit: 1500,
     content: [{
       component: 'Blok',
@@ -32,7 +32,7 @@ function setup() {
     }],
   };
 
-  const comp = shallow(<MuiCollapse {...props} />);
+  const comp = mount(<MuiCollapse {...props} />);
   return { comp, props };
 }
 
@@ -50,5 +50,19 @@ describe('<MuiCollapse />', () => {
   it('should render MuiGridList', () => {
     const { comp } = setup();
     expect(comp).toMatchSnapshot();
+  });
+
+  it('should set enterTime to auto if enter value is 0', () => {
+    const { comp } = setup('0');
+    expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().timeout).toEqual('auto');
+  });
+
+  it.skip('should change state after transitionIn time is ran', () => {
+    const { comp } = setup();
+    console.log(comp.debug());
+    expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().in).toEqual(false);
+    setTimeout(() => {
+      expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().in).toEqual(true);
+    }, 1000);
   });
 });
