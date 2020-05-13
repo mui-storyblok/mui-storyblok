@@ -8,6 +8,8 @@ const MuiZoom = ({
   rootClass,
   content,
   zoomIn,
+  enter,
+  exit,
   timeout,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
@@ -49,6 +51,16 @@ MuiZoom.propTypes = {
    */
   timeout: PropTypes.string,
   /**
+   * mui props: number
+   * Number of milliseconds for component to effect on screen.
+   */
+  enter: PropTypes.string,
+  /**
+   * mui props: number
+   * Number of milliseconds for component to effect off screen.
+   */
+  exit: PropTypes.string,
+  /**
    * Content passed to render
    * components: Blok
    */
@@ -60,5 +72,7 @@ MuiZoom.propTypes = {
 MuiZoom.defaultProps = {
   zoomIn: true,
   timeout: 'auto',
+  enter: 1000,
+  exit: 1000,
   rootClass: [],
 };
