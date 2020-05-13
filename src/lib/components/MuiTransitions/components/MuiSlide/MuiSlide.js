@@ -10,12 +10,10 @@ const MuiSlide = ({
   content,
   slideIn,
   enter,
+  exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   const [checked, setChecked] = useState(false);
-  const timeout = {
-    enter: +enter,
-  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +25,10 @@ const MuiSlide = ({
     <div className={styles.root}>
       <Slide
         in={checked}
-        timeout={timeout}
+        timeout={{
+          enter: +enter,
+          exit: +exit,
+        }}
         direction={direction}
       >
         <div>
@@ -64,6 +65,11 @@ MuiSlide.propTypes = {
    */
   enter: PropTypes.string,
   /**
+   * mui props: number
+   * Duration in milliseconds to exit the screen.
+   */
+  exit: PropTypes.string,
+  /**
    * mui props: number | string
    * The duration for the transition, in milliseconds.
    * You may specify a single timeout for all transitions, or individually with an object.
@@ -84,5 +90,6 @@ MuiSlide.defaultProps = {
   direction: 'down',
   timeout: 'auto',
   enter: 800,
+  exit: 800,
   rootClass: [],
 };
