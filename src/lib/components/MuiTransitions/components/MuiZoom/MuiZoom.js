@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Zoom } from '@material-ui/core';
 import StoryBlok from '../../../../utils/Storyblok';
@@ -7,18 +7,27 @@ import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 const MuiZoom = ({
   rootClass,
   content,
-  zoomIn,
   enter,
   exit,
-  timeout,
+  zoomIn,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setChecked(prev => !prev);
+    }, +zoomIn);
+  }, []);
 
   return (
     <div className={styles.root}>
       <Zoom
-        in={zoomIn}
-        timeout={timeout}
+        in={checked}
+        timeout={{
+          enter: +enter,
+          exit: +exit,
+        }}
       >
         <div>
           {content.map((item, index) => (
@@ -39,17 +48,10 @@ MuiZoom.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: bool
-   * If true, the component will transition in.
+   * mui props: number
+   * Number of milliseconds for component to transition in.
    */
-  zoomIn: PropTypes.bool,
-  /**
-   * mui props: number | string
-   * The duration for the transition, in milliseconds.
-   * You may specify a single timeout for all transitions, or individually with an object.
-   * Set to 'auto' to automatically calculate transition time based on height.
-   */
-  timeout: PropTypes.string,
+  zoomIn: PropTypes.string,
   /**
    * mui props: number
    * Number of milliseconds for component to effect on screen.
@@ -70,8 +72,7 @@ MuiZoom.propTypes = {
 };
 
 MuiZoom.defaultProps = {
-  zoomIn: true,
-  timeout: 'auto',
+  zoomIn: 500,
   enter: 1000,
   exit: 1000,
   rootClass: [],
