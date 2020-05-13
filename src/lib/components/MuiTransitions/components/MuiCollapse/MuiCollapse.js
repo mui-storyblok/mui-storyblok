@@ -10,6 +10,7 @@ const MuiCollapse = ({
   transitionIn,
   enter,
   content,
+  exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   const [checked, setChecked] = useState(false);
@@ -17,7 +18,7 @@ const MuiCollapse = ({
   if (enter === '0') {
     enterTime = 'auto';
   } else {
-    enterTime = { enter: +enter };
+    enterTime = { enter: +enter, exit: +exit };
   }
 
   useEffect(() => {
@@ -68,6 +69,11 @@ MuiCollapse.propTypes = {
   enter: PropTypes.string,
   /**
    * mui props: number
+   * Duration in milliseconds to leave the screen.
+   */
+  exit: PropTypes.string,
+  /**
+   * mui props: number
    * Duration in milliseconds to enter the screen.
    * Set to 0 to automatically calculate transition time based on height.
    */
@@ -86,5 +92,6 @@ MuiCollapse.defaultProps = {
   timeout: 'auto',
   transitionIn: 300,
   enter: 1500,
+  exit: 1500,
   rootClass: [],
 };
