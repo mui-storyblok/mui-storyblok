@@ -1,20 +1,7 @@
 MuiAppBar example:
 
-```js noeditor
-import MuiAppBar from './MuiAppBar';
-```
-
 ```js
 const content = [
-  {
-    btnText: 'an MuiMenu',
-    component: 'MuiMenu',
-    content: [{
-      buttonText: 'Menu Item',
-      component: 'MuiMenuItem',
-      redirectRoute: '/',
-    }],
-  },
   {
     anchor: 'left',
     component: 'MuiIconButtonDrawer',
@@ -51,6 +38,15 @@ const content = [
         component: 'MuiIcon',
         iconName: 'menu',
       }],
+    }],
+  },
+  {
+    btnText: 'MuiMenu',
+    component: 'MuiMenu',
+    content: [{
+      buttonText: 'Menu Item',
+      component: 'MuiMenuItem',
+      redirectRoute: '/',
     }],
   },
   {

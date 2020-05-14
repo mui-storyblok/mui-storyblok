@@ -1,9 +1,5 @@
 MuiCircularProgress Example:
 
-```js noeditor
-import MuiCircularProgress from './MuiCircularProgress';
-```
-
 ```js
 <div styles={{ display: 'flex', flexDirection: 'row' }}>
   <MuiCircularProgress

@@ -1,50 +1,76 @@
 MuiMobileStepper example:
 
-```js noeditor
-import MuiMobileStepper from './MuiMobileStepper';
-```
-
 ```js
 const muiHeroHeaderOne = {
-    component: 'MuiHeroHeader',
-    backgroundImageUrl: 'https://vistaenergymarketing.com/wp-content/themes/yootheme/cache/houston-skyline-7a651823.webp',
-    content: [{
-    component: 'MuiGrid',
-    content: [{
-        component: 'MuiGridItem',
+    component: 'MuiMobileTab',
+    tab: [{
+        component: 'MuiHeroHeader',
+        backgroundImageUrl: 'https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg',
         content: [{
-        component: 'MuiIcon',
-        iconName: 'android',
+            component: 'MuiGrid',
+            content: [{
+                component: 'MuiGridItem',
+                content: [{
+                    component: 'MuiIcon',
+                    iconName: 'star',
+                }],
+            }],
         }],
     }],
-  }],
 };
 
 const muiHeroHeaderTwo = {
-    component: 'MuiHeroHeader',
-    backgroundImageUrl: 'https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg',
-    content: [{
-    component: 'MuiGrid',
-    content: [{
-        component: 'MuiGridItem',
+    component: 'MuiMobileTab',
+    tab: [{
+        component: 'MuiHeroHeader',
+        backgroundImageUrl: 'https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Nature/H-P/Habitats/Ocean/wave.ngsversion.1500050062134.adapt.1900.1.jpg',
         content: [{
-        component: 'MuiIcon',
-        iconName: 'star',
+            component: 'MuiGrid',
+            content: [{
+                component: 'MuiGridItem',
+                content: [{
+                    component: 'MuiIcon',
+                    iconName: 'star',
+                }],
+            }],
         }],
     }],
-  }],
 };
 
-const tabs = [muiHeroHeaderOne, muiHeroHeaderTwo];
+const muiHeroHeaderThree = {
+    component: 'MuiMobileTab',
+    tab: [{
+        component: 'MuiHeroHeader',
+        backgroundImageUrl: 'https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg',
+        content: [{
+            component: 'MuiGrid',
+            content: [{
+                component: 'MuiGridItem',
+                content: [{
+                    component: 'MuiIcon',
+                    iconName: 'star',
+                }],
+            }],
+        }],
+    }],
+};
+
+const tabs = [muiHeroHeaderOne, muiHeroHeaderTwo, muiHeroHeaderThree];
 
 const nextBtn = [{
-    component: 'MuiButton',
-    buttonText: 'next',
+    component: 'MuiIconButton',
+    icon: [{
+        component: 'MuiIcon',
+        iconName: 'skip_next',
+    }],
 }];
 
 const backBtn = [{
-    component: 'MuiButton',
-    buttonText: 'back',
+    component: 'MuiIconButton',
+    icon: [{
+        component: 'MuiIcon',
+        iconName: 'skip_previous',
+    }],
 }];
 
 <MuiMobileStepper

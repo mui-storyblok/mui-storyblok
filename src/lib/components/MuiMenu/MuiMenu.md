@@ -1,9 +1,5 @@
 MuiMenu example:
 
-```js noeditor
-import MuiMenu from './MuiMenu';
-```
-
 ```js
 const menuItem = {
     component: 'MuiMenuItem',

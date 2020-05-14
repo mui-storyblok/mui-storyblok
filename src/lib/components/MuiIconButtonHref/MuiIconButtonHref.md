@@ -1,9 +1,5 @@
 MuiIconButtonHref example:
 
-```js noeditor
-import MuiIconButtonHref from './MuiIconButtonHref';
-```
-
 ```js
 const iconButton = [{
   component: 'MuiIconButton',

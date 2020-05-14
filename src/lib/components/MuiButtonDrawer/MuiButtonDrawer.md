@@ -1,9 +1,5 @@
 MuiButtonDrawer Example:
 
-```js noeditor
-import MuiButtonDrawer from './MuiButtonDrawer';
-```
-
 ```js
 const content = [
   {
@@ -14,7 +10,7 @@ const content = [
         listItemText: [
           {
             component: 'MuiListItemText',
-            primary: 'home',
+            primary: 'Home',
           }
         ],
         listItemSecondaryAction: [
@@ -31,6 +27,68 @@ const content = [
                       {
                         component: 'MuiIcon',
                         iconName: 'home',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiListItem',
+        listItemText: [
+          {
+            component: 'MuiListItemText',
+            primary: 'Email',
+          }
+        ],
+        listItemSecondaryAction: [
+          {
+            component: 'MuiListItemSecondaryAction',
+            content: [
+              {
+                component: 'MuiIconButtonRedirect',
+                redirectRoute: '/',
+                iconButton: [
+                  {
+                    component: 'MuiIconButton',
+                    icon: [
+                      {
+                        component: 'MuiIcon',
+                        iconName: 'mail',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiListItem',
+        listItemText: [
+          {
+            component: 'MuiListItemText',
+            primary: 'Alarm',
+          }
+        ],
+        listItemSecondaryAction: [
+          {
+            component: 'MuiListItemSecondaryAction',
+            content: [
+              {
+                component: 'MuiIconButtonRedirect',
+                redirectRoute: '/',
+                iconButton: [
+                  {
+                    component: 'MuiIconButton',
+                    icon: [
+                      {
+                        component: 'MuiIcon',
+                        iconName: 'timer',
                       },
                     ],
                   },

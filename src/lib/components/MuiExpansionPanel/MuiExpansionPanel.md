@@ -1,9 +1,5 @@
 MuiExpansionPanel example:
 
-```js noeditor
-import MuiExpansionPanel from './MuiExpansionPanel';
-```
-
 ```js
     const expansionPanelSummary = [{
        component: 'MuiExpansionPanelSummary',

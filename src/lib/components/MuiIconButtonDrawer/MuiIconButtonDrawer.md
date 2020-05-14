@@ -1,9 +1,5 @@
 MuiIconButtonDrawer Example:
 
-```js noeditor
-import MuiIconButtonDrawer from './MuiIconButtonDrawer';
-```
-
 ```js
 const content = [
   {

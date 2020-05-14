@@ -1,9 +1,5 @@
 MuiList example:
 
-```js noeditor
-import MuiList from './MuiList';
-```
-
 ```js
 const listItemAvatar = {
     component: 'MuiListItemAvatar',
