@@ -52,13 +52,6 @@ MuiCollapse.propTypes = {
    */
   collapsedHeight: PropTypes.string,
   /**
-   * mui props: number | string
-   * The duration for the transition, in milliseconds.
-   * You may specify a single timeout for all transitions, or individually with an object.
-   * Set to 'auto' to automatically calculate transition time based on height.
-   */
-  timeout: PropTypes.string,
-  /**
    * mui props: number
    * Duration in milliseconds to enter the screen.
    */
@@ -85,7 +78,6 @@ MuiCollapse.propTypes = {
 
 MuiCollapse.defaultProps = {
   collapsedHeight: '0px',
-  timeout: 'auto',
   transitionIn: 300,
   enter: 1500,
   exit: 1500,

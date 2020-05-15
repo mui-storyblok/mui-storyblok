@@ -65,13 +65,6 @@ MuiSlide.propTypes = {
    */
   exit: PropTypes.string,
   /**
-   * mui props: number | string
-   * The duration for the transition, in milliseconds.
-   * You may specify a single timeout for all transitions, or individually with an object.
-   * Set to 'auto' to automatically calculate transition time based on height.
-   */
-  timeout: PropTypes.string,
-  /**
    * Content passed to render
    * components: Blok
    */
@@ -83,7 +76,6 @@ MuiSlide.propTypes = {
 MuiSlide.defaultProps = {
   slideIn: 300,
   direction: 'down',
-  timeout: 'auto',
   enter: 800,
   exit: 800,
   rootClass: [],
