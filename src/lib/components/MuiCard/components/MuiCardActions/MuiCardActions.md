@@ -1,7 +1,7 @@
 MuiCardAction - examples:
 
 ```js noeditor
-import MuiCard from '../../MuiCard';
+const MuiCard = require('../../MuiCard');
 ```
 
 ```js

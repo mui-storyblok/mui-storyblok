@@ -22,8 +22,6 @@ const MuiPaginationTableBody = ({
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  console.log(content);
-
   return (
     <TableBody className={styles.root}>
       {content.slice(

@@ -12,22 +12,6 @@
   display: block;
 }
 
-@media only screen and (max-width: 959px) {
-  .dropdownContent {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    bottom: 50px;
-    z-index: 99999;
-  }
-
-  .dropdownContent a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-}
-
 .dropdown:hover .dropdownContent {
   display: block;
 }

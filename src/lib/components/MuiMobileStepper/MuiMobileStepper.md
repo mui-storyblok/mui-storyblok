@@ -5,6 +5,7 @@ const muiHeroHeaderOne = {
     component: 'MuiMobileTab',
     tab: [{
         component: 'MuiHeroHeader',
+        height: '300px',
         backgroundImageUrl: 'https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg',
         content: [{
             component: 'MuiGrid',

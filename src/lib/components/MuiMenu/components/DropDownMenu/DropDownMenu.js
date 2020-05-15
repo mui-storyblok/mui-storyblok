@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
-import ArrowDropUp from '@material-ui/icons/ArrowDropUp';
 import styles from './DropDownMenu.module.scss';
 
 const DropDownMenu = ({
@@ -20,7 +19,7 @@ const DropDownMenu = ({
       color={color}
       variant={variant}
       size={size}
-      endIcon={window.innerWidth > 959 ? (<ArrowDropDown />) : (<ArrowDropUp />)}
+      endIcon={<ArrowDropDown />}
     >
       {btnTxt}
     </Button>
