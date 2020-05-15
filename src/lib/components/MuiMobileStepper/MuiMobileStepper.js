@@ -29,8 +29,6 @@ const MuiMobileStepper = ({
     MuiHeroHeader,
   };
 
-  console.log(tabs);
-
   const [state, setState] = useState({ activeStep: 0, autoplay });
 
   const maxSteps = tabs.length;
