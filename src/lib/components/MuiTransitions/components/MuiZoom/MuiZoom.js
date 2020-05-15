@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Zoom } from '@material-ui/core';
+import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
@@ -12,18 +13,11 @@ const MuiZoom = ({
   zoomIn,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setChecked(prev => !prev);
-    }, +zoomIn);
-  }, []);
-
+  const transTime = useTransitionIn(zoomIn);
   return (
     <div className={styles.root}>
       <Zoom
-        in={checked}
+        in={transTime}
         timeout={{
           enter: +enter,
           exit: +exit,

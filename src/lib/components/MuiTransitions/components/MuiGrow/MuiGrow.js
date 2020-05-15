@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Grow } from '@material-ui/core';
+import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
@@ -8,22 +9,24 @@ const MuiGrow = ({
   rootClass,
   content,
   growIn,
-  timeout,
+  enter,
+  exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  const [checked, setChecked] = useState(false);
+  const transTime = useTransitionIn(growIn);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setChecked(prev => !prev);
-    }, +growIn);
-  }, []);
+  let enterTime;
+  if (enter === '0') {
+    enterTime = 'auto';
+  } else {
+    enterTime = { enter: +enter, exit: +exit };
+  }
 
   return (
     <div className={styles.root}>
       <Grow
-        in={checked}
-        timeout={timeout}
+        in={transTime}
+        timeout={enterTime}
       >
         <div>
           {content.map((item, index) => (
@@ -49,12 +52,15 @@ MuiGrow.propTypes = {
    */
   growIn: PropTypes.string,
   /**
-   * mui props: number | string
-   * The duration for the transition, in milliseconds.
-   * You may specify a single timeout for all transitions, or individually with an object.
-   * Set to 'auto' to automatically calculate transition time based on height.
+   * mui props: number
+   * Duration in milliseconds to enter the screen.
    */
-  timeout: PropTypes.string,
+  enter: PropTypes.string,
+  /**
+   * mui props: number
+   * Duration in milliseconds to leave the screen.
+   */
+  exit: PropTypes.string,
   /**
    * Content passed to render
    * components: Blok
@@ -66,6 +72,7 @@ MuiGrow.propTypes = {
 
 MuiGrow.defaultProps = {
   growIn: 300,
-  timeout: 'auto',
+  enter: 1500,
+  exit: 1500,
   rootClass: [],
 };

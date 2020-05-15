@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Slide } from '@material-ui/core';
+import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
@@ -13,18 +14,12 @@ const MuiSlide = ({
   exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setChecked(prev => !prev);
-    }, +slideIn);
-  }, []);
+  const transTime = useTransitionIn(slideIn);
 
   return (
     <div className={styles.root}>
       <Slide
-        in={checked}
+        in={transTime}
         timeout={{
           enter: +enter,
           exit: +exit,

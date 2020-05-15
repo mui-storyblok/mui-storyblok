@@ -57,9 +57,8 @@ describe('<MuiCollapse />', () => {
     expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().timeout).toEqual('auto');
   });
 
-  it.skip('should change state after transitionIn time is ran', () => {
+  it('should change state after transitionIn time is ran', () => {
     const { comp } = setup();
-    console.log(comp.debug());
     expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().in).toEqual(false);
     setTimeout(() => {
       expect(comp.find('WithStyles(ForwardRef(Collapse))').first().props().in).toEqual(true);

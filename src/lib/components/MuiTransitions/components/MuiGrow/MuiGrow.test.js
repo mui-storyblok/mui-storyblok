@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiGrow from './MuiGrow';
 
-function setup() {
+function setup(enterTime = 1500) {
   const props = {
-    enter: 1500,
+    enter: enterTime,
     exit: 1500,
     content: [{
       component: 'Blok',
@@ -32,7 +32,7 @@ function setup() {
     }],
   };
 
-  const comp = shallow(<MuiGrow {...props} />);
+  const comp = mount(<MuiGrow {...props} />);
   return { comp, props };
 }
 
@@ -50,5 +50,10 @@ describe('<MuiGrow />', () => {
   it('should render MuiGridList', () => {
     const { comp } = setup();
     expect(comp).toMatchSnapshot();
+  });
+
+  it('should set enterTime to auto if enter value is 0', () => {
+    const { comp } = setup('0');
+    expect(comp.find('ForwardRef(Grow)').first().props().timeout).toEqual('auto');
   });
 });

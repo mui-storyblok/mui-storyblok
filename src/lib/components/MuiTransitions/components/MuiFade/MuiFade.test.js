@@ -51,4 +51,13 @@ describe('<MuiFade />', () => {
     const { comp } = setup();
     expect(comp).toMatchSnapshot();
   });
+
+  it('should change state after transitionIn time is ran', () => {
+
+    // const { comp } = setup();
+    // expect(comp.find('WithStyles(ForwardRef(Fade))').first().props().in).toEqual(false);
+    // setTimeout(() => {
+    //   expect(comp.find('WithStyles(ForwardRef(Fade))').first().props().in).toEqual(true);
+    // }, 1000);
+  });
 });

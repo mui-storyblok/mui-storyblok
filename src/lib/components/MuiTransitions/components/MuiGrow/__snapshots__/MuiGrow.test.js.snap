@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiGrow /> should render MuiGridList 1`] = `ShallowWrapper {}`;
+exports[`<MuiGrow /> should render MuiGridList 1`] = `ReactWrapper {}`;
 
 exports[`<MuiGrow /> snapshot 1`] = `
 <div

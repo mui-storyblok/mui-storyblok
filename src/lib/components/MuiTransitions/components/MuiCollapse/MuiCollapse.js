@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Collapse } from '@material-ui/core';
+import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
 
@@ -13,7 +14,8 @@ const MuiCollapse = ({
   exit,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
-  const [checked, setChecked] = useState(false);
+  const transTime = useTransitionIn(transitionIn);
+
   let enterTime;
   if (enter === '0') {
     enterTime = 'auto';
@@ -21,17 +23,11 @@ const MuiCollapse = ({
     enterTime = { enter: +enter, exit: +exit };
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      setChecked(prev => !prev);
-    }, +transitionIn);
-  }, []);
-
   return (
     <div className={styles.root}>
       <Collapse
         collapsedHeight={collapsedHeight}
-        in={checked}
+        in={transTime}
         timeout={enterTime}
       >
         {content.map((item, index) => (
