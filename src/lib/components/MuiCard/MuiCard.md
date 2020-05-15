@@ -1,6 +1,5 @@
 MuiCard With MuiCardActions:
 
-
 ```js
 const cardcontent2 = {
     component: 'MuiCardContent',

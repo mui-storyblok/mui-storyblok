@@ -1,5 +1,9 @@
 MuiCardAction - examples:
 
+```js noeditor
+import MuiCard from '../../MuiCard';
+```
+
 ```js
 const content = [{
   component: 'MuiCardActions',
