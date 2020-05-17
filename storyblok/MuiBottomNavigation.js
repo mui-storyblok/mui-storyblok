@@ -1,11 +1,12 @@
 module.exports = {
   name: 'MuiBottomNavigation',
   display_name: null,
-  updated_at: '2020-05-04T16:03:34.135Z',
+  updated_at: '2020-05-07T19:11:29.231Z',
   schema: {
     rootClass: {
       type: 'options',
       description: '* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.',
+      options: [],
     },
     showLabels: {
       type: 'boolean',
@@ -22,6 +23,27 @@ module.exports = {
       type: 'number',
       description: 'Width of the bottom navigation bar',
       default_value: '500',
+    },
+    position: {
+      type: 'option',
+      use_uuid: true,
+      options: [
+        {
+          value: 'absolute',
+          name: 'absolute',
+        },
+        {
+          value: 'fixed',
+          name: 'fixed',
+        },
+      ],
+      description: 'Position of Bottom Navigation',
+      default_value: 'fixed',
+    },
+    bottom: {
+      type: 'number',
+      description: 'Number of pixels from the bottom of the page.',
+      default_value: '30',
     },
   },
   image: null,

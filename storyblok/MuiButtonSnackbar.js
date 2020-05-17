@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiButtonSnackbar',
   display_name: null,
-  updated_at: '2020-04-30T16:30:55.262Z',
+  updated_at: '2020-05-04T23:06:01.079Z',
   schema: {
     message: {
       type: 'text',
@@ -75,12 +75,7 @@ module.exports = {
       type: 'options',
       description: '* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.',
       min_options: '',
-      options: [
-        {
-          value: 'color: #fff',
-          name: 'test',
-        },
-      ],
+      options: [],
       pos: 6,
     },
     closingIcon: {

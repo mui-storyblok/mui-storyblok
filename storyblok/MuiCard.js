@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiCard',
   display_name: null,
-  updated_at: '2020-04-19T16:57:09.398Z',
+  updated_at: '2020-05-14T16:18:27.026Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -14,8 +14,8 @@ module.exports = {
           name: 'box-shadow: 5px 10px;',
         },
         {
-          value: 'background-color: #FFF',
-          name: 'background-color',
+          value: 'background-color: #000',
+          name: 'background-color black',
         },
         {
           value: 'color: #000',
