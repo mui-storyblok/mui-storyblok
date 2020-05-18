@@ -1,9 +1,5 @@
 MuiHeroHeader example:
 
-```js noeditor
-import MuiHeroHeader from './MuiHeroHeader';
-```
-
 ```js
     const muiGrid = {
         component: 'MuiGrid',
