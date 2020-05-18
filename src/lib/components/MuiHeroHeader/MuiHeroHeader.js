@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
 import Storyblok from '../../utils/Storyblok';
-import MuiGrid from '../MuiGrid/MuiGrid';
+import MuiGridItem from '../MuiGrid/components/MuiGridItem/MuiGridItem';
 
 export const sizeGrid = (value) => {
   if (value === 'true') return true;
@@ -25,7 +25,7 @@ const MuiHeroHeader = ({
   backgroundImageUrl,
 }) => {
   const components = {
-    MuiGrid,
+    MuiGridItem,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
