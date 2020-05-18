@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.25",
+  "version": "1.0.33",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -141,7 +141,7 @@
     "build-examples": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-storyblok-schema": "NODE_ENV=production babel storyblok --out-dir dist/storyblok --copy-files && NODE_ENV=production babel cli.js --out-file dist/cli.js && chmod +x dist/cli.js",
+    "build-storyblok-schema": "NODE_ENV=production babel storyblok --out-dir dist/storyblok --copy-files && mv dist/index.js dist/index.mjs",
     "build-app": "NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "build": "rm -rf dist && npm run build-app && npm run build-storyblok-schema",
     "publish-npm": "npm run build && npm publish",
