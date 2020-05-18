@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiGrid',
   display_name: null,
-  updated_at: '2020-04-28T17:29:38.894Z',
+  updated_at: '2020-05-11T21:08:08.995Z',
   schema: {
     alignContent: {
       type: 'option',
