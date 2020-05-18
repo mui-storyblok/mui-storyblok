@@ -1,7 +1,7 @@
 module.exports = {
   name: 'page',
   display_name: null,
-  updated_at: '2020-03-31T18:27:09.876Z',
+  updated_at: '2020-05-12T19:37:20.045Z',
   schema: {
     seo: {
       type: 'custom',
@@ -14,6 +14,7 @@ module.exports = {
       restrict_components: true,
       component_whitelist: [
         'Blok',
+        'MuiTransitions',
       ],
       pos: 1,
       translatable: false,
