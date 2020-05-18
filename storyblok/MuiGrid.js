@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiGrid',
   display_name: null,
-  updated_at: '2020-05-11T21:08:08.995Z',
+  updated_at: '2020-05-18T21:23:27.802Z',
   schema: {
     alignContent: {
       type: 'option',
@@ -235,6 +235,7 @@ module.exports = {
         'MuiMobileStepper',
         'MuiCircularProgress',
         'MuiGridList',
+        'MuiHeroHeader',
       ],
       pos: 12,
       required: true,

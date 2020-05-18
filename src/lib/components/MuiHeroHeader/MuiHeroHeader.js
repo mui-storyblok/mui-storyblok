@@ -1,16 +1,9 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-
 import Storyblok from '../../utils/Storyblok';
-import MuiGrid from '../MuiGrid/MuiGrid';
-
-export const sizeGrid = (value) => {
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-  if (value === 'auto') return value;
-  return Number(value);
-};
+import sizeGrid from '../../utils/sizeGrid';
+import MuiGridItem from '../MuiGrid/components/MuiGridItem/MuiGridItem';
 
 const MuiHeroHeader = ({
   alignContent,
@@ -25,19 +18,28 @@ const MuiHeroHeader = ({
   backgroundImageUrl,
 }) => {
   const components = {
-    MuiGrid,
+    MuiGridItem,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
 
-  const heroClass = {
+  let heroClass = {
     height,
-    backgroundImage: `url(${backgroundImageUrl})`,
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
     position: 'relative',
   };
+
+  if (backgroundImageUrl) {
+    heroClass = {
+      ...heroClass,
+      ...{
+        backgroundImageUrl,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      },
+    };
+  }
+
 
   return (
     <Grid
@@ -69,7 +71,8 @@ MuiHeroHeader.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** url for background img */
-  backgroundImageUrl: PropTypes.string.isRequired,
+  backgroundImageUrl: PropTypes.string,
+
   /** height of the container */
   height: PropTypes.string,
   /**
@@ -120,4 +123,5 @@ MuiHeroHeader.defaultProps = {
   justify: 'center',
   spacing: '2',
   wrap: 'wrap',
+  backgroundImageUrl: '',
 };
