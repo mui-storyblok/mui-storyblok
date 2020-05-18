@@ -4,8 +4,8 @@ import Grid from '@material-ui/core/Grid';
 
 import Storyblok from '../../utils/Storyblok';
 import MuiAppBar from '../MuiAppBar/MuiAppBar';
-import MuiTabs from '../MuiTabs/MuiTabs';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
+import MuiHeroHeader from '../MuiHeroHeader/MuiHeroHeader';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 import MuiGridList from '../MuiGridList/MuiGridList';
@@ -28,9 +28,9 @@ const MuiGrid = ({
   content,
 }) => {
   const components = {
+    MuiHeroHeader,
     MuiGridItem,
     MuiAppBar,
-    MuiTabs,
     MuiMobileStepper,
     MuiCircularProgress,
     MuiGridList,
