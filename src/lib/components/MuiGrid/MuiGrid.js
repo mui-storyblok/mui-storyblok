@@ -36,6 +36,8 @@ const MuiGrid = ({
     MuiGridList,
   };
 
+  console.log('MuiGrid Content: ', content);
+
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
 
   return (
