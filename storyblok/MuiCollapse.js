@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiCollapse',
   display_name: null,
-  updated_at: '2020-05-18T22:15:46.051Z',
+  updated_at: '2020-05-13T01:27:06.730Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -30,12 +30,6 @@ module.exports = {
     enter: {
       type: 'number',
       description: '* Duration in milliseconds to enter the screen.\n* Set to 0 to automatically calculate transition time based on height.',
-      display_name: '',
-      default_value: '1500',
-    },
-    exit: {
-      type: 'number',
-      description: '* mui props: number\n* Duration in milliseconds to leave the screen.',
       display_name: '',
       default_value: '1500',
     },

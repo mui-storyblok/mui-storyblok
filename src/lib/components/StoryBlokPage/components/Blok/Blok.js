@@ -39,7 +39,6 @@ Blok.propTypes = {
    * Hide the given breakpoint(s).
    * */
   only: PropTypes.arrayOf(PropTypes.string),
-
   /**
    * MuiGrid,
   *  MuiHeroHeader,

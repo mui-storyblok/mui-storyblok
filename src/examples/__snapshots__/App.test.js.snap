@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiAppBar /> snapshot 1`] = `
+<index.mjs
+  accessToken="9K1dqG8gQkc1jeVbOWRDUAtt"
+  theme={Object {}}
+  version="draft"
+/>
+`;

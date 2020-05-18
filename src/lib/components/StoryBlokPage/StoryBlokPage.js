@@ -5,6 +5,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
 import Blok from './components/Blok/Blok';
+import MuiTransitions from '../MuiTransitions/MuiTransitions';
 import styles from './StoryBlokPage.module.scss';
 
 export class StoryBlokPage extends Component {
@@ -16,6 +17,7 @@ export class StoryBlokPage extends Component {
 
   components = {
     Blok,
+    MuiTransitions,
   }
 
   async componentDidMount() {
