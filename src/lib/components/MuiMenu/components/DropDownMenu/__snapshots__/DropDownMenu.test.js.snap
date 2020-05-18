@@ -29,10 +29,9 @@ exports[`<DropDownMenu /> snapshot with auth 1`] = `
         className="MuiButton-endIcon MuiButton-iconSizeMedium"
       >
         <svg
-          aria-hidden="true"
+          aria-hidden={true}
           className="MuiSvgIcon-root"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
