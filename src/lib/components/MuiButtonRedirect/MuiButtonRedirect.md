@@ -1,9 +1,5 @@
 MuiButtonRedirect example:
 
-```js noeditor
-import MuiButtonRedirect from './MuiButtonRedirect';
-```
-
 ```js
 const button = [{
     component: 'MuiButton',

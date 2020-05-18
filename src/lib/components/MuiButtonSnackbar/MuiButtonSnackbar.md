@@ -1,9 +1,5 @@
 MuiButtonSnackbar Example:
 
-```js noeditor
-import MuiButtonSnackbar from './MuiButtonSnackbar';
-```
-
 ```js
 const button = [
   {
