@@ -1,9 +1,5 @@
 MuiBottomNavigation example:
 
-```js noeditor
-import MuiBottomNavigation from './MuiBottomNavigation';
-```
-
 ```js
   const navActions = [{
     component: 'MuiBottomNavigationAction',

@@ -1,10 +1,5 @@
 MuiIcon example:
-
 [View All MUI Icons](https://material.io/resources/icons/?style=baseline)
-
-```js noeditor
-import MuiIcon from './MuiIcon';
-```
 
 ```js
   <div styles={{ display: 'flex', flexDirection: 'row' }}>

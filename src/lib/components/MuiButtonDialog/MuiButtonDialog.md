@@ -1,9 +1,5 @@
 MuiButton example:
 
-```js noeditor
-import MuiButtonDialog from './MuiButtonDialog';
-```
-
 ```js
 const dialog = [{
     component: 'MuiDialog',

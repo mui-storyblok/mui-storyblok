@@ -1,9 +1,5 @@
 MuiButtonDownload example:
 
-```js noeditor
-import MuiButtonDownload from './MuiButtonDownload';
-```
-
 ```js
 const button = [{
     component: 'MuiButton',

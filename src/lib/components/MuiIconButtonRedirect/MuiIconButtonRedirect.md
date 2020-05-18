@@ -1,9 +1,5 @@
 MuiIconButtonRedirect example:
 
-```js noeditor
-import MuiIconButtonRedirect from './MuiIconButtonRedirect';
-```
-
 ```js
 const iconButton = [{
   component: 'MuiIconButton',

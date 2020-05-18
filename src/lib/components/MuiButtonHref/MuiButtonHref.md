@@ -1,9 +1,5 @@
 MuiButtonHref example:
 
-```js noeditor
-import MuiButtonHref from './MuiButtonHref';
-```
-
 ```js
 const button = [{
     component: 'MuiButton',

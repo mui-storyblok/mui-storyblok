@@ -1,9 +1,5 @@
 MuiButton - Contained Buttons:
 
-```js noeditor
-import MuiButton from './MuiButton';
-```
-
 ```js
 const onClick = () => {
     alert('button was clicked')
@@ -39,10 +35,6 @@ const onClick = () => {
 
 MuiButton - Text Buttons:
 
-```js noeditor
-import MuiButton from './MuiButton';
-```
-
 ```js
 const onClick = () => {
     alert('button was clicked')
@@ -73,10 +65,6 @@ const onClick = () => {
 ```
 
 MuiButton - Outlined Buttons:
-
-```js noeditor
-import MuiButton from './MuiButton';
-```
 
 ```js
 const onClick = () => {
@@ -113,10 +101,6 @@ const onClick = () => {
 
 
 MuiButton - Button Sizes:
-
-```js noeditor
-import MuiButton from './MuiButton';
-```
 
 ```js
 const onClick = () => {
