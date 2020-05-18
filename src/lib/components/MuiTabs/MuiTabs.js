@@ -1,13 +1,18 @@
 import React, {
-  useState, createElement, useEffect,
+  useState,
+  useEffect,
+  createElement,
 } from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import Storyblok from '../../utils/Storyblok';
-import MuiTab from './components/MuiTab/MuiTab';
+import MuiIcon from '../MuiIcon/MuiIcon';
+import MuiGrid from '../MuiGrid/MuiGrid';
 
-// make string with uuid to render tabs to correct portal
-const tabPannalId = `${[...Array(10)].map(i => (~~(Math.random() * 36)).toString(36)).join('')}TabPannal`;
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const MuiTabs = ({
   rootClass,
@@ -20,10 +25,10 @@ const MuiTabs = ({
   autoplay,
   interval,
   geocode,
-
 }) => {
   const components = {
-    MuiTab,
+    MuiGrid,
+    MuiIcon,
   };
 
   const [state, setState] = useState({ value: 0, autoplay, tabsLength: tabs.length });
@@ -37,7 +42,7 @@ const MuiTabs = ({
     if (state.value >= tabsLength) {
       return handleChange({}, 0);
     }
-    return handleChange({}, state.value + 1);
+    return handleChange({}, state.value);
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -83,9 +88,8 @@ const MuiTabs = ({
       }}
     >
       <Tabs
-          // value={state.value} // bug with currently selected so removing it for now
+        value={state.value}
         className={styles.root}
-        value={false}
         onChange={handleChange}
         indicatorColor={indicatorColor}
         orientation={orientation}
@@ -93,23 +97,41 @@ const MuiTabs = ({
         textColor={textColor}
         variant={variant}
       >
-        {tabs.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, {
-            key: index,
-            index,
-            // autoplay: state.autoplay, // autoplay false bug will cause hard transition when onMouseLeave
-            interval,
-            value: state.value,
-            handleChangeIndex,
-            handleChange,
-            tabPannalId,
-            tabsLength: state.tabsLength,
-          }),
+        {tabs.map((item, index) => (
+          <Tab
+            key={index}
+            id={index}
+            onClick={e => handleChange(e, index)}
+            className={styles.root}
+            label={item.label}
+            disableFocusRipple={item.disableFocusRipple === 'true'}
+            disableRipple={item.disableRipple}
+            wrapped={item.wrapped}
+            icon={(item.icon && item.icon[0] && <MuiIcon {...item.icon[0]} />)}
+          />
         ))}
       </Tabs>
 
-      <div style={{ height: '100%', width: '100%' }} id={tabPannalId} />
+      {tabs.map((tab, index) => (
+        <AutoPlaySwipeableViews
+          key={index}
+          index={state.value.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
+          onChangeIndex={handleChangeIndex}
+          autoplay={autoplay}
+          interval={typeof interval === 'string' ? Number(interval) : interval}
+          enableMouseEvents
+        >
+          <div
+            role="tabpanel"
+            hidden={state.value !== index}
+          >
+            {tab.content.map((item, i) => createElement(
+              components[item.component],
+              Object.assign(item, { key: i }),
+            ))}
+          </div>
+        </AutoPlaySwipeableViews>
+      ))}
     </div>
   );
 };
@@ -167,11 +189,12 @@ MuiTabs.propTypes = {
   /** MuiTab */
   tabs: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
-  })).isRequired,
+  })),
 };
 
 MuiTabs.defaultProps = {
   rootClass: [],
+  tabs: [],
   indicatorColor: 'secondary',
   orientation: 'vertical',
   scrollButtons: 'auto',
