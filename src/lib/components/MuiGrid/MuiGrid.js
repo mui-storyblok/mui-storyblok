@@ -1,7 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-
 import Storyblok from '../../utils/Storyblok';
 import MuiAppBar from '../MuiAppBar/MuiAppBar';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
@@ -9,13 +8,7 @@ import MuiHeroHeader from '../MuiHeroHeader/MuiHeroHeader';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 import MuiGridList from '../MuiGridList/MuiGridList';
-
-export const sizeGrid = (value) => {
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-  if (value === 'auto') return value;
-  return Number(value);
-};
+import sizeGrid from '../../utils/sizeGrid';
 
 const MuiGrid = ({
   alignContent,
