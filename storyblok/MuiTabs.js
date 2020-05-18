@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiTabs',
   display_name: null,
-  updated_at: '2020-03-31T18:27:03.338Z',
+  updated_at: '2020-05-18T22:12:36.372Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -112,7 +112,8 @@ module.exports = {
       type: 'bloks',
       restrict_components: true,
       component_whitelist: [
-        'MuiTab',
+        'MuiGrid',
+        'MuiIcon',
       ],
       required: true,
     },

@@ -1,12 +1,12 @@
 module.exports = {
   name: 'MuiHeroHeader',
   display_name: null,
-  updated_at: '2020-03-31T18:27:03.157Z',
+  updated_at: '2020-05-18T21:23:58.717Z',
   schema: {
     backgroundImageUrl: {
       type: 'text',
       pos: 0,
-      required: true,
+      required: false,
       description: 'url for background img',
     },
     alignContent: {
@@ -227,7 +227,7 @@ module.exports = {
       maximum: '',
       restrict_components: true,
       component_whitelist: [
-        'MuiGrid',
+        'MuiGridItem',
       ],
       pos: 8,
       required: true,
