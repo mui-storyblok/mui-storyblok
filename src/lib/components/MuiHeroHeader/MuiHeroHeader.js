@@ -32,14 +32,13 @@ const MuiHeroHeader = ({
     heroClass = {
       ...heroClass,
       ...{
-        backgroundImageUrl,
+        backgroundImage: `url(${backgroundImageUrl})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       },
     };
   }
-
 
   return (
     <Grid
