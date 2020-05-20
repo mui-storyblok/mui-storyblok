@@ -12,6 +12,7 @@ import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
 import MuiList from '../../../MuiList/MuiList';
 import MuiTable from '../../../MuiTable/MuiTable';
 import MuiPaginationTable from '../../../MuiPaginationTable/MuiPaginationTable';
+import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
 
 const MuiGridItem = ({
   alignContent,
@@ -39,6 +40,7 @@ const MuiGridItem = ({
     MuiList,
     MuiTable,
     MuiPaginationTable,
+    MuiContactButton,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
