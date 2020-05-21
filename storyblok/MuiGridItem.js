@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiGridItem',
   display_name: null,
-  updated_at: '2020-05-08T23:51:44.260Z',
+  updated_at: '2020-05-20T19:13:14.700Z',
   schema: {
     alignContent: {
       type: 'option',
@@ -581,6 +581,7 @@ module.exports = {
         'MuiList',
         'MuiTable',
         'MuiPaginationTable',
+        'MuiContactButton',
       ],
       pos: 12,
       description: 'Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,',
