@@ -2,8 +2,6 @@ import React from 'react';
 import style from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import dom from 'react-router-dom';
-
-
 import GoogleApis from './utils/GoogleApis';
 import StoryBlokPage from './components/StoryBlokPage/StoryBlokPage';
 
