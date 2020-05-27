@@ -33,13 +33,11 @@ export const MuiButton = ({
       disableFocusRipple={disableFocusRipple}
       disableRipple={disableRipple}
       endIcon={endIcon ? (
-        // TODO: swap out for MuiIcon as a storybolk component
         <MuiIcon iconName={endIcon} />
       ) : null}
       fullWidth={fullWidth}
       size={size}
       startIcon={startIcon ? (
-        // TODO: swap out for MuiIcon as a storybolk component
         <MuiIcon iconName={startIcon} />
       ) : null}
       variant={variant}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiCollapse /> should render MuiGridList 1`] = `ReactWrapper {}`;
+
+exports[`<MuiCollapse /> snapshot 1`] = `
+<div
+  className="makeStyles-root-7"
+>
+  <div
+    className="MuiCollapse-container MuiCollapse-hidden"
+    style={
+      Object {
+        "minHeight": "0px",
+      }
+    }
+  >
+    <div
+      className="MuiCollapse-wrapper"
+    >
+      <div
+        className="MuiCollapse-wrapperInner"
+      />
+    </div>
+  </div>
+</div>
+`;

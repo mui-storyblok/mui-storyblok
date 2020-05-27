@@ -1,12 +1,12 @@
 module.exports = {
   name: 'MuiHeroHeader',
   display_name: null,
-  updated_at: '2020-03-31T18:27:03.157Z',
+  updated_at: '2020-05-20T17:46:14.808Z',
   schema: {
     backgroundImageUrl: {
       type: 'text',
       pos: 0,
-      required: true,
+      required: false,
       description: 'url for background img',
     },
     alignContent: {
@@ -73,6 +73,13 @@ module.exports = {
       pos: 2,
       description: "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes.",
     },
+    height: {
+      type: 'text',
+      required: true,
+      default_value: '100%',
+      pos: 3,
+      description: 'Height of the container.',
+    },
     rootClass: {
       type: 'options',
       options: [
@@ -84,8 +91,16 @@ module.exports = {
           value: 'color: white',
           name: 'color',
         },
+        {
+          value: 'margin-top: 100px',
+          name: 'marginTop',
+        },
+        {
+          value: 'height: 300px',
+          name: 'height',
+        },
       ],
-      pos: 3,
+      pos: 4,
     },
     direction: {
       type: 'option',
@@ -111,7 +126,7 @@ module.exports = {
       default_value: 'row',
       required: true,
       description: "   * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'    * Defines the align-content style property. It's applied for all screen sizes.",
-      pos: 4,
+      pos: 5,
     },
     justify: {
       type: 'option',
@@ -144,7 +159,7 @@ module.exports = {
       ],
       default_value: 'center',
       required: true,
-      pos: 5,
+      pos: 6,
       description: "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'    * Defines the justify-content style property. It is applied for all screen sizes.",
     },
     spacing: {
@@ -198,7 +213,7 @@ module.exports = {
       ],
       default_value: '2',
       required: true,
-      pos: 6,
+      pos: 7,
     },
     wrap: {
       type: 'option',
@@ -220,23 +235,17 @@ module.exports = {
       required: true,
       default_value: 'wrap',
       description: "Defines the flex-wrap style property. It's applied for all screen sizes.",
-      pos: 7,
+      pos: 8,
     },
     content: {
       type: 'bloks',
       maximum: '',
       restrict_components: true,
       component_whitelist: [
-        'MuiGrid',
+        'MuiGridItem',
       ],
-      pos: 8,
-      required: true,
-    },
-    height: {
-      type: 'text',
-      required: true,
-      default_value: '100%',
       pos: 9,
+      required: true,
     },
   },
   image: null,

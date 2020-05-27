@@ -101,7 +101,7 @@ MuiAppBar.propTypes = {
   disableGutters: PropTypes.bool,
 
   /**
-   * Content passed to MuiGrid to render
+   * Content passed to MuiAppBar to render
    * components: MuiTypography,
     MuiIconButtonRedirect,
     MuiIconButtonHref,

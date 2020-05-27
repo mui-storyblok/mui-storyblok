@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
 
 import MuiGrid from '../../../MuiGrid/MuiGrid';
+import MuiTabs from '../../../MuiTabs/MuiTabs';
 import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 import MuiAppBar from '../../../MuiAppBar/MuiAppBar';
 import MuiBottomNavigation from '../../../MuiBottomNavigation/MuiBottomNavigation';
@@ -12,6 +13,7 @@ export const Blok = ({
   only,
 }) => {
   const components = {
+    MuiTabs,
     MuiGrid,
     MuiHeroHeader,
     MuiAppBar,
@@ -37,7 +39,6 @@ Blok.propTypes = {
    * Hide the given breakpoint(s).
    * */
   only: PropTypes.arrayOf(PropTypes.string),
-
   /**
    * MuiGrid,
   *  MuiHeroHeader,

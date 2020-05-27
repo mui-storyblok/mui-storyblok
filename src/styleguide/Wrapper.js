@@ -18,7 +18,7 @@ export default class Wrapper extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <h1>.</h1>
+        <h1> </h1>
       );
     }
 

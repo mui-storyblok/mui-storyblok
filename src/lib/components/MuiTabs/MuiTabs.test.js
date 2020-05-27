@@ -5,6 +5,10 @@ import MuiTabs from './MuiTabs';
 function setup() {
   const props = {
     tabs: [{
+      icon: [{
+        component: 'MuiIcon',
+        iconName: 'android',
+      }],
       component: 'MuiTab',
       content: [{
         component: 'MuiGrid',
