@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiTab',
   display_name: null,
-  updated_at: '2020-03-31T18:27:03.523Z',
+  updated_at: '2020-05-22T16:06:33.891Z',
   schema: {
     label: {
       type: 'text',
@@ -36,7 +36,8 @@ module.exports = {
       type: 'bloks',
       restrict_components: true,
       component_whitelist: [
-        'MuiHeroHeader',
+        'MuiGrid',
+        'MuiIcon',
       ],
       required: true,
     },

@@ -10,6 +10,7 @@ const content = [
     image: cupcake,
     rows: '1',
     title: 'Cupcake',
+    MuiGridListTileBar: [],
   },
   {
     cols: '1',
@@ -17,6 +18,7 @@ const content = [
     image: yoda,
     rows: '1',
     title: 'Yoda',
+    MuiGridListTileBar: [],
   },
   {
     cols: '1',
@@ -24,6 +26,7 @@ const content = [
     image: cupcake,
     rows: '1',
     title: 'Cupcake',
+    MuiGridListTileBar: [],
   },
   {
     cols: '2',
@@ -31,6 +34,7 @@ const content = [
     image: yoda,
     rows: '1',
     title: 'Yoda',
+    MuiGridListTileBar: [],
   },
 ];
 
