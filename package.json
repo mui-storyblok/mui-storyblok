@@ -150,7 +150,8 @@
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
     "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
-    "export-storyblok": "npx storyblok-component-export"
+    "export-storyblok": "npx storyblok-component-export",
+    "test-report": "react-scripts test --watchAll=false --coverage"
   },
   "bin": {
     "migrate-storyblok": "./cli.js"
@@ -168,14 +169,15 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.4",
+    "@material-ui/icons": "^3.0.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "moxios": "^0.4.0",
-    "react-swipeable-views": "^0.13.9",
-    "storyblok-migrate": "^0.3.3",
+    "node-sass": "^4.13.1",
     "react-router-dom": "^4.3.1",
-    "@material-ui/core": "^4.9.4",
-    "@material-ui/icons": "^3.0.2",
-    "node-sass": "^4.13.1"
+    "react-swipeable-views": "^0.13.9",
+    "rff-wrapper": "^1.0.0",
+    "storyblok-migrate": "^0.3.3"
   }
 }

@@ -1,21 +1,9 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-
 import Storyblok from '../../../../utils/Storyblok';
-import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
-import MuiCard from '../../../MuiCard/MuiCard';
-import MuiTypography from '../../../MuiTypography/MuiTypography';
-import MuiMenu from '../../../MuiMenu/MuiMenu';
-import MuiIcon from '../../../MuiIcon/MuiIcon';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
-import MuiList from '../../../MuiList/MuiList';
-import MuiTable from '../../../MuiTable/MuiTable';
-import MuiPaginationTable from '../../../MuiPaginationTable/MuiPaginationTable';
-import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
-import BlokForm from '../../../BlokForm/BlokForm';
 
-const MuiGridItem = ({
+const GridItem = ({
   alignContent,
   alignItems,
   rootClass,
@@ -28,23 +16,10 @@ const MuiGridItem = ({
   spacing,
   xs,
   xl,
-  content,
   sizeGrid,
+  content,
+  gridItemComponets,
 }) => {
-  const components = {
-    MuiButtonRedirect,
-    MuiCard,
-    MuiTypography,
-    MuiMenu,
-    MuiIcon,
-    MuiExpansionPanel,
-    MuiList,
-    MuiTable,
-    MuiPaginationTable,
-    MuiContactButton,
-    BlokForm,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
 
   return (
@@ -64,17 +39,21 @@ const MuiGridItem = ({
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
+      {/* {content.map((item, index) => createElement(
+        gridItemComponets[item.component],
         Object.assign(item, { key: index }),
-      ))}
+      ))} */}
     </Grid>
   );
 };
 
-export default MuiGridItem;
+export default GridItem;
 
-MuiGridItem.propTypes = {
+GridItem.propTypes = {
+  /**
+   * developer prop to pass components to a gridItem
+   */
+  gridItemComponets: PropTypes.shape().isRequired,
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -154,7 +133,7 @@ MuiGridItem.propTypes = {
   sizeGrid: PropTypes.func.isRequired,
 };
 
-MuiGridItem.defaultProps = {
+GridItem.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'center',
   rootClass: [],
