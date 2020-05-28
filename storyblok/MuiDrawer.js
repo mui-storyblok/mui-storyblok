@@ -1,84 +1,84 @@
 module.exports = {
-  name: 'MuiDrawer',
-  display_name: null,
-  updated_at: '2020-05-22T16:12:04.288Z',
-  schema: {
-    anchor: {
-      type: 'option',
-      options: [
+  "name": "MuiDrawer",
+  "display_name": null,
+  "updated_at": "2020-05-22T16:12:04.288Z",
+  "schema": {
+    "anchor": {
+      "type": "option",
+      "options": [
         {
-          value: 'bottom',
-          name: 'bottom',
+          "value": "bottom",
+          "name": "bottom"
         },
         {
-          value: 'left',
-          name: 'left',
+          "value": "left",
+          "name": "left"
         },
         {
-          value: 'right',
-          name: 'right',
+          "value": "right",
+          "name": "right"
         },
         {
-          value: 'top',
-          name: 'top',
-        },
+          "value": "top",
+          "name": "top"
+        }
       ],
-      required: true,
-      description: "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
-      display_name: '',
-      default_value: 'left',
-      use_uuid: true,
+      "required": true,
+      "description": "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
+      "display_name": "",
+      "default_value": "left",
+      "use_uuid": true
     },
-    elevation: {
-      type: 'number',
-      description: 'The elevation of the drawer.',
-      display_name: '',
-      default_value: '16',
+    "elevation": {
+      "type": "number",
+      "description": "The elevation of the drawer.",
+      "display_name": "",
+      "default_value": "16"
     },
-    variant: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "variant": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'permanent',
-          name: 'permanenet',
+          "value": "permanent",
+          "name": "permanenet"
         },
         {
-          value: 'persistent',
-          name: 'persistent',
+          "value": "persistent",
+          "name": "persistent"
         },
         {
-          value: 'temporary',
-          name: 'temporary',
-        },
+          "value": "temporary",
+          "name": "temporary"
+        }
       ],
-      description: 'The variant to use.',
-      default_value: 'temporary',
+      "description": "The variant to use.",
+      "default_value": "temporary"
     },
-    buttonProps: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiButton',
+    "buttonProps": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiButton"
       ],
-      required: true,
+      "required": true
     },
-    content: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiList',
+    "content": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiList"
       ],
-      required: true,
-    },
+      "required": true
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiDrawer',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiDrawer",
+  "component_group_uuid": null
+}
