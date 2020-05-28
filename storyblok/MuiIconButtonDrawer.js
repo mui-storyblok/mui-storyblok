@@ -1,89 +1,89 @@
 module.exports = {
-  name: 'MuiIconButtonDrawer',
-  display_name: null,
-  updated_at: '2020-04-27T15:56:15.966Z',
-  schema: {
-    icon: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiIconButton',
+  "name": "MuiIconButtonDrawer",
+  "display_name": null,
+  "updated_at": "2020-04-27T15:56:15.966Z",
+  "schema": {
+    "icon": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIconButton"
       ],
-      required: true,
-      maximum: '1',
+      "required": true,
+      "maximum": "1"
     },
-    anchor: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "anchor": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'left',
-          name: 'left',
+          "value": "left",
+          "name": "left"
         },
         {
-          value: 'top',
-          name: 'top',
+          "value": "top",
+          "name": "top"
         },
         {
-          value: 'right',
-          name: 'right',
+          "value": "right",
+          "name": "right"
         },
         {
-          value: 'bottom',
-          name: 'bottom',
-        },
+          "value": "bottom",
+          "name": "bottom"
+        }
       ],
-      required: true,
-      description: "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
-      display_name: '',
-      default_value: 'left',
+      "required": true,
+      "description": "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
+      "display_name": "",
+      "default_value": "left"
     },
-    elevation: {
-      type: 'number',
-      description: '* number\n* The elevation of the drawer.',
-      default_value: '16',
+    "elevation": {
+      "type": "number",
+      "description": "* number\n* The elevation of the drawer.",
+      "default_value": "16"
     },
-    rootClass: {
-      type: 'options',
-      default_value: '',
-      description: '* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.',
+    "rootClass": {
+      "type": "options",
+      "default_value": "",
+      "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
     },
-    variant: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "variant": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'permanent',
-          name: 'permanent',
+          "value": "permanent",
+          "name": "permanent"
         },
         {
-          value: 'persistent',
-          name: 'persistent',
+          "value": "persistent",
+          "name": "persistent"
         },
         {
-          value: 'temporary',
-          name: 'temporary',
-        },
+          "value": "temporary",
+          "name": "temporary"
+        }
       ],
-      description: "* mui props: 'permanent' | 'persistent' | 'temporary'\n* The variant to use.",
-      default_value: 'temporary',
+      "description": "* mui props: 'permanent' | 'persistent' | 'temporary'\n* The variant to use.",
+      "default_value": "temporary"
     },
-    content: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiList',
+    "content": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiList"
       ],
-      required: true,
-    },
+      "required": true
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiIconButtonDrawer',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiIconButtonDrawer",
+  "component_group_uuid": null
+}
