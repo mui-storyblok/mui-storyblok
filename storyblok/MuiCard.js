@@ -1,14 +1,15 @@
 module.exports = {
-  "name": "MuiCard",
-  "display_name": null,
-  "updated_at": "2020-05-28T19:35:55.138Z",
-  "schema": {
-    "rootClass": {
-      "type": "options",
-      "pos": 0,
-      "min_options": "",
-      "max_options": "",
-      "options": [
+  name: 'MuiCard',
+  display_name: null,
+  updated_at: '2020-05-28T19:35:55.138Z',
+  schema: {
+    rootClass: {
+      type: 'options',
+      pos: 0,
+      min_options: '',
+      max_options: '',
+      options: [
+
         {
           "value": "box-shadow: 5px 10px #FFF",
           "name": "box-shadow: 5px 10px;"
@@ -26,10 +27,10 @@ module.exports = {
           "name": "border"
         },
         {
-          "value": "max-width: 500",
-          "name": "maxWidth"
-        }
-      ]
+          value: 'max-width: 500',
+          name: 'maxWidth',
+        },
+      ],
     },
     "raised": {
       "type": "boolean",

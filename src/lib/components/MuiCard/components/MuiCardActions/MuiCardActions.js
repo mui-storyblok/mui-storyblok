@@ -10,6 +10,7 @@ import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
 import MuiButtonDialog from '../../../MuiButtonDialog/MuiButtonDialog';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
 import Storyblok from '../../../../utils/Storyblok';
 
 const MuiCardActions = ({
@@ -26,6 +27,7 @@ const MuiCardActions = ({
     MuiButtonHref,
     MuiButtonDownload,
     MuiButtonDialog,
+    MuiExpansionPanel,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);

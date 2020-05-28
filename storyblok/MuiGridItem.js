@@ -1,13 +1,13 @@
 module.exports = {
-  "name": "MuiGridItem",
-  "display_name": null,
-  "updated_at": "2020-05-28T19:33:17.593Z",
-  "schema": {
-    "alignContent": {
-      "type": "option",
-      "pos": 0,
-      "use_uuid": true,
-      "options": [
+  name: 'MuiGridItem',
+  display_name: null,
+  updated_at: '2020-05-28T19:33:17.593Z',
+  schema: {
+    alignContent: {
+      type: 'option',
+      pos: 0,
+      use_uuid: true,
+      options: [
         {
           "value": "stretch",
           "name": "stretch"
@@ -76,10 +76,10 @@ module.exports = {
           "name": "whatever blue color"
         },
         {
-          "value": "min-width: 100vw",
-          "name": "width"
-        }
-      ]
+          value: 'min-width: 100vw',
+          name: 'width',
+        },
+      ],
     },
     "direction": {
       "type": "option",
