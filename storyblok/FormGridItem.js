@@ -1,7 +1,7 @@
 module.exports = {
-  name: 'MuiGridItem',
+  name: 'FormGridItem',
   display_name: null,
-  updated_at: '2020-05-23T18:19:14.216Z',
+  updated_at: '2020-05-26T15:58:49.074Z',
   schema: {
     alignContent: {
       type: 'option',
@@ -572,20 +572,13 @@ module.exports = {
       maximum: '',
       restrict_components: true,
       component_whitelist: [
-        'MuiButtonRedirect',
-        'MuiCard',
-        'MuiTypography',
-        'MuiMenu',
-        'MuiIcon',
-        'MuiExpansionPanel',
-        'MuiList',
-        'MuiTable',
-        'MuiPaginationTable',
-        'MuiContactButton',
-        'BlokForm',
+        'MuiInput',
+        'MuiSelect',
+        'MuiRadio',
+        'MuiCheckBox',
       ],
       pos: 12,
-      description: 'Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,',
+      description: 'Content passed to MuiGrid to render    * components: Input components ',
       required: true,
     },
   },
@@ -596,6 +589,6 @@ module.exports = {
   is_nestable: true,
   all_presets: [],
   preset_id: null,
-  real_name: 'MuiGridItem',
+  real_name: 'FormGridItem',
   component_group_uuid: null,
 };

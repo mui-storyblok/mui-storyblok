@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiTab',
   display_name: null,
-  updated_at: '2020-03-31T18:27:03.523Z',
+  updated_at: '2020-05-28T00:17:08.685Z',
   schema: {
     label: {
       type: 'text',
@@ -11,6 +11,7 @@ module.exports = {
     rootClass: {
       type: 'options',
       options: [],
+      min_options: '',
     },
     disableFocusRipple: {
       type: 'boolean',
@@ -36,7 +37,8 @@ module.exports = {
       type: 'bloks',
       restrict_components: true,
       component_whitelist: [
-        'MuiHeroHeader',
+        'MuiGrid',
+        'MuiIcon',
       ],
       required: true,
     },

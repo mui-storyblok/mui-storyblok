@@ -119,7 +119,7 @@ function InteractiveGrid() {
 
   const handleAlign = (event) => {
     const { value } = event.target;
-    setAlign(value);
+    setAlignItems(value);
   };
 
   return (

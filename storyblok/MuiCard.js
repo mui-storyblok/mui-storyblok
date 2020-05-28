@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiCard',
   display_name: null,
-  updated_at: '2020-05-14T16:18:27.026Z',
+  updated_at: '2020-05-28T14:12:42.273Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -44,6 +44,7 @@ module.exports = {
         'MuiCardHeader',
         'MuiCardContent',
         'MuiCardActions',
+        'MuiVideo',
       ],
       pos: 2,
     },
