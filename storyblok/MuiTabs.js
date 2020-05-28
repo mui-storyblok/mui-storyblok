@@ -1,11 +1,12 @@
 module.exports = {
   name: 'MuiTabs',
   display_name: null,
-  updated_at: '2020-05-18T22:12:36.372Z',
+  updated_at: '2020-05-28T00:18:28.357Z',
   schema: {
     rootClass: {
       type: 'options',
       description: 'Override or extend the styles applied to the component',
+      options: [],
     },
     indicatorColor: {
       type: 'option',
@@ -114,6 +115,7 @@ module.exports = {
       component_whitelist: [
         'MuiGrid',
         'MuiIcon',
+        'MuiTab',
       ],
       required: true,
     },
