@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -175,9 +175,9 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "moxios": "^0.4.0",
     "node-sass": "^4.13.1",
+    "react-player": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "react-swipeable-views": "^0.13.9",
-    "rff-wrapper": "^1.0.0",
     "storyblok-migrate": "^0.3.3"
   }
 }
