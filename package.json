@@ -84,20 +84,15 @@
       "react/no-array-index-key": [
         0
       ]
-    }
+    },
+    "ignorePatterns": ["/storyblok/*.js"]
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/interceptors.js",
-      "!src/utils/SessionStorage.js",
-      "!src/utils/GoogleHelpers.js",
-      "!src/utils/Storyblok.js",
-      "!src/serviceWorker.js",
+      "!storyblok/*",
       "!src/setupTests.js",
-      "!src/theme.js",
       "!src/index.js",
-      "!src/testUtils/LocalStorageMock.js",
       "!src/styleguide/*"
     ],
     "coverageReporters": [
