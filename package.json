@@ -89,15 +89,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/interceptors.js",
-      "!src/utils/SessionStorage.js",
-      "!src/utils/GoogleHelpers.js",
-      "!src/utils/Storyblok.js",
-      "!src/serviceWorker.js",
+      "!storyblok/*.{js,jsx}",
       "!src/setupTests.js",
-      "!src/theme.js",
       "!src/index.js",
-      "!src/testUtils/LocalStorageMock.js",
       "!src/styleguide/*"
     ],
     "coverageReporters": [
