@@ -7,6 +7,7 @@ import MuiCardActions from './components/MuiCardActions/MuiCardActions';
 import MuiCardContent from './components/MuiCardContent/MuiCardContent';
 import MuiCardHeader from './components/MuiCardHeader/MuiCardHeader';
 import MuiCardMedia from './components/MuiCardMedia/MuiCardMedia';
+import MuiVideo from '../MuiVideo/MuiVideo';
 
 const MuiCard = ({ rootClass, raised, content }) => {
   const components = {
@@ -14,6 +15,7 @@ const MuiCard = ({ rootClass, raised, content }) => {
     MuiCardContent,
     MuiCardHeader,
     MuiCardMedia,
+    MuiVideo,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);

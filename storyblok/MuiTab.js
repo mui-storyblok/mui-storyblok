@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiTab',
   display_name: null,
-  updated_at: '2020-05-22T16:06:33.891Z',
+  updated_at: '2020-05-28T00:17:08.685Z',
   schema: {
     label: {
       type: 'text',
@@ -11,6 +11,7 @@ module.exports = {
     rootClass: {
       type: 'options',
       options: [],
+      min_options: '',
     },
     disableFocusRipple: {
       type: 'boolean',

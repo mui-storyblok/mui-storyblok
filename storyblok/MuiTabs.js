@@ -1,11 +1,12 @@
 module.exports = {
   name: 'MuiTabs',
   display_name: null,
-  updated_at: '2020-05-22T16:05:57.086Z',
+  updated_at: '2020-05-28T00:18:28.357Z',
   schema: {
     rootClass: {
       type: 'options',
       description: 'Override or extend the styles applied to the component',
+      options: [],
     },
     indicatorColor: {
       type: 'option',
