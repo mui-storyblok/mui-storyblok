@@ -1,7 +1,7 @@
 module.exports = {
   name: 'MuiCard',
   display_name: null,
-  updated_at: '2020-05-28T14:12:42.273Z',
+  updated_at: '2020-05-28T19:35:55.138Z',
   schema: {
     rootClass: {
       type: 'options',
@@ -26,8 +26,8 @@ module.exports = {
           name: 'border',
         },
         {
-          value: '',
-          name: '',
+          value: 'max-width: 500',
+          name: 'maxWidth',
         },
       ],
     },
@@ -47,6 +47,16 @@ module.exports = {
         'MuiVideo',
       ],
       pos: 2,
+    },
+    height: {
+      type: 'text',
+      default_value: '100%',
+      description: 'Height of the card',
+    },
+    width: {
+      type: 'text',
+      description: 'Width of card',
+      default_value: '100%',
     },
   },
   image: null,

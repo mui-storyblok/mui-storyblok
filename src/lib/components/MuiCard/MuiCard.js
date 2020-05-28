@@ -9,7 +9,13 @@ import MuiCardHeader from './components/MuiCardHeader/MuiCardHeader';
 import MuiCardMedia from './components/MuiCardMedia/MuiCardMedia';
 import MuiVideo from '../MuiVideo/MuiVideo';
 
-const MuiCard = ({ rootClass, raised, content }) => {
+const MuiCard = ({
+  rootClass,
+  raised,
+  content,
+  height,
+  width,
+}) => {
   const components = {
     MuiCardActions,
     MuiCardContent,
@@ -18,7 +24,7 @@ const MuiCard = ({ rootClass, raised, content }) => {
     MuiVideo,
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { height, width });
 
   return (
     <Card
@@ -47,6 +53,14 @@ MuiCard.propTypes = {
    * If true, the card will use raised styling.
    */
   raised: PropTypes.bool,
+  /**
+   * Height of the card.
+   */
+  height: PropTypes.string,
+  /**
+   * Width of the card.
+   */
+  width: PropTypes.string,
 
   /**
    * Content passed to render
@@ -63,4 +77,6 @@ MuiCard.propTypes = {
 MuiCard.defaultProps = {
   raised: false,
   rootClass: [],
+  height: '100%',
+  width: '100%',
 };
