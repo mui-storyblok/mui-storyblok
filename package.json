@@ -85,7 +85,7 @@
         0
       ]
     },
-    "ignorePatterns": ["/storyblok/*.js"]
+    "ignorePatterns": ["storyblok/*.js"]
   },
   "jest": {
     "collectCoverageFrom": [
