@@ -90,7 +90,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!storyblok/*",
+      "!storyblok/*.{js,jsx}",
       "!src/setupTests.js",
       "!src/index.js",
       "!src/styleguide/*"
