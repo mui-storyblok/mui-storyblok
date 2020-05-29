@@ -62,7 +62,7 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
       0-0 of 0
     </p>
     <div
-      className="makeStyles-root-100"
+      className="makeStyles-root-3"
     >
       <button
         aria-label="first page"

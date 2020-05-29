@@ -2,187 +2,231 @@
 
 exports[`<MuiPaginationTable /> snapshot 1`] = `
 <table
-  className="MuiTable-root makeStyles-root-208"
+  className="MuiTable-root makeStyles-root-101"
   role={null}
 >
   <thead
-    className="MuiTableHead-root makeStyles-root-209"
+    className="MuiTableHead-root makeStyles-root-102"
     role={null}
   >
     <tr
-      className="MuiTableRow-root makeStyles-root-210 MuiTableRow-head"
+      className="MuiTableRow-root makeStyles-root-103 MuiTableRow-head"
       role={null}
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-head makeStyles-root-211"
+        className="MuiTableCell-root MuiTableCell-head makeStyles-root-104"
         scope="col"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-212 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-105 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-106 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </th>
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root makeStyles-root-213"
+    className="MuiTableBody-root makeStyles-root-107"
     role={null}
   >
     <tr
-      className="MuiTableRow-root makeStyles-root-214"
+      className="MuiTableRow-root makeStyles-root-108"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-215"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-109"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-216 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-110 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-111 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-217"
+      className="MuiTableRow-root makeStyles-root-112"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-218"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-113"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-219 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-114 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-115 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-220"
+      className="MuiTableRow-root makeStyles-root-116"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-221"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-117"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-222 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-118 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-119 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-223"
+      className="MuiTableRow-root makeStyles-root-120"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-224"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-121"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-225 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-122 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-123 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-226"
+      className="MuiTableRow-root makeStyles-root-124"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-227"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-125"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-228 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-126 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-127 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-229"
+      className="MuiTableRow-root makeStyles-root-128"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-230"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-129"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-231 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-130 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-131 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-232"
+      className="MuiTableRow-root makeStyles-root-132"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-233"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-133"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-234 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-134 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-135 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-235"
+      className="MuiTableRow-root makeStyles-root-136"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-236"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-137"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-237 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-138 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-139 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-238"
+      className="MuiTableRow-root makeStyles-root-140"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-239"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-141"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-240 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-142 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-143 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
     <tr
-      className="MuiTableRow-root makeStyles-root-241"
+      className="MuiTableRow-root makeStyles-root-144"
       role={null}
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-242"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-145"
       >
-        <p
-          className="MuiTypography-root makeStyles-root-243 MuiTypography-body1"
+        <div
+          className="MuiTypography-root makeStyles-root-146 MuiTypography-body1"
         >
-          wooo
-        </p>
+          <span
+            className="MuiTypography-root makeStyles-root-147 MuiTypography-body1"
+          >
+             wooo 
+          </span>
+        </div>
       </td>
     </tr>
   </tbody>
   <tfoot
-    className="MuiTableFooter-root makeStyles-root-244"
+    className="MuiTableFooter-root makeStyles-root-148"
     role={null}
   >
     <tr
@@ -191,7 +235,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     >
       <td
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-245"
+        className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-149"
         colSpan={1000}
       >
         <div
@@ -244,7 +288,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
             0-0 of 0
           </p>
           <div
-            className="makeStyles-root-246"
+            className="makeStyles-root-150"
           >
             <button
               aria-label="first page"
