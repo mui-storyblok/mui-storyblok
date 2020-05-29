@@ -6,18 +6,22 @@ exports[`<MuiTableBody /> snapshot 1`] = `
   role={null}
 >
   <tr
-    className="MuiTableRow-root makeStyles-root-4"
+    className="MuiTableRow-root makeStyles-root-3"
     role={null}
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root MuiTableCell-body makeStyles-root-10 MuiTableCell-alignCenter"
+      className="MuiTableCell-root MuiTableCell-body makeStyles-root-4 MuiTableCell-alignCenter"
     >
-      <p
-        className="MuiTypography-root makeStyles-root-23 MuiTypography-body1 MuiTypography-colorInherit"
+      <div
+        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1 MuiTypography-colorInherit"
       >
-        table body 1
-      </p>
+        <span
+          className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+        >
+           table body 1 
+        </span>
+      </div>
     </td>
   </tr>
 </tbody>

@@ -24,7 +24,7 @@ exports[`<MuiGridListTileBar /> snapshot 1`] = `
     className="MuiGridListTileBar-actionIcon"
   >
     <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-14"
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-3"
       data-testid="muiIconButton"
       disabled={false}
       onBlur={[Function]}
@@ -47,7 +47,7 @@ exports[`<MuiGridListTileBar /> snapshot 1`] = `
       >
         <span
           aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-27 MuiIcon-colorSecondary"
+          className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
         >
           home
         </span>

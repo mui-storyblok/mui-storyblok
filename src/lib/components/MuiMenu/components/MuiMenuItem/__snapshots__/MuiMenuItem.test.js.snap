@@ -3,7 +3,7 @@
 exports[`<MuiMenuItem /> snapshot with auth 1`] = `
 <li
   aria-disabled={false}
-  className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root makeStyles-root-32 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+  className="MuiButtonBase-root MuiListItem-root MuiMenuItem-root makeStyles-root-4 MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
   onBlur={[Function]}
   onClick={[Function]}
   onDragLeave={[Function]}

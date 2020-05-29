@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MuiTypography /> snapshot 1`] = `
-<p
-  className="MuiTypography-root makeStyles-root-3 MuiTypography-body1"
+<div
+  className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
 >
-  this is text
+  <span
+    className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+  >
+     this is text 
+  </span>
   <a
-    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-34 MuiTypography-colorPrimary"
+    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-7 MuiTypography-colorPrimary"
     href="#"
     onBlur={[Function]}
     onClick={[Function]}
@@ -15,7 +19,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
     btn
   </a>
   <button
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-41"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-8"
     data-testid="muiIconButton"
     disabled={false}
     onBlur={[Function]}
@@ -38,7 +42,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-54 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
       >
         star
       </span>
@@ -46,9 +50,9 @@ exports[`<MuiTypography /> snapshot 1`] = `
   </button>
   <span
     aria-hidden={true}
-    className="material-icons MuiIcon-root makeStyles-root-64 MuiIcon-colorSecondary"
+    className="material-icons MuiIcon-root makeStyles-root-10 MuiIcon-colorSecondary"
   >
     android
   </span>
-</p>
+</div>
 `;

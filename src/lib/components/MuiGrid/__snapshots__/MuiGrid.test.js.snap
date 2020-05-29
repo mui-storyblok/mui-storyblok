@@ -5,11 +5,11 @@ exports[`<MuiGrid /> snapshot 1`] = `
   className="MuiGrid-root makeStyles-root-3 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
 >
   <div
-    className="MuiGrid-root makeStyles-root-107 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    className="MuiGrid-root makeStyles-root-4 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-108 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
     >
       android
     </span>
