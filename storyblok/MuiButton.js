@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButton",
   "display_name": null,
-  "updated_at": "2020-04-29T22:30:06.289Z",
+  "updated_at": "2020-05-29T00:10:39.950Z",
   "schema": {
     "buttonText": {
       "type": "text",
@@ -82,10 +82,17 @@ module.exports = {
       "description": "Element placed after the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
       "pos": 6
     },
+    "endIconColor": {
+      "type": "text",
+      "max_length": "",
+      "regex": "",
+      "description": "* mui prop: \"inherit\", \"primary\", \"secondary\", \"action\", \"error\", \"disabled\"\n* The color of the component. It supports those theme colors that make sense for this component.",
+      "pos": 7
+    },
     "fullWidth": {
       "type": "boolean",
       "description": "If true, the button will take up the full width of its container.",
-      "pos": 7
+      "pos": 8
     },
     "size": {
       "type": "option",
@@ -107,12 +114,17 @@ module.exports = {
       "description": "The size of the button. small is equivalent to the dense button styling.",
       "default_value": "medium",
       "required": true,
-      "pos": 8
+      "pos": 9
     },
     "startIcon": {
       "type": "text",
       "description": "Element placed before the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-      "pos": 9
+      "pos": 10
+    },
+    "startIconColor": {
+      "type": "text",
+      "description": "* mui prop: \"inherit\", \"primary\", \"secondary\", \"action\", \"error\", \"disabled\"\n* The color of the component. It supports those theme colors that make sense for this component.",
+      "pos": 11
     },
     "variant": {
       "type": "option",
@@ -133,7 +145,7 @@ module.exports = {
       ],
       "required": true,
       "default_value": "text",
-      "pos": 10
+      "pos": 12
     }
   },
   "image": null,
