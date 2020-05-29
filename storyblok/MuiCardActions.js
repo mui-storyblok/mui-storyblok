@@ -1,32 +1,30 @@
 module.exports = {
-  name: 'MuiCardActions',
-  display_name: null,
-  updated_at: '2020-05-28T19:59:35.105Z',
-  schema: {
-    rootClass: {
-      type: 'options',
-      pos: 0,
-
+  "name": "MuiCardActions",
+  "display_name": null,
+  "updated_at": "2020-05-28T19:59:35.105Z",
+  "schema": {
+    "rootClass": {
+      "type": "options",
+      "pos": 0
     },
     "disableSpacing": {
       "type": "boolean",
       "description": "If true, the actions do not have additional margin.",
       "pos": 1
     },
-    content: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiIconButtonRedirect',
-        'MuiIconButtonHref',
-        'MuiIconButtonDownload',
-        'MuiIconButtonDialog',
-        'MuiButtonRedirect',
-        'MuiButtonHref',
-        'MuiButtonDownload',
-        'MuiButtonDialog',
-        'MuiExpansionPanel',
-
+    "content": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIconButtonRedirect",
+        "MuiIconButtonHref",
+        "MuiIconButtonDownload",
+        "MuiIconButtonDialog",
+        "MuiButtonRedirect",
+        "MuiButtonHref",
+        "MuiButtonDownload",
+        "MuiButtonDialog",
+        "MuiExpansionPanel"
       ],
       "pos": 2,
       "required": true,
