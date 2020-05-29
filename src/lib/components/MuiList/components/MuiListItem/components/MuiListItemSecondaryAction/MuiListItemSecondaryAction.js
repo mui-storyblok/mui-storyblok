@@ -6,6 +6,7 @@ import MuiIconButtonRedirect from '../../../../../MuiIconButtonRedirect/MuiIconB
 import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiExpansionPanel from '../../../../../MuiExpansionPanel/MuiExpansionPanel';
 import MuiTooltip from '../../../../../MuiTooltip/MuiTooltip';
 
 /**
@@ -22,6 +23,7 @@ export const MuiListItemSecondaryAction = ({
     MuiIconButtonDownload,
     MuiIconButtonDialog,
     MuiTooltip,
+    MuiExpansionPanel,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
