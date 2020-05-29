@@ -90,12 +90,14 @@ class StoryBlock {
   }
 
   static anchorOrginToObj(array) {
-    const splitArr = array[0].split(',');
     const obj = {};
-    splitArr.forEach((pair) => {
-      const [key, value] = pair.split(': ');
-      obj[key.trim()] = value.trim();
-    });
+    if (array.length) {
+      const splitArr = array[0].split(',');
+      splitArr.forEach((pair) => {
+        const [key, value] = pair.split(': ');
+        obj[key.trim()] = value.trim();
+      });
+    }
     return obj;
   }
 }
