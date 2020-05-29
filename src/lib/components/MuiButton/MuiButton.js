@@ -22,8 +22,6 @@ export const MuiButton = ({
   variant,
   buttonText,
   onClick,
-  endIconColor,
-  startIconColor,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
@@ -35,12 +33,12 @@ export const MuiButton = ({
       disableFocusRipple={disableFocusRipple}
       disableRipple={disableRipple}
       endIcon={endIcon ? (
-        <MuiIcon iconName={endIcon} color={endIconColor} />
+        <MuiIcon {...endIcon[0]} />
       ) : null}
       fullWidth={fullWidth}
       size={size}
       startIcon={startIcon ? (
-        <MuiIcon iconName={startIcon} color={startIconColor} />
+        <MuiIcon {...startIcon[0]} />
       ) : null}
       variant={variant}
       onClick={onClick}
@@ -112,16 +110,6 @@ MuiButton.propTypes = {
   variant: PropTypes.string,
   /** not in storyblok passed down from parent component */
   onClick: PropTypes.func.isRequired,
-  /**
-   * mui prop: "inherit", "primary", "secondary", "action", "error", "disabled"
-   * The color of the component. It supports those theme colors that make sense for this component.
-   * */
-  endIconColor: PropTypes.string,
-  /**
-   * mui prop: "inherit", "primary", "secondary", "action", "error", "disabled"
-   * The color of the component. It supports those theme colors that make sense for this component.
-   * */
-  startIconColor: PropTypes.string,
 };
 
 MuiButton.defaultProps = {
@@ -135,6 +123,4 @@ MuiButton.defaultProps = {
   size: 'medium',
   startIcon: null,
   variant: 'text',
-  endIconColor: 'secondary',
-  startIconColor: 'secondary',
 };
