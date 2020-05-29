@@ -4,18 +4,22 @@ exports[`<MuiCardContent /> snapshot 1`] = `
 <div
   className="MuiCardContent-root makeStyles-root-3"
 >
-  <p
-    className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
-  >
-    text
-  </p>
   <div
-    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-36 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+    className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+  >
+    <span
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+    >
+       text 
+    </span>
+  </div>
+  <div
+    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-6 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       aria-disabled={false}
       aria-expanded={false}
-      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-69"
+      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-7"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -36,7 +40,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
       >
         <span
           aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-79 MuiIcon-colorSecondary"
+          className="material-icons MuiIcon-root makeStyles-root-8 MuiIcon-colorSecondary"
         >
           android
         </span>
@@ -64,7 +68,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
         >
           <span
             aria-hidden={true}
-            className="material-icons MuiIcon-root makeStyles-root-98 MuiIcon-colorSecondary"
+            className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
           >
             android
           </span>
@@ -89,13 +93,17 @@ exports[`<MuiCardContent /> snapshot 1`] = `
             role="region"
           >
             <div
-              className="MuiExpansionPanelDetails-root makeStyles-root-104"
+              className="MuiExpansionPanelDetails-root makeStyles-root-10"
             >
-              <p
-                className="MuiTypography-root makeStyles-root-106 MuiTypography-body1"
+              <div
+                className="MuiTypography-root makeStyles-root-11 MuiTypography-body1"
               >
-                text
-              </p>
+                <span
+                  className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
+                >
+                   text 
+                </span>
+              </div>
             </div>
           </div>
         </div>
