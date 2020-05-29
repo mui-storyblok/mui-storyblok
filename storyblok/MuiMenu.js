@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiMenu",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:09.530Z",
+  "updated_at": "2020-05-29T15:12:44.331Z",
   "schema": {
     "btnText": {
       "type": "text"
@@ -69,7 +69,8 @@ module.exports = {
           "value": "color: white",
           "name": "color white"
         }
-      ]
+      ],
+      "min_options": ""
     }
   },
   "image": null,
