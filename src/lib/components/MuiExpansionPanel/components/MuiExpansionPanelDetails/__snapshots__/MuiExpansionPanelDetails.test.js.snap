@@ -4,10 +4,14 @@ exports[`<MuiExpansionPanelDetails /> snapshot 1`] = `
 <div
   className="MuiExpansionPanelDetails-root makeStyles-root-3"
 >
-  <p
-    className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+  <div
+    className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
   >
-    text
-  </p>
+    <span
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+    >
+       text 
+    </span>
+  </div>
 </div>
 `;

@@ -5,7 +5,7 @@ exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
   className="MuiListItemSecondaryAction-root makeStyles-root-3"
 >
   <button
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-5"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-4"
     data-testid="muiIconButton"
     disabled={false}
     onBlur={[Function]}
@@ -28,7 +28,7 @@ exports[`<MuiListItemSecondaryAction /> snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-18 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
       >
         star
       </span>
