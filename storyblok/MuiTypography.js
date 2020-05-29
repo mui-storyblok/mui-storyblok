@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:02.388Z",
+  "updated_at": "2020-05-29T17:04:32.640Z",
   "schema": {
     "align": {
       "type": "option",
@@ -165,7 +165,6 @@ module.exports = {
       "maximum": "",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiText",
         "MuiLink",
         "MuiIcon",
         "MuiIconButtonRedirect",
@@ -176,7 +175,8 @@ module.exports = {
         "MuiButtonDownload",
         "MuiButtonDialog",
         "MuiTooltip",
-        "MuiButtonHref"
+        "MuiButtonHref",
+        "MuiText"
       ],
       "required": true
     }
