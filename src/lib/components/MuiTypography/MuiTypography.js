@@ -54,10 +54,24 @@ export const MuiTypography = ({
       variant={variant}
       align={align}
       color={color}
+      component="div"
     >
       {content.map((item, index) => {
-        // MuiText is in storyblok and only returns text
-        if (item.component === 'MuiText') return item.text;
+        if (item.component === 'MuiText') {
+          const style = Storyblok.arrayToMuiStyles(item.rootClass);
+          return (
+            <Typography
+              component="span"
+              key={index}
+              className={style.root}
+              variant={item.variant}
+              align={item.align}
+              color={item.color}
+            >
+              {` ${item.text} `}
+            </Typography>
+          );
+        }
         return createElement(components[item.component], Object.assign(item, { key: index }));
       })}
     </Typography>
