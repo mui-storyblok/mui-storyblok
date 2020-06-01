@@ -6,10 +6,10 @@ exports[`<MuiTableCell /> snapshot 1`] = `
   className="MuiTableCell-root makeStyles-root-2"
 >
   <div
-    className="MuiTypography-root makeStyles-root-3 MuiTypography-body1"
+    className="MuiTypography-root makeStyles-root-15 MuiTypography-body1"
   >
     <span
-      className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-16 MuiTypography-body1"
     >
        Single table row 
     </span>

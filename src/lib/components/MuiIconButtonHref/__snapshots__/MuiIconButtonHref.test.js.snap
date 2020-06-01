@@ -2,7 +2,7 @@
 
 exports[`<MuiIconButtonHref /> snapshot 1`] = `
 <button
-  className="MuiButtonBase-root MuiIconButton-root makeStyles-root-7"
+  className="MuiButtonBase-root MuiIconButton-root makeStyles-root-38"
   data-testid="muiIconButton"
   disabled={false}
   onBlur={[Function]}
@@ -25,7 +25,7 @@ exports[`<MuiIconButtonHref /> snapshot 1`] = `
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-8 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-39 MuiIcon-colorSecondary"
     >
       star
     </span>

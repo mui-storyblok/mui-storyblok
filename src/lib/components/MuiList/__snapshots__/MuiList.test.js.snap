@@ -6,11 +6,11 @@ exports[`<MuiList /> snapshot 1`] = `
   width="100%"
 >
   <li
-    className="MuiListItem-root makeStyles-root-4 MuiListItem-gutters"
+    className="MuiListItem-root makeStyles-root-8 MuiListItem-gutters"
     disabled={false}
   >
     <div
-      className="MuiListItemText-root makeStyles-root-5 MuiListItemText-multiline"
+      className="MuiListItemText-root makeStyles-root-20 MuiListItemText-multiline"
     >
       <span
         className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"

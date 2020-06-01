@@ -2,7 +2,7 @@
 
 exports[`<MuiBottomNavigation /> snapshot 1`] = `
 <div
-  className="MuiBottomNavigation-root makeStyles-root-4"
+  className="MuiBottomNavigation-root makeStyles-root-41"
 >
   <MuiBottomNavigationAction
     aria-disabled={false}
@@ -26,7 +26,7 @@ exports[`<MuiBottomNavigation /> snapshot 1`] = `
       className="MuiBottomNavigationAction-wrapper"
     >
       <button
-        className="MuiButtonBase-root MuiIconButton-root makeStyles-root-5"
+        className="MuiButtonBase-root MuiIconButton-root makeStyles-root-42"
         data-testid="muiIconButton"
         disabled={false}
         onBlur={[Function]}
@@ -49,7 +49,7 @@ exports[`<MuiBottomNavigation /> snapshot 1`] = `
         >
           <span
             aria-hidden={true}
-            className="material-icons MuiIcon-root makeStyles-root-6 MuiIcon-colorSecondary"
+            className="material-icons MuiIcon-root makeStyles-root-43 MuiIcon-colorSecondary"
           >
             home
           </span>

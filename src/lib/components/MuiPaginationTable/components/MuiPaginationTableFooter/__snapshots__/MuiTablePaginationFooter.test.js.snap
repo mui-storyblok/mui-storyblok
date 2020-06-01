@@ -11,7 +11,7 @@ exports[`<MuiPaginationTableFooter /> snapshot 1`] = `
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-3"
+      className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-9"
       colSpan={1000}
     >
       <div
@@ -64,7 +64,7 @@ exports[`<MuiPaginationTableFooter /> snapshot 1`] = `
           1-10 of 100
         </p>
         <div
-          className="makeStyles-root-4"
+          className="makeStyles-root-107"
         >
           <button
             aria-label="first page"

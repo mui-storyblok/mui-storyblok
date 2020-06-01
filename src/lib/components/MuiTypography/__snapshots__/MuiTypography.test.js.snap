@@ -10,7 +10,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
      this is text 
   </span>
   <a
-    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-7 MuiTypography-colorPrimary"
+    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-37 MuiTypography-colorPrimary"
     href="#"
     onBlur={[Function]}
     onClick={[Function]}
@@ -19,7 +19,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
     btn
   </a>
   <button
-    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-8"
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-44"
     data-testid="muiIconButton"
     disabled={false}
     onBlur={[Function]}
@@ -42,7 +42,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-57 MuiIcon-colorSecondary"
       >
         star
       </span>
@@ -50,7 +50,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
   </button>
   <span
     aria-hidden={true}
-    className="material-icons MuiIcon-root makeStyles-root-10 MuiIcon-colorSecondary"
+    className="material-icons MuiIcon-root makeStyles-root-67 MuiIcon-colorSecondary"
   >
     android
   </span>

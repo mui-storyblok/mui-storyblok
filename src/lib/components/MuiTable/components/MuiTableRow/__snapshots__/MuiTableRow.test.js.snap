@@ -7,13 +7,13 @@ exports[`<MuiTableRow /> snapshot 1`] = `
 >
   <td
     aria-sort="ascending"
-    className="MuiTableCell-root makeStyles-root-3 MuiTableCell-alignCenter"
+    className="MuiTableCell-root makeStyles-root-8 MuiTableCell-alignCenter"
   >
     <div
-      className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-21 MuiTypography-body1"
     >
       <span
-        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-22 MuiTypography-body1"
       >
          Single table row 
       </span>
