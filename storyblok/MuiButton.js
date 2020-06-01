@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButton",
   "display_name": null,
-  "updated_at": "2020-05-29T00:10:39.950Z",
+  "updated_at": "2020-05-29T20:46:48.083Z",
   "schema": {
     "buttonText": {
       "type": "text",
@@ -78,16 +78,14 @@ module.exports = {
       "pos": 5
     },
     "endIcon": {
-      "type": "text",
+      "type": "bloks",
       "description": "Element placed after the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-      "pos": 6
-    },
-    "endIconColor": {
-      "type": "text",
-      "max_length": "",
-      "regex": "",
-      "description": "* mui prop: \"inherit\", \"primary\", \"secondary\", \"action\", \"error\", \"disabled\"\n* The color of the component. It supports those theme colors that make sense for this component.",
-      "pos": 7
+      "pos": 6,
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIcon"
+      ],
+      "maximum": "1"
     },
     "fullWidth": {
       "type": "boolean",
@@ -116,16 +114,6 @@ module.exports = {
       "required": true,
       "pos": 9
     },
-    "startIcon": {
-      "type": "text",
-      "description": "Element placed before the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-      "pos": 10
-    },
-    "startIconColor": {
-      "type": "text",
-      "description": "* mui prop: \"inherit\", \"primary\", \"secondary\", \"action\", \"error\", \"disabled\"\n* The color of the component. It supports those theme colors that make sense for this component.",
-      "pos": 11
-    },
     "variant": {
       "type": "option",
       "use_uuid": true,
@@ -146,6 +134,15 @@ module.exports = {
       "required": true,
       "default_value": "text",
       "pos": 12
+    },
+    "startIcon": {
+      "type": "bloks",
+      "description": "* name of Icon uses MuiIcon\n* Element placed before the children. renders icon\n* any icon from https://material.io/resources/icons/?style=baseline",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIcon"
+      ],
+      "maximum": "1"
     }
   },
   "image": null,

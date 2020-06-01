@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiImage /> snapshot with MuiImage 1`] = `
+<a
+  href="/home"
+  target="_self"
+>
+  <picture
+    style={Object {}}
+  >
+    <img
+      alt="www.applejuice.com"
+      src="www.applejuice.com"
+      style={Object {}}
+    />
+  </picture>
+</a>
+`;
