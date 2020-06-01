@@ -2,11 +2,11 @@
 
 exports[`<MuiListDropdown /> snapshot 1`] = `
 <ul
-  className="MuiList-root makeStyles-root-3 MuiList-padding"
+  className="MuiList-root makeStyles-root-9 MuiList-padding"
 >
   <div
     aria-disabled={false}
-    className="MuiButtonBase-root MuiListItem-root makeStyles-root-4 MuiListItem-gutters MuiListItem-button"
+    className="MuiButtonBase-root MuiListItem-root makeStyles-root-10 MuiListItem-gutters MuiListItem-button"
     onBlur={[Function]}
     onClick={[Function]}
     onDragLeave={[Function]}
@@ -23,11 +23,11 @@ exports[`<MuiListDropdown /> snapshot 1`] = `
     tabIndex={0}
   >
     <div
-      className="MuiListItemIcon-root makeStyles-root-5"
+      className="MuiListItemIcon-root makeStyles-root-11"
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-6 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-12 MuiIcon-colorSecondary"
       >
         star
       </span>

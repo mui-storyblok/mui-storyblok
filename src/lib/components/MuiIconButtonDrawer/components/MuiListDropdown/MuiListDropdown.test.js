@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiListDropdown from './MuiListDropdown';
@@ -24,7 +24,7 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<MuiListDropdown {...props} />);
+  const comp = mount(<MuiListDropdown {...props} />);
   return { comp, props };
 }
 
