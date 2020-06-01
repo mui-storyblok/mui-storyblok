@@ -5,21 +5,21 @@ exports[`<MuiCardContent /> snapshot 1`] = `
   className="MuiCardContent-root makeStyles-root-3"
 >
   <div
-    className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+    className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
   >
     <span
-      className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
     >
        text 
     </span>
   </div>
   <div
-    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-37 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+    className="MuiPaper-root MuiExpansionPanel-root makeStyles-root-6 MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
       aria-disabled={false}
       aria-expanded={false}
-      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-70"
+      className="MuiButtonBase-root MuiExpansionPanelSummary-root makeStyles-root-7"
       onBlur={[Function]}
       onClick={[Function]}
       onDragLeave={[Function]}
@@ -40,7 +40,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
       >
         <span
           aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-80 MuiIcon-colorSecondary"
+          className="material-icons MuiIcon-root makeStyles-root-8 MuiIcon-colorSecondary"
         >
           android
         </span>
@@ -68,7 +68,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
         >
           <span
             aria-hidden={true}
-            className="material-icons MuiIcon-root makeStyles-root-99 MuiIcon-colorSecondary"
+            className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
           >
             android
           </span>
@@ -93,13 +93,13 @@ exports[`<MuiCardContent /> snapshot 1`] = `
             role="region"
           >
             <div
-              className="MuiExpansionPanelDetails-root makeStyles-root-105"
+              className="MuiExpansionPanelDetails-root makeStyles-root-10"
             >
               <div
-                className="MuiTypography-root makeStyles-root-107 MuiTypography-body1"
+                className="MuiTypography-root makeStyles-root-11 MuiTypography-body1"
               >
                 <span
-                  className="MuiTypography-root makeStyles-root-108 MuiTypography-body1"
+                  className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
                 >
                    text 
                 </span>

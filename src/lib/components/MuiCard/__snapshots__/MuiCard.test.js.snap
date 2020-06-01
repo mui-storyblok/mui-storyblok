@@ -6,10 +6,10 @@ exports[`<MuiCard /> snapshot 1`] = `
   raised="false"
 >
   <div
-    className="MuiCardActions-root makeStyles-root-107 MuiCardActions-spacing"
+    className="MuiCardActions-root makeStyles-root-4 MuiCardActions-spacing"
   >
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-110 MuiButton-textSecondary MuiButton-fullWidth"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-5 MuiButton-textSecondary MuiButton-fullWidth"
       data-testid="muiButton"
       disabled={false}
       onBlur={[Function]}
@@ -35,20 +35,20 @@ exports[`<MuiCard /> snapshot 1`] = `
     </button>
   </div>
   <div
-    className="MuiCardContent-root makeStyles-root-143"
+    className="MuiCardContent-root makeStyles-root-6"
   >
     <div
-      className="MuiTypography-root makeStyles-root-145 MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
     >
       <span
-        className="MuiTypography-root makeStyles-root-146 MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-8 MuiTypography-body1"
       >
          text 
       </span>
     </div>
   </div>
   <div
-    className="MuiCardHeader-root makeStyles-root-177"
+    className="MuiCardHeader-root makeStyles-root-9"
   >
     <div
       className="MuiCardHeader-avatar"
@@ -73,7 +73,7 @@ exports[`<MuiCard /> snapshot 1`] = `
   </div>
   <div
     alt="alt"
-    className="MuiCardMedia-root makeStyles-root-184"
+    className="MuiCardMedia-root makeStyles-root-10"
     style={
       Object {
         "backgroundImage": "url(\\"img.com\\")",

@@ -23,7 +23,6 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
     >
       <div
         aria-haspopup="listbox"
-        aria-label="Rows per page:"
         className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
         onBlur={[Function]}
         onFocus={[Function]}
@@ -62,7 +61,7 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
       0-0 of 0
     </p>
     <div
-      className="makeStyles-root-100"
+      className="makeStyles-root-3"
     >
       <button
         aria-label="first page"

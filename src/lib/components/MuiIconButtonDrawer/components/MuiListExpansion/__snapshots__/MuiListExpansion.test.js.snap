@@ -20,11 +20,11 @@ exports[`<MuiListExpansion /> snapshot 1`] = `
   tabIndex={0}
 >
   <div
-    className="MuiListItemIcon-root makeStyles-root-18"
+    className="MuiListItemIcon-root makeStyles-root-4"
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-21 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
     >
       star
     </span>

@@ -11,7 +11,7 @@ exports[`<MuiPaginationTableFooter /> snapshot 1`] = `
   >
     <td
       aria-sort={null}
-      className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-9"
+      className="MuiTableCell-root MuiTableCell-footer MuiTablePagination-root makeStyles-root-3"
       colSpan={1000}
     >
       <div
@@ -31,7 +31,6 @@ exports[`<MuiPaginationTableFooter /> snapshot 1`] = `
         >
           <div
             aria-haspopup="listbox"
-            aria-label="Rows Per Page:"
             className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
             onBlur={[Function]}
             onFocus={[Function]}
@@ -64,7 +63,7 @@ exports[`<MuiPaginationTableFooter /> snapshot 1`] = `
           1-10 of 100
         </p>
         <div
-          className="makeStyles-root-107"
+          className="makeStyles-root-4"
         >
           <button
             aria-label="first page"

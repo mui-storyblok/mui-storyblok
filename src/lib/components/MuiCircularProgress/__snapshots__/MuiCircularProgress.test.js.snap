@@ -2,7 +2,7 @@
 
 exports[`<MuiCircularProgress /> snapshot 1`] = `
 <div
-  className="MuiCircularProgress-root makeStyles-root-14 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+  className="MuiCircularProgress-root makeStyles-root-2 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
   role="progressbar"
   style={
     Object {

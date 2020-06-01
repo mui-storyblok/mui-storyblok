@@ -6,19 +6,19 @@ exports[`<MuiTableHead /> snapshot 1`] = `
   role={null}
 >
   <tr
-    className="MuiTableRow-root makeStyles-root-4 MuiTableRow-head"
+    className="MuiTableRow-root makeStyles-root-3 MuiTableRow-head"
     role={null}
   >
     <th
       aria-sort={null}
-      className="MuiTableCell-root MuiTableCell-head makeStyles-root-10"
+      className="MuiTableCell-root MuiTableCell-head makeStyles-root-4"
       scope="col"
     >
       <div
-        className="MuiTypography-root makeStyles-root-23 MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
       >
         <span
-          className="MuiTypography-root makeStyles-root-24 MuiTypography-body1"
+          className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
         >
            wooo 
         </span>

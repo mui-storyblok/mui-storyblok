@@ -30,7 +30,7 @@ exports[`<MuiGridList /> snapshot 1`] = `
           src="www.test.com"
         />
         <div
-          className="MuiGridListTileBar-root makeStyles-root-10 MuiGridListTileBar-titlePositionBottom MuiGridListTileBar-rootSubtitle"
+          className="MuiGridListTileBar-root makeStyles-root-5 MuiGridListTileBar-titlePositionBottom MuiGridListTileBar-rootSubtitle"
         >
           <div
             className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
@@ -52,7 +52,7 @@ exports[`<MuiGridList /> snapshot 1`] = `
             className="MuiGridListTileBar-actionIcon"
           >
             <button
-              className="MuiButtonBase-root MuiIconButton-root makeStyles-root-22"
+              className="MuiButtonBase-root MuiIconButton-root makeStyles-root-6"
               data-testid="muiIconButton"
               disabled={false}
               onBlur={[Function]}
@@ -75,7 +75,7 @@ exports[`<MuiGridList /> snapshot 1`] = `
               >
                 <span
                   aria-hidden={true}
-                  className="material-icons MuiIcon-root makeStyles-root-35 MuiIcon-colorSecondary"
+                  className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
                 >
                   home
                 </span>

@@ -24,15 +24,15 @@ exports[`<MuiExpansionPanelSummary /> snapshot 1`] = `
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-13 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
     >
       android
     </span>
     <div
-      className="MuiTypography-root makeStyles-root-23 MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
     >
       <span
-        className="MuiTypography-root makeStyles-root-24 MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
       >
          text 
       </span>
@@ -61,7 +61,7 @@ exports[`<MuiExpansionPanelSummary /> snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-64 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
       >
         android
       </span>

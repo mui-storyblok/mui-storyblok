@@ -6,23 +6,23 @@ exports[`<MuiTable /> snapshot 1`] = `
   role={null}
 >
   <thead
-    className="MuiTableHead-root makeStyles-root-5"
+    className="MuiTableHead-root makeStyles-root-3"
     role={null}
   >
     <tr
-      className="MuiTableRow-root makeStyles-root-7 MuiTableRow-head"
+      className="MuiTableRow-root makeStyles-root-4 MuiTableRow-head"
       role={null}
     >
       <th
         aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-head makeStyles-root-13"
+        className="MuiTableCell-root MuiTableCell-head makeStyles-root-5"
         scope="col"
       >
         <div
-          className="MuiTypography-root makeStyles-root-26 MuiTypography-body1"
+          className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
         >
           <span
-            className="MuiTypography-root makeStyles-root-27 MuiTypography-body1"
+            className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
           >
              wooo 
           </span>
@@ -31,22 +31,22 @@ exports[`<MuiTable /> snapshot 1`] = `
     </tr>
   </thead>
   <tbody
-    className="MuiTableBody-root makeStyles-root-58"
+    className="MuiTableBody-root makeStyles-root-8"
     role={null}
   >
     <tr
-      className="MuiTableRow-root makeStyles-root-60"
+      className="MuiTableRow-root makeStyles-root-9"
       role={null}
     >
       <td
         aria-sort="ascending"
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-61 MuiTableCell-alignCenter"
+        className="MuiTableCell-root MuiTableCell-body makeStyles-root-10 MuiTableCell-alignCenter"
       >
         <div
-          className="MuiTypography-root makeStyles-root-62 MuiTypography-body1 MuiTypography-colorInherit"
+          className="MuiTypography-root makeStyles-root-11 MuiTypography-body1 MuiTypography-colorInherit"
         >
           <span
-            className="MuiTypography-root makeStyles-root-63 MuiTypography-body1"
+            className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
           >
              table body 1 
           </span>
