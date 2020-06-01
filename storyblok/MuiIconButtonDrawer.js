@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiIconButtonDrawer",
   "display_name": null,
-  "updated_at": "2020-04-27T15:56:15.966Z",
+  "updated_at": "2020-06-01T16:54:30.541Z",
   "schema": {
     "icon": {
       "type": "bloks",
@@ -72,7 +72,8 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiList"
+        "MuiList",
+        "MuiListDropdown"
       ],
       "required": true
     }

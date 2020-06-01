@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, createElement } from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
 import MuiList from '../MuiList/MuiList';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
+import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
 
 const MuiIconButtonDrawer = ({
   anchor,
@@ -13,6 +14,11 @@ const MuiIconButtonDrawer = ({
   icon,
   content,
 }) => {
+  const components = {
+    MuiList,
+    MuiListDropdown,
+  };
+
   let width = '100%';
   if (anchor === 'left' || anchor === 'right') width = '32vw';
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { minWidth: width });
@@ -38,7 +44,10 @@ const MuiIconButtonDrawer = ({
         variant={variant}
         onClose={e => handleToggleDrawer(e)}
       >
-        {content.map((item, index) => <MuiList {...item} key={index} />)}
+        {content.map((item, index) => createElement(
+          components[item.component],
+          Object.assign(item, { key: index }),
+        ))}
       </Drawer>
     </>
   );

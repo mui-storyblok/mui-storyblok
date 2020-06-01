@@ -1,7 +1,7 @@
 module.exports = {
   "name": "FormGridItem",
   "display_name": null,
-  "updated_at": "2020-05-26T15:58:49.074Z",
+  "updated_at": "2020-06-01T17:27:25.231Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -575,7 +575,7 @@ module.exports = {
         "MuiInput",
         "MuiSelect",
         "MuiRadio",
-        "MuiCheckBox"
+        "MuiCheckbox"
       ],
       "pos": 12,
       "description": "Content passed to MuiGrid to render    * components: Input components ",
