@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.38",
+  "version": "1.0.40",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -84,20 +84,17 @@
       "react/no-array-index-key": [
         0
       ]
-    }
+    },
+    "ignorePatterns": [
+      "storyblok/*.js"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/interceptors.js",
-      "!src/utils/SessionStorage.js",
-      "!src/utils/GoogleHelpers.js",
-      "!src/utils/Storyblok.js",
-      "!src/serviceWorker.js",
+      "!storyblok/*.{js,jsx}",
       "!src/setupTests.js",
-      "!src/theme.js",
       "!src/index.js",
-      "!src/testUtils/LocalStorageMock.js",
       "!src/styleguide/*"
     ],
     "coverageReporters": [

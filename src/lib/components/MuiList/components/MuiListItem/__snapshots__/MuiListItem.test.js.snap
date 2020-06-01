@@ -6,31 +6,31 @@ exports[`<MuiListItem /> snapshot 1`] = `
   disabled={false}
 >
   <div
-    className="MuiListItemAvatar-root makeStyles-root-15"
+    className="MuiListItemAvatar-root makeStyles-root-4"
   >
     <div
       className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
     >
       <span
         aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-25 MuiIcon-colorSecondary"
+        className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
       >
         android
       </span>
     </div>
   </div>
   <div
-    className="MuiListItemIcon-root makeStyles-root-35"
+    className="MuiListItemIcon-root makeStyles-root-6"
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-38 MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
     >
       android
     </span>
   </div>
   <div
-    className="MuiListItemText-root makeStyles-root-39 MuiListItemText-multiline"
+    className="MuiListItemText-root makeStyles-root-8 MuiListItemText-multiline"
   >
     <span
       className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
@@ -44,10 +44,10 @@ exports[`<MuiListItem /> snapshot 1`] = `
     </p>
   </div>
   <div
-    className="MuiListItemSecondaryAction-root makeStyles-root-76"
+    className="MuiListItemSecondaryAction-root makeStyles-root-9"
   >
     <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-78"
+      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-10"
       data-testid="muiIconButton"
       disabled={false}
       onBlur={[Function]}
@@ -70,7 +70,7 @@ exports[`<MuiListItem /> snapshot 1`] = `
       >
         <span
           aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-91 MuiIcon-colorSecondary"
+          className="material-icons MuiIcon-root makeStyles-root-11 MuiIcon-colorSecondary"
         >
           star
         </span>

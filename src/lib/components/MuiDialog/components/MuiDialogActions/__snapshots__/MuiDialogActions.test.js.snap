@@ -5,7 +5,7 @@ exports[`<MuiDialogActions /> snapshot 1`] = `
   className="MuiDialogActions-root makeStyles-root-3 MuiDialogActions-spacing"
 >
   <button
-    className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-6 MuiButton-textSecondary MuiButton-fullWidth"
+    className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-4 MuiButton-textSecondary MuiButton-fullWidth"
     data-testid="muiButton"
     disabled={false}
     onBlur={[Function]}

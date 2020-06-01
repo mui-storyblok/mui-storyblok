@@ -1,84 +1,85 @@
 module.exports = {
-  name: 'MuiMenu',
-  display_name: null,
-  updated_at: '2020-03-31T18:27:09.530Z',
-  schema: {
-    btnText: {
-      type: 'text',
+  "name": "MuiMenu",
+  "display_name": null,
+  "updated_at": "2020-05-29T15:12:44.331Z",
+  "schema": {
+    "btnText": {
+      "type": "text"
     },
-    content: {
-      type: 'bloks',
-      restrict_components: true,
-      component_whitelist: [
-        'MuiMenuItem',
+    "content": {
+      "type": "bloks",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiMenuItem"
+      ]
+    },
+    "size": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
+        {
+          "value": "small",
+          "name": "small"
+        },
+        {
+          "value": "medium",
+          "name": "medium"
+        },
+        {
+          "value": "large",
+          "name": "large"
+        }
       ],
+      "description": "The size of the button. small is equivalent to the dense button styling.",
+      "default_value": "medium"
     },
-    size: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "color": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
         {
-          value: 'small',
-          name: 'small',
+          "value": "default",
+          "name": "default"
         },
         {
-          value: 'medium',
-          name: 'medium',
+          "value": "inherit",
+          "name": "inherit"
         },
         {
-          value: 'large',
-          name: 'large',
+          "value": "primary",
+          "name": "primary"
         },
+        {
+          "value": "secondary",
+          "name": "secondary"
+        },
+        {
+          "value": "transparent",
+          "name": "transparent"
+        }
       ],
-      description: 'The size of the button. small is equivalent to the dense button styling.',
-      default_value: 'medium',
+      "default_value": "default",
+      "description": "The color of the component. It supports those theme colors that make sense for this component."
     },
-    color: {
-      type: 'option',
-      use_uuid: true,
-      options: [
+    "rootClass": {
+      "type": "options",
+      "translatable": false,
+      "options": [
         {
-          value: 'default',
-          name: 'default',
-        },
-        {
-          value: 'inherit',
-          name: 'inherit',
-        },
-        {
-          value: 'primary',
-          name: 'primary',
-        },
-        {
-          value: 'secondary',
-          name: 'secondary',
-        },
-        {
-          value: 'transparent',
-          name: 'transparent',
-        },
+          "value": "color: white",
+          "name": "color white"
+        }
       ],
-      default_value: 'default',
-      description: 'The color of the component. It supports those theme colors that make sense for this component.',
-    },
-    rootClass: {
-      type: 'options',
-      translatable: false,
-      options: [
-        {
-          value: 'color: white',
-          name: 'color white',
-        },
-      ],
-    },
+      "min_options": ""
+    }
   },
-  image: null,
-  preview_field: null,
-  is_root: false,
-  preview_tmpl: null,
-  is_nestable: true,
-  all_presets: [],
-  preset_id: null,
-  real_name: 'MuiMenu',
-  component_group_uuid: null,
-};
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "MuiMenu",
+  "component_group_uuid": null
+}
