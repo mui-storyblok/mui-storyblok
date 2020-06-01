@@ -25,7 +25,6 @@ export const MuiListDropdown = ({
       </Collapse>
     </List>
   );
-
 };
 
 export default MuiListDropdown;
