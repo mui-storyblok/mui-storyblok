@@ -35,12 +35,12 @@ export const MuiButton = ({
       disableFocusRipple={disableFocusRipple}
       disableRipple={disableRipple}
       endIcon={endIcon ? (
-        <MuiIcon iconName={endIcon} color={endIconColor} />
+        <MuiIcon {...endIcon[0]} />
       ) : null}
       fullWidth={fullWidth}
       size={size}
       startIcon={startIcon ? (
-        <MuiIcon iconName={startIcon} color={startIconColor} />
+        <MuiIcon {...startIcon[0]} />
       ) : null}
       variant={variant}
       onClick={onClick}
