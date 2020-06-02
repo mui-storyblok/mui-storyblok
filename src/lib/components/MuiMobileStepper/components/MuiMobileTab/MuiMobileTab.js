@@ -5,7 +5,8 @@ import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 const MuiMobileTab = ({
   tab,
 }) => (
-  <div style={{ overflow: 'hidden' }}>
+    <div style={{ overflow: 'hidden' }}>
+      {console.log(tab)}
     <MuiHeroHeader {...tab} />
   </div>
 );
