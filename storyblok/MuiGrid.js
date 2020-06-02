@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGrid",
   "display_name": null,
-  "updated_at": "2020-05-18T21:23:27.802Z",
+  "updated_at": "2020-06-02T20:10:49.010Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -85,6 +85,10 @@ module.exports = {
         {
           "value": "padding-top: 100px; padding-bottom: 100px",
           "name": "paddingStrip"
+        },
+        {
+          "value": "overflowX: hidden",
+          "name": "overflowx"
         }
       ],
       "pos": 2
