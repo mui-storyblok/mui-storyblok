@@ -8,9 +8,10 @@ import {
   MuiInput,
   MuiSelect,
   MuiSubmit,
-  MuiCheckBox,
+  MuiCheckbox,
   MuiRadio,
 } from 'rff-wrapper/dist/index.mjs';
+import MuiIcon from '../MuiIcon/MuiIcon';
 
 import Grid from '../Grid/Grid';
 
@@ -22,11 +23,12 @@ const BlokForm = ({
   errorResponseText,
   method,
 }) => {
-  const gridItemComponets = {
+  const gridItemComponents = {
+    MuiIcon,
     MuiInput,
     MuiSelect,
     MuiSubmit,
-    MuiCheckBox,
+    MuiCheckbox,
     MuiRadio,
   };
 
@@ -68,8 +70,9 @@ const BlokForm = ({
       onSubmit={onSubmit}
     >
       <>
+        {console.log(content)}
         {content.map((item, index) => (
-          <Grid {...item} key={index} gridItemComponets={gridItemComponets} />
+          <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
         ))}
       </>
       <MuiSubmit {...submitButton[0]} />
