@@ -255,7 +255,6 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-label="Rows per page:"
               className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
               onBlur={[Function]}
               onFocus={[Function]}

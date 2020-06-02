@@ -19,7 +19,7 @@ import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import BlokForm from '../BlokForm/BlokForm';
 
 const MuiGrid = (props) => {
-  const gridItemComponets = {
+  const gridItemComponents = {
     MuiHeroHeader,
     MuiGridItem,
     MuiAppBar,
@@ -42,7 +42,7 @@ const MuiGrid = (props) => {
   return (
     <Grid
       {...props}
-      gridItemComponets={gridItemComponets}
+      gridItemComponents={gridItemComponents}
     />
   );
 };

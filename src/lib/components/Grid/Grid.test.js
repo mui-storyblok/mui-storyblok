@@ -7,7 +7,7 @@ import MuiIcon from '../MuiIcon/MuiIcon';
 
 function setup() {
   const props = {
-    gridItemComponets: {
+    gridItemComponents: {
       MuiIcon,
     },
     content: [{
