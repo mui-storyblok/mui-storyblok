@@ -4,7 +4,11 @@ import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 
 const MuiMobileTab = ({
   tab,
-}) => (<MuiHeroHeader {...tab} />);
+}) => (
+  <div style={{ overflow: 'hidden' }}>
+    <MuiHeroHeader {...tab} />
+  </div>
+);
 
 export default MuiMobileTab;
 
