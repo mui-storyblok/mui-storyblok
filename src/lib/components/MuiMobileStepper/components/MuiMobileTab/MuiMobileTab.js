@@ -5,8 +5,7 @@ import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 const MuiMobileTab = ({
   tab,
 }) => (
-    <div style={{ overflow: 'hidden' }}>
-      {console.log(tab)}
+  <div style={{ overflow: 'hidden' }}>
     <MuiHeroHeader {...tab} />
   </div>
 );
@@ -14,7 +13,6 @@ const MuiMobileTab = ({
 export default MuiMobileTab;
 
 MuiMobileTab.propTypes = {
-
   /** State you would like to show if user is in this state */
   geocodeState: PropTypes.string,
 
@@ -23,6 +21,5 @@ MuiMobileTab.propTypes = {
 };
 
 MuiMobileTab.defaultProps = {
-
   geocodeState: '',
 };
