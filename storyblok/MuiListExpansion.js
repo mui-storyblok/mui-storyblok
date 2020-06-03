@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListExpansion",
   "display_name": null,
-  "updated_at": "2020-06-01T16:56:21.545Z",
+  "updated_at": "2020-06-03T17:27:30.523Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -11,7 +11,7 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "maximum": "1",
-      "required": true,
+      "required": false,
       "component_whitelist": [
         "MuiListItemIcon"
       ]
