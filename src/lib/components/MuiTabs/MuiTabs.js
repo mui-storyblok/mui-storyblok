@@ -47,7 +47,6 @@ const MuiTabs = ({
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-
   const onMouseEnter = () => {
     if (autoplay) {
       setState({ ...state, autoplay: false });
@@ -66,6 +65,7 @@ const MuiTabs = ({
         if (json.results[0].formatted_address.includes(tab.geocodeState)) {
           return setState({ value: i });
         }
+        return null;
       });
     }
   };
@@ -124,6 +124,7 @@ const MuiTabs = ({
           <div
             role="tabpanel"
             hidden={state.value !== index}
+            style={{ overflow: 'hidden' }}
           >
             {tab.content.map((item, i) => createElement(
               components[item.component],
