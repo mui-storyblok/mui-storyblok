@@ -108,7 +108,7 @@ const MuiTabs = ({
             disableFocusRipple={item.disableFocusRipple === 'true'}
             disableRipple={item.disableRipple}
             wrapped={item.wrapped}
-            icon={item.icon && item.icon[0] && <MuiIcon {...item.icon[0]} />}
+            icon={(item.icon && item.icon[0] && <MuiIcon {...item.icon[0]} />)}
           />
         ))}
       </Tabs>
