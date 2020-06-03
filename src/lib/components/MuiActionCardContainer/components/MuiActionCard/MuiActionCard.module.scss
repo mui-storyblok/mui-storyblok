@@ -2,11 +2,11 @@
   padding: 10px;
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 10% 90%;
   grid-gap: 10px;
   grid-template-areas:
-    "icon header header header"
-    "icon text text text";
+    "icon header"
+    "icon text";
   transition: 0.5s;
 
   &:hover {
