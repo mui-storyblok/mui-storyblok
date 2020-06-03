@@ -84,7 +84,9 @@ const MuiActionCardContainer = ({
                     onKeyDown={handleListKeyDown}
                     style={{ display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly' }}
                   >
-                    {actionCards.map((card, index) => <MuiActionCard {...card} key={index} height={height} width={width} />)}
+                    {actionCards.map((card, index) => (
+                      <MuiActionCard {...card} key={index} height={height} width={width} />
+                    ))}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
