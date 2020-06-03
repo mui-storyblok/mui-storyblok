@@ -1,12 +1,18 @@
 module.exports = {
   "name": "MuiTabs",
   "display_name": null,
-  "updated_at": "2020-05-28T00:18:28.357Z",
+  "updated_at": "2020-06-03T14:40:13.203Z",
   "schema": {
     "rootClass": {
       "type": "options",
       "description": "Override or extend the styles applied to the component",
-      "options": []
+      "options": [
+        {
+          "value": "justify-content: center",
+          "name": "center items"
+        }
+      ],
+      "pos": 0
     },
     "indicatorColor": {
       "type": "option",
@@ -23,7 +29,8 @@ module.exports = {
       ],
       "required": true,
       "description": "secondary",
-      "default_value": "secondary"
+      "default_value": "secondary",
+      "pos": 1
     },
     "orientation": {
       "type": "option",
@@ -40,7 +47,8 @@ module.exports = {
         }
       ],
       "description": "The tabs orientation (layout flow direction).",
-      "default_value": "horizontal"
+      "default_value": "horizontal",
+      "pos": 2
     },
     "scrollButtons": {
       "type": "option",
@@ -65,7 +73,8 @@ module.exports = {
       ],
       "required": true,
       "description": "Determine behavior of scroll buttons when tabs are set to scroll: - auto will only present them when not all the items are visible. - desktop will only present them on medium and larger viewports. - on will always present them. - off will never present them.",
-      "default_value": "auto"
+      "default_value": "auto",
+      "pos": 3
     },
     "textColor": {
       "type": "option",
@@ -86,7 +95,8 @@ module.exports = {
       ],
       "required": true,
       "default_value": "inherit",
-      "description": "Determines the color of the Tab."
+      "description": "Determines the color of the Tab.",
+      "pos": 4
     },
     "variant": {
       "type": "option",
@@ -107,7 +117,14 @@ module.exports = {
       ],
       "description": "Determines additional display behavior of the tabs: - scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar. -fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile. - standard will render the default state.",
       "default_value": "standard",
-      "required": true
+      "required": true,
+      "pos": 5
+    },
+    "height": {
+      "type": "text",
+      "default_value": "300px",
+      "description": "Height of the tabs container",
+      "pos": 6
     },
     "tabs": {
       "type": "bloks",
@@ -117,16 +134,19 @@ module.exports = {
         "MuiIcon",
         "MuiTab"
       ],
-      "required": true
+      "required": true,
+      "pos": 7
     },
     "autoplay": {
-      "type": "boolean"
+      "type": "boolean",
+      "pos": 8
     },
     "interval": {
       "type": "text",
       "translatable": false,
       "required": true,
-      "default_value": "3000"
+      "default_value": "3000",
+      "pos": 9
     }
   },
   "image": null,

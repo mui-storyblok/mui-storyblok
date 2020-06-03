@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Storyblok from '../../utils/Storyblok';
@@ -12,10 +12,6 @@ const MuiMenu = ({
   color,
   btnText,
 }) => {
-  const components = {
-    MuiMenuItem,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
@@ -25,9 +21,8 @@ const MuiMenu = ({
       size={size}
       color={color}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
+      {content.map((item, index) => (
+        <MuiMenuItem {...item} key={index} />
       ))}
     </DropDownMenu>
   );

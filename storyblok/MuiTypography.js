@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-05-29T17:04:32.640Z",
+  "updated_at": "2020-06-02T15:32:05.502Z",
   "schema": {
     "align": {
       "type": "option",
@@ -65,74 +65,6 @@ module.exports = {
         }
       ],
       "default_value": "initial",
-      "required": true
-    },
-    "variant": {
-      "type": "option",
-      "use_uuid": true,
-      "options": [
-        {
-          "value": "h1",
-          "name": "h1"
-        },
-        {
-          "value": "h2",
-          "name": "h2"
-        },
-        {
-          "value": "h3",
-          "name": "h3"
-        },
-        {
-          "value": "h4",
-          "name": "h4"
-        },
-        {
-          "value": "h5",
-          "name": "h5"
-        },
-        {
-          "value": "h6",
-          "name": "h6"
-        },
-        {
-          "value": "subtitle1",
-          "name": "subtitle1"
-        },
-        {
-          "value": "subtitle2",
-          "name": "subtitle2"
-        },
-        {
-          "value": "body1",
-          "name": "body1"
-        },
-        {
-          "value": "body2",
-          "name": "body2"
-        },
-        {
-          "value": "caption",
-          "name": "caption"
-        },
-        {
-          "value": "button",
-          "name": "button"
-        },
-        {
-          "value": "overline",
-          "name": "overline"
-        },
-        {
-          "value": "srOnly",
-          "name": "srOnly"
-        },
-        {
-          "value": "inherit",
-          "name": "inherit"
-        }
-      ],
-      "default_value": "body1",
       "required": true
     },
     "rootClass": {

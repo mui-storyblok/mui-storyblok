@@ -26,6 +26,8 @@ const MuiHeroHeader = ({
   let heroClass = {
     height,
     position: 'relative',
+    padding: 0,
+    margin: 0,
   };
 
   if (backgroundImageUrl) {

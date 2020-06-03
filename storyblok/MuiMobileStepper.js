@@ -1,11 +1,12 @@
 module.exports = {
   "name": "MuiMobileStepper",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:01.310Z",
+  "updated_at": "2020-06-01T22:38:12.963Z",
   "schema": {
     "rootClass": {
       "type": "options",
-      "description": "Override or extend the styles applied to the component"
+      "description": "Override or extend the styles applied to the component",
+      "options": []
     },
     "position": {
       "type": "option",

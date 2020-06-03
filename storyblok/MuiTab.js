@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTab",
   "display_name": null,
-  "updated_at": "2020-05-28T00:17:08.685Z",
+  "updated_at": "2020-06-02T22:31:31.291Z",
   "schema": {
     "label": {
       "type": "text",
@@ -10,7 +10,12 @@ module.exports = {
     },
     "rootClass": {
       "type": "options",
-      "options": [],
+      "options": [
+        {
+          "value": "overflow: hidden",
+          "name": "hide overflow"
+        }
+      ],
       "min_options": ""
     },
     "disableFocusRipple": {

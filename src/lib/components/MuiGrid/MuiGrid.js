@@ -28,7 +28,6 @@ const MuiGrid = ({
     MuiCircularProgress,
     MuiGridList,
   };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
 
   return (
