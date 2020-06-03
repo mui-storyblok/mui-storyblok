@@ -25,6 +25,7 @@ const MuiTabs = ({
   autoplay,
   interval,
   geocode,
+  height,
 }) => {
   const components = {
     MuiGrid,
@@ -32,7 +33,6 @@ const MuiTabs = ({
   };
 
   const [state, setState] = useState({ value: 0, autoplay, tabsLength: tabs.length });
-
   const handleChange = (event, newValue) => {
     setState({ ...state, value: newValue });
   };
@@ -46,7 +46,6 @@ const MuiTabs = ({
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-
 
   const onMouseEnter = () => {
     if (autoplay) {
@@ -66,6 +65,7 @@ const MuiTabs = ({
         if (json.results[0].formatted_address.includes(tab.geocodeState)) {
           return setState({ value: i });
         }
+        return null;
       });
     }
   };
@@ -96,6 +96,7 @@ const MuiTabs = ({
         scrollButtons={scrollButtons}
         textColor={textColor}
         variant={variant}
+        centered
       >
         {tabs.map((item, index) => (
           <Tab
@@ -111,27 +112,29 @@ const MuiTabs = ({
           />
         ))}
       </Tabs>
-
-      {tabs.map((tab, index) => (
-        <AutoPlaySwipeableViews
-          key={index}
-          index={state.value.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
-          onChangeIndex={handleChangeIndex}
-          autoplay={autoplay}
-          interval={typeof interval === 'string' ? Number(interval) : interval}
-          enableMouseEvents
-        >
-          <div
-            role="tabpanel"
-            hidden={state.value !== index}
+      <div style={{ height }}>
+        {tabs.map((tab, index) => (
+          <AutoPlaySwipeableViews
+            key={index}
+            index={state.value.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
+            onChangeIndex={handleChangeIndex}
+            autoplay={autoplay}
+            interval={typeof interval === 'string' ? Number(interval) : interval}
+            enableMouseEvents
           >
-            {tab.content.map((item, i) => createElement(
-              components[item.component],
-              Object.assign(item, { key: i }),
-            ))}
-          </div>
-        </AutoPlaySwipeableViews>
-      ))}
+            <div
+              role="tabpanel"
+              hidden={state.value !== index}
+              style={{ overflow: 'hidden' }}
+            >
+              {tab.content.map((item, i) => createElement(
+                components[item.component],
+                Object.assign(item, { key: i }),
+              ))}
+            </div>
+          </AutoPlaySwipeableViews>
+        ))}
+      </div>
     </div>
   );
 };
@@ -154,6 +157,10 @@ MuiTabs.propTypes = {
    * The tabs orientation (layout flow direction).
    */
   orientation: PropTypes.string,
+  /**
+   * Height of the tabs container.
+   */
+  height: PropTypes.string,
   /**
    * mui prop: 'auto' | 'desktop' | 'on' | 'off'
    * Determine behavior of scroll buttons when tabs are set to scroll:
@@ -203,4 +210,5 @@ MuiTabs.defaultProps = {
   autoplay: false,
   interval: 3000,
   geocode: false,
+  height: '300px',
 };
