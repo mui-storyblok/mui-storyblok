@@ -1,14 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import {
-  Grow, Paper, Popper, MenuItem, MenuList,
+  Grow,
+  Paper,
+  Popper,
+  MenuList,
+  Button,
+  ClickAwayListener,
 } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import MuiActionCard from './components/MuiActionCard/MuiActionCard';
 
 const MuiActionCardContainer = ({
   rootClass,
+  menuName,
+  actionCards,
+  height,
+  width,
 }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -51,7 +59,7 @@ const MuiActionCardContainer = ({
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Action Card Menu
+          {menuName}
         </Button>
         <Popper
           open={open}
@@ -68,16 +76,15 @@ const MuiActionCardContainer = ({
                   placement === 'bottom' ? 'center top' : 'center bottom',
               }}
             >
-              <Paper style={{ minWidth: '100vw' }}>
+              <Paper style={{ minWidth: '100vw', height: '100%' }}>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
+                    style={{ display: 'flex' }}
                   >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    {actionCards.map((card, index) => <MuiActionCard {...card} key={index} height={height} width={width} />)}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
@@ -97,8 +104,30 @@ MuiActionCardContainer.propTypes = {
    * Override or extend the styles applied to the component
   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * Text Displayed for menu
+   */
+  menuName: PropTypes.string,
+  /**
+   * Height of the each Action Card.
+   */
+  height: PropTypes.string,
+  /**
+   * Width of the each Action Card.
+   */
+  width: PropTypes.string,
+  /**
+   * Cards passed ot MuiActionCardContainer to render
+   * Component: MuiActionCard
+   */
+  actionCards: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 MuiActionCardContainer.defaultProps = {
   rootClass: [],
+  menuName: 'Action Card Menu',
+  height: '100px',
+  width: '200px',
 };

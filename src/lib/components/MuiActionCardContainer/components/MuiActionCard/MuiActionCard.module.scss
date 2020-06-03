@@ -1,0 +1,28 @@
+.actionCard {
+  padding: 10px;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-areas:
+    "icon header header header"
+    "icon text text text";
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #C7EBFA;
+    cursor: pointer;
+  }
+}
+
+.actionIcon {
+  grid-area: icon;
+}
+
+.actionHeader {
+  grid-area: header;
+}
+
+.actionBody {
+  grid-area: text;
+}
