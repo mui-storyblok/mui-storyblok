@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiActionCard /> snapshot 1`] = `
+<div
+  className="actionCard"
+  style={
+    Object {
+      "height": "100px",
+      "width": "100px",
+    }
+  }
+>
+  <div
+    className="actionIcon"
+  >
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-1 MuiIcon-colorSecondary"
+    >
+      star
+    </span>
+  </div>
+  <div
+    className="actionHeader"
+  >
+    <div
+      className="MuiTypography-root makeStyles-root-2 MuiTypography-body1"
+    >
+      <span
+        className="MuiTypography-root makeStyles-root-3 MuiTypography-body1"
+      >
+         Header of a card 
+      </span>
+    </div>
+  </div>
+  <div
+    className="actionBody"
+  >
+    <div
+      className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+    >
+      <span
+        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+      >
+         undefined 
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import styles from './MuiActionCard.module.scss';
+import StoryBlok from '../../../../utils/Storyblok';
 
 const MuiActionCard = ({
   header,
@@ -10,9 +11,12 @@ const MuiActionCard = ({
   text,
   height,
   width,
+  rootClass,
 }) => {
+  const classes = StoryBlok.anchorOrginToObj(rootClass);
+
   return (
-    <div style={{ height, width }} className={styles.actionCard}>
+    <div style={{ height, width, ...classes }} className={styles.actionCard}>
       <div className={styles.actionIcon}>
         <MuiIcon {...icon[0]} />
       </div>
@@ -29,6 +33,10 @@ const MuiActionCard = ({
 export default MuiActionCard;
 
 MuiActionCard.propTypes = {
+  /**
+   * storyblok multiselect of css classes
+  * */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * Cards passed to MuiActionCard to render
    * Component: MuiTypography
@@ -65,4 +73,5 @@ MuiActionCard.propTypes = {
 MuiActionCard.defaultProps = {
   height: '100px',
   width: '200px',
+  rootClass: [],
 };

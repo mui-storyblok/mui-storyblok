@@ -82,7 +82,7 @@ const MuiActionCardContainer = ({
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
-                    style={{ display: 'flex', flexWrap: 'wrap' }}
+                    style={{ display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly' }}
                   >
                     {actionCards.map((card, index) => <MuiActionCard {...card} key={index} height={height} width={width} />)}
                   </MenuList>
