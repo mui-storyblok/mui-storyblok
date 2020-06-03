@@ -18,7 +18,7 @@ export const MuiListExpansion = ({
   return (
     <>
       <ListItem button onClick={handleClick} className={styles.root}>
-        <MuiListItemIcon {...icon[0]} />
+        {icon.length ? <MuiListItemIcon {...icon[0]} /> : null}
         <ListItemText primary={primaryText} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
