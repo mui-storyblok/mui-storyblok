@@ -1,7 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import renderer from 'react-test-renderer';
 import MuiActionCard from './MuiActionCard';
 
 function setup() {
@@ -35,15 +33,5 @@ describe('<MuiActionCard />', () => {
   it('renders MuiActionCard', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
-  });
-
-  test('snapshot', () => {
-    const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiActionCard {...props} />
-      </MemoryRouter>,
-    );
-    expect(tree).toMatchSnapshot();
   });
 });
