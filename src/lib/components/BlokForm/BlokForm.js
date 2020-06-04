@@ -10,7 +10,7 @@ import {
   MuiSubmit,
   MuiCheckbox,
   MuiRadio,
-} from 'rff-wrapper/dist/index.mjs';
+} from 'rff-wrapper';
 import MuiIcon from '../MuiIcon/MuiIcon';
 
 import Grid from '../Grid/Grid';
@@ -98,3 +98,4 @@ BlokForm.propTypes = {
 BlokForm.defaultProps = {
   method: 'POST',
 };
+

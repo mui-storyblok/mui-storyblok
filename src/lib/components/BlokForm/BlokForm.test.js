@@ -31,6 +31,8 @@ describe('<BlokForm />', () => {
     const { comp } = setup();
     console.log(comp.debug());
     expect(comp).toBeDefined();
+    // console.log('@@@@@@', comp.find('Component').first().props())
+    expect(true).toBe(false)
   });
 
 
