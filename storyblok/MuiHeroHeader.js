@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiHeroHeader",
   "display_name": null,
-  "updated_at": "2020-05-20T17:46:14.808Z",
+  "updated_at": "2020-06-02T20:01:02.831Z",
   "schema": {
     "backgroundImageUrl": {
       "type": "text",
@@ -98,6 +98,10 @@ module.exports = {
         {
           "value": "height: 300px",
           "name": "height"
+        },
+        {
+          "value": "overflowX: hidden",
+          "name": "overflowX"
         }
       ],
       "pos": 4

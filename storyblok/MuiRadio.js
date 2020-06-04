@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiRadio",
   "display_name": null,
-  "updated_at": "2020-05-23T19:28:42.340Z",
+  "updated_at": "2020-06-01T17:35:57.768Z",
   "schema": {
     "name": {
       "type": "text",
@@ -14,8 +14,8 @@ module.exports = {
       "description": "   * Mui Props: 'default' | 'primary' | 'secondary'\n   * The color of the component. It supports those theme colors that make sense for this component.\n   */",
       "options": [
         {
-          "value": "inherit",
-          "name": "inherit"
+          "value": "default",
+          "name": "default"
         },
         {
           "value": "primary",
@@ -24,22 +24,10 @@ module.exports = {
         {
           "value": "secondary",
           "name": "secondary"
-        },
-        {
-          "value": "action",
-          "name": "action"
-        },
-        {
-          "value": "error",
-          "name": "error"
-        },
-        {
-          "value": "disabled",
-          "name": "disabled"
         }
       ],
       "required": true,
-      "default_value": "default"
+      "default_value": "secondary"
     },
     "disabled": {
       "type": "boolean",

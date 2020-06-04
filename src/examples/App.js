@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import MuiStoryblok from '../lib/index.mjs';
+import MuiStoryblok from '../lib/index';
 
 const App = () => (
   <BrowserRouter>

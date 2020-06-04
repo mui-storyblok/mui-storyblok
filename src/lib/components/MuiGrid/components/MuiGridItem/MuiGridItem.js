@@ -1,7 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-
 import Storyblok from '../../../../utils/Storyblok';
 import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiCard from '../../../MuiCard/MuiCard';
