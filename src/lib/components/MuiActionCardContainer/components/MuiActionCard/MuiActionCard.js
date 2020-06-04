@@ -35,7 +35,7 @@ export default MuiActionCard;
 MuiActionCard.propTypes = {
   /**
    * storyblok multiselect of css classes
-  * */
+  */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * Cards passed to MuiActionCard to render

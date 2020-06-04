@@ -58,6 +58,7 @@ const MuiActionCardContainer = ({
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
+          data-testid="menuButton"
         >
           {menuName}
         </Button>
