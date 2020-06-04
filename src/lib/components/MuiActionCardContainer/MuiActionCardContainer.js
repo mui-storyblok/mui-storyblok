@@ -20,7 +20,7 @@ const MuiActionCardContainer = ({
 }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
-  const styles = StoryBlok.arrayToMuiStyles(rootClass, { display: 'flex' });
+  const styles = StoryBlok.arrayToMuiStyles(rootClass, { padding: '0px 10%' });
 
   const handleToggle = () => {
     setOpen(prevOpen => !prevOpen);
@@ -51,7 +51,7 @@ const MuiActionCardContainer = ({
     prevOpen.current = open;
   }, [open]);
   return (
-    <div className={styles.root}>
+    <div>
       <div>
         <Button
           ref={anchorRef}
@@ -83,6 +83,7 @@ const MuiActionCardContainer = ({
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
+                    className={styles.root}
                     style={{ display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly' }}
                   >
                     {actionCards.map((card, index) => (

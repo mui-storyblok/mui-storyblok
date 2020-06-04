@@ -1,13 +1,9 @@
 .actionCard {
   padding: 10px;
-  display: grid;
+  display: flex;
   height: 100%;
-  grid-template-columns: 10% 90%;
-  grid-gap: 5px;
-  grid-template-areas:
-    "icon header"
-    "icon text";
   transition: 0.5s;
+  flex-direction: column;
 
   &:hover {
     background-color: #C7EBFA;
@@ -16,13 +12,8 @@
 }
 
 .actionIcon {
-  grid-area: icon;
-}
-
-.actionHeader {
-  grid-area: header;
-}
-
-.actionBody {
-  grid-area: text;
+  display: flex;
+  position: relative;
+  top: 22%;
+  padding-left: 10px;
 }
