@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiActionCardContainer from './MuiActionCardContainer';
@@ -31,7 +31,7 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<MuiActionCardContainer {...props} />);
+  const comp = mount(<MuiActionCardContainer {...props} />);
   return { comp, props };
 }
 
