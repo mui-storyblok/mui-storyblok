@@ -10,7 +10,7 @@ import {
   MuiSubmit,
   MuiCheckbox,
   MuiRadio,
-} from 'rff-wrapper/dist/index.mjs';
+} from 'rff-wrapper/dist/index';
 import MuiIcon from '../MuiIcon/MuiIcon';
 
 import Grid from '../Grid/Grid';
