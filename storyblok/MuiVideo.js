@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiVideo",
   "display_name": null,
-  "updated_at": "2020-05-28T16:34:31.927Z",
+  "updated_at": "2020-06-05T18:59:28.963Z",
   "schema": {
     "url": {
       "type": "text",
@@ -46,6 +46,10 @@ module.exports = {
     "pip": {
       "type": "boolean",
       "description": "   * Set to true or false to enable or disable picture-in-picture mode\n   * Only available when playing file URLs in certain browsers"
+    },
+    "rootClass": {
+      "type": "options",
+      "description": "* StoryBlok multiselect of CSS Classes\n* Applied to video Div"
     }
   },
   "image": null,
