@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiActionCard",
   "display_name": null,
-  "updated_at": "2020-06-03T15:51:04.447Z",
+  "updated_at": "2020-06-04T17:32:16.277Z",
   "schema": {
     "header": {
       "type": "bloks",
