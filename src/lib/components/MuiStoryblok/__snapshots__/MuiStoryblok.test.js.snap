@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MuiAppBar /> snapshot 1`] = `
+exports[`<MuiStoryblok /> snapshot 1`] = `
 <div
   className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
 >
