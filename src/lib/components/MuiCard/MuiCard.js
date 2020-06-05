@@ -23,7 +23,6 @@ const MuiCard = ({
     MuiCardMedia,
     MuiVideo,
   };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height, width });
 
   return (
@@ -43,7 +42,7 @@ export default MuiCard;
 
 MuiCard.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),

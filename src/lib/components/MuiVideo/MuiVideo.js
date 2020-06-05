@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
+import StoryBlok from '../../utils/Storyblok';
 
 const MuiVideo = ({
   url,
@@ -13,26 +14,36 @@ const MuiVideo = ({
   playbackRate,
   playsinline,
   pip,
-}) => (
-  <>
-    <ReactPlayer
-      url={url}
-      height={height}
-      width={width}
-      controls={controls}
-      playing={playing}
-      loop={loop}
-      light={light}
-      playbackRate={playbackRate}
-      playsinline={playsinline}
-      pip={pip}
-    />
-  </>
-);
+  rootClass,
+}) => {
+  const styles = StoryBlok.anchorOrginToObj(rootClass);
+
+  return (
+    <>
+      <ReactPlayer
+        url={url}
+        height={height}
+        width={width}
+        controls={controls}
+        playing={playing}
+        loop={loop}
+        light={light}
+        playbackRate={playbackRate}
+        playsinline={playsinline}
+        pip={pip}
+        style={{ margin: '0', ...styles }}
+      />
+    </>
+  );
+};
 
 export default MuiVideo;
 
 MuiVideo.propTypes = {
+  /**
+   * storyblok multiselect of css classes
+  */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * The Url for the video.
    */
@@ -89,4 +100,5 @@ MuiVideo.defaultProps = {
   playbackRate: 1,
   playsinline: false,
   pip: false,
+  rootClass: [],
 };
