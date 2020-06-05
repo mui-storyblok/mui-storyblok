@@ -94,11 +94,6 @@ MuiTypography.propTypes = {
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
   color: PropTypes.string,
-  /**
-   * mui prop: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'body1' | 'body2' | 'caption' | 'button' | 'overline' | 'srOnly' | 'inherit'
-   * Applies the theme typography styles.
-   * */
-  variant: PropTypes.string,
   /** hight of the Typography element */
   height: PropTypes.string,
   /** width of the Typography element */
@@ -114,6 +109,5 @@ MuiTypography.defaultProps = {
   height: '100%',
   align: 'inherit',
   color: 'initial',
-  variant: 'body1',
   rootClass: [],
 };
