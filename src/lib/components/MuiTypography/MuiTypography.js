@@ -51,7 +51,6 @@ export const MuiTypography = ({
   return (
     <Typography
       className={styles.root}
-      variant={variant}
       align={align}
       color={color}
       component="div"
