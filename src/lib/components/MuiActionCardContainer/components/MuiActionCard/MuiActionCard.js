@@ -17,10 +17,8 @@ const MuiActionCard = ({
 
   return (
     <div style={{ height, width, ...classes }} className={styles.actionCard}>
-      <div className={styles.actionIcon}>
-        <MuiIcon {...icon[0]} />
-      </div>
       <div className={styles.actionHeader}>
+        <MuiIcon {...icon[0]} />
         <MuiTypography {...header[0]} />
       </div>
       <div className={styles.actionBody}>

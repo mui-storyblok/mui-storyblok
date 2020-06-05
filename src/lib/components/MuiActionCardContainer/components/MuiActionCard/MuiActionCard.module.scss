@@ -4,6 +4,7 @@
   height: 100%;
   transition: 0.5s;
   flex-direction: column;
+  justify-content: center;
 
   &:hover {
     background-color: #C7EBFA;
@@ -11,9 +12,8 @@
   }
 }
 
-.actionIcon {
+.actionHeader {
   display: flex;
-  position: relative;
-  top: 22%;
-  padding-left: 10px;
+  padding-bottom: 10px;
+  justify-content: flex-start;
 }
