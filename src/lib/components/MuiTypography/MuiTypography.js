@@ -22,7 +22,6 @@ import MuiLink from './components/MuiLink/MuiLink';
 export const MuiTypography = ({
   align,
   color,
-  variant,
   height,
   width,
   rootClass,
