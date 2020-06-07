@@ -18,7 +18,6 @@ const Grid = ({
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
   const gridRender = Object.keys(gridItemComponents);
-console.log('!!!!!', content)
   return (
     <MuiGrid
       container

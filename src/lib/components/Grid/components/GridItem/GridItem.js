@@ -39,7 +39,6 @@ const GridItem = ({
       xl={sizeGrid(xl)}
     >
       {content.length > 0 && content.map((item, index) => {
-        console.log(item);
         return createElement(
           gridItemComponents[item.component],
           Object.assign(item, { key: index }),

@@ -11,8 +11,6 @@ import {
   MuiCheckbox,
   MuiRadio,
 } from 'rff-wrapper';
-import MuiIcon from '../MuiIcon/MuiIcon';
-
 import Grid from '../Grid/Grid';
 
 const BlokForm = ({
@@ -24,7 +22,6 @@ const BlokForm = ({
   method,
 }) => {
   const gridItemComponents = {
-    MuiIcon,
     MuiInput,
     MuiSelect,
     MuiSubmit,
@@ -70,15 +67,14 @@ const BlokForm = ({
       onSubmit={onSubmit}
     >
       <>
-        {console.log(content)}
         {content.map((item, index) => (
           <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
         ))}
       </>
       <MuiSubmit {...submitButton[0]} />
       <>
-        {state.successResponse && <Typography>{state.successResponse}</Typography>}
-        {state.errorResponse && <Typography color="error">{state.errorResponse}</Typography>}
+        {state.successResponse && <Typography data-testid="successResponse">{state.successResponse}</Typography>}
+        {state.errorResponse && <Typography color="error" data-testid="errorResponse">{state.errorResponse}</Typography>}
       </>
     </Form>
   );

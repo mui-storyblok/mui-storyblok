@@ -1,7 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
+import renderer from 'react-test-renderer';
+import moxios from 'moxios';
 import BlokForm from './BlokForm';
-
 
 function setup() {
   const props = {
@@ -10,8 +12,23 @@ function setup() {
       content: [{
         component: 'FormGridItem',
         content: [{
-          component: 'MuiIcon',
-          iconName: 'android',
+          component: 'MuiCheckbox',
+          name: 'checkbox',
+        }, {
+          component: 'MuiInput',
+          name: 'input',
+        }, {
+          component: 'MuiSelect',
+          name: 'select',
+          options: ['one', 'two', 'three'],
+        }, {
+          component: 'MuiRadio',
+          name: 'radio',
+          value: 'radio1',
+        }, {
+          component: 'MuiRadio',
+          name: 'radio',
+          value: 'radio2',
         }],
       }],
     }],
@@ -19,7 +36,7 @@ function setup() {
       buttonText: 'submit',
     }],
     baseUrl: 'woo.com',
-    successResponseText: 'good',
+    successResponseText: '!!!!!!!!!!!!!!!!!!!!!good!!!!!!!!!!!!!!!!!!!!!',
     errorResponseText: 'bad',
   };
   const comp = mount(<BlokForm {...props} />);
@@ -27,33 +44,52 @@ function setup() {
 }
 
 describe('<BlokForm />', () => {
+  beforeEach(() => {
+    moxios.install();
+  });
+
+  afterEach(() => {
+    moxios.uninstall();
+  });
+
   it('renders BlokForm', () => {
     const { comp } = setup();
-    console.log(comp.debug());
     expect(comp).toBeDefined();
-    // console.log('@@@@@@', comp.find('Component').first().props())
-    expect(true).toBe(false)
+  });
+
+  describe('submits', () => {
+    it('clicks submit set successResponseText', async () => {
+      moxios.stubRequest('woo.com', {
+        status: 200,
+        response: {
+          data: {},
+        },
+      });
+
+      const { comp } = setup();
+
+      act(async () => {
+        await comp
+          .find('form')
+          .first()
+          .simulate('submit');
+      });
+
+
+      // console.log(comp.debug());
+      const successResponse = comp.find('[data-testid="successResponse"]');
+      console.log(successResponse);
+
+      expect(successResponse.count).toEqual(1);
+    });
   });
 
 
-  //   it('clicks submit', () => {
-  //     const { comp } = setup();
-  //     console.log(comp.debug());
-  //     const submit = comp
-  //         .find('Component')
-  //         .first().props();
-  //     console.log(submit);
-  //     expect(true).toBe(false);
-  //   });
-
-// TODO: snap thwoing Element type is invalid with rff-wrapper Form?
-//   test('snapshot', () => {
-//     const { props } = setup();
-//     const tree = renderer.create((
-//       <MemoryRouter>
-//         <BlokForm {...props} />
-//       </MemoryRouter>
-//     ));
-//     expect(tree).toMatchSnapshot();
-//   });
+  test('snapshot', () => {
+    const { props } = setup();
+    const tree = renderer.create((
+      <BlokForm {...props} />
+    ));
+    expect(tree).toMatchSnapshot();
+  });
 });
