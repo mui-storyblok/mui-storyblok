@@ -6,7 +6,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "apjames93/mui-storyblok"
@@ -156,7 +155,7 @@
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
-    "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
+    "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "export-storyblok": "npx storyblok-component-export",
     "test-report": "react-scripts test --watchAll=false --coverage"
   },
