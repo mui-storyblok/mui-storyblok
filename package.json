@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -126,7 +126,8 @@
     "react-scripts": "3.4.1",
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
-    "storyblok-js-client": "^1.0.21"
+    "storyblok-js-client": "^1.0.21",
+    "rff-wrapper": "^1.0.08"
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
@@ -139,7 +140,8 @@
     "prop-types": "^15.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "rff-wrapper": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -153,7 +155,7 @@
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
-    "deploy-docs": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-docs.com/ --delete",
+    "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "export-storyblok": "npx storyblok-component-export",
     "test-report": "react-scripts test --watchAll=false --coverage"
   },
@@ -183,6 +185,7 @@
     "react-player": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "react-swipeable-views": "^0.13.9",
+    "rff-wrapper": "^1.0.2",
     "storyblok-migrate": "^0.3.3"
   }
 }
