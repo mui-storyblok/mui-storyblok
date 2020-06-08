@@ -23,5 +23,11 @@ MuiIcon example:
       iconName='done'
       color='error'
     />
+
+      <MuiIcon
+      iconName='done'
+      color='error'
+      fontSize="small"
+    />
   </div>
 ```

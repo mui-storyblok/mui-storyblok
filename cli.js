@@ -17,10 +17,10 @@ const asyncCmd = (cmd) => {
   });
 };
 
-const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
+// const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
 
 // for developemnt use
-// const files = fs.readdirSync('storyblok');
+const files = fs.readdirSync('storyblok');
 
 const fileNames = files.map((file) => {
   if (!file.includes('config')) {
