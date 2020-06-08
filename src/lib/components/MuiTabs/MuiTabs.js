@@ -185,7 +185,7 @@ MuiTabs.propTypes = {
     - standard will render the default state.
    */
   variant: PropTypes.string,
-  /** autoplay will incroment tabs by a interval */
+  /** autoplay will increment tabs by a interval */
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

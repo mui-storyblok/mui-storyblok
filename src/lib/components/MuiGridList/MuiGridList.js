@@ -97,7 +97,7 @@ MuiGridList.propTypes = {
    */
   gridListTileBar: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
-  })).isRequired,
+  })),
 };
 
 MuiGridList.defaultProps = {
@@ -107,4 +107,5 @@ MuiGridList.defaultProps = {
   spacing: 4,
   height: 500,
   width: 450,
+  gridListTileBar: [],
 };
