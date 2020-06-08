@@ -36,7 +36,7 @@ const BlokForm = ({
 
   const onSubmit = async (values) => {
     setState({
-      successResponse: '',
+      successResponse: successResponseText,
       errorResponse: '',
     });
     const queryString = Object.keys(values).map(key => `${key}=${values[key]}`).join('&');
@@ -50,10 +50,12 @@ const BlokForm = ({
     try {
       await axios(options);
 
-      return setState({
+      setState({
         successResponse: successResponseText,
         errorResponse: '',
       });
+      console.log("state===", state)
+      return state;
     } catch (err) {
       return setState({
         successResponse: '',
@@ -73,8 +75,8 @@ const BlokForm = ({
       </>
       <MuiSubmit {...submitButton[0]} />
       <>
-        {state.successResponse && <Typography data-testid="successResponse">{state.successResponse}</Typography>}
-        {state.errorResponse && <Typography color="error" data-testid="errorResponse">{state.errorResponse}</Typography>}
+        {state.successResponse && <Typography data-testid="successResponseTestID">{state.successResponse}</Typography>}
+        {state.errorResponse && <Typography color="error" data-testid="errorResponseTestID">{state.errorResponse}</Typography>}
       </>
     </Form>
   );
