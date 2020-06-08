@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCard",
   "display_name": null,
-  "updated_at": "2020-05-28T19:35:55.138Z",
+  "updated_at": "2020-06-05T18:55:12.504Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -28,6 +28,14 @@ module.exports = {
         {
           "value": "max-width: 500",
           "name": "maxWidth"
+        },
+        {
+          "value": "display: flex",
+          "name": "flex"
+        },
+        {
+          "value": "justify-content: center",
+          "name": "justify center"
         }
       ]
     },

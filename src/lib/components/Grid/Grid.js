@@ -83,13 +83,15 @@ Grid.propTypes = {
   */
   direction: PropTypes.string,
   /**
-   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
+   * mui prop:
+   * 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
    * Defines the justify-content style property. It is applied for all screen sizes.
    */
   justify: PropTypes.string,
   /**
    * mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-   * Defines the space between the type item component. It can only be used on a type container component.
+   * Defines the space between the type item
+   component. It can only be used on a type container component.
    */
   spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**

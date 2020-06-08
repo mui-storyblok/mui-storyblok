@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
@@ -43,6 +44,7 @@ function setup() {
   return { comp, props };
 }
 
+
 describe('<BlokForm />', () => {
   beforeEach(() => {
     moxios.install();
@@ -57,7 +59,20 @@ describe('<BlokForm />', () => {
     expect(comp).toBeDefined();
   });
 
-  describe('submits', () => {
+
+  describe('submits having an issue with act and async i think? state is not setting', () => {
+    let container;
+
+    beforeEach(() => {
+      container = document.createElement('div');
+      document.body.appendChild(container);
+    });
+
+    afterEach(() => {
+      document.body.removeChild(container);
+      container = null;
+    });
+
     it('clicks submit set successResponseText', async () => {
       moxios.stubRequest('woo.com', {
         status: 200,
@@ -65,25 +80,39 @@ describe('<BlokForm />', () => {
           data: {},
         },
       });
-
-      const { comp } = setup();
-
-      act(async () => {
-        await comp
-          .find('form')
-          .first()
-          .simulate('submit');
+      const { props } = setup();
+      act(() => {
+        ReactDOM.render(<BlokForm {...props} />, container);
       });
 
+      const button = container.querySelector('button');
+      await act(async () => {
+        // eslint-disable-next-line no-undef
+        button.dispatchEvent(new MouseEvent('click'));
+      });
+      expect(container.innerHTML.includes('data-testid="successResponseTestID"')).toBe(true);
+    });
 
-      // console.log(comp.debug());
-      const successResponse = comp.find('[data-testid="successResponse"]');
-      console.log(successResponse);
+    it('clicks submit set errorResponse', async () => {
+      moxios.stubRequest('woo.com', {
+        status: 500,
+        response: {
+          data: {},
+        },
+      });
+      const { props } = setup();
+      act(() => {
+        ReactDOM.render(<BlokForm {...props} />, container);
+      });
 
-      expect(successResponse.count).toEqual(1);
+      const button = container.querySelector('button');
+      await act(async () => {
+        // eslint-disable-next-line no-undef
+        button.dispatchEvent(new MouseEvent('click'));
+      });
+      expect(container.innerHTML.includes('data-testid="errorResponseTestID"')).toBe(true);
     });
   });
-
 
   test('snapshot', () => {
     const { props } = setup();
