@@ -109,7 +109,8 @@ MuiGridItem.propTypes = {
   lg: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   md: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
