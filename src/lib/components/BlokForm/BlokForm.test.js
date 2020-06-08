@@ -87,9 +87,10 @@ describe('<BlokForm />', () => {
 
       const button = container.querySelector('button');
       await act(async () => {
+        // eslint-disable-next-line no-undef
         button.dispatchEvent(new MouseEvent('click'));
       });
-      expect(container.innerHTML.includes('data-testid="successResponseTestID"')).toBe(true)
+      expect(container.innerHTML.includes('data-testid="successResponseTestID"')).toBe(true);
     });
 
     it('clicks submit set errorResponse', async () => {
@@ -106,6 +107,7 @@ describe('<BlokForm />', () => {
 
       const button = container.querySelector('button');
       await act(async () => {
+        // eslint-disable-next-line no-undef
         button.dispatchEvent(new MouseEvent('click'));
       });
       expect(container.innerHTML.includes('data-testid="errorResponseTestID"')).toBe(true);

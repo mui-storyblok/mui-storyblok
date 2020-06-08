@@ -38,12 +38,10 @@ const GridItem = ({
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
     >
-      {content.length > 0 && content.map((item, index) => {
-        return createElement(
-          gridItemComponents[item.component],
-          Object.assign(item, { key: index }),
-        );
-      })}
+      {content.length > 0 && content.map((item, index) => createElement(
+        gridItemComponents[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </Grid>
   );
 };
@@ -81,18 +79,22 @@ GridItem.propTypes = {
    */
   justify: PropTypes.string,
   /**
-   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * mui prop:
+   false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use.
+    It's applied for the breakpoint and wider screens if not overridden.
    */
   lg: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   md: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   sm: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
@@ -107,12 +109,14 @@ GridItem.propTypes = {
   wrap: PropTypes.string,
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   xs: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   xl: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 

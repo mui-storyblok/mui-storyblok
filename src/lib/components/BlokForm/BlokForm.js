@@ -54,7 +54,6 @@ const BlokForm = ({
         successResponse: successResponseText,
         errorResponse: '',
       });
-      console.log("state===", state)
       return state;
     } catch (err) {
       return setState({

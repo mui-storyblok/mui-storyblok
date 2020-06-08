@@ -8,10 +8,6 @@ import Blok from './components/Blok/Blok';
 import MuiTransitions from '../MuiTransitions/MuiTransitions';
 import styles from './StoryBlokPage.module.scss';
 
-
-import BlokForm from '../BlokForm/BlokForm';
-
-
 export class StoryBlokPage extends Component {
   state = {
     story: [],

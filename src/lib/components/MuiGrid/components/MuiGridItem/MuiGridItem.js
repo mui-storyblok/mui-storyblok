@@ -95,13 +95,16 @@ MuiGridItem.propTypes = {
   */
   direction: PropTypes.string,
   /**
-   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
+   * mui prop:
+   'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
    * Defines the justify-content style property. It is applied for all screen sizes.
    */
   justify: PropTypes.string,
   /**
-   * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * mui prop:
+   false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
+   * Defines the number of grids the component is going to use.
+    It's applied for the breakpoint and wider screens if not overridden.
    */
   lg: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
@@ -111,12 +114,14 @@ MuiGridItem.propTypes = {
   md: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   sm: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-   * Defines the space between the type item component. It can only be used on a type container component.
+   * Defines the space between the type item component.
+   It can only be used on a type container component.
    */
   spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
@@ -126,12 +131,14 @@ MuiGridItem.propTypes = {
   wrap: PropTypes.string,
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   xs: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop: false | 'auto' | true | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
-   * Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden.
+   * Defines the number of grids the component is going to use.
+   It's applied for the breakpoint and wider screens if not overridden.
    */
   xl: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 

@@ -1,10 +1,10 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogContent from '@material-ui/core/DialogContent';
-
 import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import BlokForm from '../../../BlokForm/BlokForm';
 
 const MuiDialogContent = ({
   dividers,
@@ -15,6 +15,7 @@ const MuiDialogContent = ({
   const components = {
     MuiTypography,
     MuiExpansionPanel,
+    BlokForm,
   };
 
   return (
@@ -43,7 +44,7 @@ MuiDialogContent.propTypes = {
    * Display the top and bottom dividers.
    * */
   dividers: PropTypes.bool,
-  /** MuiTypography MuiExpansionPanel */
+  /** MuiTypography MuiExpansionPanel, BlokForm */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
