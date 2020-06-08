@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-01T23:04:34.885Z",
+  "updated_at": "2020-06-08T19:20:06.180Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -91,17 +91,7 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiButtonRedirect",
-        "MuiButtonHref",
-        "MuiIconButtonRedirect",
-        "MuiIconButtonHref",
-        "MuiMenu",
-        "MuiButtonDrawer",
-        "MuiIconButton",
-        "MuiIconButtonDrawer",
-        "MuiButtonSnackbar",
-        "MuiImage",
-        "MuiActionCardContainer"
+        "MuiAppBarGrid"
       ],
       "required": true
     }
