@@ -1,5 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
+import { MemoryRouter } from 'react-router-dom';
+import { act } from 'react-dom/test-utils';
+import renderer from 'react-test-renderer';
 import MuiActionCard from './MuiActionCard';
 
 function setup() {
@@ -24,14 +28,53 @@ function setup() {
         text: 'this is the text of an action card body.',
       }],
     }],
+    redirectRoute: '/page-welcome',
+    history: {
+      push: jest.fn(),
+    },
   };
-  const comp = shallow(<MuiActionCard {...props} />);
+  const comp = mount(<MuiActionCard {...props} />);
   return { comp, props };
 }
+
+let container;
+
+beforeEach(() => {
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  document.body.removeChild(container);
+  container = null;
+});
 
 describe('<MuiActionCard />', () => {
   it('renders MuiActionCard', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
+  });
+
+  test('snapshot', () => {
+    const { props } = setup();
+    const tree = renderer.create(
+      <MemoryRouter>
+        <MuiActionCard {...props} />
+      </MemoryRouter>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('handleClick and call GoogleHelpers contact ', async () => {
+    const { props } = setup();
+    act(() => {
+      ReactDOM.render(<MuiActionCard {...props} />, container);
+    });
+
+    const btn = container.querySelector('#actionCard-test');
+    act(() => {
+      btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    expect(props.history.push).toBeCalled();
   });
 });

@@ -8,11 +8,12 @@ import {
   Button,
   ClickAwayListener,
 } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
 import StoryBlok from '../../utils/Storyblok';
 import MuiActionCard from './components/MuiActionCard/MuiActionCard';
 import MuiTypography from '../MuiTypography/MuiTypography';
 
-const MuiActionCardContainer = ({
+export const MuiActionCardContainer = ({
   rootClass,
   menuName,
   actionCards,
@@ -59,56 +60,55 @@ const MuiActionCardContainer = ({
 
     prevOpen.current = open;
   }, [open]);
+
   return (
-    <div>
-      <div>
-        <Button
-          ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-          data-testid="menuButton"
-        >
-          <MuiTypography {...menuName[0]} />
-        </Button>
-        <Popper
-          open={open}
-          anchorEl={anchorRef.current}
-          role={undefined}
-          transition
-          disablePortal
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === 'bottom' ? 'center top' : 'center bottom',
-              }}
-            >
-              <Paper style={{ minWidth: '100vw', height: '100%' }}>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList
-                    autoFocusItem={open}
-                    id="menu-list-grow"
-                    onKeyDown={handleListKeyDown}
-                    className={styles.root}
-                  >
-                    {actionCards.map((card, index) => (
-                      <MuiActionCard {...card} key={index} height={height} width={width} />
-                    ))}
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
-    </div>
+    <>
+      <Button
+        ref={anchorRef}
+        aria-controls={open ? 'menu-list-grow' : undefined}
+        aria-haspopup="true"
+        onClick={handleToggle}
+        data-testid="menuButton"
+      >
+        <MuiTypography {...menuName[0]} />
+      </Button>
+      <Popper
+        open={open}
+        anchorEl={anchorRef.current}
+        role={undefined}
+        transition
+        disablePortal
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin:
+                placement === 'bottom' ? 'center top' : 'center bottom',
+            }}
+          >
+            <Paper style={{ minWidth: '100vw', height: '100%' }}>
+              <ClickAwayListener onClickAway={handleClose}>
+                <MenuList
+                  autoFocusItem={open}
+                  id="menu-list-grow"
+                  onKeyDown={handleListKeyDown}
+                  className={styles.root}
+                >
+                  {actionCards.map((card, index) => (
+                    <MuiActionCard {...card} key={index} height={height} width={width} />
+                  ))}
+                </MenuList>
+              </ClickAwayListener>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+    </>
   );
 };
 
-export default MuiActionCardContainer;
+export default withRouter(MuiActionCardContainer);
 
 MuiActionCardContainer.propTypes = {
   /**

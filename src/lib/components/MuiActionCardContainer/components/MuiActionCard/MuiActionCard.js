@@ -2,13 +2,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import styles from './MuiActionCard.module.scss';
 import StoryBlok from '../../../../utils/Storyblok';
 
-const MuiActionCard = ({
+export const MuiActionCard = ({
   header,
   icon,
   text,
@@ -26,6 +25,7 @@ const MuiActionCard = ({
       style={{ height, width, ...classes }}
       className={styles.actionCard}
       onClick={onClick}
+      id="actionCard-test"
     >
       <div className={styles.actionHeader}>
         <MuiIcon {...icon[0]} />
@@ -38,7 +38,7 @@ const MuiActionCard = ({
   );
 };
 
-export default withRouter(MuiActionCard);
+export default MuiActionCard;
 
 MuiActionCard.propTypes = {
   /**
