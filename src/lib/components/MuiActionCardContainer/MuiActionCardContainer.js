@@ -84,7 +84,9 @@ const MuiActionCardContainer = ({
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                     className={styles.root}
-                    style={{ display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly' }}
+                    style={{
+                      display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly', outline: 'none',
+                    }}
                   >
                     {actionCards.map((card, index) => (
                       <MuiActionCard {...card} key={index} height={height} width={width} />

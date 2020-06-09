@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import styles from './MuiActionCard.module.scss';
@@ -12,11 +15,21 @@ const MuiActionCard = ({
   height,
   width,
   rootClass,
+  redirectRoute,
+  history,
 }) => {
   const classes = StoryBlok.anchorOrginToObj(rootClass);
 
+  const onClick = async () => {
+    return history.push(redirectRoute);
+  };
+
   return (
-    <div style={{ height, width, ...classes }} className={styles.actionCard}>
+    <div
+      style={{ height, width, ...classes }}
+      className={styles.actionCard}
+      onClick={onClick}
+    >
       <div className={styles.actionHeader}>
         <MuiIcon {...icon[0]} />
         <MuiTypography {...header[0]} />
@@ -28,7 +41,7 @@ const MuiActionCard = ({
   );
 };
 
-export default MuiActionCard;
+export default withRouter(MuiActionCard);
 
 MuiActionCard.propTypes = {
   /**
@@ -49,6 +62,12 @@ MuiActionCard.propTypes = {
   icon: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
+  /** redirect route */
+  redirectRoute: PropTypes.string.isRequired,
+  /** react history not a storyblok prop */
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
   /**
    * Cards passed to MuiActionCard to render
    * Component: MuiTypography
