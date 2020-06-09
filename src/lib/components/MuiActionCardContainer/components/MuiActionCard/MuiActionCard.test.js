@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
-import MuiActionCard from './MuiActionCard';
+import { MuiActionCard } from './MuiActionCard';
 
 function setup() {
   const props = {
@@ -49,6 +49,15 @@ afterEach(() => {
   container = null;
 });
 
+global.document.createRange = () => ({
+  setStart: () => {},
+  setEnd: () => {},
+  commonAncestorContainer: {
+    nodeName: 'BODY',
+    ownerDocument: document,
+  },
+});
+
 describe('<MuiActionCard />', () => {
   it('renders MuiActionCard', () => {
     const { comp } = setup();
@@ -68,11 +77,17 @@ describe('<MuiActionCard />', () => {
   it('handleClick and call GoogleHelpers contact ', async () => {
     const { props } = setup();
     act(() => {
-      ReactDOM.render(<MuiActionCard {...props} />, container);
+      ReactDOM.render(
+        <MemoryRouter>
+          <MuiActionCard {...props} />
+        </MemoryRouter>,
+        container,
+      );
     });
 
     const btn = container.querySelector('#actionCard-test');
     act(() => {
+      // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     expect(props.history.push).toBeCalled();

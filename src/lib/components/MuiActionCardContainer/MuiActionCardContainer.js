@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import {
   Grow,
   Paper,
@@ -8,10 +9,10 @@ import {
   Button,
   ClickAwayListener,
 } from '@material-ui/core';
-import { withRouter } from 'react-router-dom';
 import StoryBlok from '../../utils/Storyblok';
 import MuiActionCard from './components/MuiActionCard/MuiActionCard';
 import MuiTypography from '../MuiTypography/MuiTypography';
+import useHandleClose from './customHooks/useHandleClose';
 
 export const MuiActionCardContainer = ({
   rootClass,
@@ -19,6 +20,7 @@ export const MuiActionCardContainer = ({
   actionCards,
   height,
   width,
+  history,
 }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -27,7 +29,7 @@ export const MuiActionCardContainer = ({
     marginTop: '10px',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     outline: 'none',
   };
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { ...defaultStyling });
@@ -96,7 +98,7 @@ export const MuiActionCardContainer = ({
                   className={styles.root}
                 >
                   {actionCards.map((card, index) => (
-                    <MuiActionCard {...card} key={index} height={height} width={width} />
+                    <MuiActionCard {...card} key={index} height={height} width={width} history={history} />
                   ))}
                 </MenuList>
               </ClickAwayListener>
@@ -109,6 +111,7 @@ export const MuiActionCardContainer = ({
 };
 
 export default withRouter(MuiActionCardContainer);
+// export default MuiActionCardContainer;
 
 MuiActionCardContainer.propTypes = {
   /**
@@ -138,6 +141,10 @@ MuiActionCardContainer.propTypes = {
   actionCards: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
+  /** react history not a storyblok prop */
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
 };
 
 MuiActionCardContainer.defaultProps = {

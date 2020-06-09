@@ -17,6 +17,9 @@ function setup() {
     }],
     height: '100px',
     width: '100px',
+    history: {
+      push: jest.fn(),
+    },
     actionCards: [{
       component: 'MuiActionCard',
       header: [{
@@ -86,12 +89,14 @@ describe('<MuiActionCardContainer />', () => {
 
   it('should handleToggle and set open to close and close to open', () => {
     const { props } = setup();
+
     act(() => {
       ReactDOM.render(<MuiActionCardContainer {...props} />, container);
     });
 
     const btn = container.querySelector('button');
     act(() => {
+      // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
