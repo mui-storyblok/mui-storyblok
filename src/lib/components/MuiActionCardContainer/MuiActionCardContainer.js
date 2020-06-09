@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
 import MuiActionCard from './components/MuiActionCard/MuiActionCard';
+import MuiTypography from '../MuiTypography/MuiTypography';
 
 const MuiActionCardContainer = ({
   rootClass,
@@ -60,7 +61,7 @@ const MuiActionCardContainer = ({
           onClick={handleToggle}
           data-testid="menuButton"
         >
-          {menuName}
+          <MuiTypography {...menuName[0]} />
         </Button>
         <Popper
           open={open}
@@ -111,10 +112,6 @@ MuiActionCardContainer.propTypes = {
   * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * Text Displayed for menu
-   */
-  menuName: PropTypes.string,
-  /**
    * Height of the each Action Card.
    */
   height: PropTypes.string,
@@ -122,6 +119,13 @@ MuiActionCardContainer.propTypes = {
    * Width of the each Action Card.
    */
   width: PropTypes.string,
+  /**
+   * Text Displayed for menu
+   * Component: MuiTypography
+   */
+  menuName: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })).isRequired,
   /**
    * Cards passed ot MuiActionCardContainer to render
    * Component: MuiActionCard
@@ -133,7 +137,6 @@ MuiActionCardContainer.propTypes = {
 
 MuiActionCardContainer.defaultProps = {
   rootClass: [],
-  menuName: 'Action Card Menu',
   height: '100px',
   width: '200px',
 };
