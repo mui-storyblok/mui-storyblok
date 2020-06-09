@@ -7,11 +7,14 @@ import MuiAppBar from './MuiAppBar';
 function setup() {
   const props = {
     content: [{
-      component: 'MuiButtonRedirect',
-      redirectRoute: '',
-      button: [{
-        component: 'MuiButton',
-        buttonText: 'here',
+      component: 'GridItem',
+      content: [{
+        component: 'MuiButtonHref',
+        button: [{
+          component: 'MuiButton',
+          buttonText: 'cool',
+        }],
+        href: 'cool.com',
       }],
     }],
   };

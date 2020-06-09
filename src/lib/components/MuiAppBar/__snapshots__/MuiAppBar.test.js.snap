@@ -7,31 +7,35 @@ exports[`<MuiAppBar /> snapshot 1`] = `
   <div
     className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
   >
-    <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-4 MuiButton-textSecondary MuiButton-fullWidth"
-      data-testid="muiButton"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <div
+      className="MuiGrid-root makeStyles-root-4 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
-      <span
-        className="MuiButton-label"
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-5 MuiButton-textSecondary MuiButton-fullWidth"
+        data-testid="muiButton"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
       >
-        here
-      </span>
-    </button>
+        <span
+          className="MuiButton-label"
+        >
+          cool
+        </span>
+      </button>
+    </div>
   </div>
 </header>
 `;

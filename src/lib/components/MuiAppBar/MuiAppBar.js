@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
-// import React, { createElement, lazy, Suspense } from 'react';
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -15,21 +14,7 @@ import MuiButtonDrawer from '../MuiButtonDrawer/MuiButtonDrawer';
 import MuiIconButtonDrawer from '../MuiIconButtonDrawer/MuiIconButtonDrawer';
 import MuiButtonSnackbar from '../MuiButtonSnackbar/MuiButtonSnackbar';
 import MuiImage from '../MuiImage/MuiImage';
-
-// Styleguidist uses react-docgen and they do not support ImportExpression yet and was unable to generat docs for props
-// leaving code her as a reminder that it needs to be done once support comes out for it
-// const MuiButtonRedirect = lazy(() => import('../MuiButtonRedirect/MuiButtonRedirect'));
-// const MuiButtonHref = lazy(() => import('../MuiButtonHref/MuiButtonHref'));
-// const MuiIconButtonRedirect = lazy(() => import('../MuiIconButtonRedirect/MuiIconButtonRedirect'));
-// const MuiIconButtonHref = lazy(() => import('../MuiIconButtonHref/MuiIconButtonHref'));
-// const MuiMenu = lazy(() => import('../MuiMenu/MuiMenu'));
-
-// <Suspense fallback={<div />}>
-//   {content.map((item, index) => createElement(
-//     components[item.component],
-//     Object.assign(item, { key: index }),
-//   ))}
-// </Suspense>;
+import Grid from '../Grid/Grid';
 
 const MuiAppBar = ({
   rootClass,
@@ -39,7 +24,7 @@ const MuiAppBar = ({
   variant,
   disableGutters,
 }) => {
-  const components = {
+  const gridItemComponents = {
     MuiButtonRedirect,
     MuiButtonHref,
     MuiIconButtonRedirect,
@@ -63,10 +48,11 @@ const MuiAppBar = ({
         variant={variant}
         disableGutters={disableGutters}
       >
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
+        <>
+          {content.map((item, index) => (
+            <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
+          ))}
+        </>
       </Toolbar>
     </AppBar>
   );
