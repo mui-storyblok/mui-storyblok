@@ -19,10 +19,7 @@ const MuiActionCard = ({
   history,
 }) => {
   const classes = StoryBlok.anchorOrginToObj(rootClass);
-
-  const onClick = async () => {
-    return history.push(redirectRoute);
-  };
+  const onClick = async () => history.push(redirectRoute);
 
   return (
     <div

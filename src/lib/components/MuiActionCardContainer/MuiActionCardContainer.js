@@ -21,7 +21,15 @@ const MuiActionCardContainer = ({
 }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
-  const styles = StoryBlok.arrayToMuiStyles(rootClass, { padding: '0px 10%' });
+  const defaultStyling = {
+    padding: '20px 10%',
+    marginTop: '10px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    outline: 'none',
+  };
+  const styles = StoryBlok.arrayToMuiStyles(rootClass, { ...defaultStyling });
 
   const handleToggle = () => {
     setOpen(prevOpen => !prevOpen);
@@ -85,9 +93,6 @@ const MuiActionCardContainer = ({
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}
                     className={styles.root}
-                    style={{
-                      display: 'flex', flexWrap: 'wrap', justfiyContent: 'space-evenly', outline: 'none',
-                    }}
                   >
                     {actionCards.map((card, index) => (
                       <MuiActionCard {...card} key={index} height={height} width={width} />
