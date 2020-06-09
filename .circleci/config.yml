@@ -23,7 +23,7 @@ jobs:
             # Run tests
             - run: ./cc-test-reporter before-build
             - run: npm run test-ci && ./cc-test-reporter after-build --exit-code $?
-  deploy-docs:
+  deploy-style-guide:
     executor:
       name: node/default
     steps:
@@ -35,7 +35,7 @@ jobs:
             - run: sudo python get-pip.py
             - run: sudo -H pip install awscli --upgrade --ignore-installed six
             - run: npm uninstall node-sass -g && npm cache clean --force && npm install node-sass
-            - run: npm run deploy-docs
+            - run: npm run deploy-style-guide
   deploy-npm:
     executor:
       name: node/default
@@ -53,7 +53,7 @@ workflows:
     build-and-deploy:
       jobs:
         - build-and-test
-        - deploy-docs:
+        - deploy-style-guide:
             requires:
               - build-and-test
             filters:
@@ -61,7 +61,7 @@ workflows:
                 only: master
         - deploy-npm:
             requires:
-              - deploy-docs
+              - deploy-style-guide
             filters:
               branches:
                 only: master

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiText",
   "display_name": null,
-  "updated_at": "2020-05-29T17:05:22.849Z",
+  "updated_at": "2020-06-05T13:51:13.416Z",
   "schema": {
     "align": {
       "type": "option",
@@ -141,6 +141,10 @@ module.exports = {
         {
           "value": "color: blue",
           "name": "color blue"
+        },
+        {
+          "value": "font-size: 9px",
+          "name": "9 font size"
         }
       ],
       "folder_slug": "",

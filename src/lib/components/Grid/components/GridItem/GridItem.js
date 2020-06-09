@@ -2,19 +2,8 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../../../utils/Storyblok';
-import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
-import MuiCard from '../../../MuiCard/MuiCard';
-import MuiTypography from '../../../MuiTypography/MuiTypography';
-import MuiMenu from '../../../MuiMenu/MuiMenu';
-import MuiIcon from '../../../MuiIcon/MuiIcon';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
-import MuiList from '../../../MuiList/MuiList';
-import MuiTable from '../../../MuiTable/MuiTable';
-import MuiPaginationTable from '../../../MuiPaginationTable/MuiPaginationTable';
-import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
-import BlokForm from '../../../BlokForm/BlokForm';
 
-const MuiGridItem = ({
+const GridItem = ({
   alignContent,
   alignItems,
   rootClass,
@@ -27,25 +16,11 @@ const MuiGridItem = ({
   spacing,
   xs,
   xl,
-  content,
   sizeGrid,
+  content,
+  gridItemComponents,
 }) => {
-  const components = {
-    MuiButtonRedirect,
-    MuiCard,
-    MuiTypography,
-    MuiMenu,
-    MuiIcon,
-    MuiExpansionPanel,
-    MuiList,
-    MuiTable,
-    MuiPaginationTable,
-    MuiContactButton,
-    BlokForm,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
-
   return (
     <Grid
       item
@@ -63,17 +38,21 @@ const MuiGridItem = ({
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
+      {content.length > 0 && content.map((item, index) => createElement(
+        gridItemComponents[item.component],
         Object.assign(item, { key: index }),
       ))}
     </Grid>
   );
 };
 
-export default MuiGridItem;
+export default GridItem;
 
-MuiGridItem.propTypes = {
+GridItem.propTypes = {
+  /**
+   * developer prop to pass components to a gridItem
+   */
+  gridItemComponents: PropTypes.shape().isRequired,
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -95,8 +74,7 @@ MuiGridItem.propTypes = {
   */
   direction: PropTypes.string,
   /**
-   * mui prop:
-   'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
+   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
    * Defines the justify-content style property. It is applied for all screen sizes.
    */
   justify: PropTypes.string,
@@ -121,8 +99,7 @@ MuiGridItem.propTypes = {
   sm: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   /**
    * mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
-   * Defines the space between the type item component.
-   It can only be used on a type container component.
+   * Defines the space between the type item component. It can only be used on a type container component.
    */
   spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
@@ -144,14 +121,8 @@ MuiGridItem.propTypes = {
   xl: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 
   /**
-   * Content passed to MuiGrid to render
-   * components: MuiButtonRedirect,
-    MuiCard,
-    MuiTypography,
-    MuiMenu,
-    MuiIcon,
-    MuiExpansionPanel,
-    MuiList
+   * Content passed to from api
+   * will render any component in gridItemComponents prop
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -161,7 +132,7 @@ MuiGridItem.propTypes = {
   sizeGrid: PropTypes.func.isRequired,
 };
 
-MuiGridItem.defaultProps = {
+GridItem.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'center',
   rootClass: [],
