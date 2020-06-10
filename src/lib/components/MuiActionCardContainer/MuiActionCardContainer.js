@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import {
@@ -12,7 +12,6 @@ import {
 import StoryBlok from '../../utils/Storyblok';
 import MuiActionCard from './components/MuiActionCard/MuiActionCard';
 import MuiTypography from '../MuiTypography/MuiTypography';
-import useHandleClose from './customHooks/useHandleClose';
 
 export const MuiActionCardContainer = ({
   rootClass,
@@ -53,16 +52,6 @@ export const MuiActionCardContainer = ({
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
-  const prevOpen = useRef(open);
-  useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-
-    prevOpen.current = open;
-  }, [open]);
-
   return (
     <>
       <Button
@@ -81,13 +70,10 @@ export const MuiActionCardContainer = ({
         transition
         disablePortal
       >
-        {({ TransitionProps, placement }) => (
+        {({ TransitionProps }) => (
           <Grow
             {...TransitionProps}
-            style={{
-              transformOrigin:
-                placement === 'bottom' ? 'center top' : 'center bottom',
-            }}
+            style={{ transformOrigin: 'center top' }}
           >
             <Paper style={{ minWidth: '100vw', height: '100%' }}>
               <ClickAwayListener onClickAway={handleClose}>
@@ -98,7 +84,13 @@ export const MuiActionCardContainer = ({
                   className={styles.root}
                 >
                   {actionCards.map((card, index) => (
-                    <MuiActionCard {...card} key={index} height={height} width={width} history={history} />
+                    <MuiActionCard
+                      {...card}
+                      key={index}
+                      height={height}
+                      width={width}
+                      history={history}
+                    />
                   ))}
                 </MenuList>
               </ClickAwayListener>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
+import { act, Simulate } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { MuiActionCardContainer } from './MuiActionCardContainer';
 
@@ -101,5 +101,31 @@ describe('<MuiActionCardContainer />', () => {
     });
 
     expect(container.innerHTML.includes('Action card body test')).toEqual(true);
+  });
+
+  it('should close menulist when clicked away from', () => {
+    const { props } = setup();
+    const handleClose = jest.fn();
+
+    act(() => {
+      ReactDOM.render(<MuiActionCardContainer {...props} />, container);
+    });
+
+    const btn = container.querySelector('button');
+    act(() => {
+      // eslint-disable-next-line no-undef
+      btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    console.log(container.innerHTML);
+
+    expect(container.innerHTML.includes('Action card body test')).toEqual(true);
+
+    act(() => {
+      Simulate.keyPress(btn, { key: 'enter', keyCode: 13, which: 13 });
+    });
+
+    console.log(container.innerHTML);
+    // expect(container.innerHTML.includes('Action card body test')).toEqual(false);
+    expect(handleClose).toHaveBeenCalledTimes(1);
   });
 });
