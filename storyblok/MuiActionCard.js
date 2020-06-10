@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiActionCard",
   "display_name": null,
-  "updated_at": "2020-06-05T13:29:29.998Z",
+  "updated_at": "2020-06-09T16:05:06.900Z",
   "schema": {
     "header": {
       "type": "bloks",
@@ -26,6 +26,12 @@ module.exports = {
         "MuiTypography"
       ],
       "required": true
+    },
+    "redirectRoute": {
+      "type": "text",
+      "required": true,
+      "description": "Redirect Route",
+      "default_value": ""
     }
   },
   "image": null,

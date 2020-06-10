@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
-import { act, Simulate } from 'react-dom/test-utils';
+import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { MuiActionCardContainer } from './MuiActionCardContainer';
 
@@ -51,14 +51,10 @@ function setup() {
 }
 
 let container;
-let button;
 
 beforeEach(() => {
   container = document.createElement('div');
-  // button = document.createElement('button');
-  // button.setAttribute('id', 'clickaway-button');
   document.body.appendChild(container);
-  // document.querySelector('div').appendChild(button);
 });
 
 afterEach(() => {
@@ -100,7 +96,6 @@ describe('<MuiActionCardContainer />', () => {
 
     const btn = container.querySelector('button');
     act(() => {
-      // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
@@ -114,31 +109,27 @@ describe('<MuiActionCardContainer />', () => {
       ReactDOM.render(<MuiActionCardContainer {...props} />, container);
     });
 
-    console.log('FIRST', container.innerHTML);
     const btn = container.querySelector('button');
     act(() => {
-      // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
 
     expect(container.innerHTML.includes('Action card body test')).toEqual(true);
 
     const classRoot = container.querySelector('#paper-test');
+
     act(() => {
-      // eslint-disable-next-line no-undef
       classRoot.dispatchEvent(new MouseEvent('click'));
     });
+
     setTimeout(() => {
       expect(container.innerHTML.includes('Action card body test')).toEqual(true);
     }, 200);
-    console.log('SECOND: ', container.innerHTML);
 
     act(() => {
-     // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click'));
     });
 
-    console.log('LAST', container.innerHTML);
     setTimeout(() => {
       expect(container.innerHTML.includes('Action card body test')).toEqual(false);
     }, 100);
