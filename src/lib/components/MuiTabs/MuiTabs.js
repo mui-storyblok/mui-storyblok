@@ -34,10 +34,16 @@ const MuiTabs = ({
     MuiIcon,
   };
 
+  console.log(tabs);
+
   const [state, setState] = useState({ value: 0, autoplay, tabsLength: tabs.length });
   const handleChange = (event, newValue) => {
     setState({ ...state, value: newValue });
   };
+
+  const flexStyle = makeStyles(() => ({
+    flexContainer: { justifyContent },
+  }));
 
   const handleChangeIndex = () => {
     const tabsLength = tabs.length - 1;
@@ -48,13 +54,8 @@ const MuiTabs = ({
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
-  const flexStyle = makeStyles(() => ({
-    flexContainer: {
-      display: 'flex',
-      justifyContent,
-    },
-  }));
   const flexClass = flexStyle();
+
 
   const onMouseEnter = () => {
     if (autoplay) {
