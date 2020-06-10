@@ -4,8 +4,6 @@ import { GridListTileBar } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 
-console.log(Storyblok);
-
 const MuiGridListTileBar = ({
   actionIcon,
   titlePosition,
