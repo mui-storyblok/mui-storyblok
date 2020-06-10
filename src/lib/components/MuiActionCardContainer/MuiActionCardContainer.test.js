@@ -51,10 +51,14 @@ function setup() {
 }
 
 let container;
+let button;
 
 beforeEach(() => {
   container = document.createElement('div');
+  // button = document.createElement('button');
+  // button.setAttribute('id', 'clickaway-button');
   document.body.appendChild(container);
+  // document.querySelector('div').appendChild(button);
 });
 
 afterEach(() => {
@@ -103,29 +107,40 @@ describe('<MuiActionCardContainer />', () => {
     expect(container.innerHTML.includes('Action card body test')).toEqual(true);
   });
 
-  it('should close menulist when clicked away from', () => {
+  it('should close menulist when clicked away from', async () => {
     const { props } = setup();
-    const handleClose = jest.fn();
 
     act(() => {
       ReactDOM.render(<MuiActionCardContainer {...props} />, container);
     });
 
+    console.log('FIRST', container.innerHTML);
     const btn = container.querySelector('button');
     act(() => {
       // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
-    console.log(container.innerHTML);
 
     expect(container.innerHTML.includes('Action card body test')).toEqual(true);
 
+    const classRoot = container.querySelector('#paper-test');
     act(() => {
-      Simulate.keyPress(btn, { key: 'enter', keyCode: 13, which: 13 });
+      // eslint-disable-next-line no-undef
+      classRoot.dispatchEvent(new MouseEvent('click'));
+    });
+    setTimeout(() => {
+      expect(container.innerHTML.includes('Action card body test')).toEqual(true);
+    }, 200);
+    console.log('SECOND: ', container.innerHTML);
+
+    act(() => {
+     // eslint-disable-next-line no-undef
+      btn.dispatchEvent(new MouseEvent('click'));
     });
 
-    console.log(container.innerHTML);
-    // expect(container.innerHTML.includes('Action card body test')).toEqual(false);
-    expect(handleClose).toHaveBeenCalledTimes(1);
+    console.log('LAST', container.innerHTML);
+    setTimeout(() => {
+      expect(container.innerHTML.includes('Action card body test')).toEqual(false);
+    }, 100);
   });
 });

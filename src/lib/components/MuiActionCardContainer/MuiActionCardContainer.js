@@ -45,15 +45,8 @@ export const MuiActionCardContainer = ({
     setOpen(false);
   };
 
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    }
-  }
-
   return (
-    <>
+    <div>
       <Button
         ref={anchorRef}
         aria-controls={open ? 'menu-list-grow' : undefined}
@@ -75,12 +68,11 @@ export const MuiActionCardContainer = ({
             {...TransitionProps}
             style={{ transformOrigin: 'center top' }}
           >
-            <Paper style={{ minWidth: '100vw', height: '100%' }}>
+            <Paper style={{ minWidth: '100vw', height: '100%' }} id='paper-test'>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
                   id="menu-list-grow"
-                  onKeyDown={handleListKeyDown}
                   className={styles.root}
                 >
                   {actionCards.map((card, index) => (
@@ -98,7 +90,7 @@ export const MuiActionCardContainer = ({
           </Grow>
         )}
       </Popper>
-    </>
+    </div>
   );
 };
 
