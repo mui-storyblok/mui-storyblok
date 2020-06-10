@@ -2,7 +2,6 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
-
 import MuiCardActions from './components/MuiCardActions/MuiCardActions';
 import MuiCardContent from './components/MuiCardContent/MuiCardContent';
 import MuiCardHeader from './components/MuiCardHeader/MuiCardHeader';
