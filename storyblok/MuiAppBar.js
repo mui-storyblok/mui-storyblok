@@ -1,12 +1,18 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-08T19:20:06.180Z",
+  "updated_at": "2020-06-09T15:46:03.367Z",
   "schema": {
     "rootClass": {
       "type": "options",
       "use_uuid": true,
-      "description": "Override or extend the styles applied to the component."
+      "description": "Override or extend the styles applied to the component.",
+      "options": [
+        {
+          "value": "height: 60px",
+          "name": "height"
+        }
+      ]
     },
     "color": {
       "type": "option",

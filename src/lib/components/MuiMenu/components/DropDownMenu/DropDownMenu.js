@@ -13,7 +13,7 @@ const DropDownMenu = ({
   size,
   rootClass,
 }) => (
-  <div className={styles.dropdown} >
+  <div className={styles.dropdown}>
     <Button
       className={rootClass}
       color={color}

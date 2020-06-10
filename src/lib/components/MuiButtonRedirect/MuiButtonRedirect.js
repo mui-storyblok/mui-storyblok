@@ -18,9 +18,7 @@ export const MuiButtonRedirect = ({
     MuiButton,
   };
 
-  const onClick = async () => {
-    return history.push(redirectRoute);
-  };
+  const onClick = async () => history.push(redirectRoute);
 
   const muibutton = button[0];
 
