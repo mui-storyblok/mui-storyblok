@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { GridList, GridListTile } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
-import MuiGridListTileBar from './MuiGridListTileBar/MuiGridListTileBar';
+import MuiGridListTileBar from './components/MuiGridListTileBar/MuiGridListTileBar';
 
 const useStyles = makeStyles(theme => ({
   root: {

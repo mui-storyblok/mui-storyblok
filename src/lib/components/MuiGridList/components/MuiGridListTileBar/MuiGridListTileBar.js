@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GridListTileBar } from '@material-ui/core';
-import StoryBlok from '../../../utils/Storyblok';
-import MuiIconButtonRedirect from '../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+
+console.log(Storyblok);
 
 const MuiGridListTileBar = ({
   actionIcon,
@@ -11,7 +13,7 @@ const MuiGridListTileBar = ({
   subtitle,
   title,
 }) => {
-  const styles = StoryBlok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
     <>
