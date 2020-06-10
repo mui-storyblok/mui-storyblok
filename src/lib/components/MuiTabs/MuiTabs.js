@@ -208,11 +208,9 @@ MuiTabs.propTypes = {
   geocode: PropTypes.bool,
 
   /** MuiTab */
-  tabs: PropTypes.arrayOf(
-    PropTypes.shape({
-      component: PropTypes.string.isRequired,
-    })
-  ),
+  tabs: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })),
 };
 
 MuiTabs.defaultProps = {
