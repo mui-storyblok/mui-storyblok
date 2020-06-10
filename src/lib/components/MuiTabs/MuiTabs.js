@@ -131,6 +131,7 @@ const MuiTabs = ({
             autoplay={autoplay}
             interval={typeof interval === 'string' ? Number(interval) : interval}
             enableMouseEvents
+            id="swipeableViews-test"
           >
             <div
               role="tabpanel"

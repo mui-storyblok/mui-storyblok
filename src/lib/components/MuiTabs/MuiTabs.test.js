@@ -9,6 +9,7 @@ function setup() {
   const props = {
     tabs: [{
       component: 'MuiTab',
+      label: 'First Tab option',
       content: [{
         component: 'MuiGrid',
         content: [{
@@ -29,6 +30,7 @@ function setup() {
       //   iconName: 'android',
       // }],
       component: 'MuiTab',
+      label: 'Second Tab option',
       content: [{
         component: 'MuiGrid',
         content: [{
@@ -84,12 +86,24 @@ describe('<MuiTabs />', () => {
 
     const btn = container.querySelector('button');
     const btnAll = container.querySelectorAll('button');
-    console.log('$$$$$$$$$$$$$$$$$$$$');
-    console.log(btnAll[1].outerHTML);
+    const autoPlayView = container.querySelector('#swipeableViews-test');
+    console.log(autoPlayView.innerHTML);
+    console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+    console.log(container.innerHTML);
     // console.log(btn.outerHTML);
     act(() => {
-      btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      btnAll[1].dispatchEvent(new MouseEvent('click'));
     });
+    console.log('---------------------------------------------------------------------------------');
     console.log(container.innerHTML);
+
+    expect(container.innerHTML.includes('First Tab text')).toEqual(true);
+
+    console.log(btnAll[1].outerHTML);
+    // act(() => {
+    //   btnAll[1].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    // });
+
+    // expect(container.innerHTML.includes('Second Tab')).toEqual(true);
   });
 });
