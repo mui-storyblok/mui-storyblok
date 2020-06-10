@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBarGridItem",
   "display_name": null,
-  "updated_at": "2020-06-09T15:32:20.338Z",
+  "updated_at": "2020-06-10T18:11:39.534Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -207,7 +207,7 @@ module.exports = {
         }
       ],
       "required": true,
-      "default_value": "false",
+      "default_value": "1",
       "pos": 5,
       "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
@@ -277,7 +277,7 @@ module.exports = {
         }
       ],
       "required": true,
-      "default_value": "false",
+      "default_value": "1",
       "pos": 6,
       "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
@@ -347,7 +347,7 @@ module.exports = {
         }
       ],
       "required": true,
-      "default_value": "false",
+      "default_value": "1",
       "pos": 7,
       "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
@@ -494,7 +494,7 @@ module.exports = {
         }
       ],
       "required": true,
-      "default_value": "false",
+      "default_value": "1",
       "pos": 10,
       "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
     },
@@ -564,7 +564,7 @@ module.exports = {
         }
       ],
       "required": true,
-      "default_value": "false",
+      "default_value": "1",
       "pos": 11
     },
     "content": {

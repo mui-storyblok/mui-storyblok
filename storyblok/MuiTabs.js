@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTabs",
   "display_name": null,
-  "updated_at": "2020-06-08T14:58:50.211Z",
+  "updated_at": "2020-06-10T18:09:45.006Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -147,6 +147,30 @@ module.exports = {
       "required": true,
       "default_value": "3000",
       "pos": 9
+    },
+    "justifyContent": {
+      "type": "option",
+      "use_uuid": true,
+      "options": [
+        {
+          "value": "center",
+          "name": "center"
+        },
+        {
+          "value": "space-between",
+          "name": "space-between"
+        },
+        {
+          "value": "space-around",
+          "name": "space-around"
+        },
+        {
+          "value": "space-evenly",
+          "name": "space-evenly"
+        }
+      ],
+      "description": "   * Justify content flex styling for MuiTabs.\n   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around",
+      "default_value": "center"
     }
   },
   "image": null,

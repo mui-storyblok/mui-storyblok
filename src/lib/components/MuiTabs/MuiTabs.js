@@ -3,6 +3,7 @@ import React, {
   useEffect,
   createElement,
 } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import PropTypes from 'prop-types';
@@ -26,6 +27,7 @@ const MuiTabs = ({
   interval,
   geocode,
   height,
+  justifyContent,
 }) => {
   const components = {
     MuiGrid,
@@ -45,7 +47,14 @@ const MuiTabs = ({
     return handleChange({}, state.value);
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
+  const flexStyle = makeStyles(() => ({
+    flexContainer: {
+      display: 'flex',
+      justifyContent,
+    },
+  }));
+  const flexClass = flexStyle();
 
   const onMouseEnter = () => {
     if (autoplay) {
@@ -90,13 +99,13 @@ const MuiTabs = ({
       <Tabs
         value={state.value}
         className={styles.root}
+        classes={flexClass}
         onChange={handleChange}
         indicatorColor={indicatorColor}
         orientation={orientation}
         scrollButtons={scrollButtons}
         textColor={textColor}
         variant={variant}
-        centered
       >
         {tabs.map((item, index) => (
           <Tab
@@ -185,6 +194,11 @@ MuiTabs.propTypes = {
     - standard will render the default state.
    */
   variant: PropTypes.string,
+  /**
+   * Justify content flex styling for MuiTabs.
+   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around
+   */
+  justifyContent: PropTypes.string,
   /** autoplay will incroment tabs by a interval */
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
@@ -211,4 +225,5 @@ MuiTabs.defaultProps = {
   interval: 3000,
   geocode: false,
   height: '300px',
+  justifyContent: 'center',
 };
