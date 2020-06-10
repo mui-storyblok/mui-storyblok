@@ -13,6 +13,7 @@ import MuiMenu from '../MuiMenu/MuiMenu';
 import MuiButtonDrawer from '../MuiButtonDrawer/MuiButtonDrawer';
 import MuiIconButtonDrawer from '../MuiIconButtonDrawer/MuiIconButtonDrawer';
 import MuiButtonSnackbar from '../MuiButtonSnackbar/MuiButtonSnackbar';
+import MuiActionCardContainer from '../MuiActionCardContainer/MuiActionCardContainer';
 import MuiImage from '../MuiImage/MuiImage';
 import Grid from '../Grid/Grid';
 
@@ -34,6 +35,7 @@ const MuiAppBar = ({
     MuiIconButtonDrawer,
     MuiButtonSnackbar,
     MuiImage,
+    MuiActionCardContainer,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);

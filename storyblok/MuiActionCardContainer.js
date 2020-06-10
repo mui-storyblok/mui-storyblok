@@ -1,16 +1,22 @@
 module.exports = {
   "name": "MuiActionCardContainer",
   "display_name": null,
-  "updated_at": "2020-06-03T16:21:22.497Z",
+  "updated_at": "2020-06-09T16:20:01.920Z",
   "schema": {
     "rootClass": {
       "type": "options",
       "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component"
     },
     "menuName": {
-      "type": "text",
+      "type": "bloks",
       "description": "* Text Displayed for menu",
-      "default_value": "Action Card Menu"
+      "default_value": "",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiTypography"
+      ],
+      "required": true,
+      "maximum": "1"
     },
     "actionCards": {
       "type": "bloks",
