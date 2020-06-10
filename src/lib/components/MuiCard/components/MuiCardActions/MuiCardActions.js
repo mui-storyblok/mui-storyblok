@@ -1,7 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardActions from '@material-ui/core/CardActions';
-
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';

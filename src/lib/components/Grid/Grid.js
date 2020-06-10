@@ -15,8 +15,9 @@ const Grid = ({
   spacing,
   content,
   gridItemComponents,
+  style,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px', ...style });
   const gridRender = Object.keys(gridItemComponents);
   return (
     <MuiGrid
@@ -106,6 +107,9 @@ Grid.propTypes = {
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
+
+  /** style obj to pass to grid */
+  style: PropTypes.shape(),
 };
 
 Grid.defaultProps = {
@@ -116,4 +120,5 @@ Grid.defaultProps = {
   justify: 'center',
   spacing: '2',
   wrap: 'wrap',
+  style: {},
 };

@@ -4,7 +4,6 @@ import MuiAppBar from '../MuiAppBar/MuiAppBar';
 import MuiMobileStepper from '../MuiMobileStepper/MuiMobileStepper';
 import MuiHeroHeader from '../MuiHeroHeader/MuiHeroHeader';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
-import MuiGridItem from './components/MuiGridItem/MuiGridItem';
 import MuiGridList from '../MuiGridList/MuiGridList';
 import MuiButtonRedirect from '../MuiButtonRedirect/MuiButtonRedirect';
 import MuiCard from '../MuiCard/MuiCard';
@@ -21,7 +20,6 @@ import BlokForm from '../BlokForm/BlokForm';
 const MuiGrid = (props) => {
   const gridItemComponents = {
     MuiHeroHeader,
-    MuiGridItem,
     MuiAppBar,
     MuiMobileStepper,
     MuiCircularProgress,

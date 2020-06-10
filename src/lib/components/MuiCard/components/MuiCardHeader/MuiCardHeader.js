@@ -1,7 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardHeader from '@material-ui/core/CardHeader';
-
 import Storyblok from '../../../../utils/Storyblok';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
