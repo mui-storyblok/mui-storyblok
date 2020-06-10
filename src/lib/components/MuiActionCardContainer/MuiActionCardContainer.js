@@ -68,7 +68,7 @@ export const MuiActionCardContainer = ({
             {...TransitionProps}
             style={{ transformOrigin: 'center top' }}
           >
-            <Paper style={{ minWidth: '100vw', height: '100%' }} id='paper-test'>
+            <Paper style={{ minWidth: '100vw', height: '100%' }}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
