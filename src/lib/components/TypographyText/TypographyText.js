@@ -79,7 +79,7 @@ TypographyText.propTypes = {
   })).isRequired,
 
   /** componets to render in Typography */
-  components: PropTypes.arrayOf(PropTypes.elementType).isRequired,
+  components: PropTypes.shape(PropTypes.elementType).isRequired,
 };
 
 TypographyText.defaultProps = {
