@@ -1,28 +1,46 @@
+/* eslint-disable no-undef */
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import MuiTabs from './MuiTabs';
 
 function setup() {
   const props = {
     tabs: [{
-      icon: [{
-        component: 'MuiIcon',
-        iconName: 'android',
-      }],
       component: 'MuiTab',
+      label: 'First Tab option',
       content: [{
         component: 'MuiGrid',
         content: [{
           component: 'MuiGridItem',
           content: [{
-            component: 'MuiIcon',
-            iconName: 'android',
+            component: 'MuiTypography',
+            content: [{
+              component: 'MuiText',
+              text: 'First tab text',
+            }],
+          }],
+        }],
+      }],
+    },
+    {
+      component: 'MuiTab',
+      label: 'Second Tab option',
+      content: [{
+        component: 'MuiGrid',
+        content: [{
+          component: 'MuiGridItem',
+          content: [{
+            component: 'MuiTypography',
+            content: [{
+              component: 'MuiText',
+              text: 'Second tab text',
+            }],
           }],
         }],
       }],
     }],
   };
-  const comp = shallow(<MuiTabs {...props} />);
+  const comp = mount(<MuiTabs {...props} />);
   return { comp, props };
 }
 
