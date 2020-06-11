@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TypographyText /> snapshot 1`] = `
+<div
+  className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+>
+  <span
+    className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+  >
+     this is text 
+  </span>
+  <a
+    className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-7 MuiTypography-colorPrimary"
+    href="#"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+  >
+    btn
+  </a>
+  <button
+    className="MuiButtonBase-root MuiIconButton-root makeStyles-root-8"
+    data-testid="muiIconButton"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
+      >
+        star
+      </span>
+    </span>
+  </button>
+  <span
+    aria-hidden={true}
+    className="material-icons MuiIcon-root makeStyles-root-10 MuiIcon-colorSecondary"
+  >
+    android
+  </span>
+</div>
+`;
