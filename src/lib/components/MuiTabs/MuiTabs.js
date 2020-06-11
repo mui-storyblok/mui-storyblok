@@ -39,6 +39,10 @@ const MuiTabs = ({
     setState({ ...state, value: newValue });
   };
 
+  const flexStyle = makeStyles(() => ({
+    flexContainer: { justifyContent },
+  }));
+
   const handleChangeIndex = () => {
     const tabsLength = tabs.length - 1;
     if (state.value >= tabsLength) {
@@ -48,13 +52,8 @@ const MuiTabs = ({
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
-  const flexStyle = makeStyles(() => ({
-    flexContainer: {
-      display: 'flex',
-      justifyContent,
-    },
-  }));
   const flexClass = flexStyle();
+
 
   const onMouseEnter = () => {
     if (autoplay) {
@@ -130,6 +129,7 @@ const MuiTabs = ({
             autoplay={autoplay}
             interval={typeof interval === 'string' ? Number(interval) : interval}
             enableMouseEvents
+            id="swipeableViews-test"
           >
             <div
               role="tabpanel"
