@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Storyblok from '../../utils/Storyblok';
 
 /**
- * TypographyText is used in storyblok redirect to react routes
+ * TypographyText
  */
 
 export const TypographyText = ({
