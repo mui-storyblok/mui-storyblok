@@ -49,13 +49,4 @@ describe('<MuiTabs />', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
-
-  it('should handle the change of the index', () => {
-    const { comp } = setup();
-    console.log(comp.debug({ ignoreProps: true }));
-    const firstTab = comp.find('WithStyles(ForwardRef(Tabs))').first();
-    firstTab.simulate('click');
-    console.log(comp.debug({ ignoreProps: true }));
-    // console.log(comp.debug());
-  });
 });
