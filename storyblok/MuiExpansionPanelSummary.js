@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiExpansionPanelSummary",
   "display_name": null,
-  "updated_at": "2020-06-11T16:51:34.671Z",
+  "updated_at": "2020-06-11T21:21:49.155Z",
   "schema": {
     "rootClass": {
       "type": "options"
@@ -19,7 +19,7 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiExpansionPanelTypography"
+        "MuiTypography"
       ]
     }
   },
