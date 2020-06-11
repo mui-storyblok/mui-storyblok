@@ -40,7 +40,8 @@ MuiLink.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop: 'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+   * mui prop:
+   'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
   color: PropTypes.string,
