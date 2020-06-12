@@ -18,5 +18,4 @@ describe('GoogleApis', () => {
     await testGoogleApi.geocode(callback);
     expect(geo.geoLocate).toBeCalled();
   });
-
 });
