@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGridItem",
   "display_name": null,
-  "updated_at": "2020-06-01T22:47:21.472Z",
+  "updated_at": "2020-06-11T22:08:41.988Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -78,6 +78,10 @@ module.exports = {
         {
           "value": "min-width: 100vw",
           "name": "width"
+        },
+        {
+          "value": "margin-top: 14px",
+          "name": "margin-top"
         }
       ]
     },
