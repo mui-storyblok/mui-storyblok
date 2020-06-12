@@ -75,7 +75,7 @@ TypographyText.propTypes = {
   width: PropTypes.string,
 
   content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
+    component: PropTypes.string,
   })).isRequired,
 
   /** componets to render in Typography */

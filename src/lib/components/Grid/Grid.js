@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MuiGrid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
 import sizeGrid from '../../utils/sizeGrid';
+import { muiStringProp } from '../../utils/customProps';
 import GridItem from './components/GridItem/GridItem';
 
 const Grid = ({
@@ -69,40 +70,54 @@ Grid.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'
+   * mui prop: 'stretch', 'center', 'flex-start', 'flex-end', 'space-between', 'space-around'
    * Defines the align-content style property. It's applied for all screen sizes.
    */
-  alignContent: PropTypes.string,
+  alignContent(props, propName, componentName) {
+    const validProp = ['stretch', 'center', 'flex-start', 'flex-end', 'space-between', 'space-around'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
-   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'
+   * mui prop: 'flex-start' , 'center' , 'flex-end' , 'stretch' , 'baseline'
    * Defines the align-items style property. It's applied for all screen sizes.
    */
-  alignItems: PropTypes.string,
+  alignItems(props, propName, componentName) {
+    const validProp = ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /*
-  * mui prop: 'row' | 'row-reverse' | 'column' | 'column-reverse'
+  * mui prop: 'row', 'row-reverse', 'column', 'column-reverse'
   * Defines the flex-direction style property. It is applied for all screen sizes.
   */
-  direction: PropTypes.string,
+  direction(props, propName, componentName) {
+    const validProp = ['row', 'row-reverse', 'column', 'column-reverse'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
    * mui prop:
-   * 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'
+   * 'flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'
    * Defines the justify-content style property. It is applied for all screen sizes.
    */
-  justify: PropTypes.string,
+  justify(props, propName, componentName) {
+    const validProp = ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
-   * mui prop:  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+   * mui prop:  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
    * Defines the space between the type item
    component. It can only be used on a type container component.
    */
   spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
-   * mui prop: 'nowrap' | 'wrap' | 'wrap-reverse'
+   * mui prop: 'nowrap', 'wrap', 'wrap-reverse'
    * Defines the flex-wrap style property. It's applied for all screen sizes.
    */
-  wrap: PropTypes.string,
+  wrap(props, propName, componentName) {
+    const validProp = ['nowrap', 'wrap', 'wrap-reverse'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
    * Content passed to render
-   * components: MuiGridItem, MuiAppBar
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
