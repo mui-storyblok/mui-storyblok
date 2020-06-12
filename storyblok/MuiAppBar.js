@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-09T15:46:03.367Z",
+  "updated_at": "2020-06-12T15:24:13.194Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -100,6 +100,11 @@ module.exports = {
         "MuiAppBarGrid"
       ],
       "required": true
+    },
+    "height": {
+      "type": "text",
+      "description": "Height of the App Bar",
+      "default_value": "60px"
     }
   },
   "image": null,

@@ -24,6 +24,7 @@ const MuiAppBar = ({
   content,
   variant,
   disableGutters,
+  height,
 }) => {
   const gridItemComponents = {
     MuiButtonRedirect,
@@ -38,7 +39,7 @@ const MuiAppBar = ({
     MuiActionCardContainer,
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
 
   return (
     <AppBar
@@ -89,7 +90,10 @@ MuiAppBar.propTypes = {
    * Toolbar: If true, disables gutter padding.
    * */
   disableGutters: PropTypes.bool,
-
+  /**
+   * Height of the App Bar.
+   * */
+  height: PropTypes.string,
   /**
    * Content passed to MuiAppBar to render
    * components: MuiTypography,
@@ -106,6 +110,7 @@ MuiAppBar.propTypes = {
 
 MuiAppBar.defaultProps = {
   color: 'primary',
+  height: '60px',
   position: 'fixed',
   variant: 'regular',
   disableGutters: false,
