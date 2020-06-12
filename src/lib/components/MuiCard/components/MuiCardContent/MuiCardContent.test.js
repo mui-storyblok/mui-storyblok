@@ -28,7 +28,7 @@ function setup() {
       expansionPanelDetails: [{
         component: 'MuiExpansionPanelDetails',
         content: [{
-          component: 'MuiTypography',
+          component: 'MuiExpansionPanelTypography',
           content: [{
             component: 'MuiText',
             text: 'text',

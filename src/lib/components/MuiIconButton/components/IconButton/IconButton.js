@@ -1,27 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MuiTooltip from '../MuiTooltip/MuiTooltip';
-import IconButton from './components/IconButton/IconButton';
+import MuiIconButton from '@material-ui/core/IconButton';
+import Storyblok from '../../../../utils/Storyblok';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
 
-/**
-* MuiIconButton for more docs check out https://material-ui.com/api/icon-button/#iconbutton-api
-*/
 
-export const MuiIconButton = (props) => {
-  if (props.tooltip.length > 0) {
-    return (
-      <MuiTooltip {...props.tooltip[0]}>
-        <IconButton {...props} />
-      </MuiTooltip>
-    );
-  }
+export const IconButton = ({
+  color,
+  disableFocusRipple,
+  disableRipple,
+  edge,
+  size,
+  rootClass,
+  icon,
+  onClick,
+}) => {
+  const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  return <IconButton {...props} />;
+  return (
+    <MuiIconButton
+      onClick={onClick}
+      className={styles.root}
+      color={color}
+      disableFocusRipple={disableFocusRipple}
+      disableRipple={disableRipple}
+      edge={edge === 'false' ? false : edge}
+      size={size}
+      data-testid="muiIconButton"
+    >
+      <MuiIcon {...icon[0]} />
+    </MuiIconButton>
+  );
 };
 
-export default MuiIconButton;
+export default IconButton;
 
-MuiIconButton.propTypes = {
+IconButton.propTypes = {
 /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
@@ -63,15 +77,9 @@ MuiIconButton.propTypes = {
 
   /** not in storyblok passed down from parent component */
   onClick: PropTypes.func.isRequired,
-
-  /** Tooltip to wrap button in to display help text */
-  tooltip: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string,
-  })),
 };
 
-MuiIconButton.defaultProps = {
-  tooltip: [],
+IconButton.defaultProps = {
   color: 'default',
   disableFocusRipple: false,
   disableRipple: false,

@@ -1,32 +1,23 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
-
-import Storyblok from '../../utils/Storyblok';
+import TypographyText from '../TypographyText/TypographyText';
 import MuiIcon from '../MuiIcon/MuiIcon';
 import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../MuiIconButtonDownload/MuiIconButtonDownload';
-import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiButtonRedirect from '../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../MuiButtonDownload/MuiButtonDownload';
+import MuiLink from '../MuiLink/MuiLink';
 import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
+import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiTooltip from '../MuiTooltip/MuiTooltip';
-import MuiLink from './components/MuiLink/MuiLink';
 
 /**
  * MuiTypography is used in storyblok redirect to react routes
  */
 
-export const MuiTypography = ({
-  align,
-  color,
-  height,
-  width,
-  rootClass,
-  content,
-}) => {
+export const MuiTypography = (props) => {
   const components = {
     MuiLink,
     MuiIcon,
@@ -41,63 +32,17 @@ export const MuiTypography = ({
     MuiTooltip,
   };
 
-  const defaultStyles = {
-    height,
-    width,
-  };
-  const styles = Storyblok.arrayToMuiStyles(rootClass, defaultStyles);
-
   return (
-    <Typography
-      className={styles.root}
-      align={align}
-      color={color}
-      component="div"
-    >
-      {content.map((item, index) => {
-        if (item.component === 'MuiText') {
-          const style = Storyblok.arrayToMuiStyles(item.rootClass);
-          return (
-            <Typography
-              component="span"
-              key={index}
-              className={style.root}
-              variant={item.variant}
-              align={item.align}
-              color={item.color}
-            >
-              {` ${item.text} `}
-            </Typography>
-          );
-        }
-        return createElement(components[item.component], Object.assign(item, { key: index }));
-      })}
-    </Typography>
+    <TypographyText
+      {...props}
+      components={components}
+    />
   );
 };
 
 export default MuiTypography;
 
 MuiTypography.propTypes = {
-  /**
-   * storyblok multiselect of css classes
-   * Override or extend the styles applied to the component
-   * */
-  rootClass: PropTypes.arrayOf(PropTypes.string),
-  /**
-   * mui prop: 'inherit' | 'left' | 'center' | 'right' | 'justify'
-   * Set the text-align on the component.
-   * */
-  align: PropTypes.string,
-  /**
-   * mui prop: 'initial'| 'inherit'| 'primary'| 'secondary'| 'textPrimary'| 'textSecondary'| 'error'
-   * The color of the component. It supports those theme colors that make sense for this component.
-   * */
-  color: PropTypes.string,
-  /** hight of the Typography element */
-  height: PropTypes.string,
-  /** width of the Typography element */
-  width: PropTypes.string,
 
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -105,9 +50,5 @@ MuiTypography.propTypes = {
 };
 
 MuiTypography.defaultProps = {
-  width: '100%',
-  height: '100%',
-  align: 'inherit',
-  color: 'initial',
-  rootClass: [],
+
 };

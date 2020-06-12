@@ -7,7 +7,7 @@ import MuiExpansionPanelDetails from './MuiExpansionPanelDetails';
 function setup() {
   const props = {
     content: [{
-      component: 'MuiTypography',
+      component: 'MuiExpansionPanelTypography',
       content: [{
         component: 'MuiText',
         text: 'text',
