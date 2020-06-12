@@ -1,10 +1,17 @@
 module.exports = {
   "name": "MuiExpansionPanel",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:06.893Z",
+  "updated_at": "2020-06-11T21:49:25.298Z",
   "schema": {
     "rootClass": {
-      "type": "options"
+      "type": "options",
+      "min_options": "",
+      "options": [
+        {
+          "value": "border: none",
+          "name": "border"
+        }
+      ]
     },
     "defaultExpanded": {
       "type": "boolean"

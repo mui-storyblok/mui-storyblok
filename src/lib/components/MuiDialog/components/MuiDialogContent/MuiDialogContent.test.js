@@ -7,7 +7,7 @@ import MuiDialogContent from './MuiDialogContent';
 function setup() {
   const props = {
     content: [{
-      component: 'MuiTypography',
+      component: 'MuiDialogContentTypography',
       content: [{
         component: 'MuiText',
         text: 'text',

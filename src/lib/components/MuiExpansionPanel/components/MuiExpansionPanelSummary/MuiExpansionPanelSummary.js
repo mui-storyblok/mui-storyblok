@@ -2,7 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Storyblok from '../../../../utils/Storyblok';
-import MuiTypography from '../../../MuiTypography/MuiTypography';
+import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 const MuiExpansionPanelSummary = ({
@@ -11,7 +11,7 @@ const MuiExpansionPanelSummary = ({
   expandIcon,
 }) => {
   const components = {
-    MuiTypography,
+    MuiExpansionPanelTypography,
     MuiIcon,
   };
 

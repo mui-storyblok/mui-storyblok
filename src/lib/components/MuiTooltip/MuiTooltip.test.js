@@ -7,19 +7,12 @@ import MuiTooltip from './MuiTooltip';
 function setup() {
   const props = {
     title: 'title text',
-    content: [{
-      component: 'MuiIconButtonHref',
-      href: 'wasd.com',
-      iconButton: [{
-        component: 'MuiIconButton',
-        icon: [{
-          component: 'MuiIcon',
-          iconName: 'star',
-        }],
-      }],
-    }],
   };
-  const comp = shallow(<MuiTooltip {...props} />);
+  const comp = shallow(
+    <MuiTooltip {...props}>
+      <div>thing here</div>
+    </MuiTooltip>,
+  );
   return { comp, props };
 }
 
@@ -34,7 +27,9 @@ describe('<MuiTooltip />', () => {
 
     const tree = renderer.create((
       <MemoryRouter>
-        <MuiTooltip {...props} />
+        <MuiTooltip {...props}>
+          <div>thing here</div>
+        </MuiTooltip>
       </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();
