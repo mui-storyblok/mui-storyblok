@@ -1,28 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MuiTooltip from '../MuiTooltip/MuiTooltip';
-import Button from './components/Button/Button';
+import MuiButton from '@material-ui/core/Button';
+import MuiIcon from '../../../MuiIcon/MuiIcon';
+import Storyblok from '../../../../utils/Storyblok';
 
 /**
    * MuiButton controls Dialog open state from true to false.
    * More docs and demos at https://material-ui.com/api/button/
    */
 
-export const MuiButton = (props) => {
-  if (props.tooltip.length > 0) {
-    return (
-      <MuiTooltip {...props.tooltip[0]}>
-        <Button {...props} />
-      </MuiTooltip>
-    );
-  }
+export const Button = ({
+  rootClass,
+  color,
+  disableElevation,
+  disableFocusRipple,
+  disableRipple,
+  endIcon,
+  fullWidth,
+  size,
+  startIcon,
+  variant,
+  buttonText,
+  onClick,
+}) => {
+  const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  return <Button {...props} />;
+  return (
+    <MuiButton
+      className={styles.root}
+      color={color}
+      disableElevation={disableElevation}
+      disableFocusRipple={disableFocusRipple}
+      disableRipple={disableRipple}
+      endIcon={endIcon.length > 0 ? (
+        <MuiIcon {...endIcon[0]} />
+      ) : null}
+      fullWidth={fullWidth}
+      size={size}
+      startIcon={startIcon.length > 0 ? (
+        <MuiIcon {...startIcon[0]} />
+      ) : null}
+      variant={variant}
+      onClick={onClick}
+      data-testid="muiButton"
+    >
+      {buttonText}
+    </MuiButton>
+  );
 };
 
-export default MuiButton;
+export default Button;
 
-MuiButton.propTypes = {
+Button.propTypes = {
   /** button text */
   buttonText: PropTypes.string.isRequired,
   /**
@@ -82,15 +111,9 @@ MuiButton.propTypes = {
   variant: PropTypes.string,
   /** not in storyblok passed down from parent component */
   onClick: PropTypes.func.isRequired,
-
-
-  /** Tooltip to wrap button in to display help text */
-  tooltip: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string,
-  })),
 };
 
-MuiButton.defaultProps = {
+Button.defaultProps = {
   rootClass: [],
   color: 'secondary',
   disableElevation: false,
@@ -101,5 +124,4 @@ MuiButton.defaultProps = {
   size: 'medium',
   startIcon: [],
   variant: 'text',
-  tooltip: [],
 };

@@ -11,7 +11,7 @@ function setup() {
       component: 'MuiIcon',
       iconName: 'android',
     }, {
-      component: 'MuiTypography',
+      component: 'MuiExpansionPanelTypography',
       content: [{
         component: 'MuiText',
         text: 'text',
