@@ -49,16 +49,15 @@ export default MuiCardActions;
 MuiCardActions.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /**
    * mui prop: true | false
    * If true, the actions do not have additional margin.
    */
   disableSpacing: PropTypes.bool,
-
   /**
    * Content passed to render
-   * components: MuiIconButtonRedirect,
+   * components:
+    MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
@@ -67,12 +66,23 @@ MuiCardActions.propTypes = {
     MuiButtonDownload,
     MuiButtonDialog,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const validComponents = [
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiIconButtonDialog',
+      'MuiButtonRedirect',
+      'MuiButtonHref',
+      'MuiButtonDownload',
+      'MuiButtonDialog',
+    ];
+    return validComponents(props, propName, componentName, validComponents);
+  },
 };
 
 MuiCardActions.defaultProps = {
   rootClass: [],
   disableSpacing: false,
+  content: [],
 };

@@ -2,15 +2,15 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardHeader from '@material-ui/core/CardHeader';
 import Storyblok from '../../../../utils/Storyblok';
+import { validComponents } from '../../../../utils/customProps';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiTooltip from '../../../MuiTooltip/MuiTooltip';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 /**
- * MuiCardHeader is used in storyblok redirect to react routes
+ * MuiCardHeader is used in storyblok
  */
 
 export const MuiCardHeader = ({
@@ -25,7 +25,6 @@ export const MuiCardHeader = ({
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
-    MuiTooltip,
     MuiIcon,
   };
 
@@ -78,23 +77,34 @@ MuiCardHeader.propTypes = {
   */
   subheader: PropTypes.string,
   /**
-   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, MuiTooltip,
+   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog,
    * Allowed maximum: 1
    * The action to display in the card header.
    * */
-  action: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  action(props, propName, componentName) {
+    const components = [
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiIconButtonDialog',
+    ];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 
   /**
-   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, MuiTooltip,
+   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog,
    * Allowed maximum: 1
    * The Avatar for the Card Header.
    * */
-  avatar: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
-
+  avatar(props, propName, componentName) {
+    const components = [
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiIconButtonDialog',
+    ];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.

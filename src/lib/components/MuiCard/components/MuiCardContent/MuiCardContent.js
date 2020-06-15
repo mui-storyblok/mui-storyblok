@@ -38,18 +38,24 @@ MuiCardContent.propTypes = {
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /**
    * Content passed to render
-   * components: MuiTypography,
+   * components:
+    MuiTypography,
     MuiExpansionPanel,
     MuiList,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const validComponents = [
+      'MuiTypography',
+      'MuiExpansionPanel',
+      'MuiList',
+    ];
+    return validComponents(props, propName, componentName, validComponents);
+  },
 };
 
 MuiCardContent.defaultProps = {
   rootClass: [],
+  content: [],
 };
