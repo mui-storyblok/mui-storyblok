@@ -48,7 +48,12 @@ export const muiGridProp = (props, propName, componentName) => {
   return undefined;
 };
 
-export const muiBlokNumberProp = (props, propName, componentName, numberArray) => {
+export const muiBlokNumberProp = (
+  props,
+  propName,
+  componentName,
+  numberArray,
+) => {
   /**
    * takes array of numbers and pushes the numbers back as a string to validProps
    * to validate for mui numbers and storyblok returning props as strings
@@ -70,7 +75,12 @@ export const muiBlokNumberProp = (props, propName, componentName, numberArray) =
 };
 
 
-export const nestedComponentsProps = (props, propName, componentName, validComponents) => {
+export const nestedComponentsProps = (
+  props,
+  propName,
+  componentName,
+  components,
+) => {
   /**
    * used for nested grid and typographyText to see if the componets passed down are able to render
    */
@@ -78,15 +88,14 @@ export const nestedComponentsProps = (props, propName, componentName, validCompo
 
   const content = props[propName].map(x => x.content).flat().map(x => x.content).flat();
   content.forEach((comp) => {
-    if (!validComponents.includes(comp.component)) {
+    if (!components.includes(comp.component)) {
       error = new Error(
-        `${componentName}: ${propName} must be included in validComponents ${validComponents.toString()} but recived ${comp.component}`,
+        `${componentName}: ${propName} must be included in components ${components.toString()} but recived ${comp.component}`,
       );
     }
   });
   return error;
 };
-
 
 export const dimensionProp = (props, propName, componentName) => {
   // use 'px', 'em', '%' 'vh', 'vw', as unit of measurement for height and width prop
@@ -110,4 +119,28 @@ export const dimensionProp = (props, propName, componentName) => {
   }
 
   return error;
+};
+
+export const validComponents = (
+  props,
+  propName,
+  componentName,
+  components,
+  length = undefined,
+) => {
+  if (length && props[propName].length !== length) {
+    return new Error(
+      `${componentName}: ${propName} can only have a length of ${length} but recived length of ${props[propName].length}`,
+    );
+  }
+
+  props[propName].forEach((comp) => {
+    if (!components.includes(comp.component)) {
+      return new Error(
+        `${componentName}: ${propName} must be included in components ${components.toString()} but recived ${comp.component}`,
+      );
+    }
+  });
+
+  return undefined;
 };
