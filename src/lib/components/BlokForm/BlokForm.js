@@ -16,7 +16,6 @@ import {
   validComponents,
   muiStringProp,
 } from '../../utils/customProps';
-
 import Grid from '../Grid/Grid';
 
 const BlokForm = ({
@@ -77,9 +76,7 @@ const BlokForm = ({
         {content.map((item, index) => (
           <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
         ))}
-      </>
-      <MuiSubmit {...submitButton[0]} />
-      <>
+        <MuiSubmit {...submitButton[0]} />
         {state.successResponse && <Typography data-testid="successResponseTestID">{state.successResponse}</Typography>}
         {state.errorResponse && <Typography color="error" data-testid="errorResponseTestID">{state.errorResponse}</Typography>}
       </>

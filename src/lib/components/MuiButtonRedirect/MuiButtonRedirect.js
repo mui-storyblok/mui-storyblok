@@ -1,7 +1,8 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import MuiButton from '../MuiButton/MuiButton';
+import { validComponents } from '../../utils/customProps';
 
 /**
  * MuiButtonRedirect onClick will redirect you to a new route in the current App
@@ -14,35 +15,21 @@ export const MuiButtonRedirect = ({
   redirectRoute,
   button,
 }) => {
-  const components = {
-    MuiButton,
-  };
-
   const onClick = async () => history.push(redirectRoute);
 
   const muibutton = button[0];
 
-  return (
-    <>
-      {
-      muibutton
-        ? createElement(
-          components[muibutton.component],
-          { ...muibutton, onClick },
-        )
-        : null
-    }
-    </>
-  );
+  return <MuiButton {...muibutton} onClick={onClick} />;
 };
 
 export default withRouter(MuiButtonRedirect);
 
 MuiButtonRedirect.propTypes = {
   /** MuiButton Allowed maximum: 1 */
-  button: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  button(props, propName, componentName) {
+    const components = ['MuiButton'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
@@ -53,4 +40,6 @@ MuiButtonRedirect.propTypes = {
   }).isRequired,
 };
 
-MuiButtonRedirect.defaultProps = {};
+MuiButtonRedirect.defaultProps = {
+  button: [],
+};

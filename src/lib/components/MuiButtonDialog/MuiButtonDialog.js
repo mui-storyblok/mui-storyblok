@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
+import {
+  validComponents,
+} from '../../utils/customProps';
 import MuiButton from '../MuiButton/MuiButton';
 import MuiDialog from '../MuiDialog/MuiDialog';
 
@@ -21,16 +22,8 @@ export const MuiButtonDialog = ({
 
   return (
     <>
-      {
-      muibutton
-        ? <MuiButton {...muibutton} onClick={toggleDialog} />
-        : null
-    }
-      {
-      muidialog
-        ? <MuiDialog {...muidialog} open={state.open} toggleDialog={toggleDialog} />
-        : null
-    }
+      <MuiButton {...muibutton} onClick={toggleDialog} />
+      <MuiDialog {...muidialog} open={state.open} toggleDialog={toggleDialog} />
     </>
   );
 };
@@ -39,15 +32,20 @@ export default MuiButtonDialog;
 
 MuiButtonDialog.propTypes = {
   /** MuiButton Allowed maximum: 1 */
-  button: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  button(props, propName, componentName) {
+    const components = ['MuiButton'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 
   /** MuiDialog Allowed maximum: 1 */
-  dialog: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  dialog(props, propName, componentName) {
+    const components = ['MuiDialog'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 
 };
 
-MuiButtonDialog.defaultProps = {};
+MuiButtonDialog.defaultProps = {
+  button: [],
+  dialog: [],
+};
