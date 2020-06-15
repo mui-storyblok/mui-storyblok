@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListExpansion",
   "display_name": null,
-  "updated_at": "2020-06-03T17:27:30.523Z",
+  "updated_at": "2020-06-04T17:42:53.898Z",
   "schema": {
     "rootClass": {
       "type": "options",

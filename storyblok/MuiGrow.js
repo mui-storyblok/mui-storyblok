@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGrow",
   "display_name": null,
-  "updated_at": "2020-05-15T20:45:19.327Z",
+  "updated_at": "2020-05-18T22:45:42.072Z",
   "schema": {
     "rootClass": {
       "type": "options",

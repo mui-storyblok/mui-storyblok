@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBarGridItem",
   "display_name": null,
-  "updated_at": "2020-06-10T18:11:39.534Z",
+  "updated_at": "2020-06-10T20:53:26.213Z",
   "schema": {
     "alignContent": {
       "type": "option",

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiActionCardContainer",
   "display_name": null,
-  "updated_at": "2020-06-09T16:20:01.920Z",
+  "updated_at": "2020-06-10T20:53:25.171Z",
   "schema": {
     "rootClass": {
       "type": "options",

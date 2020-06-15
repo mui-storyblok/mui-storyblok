@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiInput",
   "display_name": null,
-  "updated_at": "2020-05-26T17:12:42.529Z",
+  "updated_at": "2020-05-28T17:15:49.172Z",
   "schema": {
     "name": {
       "type": "text",

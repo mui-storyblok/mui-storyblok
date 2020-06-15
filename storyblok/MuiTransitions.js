@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTransitions",
   "display_name": null,
-  "updated_at": "2020-05-12T20:46:29.712Z",
+  "updated_at": "2020-05-18T22:45:58.690Z",
   "schema": {
     "content": {
       "type": "bloks",

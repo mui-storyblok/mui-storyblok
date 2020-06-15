@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiRadio",
   "display_name": null,
-  "updated_at": "2020-06-01T17:35:57.768Z",
+  "updated_at": "2020-06-01T20:26:17.706Z",
   "schema": {
     "name": {
       "type": "text",

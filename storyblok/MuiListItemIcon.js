@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListItemIcon",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:05.478Z",
+  "updated_at": "2020-05-06T14:54:07.679Z",
   "schema": {
     "rootClass": {
       "type": "options"
