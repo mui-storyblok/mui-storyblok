@@ -5,6 +5,7 @@ import MuiMobileStepper from './MuiMobileStepper';
 function setup() {
   const props = {
     autoplay: true,
+    geocode: 'Colorado1234',
     tabs: [{
       component: 'MuiMobileTab',
       tab: [{
