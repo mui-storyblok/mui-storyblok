@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiIcon",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:02.209Z",
+  "updated_at": "2020-06-04T17:47:49.966Z",
   "schema": {
     "iconName": {
       "type": "text",

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListItemSecondaryAction",
   "display_name": null,
-  "updated_at": "2020-05-28T21:30:58.805Z",
+  "updated_at": "2020-06-01T20:26:14.342Z",
   "schema": {
     "rootClass": {
       "type": "options"

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogButton",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:06.185Z",
+  "updated_at": "2020-05-06T14:53:56.473Z",
   "schema": {
     "color": {
       "type": "option",

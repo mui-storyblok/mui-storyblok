@@ -7,6 +7,7 @@ import MuiListItemAvatar from './components/MuiListItemAvatar/MuiListItemAvatar'
 import MuiListItemIcon from './components/MuiListItemIcon/MuiListItemIcon';
 import MuiListItemSecondaryAction from './components/MuiListItemSecondaryAction/MuiListItemSecondaryAction';
 import MuiListItemText from './components/MuiListItemText/MuiListItemText';
+import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
 
 const MuiListItem = ({
   rootClass,
@@ -16,6 +17,7 @@ const MuiListItem = ({
   divider,
   selected,
 
+  contactButton,
   listItemAvatar,
   listItemIcon,
   listItemSecondaryAction,
@@ -26,14 +28,15 @@ const MuiListItem = ({
     MuiListItemIcon,
     MuiListItemSecondaryAction,
     MuiListItemText,
+    MuiContactButton,
   };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
   const secondaryAction = listItemSecondaryAction[0];
   const text = listItemText[0];
+  const contact = contactButton[0];
   return (
     <ListItem
       className={styles.root}
@@ -50,7 +53,8 @@ const MuiListItem = ({
         secondaryAction
           ? createElement(components[secondaryAction.component], secondaryAction)
           : null
-        }
+      }
+      {contact ? createElement(components[contact.component], { ...contact }) : null}
     </ListItem>
   );
 };
@@ -85,6 +89,10 @@ MuiListItem.propTypes = {
   listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
+  /** MuiListItemAvatar Allowed maximum: 1 */
+  contactButton: PropTypes.arrayOf(PropTypes.shape({
+    component: PropTypes.string.isRequired,
+  })),
   /** MuiListItemIcon Allowed maximum: 1 */
   listItemIcon: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
@@ -109,4 +117,5 @@ MuiListItem.defaultProps = {
   listItemAvatar: [],
   listItemIcon: [],
   listItemSecondaryAction: [],
+  contactButton: [],
 };

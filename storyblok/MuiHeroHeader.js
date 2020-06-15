@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiHeroHeader",
   "display_name": null,
-  "updated_at": "2020-06-02T20:01:02.831Z",
+  "updated_at": "2020-06-04T17:47:49.677Z",
   "schema": {
     "backgroundImageUrl": {
       "type": "text",

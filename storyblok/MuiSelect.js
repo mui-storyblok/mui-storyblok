@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiSelect",
   "display_name": null,
-  "updated_at": "2020-05-23T19:31:49.811Z",
+  "updated_at": "2020-05-28T17:15:54.918Z",
   "schema": {
     "name": {
       "type": "text",
