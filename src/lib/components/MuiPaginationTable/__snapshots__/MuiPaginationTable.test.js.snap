@@ -24,7 +24,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-106 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </th>
@@ -48,7 +48,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-111 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -67,7 +67,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-115 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -86,7 +86,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-119 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -105,7 +105,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-123 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -124,7 +124,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-127 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -143,7 +143,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-131 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -162,7 +162,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-135 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -181,7 +181,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-139 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -200,7 +200,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-143 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>
@@ -219,7 +219,7 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
           <span
             className="MuiTypography-root makeStyles-root-147 MuiTypography-body1"
           >
-             wooo 
+             undefined 
           </span>
         </div>
       </td>

@@ -11,7 +11,7 @@ exports[`<MuiTableCell /> snapshot 1`] = `
     <span
       className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
     >
-       Single table row 
+       undefined 
     </span>
   </div>
 </td>

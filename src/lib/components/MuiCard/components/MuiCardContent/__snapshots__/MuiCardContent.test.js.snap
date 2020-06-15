@@ -10,7 +10,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
     <span
       className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
     >
-       text 
+       undefined 
     </span>
   </div>
   <div
@@ -101,7 +101,7 @@ exports[`<MuiCardContent /> snapshot 1`] = `
                 <span
                   className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
                 >
-                   text 
+                   undefined 
                 </span>
               </div>
             </div>

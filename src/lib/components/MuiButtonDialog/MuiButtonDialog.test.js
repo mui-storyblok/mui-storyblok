@@ -16,28 +16,16 @@ function setup() {
       content: [{
         component: 'MuiDialogContent',
         content: [{
-          component: 'MuiTypography',
+          component: 'MuiDialogContentTypography',
           content: [{
             component: 'MuiText',
-            text: 'text',
-          }],
-        }],
-      }, {
-        component: 'MuiDialogActions',
-        content: [{
-          component: 'MuiButtonRedirect',
-          href: 'google.com',
-          fileName: 'fileName.png',
-          button: [{
-            component: 'MuiButton',
-            buttonText: 'here',
+            content: 'text',
           }],
         }],
       }],
       dialogTitle: [{
         component: 'MuiDialogTitle',
         text: 'text',
-        toggleDialog: jest.fn(),
       }],
     }],
   };
@@ -64,12 +52,15 @@ describe('<MuiButtonDialog />', () => {
 
   it('should toggle dialog onClick in the button component', () => {
     const { comp } = setup();
-    console.log(comp.debug());
     const initialOpen = comp.find('WithStyles(ForwardRef(Dialog))').first().prop('open');
     expect(initialOpen).toEqual(false);
-    const firstButton = comp.find('.MuiButtonBase-root').first().prop('onClick');
+    const firstButton = comp.find('WithStyles(ForwardRef(ButtonBase))').first().prop('onClick');
     act(() => {
       firstButton();
     });
+    const endOpen = comp.find('WithStyles(ForwardRef(Dialog))').first().prop('open');
+    setTimeout(() => {
+      expect(endOpen).toEqual(true);
+    }, 1000);
   });
 });
