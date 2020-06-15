@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Snackbar } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import { validComponents } from '../../utils/customProps';
 import MuiButton from '../MuiButton/MuiButton';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
@@ -101,16 +102,18 @@ MuiButtonSnackbar.propTypes = {
    * components:
    * MuiButton
    */
-  button: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  button(props, propName, componentName) {
+    const components = ['MuiButton'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * components:
    * MuiIconButton
    */
-  closingIcon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  closingIcon(props, propName, componentName) {
+    const components = ['MuiIconButton'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 };
 
 MuiButtonSnackbar.defaultProps = {
@@ -121,4 +124,5 @@ MuiButtonSnackbar.defaultProps = {
   disableWindowBlurListener: false,
   resumeHideDuration: '0',
   closingIcon: null,
+  button: [],
 };

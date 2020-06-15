@@ -128,7 +128,7 @@ export const validComponents = (
   components,
   length = undefined,
 ) => {
-  if (length && props[propName].length !== length) {
+  if (length && props[propName].length > length) {
     return new Error(
       `${componentName}: ${propName} can only have a length of ${length} but recived length of ${props[propName].length}`,
     );
