@@ -68,3 +68,46 @@ export const muiBlokNumberProp = (props, propName, componentName, numberArray) =
 
   return undefined;
 };
+
+
+export const nestedComponentsProps = (props, propName, componentName, validComponents) => {
+  /**
+   * used for nested grid and typographyText to see if the componets passed down are able to render
+   */
+  let error;
+
+  const content = props[propName].map(x => x.content).flat().map(x => x.content).flat();
+  content.forEach((comp) => {
+    if (!validComponents.includes(comp.component)) {
+      error = new Error(
+        `${componentName}: ${propName} must be included in validComponents ${validComponents.toString()} but recived ${comp.component}`,
+      );
+    }
+  });
+  return error;
+};
+
+
+export const dimensionProp = (props, propName, componentName) => {
+  // use 'px', 'em', '%' 'vh', 'vw', as unit of measurement for height and width prop
+  const validDimensionCss = ['px', 'em', '%'];
+  let error;
+
+  if (propName === 'height' || propName === 'width') {
+    if (propName === 'height') validDimensionCss.push('vh');
+    if (propName === 'width') validDimensionCss.push('vw');
+    validDimensionCss.every((substring) => {
+      if (!props[propName].includes(substring)) {
+        error = new Error(
+          `${componentName}: ${propName} has to be one of these units of size ${validDimensionCss.toString()}`,
+        );
+      }
+    });
+  } else if (['height', 'width'].includes(propName)) {
+    error = new Error(
+      'dimensionProp needs to be used on proptype with name height or width',
+    );
+  }
+
+  return error;
+};
