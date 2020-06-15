@@ -90,7 +90,6 @@ describe('<MuiIconButtonDrawer />', () => {
 
   it('should handleClose and toggle drawer', () => {
     const { comp } = setup();
-    console.log(comp.debug());
     const btn = comp.find('[data-testid="muiIconButton"]');
     btn.first().simulate('click');
     expect(comp.find('WithStyles(ForwardRef(Drawer))').first().prop('open')).toEqual(true);
