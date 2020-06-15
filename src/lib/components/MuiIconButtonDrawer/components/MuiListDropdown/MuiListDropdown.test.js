@@ -43,4 +43,14 @@ describe('<MuiListDropdown />', () => {
     ));
     expect(tree).toMatchSnapshot();
   });
+
+  it('should handle click and toggle open prop', () => {
+    const { comp } = setup();
+    const initialOpen = comp.find('MuiListExpansion').first().prop('open');
+    expect(initialOpen).toEqual(false);
+    const listExpansion = comp.find('MuiListExpansion').first().prop('handleClick');
+    listExpansion();
+    const isOpen = comp.find('MuiListExpansion').first().prop('open');
+    expect(isOpen).toEqual(true);
+  });
 });
