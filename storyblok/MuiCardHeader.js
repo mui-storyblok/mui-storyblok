@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCardHeader",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:07.639Z",
+  "updated_at": "2020-06-15T22:05:06.958Z",
   "schema": {
     "title": {
       "type": "text",
@@ -23,7 +23,6 @@ module.exports = {
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
         "MuiIconButtonDialog",
-        "MuiTooltip",
         "MuiIcon"
       ],
       "pos": 2,
@@ -39,7 +38,6 @@ module.exports = {
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
         "MuiIconButtonDialog",
-        "MuiTooltip",
         "MuiIcon"
       ],
       "pos": 3,
