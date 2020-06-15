@@ -14,7 +14,7 @@ function setup() {
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Header of a card',
+        content: 'Header of a card',
       }],
     }],
     icon: [{
@@ -25,7 +25,7 @@ function setup() {
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'this is the text of an action card body.',
+        content: 'this is the text of an action card body.',
       }],
     }],
     redirectRoute: '/page-welcome',

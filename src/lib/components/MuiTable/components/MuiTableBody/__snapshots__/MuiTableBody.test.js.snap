@@ -19,7 +19,7 @@ exports[`<MuiTableBody /> snapshot 1`] = `
         <span
           className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
         >
-           table body 1 
+           undefined 
         </span>
       </div>
     </td>

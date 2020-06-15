@@ -48,4 +48,12 @@ describe('<MuiExpansionPanel />', () => {
     ));
     expect(tree).toMatchSnapshot();
   });
+
+  it('should handle change and toggle the expansion panel', () => {
+    const { comp } = setup();
+    const { expanded } = comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().props();
+    expect(expanded).toEqual(false);
+    comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().prop('onChange')();
+    expect(comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().props().expanded).toEqual(true);
+  });
 });

@@ -21,7 +21,6 @@ export const TypographyText = ({
     width,
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass, defaultStyles);
-
   return (
     <Typography
       className={styles.root}
@@ -41,7 +40,7 @@ export const TypographyText = ({
               align={item.align}
               color={item.color}
             >
-              {` ${item.text} `}
+              {` ${item.content} `}
             </Typography>
           );
         }
@@ -75,11 +74,11 @@ TypographyText.propTypes = {
   width: PropTypes.string,
 
   content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string,
-  })).isRequired,
+    component: PropTypes.string.isRequired,
+  })),
 
-  /** componets to render in Typography */
-  components: PropTypes.shape(PropTypes.elementType).isRequired,
+  /** components to render in Typography */
+  components: PropTypes.shape().isRequired,
 };
 
 TypographyText.defaultProps = {
@@ -88,4 +87,5 @@ TypographyText.defaultProps = {
   align: 'inherit',
   color: 'initial',
   rootClass: [],
+  content: [],
 };

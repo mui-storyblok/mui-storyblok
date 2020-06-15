@@ -13,7 +13,7 @@ function setup() {
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Action Card Menu',
+        content: 'Action Card Menu',
       }],
     }],
     height: '100px',
@@ -27,7 +27,7 @@ function setup() {
         component: 'MuiTypography',
         content: [{
           component: 'MuiText',
-          text: 'Card Header',
+          content: 'Card Header',
         }],
       }],
       icon: [{
@@ -38,7 +38,7 @@ function setup() {
         component: 'MuiTypography',
         content: [{
           component: 'MuiText',
-          text: 'Action card body test',
+          content: 'Action card body test',
         }],
       }],
       redirectRoute: '/page-welcome',

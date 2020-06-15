@@ -7,7 +7,7 @@ exports[`<MuiTypography /> snapshot 1`] = `
   <span
     className="MuiTypography-root makeStyles-root-2 MuiTypography-body1"
   >
-     this is text 
+     undefined 
   </span>
   <a
     className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-3 MuiTypography-colorPrimary"

@@ -1,4 +1,5 @@
 import React from 'react';
+import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
@@ -15,28 +16,16 @@ function setup() {
       content: [{
         component: 'MuiDialogContent',
         content: [{
-          component: 'MuiTypography',
+          component: 'MuiDialogContentTypography',
           content: [{
             component: 'MuiText',
-            text: 'text',
-          }],
-        }],
-      }, {
-        component: 'MuiDialogActions',
-        content: [{
-          component: 'MuiButtonRedirect',
-          href: 'google.com',
-          fileName: 'fileName.png',
-          button: [{
-            component: 'MuiButton',
-            buttonText: 'here',
+            content: 'text',
           }],
         }],
       }],
       dialogTitle: [{
         component: 'MuiDialogTitle',
         text: 'text',
-        toggleDialog: jest.fn(),
       }],
     }],
   };
@@ -59,5 +48,19 @@ describe('<MuiButtonDialog />', () => {
       </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should toggle dialog onClick in the button component', () => {
+    const { comp } = setup();
+    const initialOpen = comp.find('WithStyles(ForwardRef(Dialog))').first().prop('open');
+    expect(initialOpen).toEqual(false);
+    const firstButton = comp.find('WithStyles(ForwardRef(ButtonBase))').first().prop('onClick');
+    act(() => {
+      firstButton();
+    });
+    const endOpen = comp.find('WithStyles(ForwardRef(Dialog))').first().prop('open');
+    setTimeout(() => {
+      expect(endOpen).toEqual(true);
+    }, 1000);
   });
 });
