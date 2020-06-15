@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogContent",
   "display_name": null,
-  "updated_at": "2020-06-11T21:21:47.072Z",
+  "updated_at": "2020-06-14T21:37:43.300Z",
   "schema": {
     "dividers": {
       "type": "boolean"
@@ -13,10 +13,9 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiTypography",
         "MuiExpansionPanel",
-        "MuiGrid",
-        "BlokForm"
+        "BlokForm",
+        "MuiDialogContentTypography"
       ]
     }
   },

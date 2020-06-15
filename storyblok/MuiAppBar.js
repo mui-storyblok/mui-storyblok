@@ -1,18 +1,20 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-12T15:24:13.194Z",
+  "updated_at": "2020-06-12T15:30:19.658Z",
   "schema": {
     "rootClass": {
       "type": "options",
       "use_uuid": true,
       "description": "Override or extend the styles applied to the component.",
-      "options": [
-        {
-          "value": "height: 60px",
-          "name": "height"
-        }
-      ]
+      "options": [],
+      "pos": 0
+    },
+    "height": {
+      "type": "text",
+      "description": "Height of the App Bar",
+      "default_value": "60px",
+      "pos": 1
     },
     "color": {
       "type": "option",
@@ -41,7 +43,8 @@ module.exports = {
       ],
       "required": true,
       "default_value": "primary",
-      "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component."
+      "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component.",
+      "pos": 2
     },
     "position": {
       "type": "option",
@@ -70,7 +73,8 @@ module.exports = {
       ],
       "default_value": "fixed",
       "required": true,
-      "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable."
+      "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable.",
+      "pos": 3
     },
     "variant": {
       "type": "option",
@@ -87,11 +91,13 @@ module.exports = {
       ],
       "required": true,
       "default_value": "regular",
-      "description": "ToolBar: The variant to use."
+      "description": "ToolBar: The variant to use.",
+      "pos": 4
     },
     "disableGutters": {
       "type": "boolean",
-      "description": "Toolbar: If true, disables gutter padding."
+      "description": "Toolbar: If true, disables gutter padding.",
+      "pos": 5
     },
     "content": {
       "type": "bloks",
@@ -99,12 +105,8 @@ module.exports = {
       "component_whitelist": [
         "MuiAppBarGrid"
       ],
-      "required": true
-    },
-    "height": {
-      "type": "text",
-      "description": "Height of the App Bar",
-      "default_value": "60px"
+      "required": true,
+      "pos": 6
     }
   },
   "image": null,

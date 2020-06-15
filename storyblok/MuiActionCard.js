@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiActionCard",
   "display_name": null,
-  "updated_at": "2020-06-09T16:05:06.900Z",
+  "updated_at": "2020-06-15T20:02:57.186Z",
   "schema": {
     "header": {
       "type": "bloks",
@@ -9,7 +9,8 @@ module.exports = {
       "component_whitelist": [
         "MuiTypography"
       ],
-      "required": true
+      "required": true,
+      "maximum": "1"
     },
     "icon": {
       "type": "bloks",
@@ -17,7 +18,8 @@ module.exports = {
       "component_whitelist": [
         "MuiIcon"
       ],
-      "required": true
+      "required": true,
+      "maximum": "1"
     },
     "text": {
       "type": "bloks",
@@ -25,7 +27,8 @@ module.exports = {
       "component_whitelist": [
         "MuiTypography"
       ],
-      "required": true
+      "required": true,
+      "maximum": "1"
     },
     "redirectRoute": {
       "type": "text",

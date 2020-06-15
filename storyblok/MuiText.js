@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiText",
   "display_name": null,
-  "updated_at": "2020-06-05T13:51:13.416Z",
+  "updated_at": "2020-06-15T15:35:00.203Z",
   "schema": {
     "align": {
       "type": "option",
@@ -154,7 +154,7 @@ module.exports = {
       "required": false,
       "external_datasource": ""
     },
-    "text": {
+    "content": {
       "type": "text",
       "required": true,
       "default_value": "text to display"

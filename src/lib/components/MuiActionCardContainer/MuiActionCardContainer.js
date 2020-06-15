@@ -10,6 +10,10 @@ import {
   ClickAwayListener,
 } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import {
+  dimensionProp,
+  validComponents,
+} from '../../utils/customProps';
 import MuiActionCard from './components/MuiActionCard/MuiActionCard';
 import MuiTypography from '../MuiTypography/MuiTypography';
 
@@ -106,25 +110,32 @@ MuiActionCardContainer.propTypes = {
   /**
    * Height of the each Action Card.
    */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * Width of the each Action Card.
    */
-  width: PropTypes.string,
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * Text Displayed for menu
    * Component: MuiTypography
    */
-  menuName: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  menuName(props, propName, componentName) {
+    const components = ['MuiTypography'];
+    return validComponents(props, propName, componentName, components);
+  },
   /**
    * Cards passed ot MuiActionCardContainer to render
    * Component: MuiActionCard
    */
-  actionCards: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  actionCards(props, propName, componentName) {
+    const components = ['MuiActionCard'];
+    return validComponents(props, propName, componentName, components);
+  },
+
   /** react history not a storyblok prop */
   history: PropTypes.shape({
     push: PropTypes.func,
@@ -135,4 +146,6 @@ MuiActionCardContainer.defaultProps = {
   rootClass: [],
   height: '100px',
   width: '200px',
+  menuName: [],
+  actionCards: [],
 };

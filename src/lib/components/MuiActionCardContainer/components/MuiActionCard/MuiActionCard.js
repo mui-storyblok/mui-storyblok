@@ -6,6 +6,10 @@ import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import styles from './MuiActionCard.module.scss';
 import StoryBlok from '../../../../utils/Storyblok';
+import {
+  dimensionProp,
+  validComponents,
+} from '../../../../utils/customProps';
 
 export const MuiActionCard = ({
   header,
@@ -49,16 +53,18 @@ MuiActionCard.propTypes = {
    * Cards passed to MuiActionCard to render
    * Component: MuiTypography
    */
-  header: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  header(props, propName, componentName) {
+    const components = ['MuiTypography'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * Cards passed to MuiActionCard to render
    * Component: MuiIcon
    */
-  icon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  icon(props, propName, componentName) {
+    const components = ['MuiIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
   /** react history not a storyblok prop */
@@ -69,23 +75,31 @@ MuiActionCard.propTypes = {
    * Cards passed to MuiActionCard to render
    * Component: MuiTypography
    */
-  text: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  text(props, propName, componentName) {
+    const components = ['MuiTypography'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * Passed down from ActionCardContainer
    * Height of the each Action Card.
    */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * Passed down from ActionCardContainer
    * Width of the each Action Card.
    */
-  width: PropTypes.string,
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
 };
 
 MuiActionCard.defaultProps = {
   height: '100px',
   width: '200px',
   rootClass: [],
+  text: [],
+  icon: [],
+  header: [],
 };
