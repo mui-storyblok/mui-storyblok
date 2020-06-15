@@ -35,12 +35,11 @@ export const MuiDialogContentTypography = (props) => {
 export default MuiDialogContentTypography;
 
 MuiDialogContentTypography.propTypes = {
-
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
-  })).isRequired,
+  })),
 };
 
 MuiDialogContentTypography.defaultProps = {
-
+  content: [],
 };

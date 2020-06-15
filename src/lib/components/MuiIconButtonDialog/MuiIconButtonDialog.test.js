@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiIconButtonDialog from './MuiIconButtonDialog';
@@ -62,5 +63,17 @@ describe('<MuiIconButtonDialog />', () => {
       </MemoryRouter>
     ));
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should handle toggle and change state', () => {
+    const { comp } = setup();
+    const openProp = comp.find('MuiDialog').first().prop('open');
+    expect(openProp).toEqual(false);
+    const iconButtonToggle = comp.find('MuiIconButton').first().prop('onClick');
+    act(() => {
+      iconButtonToggle();
+    });
+    const openPropTrue = comp.find('MuiDialog').first().prop('open');
+    expect(openPropTrue).toEqual(true);
   });
 });

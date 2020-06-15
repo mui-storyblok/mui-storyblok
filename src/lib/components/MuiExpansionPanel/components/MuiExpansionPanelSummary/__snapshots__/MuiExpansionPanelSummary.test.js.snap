@@ -34,7 +34,7 @@ exports[`<MuiExpansionPanelSummary /> snapshot 1`] = `
       <span
         className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
       >
-         text 
+         undefined 
       </span>
     </div>
   </div>

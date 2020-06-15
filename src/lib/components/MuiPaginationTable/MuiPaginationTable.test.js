@@ -113,4 +113,14 @@ describe('<MuiPaginationTable />', () => {
     const doesIncludeFirst = comp.text().includes('1-10 of 50');
     expect(doesIncludeFirst).toEqual(true);
   });
+
+  it('should handleChangeRows and set the number or rows per page', () => {
+    const { comp } = setup();
+    const changeRows = comp.find('MuiPaginationTableFooter').first().prop('handleChangeRows');
+    changeRows({ target: { value: 10 } });
+    const page = comp.find('MuiPaginationTableFooter').first().prop('page');
+    expect(page).toEqual(0);
+    const rowsPerPage = comp.find('WithStyles(ForwardRef(TablePagination))').first().prop('rowsPerPage');
+    expect(rowsPerPage).toEqual(10);
+  });
 });

@@ -7,6 +7,7 @@ import MuiStoryblok from './MuiStoryblok';
 function setup() {
   const props = {
     accessToken: '123',
+    googleapisKey: '1234',
   };
   const comp = shallow(<MuiStoryblok {...props} />);
   return { comp, props };

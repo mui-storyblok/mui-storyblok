@@ -20,7 +20,7 @@ exports[`<MuiPaginationTableHead /> snapshot 1`] = `
         <span
           className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
         >
-           wooo 
+           undefined 
         </span>
       </div>
     </th>

@@ -20,7 +20,7 @@ const MuiButtonDrawer = ({
   // eslint-disable-next-line no-multi-assign
   const handleToggleDrawer = (event) => {
     if (event.type === 'keydown'
-      && (event.key === 'Tab' || event.key === 'Shift')
+     && (event.key === 'Tab' || event.key === 'Shift')
     ) {
       return;
     }
