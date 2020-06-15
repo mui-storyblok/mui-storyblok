@@ -12,7 +12,7 @@ const storyblokClient = (accessToken) => {
   });
 };
 
-const checkForMetaTag = (id, property = null, name = null) => {
+export const checkForMetaTag = (id, property = null, name = null) => {
   let element = document.getElementById(id);
   if (!element) {
     element = document.createElement('meta');
@@ -22,7 +22,7 @@ const checkForMetaTag = (id, property = null, name = null) => {
   return element;
 };
 
-const setMetadata = (res) => {
+export const setMetadata = (res) => {
   if (res.data.story.content.seo) {
     const metadataTag = checkForMetaTag('metadataTitle');
     const metaOgTitle = checkForMetaTag('metaOgTitle', 'og:title');
