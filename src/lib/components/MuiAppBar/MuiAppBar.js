@@ -16,6 +16,7 @@ import MuiButtonSnackbar from '../MuiButtonSnackbar/MuiButtonSnackbar';
 import MuiActionCardContainer from '../MuiActionCardContainer/MuiActionCardContainer';
 import MuiImage from '../MuiImage/MuiImage';
 import MuiTypography from '../MuiTypography/MuiTypography';
+import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import Grid from '../Grid/Grid';
 
 const MuiAppBar = ({
@@ -39,7 +40,7 @@ const MuiAppBar = ({
     MuiImage,
     MuiActionCardContainer,
     MuiTypography,
-
+    MuiContactButton,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });

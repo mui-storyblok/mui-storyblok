@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogContentTypography",
   "display_name": null,
-  "updated_at": "2020-06-11T17:07:23.317Z",
+  "updated_at": "2020-06-15T22:25:20.260Z",
   "schema": {
     "align": {
       "type": "option",
