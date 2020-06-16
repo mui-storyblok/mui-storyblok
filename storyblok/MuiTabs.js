@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTabs",
   "display_name": null,
-  "updated_at": "2020-06-10T18:09:45.006Z",
+  "updated_at": "2020-06-11T20:40:55.927Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -10,6 +10,10 @@ module.exports = {
         {
           "value": "justify-content: center",
           "name": "center items"
+        },
+        {
+          "value": "margin-bottom: 25px",
+          "name": "margin-bottom"
         }
       ],
       "pos": 0

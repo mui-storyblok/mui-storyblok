@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiExpansionPanelTypography",
   "display_name": null,
-  "updated_at": "2020-06-11T16:51:03.308Z",
+  "updated_at": "2020-06-15T22:25:23.358Z",
   "schema": {
     "align": {
       "type": "option",

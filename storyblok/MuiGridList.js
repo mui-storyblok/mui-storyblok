@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGridList",
   "display_name": null,
-  "updated_at": "2020-04-28T21:56:46.486Z",
+  "updated_at": "2020-05-06T14:54:01.085Z",
   "schema": {
     "content": {
       "type": "bloks",

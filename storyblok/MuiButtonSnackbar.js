@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButtonSnackbar",
   "display_name": null,
-  "updated_at": "2020-05-04T23:06:01.079Z",
+  "updated_at": "2020-05-18T22:45:31.573Z",
   "schema": {
     "message": {
       "type": "text",

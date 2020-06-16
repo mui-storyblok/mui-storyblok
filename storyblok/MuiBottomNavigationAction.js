@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiBottomNavigationAction",
   "display_name": null,
-  "updated_at": "2020-05-01T20:08:18.588Z",
+  "updated_at": "2020-05-06T14:53:48.840Z",
   "schema": {
     "rootClass": {
       "type": "options",

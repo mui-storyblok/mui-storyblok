@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTooltip",
   "display_name": null,
-  "updated_at": "2020-06-11T21:22:05.134Z",
+  "updated_at": "2020-05-06T14:54:18.530Z",
   "schema": {
     "rootClass": {
       "type": "options"
