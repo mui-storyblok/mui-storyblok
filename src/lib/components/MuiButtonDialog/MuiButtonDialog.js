@@ -1,7 +1,4 @@
-import React, {
-  createElement,
-  useState,
-} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import MuiButton from '../MuiButton/MuiButton';
@@ -17,11 +14,6 @@ export const MuiButtonDialog = ({
   dialog,
   button,
 }) => {
-  const components = {
-    MuiDialog,
-    MuiButton,
-  };
-
   const [state, setState] = useState({ open: false });
   const toggleDialog = () => setState({ ...state, open: !state.open });
   const muidialog = dialog[0];
@@ -31,18 +23,12 @@ export const MuiButtonDialog = ({
     <>
       {
       muibutton
-        ? createElement(
-          components[muibutton.component],
-          { ...muibutton, onClick: toggleDialog },
-        )
+        ? <MuiButton {...muibutton} onClick={toggleDialog} />
         : null
     }
       {
       muidialog
-        ? createElement(
-          components[muidialog.component],
-          { ...muidialog, open: state.open, toggleDialog },
-        )
+        ? <MuiDialog {...muidialog} open={state.open} toggleDialog={toggleDialog} />
         : null
     }
     </>
