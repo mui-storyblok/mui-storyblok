@@ -4,6 +4,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
+import { validComponents } from '../../../../utils/customProps';
 
 const MuiExpansionPanelSummary = ({
   rootClass,
@@ -35,18 +36,20 @@ export default MuiExpansionPanelSummary;
 MuiExpansionPanelSummary.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /** MuiIcon limit 1 */
-  expandIcon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
-
+  expandIcon(props, propName, componentName) {
+    const components = ['MuiIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** MuiTypography */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTypography'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiExpansionPanelSummary.defaultProps = {
   rootClass: [],
+  content: [],
+  expandIcon: [],
 };

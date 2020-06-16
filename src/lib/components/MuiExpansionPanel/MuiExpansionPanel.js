@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-
+import { validComponents, componentsRequired, dimensionProp } from '../../utils/customProps';
 import Storyblok from '../../utils/Storyblok';
 import MuiExpansionPanelSummary from './components/MuiExpansionPanelSummary/MuiExpansionPanelSummary';
 import MuiExpansionPanelDetails from './components/MuiExpansionPanelDetails/MuiExpansionPanelDetails';
@@ -44,21 +44,35 @@ MuiExpansionPanel.propTypes = {
   /** if true pannale is expanded on load */
   defaultExpanded: PropTypes.bool,
   /** width of panel */
-  width: PropTypes.string,
-
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /** MuiExpansionPanelSummary Allowed maximum: 1 */
-  expansionPanelSummary: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
-
+  expansionPanelSummary(props, propName, componentName) {
+    let error;
+    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
+    if (error) return error;
+    const components = ['MuiExpansionPanelSummary'];
+    error = validComponents(props, propName, componentName, components);
+    if (error) return error;
+    return undefined;
+  },
   /** MuiExpansionPanelDetails Allowed maximum: 1 */
-  expansionPanelDetails: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  expansionPanelDetails(props, propName, componentName) {
+    let error;
+    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
+    if (error) return error;
+    const components = ['MuiExpansionPanelDetails'];
+    error = validComponents(props, propName, componentName, components);
+    if (error) return error;
+    return undefined;
+  },
 };
 
 MuiExpansionPanel.defaultProps = {
   width: '100%',
   defaultExpanded: false,
   rootClass: [],
+  expansionPanelSummary: [],
+  expansionPanelDetails: [],
 };
