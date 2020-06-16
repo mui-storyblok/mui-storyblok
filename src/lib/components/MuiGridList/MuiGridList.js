@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { GridList, GridListTile } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import {
+  validComponents,
+  dimensionProp,
+} from '../../utils/customProps';
 import MuiGridListTileBar from './components/MuiGridListTileBar/MuiGridListTileBar';
 
 const useStyles = makeStyles(theme => ({
@@ -78,26 +82,24 @@ MuiGridList.propTypes = {
    * mui prop: number
    * Number of px for the spacing between tiles.
    */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * mui prop: number
    * Number of px for the spacing between tiles.
    */
-  width: PropTypes.string,
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * Content passed to render
    * components: MuiTitleData
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
-  /**
-   * Content passed to render
-   * components: MuiTitleData
-   */
-  gridListTileBar: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTitleData'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiGridList.defaultProps = {
@@ -107,4 +109,5 @@ MuiGridList.defaultProps = {
   spacing: 4,
   height: 500,
   width: 450,
+  content: [],
 };
