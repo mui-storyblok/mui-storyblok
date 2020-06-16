@@ -7,7 +7,7 @@ export const muiStringProp = (props, propName, componentName, validProps) => {
    */
   const propType = typeof props[propName];
   if (propType !== 'string') {
-    return new Error(`${propName} expected type of string but recived type ${propType}`);
+    return new Error(`${componentName}: ${propName} expected type of string but recived type ${propType}`);
   }
   if (!validProps.includes(props[propName])) {
     return new Error(
@@ -128,7 +128,7 @@ export const validComponents = (
   components,
   length = undefined,
 ) => {
-  if (length && props[propName].length > length) {
+  if (!isNaN(length) && props[propName].length > length) {
     return new Error(
       `${componentName}: ${propName} can only have a length of ${length} but recived length of ${props[propName].length}`,
     );
@@ -141,6 +141,21 @@ export const validComponents = (
       );
     }
   });
+
+  return undefined;
+};
+
+export const componentsRequired = (
+  props,
+  propName,
+  componentName,
+  length,
+) => {
+  if (props[propName].length !== length) {
+    return new Error(
+      `${componentName}: ${propName} is required to have a length of ${length} but recived length of ${props[propName].length}`,
+    );
+  }
 
   return undefined;
 };
