@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-06-02T15:32:05.502Z",
+  "updated_at": "2020-06-15T22:30:03.747Z",
   "schema": {
     "align": {
       "type": "option",
@@ -73,6 +73,14 @@ module.exports = {
         {
           "value": "color: white",
           "name": "color white"
+        },
+        {
+          "value": "margin-right: 15px",
+          "name": "margin-right"
+        },
+        {
+          "value": "margin-bottom: 15px",
+          "name": "margin-bottom"
         }
       ],
       "folder_slug": "",

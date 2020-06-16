@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCollapse",
   "display_name": null,
-  "updated_at": "2020-05-18T22:15:46.051Z",
+  "updated_at": "2020-05-21T19:04:31.582Z",
   "schema": {
     "rootClass": {
       "type": "options",

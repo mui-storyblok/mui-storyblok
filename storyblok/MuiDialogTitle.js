@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogTitle",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:06.714Z",
+  "updated_at": "2020-05-06T14:53:57.371Z",
   "schema": {
     "rootClass": {
       "type": "options",

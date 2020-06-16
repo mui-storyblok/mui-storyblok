@@ -29,7 +29,7 @@ module.exports = {
         }
       ],
       "default_value": "inherit",
-      "required": true
+      "required": false
     },
     "color": {
       "type": "option",
@@ -65,7 +65,7 @@ module.exports = {
         }
       ],
       "default_value": "initial",
-      "required": true
+      "required": false
     },
     "variant": {
       "type": "option",
@@ -133,7 +133,7 @@ module.exports = {
         }
       ],
       "default_value": "body1",
-      "required": true
+      "required": false
     },
     "rootClass": {
       "type": "options",
@@ -143,8 +143,12 @@ module.exports = {
           "name": "color blue"
         },
         {
-          "value": "font-size: 9px",
-          "name": "9 font size"
+          "value": "font-size: 12px",
+          "name": "12 font size"
+        },
+        {
+          "value": "padding-right: 15px",
+          "name": "padding-right"
         }
       ],
       "folder_slug": "",
