@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
+import { validComponentsRequired } from '../../utils/customProps';
 import MuiDialog from '../MuiDialog/MuiDialog';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
@@ -31,16 +30,17 @@ const MuiIconButtonDialog = ({
 export default MuiIconButtonDialog;
 
 MuiIconButtonDialog.propTypes = {
-
   /** MuiDialog Allowed maximum: 1 */
-  dialog: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
-
+  dialog(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiDialog'], 1);
+  },
   /** MuiIconButton Allowed maximum: 1 */
-  iconButton: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  iconButton(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiIconButton'], 1);
+  },
 };
 
-MuiIconButtonDialog.defaultProps = {};
+MuiIconButtonDialog.defaultProps = {
+  dialog: [],
+  iconButton: [],
+};

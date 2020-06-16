@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '@material-ui/core/Link';
 import Storyblok from '../../utils/Storyblok';
+import {
+  muiStringProp,
+} from '../../utils/customProps';
 
 /**
  * MuiLink is used in storyblok redirect to a href
@@ -41,15 +44,21 @@ MuiLink.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * mui prop:
-   'initial' | 'inherit' | 'primary' | 'secondary' | 'textPrimary' | 'textSecondary' | 'error'
+   'initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error'
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
-  color: PropTypes.string,
+  color(props, propName, componentName) {
+    const validProps = ['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /*
-  * mui prop:'none' | 'hover' | 'always'
+  * mui prop:'none', 'hover', 'always'
   * underline text
   */
-  underline: PropTypes.string,
+  underline(props, propName, componentName) {
+    const validProps = ['none', 'hover', 'always'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /* url for redirect */
   href: PropTypes.string.isRequired,
   /* text to click on */

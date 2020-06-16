@@ -2,12 +2,12 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-
+import { validComponentsRequired } from '../../../../../../utils/customProps';
 import Storyblok from '../../../../../../utils/Storyblok';
 import MuiIcon from '../../../../../MuiIcon/MuiIcon';
 
 /**
- * MuiListItemAvatar is used in storyblok redirect to react routes
+ * MuiListItemAvatar
  */
 
 export const MuiListItemAvatar = ({
@@ -42,11 +42,12 @@ MuiListItemAvatar.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** MuiIcon Allowed maximum: 1 */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiIcon'], 1);
+  },
 };
 
 MuiListItemAvatar.defaultProps = {
   rootClass: [],
+  content: [],
 };
