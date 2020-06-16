@@ -23,6 +23,7 @@ export const checkForMetaTag = (id, property = null, name = null) => {
 };
 
 export const setMetadata = (res) => {
+  console.log('set Meta Data entered', res);
   if (res.data.story.content.seo) {
     const metadataTag = checkForMetaTag('metadataTitle');
     const metaOgTitle = checkForMetaTag('metaOgTitle', 'og:title');
