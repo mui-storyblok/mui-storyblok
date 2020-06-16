@@ -14,7 +14,7 @@ import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import BlokForm from '../BlokForm/BlokForm';
 
 const MuiHeroHeader = (props) => {
-  const gridItemComponents = {
+  const components = {
     MuiButtonRedirect,
     MuiCard,
     MuiTypography,
@@ -51,7 +51,7 @@ const MuiHeroHeader = (props) => {
     <Grid
       {...props}
       style={heroClass}
-      gridItemComponents={gridItemComponents}
+      components={components}
     />
   );
 };

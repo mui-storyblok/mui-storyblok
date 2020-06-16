@@ -19,7 +19,7 @@ const GridItem = ({
   xl,
   sizeGrid,
   content,
-  gridItemComponents,
+  components,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
   return (
@@ -40,7 +40,7 @@ const GridItem = ({
       xl={sizeGrid(xl)}
     >
       {content.length > 0 && content.map((item, index) => createElement(
-        gridItemComponents[item.component],
+        components[item.component],
         Object.assign(item, { key: index }),
       ))}
     </Grid>
@@ -53,7 +53,7 @@ GridItem.propTypes = {
   /**
    * developer prop to pass components to a gridItem
    */
-  gridItemComponents: PropTypes.shape().isRequired,
+  components: PropTypes.shape().isRequired,
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -154,7 +154,7 @@ GridItem.propTypes = {
 
   /**
    * Content passed to from api
-   * will render any component in gridItemComponents prop
+   * will render any component in components prop
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,

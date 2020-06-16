@@ -26,7 +26,7 @@ const BlokForm = ({
   errorResponseText,
   method,
 }) => {
-  const gridItemComponents = {
+  const components = {
     MuiInput,
     MuiSelect,
     MuiSubmit,
@@ -74,7 +74,7 @@ const BlokForm = ({
     >
       <>
         {content.map((item, index) => (
-          <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
+          <Grid {...item} key={index} components={components} />
         ))}
         <MuiSubmit {...submitButton[0]} />
         {state.successResponse && <Typography data-testid="successResponseTestID">{state.successResponse}</Typography>}

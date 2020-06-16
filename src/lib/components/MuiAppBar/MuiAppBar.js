@@ -30,7 +30,7 @@ const MuiAppBar = ({
   disableGutters,
   height,
 }) => {
-  const gridItemComponents = {
+  const components = {
     MuiButtonRedirect,
     MuiButtonHref,
     MuiIconButtonRedirect,
@@ -57,7 +57,7 @@ const MuiAppBar = ({
       >
         <>
           {content.map((item, index) => (
-            <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
+            <Grid {...item} key={index} components={components} />
           ))}
         </>
       </Toolbar>

@@ -8,7 +8,7 @@ import GridItem from './GridItem';
 function setup() {
   const props = {
     sizeGrid: jest.fn(),
-    gridItemComponents: {
+    components: {
       MuiIcon,
     },
     content: [{

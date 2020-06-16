@@ -15,11 +15,11 @@ const Grid = ({
   wrap,
   spacing,
   content,
-  gridItemComponents,
+  components,
   style,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px', ...style });
-  const gridRender = Object.keys(gridItemComponents);
+  const gridRender = Object.keys(components);
   return (
     <MuiGrid
       container
@@ -35,11 +35,11 @@ const Grid = ({
         if (gridRender.includes(item.component)) {
           return (
             createElement(
-              gridItemComponents[item.component],
+              components[item.component],
               Object.assign(item, {
                 key: index,
                 sizeGrid,
-                gridItemComponents,
+                components,
               }),
             )
           );
@@ -48,7 +48,7 @@ const Grid = ({
           <GridItem
             {...item}
             key={index}
-            gridItemComponents={gridItemComponents}
+            components={components}
             sizeGrid={sizeGrid}
           />
         );
@@ -63,7 +63,7 @@ Grid.propTypes = {
   /**
    * developer prop to pass components to a gridItem
    */
-  gridItemComponents: PropTypes.shape().isRequired,
+  components: PropTypes.shape().isRequired,
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
