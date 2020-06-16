@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import {
-  validComponents,
-} from '../../utils/customProps';
+import { validComponents } from '../../utils/customProps';
 import MuiButton from '../MuiButton/MuiButton';
 import MuiDialog from '../MuiDialog/MuiDialog';
 
@@ -36,7 +34,6 @@ MuiButtonDialog.propTypes = {
     const components = ['MuiButton'];
     return validComponents(props, propName, componentName, components, 1);
   },
-
   /** MuiDialog Allowed maximum: 1 */
   dialog(props, propName, componentName) {
     const components = ['MuiDialog'];

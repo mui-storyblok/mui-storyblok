@@ -1,16 +1,13 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import MuiButton from '../MuiButton/MuiButton';
+import { validComponents } from '../../utils/customProps';
 
 export const MuiContactButton = ({
   button,
   phone,
   email,
 }) => {
-  const components = {
-    MuiButton,
-  };
-
   const muibutton = button[0];
 
   const onClick = () => {
@@ -24,16 +21,7 @@ export const MuiContactButton = ({
     tempLink.remove();
   };
 
-  return (
-    <>
-      {
-        muibutton && createElement(
-          components[muibutton.component],
-          { ...muibutton, onClick },
-        )
-      }
-    </>
-  );
+  return <MuiButton {...muibutton} onClick={onClick} />;
 };
 
 export default MuiContactButton;
@@ -44,10 +32,10 @@ MuiContactButton.propTypes = {
   /** Email address provided to email to */
   email: PropTypes.string,
   /** MuiButton Allowed maximum: 1 */
-  button: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
-
+  button(props, propName, componentName) {
+    const components = ['MuiButton'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** react history not a storyblok prop */
   history: PropTypes.shape({
     push: PropTypes.func,
@@ -57,4 +45,5 @@ MuiContactButton.propTypes = {
 MuiContactButton.defaultProps = {
   phone: '',
   email: '',
+  button: [],
 };

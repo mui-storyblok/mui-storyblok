@@ -1,7 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogActions from '@material-ui/core/DialogActions';
-
+import { validComponents } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
@@ -43,18 +43,28 @@ MuiDialogActions.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
-  /** MuiIconButtonRedirect,
-    MuiIconButtonHref,
-    MuiIconButtonDownload,
-    MuiButtonRedirect,
-    MuiButtonHref,
-    MuiButtonDownload,
+  /**
+    'MuiIconButtonRedirect',
+    'MuiIconButtonHref',
+    'MuiIconButtonDownload',
+    'MuiButtonRedirect',
+    'MuiButtonHref',
+    'MuiButtonDownload',
     */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiButtonRedirect',
+      'MuiButtonHref',
+      'MuiButtonDownload',
+    ];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiDialogActions.defaultProps = {
   rootClass: [],
+  content: [],
 };
