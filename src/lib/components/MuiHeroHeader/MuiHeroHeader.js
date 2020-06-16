@@ -12,6 +12,7 @@ import MuiTable from '../MuiTable/MuiTable';
 import MuiPaginationTable from '../MuiPaginationTable/MuiPaginationTable';
 import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import BlokForm from '../BlokForm/BlokForm';
+import { dimensionProp } from '../../utils/customProps';
 
 const MuiHeroHeader = (props) => {
   const components = {
@@ -61,9 +62,10 @@ export default MuiHeroHeader;
 MuiHeroHeader.propTypes = {
   /** url for background img */
   backgroundImageUrl: PropTypes.string,
-
   /** height of the container */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
 };
 
 MuiHeroHeader.defaultProps = {
