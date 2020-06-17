@@ -22,6 +22,7 @@ engines:
 ratings:
   paths:
   - src/**
+  - src/lib/utils/**
   - "**.js"
   - "**.jsx"
 exclude_paths:
