@@ -2,15 +2,13 @@
 import StoryblokClient from 'storyblok-js-client';
 import { makeStyles } from '@material-ui/core/styles';
 
-const storyblokClient = (accessToken) => {
-  return new StoryblokClient({
-    accessToken,
-    cache: {
-      clear: 'auto',
-      type: 'memory',
-    },
-  });
-};
+const storyblokClient = accessToken => new StoryblokClient({
+  accessToken,
+  cache: {
+    clear: 'auto',
+    type: 'memory',
+  },
+});
 
 export const checkForMetaTag = (id, property = null, name = null) => {
   let element = document.getElementById(id);
