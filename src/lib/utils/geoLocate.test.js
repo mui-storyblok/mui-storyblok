@@ -47,7 +47,7 @@ describe('geoLocate util', () => {
     const callBack = jest.fn();
 
     const error = await geo.successCallback(undefined, 'wasd', callBack);
-    expect(error.toString()).toEqual("TypeError: Cannot read property 'coords' of undefined");
+    expect(error.toString()).toEqual('TypeError: Cannot read property \'coords\' of undefined');
   });
 
   it('errorCallback', () => {
