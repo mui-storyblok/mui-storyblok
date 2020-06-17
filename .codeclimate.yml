@@ -24,7 +24,7 @@ ratings:
   - src/**
   - "**.js"
   - "**.jsx"
-exclude_paths:
+exclude_patterns:
 - src/examples/**
 - public/**
 - "**.test.js"
