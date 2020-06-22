@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-15T22:31:34.172Z",
+  "updated_at": "2020-06-22T16:52:58.369Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -99,7 +99,8 @@ module.exports = {
       "component_whitelist": [
         "MuiAppBarGrid"
       ],
-      "required": true
+      "required": true,
+      "maximum": "1"
     }
   },
   "image": null,

@@ -6,7 +6,6 @@ import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonR
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiTooltip from '../../../MuiTooltip/MuiTooltip';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 /**
@@ -25,7 +24,6 @@ export const MuiCardHeader = ({
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
-    MuiTooltip,
     MuiIcon,
   };
 

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiIconButtonRedirect",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:04.758Z",
+  "updated_at": "2020-06-22T16:47:24.062Z",
   "schema": {
     "redirectRoute": {
       "type": "text",
@@ -13,7 +13,8 @@ module.exports = {
       "restrict_components": true,
       "component_whitelist": [
         "MuiIconButton"
-      ]
+      ],
+      "required": true
     }
   },
   "image": null,
