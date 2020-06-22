@@ -14,7 +14,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 1',
+                content: 'Table Body 1',
               },
             ],
           },
@@ -29,7 +29,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 2',
+                content: 'Table Body 2',
               },
             ],
           },
@@ -44,57 +44,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 3',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    component: 'MuiTableRow',
-    content: [
-      {
-        component: 'MuiTableCell',
-        size: 'small',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 1',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        component: 'MuiTableCell',
-        size: 'small',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 2',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        component: 'MuiTableCell',
-        size: 'small',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 3',
+                content: 'Table Body 3',
               },
             ],
           },
@@ -114,7 +64,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 1',
+                content: 'Table Body 1',
               },
             ],
           },
@@ -129,7 +79,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 2',
+                content: 'Table Body 2',
               },
             ],
           },
@@ -144,7 +94,57 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 3',
+                content: 'Table Body 3',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    component: 'MuiTableRow',
+    content: [
+      {
+        component: 'MuiTableCell',
+        size: 'small',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 1',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiTableCell',
+        size: 'small',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 2',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiTableCell',
+        size: 'small',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 3',
               },
             ],
           },
@@ -174,7 +174,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 1',
+                content: 'Table Body 1',
               },
             ],
           },
@@ -189,7 +189,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 2',
+                content: 'Table Body 2',
               },
             ],
           },
@@ -204,57 +204,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 3',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    component: 'MuiTableRow',
-    content: [
-      {
-        component: 'MuiTableCell',
-        size: 'large',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 1',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        component: 'MuiTableCell',
-        size: 'large',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 2',
-              },
-            ],
-          },
-        ],
-      },
-      {
-        component: 'MuiTableCell',
-        size: 'large',
-        content: [
-          {
-            component: 'MuiTypography',
-            content: [
-              {
-                component: 'MuiText',
-                text: 'Table Body 3',
+                content: 'Table Body 3',
               },
             ],
           },
@@ -274,7 +224,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 1',
+                content: 'Table Body 1',
               },
             ],
           },
@@ -289,7 +239,7 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 2',
+                content: 'Table Body 2',
               },
             ],
           },
@@ -304,7 +254,57 @@ const tBody = [
             content: [
               {
                 component: 'MuiText',
-                text: 'Table Body 3',
+                content: 'Table Body 3',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    component: 'MuiTableRow',
+    content: [
+      {
+        component: 'MuiTableCell',
+        size: 'large',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 1',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiTableCell',
+        size: 'large',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 2',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        component: 'MuiTableCell',
+        size: 'large',
+        content: [
+          {
+            component: 'MuiTypography',
+            content: [
+              {
+                component: 'MuiText',
+                content: 'Table Body 3',
               },
             ],
           },
