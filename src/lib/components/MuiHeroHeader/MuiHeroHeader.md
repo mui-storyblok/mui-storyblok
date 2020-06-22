@@ -2,20 +2,21 @@ MuiHeroHeader example:
 
 ```js
     const muiGrid = {
-        component: 'MuiGrid',
+      component: 'MuiHeroHeader',
+      content: [{
+        component: 'MuiGridItem',
         content: [{
-          component: 'MuiGridItem',
-          content: [{
-            component: 'MuiIcon',
-            iconName: 'android',
-          }],
+          component: 'MuiIcon',
+          iconName: 'android',
         }],
+      }],
+      backgroundImageUrl: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+      height: '250px',
     };
 
     const content = [muiGrid];
 
   <MuiHeroHeader
-    content={content}
-    backgroundImageUrl="https://vistaenergymarketing.com/wp-content/themes/yootheme/cache/houston-skyline-7a651823.webp"
+    {...muiGrid}
   />
 ```
