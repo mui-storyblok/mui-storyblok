@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButtonDrawer",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:50.937Z",
+  "updated_at": "2020-04-24T22:08:33.421Z",
   "schema": {
     "button": {
       "type": "bloks",

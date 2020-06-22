@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButtonDialog",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:50.057Z",
+  "updated_at": "2020-03-31T18:27:04.069Z",
   "schema": {
     "dialog": {
       "type": "bloks",

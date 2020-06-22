@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiIconButtonHref",
   "display_name": null,
-  "updated_at": "2020-05-06T14:54:04.953Z",
+  "updated_at": "2020-06-22T16:20:23.553Z",
   "schema": {
     "rootClass": {
       "type": "options"
@@ -12,7 +12,8 @@ module.exports = {
       "component_whitelist": [
         "MuiIconButton"
       ],
-      "maximum": "1"
+      "maximum": "1",
+      "required": true
     },
     "href": {
       "type": "text",

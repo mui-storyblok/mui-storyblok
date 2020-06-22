@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBarGridItem",
   "display_name": null,
-  "updated_at": "2020-06-15T22:44:24.060Z",
+  "updated_at": "2020-06-16T15:34:17.731Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -582,7 +582,7 @@ module.exports = {
         "MuiButtonSnackbar",
         "MuiImage",
         "MuiActionCardContainer",
-        "MuiTypography"
+        "MuiContactButton"
       ],
       "pos": 12,
       "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",

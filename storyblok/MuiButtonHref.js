@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButtonHref",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:51.368Z",
+  "updated_at": "2020-03-31T18:27:03.870Z",
   "schema": {
     "button": {
       "type": "bloks",

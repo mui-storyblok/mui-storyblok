@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCircularProgress",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:55.111Z",
+  "updated_at": "2020-04-17T22:15:04.013Z",
   "schema": {
     "color": {
       "type": "option",

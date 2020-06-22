@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListDropdown",
   "display_name": null,
-  "updated_at": "2020-06-01T20:26:12.819Z",
+  "updated_at": "2020-06-01T16:52:02.823Z",
   "schema": {
     "rootClass": {
       "type": "options",
