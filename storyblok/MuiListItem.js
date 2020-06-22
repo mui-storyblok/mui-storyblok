@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListItem",
   "display_name": null,
-  "updated_at": "2020-06-15T22:40:16.735Z",
+  "updated_at": "2020-06-15T22:31:51.880Z",
   "schema": {
     "listItemText": {
       "type": "bloks",
@@ -73,13 +73,6 @@ module.exports = {
       "restrict_components": true,
       "component_whitelist": [
         "MuiListItemSecondaryAction"
-      ]
-    },
-    "contactButton": {
-      "type": "bloks",
-      "restrict_components": true,
-      "component_whitelist": [
-        "MuiContactButton"
       ]
     }
   },

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "FormGridItem",
   "display_name": null,
-  "updated_at": "2020-06-01T20:25:56.962Z",
+  "updated_at": "2020-06-01T17:27:25.231Z",
   "schema": {
     "alignContent": {
       "type": "option",

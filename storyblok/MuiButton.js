@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButton",
   "display_name": null,
-  "updated_at": "2020-06-04T17:47:37.462Z",
+  "updated_at": "2020-06-11T21:21:40.545Z",
   "schema": {
     "buttonText": {
       "type": "text",

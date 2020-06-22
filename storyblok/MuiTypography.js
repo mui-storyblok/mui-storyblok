@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-06-15T22:30:03.747Z",
+  "updated_at": "2020-06-15T22:32:01.208Z",
   "schema": {
     "align": {
       "type": "option",

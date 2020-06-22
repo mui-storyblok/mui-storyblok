@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiPaginationTableHead",
   "display_name": null,
-  "updated_at": "2020-05-06T14:54:13.385Z",
+  "updated_at": "2020-04-21T21:30:50.127Z",
   "schema": {
     "rootClass": {
       "type": "options",

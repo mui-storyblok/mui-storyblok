@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiMenu",
   "display_name": null,
-  "updated_at": "2020-06-04T17:47:56.031Z",
+  "updated_at": "2020-05-29T15:12:44.331Z",
   "schema": {
     "btnText": {
       "type": "text"
