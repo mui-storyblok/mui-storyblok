@@ -2,7 +2,7 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 /**
- * GoogleSvg takes a color and renders a the bbb svg
+ * GoogleSvg takes the same props of an MuiIcon and renders a the Google svg
  */
 
 

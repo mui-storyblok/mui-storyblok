@@ -2,7 +2,7 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 /**
- * LinkedinSvg takes a color and renders a the bbb svg
+ * LinkedinSvg takes the same props of an MuiIcon and renders a the linkedin svg
  */
 
 const LinkedinSvg = props => (
