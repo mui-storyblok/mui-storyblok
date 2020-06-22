@@ -12,7 +12,7 @@ MuiTable regular table (default):
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 1',
+            content: 'Table Header 1',
           }],
         }],
       },
@@ -23,7 +23,7 @@ MuiTable regular table (default):
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 2',
+            content: 'Table Header 2',
           }],
         }],
       },
@@ -34,7 +34,7 @@ MuiTable regular table (default):
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 3',
+            content: 'Table Header 3',
           }],
         }],
       }],
@@ -58,7 +58,7 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 1',
+                      content: 'Table Body 1',
                     },
                   ],
                 },
@@ -73,7 +73,7 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 2',
+                      content: 'Table Body 2',
                     },
                   ],
                 },
@@ -88,57 +88,7 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 3',
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          component: 'MuiTableRow',
-          content: [
-            {
-              component: 'MuiTableCell',
-              size: 'large',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 1',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              component: 'MuiTableCell',
-              size: 'large',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 2',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              component: 'MuiTableCell',
-              size: 'large',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 3',
+                      content: 'Table Body 3',
                     },
                   ],
                 },
@@ -158,7 +108,7 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 1',
+                      content: 'Table Body 1',
                     },
                   ],
                 },
@@ -173,7 +123,7 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 2',
+                      content: 'Table Body 2',
                     },
                   ],
                 },
@@ -188,7 +138,57 @@ MuiTable regular table (default):
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 3',
+                      content: 'Table Body 3',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          component: 'MuiTableRow',
+          content: [
+            {
+              component: 'MuiTableCell',
+              size: 'large',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 1',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              component: 'MuiTableCell',
+              size: 'large',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 2',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              component: 'MuiTableCell',
+              size: 'large',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 3',
                     },
                   ],
                 },
@@ -221,7 +221,7 @@ MuiTable small table:
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 1',
+            content: 'Table Header 1',
           }],
         }],
       },
@@ -232,7 +232,7 @@ MuiTable small table:
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 2',
+            content: 'Table Header 2',
           }],
         }],
       },
@@ -243,7 +243,7 @@ MuiTable small table:
           component: 'MuiTypography',
           content: [{
             component: 'MuiText',
-            text: 'Table Header 3',
+            content: 'Table Header 3',
           }],
         }],
       }],
@@ -267,7 +267,7 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 1',
+                      content: 'Table Body 1',
                     },
                   ],
                 },
@@ -282,7 +282,7 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 2',
+                      content: 'Table Body 2',
                     },
                   ],
                 },
@@ -297,57 +297,7 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 3',
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-        {
-          component: 'MuiTableRow',
-          content: [
-            {
-              component: 'MuiTableCell',
-              size: 'small',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 1',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              component: 'MuiTableCell',
-              size: 'small',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 2',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              component: 'MuiTableCell',
-              size: 'small',
-              content: [
-                {
-                  component: 'MuiTypography',
-                  content: [
-                    {
-                      component: 'MuiText',
-                      text: 'Table Body 3',
+                      content: 'Table Body 3',
                     },
                   ],
                 },
@@ -367,7 +317,7 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 1',
+                      content: 'Table Body 1',
                     },
                   ],
                 },
@@ -382,7 +332,7 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 2',
+                      content: 'Table Body 2',
                     },
                   ],
                 },
@@ -397,7 +347,57 @@ MuiTable small table:
                   content: [
                     {
                       component: 'MuiText',
-                      text: 'Table Body 3',
+                      content: 'Table Body 3',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          component: 'MuiTableRow',
+          content: [
+            {
+              component: 'MuiTableCell',
+              size: 'small',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 1',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              component: 'MuiTableCell',
+              size: 'small',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 2',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              component: 'MuiTableCell',
+              size: 'small',
+              content: [
+                {
+                  component: 'MuiTypography',
+                  content: [
+                    {
+                      component: 'MuiText',
+                      content: 'Table Body 3',
                     },
                   ],
                 },
