@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-10T20:47:01.387Z",
+  "updated_at": "2020-06-15T22:31:34.172Z",
   "schema": {
     "rootClass": {
       "type": "options",

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiVideo",
   "display_name": null,
-  "updated_at": "2020-06-10T16:58:47.456Z",
+  "updated_at": "2020-06-05T18:59:28.963Z",
   "schema": {
     "url": {
       "type": "text",

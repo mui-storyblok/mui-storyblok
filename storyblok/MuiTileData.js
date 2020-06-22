@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTileData",
   "display_name": null,
-  "updated_at": "2020-05-06T14:54:18.040Z",
+  "updated_at": "2020-04-28T21:57:52.804Z",
   "schema": {
     "cols": {
       "type": "number",

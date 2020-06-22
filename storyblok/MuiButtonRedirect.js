@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiButtonRedirect",
   "display_name": null,
-  "updated_at": "2020-05-18T22:45:31.113Z",
+  "updated_at": "2020-03-31T18:27:04.242Z",
   "schema": {
     "redirectRoute": {
       "type": "text",

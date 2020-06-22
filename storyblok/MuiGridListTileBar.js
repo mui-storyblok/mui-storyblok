@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGridListTileBar",
   "display_name": null,
-  "updated_at": "2020-05-06T14:54:01.559Z",
+  "updated_at": "2020-04-28T22:18:26.851Z",
   "schema": {
     "actionIcon": {
       "type": "bloks",

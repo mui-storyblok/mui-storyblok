@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiExpansionPanel",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:58.825Z",
+  "updated_at": "2020-06-15T22:31:43.758Z",
   "schema": {
     "rootClass": {
       "type": "options"
