@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCardContent",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:53.767Z",
+  "updated_at": "2020-03-31T18:27:08.178Z",
   "schema": {
     "rootClass": {
       "type": "options",

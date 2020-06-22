@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTabs",
   "display_name": null,
-  "updated_at": "2020-06-11T20:40:55.927Z",
+  "updated_at": "2020-06-15T22:31:59.581Z",
   "schema": {
     "rootClass": {
       "type": "options",

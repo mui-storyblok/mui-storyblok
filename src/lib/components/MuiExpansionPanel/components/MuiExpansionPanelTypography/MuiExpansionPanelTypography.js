@@ -8,7 +8,6 @@ import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonD
 import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
-// import MuiTooltip from '../../../MuiTooltip/MuiTooltip';
 
 /**
  * MuiExpansionPanelTypography uses
@@ -23,7 +22,6 @@ export const MuiExpansionPanelTypography = (props) => {
     MuiButtonRedirect,
     MuiButtonHref,
     MuiButtonDownload,
-    // MuiTooltip,
   };
 
   return (

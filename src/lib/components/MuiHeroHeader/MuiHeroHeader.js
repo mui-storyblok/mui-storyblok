@@ -11,6 +11,7 @@ import MuiList from '../MuiList/MuiList';
 import MuiTable from '../MuiTable/MuiTable';
 import MuiPaginationTable from '../MuiPaginationTable/MuiPaginationTable';
 import MuiContactButton from '../MuiContactButton/MuiContactButton';
+import MuiImage from '../MuiImage/MuiImage';
 import BlokForm from '../BlokForm/BlokForm';
 
 const MuiHeroHeader = (props) => {
@@ -26,6 +27,7 @@ const MuiHeroHeader = (props) => {
     MuiPaginationTable,
     MuiContactButton,
     BlokForm,
+    MuiImage,
   };
 
   let heroClass = {

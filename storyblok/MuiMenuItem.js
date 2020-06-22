@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiMenuItem",
   "display_name": null,
-  "updated_at": "2020-05-06T14:54:10.524Z",
+  "updated_at": "2020-03-31T18:27:09.704Z",
   "schema": {
     "tab-aa85d3e7-f662-456c-8014-90ade7f002f1": {
       "type": "tab",
