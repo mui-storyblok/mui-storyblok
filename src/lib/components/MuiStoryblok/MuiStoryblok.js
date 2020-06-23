@@ -1,7 +1,7 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { BrowserRouter, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 
