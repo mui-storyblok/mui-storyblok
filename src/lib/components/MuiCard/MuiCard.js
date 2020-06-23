@@ -1,6 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import Card from '@material-ui/core/Grid';
+import { Card } from '@material-ui/core';
 import Storyblok from '../../utils/Storyblok';
 import MuiCardActions from './components/MuiCardActions/MuiCardActions';
 import MuiCardContent from './components/MuiCardContent/MuiCardContent';
@@ -23,11 +23,10 @@ const MuiCard = ({
     MuiVideo,
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height, width });
-
   return (
     <Card
       className={styles.root}
-      raised={raised.toString()}
+      raised={raised}
     >
       {content.map((item, index) => createElement(
         components[item.component],

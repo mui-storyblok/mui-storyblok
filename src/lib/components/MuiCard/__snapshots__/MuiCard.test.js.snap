@@ -2,8 +2,7 @@
 
 exports[`<MuiCard /> snapshot 1`] = `
 <div
-  className="MuiGrid-root makeStyles-root-3"
-  raised="false"
+  className="MuiPaper-root MuiCard-root makeStyles-root-3 MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardActions-root makeStyles-root-4 MuiCardActions-spacing"
