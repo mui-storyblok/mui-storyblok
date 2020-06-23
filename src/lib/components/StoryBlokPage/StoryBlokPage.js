@@ -1,5 +1,4 @@
 import React, { Component, createElement } from 'react';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
