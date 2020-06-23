@@ -1,11 +1,11 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, withRouter } from 'react-router-dom';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 
-const MuiStoryblok = ({
+export const MuiStoryblok = ({
   theme,
   accessToken,
   version,
@@ -25,11 +25,10 @@ const MuiStoryblok = ({
         />
       </MuiThemeProvider>
     </BrowserRouter>
-
   );
 };
 
-export default MuiStoryblok;
+export default withRouter(MuiStoryblok);
 
 MuiStoryblok.propTypes = {
   /** theme for mui */

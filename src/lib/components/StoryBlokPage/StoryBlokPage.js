@@ -84,7 +84,8 @@ export class StoryBlokPage extends Component {
   }
 }
 
-export default withRouter(StoryBlokPage);
+// export default withRouter(StoryBlokPage);
+export default StoryBlokPage;
 
 StoryBlokPage.propTypes = {
   accessToken: PropTypes.string.isRequired,
