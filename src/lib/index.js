@@ -26,7 +26,7 @@ import MuiList from './components/MuiList/MuiList';
 import MuiMenu from './components/MuiMenu/MuiMenu';
 import MuiMobileStepper from './components/MuiMobileStepper/MuiMobileStepper';
 import MuiPaginationTable from './components/MuiPaginationTable/MuiPaginationTable';
-import MuiStoryblok from './components/MuiStoryblok/MuiStoryblok';
+import Pages, { MuiStoryblok } from './components/MuiStoryblok/MuiStoryblok';
 import MuiTable from './components/MuiTable/MuiTable';
 import MuiTabs from './components/MuiTabs/MuiTabs';
 import MuiTooltip from './components/MuiTooltip/MuiTooltip';
@@ -74,4 +74,4 @@ export {
   StoryBlokPage,
 };
 
-export default MuiStoryblok;
+export default Pages;
