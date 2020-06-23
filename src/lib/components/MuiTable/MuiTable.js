@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Table } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import {
+  muiStringProp,
+  validComponentsRequired,
+} from '../../utils/customProps';
 
 import MuiTableHead from './components/MuiTableHead/MuiTableHead';
 import MuiTableBody from './components/MuiTableBody/MuiTableBody';
@@ -38,15 +42,21 @@ MuiTable.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: 'default' | 'checkbox' | 'none'
+   * mui props: 'default', 'checkbox', 'none'
    * Allows TableCells to inherit padding of the Table.
    */
-  padding: PropTypes.string,
+  padding(props, propName, componentName) {
+    const validProps = ['default', 'checkbox', 'none'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui props: 'small' | 'medium'
+   * mui props: 'small', 'medium'
    * Allows TableCells to inherit size of the Table.
    */
-  size: PropTypes.string,
+  size(props, propName, componentName) {
+    const validProps = ['small', 'medium'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui props: true | false
    * set the header sticky. (It doesn't work with IE 11)
@@ -54,13 +64,13 @@ MuiTable.propTypes = {
   stickyHeader: PropTypes.bool,
 
   /**  MuiTableHead limit of 1 */
-  tHead: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tHead(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiTableHead'], 1);
+  },
   /**  MuiTableBody limit of 1 */
-  tBody: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tBody(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiTableBody'], 1);
+  },
 };
 
 MuiTable.defaultProps = {
@@ -68,4 +78,6 @@ MuiTable.defaultProps = {
   size: 'medium',
   stickyHeader: false,
   rootClass: [],
+  tHead: [],
+  tBody: [],
 };

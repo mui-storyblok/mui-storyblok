@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import {
+  validComponents,
+  muiStringProp,
+} from '../../utils/customProps';
 import Storyblok from '../../utils/Storyblok';
 import DropDownMenu from './components/DropDownMenu/DropDownMenu';
 import MuiMenuItem from './components/MuiMenuItem/MuiMenuItem';
@@ -32,25 +35,33 @@ export default MuiMenu;
 
 MuiMenu.propTypes = {
   /**
-   * mui prop: 'small' | 'medium' | 'large'
+   * mui prop: 'small', 'medium', 'large'
    */
-  size: PropTypes.string,
+  size(props, propName, componentName) {
+    const validProps = [ 'small', 'medium', 'large'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: default | inherit | primary | secondary
+   * mui prop: 'default', 'inherit', 'primary', 'secondary'
    */
-  color: PropTypes.string,
+  color(props, propName, componentName) {
+    const validProps = ['default', 'inherit', 'primary', 'secondary'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /** text for the btn */
   btnText: PropTypes.string.isRequired,
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** MuiMenuItem */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiMenuItem'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiMenu.defaultProps = {
   rootClass: [],
   size: 'medium',
   color: 'default',
+  content: [],
 };

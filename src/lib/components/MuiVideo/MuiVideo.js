@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import StoryBlok from '../../utils/Storyblok';
-
+import {
+  dimensionProp,
+} from '../../utils/customProps';
 const MuiVideo = ({
   url,
   height,
@@ -51,11 +53,15 @@ MuiVideo.propTypes = {
   /**
    * height for the video .
    */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * width for the video.
    */
-  width: PropTypes.string,
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * Set to true or false to display native player controls
    * Controls cannot be hidden for Wistia videos

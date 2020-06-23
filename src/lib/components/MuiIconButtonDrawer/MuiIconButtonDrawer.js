@@ -100,7 +100,7 @@ MuiIconButtonDrawer.propTypes = {
    */
   content(props, propName, componentName) {
     const components = ['MuiList'];
-    return validComponents(props, propName, componentName, components, 1);
+    return validComponents(props, propName, componentName, components);
   },
 };
 

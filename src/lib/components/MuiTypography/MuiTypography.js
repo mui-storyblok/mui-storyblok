@@ -14,7 +14,7 @@ import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiTooltip from '../MuiTooltip/MuiTooltip';
 
 /**
- * MuiTypography is used in storyblok redirect to react routes
+ * MuiTypography
  */
 
 export const MuiTypography = (props) => {
@@ -43,7 +43,6 @@ export const MuiTypography = (props) => {
 export default MuiTypography;
 
 MuiTypography.propTypes = {
-
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

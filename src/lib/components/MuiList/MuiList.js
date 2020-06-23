@@ -48,7 +48,7 @@ MuiList.propTypes = {
   /** MuiListItem */
   content(props, propName, componentName) {
     const components = ['MuiListItem'];
-    return validComponents(props, propName, componentName, components, 1);
+    return validComponents(props, propName, componentName, components);
   },
 };
 

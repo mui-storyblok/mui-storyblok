@@ -1,9 +1,9 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TableRow } from '@material-ui/core';
 import MuiTableCell from './components/MuiTableCell/MuiTableCell';
-
 import StoryBlok from '../../../../utils/Storyblok';
+import { validComponents } from '../../../../utils/customProps';
 
 const MuiTableRow = ({
   rootClass,
@@ -11,10 +11,6 @@ const MuiTableRow = ({
   hover,
   selected,
 }) => {
-  const components = {
-    MuiTableCell,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
 
   return (
@@ -23,10 +19,7 @@ const MuiTableRow = ({
       hover={hover}
       selected={selected}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((item, index) => <MuiTableCell {...item} key={index} />)}
     </TableRow>
   );
 };
@@ -54,13 +47,15 @@ MuiTableRow.propTypes = {
    * components:
    * MuiTableCell
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTableCell'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiTableRow.defaultProps = {
   hover: false,
   selected: false,
   rootClass: [],
+  content: [],
 };
