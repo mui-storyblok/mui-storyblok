@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Icon } from '@material-ui/core';
 import MuiTypography from '../MuiTypography/MuiTypography';
@@ -8,25 +8,39 @@ export const MuiNotificationBanner = ({
   rootClass,
   color,
   content,
-  height,
   top,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { height, top });
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { top });
+  const [showBanner, setBanner] = useState(true);
+  const handleClose = () => {
+    setBanner(false);
+  };
+
   return (
-    <AppBar
-      className={styles.root}
-      color={color}
-      position="fixed"
-    >
-      <>
-        {content.map((item, index) => <MuiTypography {...item} key={index} />)}
-        <Icon
-          style={{ color: 'red' }}
+    showBanner
+      ? (
+        <AppBar
+          className={styles.root}
+          color={color}
+          position="fixed"
         >
-          clear
-        </Icon>
-      </>
-    </AppBar>
+          <div style={{ position: 'relative' }}>
+            {content.map((item, index) => <MuiTypography {...item} key={index} />)}
+            <Icon
+              onClick={() => handleClose()}
+              style={{
+                cursor: 'pointer',
+                color: 'red',
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+              }}
+            >
+              clear
+            </Icon>
+          </div>
+        </AppBar>
+      ) : null
   );
 };
 
@@ -45,10 +59,6 @@ MuiNotificationBanner.propTypes = {
    * */
   color: PropTypes.string,
   /**
-   * Height of the App Bar.
-   * */
-  height: PropTypes.string,
-  /**
    * Positioning of the banner from the top of the page.
    * */
   top: PropTypes.string,
@@ -61,8 +71,7 @@ MuiNotificationBanner.propTypes = {
 };
 
 MuiNotificationBanner.defaultProps = {
-  height: '85px',
   color: 'primary',
   rootClass: [],
-  top: '10%',
+  top: '60px',
 };
