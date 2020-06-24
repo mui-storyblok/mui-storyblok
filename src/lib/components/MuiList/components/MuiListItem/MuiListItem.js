@@ -20,6 +20,7 @@ export const MuiListItem = ({
   isButton,
   redirectRoute,
   history,
+  href,
 
   contactButton,
   listItemAvatar,
@@ -35,7 +36,14 @@ export const MuiListItem = ({
     MuiContactButton,
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-  const handleClick = async () => history.push(redirectRoute);
+  let handleClick;
+  if (href === undefined && redirectRoute === undefined) {
+    handleClick = () => { };
+  } else if (href !== undefined && href !== '') {
+    handleClick = () => window.location.assign(href);
+  } else if (redirectRoute !== undefined && redirectRoute !== '') {
+    handleClick = async () => history.push(redirectRoute);
+  }
 
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
@@ -51,7 +59,7 @@ export const MuiListItem = ({
       divider={divider}
       selected={selected}
       button={isButton}
-      onClick={redirectRoute === undefined || redirectRoute === '' ? () => {} : handleClick}
+      onClick={handleClick}
     >
       {avatar
         ? createElement(components[avatar.component], { ...avatar })
@@ -100,6 +108,8 @@ MuiListItem.propTypes = {
   selected: PropTypes.bool,
   /** redirect route */
   redirectRoute: PropTypes.string,
+  /** url to redirect to */
+  href: PropTypes.string,
 
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
@@ -135,6 +145,7 @@ MuiListItem.defaultProps = {
   selected: false,
   isButton: false,
   redirectRoute: undefined,
+  href: undefined,
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],

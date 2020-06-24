@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiListItem } from './MuiListItem';
 
-function setup(isButton = false, redirectRoute = undefined) {
+function setup(isButton = false, redirectRoute = undefined, href = undefined) {
   const props = {
     listItemAvatar: [{
       component: 'MuiListItemAvatar',
@@ -45,6 +45,7 @@ function setup(isButton = false, redirectRoute = undefined) {
     history: {
       push: jest.fn(),
     },
+    href,
   };
   const comp = shallow(<MuiListItem {...props} />);
   return { comp, props };
@@ -60,6 +61,15 @@ describe('<MuiListItem />', () => {
     const { comp, props } = setup(true, '/page-test');
     comp.find('WithStyles(ForwardRef(ListItem))').at(0).simulate('click');
     expect(props.history.push).toBeCalled();
+  });
+
+  it('handleClick and calls history push ', async () => {
+    const { assign } = window.location;
+    window.location.assign = jest.fn();
+    const { comp } = setup(false, undefined, 'www.google.com');
+    comp.find('WithStyles(ForwardRef(ListItem))').at(0).simulate('click');
+    expect(window.location.assign).toBeCalled();
+    window.location.assign = assign;
   });
 
   test('snapshot', () => {
