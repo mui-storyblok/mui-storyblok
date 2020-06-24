@@ -4,7 +4,7 @@ import { List, Collapse } from '@material-ui/core';
 import MuiListExpansion from '../MuiListExpansion/MuiListExpansion';
 import MuiList from '../../../MuiList/MuiList';
 import StoryBlok from '../../../../utils/Storyblok';
-
+import { validComponentsRequired, validComponents } from '../../../../utils/customProps';
 
 export const MuiListDropdown = ({
   rootClass,
@@ -39,18 +39,22 @@ MuiListDropdown.propTypes = {
    * components:
    * MuiListItem
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiListItem'];
+    return validComponents(props, propName, componentName, components);
+  },
   /**
    * components:
    * MuiListItem
    */
-  listExpansion: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  listExpansion(props, propName, componentName) {
+    const components = ['MuiListItem'];
+    return validComponentsRequired(props, propName, componentName, components, 1);
+  },
 };
 
 MuiListDropdown.defaultProps = {
   rootClass: [],
+  content: [],
+  listExpansion: [],
 };

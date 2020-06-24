@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTable",
   "display_name": null,
-  "updated_at": "2020-05-18T22:45:54.558Z",
+  "updated_at": "2020-04-21T17:26:30.043Z",
   "schema": {
     "rootClass": {
       "type": "options",

@@ -26,6 +26,7 @@ const tabTwo = {
   const tabs = [tabOne, tabTwo];
 
   <MuiTabs
+    orientation='horizontal'
     tabs={tabs}
   />
 ```

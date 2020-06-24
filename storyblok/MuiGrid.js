@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGrid",
   "display_name": null,
-  "updated_at": "2020-06-10T16:58:31.381Z",
+  "updated_at": "2020-06-24T16:15:27.067Z",
   "schema": {
     "alignContent": {
       "type": "option",
@@ -235,7 +235,8 @@ module.exports = {
         "MuiMobileStepper",
         "MuiCircularProgress",
         "MuiGridList",
-        "MuiHeroHeader"
+        "MuiHeroHeader",
+        "MuiNotificationBanner"
       ],
       "pos": 12,
       "required": true

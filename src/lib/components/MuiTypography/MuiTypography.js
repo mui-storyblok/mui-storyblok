@@ -11,10 +11,9 @@ import MuiButtonDownload from '../MuiButtonDownload/MuiButtonDownload';
 import MuiLink from '../MuiLink/MuiLink';
 import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiTooltip from '../MuiTooltip/MuiTooltip';
 
 /**
- * MuiTypography is used in storyblok redirect to react routes
+ * MuiTypography
  */
 
 export const MuiTypography = (props) => {
@@ -29,7 +28,6 @@ export const MuiTypography = (props) => {
     MuiButtonHref,
     MuiButtonDownload,
     MuiButtonDialog,
-    MuiTooltip,
   };
 
   return (
@@ -43,7 +41,6 @@ export const MuiTypography = (props) => {
 export default MuiTypography;
 
 MuiTypography.propTypes = {
-
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,

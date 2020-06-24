@@ -10,6 +10,11 @@ import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Storyblok from '../../utils/Storyblok';
+import {
+  validComponents,
+  muiStringProp,
+  dimensionProp,
+} from '../../utils/customProps';
 import MuiIcon from '../MuiIcon/MuiIcon';
 import MuiGrid from '../MuiGrid/MuiGrid';
 
@@ -157,35 +162,49 @@ MuiTabs.propTypes = {
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop : 'secondary' | 'primary'
+   * mui prop : 'secondary', 'primary'
    * Determines the color of the indicator.
    */
-  indicatorColor: PropTypes.string,
+  indicatorColor(props, propName, componentName) {
+    const validProps = ['secondary', 'primary'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'horizontal' | 'vertical'
+   * mui prop: 'horizontal', 'vertical'
    * The tabs orientation (layout flow direction).
    */
-  orientation: PropTypes.string,
+  orientation(props, propName, componentName) {
+    const validProps = ['horizontal', 'vertical'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * Height of the tabs container.
    */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
-   * mui prop: 'auto' | 'desktop' | 'on' | 'off'
+   * mui prop: 'auto', 'desktop', 'on', 'off'
    * Determine behavior of scroll buttons when tabs are set to scroll:
    * - auto will only present them when not all the items are visible.
    * - desktop will only present them on medium and larger viewports.
    * - on will always present them.
    * - off will never present them.
    */
-  scrollButtons: PropTypes.string,
+  scrollButtons(props, propName, componentName) {
+    const validProps = ['auto', 'desktop', 'on', 'off'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'secondary' | 'primary' | 'inherit'
+   * mui prop: 'secondary', 'primary', 'inherit'
    * Determines the color of the Tab.
    */
-  textColor: PropTypes.string,
+  textColor(props, propName, componentName) {
+    const validProps = ['secondary', 'primary', 'inherit'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop:  'standard'| 'scrollable'| 'fullWidth'
+   * mui prop:  'standard', 'scrollable', 'fullWidth'
    * Determines additional display behavior of the tabs:
    * - scrollable will invoke scrolling properties and allow for
     horizontally scrolling (or swiping) of the tab bar.
@@ -193,12 +212,18 @@ MuiTabs.propTypes = {
     which should be used for small views, like on mobile.
     - standard will render the default state.
    */
-  variant: PropTypes.string,
+  variant(props, propName, componentName) {
+    const validProps = ['standard', 'scrollable', 'fullWidth'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * Justify content flex styling for MuiTabs.
-   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around
+   * justifyContent: 'space-between', 'center', 'space-evenly', 'space-around'
    */
-  justifyContent: PropTypes.string,
+  justifyContent(props, propName, componentName) {
+    const validProps = ['space-between', 'center', 'space-evenly', 'space-around'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /** autoplay will incroment tabs by a interval */
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
@@ -208,9 +233,10 @@ MuiTabs.propTypes = {
   geocode: PropTypes.bool,
 
   /** MuiTab */
-  tabs: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  tabs(props, propName, componentName) {
+    const components = ['MuiTab'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiTabs.defaultProps = {

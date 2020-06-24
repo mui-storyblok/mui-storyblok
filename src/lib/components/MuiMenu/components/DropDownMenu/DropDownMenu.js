@@ -4,6 +4,9 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import styles from './DropDownMenu.module.scss';
+import {
+  muiStringProp,
+} from '../../../../utils/customProps';
 
 const DropDownMenu = ({
   children,
@@ -37,15 +40,24 @@ export default DropDownMenu;
 DropDownMenu.propTypes = {
   /** button text for dropdown click */
   btnTxt: PropTypes.string,
-  /** mui prop: 'default'| 'inherit'| 'primary'| 'secondary' */
-  color: PropTypes.string,
-  /** mui prop: 'text' |'outlined'| 'contained */
-  variant: PropTypes.string,
-  /** mui prop: 'small'| 'medium'| 'large' */
-  size: PropTypes.string,
+  /** mui prop: 'default', 'inherit', 'primary', 'secondary' */
+  color(props, propName, componentName) {
+    const validProps = ['default', 'inherit', 'primary', 'secondary'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
+  /** mui prop: 'text' ,'outlined', 'contained' */
+  variant(props, propName, componentName) {
+    const validProps = ['text' ,'outlined', 'contained'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
+  /** mui prop: 'small', 'medium', 'large' */
+  size(props, propName, componentName) {
+    const validProps = ['small', 'medium', 'large'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
 
-  rootClass: PropTypes.string,
-
+  /** stroyblok multiselect of css classes */
+  rootClass: PropTypes.arrayOf(PropTypes.string),
   children: PropTypes.node.isRequired,
 };
 

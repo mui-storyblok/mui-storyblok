@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiFade",
   "display_name": null,
-  "updated_at": "2020-05-18T22:45:39.693Z",
+  "updated_at": "2020-05-13T01:35:51.733Z",
   "schema": {
     "rootClass": {
       "type": "options",

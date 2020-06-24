@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiImage",
   "display_name": null,
-  "updated_at": "2020-06-10T16:58:35.639Z",
+  "updated_at": "2020-06-15T22:31:49.875Z",
   "schema": {
     "hrefLink": {
       "type": "text",

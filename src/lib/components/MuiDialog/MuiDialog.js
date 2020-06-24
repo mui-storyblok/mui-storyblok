@@ -2,7 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 import Storyblok from '../../utils/Storyblok';
-import { validComponents, componentsRequired } from '../../utils/customProps';
+import { validComponents, validComponentsRequired } from '../../utils/customProps';
 import MuiDialogActions from './components/MuiDialogActions/MuiDialogActions';
 import MuiDialogTitle from './components/MuiDialogTitle/MuiDialogTitle';
 import MuiDialogContent from './components/MuiDialogContent/MuiDialogContent';
@@ -47,13 +47,7 @@ MuiDialog.propTypes = {
   },
   /** MuiDialogTitle Allowed maximum: 1 */
   dialogTitle(props, propName, componentName) {
-    let error;
-    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
-    if (error) return error;
-    const components = ['MuiDialogTitle'];
-    error = validComponents(props, propName, componentName, components);
-    if (error) return error;
-    return undefined;
+    return validComponentsRequired(props, propName, componentName, ['MuiDialogTitle'], 1);
   },
   /** passed down from parent componet to hide or show Dialog */
   open: PropTypes.bool,

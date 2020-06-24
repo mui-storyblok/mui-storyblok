@@ -1,7 +1,11 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
-
+import {
+  validComponents,
+  muiStringProp,
+  validComponentsRequired,
+} from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiListItemAvatar from './components/MuiListItemAvatar/MuiListItemAvatar';
 import MuiListItemIcon from './components/MuiListItemIcon/MuiListItemIcon';
@@ -16,20 +20,12 @@ const MuiListItem = ({
   disableGutters,
   divider,
   selected,
-
   contactButton,
   listItemAvatar,
   listItemIcon,
   listItemSecondaryAction,
   listItemText,
 }) => {
-  const components = {
-    MuiListItemAvatar,
-    MuiListItemIcon,
-    MuiListItemSecondaryAction,
-    MuiListItemText,
-    MuiContactButton,
-  };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const avatar = listItemAvatar[0];
@@ -46,15 +42,11 @@ const MuiListItem = ({
       divider={divider}
       selected={selected}
     >
-      {avatar ? createElement(components[avatar.component], { ...avatar }) : null}
-      {icon ? createElement(components[icon.component], { ...icon }) : null}
-      {text ? createElement(components[text.component], text) : null}
-      {
-        secondaryAction
-          ? createElement(components[secondaryAction.component], secondaryAction)
-          : null
-      }
-      {contact ? createElement(components[contact.component], { ...contact }) : null}
+      {avatar ? <MuiListItemAvatar {...avatar} /> : null}
+      {icon ? <MuiListItemIcon {...icon} /> : null}
+      {text ? <MuiListItemText {...text} /> : null}
+      {secondaryAction ? <MuiListItemSecondaryAction {...secondaryAction} /> : null}
+      {contact ? <MuiContactButton {...contact} /> : null}
     </ListItem>
   );
 };
@@ -64,10 +56,13 @@ export default MuiListItem;
 MuiListItem.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-  /** mui prop: 'flex-start'| 'center'
+  /** mui prop: 'flex-start', 'center'
    * Defines the align-items style property.
   */
-  alignItems: PropTypes.string,
+  alignItems(props, propName, componentName) {
+    const validProps = ['flex-start', 'center'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /** mui prop: true | false
    * If true, compact vertical padding designed for keyboard and mouse input will be used.
    * */
@@ -84,27 +79,30 @@ MuiListItem.propTypes = {
    * Use to apply selected styling.
    * */
   selected: PropTypes.bool,
-
   /** MuiListItemAvatar Allowed maximum: 1 */
-  listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  listItemAvatar(props, propName, componentName) {
+    const components = ['MuiListItemAvatar'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** MuiListItemAvatar Allowed maximum: 1 */
-  contactButton: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  contactButton(props, propName, componentName) {
+    const components = ['MuiListItemAvatar'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** MuiListItemIcon Allowed maximum: 1 */
-  listItemIcon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  listItemIcon(props, propName, componentName) {
+    const components = ['MuiListItemIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** MuiListItemText Allowed maximum: 1 */
-  listItemText: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  listItemText(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiListItemText'], 1);
+  },
   /** MuiListItemSecondaryAction Allowed maximum: 1 */
-  listItemSecondaryAction: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  listItemSecondaryAction(props, propName, componentName) {
+    const components = ['MuiListItemSecondaryAction'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 };
 
 MuiListItem.defaultProps = {
@@ -118,4 +116,5 @@ MuiListItem.defaultProps = {
   listItemIcon: [],
   listItemSecondaryAction: [],
   contactButton: [],
+  listItemText: [],
 };

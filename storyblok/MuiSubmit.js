@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiSubmit",
   "display_name": null,
-  "updated_at": "2020-05-28T17:15:55.615Z",
+  "updated_at": "2020-05-22T22:16:09.681Z",
   "schema": {
     "buttonText": {
       "type": "text",

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "Blok",
-  "display_name": null,
-  "updated_at": "2020-05-18T22:45:26.325Z",
+  "display_name": "",
+  "updated_at": "2020-06-23T21:07:37.481Z",
   "schema": {
     "only": {
       "type": "options",
@@ -47,7 +47,20 @@ module.exports = {
   "is_root": false,
   "preview_tmpl": null,
   "is_nestable": true,
-  "all_presets": [],
+  "all_presets": [
+    {
+      "id": 644763,
+      "name": "cool",
+      "component_id": 842333,
+      "image": ""
+    },
+    {
+      "id": 644764,
+      "name": "whatever",
+      "component_id": 842333,
+      "image": ""
+    }
+  ],
   "preset_id": null,
   "real_name": "Blok",
   "component_group_uuid": null

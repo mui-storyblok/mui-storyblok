@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiZoom",
   "display_name": null,
-  "updated_at": "2020-05-18T22:45:59.737Z",
+  "updated_at": "2020-05-13T18:41:57.250Z",
   "schema": {
     "rootClass": {
       "type": "options",

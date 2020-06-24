@@ -159,3 +159,12 @@ export const componentsRequired = (
 
   return undefined;
 };
+
+export const validComponentsRequired = (props, propName, componentName, components, length) => {
+  let error;
+  error = componentsRequired(props, propName, componentName, length);
+  if (error) return error;
+  error = validComponents(props, propName, componentName, components);
+  if (error) return error;
+  return undefined;
+};

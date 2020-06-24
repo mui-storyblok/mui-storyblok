@@ -1,7 +1,7 @@
 module.exports = {
   "name": "BlokForm",
   "display_name": null,
-  "updated_at": "2020-05-28T17:15:32.935Z",
+  "updated_at": "2020-05-26T18:18:01.671Z",
   "schema": {
     "submitButton": {
       "type": "bloks",

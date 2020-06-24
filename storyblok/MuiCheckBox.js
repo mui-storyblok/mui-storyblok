@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCheckBox",
   "display_name": null,
-  "updated_at": "2020-05-28T17:15:39.835Z",
+  "updated_at": "2020-06-15T22:31:39.735Z",
   "schema": {
     "name": {
       "type": "text",
