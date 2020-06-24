@@ -1,7 +1,7 @@
 module.exports = {
-  "name": "MuiListItem",
+  "name": "MuiListItemButton",
   "display_name": null,
-  "updated_at": "2020-06-24T14:24:05.779Z",
+  "updated_at": "2020-06-24T17:13:43.706Z",
   "schema": {
     "listItemText": {
       "type": "bloks",
@@ -67,18 +67,6 @@ module.exports = {
       "maximum": "1",
       "pos": 8
     },
-    "listItemSecondaryAction": {
-      "type": "bloks",
-      "maximum": "1",
-      "restrict_components": true,
-      "component_whitelist": [
-        "MuiListItemSecondaryAction"
-      ]
-    },
-    "isButton": {
-      "type": "boolean",
-      "description": "If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem."
-    },
     "redirectRoute": {
       "type": "text",
       "default_value": "",
@@ -96,6 +84,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiListItem",
+  "real_name": "MuiListItemButton",
   "component_group_uuid": null
 }
