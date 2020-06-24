@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 import {
@@ -26,13 +26,6 @@ const MuiListItem = ({
   listItemSecondaryAction,
   listItemText,
 }) => {
-  const components = {
-    MuiListItemAvatar,
-    MuiListItemIcon,
-    MuiListItemSecondaryAction,
-    MuiListItemText,
-    MuiContactButton,
-  };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const avatar = listItemAvatar[0];
@@ -49,15 +42,11 @@ const MuiListItem = ({
       divider={divider}
       selected={selected}
     >
-      {avatar ? createElement(components[avatar.component], { ...avatar }) : null}
-      {icon ? createElement(components[icon.component], { ...icon }) : null}
-      {text ? createElement(components[text.component], text) : null}
-      {
-        secondaryAction
-          ? createElement(components[secondaryAction.component], secondaryAction)
-          : null
-      }
-      {contact ? createElement(components[contact.component], { ...contact }) : null}
+      {avatar ? <MuiListItemAvatar {...avatar} /> : null}
+      {icon ? <MuiListItemIcon {...icon} /> : null}
+      {text ? <MuiListItemText {...text} /> : null}
+      {secondaryAction ? <MuiListItemSecondaryAction {...secondaryAction} /> : null}
+      {contact ? <MuiContactButton {...contact} /> : null}
     </ListItem>
   );
 };

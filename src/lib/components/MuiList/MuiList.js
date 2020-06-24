@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import { validComponents } from '../../utils/customProps';
 import Storyblok from '../../utils/Storyblok';
 import MuiListItem from './components/MuiListItem/MuiListItem';
+import MuiListItemButton from './components/MuiListItemButton/MuiListItemButton';
 
 const MuiList = ({
   rootClass,
@@ -13,6 +14,10 @@ const MuiList = ({
   width,
   content,
 }) => {
+  const components = {
+    MuiListItem,
+    MuiListItemButton,
+  };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
@@ -22,7 +27,10 @@ const MuiList = ({
       disablePadding={disablePadding}
       width={width}
     >
-      {content.map((item, index) => <MuiListItem {...item} key={index} />)}
+      {content.map((item, index) => createElement(
+        components[item.component],
+        Object.assign(item, { key: index }),
+      ))}
     </List>
   );
 };
