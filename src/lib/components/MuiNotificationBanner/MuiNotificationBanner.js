@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Icon } from '@material-ui/core';
+import { validComponents } from '../../utils/customProps';
 import MuiTypography from '../MuiTypography/MuiTypography';
 import Storyblok from '../../utils/Storyblok';
 
@@ -65,13 +66,18 @@ MuiNotificationBanner.propTypes = {
   /**
    * Components: MuiTypography
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTypography'];
+    return validComponents(props, propName, componentName, components);
+  },
+  // content: PropTypes.arrayOf(PropTypes.shape({
+  //   component: PropTypes.string.isRequired,
+  // })).isRequired,
 };
 
 MuiNotificationBanner.defaultProps = {
   color: 'primary',
   rootClass: [],
+  content: [],
   top: '60px',
 };

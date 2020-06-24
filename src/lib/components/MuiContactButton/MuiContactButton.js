@@ -36,10 +36,6 @@ MuiContactButton.propTypes = {
     const components = ['MuiButton'];
     return validComponents(props, propName, componentName, components, 1);
   },
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
 };
 
 MuiContactButton.defaultProps = {

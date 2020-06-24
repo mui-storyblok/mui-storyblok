@@ -99,19 +99,18 @@ export const nestedComponentsProps = (
 
 export const dimensionProp = (props, propName, componentName) => {
   // use 'px', 'em', '%' 'vh', 'vw', as unit of measurement for height and width prop
-  const validDimensionCss = ['px', 'em', '%'];
   let error;
 
   if (propName === 'height' || propName === 'width') {
-    if (propName === 'height') validDimensionCss.push('vh');
-    if (propName === 'width') validDimensionCss.push('vw');
-    validDimensionCss.every((substring) => {
-      if (!props[propName].includes(substring)) {
-        error = new Error(
-          `${componentName}: ${propName} has to be one of these units of size ${validDimensionCss.toString()}`,
-        );
-      }
-    });
+    if (propName === 'height' && !props[propName].includes('px') && !props[propName].includes('em') && !props[propName].includes('%') && !props[propName].includes('vh')) {
+      error = new Error(
+        `${componentName}: ${propName} has to be one of these units of size px, em, %, vh`,
+      );
+    } else if (propName === 'width' && !props[propName].includes('px') && !props[propName].includes('em') && !props[propName].includes('%') && !props[propName].includes('vw')) {
+      error = new Error(
+        `${componentName}: ${propName} has to be one of these units of size px, em, %, vw`,
+      );
+    }
   } else if (['height', 'width'].includes(propName)) {
     error = new Error(
       'dimensionProp needs to be used on proptype with name height or width',

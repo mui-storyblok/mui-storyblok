@@ -1,6 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
+import { validComponents } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
@@ -46,12 +47,12 @@ MuiCardContent.propTypes = {
     MuiList,
    */
   content(props, propName, componentName) {
-    const validComponents = [
+    const components = [
       'MuiTypography',
       'MuiExpansionPanel',
       'MuiList',
     ];
-    return validComponents(props, propName, componentName, validComponents);
+    return validComponents(props, propName, componentName, components);
   },
 };
 

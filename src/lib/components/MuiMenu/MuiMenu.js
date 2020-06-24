@@ -38,7 +38,7 @@ MuiMenu.propTypes = {
    * mui prop: 'small', 'medium', 'large'
    */
   size(props, propName, componentName) {
-    const validProps = [ 'small', 'medium', 'large'];
+    const validProps = ['small', 'medium', 'large'];
     return muiStringProp(props, propName, componentName, validProps);
   },
   /**
