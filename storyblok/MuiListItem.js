@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListItem",
   "display_name": null,
-  "updated_at": "2020-06-15T22:31:51.880Z",
+  "updated_at": "2020-06-24T14:24:05.779Z",
   "schema": {
     "listItemText": {
       "type": "bloks",
@@ -74,6 +74,19 @@ module.exports = {
       "component_whitelist": [
         "MuiListItemSecondaryAction"
       ]
+    },
+    "isButton": {
+      "type": "boolean",
+      "description": "If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem."
+    },
+    "redirectRoute": {
+      "type": "text",
+      "default_value": "",
+      "description": "redirect route\n* If provided redirect route and href, href is be called"
+    },
+    "href": {
+      "type": "text",
+      "description": "* url to redirect to"
     }
   },
   "image": null,
