@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiNotificationBanner",
   "display_name": null,
-  "updated_at": "2020-06-24T16:02:08.351Z",
+  "updated_at": "2020-06-24T19:33:37.606Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -45,14 +45,9 @@ module.exports = {
       "required": true,
       "description": ""
     },
-    "height": {
-      "type": "text",
-      "description": "Height of the banner.",
-      "default_value": "85px"
-    },
     "top": {
       "type": "text",
-      "default_value": "10%"
+      "default_value": "60px"
     }
   },
   "image": null,
