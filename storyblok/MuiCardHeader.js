@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCardHeader",
   "display_name": null,
-  "updated_at": "2020-06-15T22:05:06.958Z",
+  "updated_at": "2020-06-15T22:31:39.061Z",
   "schema": {
     "title": {
       "type": "text",

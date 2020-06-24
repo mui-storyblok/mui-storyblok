@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiContactButton",
   "display_name": null,
-  "updated_at": "2020-05-21T19:04:32.038Z",
+  "updated_at": "2020-05-20T19:20:30.061Z",
   "schema": {
     "button": {
       "type": "bloks",

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiSlide",
   "display_name": null,
-  "updated_at": "2020-05-18T22:45:53.628Z",
+  "updated_at": "2020-05-13T00:22:50.129Z",
   "schema": {
     "rootClass": {
       "type": "options",

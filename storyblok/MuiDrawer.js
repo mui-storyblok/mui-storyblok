@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDrawer",
   "display_name": null,
-  "updated_at": "2020-05-06T14:53:58.232Z",
+  "updated_at": "2020-05-22T16:12:04.288Z",
   "schema": {
     "anchor": {
       "type": "option",

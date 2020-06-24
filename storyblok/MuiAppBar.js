@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-12T15:30:19.658Z",
+  "updated_at": "2020-06-22T16:52:58.369Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -106,7 +106,7 @@ module.exports = {
         "MuiAppBarGrid"
       ],
       "required": true,
-      "pos": 6
+      "maximum": "1"
     }
   },
   "image": null,

@@ -11,7 +11,6 @@ import MuiButtonDownload from '../MuiButtonDownload/MuiButtonDownload';
 import MuiLink from '../MuiLink/MuiLink';
 import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiTooltip from '../MuiTooltip/MuiTooltip';
 
 /**
  * MuiTypography
@@ -29,7 +28,6 @@ export const MuiTypography = (props) => {
     MuiButtonHref,
     MuiButtonDownload,
     MuiButtonDialog,
-    MuiTooltip,
   };
 
   return (

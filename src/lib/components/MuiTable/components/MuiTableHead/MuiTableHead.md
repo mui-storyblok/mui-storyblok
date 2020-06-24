@@ -10,7 +10,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 1',
+        content: 'Table Header 1',
       }],
     }],
   },
@@ -21,7 +21,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 2',
+        content: 'Table Header 2',
       }],
     }],
   },
@@ -32,7 +32,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 3',
+        content: 'Table Header 3',
       }],
     }],
   }],
@@ -55,7 +55,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 1',
+        content: 'Table Header 1',
       }],
     }],
   },
@@ -66,7 +66,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 2',
+        content: 'Table Header 2',
       }],
     }],
   },
@@ -77,7 +77,7 @@ const tHead = [{
       component: 'MuiTypography',
       content: [{
         component: 'MuiText',
-        text: 'Table Header 3',
+        content: 'Table Header 3',
       }],
     }],
   }],

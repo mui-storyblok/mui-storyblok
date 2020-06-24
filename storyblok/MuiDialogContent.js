@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogContent",
   "display_name": null,
-  "updated_at": "2020-06-14T21:37:43.300Z",
+  "updated_at": "2020-06-15T22:31:42.207Z",
   "schema": {
     "dividers": {
       "type": "boolean"

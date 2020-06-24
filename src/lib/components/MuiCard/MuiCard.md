@@ -7,7 +7,7 @@ const cardcontent2 = {
         component: 'MuiTypography',
         content: [{
             component: 'MuiText',
-            text: "This is a card",
+            content: "This is a card",
         }],
     }],
 }
@@ -61,7 +61,7 @@ const cardcontent = {
         component: 'MuiTypography',
         content: [{
             component: 'MuiText',
-            text: "whatever dude",
+            content: "whatever dude",
         }],
     }],
 }

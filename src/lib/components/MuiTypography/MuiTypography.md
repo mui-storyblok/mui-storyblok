@@ -2,8 +2,22 @@ MuiTypography nested icon/text example:
 
 ```js
 const muiText = {
-    component: 'MuiText',
-    text: 'you can concatenate strings',
+    component: 'MuiTypography',
+    content: [
+      {
+      component: 'MuiText',
+      content: 'you can concatenate strings',
+      },
+      {
+      component: 'MuiText',
+      content: ' like this',
+      color: 'secondary',
+      },
+    ],
+    height: '100%',
+    variant: 'h3',
+    width: '100%',
+    color: 'inherit',
 }
 
 const icon = {
@@ -21,140 +35,143 @@ const iconButtonDownload = {
     }],
 };
 
-const muiText2 = {
-    component: 'MuiText',
-    text: 'like this',
-    color: 'secondary',
-}
-
-const content = [muiText, iconButtonDownload, muiText2];
-
-<MuiTypography
-  content={content}
-/>
+<MuiTypography {...muiText} />
 ```
 
 MuiTypography Variants example:
 
 ```js
-const h1 = [{
+const h1 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H1. Heading',
+    content: 'H1. Heading',
     variant: 'h1',
-}];
+  }],
+};
 
-const h2 = [{
+const h2 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H2. Heading',
+    content: 'H2. Heading',
     variant: 'h2',
-}];
+  }],
+};
 
-const h3 = [{
+const h3 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H3. Heading',
+    content: 'H3. Heading',
     variant: 'h3',
-}];
+  }],
+};
 
-const h4 = [{
+const h4 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H4. Heading',
+    content: 'H4. Heading',
     variant: 'h4',
-}];
+  }],
+};
 
-const h5 = [{
+const h5 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H5. Heading',
+    content: 'H5. Heading',
     variant: 'h5',
-}];
+  }],
+};
 
-const h6 = [{
+const h6 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'H6. Heading',
+    content: 'H6. Heading',
     variant: 'h6',
-}];
+  }],
+};
 
-const subtitle1 = [{
+const subtitle1 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'subtitle 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur',
+    content: 'subtitle 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur',
     variant: 'subtitle1',
-}];
+  }],
+};
 
-const subtitle2 = [{
+const subtitle2 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'subtitle 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur',
+    content: 'subtitle 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur',
     variant: 'subtitle2',
-}];
+  }],
+};
 
-const body1 = [{
+const body1 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'body 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.',
+    content: 'body 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.',
     variant: 'body1',
-}];
+  }],
+};
 
-const body2 = [{
+const body2 = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'body 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.',
+    content: 'body 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.',
     variant: 'body2',
-}];
+  }],
+};
 
-const buttonVariant = [{
+const buttonVariant = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'button text',
+    content: 'button text',
     variant: 'button',
-}];
+  }],
+};
 
-const caption = [{
+const caption = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'caption text',
+    content: 'caption text',
     variant: 'caption',
-}];
+  }],
+};
 
-const overline = [{
+const overline = {
+  component: 'MuiTypography',
+  content: [{
     component: 'MuiText',
-    text: 'overline text',
+    content: 'overline text',
     variant: 'overline',
-}];
+  }],
+};
 
 
 <div>
-  <MuiTypography
-    content={h1}
-  />
-  <MuiTypography
-    content={h2}
-  />
-  <MuiTypography
-    content={h3}
-  />
-  <MuiTypography
-    content={h4}
-  />
-  <MuiTypography
-    content={h5}
-  />
-  <MuiTypography
-    content={h6}
-  />
-  <MuiTypography
-    content={subtitle1}
-  />
-  <MuiTypography
-    content={subtitle2}
-  />
-  <MuiTypography
-    content={body1}
-  />
-  <MuiTypography
-    content={body2}
-  />
-  <MuiTypography
-    content={buttonVariant}
-  />
-  <MuiTypography
-    content={caption}
-  />
-  <MuiTypography
-    content={overline}
-  />
+  <MuiTypography {...h1} />
+  <MuiTypography {...h2} />
+  <MuiTypography {...h3} />
+  <MuiTypography {...h4} />
+  <MuiTypography {...h5} />
+  <MuiTypography {...h6} />
+  <MuiTypography {...subtitle1} />
+  <MuiTypography {...subtitle2} />
+  <MuiTypography {...body1} />
+  <MuiTypography {...body2} />
+  <MuiTypography {...buttonVariant} />
+  <MuiTypography {...caption} />
+  <MuiTypography {...overline} />
 </div>
 ```
