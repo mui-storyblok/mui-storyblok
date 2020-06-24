@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiList",
   "display_name": null,
-  "updated_at": "2020-04-24T21:57:42.360Z",
+  "updated_at": "2020-06-24T17:14:00.665Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -22,7 +22,8 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiListItem"
+        "MuiListItem",
+        "MuiListItemButton"
       ],
       "required": true
     },
