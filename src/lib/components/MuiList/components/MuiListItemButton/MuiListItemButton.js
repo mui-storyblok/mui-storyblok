@@ -1,35 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
 
 import Storyblok from '../../../../utils/Storyblok';
-import MuiListItemAvatar from './components/MuiListItemAvatar/MuiListItemAvatar';
-import MuiListItemIcon from './components/MuiListItemIcon/MuiListItemIcon';
-import MuiListItemSecondaryAction from './components/MuiListItemSecondaryAction/MuiListItemSecondaryAction';
-import MuiListItemText from './components/MuiListItemText/MuiListItemText';
-import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
+import MuiListItemAvatar from '../MuiListItem/components/MuiListItemAvatar/MuiListItemAvatar';
+import MuiListItemIcon from '../MuiListItem/components/MuiListItemIcon/MuiListItemIcon';
+import MuiListItemText from '../MuiListItem/components/MuiListItemText/MuiListItemText';
 
-const MuiListItem = ({
+export const MuiListItemButton = ({
   rootClass,
   alignItems,
   dense,
   disableGutters,
   divider,
   selected,
+  redirectRoute,
+  history,
+  href,
 
-  contactButton,
   listItemAvatar,
   listItemIcon,
-  listItemSecondaryAction,
   listItemText,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+  let handleClick;
+  if (href === undefined && redirectRoute === undefined) {
+    handleClick = () => { };
+  } else if (href !== undefined && href !== '') {
+    handleClick = () => window.location.assign(href);
+  } else if (redirectRoute !== undefined && redirectRoute !== '') {
+    handleClick = async () => history.push(redirectRoute);
+  }
 
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
-  const secondaryAction = listItemSecondaryAction[0];
   const text = listItemText[0];
-  const contact = contactButton[0];
   return (
     <ListItem
       className={styles.root}
@@ -38,19 +44,19 @@ const MuiListItem = ({
       disableGutters={disableGutters}
       divider={divider}
       selected={selected}
+      button={true}
+      onClick={handleClick}
     >
       {avatar ? <MuiListItemAvatar {...avatar} /> : null}
       {icon ? <MuiListItemIcon {...icon} /> : null}
       {text ? <MuiListItemText {...text} /> : null}
-      {secondaryAction ? <MuiListItemSecondaryAction {...secondaryAction} /> : null}
-      {contact ? <MuiContactButton {...contact} /> : null}
     </ListItem>
   );
 };
 
-export default MuiListItem;
+export default withRouter(MuiListItemButton);
 
-MuiListItem.propTypes = {
+MuiListItemButton.propTypes = {
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** mui prop: 'flex-start'| 'center'
@@ -73,13 +79,13 @@ MuiListItem.propTypes = {
    * Use to apply selected styling.
    * */
   selected: PropTypes.bool,
+  /** redirect route */
+  redirectRoute: PropTypes.string,
+  /** url to redirect to */
+  href: PropTypes.string,
 
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
-  /** MuiListItemAvatar Allowed maximum: 1 */
-  contactButton: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
   /** MuiListItemIcon Allowed maximum: 1 */
@@ -90,21 +96,21 @@ MuiListItem.propTypes = {
   listItemText: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-  /** MuiListItemSecondaryAction Allowed maximum: 1 */
-  listItemSecondaryAction: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  /** react history not a storyblok prop */
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
 };
 
-MuiListItem.defaultProps = {
+MuiListItemButton.defaultProps = {
   alignItems: 'center',
   dense: false,
   disableGutters: false,
   divider: false,
   selected: false,
+  redirectRoute: undefined,
+  href: undefined,
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],
-  listItemSecondaryAction: [],
-  contactButton: [],
 };

@@ -8,7 +8,6 @@ exports[`<MuiList /> snapshot 1`] = `
   <li
     className="MuiListItem-root makeStyles-root-4 MuiListItem-gutters"
     disabled={false}
-    onClick={[Function]}
   >
     <div
       className="MuiListItemText-root makeStyles-root-5 MuiListItemText-multiline"
