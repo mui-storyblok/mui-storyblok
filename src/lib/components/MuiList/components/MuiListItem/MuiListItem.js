@@ -86,7 +86,8 @@ MuiListItem.propTypes = {
    * */
   disableGutters: PropTypes.bool,
   /** mui prop: true | false
-   * If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem.
+   * If true, the list item will be a button (using ButtonBase).
+   * Props intended for ButtonBase can then be applied to ListItem.
    * */
   isButton: PropTypes.bool,
   /** mui prop: true | false

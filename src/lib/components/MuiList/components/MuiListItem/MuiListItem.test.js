@@ -58,10 +58,8 @@ describe('<MuiListItem />', () => {
 
   it('handleClick and calls history push ', async () => {
     const { comp, props } = setup(true, '/page-test');
-    console.log(comp.debug());
     comp.find('WithStyles(ForwardRef(ListItem))').at(0).simulate('click');
     expect(props.history.push).toBeCalled();
-    // expect(false).toEqual(true);
   });
 
   test('snapshot', () => {
