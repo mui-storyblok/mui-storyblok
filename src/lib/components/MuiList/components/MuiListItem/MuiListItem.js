@@ -10,7 +10,7 @@ import MuiListItemSecondaryAction from './components/MuiListItemSecondaryAction/
 import MuiListItemText from './components/MuiListItemText/MuiListItemText';
 import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
 
-const MuiListItem = ({
+export const MuiListItem = ({
   rootClass,
   alignItems,
   dense,
