@@ -17,6 +17,7 @@ import MuiPaginationTable from '../MuiPaginationTable/MuiPaginationTable';
 import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import MuiImage from '../MuiImage/MuiImage';
 import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
+import MuiNotificationBanner from '../MuiNotificationBanner/MuiNotificationBanner';
 import BlokForm from '../BlokForm/BlokForm';
 
 const MuiGrid = (props) => {
@@ -38,6 +39,7 @@ const MuiGrid = (props) => {
     MuiContactButton,
     MuiImage,
     MuiButtonHref,
+    MuiNotificationBanner,
     BlokForm,
   };
 
