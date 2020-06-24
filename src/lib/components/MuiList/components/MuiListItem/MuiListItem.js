@@ -1,5 +1,6 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
 
 import Storyblok from '../../../../utils/Storyblok';
@@ -16,6 +17,9 @@ const MuiListItem = ({
   disableGutters,
   divider,
   selected,
+  isButton,
+  redirectRoute,
+  history,
 
   contactButton,
   listItemAvatar,
@@ -31,6 +35,7 @@ const MuiListItem = ({
     MuiContactButton,
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const handleClick = async () => history.push(redirectRoute);
 
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
@@ -45,21 +50,25 @@ const MuiListItem = ({
       disableGutters={disableGutters}
       divider={divider}
       selected={selected}
+      button={isButton}
+      onClick={redirectRoute === undefined || redirectRoute === '' ? () => {} : handleClick}
     >
-      {avatar ? createElement(components[avatar.component], { ...avatar }) : null}
+      {avatar
+        ? createElement(components[avatar.component], { ...avatar })
+        : null}
       {icon ? createElement(components[icon.component], { ...icon }) : null}
       {text ? createElement(components[text.component], text) : null}
-      {
-        secondaryAction
-          ? createElement(components[secondaryAction.component], secondaryAction)
-          : null
-      }
-      {contact ? createElement(components[contact.component], { ...contact }) : null}
+      {secondaryAction
+        ? createElement(components[secondaryAction.component], secondaryAction)
+        : null}
+      {contact
+        ? createElement(components[contact.component], { ...contact })
+        : null}
     </ListItem>
   );
 };
 
-export default MuiListItem;
+export default withRouter(MuiListItem);
 
 MuiListItem.propTypes = {
   /** stroyblok multiselect of css classes */
@@ -77,6 +86,10 @@ MuiListItem.propTypes = {
    * */
   disableGutters: PropTypes.bool,
   /** mui prop: true | false
+   * If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem.
+   * */
+  isButton: PropTypes.bool,
+  /** mui prop: true | false
    * If true, a 1px light border is added to the bottom of the list item.
    * */
   divider: PropTypes.bool,
@@ -84,6 +97,8 @@ MuiListItem.propTypes = {
    * Use to apply selected styling.
    * */
   selected: PropTypes.bool,
+  /** redirect route */
+  redirectRoute: PropTypes.string,
 
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
@@ -105,6 +120,10 @@ MuiListItem.propTypes = {
   listItemSecondaryAction: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
+  /** react history not a storyblok prop */
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
 };
 
 MuiListItem.defaultProps = {
@@ -113,6 +132,8 @@ MuiListItem.defaultProps = {
   disableGutters: false,
   divider: false,
   selected: false,
+  isButton: false,
+  redirectRoute: undefined,
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],
