@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.68",
+  "version": "1.0.69",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -127,7 +127,7 @@
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
     "storyblok-js-client": "^1.0.21",
-    "rff-wrapper": "^1.0.08"
+    "rff-wrapper": "^1.0.13"
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
@@ -141,7 +141,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "rff-wrapper": "^1.0.2"
+    "rff-wrapper": "^1.0.13"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -149,18 +149,23 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-storyblok-schema": "babel storyblok --out-dir dist/storyblok",
-    "build-app": "babel src/lib --out-dir dist",
-    "build": "NODE_ENV=production rm -rf dist && npm run build-app && npm run build-storyblok-schema",
+    "build-storyblok-stories": "babel backup --out-dir dist/backup --copy-files",
+    "delete-test-from-dist": "del dist/**/**/*.test.js && del dist/**/**/*__snapshots__ && del dist/**/**/**/*.test.js && del dist/**/**/**/*__snapshots__",
+    "delete-md-from-dist": "del dist/**/**/*.md && del dist/**/**/**/*.md",
+    "build-app": "babel src/lib --out-dir dist --copy-files && npm run delete-test-from-dist && npm run delete-md-from-dist",
+    "build": "NODE_ENV=production rm -rf dist && npm run build-app && npm run build-storyblok-schema && npm run build-storyblok-stories",
     "publish-npm": "npm run build && npm publish",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand --testPathPattern=src/lib/components",
     "styleguide": "npx styleguidist server",
     "styleguide:build": "npx styleguidist build",
     "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
-    "export-storyblok": "npx storyblok-component-export",
-    "test-report": "react-scripts test --watchAll=false --coverage"
+    "test-report": "react-scripts test --watchAll=false --coverage",
+    "export-storyblok-components": "npx storyblok-component-export",
+    "export-storyblok-stories": "npx storyblok-backup --stories"
   },
   "bin": {
-    "migrate-storyblok": "./cli.js"
+    "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
+    "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js"
   },
   "browserslist": {
     "production": [
@@ -178,6 +183,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
+    "del-cli": "^3.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "moxios": "^0.4.0",
@@ -185,7 +191,7 @@
     "react-player": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "react-swipeable-views": "^0.13.9",
-    "rff-wrapper": "^1.0.2",
+    "rff-wrapper": "^1.0.13",
     "storyblok-migrate": "^0.3.3"
   }
 }
