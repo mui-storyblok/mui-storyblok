@@ -23,7 +23,7 @@ export default MuiIconButton;
 MuiIconButton.propTypes = {
   /** Tooltip to wrap button in to display help text */
   tooltip(props, propName, componentName) {
-    const components = ['Tooltip'];
+    const components = ['MuiTooltip'];
     return validComponents(props, propName, componentName, components, 1);
   },
 };

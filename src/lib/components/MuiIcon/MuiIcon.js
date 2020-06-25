@@ -50,7 +50,7 @@ MuiIcon.propTypes = {
   /** any icon from https://material.io/resources/icons/?style=baseline */
   iconName: PropTypes.string.isRequired,
   /**
-   * mui prop: "inherit", "primary", "secondary", "action", "error", "disabled"
+   * mui prop: 'inherit', 'primary', 'secondary', 'action', 'error', 'disabled'
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
   color(props, propName, componentName) {

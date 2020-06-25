@@ -74,7 +74,7 @@ IconButton.propTypes = {
     return muiStringProp(props, propName, componentName, validProp);
   },
   /**
- * mui prop: 'small', "medium"
+ * mui prop: 'small', 'medium'
  * The size of the button. small is equivalent to the dense button styling.
  * */
   size(props, propName, componentName) {
