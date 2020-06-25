@@ -11,9 +11,9 @@ const fileNames = files.map(file => file.replace('.js', '')).filter(x => x != nu
 const cmd = `npx storyblok-migrate --component-migrations --components ${fileNames}`;
 
 const migrateComponents = async (command) => {
-  const projectRoot = __dirname.replace('/node_modules/mui-storyblok', '');
+  const projectRoot = __dirname.replace('/node_modules/mui-storyblok/cli', '');
   addDirToRoot(projectRoot, 'storyblok');
-  asyncCmd(command);
+  await asyncCmd(command);
   removeDirFromRoot(projectRoot, 'storyblok');
 };
 
