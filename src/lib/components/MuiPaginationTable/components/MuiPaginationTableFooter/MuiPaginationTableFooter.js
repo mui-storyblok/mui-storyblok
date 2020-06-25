@@ -37,7 +37,7 @@ export default MuiPaginationTableFooter;
 
 MuiPaginationTableFooter.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),

@@ -4,6 +4,7 @@ import { Fade } from '@material-ui/core';
 import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
+import { validComponentsRequired } from '../../../../utils/customProps';
 
 const MuiFade = ({
   rootClass,
@@ -61,9 +62,9 @@ MuiFade.propTypes = {
    * Content passed to render
    * components: Blok
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['Blok'], 1);
+  },
 };
 
 MuiFade.defaultProps = {
@@ -71,4 +72,5 @@ MuiFade.defaultProps = {
   enter: 1500,
   exit: 1500,
   rootClass: [],
+  content: [],
 };

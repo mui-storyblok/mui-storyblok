@@ -4,6 +4,7 @@ import { Slide } from '@material-ui/core';
 import useTransitionIn from '../../customHooks/useTransitionIn';
 import StoryBlok from '../../../../utils/Storyblok';
 import Blok from '../../../StoryBlokPage/components/Blok/Blok';
+import { validComponentsRequired, muiStringProp } from '../../../../utils/customProps';
 
 const MuiSlide = ({
   rootClass,
@@ -53,7 +54,10 @@ MuiSlide.propTypes = {
    * mui props: 'down' | 'left' | 'right' | 'up'
    * Direction the child node will enter from.
    */
-  direction: PropTypes.string,
+  direction(props, propName, componentName) {
+    const validProps = ['down', 'left', 'right', 'up'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui props: number
    * Duration in milliseconds to enter the screen.
@@ -68,9 +72,9 @@ MuiSlide.propTypes = {
    * Content passed to render
    * components: Blok
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['Blok'], 1);
+  },
 };
 
 MuiSlide.defaultProps = {
@@ -79,4 +83,5 @@ MuiSlide.defaultProps = {
   enter: 800,
   exit: 800,
   rootClass: [],
+  content: [],
 };

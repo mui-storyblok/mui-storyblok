@@ -6,6 +6,7 @@ import MuiGrow from './components/MuiGrow/MuiGrow';
 import MuiFade from './components/MuiFade/MuiFade';
 import MuiZoom from './components/MuiZoom/MuiZoom';
 import MuiSlide from './components/MuiSlide/MuiSlide';
+import { validComponentsRequired } from '../../utils/customProps';
 
 const MuiTransitions = ({
   content,
@@ -47,11 +48,13 @@ MuiTransitions.propTypes = {
    * MuiZoom,
    * MuiSlide,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const validComponents = ['MuiCollapse', 'MuiFade', 'MuiGrow', 'MuiZoom', 'MuiSlide'];
+    return validComponentsRequired(props, propName, componentName, validComponents, 1);
+  },
 };
 
 MuiTransitions.defaultProps = {
   rootClass: [],
+  content: [],
 };

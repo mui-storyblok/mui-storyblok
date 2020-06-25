@@ -157,7 +157,7 @@ export default MuiTabs;
 
 MuiTabs.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Override or extend the styles applied to the component
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
@@ -226,7 +226,7 @@ MuiTabs.propTypes = {
   },
   /** autoplay will incroment tabs by a interval */
   autoplay: PropTypes.bool,
-  /** interval to incroment tabs: time in millaseconds */
+  /** interval to increment tabs: time in milliseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
