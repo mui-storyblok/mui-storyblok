@@ -6,7 +6,6 @@ import { GridList, GridListTile } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
 import {
   validComponents,
-  dimensionProp,
   muiDimensionProp,
 } from '../../utils/customProps';
 import MuiGridListTileBar from './components/MuiGridListTileBar/MuiGridListTileBar';

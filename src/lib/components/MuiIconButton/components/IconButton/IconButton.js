@@ -40,7 +40,7 @@ export const IconButton = ({
 export default IconButton;
 
 IconButton.propTypes = {
-/** stroyblok multiselect of css classes */
+/** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
  * mui prop: 'default', 'inherit', 'primary', 'secondary'
