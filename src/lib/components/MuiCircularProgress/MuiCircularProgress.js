@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Storyblok from '../../utils/Storyblok';
-
+import { muiStringProp } from '../../utils/customProps';
 /**
  * MuiCircularProgress is used in storyblok redirect to react routes
  */
@@ -37,7 +37,10 @@ MuiCircularProgress.propTypes = {
    * mui prop: "primary", "secondary", "inherit"
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
-  color: PropTypes.string,
+  color(props, propName, componentName) {
+    const validProp = ['primary', 'secondary', 'inherit'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
    * mui prop: true | false
    * If true, the shrink animation is disabled. This only works if variant is indeterminate.
@@ -55,10 +58,13 @@ MuiCircularProgress.propTypes = {
    * */
   thickness: PropTypes.string,
   /**
-   * mui prop: determinate | indeterminate | static
+   * mui prop: 'determinate', 'indeterminate', 'static'
    * The thickness of the circle.
    * */
-  variant: PropTypes.string,
+  variant(props, propName, componentName) {
+    const validProp = ['determinate', 'indeterminate', 'static'];
+    return muiStringProp(props, propName, componentName, validProp);
+  },
   /**
    * stroyblok multiselect of css classes
    * Override or extend the styles applied to the component

@@ -11,6 +11,11 @@ import {
   MuiCheckbox,
   MuiRadio,
 } from 'rff-wrapper';
+import {
+  nestedComponentsProps,
+  validComponents,
+  muiStringProp,
+} from '../../utils/customProps';
 import Grid from '../Grid/Grid';
 
 const BlokForm = ({
@@ -21,7 +26,7 @@ const BlokForm = ({
   errorResponseText,
   method,
 }) => {
-  const gridItemComponents = {
+  const components = {
     MuiInput,
     MuiSelect,
     MuiSubmit,
@@ -69,11 +74,9 @@ const BlokForm = ({
     >
       <>
         {content.map((item, index) => (
-          <Grid {...item} key={index} gridItemComponents={gridItemComponents} />
+          <Grid {...item} key={index} components={components} />
         ))}
-      </>
-      <MuiSubmit {...submitButton[0]} />
-      <>
+        <MuiSubmit {...submitButton[0]} />
         {state.successResponse && <Typography data-testid="successResponseTestID">{state.successResponse}</Typography>}
         {state.errorResponse && <Typography color="error" data-testid="errorResponseTestID">{state.errorResponse}</Typography>}
       </>
@@ -84,15 +87,30 @@ const BlokForm = ({
 export default BlokForm;
 
 BlokForm.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  submitButton: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiInput',
+      'MuiSelect',
+      'MuiCheckbox',
+      'MuiRadio',
+    ];
+    return nestedComponentsProps(props, propName, componentName, components);
+  },
+  submitButton(props, propName, componentName) {
+    const components = ['MuiSubmit'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
+  method(props, propName, componentName) {
+    const validProps = ['POST', 'GET'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   baseUrl: PropTypes.string.isRequired,
   successResponseText: PropTypes.string.isRequired,
   errorResponseText: PropTypes.string.isRequired,
-  method: PropTypes.string,
 };
 
 BlokForm.defaultProps = {
   method: 'POST',
+  content: [],
+  submitButton: [],
 };
-

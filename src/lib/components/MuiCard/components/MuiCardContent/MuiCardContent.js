@@ -1,6 +1,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
+import { validComponents } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
@@ -38,18 +39,24 @@ MuiCardContent.propTypes = {
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /**
    * Content passed to render
-   * components: MuiTypography,
+   * components:
+    MuiTypography,
     MuiExpansionPanel,
     MuiList,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiTypography',
+      'MuiExpansionPanel',
+      'MuiList',
+    ];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiCardContent.defaultProps = {
   rootClass: [],
+  content: [],
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Tooltip from '@material-ui/core/Tooltip';
 import Storyblok from '../../utils/Storyblok';
+import { muiStringProp } from '../../utils/customProps';
 
 const RefComp = React.forwardRef((props, ref) => <div {...props} ref={ref}>{props.children}</div>);
 
@@ -34,7 +35,7 @@ MuiTooltip.propTypes = {
 
   children: PropTypes.node.isRequired,
 
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** text for tooltip */
   title: PropTypes.string.isRequired,
@@ -45,11 +46,18 @@ MuiTooltip.propTypes = {
   arrow: PropTypes.bool,
   /**
    * mui prop:
-   'bottom-end' | 'bottom-start' | 'bottom' | 'left-end' | 'left-start'
-   | 'left' | 'right-end' | 'right-start' | 'right' | 'top-end' | 'top-start' | 'top'
+   'bottom-end' , 'bottom-start' , 'bottom' , 'left-end' , 'left-start'
+   , 'left' , 'right-end' , 'right-start' , 'right' , 'top-end' , 'top-start' , 'top'
    * Tooltip placement.
    * */
-  placement: PropTypes.string,
+  placement(props, propName, componentName) {
+    const validProps = [
+      'bottom-end', 'bottom-start', 'bottom', 'left-end',
+      'left-start', 'left', 'right-end', 'right-start',
+      'right', 'top-end', 'top-start', 'top',
+    ];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
 
 };
 

@@ -2,6 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { TableRow } from '@material-ui/core';
 import MuiTableCell from '../../../MuiTable/components/MuiTableRow/components/MuiTableCell/MuiTableCell';
+import { validComponents } from '../../../../utils/customProps';
 
 import StoryBlok from '../../../../utils/Storyblok';
 
@@ -54,13 +55,15 @@ MuiPaginationTableRow.propTypes = {
    * components:
    * MuiTableCell
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTableCell'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiPaginationTableRow.defaultProps = {
   hover: false,
   selected: false,
   rootClass: [],
+  content: [],
 };

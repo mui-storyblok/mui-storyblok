@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Table } from '@material-ui/core';
+import { validComponents, muiStringProp } from '../../utils/customProps';
 import StoryBlok from '../../utils/Storyblok';
 
 import MuiPaginationTableHead from './components/MuiPaginationTableHead/MuiPaginationTableHead';
@@ -77,12 +78,18 @@ MuiPaginationTable.propTypes = {
    * mui props: 'default' | 'checkbox' | 'none'
    * Allows TableCells to inherit padding of the Table.
    */
-  padding: PropTypes.string,
+  padding(props, propName, componentName) {
+    const validProps = ['default', 'checkbox', 'none'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui props: 'small' | 'medium'
    * Allows TableCells to inherit size of the Table.
    */
-  size: PropTypes.string,
+  size(props, propName, componentName) {
+    const validProps = ['small', 'medium'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui props: true | false
    * set the header sticky. (It doesn't work with IE 11)
@@ -90,13 +97,15 @@ MuiPaginationTable.propTypes = {
   stickyHeader: PropTypes.bool,
 
   /**  MuiPaginationTableHead limit of 1 */
-  tHead: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tHead(props, propName, componentName) {
+    const components = ['MuiPaginationTableHead'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**  MuiPaginationTableBody limit of 1 */
-  tBody: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tBody(props, propName, componentName) {
+    const components = ['MuiPaginationTableBody'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * mui prop: 'Rows per page:'
    * Customize the rows per page label.
@@ -115,6 +124,8 @@ MuiPaginationTable.defaultProps = {
   size: 'medium',
   stickyHeader: false,
   rootClass: [],
+  tBody: [],
+  tHead: [],
   labelRowsPerPage: 'Rows per page:',
   rowsPerPageOptions: [10, 25, 50, 100],
 };

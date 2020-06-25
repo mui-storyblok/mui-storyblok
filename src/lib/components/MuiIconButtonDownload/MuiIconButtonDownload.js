@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { validComponentsRequired } from '../../utils/customProps';
 import downloadUrl from '../../utils/downloadUrl';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 
@@ -33,11 +33,12 @@ MuiIconButtonDownload.propTypes = {
   href: PropTypes.string.isRequired,
   /** name of file */
   fileName: PropTypes.string.isRequired,
-
   /** MuiIconButton Allowed maximum: 1 */
-  iconButton: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  iconButton(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiIconButton'], 1);
+  },
 };
 
-MuiIconButtonDownload.defaultProps = {};
+MuiIconButtonDownload.defaultProps = {
+  iconButton: [],
+};

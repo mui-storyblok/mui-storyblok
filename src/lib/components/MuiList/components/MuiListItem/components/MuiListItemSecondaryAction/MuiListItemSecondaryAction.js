@@ -2,6 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Storyblok from '../../../../../../utils/Storyblok';
+import { validComponents } from '../../../../../../utils/customProps';
 import MuiIconButtonRedirect from '../../../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
@@ -46,17 +47,24 @@ MuiListItemSecondaryAction.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /**
-   * components: MuiIconButtonRedirect,
+   * components:
+   * MuiIconButtonRedirect,
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
-    MuiTooltip,
    *  Allowed maximum: 1 */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiIconButtonDialog',
+    ];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 };
 
 MuiListItemSecondaryAction.defaultProps = {
   rootClass: [],
+  content: [],
 };

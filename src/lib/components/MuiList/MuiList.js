@@ -2,7 +2,7 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
-
+import { validComponents } from '../../utils/customProps';
 import Storyblok from '../../utils/Storyblok';
 import MuiListItem from './components/MuiListItem/MuiListItem';
 import MuiListItemButton from './components/MuiListItemButton/MuiListItemButton';
@@ -53,10 +53,11 @@ MuiList.propTypes = {
   /** width of list */
   width: PropTypes.string,
 
-  /** MuiListItem, MuiListItemButton */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  /** MuiListItem */
+  content(props, propName, componentName) {
+    const components = ['MuiListItem'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiList.defaultProps = {
@@ -64,4 +65,5 @@ MuiList.defaultProps = {
   dense: false,
   disablePadding: false,
   rootClass: [],
+  content: [],
 };

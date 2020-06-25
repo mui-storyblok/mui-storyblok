@@ -2,6 +2,10 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Storyblok from '../../utils/Storyblok';
+import {
+  dimensionProp,
+  muiStringProp,
+} from '../../utils/customProps';
 
 /**
  * TypographyText
@@ -59,19 +63,29 @@ TypographyText.propTypes = {
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop: 'inherit' | 'left' | 'center' | 'right' | 'justify'
+   * mui prop: 'inherit', 'left', 'center', 'right', 'justify'
    * Set the text-align on the component.
    * */
-  align: PropTypes.string,
+  align(props, propName, componentName) {
+    const validProps = ['inherit', 'left', 'center', 'right', 'justify'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'initial'| 'inherit'| 'primary'| 'secondary'| 'textPrimary'| 'textSecondary'| 'error'
+   * mui prop: 'initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error'
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
-  color: PropTypes.string,
+  color(props, propName, componentName) {
+    const validProps = ['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /** hight of the Typography element */
-  height: PropTypes.string,
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /** width of the Typography element */
-  width: PropTypes.string,
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
 
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,

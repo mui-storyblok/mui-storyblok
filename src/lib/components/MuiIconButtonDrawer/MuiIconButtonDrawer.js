@@ -2,6 +2,11 @@ import React, { useState, createElement } from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
+import {
+  validComponents,
+  validComponentsRequired,
+  muiStringProp,
+} from '../../utils/customProps';
 import MuiList from '../MuiList/MuiList';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
@@ -62,10 +67,13 @@ MuiIconButtonDrawer.propTypes = {
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui props: 'bottom' | 'left' | 'right' | 'top'
+   * mui props: 'bottom', 'left', 'right', 'top'
    * Side from which the drawer will appear.
    */
-  anchor: PropTypes.string,
+  anchor(props, propName, componentName) {
+    const validProps = ['bottom', 'left', 'right', 'top'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * number
    * The elevation of the drawer.
@@ -73,23 +81,27 @@ MuiIconButtonDrawer.propTypes = {
    */
   elevation: PropTypes.string,
   /**
-   * mui props: 'permanent' | 'persistent' | 'temporary'
+   * mui props: 'permanent', 'persistent', 'temporary'
    * The variant to use.
    */
-  variant: PropTypes.string,
+  variant(props, propName, componentName) {
+    const validProps = ['permanent', 'persistent', 'temporary'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui component: MuiIcon
    */
-  icon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  icon(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiIcon'], 1);
+  },
   /**
    * components:
    * MuiList
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiList'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiIconButtonDrawer.defaultProps = {
@@ -97,4 +109,6 @@ MuiIconButtonDrawer.defaultProps = {
   elevation: 16,
   variant: 'temporary',
   rootClass: [],
+  icon: [],
+  content: [],
 };

@@ -2,38 +2,33 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
-import MuiIcon from '../../../MuiIcon/MuiIcon';
-import GridItem from './GridItem';
+import IconButton from './IconButton';
 
 function setup() {
   const props = {
-    sizeGrid: jest.fn(),
-    components: {
-      MuiIcon,
-    },
-    content: [{
+    icon: [{
       component: 'MuiIcon',
-      iconName: 'android',
+      iconName: 'star',
     }],
+    edge: 'start',
   };
-  const comp = shallow(<GridItem {...props} />);
+  const comp = shallow(<IconButton />);
   return { comp, props };
 }
 
-describe('<GridItem />', () => {
-  it('renders GridItem', () => {
+describe('<IconButton />', () => {
+  it('renders IconButton', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
 
   test('snapshot', () => {
     const { props } = setup();
-
-    const tree = renderer.create((
+    const tree = renderer.create(
       <MemoryRouter>
-        <GridItem {...props} />
-      </MemoryRouter>
-    ));
+        <IconButton {...props} />
+      </MemoryRouter>,
+    );
     expect(tree).toMatchSnapshot();
   });
 });

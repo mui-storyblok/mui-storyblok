@@ -2,6 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import DialogContent from '@material-ui/core/DialogContent';
 import Storyblok from '../../../../utils/Storyblok';
+import { validComponents } from '../../../../utils/customProps';
 import BlokForm from '../../../BlokForm/BlokForm';
 import MuiDialogContentTypography from './components/MuiDialogContentTypography/MuiDialogContentTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
@@ -44,13 +45,15 @@ MuiDialogContent.propTypes = {
    * Display the top and bottom dividers.
    * */
   dividers: PropTypes.bool,
-  /** MuiTypography MuiExpansionPanel, BlokForm */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  /** 'MuiTypography', 'MuiExpansionPanel', 'BlokForm' */
+  content(props, propName, componentName) {
+    const components = ['MuiTypography', 'MuiExpansionPanel', 'BlokForm'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
 };
 
 MuiDialogContent.defaultProps = {
   dividers: false,
   rootClass: [],
+  content: [],
 };

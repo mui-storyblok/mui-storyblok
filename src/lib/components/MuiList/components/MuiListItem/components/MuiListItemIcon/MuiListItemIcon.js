@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Storyblok from '../../../../../../utils/Storyblok';
+import { validComponentsRequired } from '../../../../../../utils/customProps';
 import MuiIcon from '../../../../../MuiIcon/MuiIcon';
 
 /**
- * MuiListItemIcon is used in storyblok redirect to react routes
+ * MuiListItemIcon
  */
 
 export const MuiListItemIcon = ({
@@ -31,11 +32,12 @@ MuiListItemIcon.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
 
   /** MuiIcon Allowed maximum: 1 */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiIcon'], 1);
+  },
 };
 
 MuiListItemIcon.defaultProps = {
   rootClass: [],
+  content: [],
 };

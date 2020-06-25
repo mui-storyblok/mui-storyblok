@@ -31,7 +31,6 @@ MuiDialogTitle.propTypes = {
   text: PropTypes.string.isRequired,
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-
   /** passed down from parent to close Dialog */
   toggleDialog: PropTypes.func.isRequired,
 };

@@ -1,25 +1,19 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TableHead } from '@material-ui/core';
 import MuiTableRow from '../MuiTableRow/MuiTableRow';
 import StoryBlok from '../../../../utils/Storyblok';
+import { validComponents } from '../../../../utils/customProps';
 
 const MuiTableHead = ({
   rootClass,
   content,
 }) => {
-  const components = {
-    MuiTableRow,
-  };
-
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
 
   return (
     <TableHead className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((item, index) => <MuiTableRow {...item} key={index} />)}
     </TableHead>
   );
 };
@@ -38,11 +32,13 @@ MuiTableHead.propTypes = {
    * components:
     MuiTableRow,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiTableRow'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiTableHead.defaultProps = {
   rootClass: [],
+  content: [],
 };

@@ -2,8 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TableCell } from '@material-ui/core';
-
 import StoryBlok from '../../../../../../utils/Storyblok';
+import {
+  validComponentsRequired,
+  muiStringProp,
+} from '../../../../../../utils/customProps';
+
 import MuiTypography from '../../../../../MuiTypography/MuiTypography';
 
 const MuiTableCell = ({
@@ -33,37 +37,49 @@ export default MuiTableCell;
 
 MuiTableCell.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop: 'center' | 'inherit' | 'justify' | 'left' | 'right'
+   * mui prop: 'center', 'inherit', 'justify', 'left', 'right'
    * Set the text-align on the table cell content
    */
-  align: PropTypes.string,
+  align(props, propName, componentName) {
+    const validProps = ['center', 'inherit', 'justify', 'left', 'right'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'checkbox' | 'default' | 'none'
+   * mui prop: 'checkbox', 'default', 'none'
    * Sets the padding applied to the cell.
    */
-  padding: PropTypes.string,
+  padding(props, propName, componentName) {
+    const validProps = ['checkbox', 'default', 'none'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'small' | 'medium'
+   * mui prop: 'small', 'medium'
    * Specify the size of the cell
    */
-  size: PropTypes.string,
+  size(props, propName, componentName) {
+    const validProps = ['small', 'medium'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
-   * mui prop: 'asc' | 'desc' | false
+   * mui prop: 'asc', 'desc', false
    * Set aria-sort direction.
    */
-  sortDirection: PropTypes.string,
+  sortDirection(props, propName, componentName) {
+    const validProps = ['asc', 'desc', 'false'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * Content passed to render
    * components: MuiTypography,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['MuiTypography'], 1);
+  },
 };
 
 MuiTableCell.defaultProps = {
@@ -72,4 +88,5 @@ MuiTableCell.defaultProps = {
   size: 'medium',
   sortDirection: false,
   rootClass: [],
+  content: [],
 };

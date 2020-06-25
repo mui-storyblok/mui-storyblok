@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import MuiButton from '@material-ui/core/Button';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import Storyblok from '../../../../utils/Storyblok';
-
+import {
+  validComponents,
+  muiStringProp,
+} from '../../../../utils/customProps';
 /**
    * MuiButton controls Dialog open state from true to false.
    * More docs and demos at https://material-ui.com/api/button/
@@ -61,10 +64,13 @@ Button.propTypes = {
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
-   * mui prop: 'default'| 'inherit'| 'primary'| 'secondary'
+   * mui prop: 'default', 'inherit', 'primary', 'secondary'
    * The color of the component. It supports those theme colors that make sense for this component.
    * */
-  color: PropTypes.string,
+  color(props, propName, componentName) {
+    const validProps = ['default', 'inherit', 'primary', 'secondary'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * mui prop: true | false
    * If true, no elevation is used.
@@ -87,28 +93,41 @@ Button.propTypes = {
    * Element placed after the children. renders icon
    * any icon from https://material.io/resources/icons/?style=baseline
    * */
-  endIcon: PropTypes.arrayOf(PropTypes.shape()),
+  endIcon(props, propName, componentName) {
+    const components = ['MuiIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
    * mui prop: true | false
    * If true, the button will take up the full width of its container.
    */
   fullWidth: PropTypes.bool,
   /**
-   * mui prop: 'small'| 'medium'| 'large'
+   * mui prop: 'small', 'medium', 'large'
    * The size of the button. small is equivalent to the dense button styling.
    * */
-  size: PropTypes.string,
+  size(props, propName, componentName) {
+    const validProps = ['small', 'medium', 'large'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
   /**
    * name of Icon uses MuiIcon
    * Element placed before the children. renders icon
    * any icon from https://material.io/resources/icons/?style=baseline
    * */
-  startIcon: PropTypes.arrayOf(PropTypes.shape()),
+  startIcon(props, propName, componentName) {
+    const components = ['MuiIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /**
-   * mui prop: 'text' |'outlined'| 'contained
+   * mui prop: 'text','outlined', 'contained'
    * The variant to use.
    * */
-  variant: PropTypes.string,
+  variant(props, propName, componentName) {
+    const validProps = ['text', 'outlined', 'contained'];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
+  /**
   /** not in storyblok passed down from parent component */
   onClick: PropTypes.func.isRequired,
 };

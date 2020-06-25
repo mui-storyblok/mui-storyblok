@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TypographyText from '../../../TypographyText/TypographyText';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
@@ -8,9 +7,10 @@ import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonD
 import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
+import { validComponents } from '../../../../utils/customProps';
 
 /**
- * MuiExpansionPanelTypography uses
+ * MuiExpansionPanelTypography
  */
 
 export const MuiExpansionPanelTypography = (props) => {
@@ -35,12 +35,21 @@ export const MuiExpansionPanelTypography = (props) => {
 export default MuiExpansionPanelTypography;
 
 MuiExpansionPanelTypography.propTypes = {
-
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiIcon',
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiButtonRedirect',
+      'MuiButtonHref',
+      'MuiButtonDownload',
+      'MuiText', // not imported but used in TypographyText
+    ];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiExpansionPanelTypography.defaultProps = {
-
+  content: [],
 };

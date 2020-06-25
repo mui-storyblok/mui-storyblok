@@ -35,10 +35,8 @@ MuiStoryblok.propTypes = {
   theme: PropTypes.shape(),
   /** storyblok prop  'published' : 'draft' */
   version: PropTypes.string,
-
   /** acess key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
-
   /** key for google apis Key to use geocode if here will make  */
   googleapisKey: PropTypes.string,
 

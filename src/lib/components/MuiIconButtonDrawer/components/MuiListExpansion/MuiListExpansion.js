@@ -4,7 +4,7 @@ import { ListItem, ListItemText } from '@material-ui/core';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import MuiListItemIcon from '../../../MuiList/components/MuiListItem/components/MuiListItemIcon/MuiListItemIcon';
 import StoryBlok from '../../../../utils/Storyblok';
-
+import { validComponents } from '../../../../utils/customProps';
 
 export const MuiListExpansion = ({
   rootClass,
@@ -40,11 +40,12 @@ MuiListExpansion.propTypes = {
   primaryText: PropTypes.string.isRequired,
   /**
    * components:
-   * MuiListItem
+   * MuiListItemIcon
    */
-  icon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  icon(props, propName, componentName) {
+    const components = ['MuiListItemIcon'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** not in storyblok passed down from parent component */
   handleClick: PropTypes.func.isRequired,
   /** not in storyblok passed down from parent component */
@@ -53,4 +54,5 @@ MuiListExpansion.propTypes = {
 
 MuiListExpansion.defaultProps = {
   rootClass: [],
+  icon: [],
 };

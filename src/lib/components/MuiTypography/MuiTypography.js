@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TypographyText from '../TypographyText/TypographyText';
 import MuiIcon from '../MuiIcon/MuiIcon';
+import { validComponents } from '../../utils/customProps';
 import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButtonHref from '../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../MuiIconButtonDownload/MuiIconButtonDownload';
@@ -13,7 +13,7 @@ import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
 
 /**
- * MuiTypography is used in storyblok redirect to react routes
+ * MuiTypography
  */
 
 export const MuiTypography = (props) => {
@@ -41,12 +41,23 @@ export const MuiTypography = (props) => {
 export default MuiTypography;
 
 MuiTypography.propTypes = {
-
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = [
+      'MuiLink',
+      'MuiIcon',
+      'MuiIconButtonRedirect',
+      'MuiIconButtonHref',
+      'MuiIconButtonDownload',
+      'MuiIconButtonDialog',
+      'MuiButtonRedirect',
+      'MuiButtonHref',
+      'MuiButtonDownload',
+      'MuiButtonDialog',
+    ];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiTypography.defaultProps = {
-
+  content: [],
 };

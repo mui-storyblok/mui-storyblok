@@ -21,7 +21,7 @@ import MuiNotificationBanner from '../MuiNotificationBanner/MuiNotificationBanne
 import BlokForm from '../BlokForm/BlokForm';
 
 const MuiGrid = (props) => {
-  const gridItemComponents = {
+  const components = {
     MuiHeroHeader,
     MuiAppBar,
     MuiMobileStepper,
@@ -46,7 +46,7 @@ const MuiGrid = (props) => {
   return (
     <Grid
       {...props}
-      gridItemComponents={gridItemComponents}
+      components={components}
     />
   );
 };
