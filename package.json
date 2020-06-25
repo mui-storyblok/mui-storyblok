@@ -161,7 +161,8 @@
     "export-storyblok-stories": "npx storyblok-backup --stories"
   },
   "bin": {
-    "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js"
+    "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
+    "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js"
   },
   "browserslist": {
     "production": [
