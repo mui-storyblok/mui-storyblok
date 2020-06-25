@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.71",
+  "version": "1.0.80",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -150,6 +150,7 @@
     "eject": "react-scripts eject",
     "build-storyblok-schema": "babel storyblok --out-dir dist/storyblok",
     "build-storyblok-stories": "babel backup --out-dir dist/backup --copy-files",
+    "build-cli-utils": "babel cliUtils --out-dir dist/cliUtils",
     "delete-test-from-dist": "del dist/**/**/*.test.js && del dist/**/**/*__snapshots__ && del dist/**/**/**/*.test.js && del dist/**/**/**/*__snapshots__",
     "delete-md-from-dist": "del dist/**/**/*.md && del dist/**/**/**/*.md",
     "build-app": "babel src/lib --out-dir dist --copy-files && npm run delete-test-from-dist && npm run delete-md-from-dist",
@@ -164,7 +165,9 @@
     "export-storyblok-stories": "npx storyblok-backup --stories"
   },
   "bin": {
-    "utils": "./cli/utils",
+    "util-addDirToRoot": "./cli/utils/addDirToRoot.js",
+    "util-asyncCmd": "./cli/utils/asyncCmd.js",
+    "util-removeDirFromRoot": "./cli/utils/removeDirFromRoot.js",
     "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
     "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js"
   },
