@@ -13,9 +13,10 @@ module.exports = {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
+        "MuiTypography",
         "MuiExpansionPanel",
-        "BlokForm",
-        "MuiDialogContentTypography"
+        "MuiGrid",
+        "BlokForm"
       ]
     }
   },

@@ -23,6 +23,7 @@ module.exports = {
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
         "MuiIconButtonDialog",
+        "MuiTooltip",
         "MuiIcon"
       ],
       "pos": 2,
@@ -38,6 +39,7 @@ module.exports = {
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
         "MuiIconButtonDialog",
+        "MuiTooltip",
         "MuiIcon"
       ],
       "pos": 3,

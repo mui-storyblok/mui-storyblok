@@ -7,14 +7,12 @@ module.exports = {
       "type": "options",
       "use_uuid": true,
       "description": "Override or extend the styles applied to the component.",
-      "options": [],
-      "pos": 0
-    },
-    "height": {
-      "type": "text",
-      "description": "Height of the App Bar",
-      "default_value": "60px",
-      "pos": 1
+      "options": [
+        {
+          "value": "height: 60px",
+          "name": "height"
+        }
+      ]
     },
     "color": {
       "type": "option",
@@ -43,8 +41,7 @@ module.exports = {
       ],
       "required": true,
       "default_value": "primary",
-      "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component.",
-      "pos": 2
+      "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component."
     },
     "position": {
       "type": "option",
@@ -73,8 +70,7 @@ module.exports = {
       ],
       "default_value": "fixed",
       "required": true,
-      "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable.",
-      "pos": 3
+      "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable."
     },
     "variant": {
       "type": "option",
@@ -91,13 +87,11 @@ module.exports = {
       ],
       "required": true,
       "default_value": "regular",
-      "description": "ToolBar: The variant to use.",
-      "pos": 4
+      "description": "ToolBar: The variant to use."
     },
     "disableGutters": {
       "type": "boolean",
-      "description": "Toolbar: If true, disables gutter padding.",
-      "pos": 5
+      "description": "Toolbar: If true, disables gutter padding."
     },
     "content": {
       "type": "bloks",

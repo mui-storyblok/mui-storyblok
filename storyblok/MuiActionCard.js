@@ -9,8 +9,7 @@ module.exports = {
       "component_whitelist": [
         "MuiTypography"
       ],
-      "required": true,
-      "maximum": "1"
+      "required": true
     },
     "icon": {
       "type": "bloks",
@@ -18,8 +17,7 @@ module.exports = {
       "component_whitelist": [
         "MuiIcon"
       ],
-      "required": true,
-      "maximum": "1"
+      "required": true
     },
     "text": {
       "type": "bloks",
@@ -27,8 +25,7 @@ module.exports = {
       "component_whitelist": [
         "MuiTypography"
       ],
-      "required": true,
-      "maximum": "1"
+      "required": true
     },
     "redirectRoute": {
       "type": "text",
