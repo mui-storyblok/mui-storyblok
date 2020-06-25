@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Table } from '@material-ui/core';
+import { validComponents } from '../../utils/customProps';
 import StoryBlok from '../../utils/Storyblok';
 
 import MuiPaginationTableHead from './components/MuiPaginationTableHead/MuiPaginationTableHead';
@@ -90,13 +91,15 @@ MuiPaginationTable.propTypes = {
   stickyHeader: PropTypes.bool,
 
   /**  MuiPaginationTableHead limit of 1 */
-  tHead: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tHead(props, propName, componentName) {
+    const components = ['MuiPaginationTableHead'];
+    return validComponents(props, propName, componentName, components);
+  },
   /**  MuiPaginationTableBody limit of 1 */
-  tBody: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  tBody(props, propName, componentName) {
+    const components = ['MuiPaginationTableBody'];
+    return validComponents(props, propName, componentName, components);
+  },
   /**
    * mui prop: 'Rows per page:'
    * Customize the rows per page label.
@@ -115,6 +118,8 @@ MuiPaginationTable.defaultProps = {
   size: 'medium',
   stickyHeader: false,
   rootClass: [],
+  tBody: [],
+  tHead: [],
   labelRowsPerPage: 'Rows per page:',
   rowsPerPageOptions: [10, 25, 50, 100],
 };

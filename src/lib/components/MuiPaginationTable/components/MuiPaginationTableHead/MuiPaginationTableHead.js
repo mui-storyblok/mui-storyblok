@@ -2,6 +2,7 @@ import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { TableHead } from '@material-ui/core';
 import MuiPaginationTableRow from '../MuiPaginationTableRow/MuiPaginationTableRow';
+import { validComponents } from '../../../../utils/customProps';
 import StoryBlok from '../../../../utils/Storyblok';
 
 const MuiPaginationTableHead = ({
@@ -37,11 +38,13 @@ MuiPaginationTableHead.propTypes = {
    * components:
     MuiPaginationTableRow,
    */
-  content: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  content(props, propName, componentName) {
+    const components = ['MuiPaginationTableRow'];
+    return validComponents(props, propName, componentName, components);
+  },
 };
 
 MuiPaginationTableHead.defaultProps = {
   rootClass: [],
+  content: [],
 };

@@ -138,6 +138,7 @@ MuiAppBar.propTypes = {
       'MuiButtonSnackbar',
       'MuiImage',
       'MuiActionCardContainer',
+      'MuiContactButton',
     ];
     return nestedComponentsProps(props, propName, componentName, validComponents);
   },
