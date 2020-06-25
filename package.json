@@ -160,7 +160,7 @@
     "test-report": "react-scripts test --watchAll=false --coverage"
   },
   "bin": {
-    "migrate-storyblok": "./cli.js"
+    "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js"
   },
   "browserslist": {
     "production": [
