@@ -110,8 +110,7 @@ export const dimensionProp = (props, propName, componentName) => {
       error = new Error(
         `${componentName}: ${propName} has to be one of these units of size px, em, %, vh`,
       );
-    } else if (propName === 'width'
-      && !props[propName].includes('px')
+    } else if (propName === 'width' && !props[propName].includes('px')
       && !props[propName].includes('em')
       && !props[propName].includes('%')
       && !props[propName].includes('vw')) {
@@ -162,6 +161,7 @@ export const validComponents = (
         `${componentName}: ${propName} must be included in components ${components.toString()} but recived ${comp.component}`,
       );
     }
+    return undefined;
   });
 
   return undefined;
