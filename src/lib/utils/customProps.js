@@ -103,11 +103,18 @@ export const dimensionProp = (props, propName, componentName) => {
   let error;
 
   if (propName === 'height' || propName === 'width') {
-    if (propName === 'height' && !props[propName].includes('px') && !props[propName].includes('em') && !props[propName].includes('%') && !props[propName].includes('vh')) {
+    if (propName === 'height' && !props[propName].includes('px')
+      && !props[propName].includes('em')
+      && !props[propName].includes('%')
+      && !props[propName].includes('vh')) {
       error = new Error(
         `${componentName}: ${propName} has to be one of these units of size px, em, %, vh`,
       );
-    } else if (propName === 'width' && !props[propName].includes('px') && !props[propName].includes('em') && !props[propName].includes('%') && !props[propName].includes('vw')) {
+    } else if (propName === 'width'
+      && !props[propName].includes('px')
+      && !props[propName].includes('em')
+      && !props[propName].includes('%')
+      && !props[propName].includes('vw')) {
       error = new Error(
         `${componentName}: ${propName} has to be one of these units of size px, em, %, vw`,
       );
