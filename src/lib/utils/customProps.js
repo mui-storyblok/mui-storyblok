@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable max-len */
 export const muiStringProp = (props, propName, componentName, validProps) => {
   /**
    * mui accepts strings of specific values pass array of valid Props to validate
