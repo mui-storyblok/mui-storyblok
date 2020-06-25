@@ -47,7 +47,7 @@ DropDownMenu.propTypes = {
   },
   /** mui prop: 'text' ,'outlined', 'contained' */
   variant(props, propName, componentName) {
-    const validProps = ['text' ,'outlined', 'contained'];
+    const validProps = ['text', 'outlined', 'contained'];
     return muiStringProp(props, propName, componentName, validProps);
   },
   /** mui prop: 'small', 'medium', 'large' */

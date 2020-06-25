@@ -35,7 +35,7 @@ MuiTooltip.propTypes = {
 
   children: PropTypes.node.isRequired,
 
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** text for tooltip */
   title: PropTypes.string.isRequired,

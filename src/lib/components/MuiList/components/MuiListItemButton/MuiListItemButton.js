@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
 
+import { validComponents, muiStringProp } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiListItemAvatar from '../MuiListItem/components/MuiListItemAvatar/MuiListItemAvatar';
 import MuiListItemIcon from '../MuiListItem/components/MuiListItemIcon/MuiListItemIcon';
@@ -57,12 +58,14 @@ export const MuiListItemButton = ({
 export default withRouter(MuiListItemButton);
 
 MuiListItemButton.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** mui prop: 'flex-start'| 'center'
    * Defines the align-items style property.
   */
-  alignItems: PropTypes.string,
+  alignItems(props, propName, componentName) {
+    return muiStringProp(props, propName, componentName, ['flex-start', 'center']);
+  },
   /** mui prop: true | false
    * If true, compact vertical padding designed for keyboard and mouse input will be used.
    * */
@@ -85,17 +88,17 @@ MuiListItemButton.propTypes = {
   href: PropTypes.string,
 
   /** MuiListItemAvatar Allowed maximum: 1 */
-  listItemAvatar: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  listItemAvatar(props, propName, componentName) {
+    return validComponents(props, propName, componentName, ['MuiListItemAvatar'], 1);
+  },
   /** MuiListItemIcon Allowed maximum: 1 */
-  listItemIcon: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })),
+  listItemIcon(props, propName, componentName) {
+    return validComponents(props, propName, componentName, ['MuiListItemIcon'], 1);
+  },
   /** MuiListItemText Allowed maximum: 1 */
-  listItemText: PropTypes.arrayOf(PropTypes.shape({
-    component: PropTypes.string.isRequired,
-  })).isRequired,
+  listItemText(props, propName, componentName) {
+    return validComponents(props, propName, componentName, ['MuiListItemText'], 1);
+  },
   /** react history not a storyblok prop */
   history: PropTypes.shape({
     push: PropTypes.func,
@@ -113,4 +116,5 @@ MuiListItemButton.defaultProps = {
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],
+  listItemText: [],
 };
