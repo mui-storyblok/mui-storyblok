@@ -7,6 +7,7 @@ import StoryBlok from '../../utils/Storyblok';
 import {
   validComponents,
   dimensionProp,
+  muiDimensionProp,
 } from '../../utils/customProps';
 import MuiGridListTileBar from './components/MuiGridListTileBar/MuiGridListTileBar';
 
@@ -83,14 +84,14 @@ MuiGridList.propTypes = {
    * Number of px for the spacing between tiles.
    */
   height(props, propName, componentName) {
-    return dimensionProp(props, propName, componentName);
+    return muiDimensionProp(props, propName, componentName);
   },
   /**
    * mui prop: number
    * Number of px for the spacing between tiles.
    */
   width(props, propName, componentName) {
-    return dimensionProp(props, propName, componentName);
+    return muiDimensionProp(props, propName, componentName);
   },
   /**
    * Content passed to render

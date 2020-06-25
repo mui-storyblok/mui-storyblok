@@ -119,6 +119,21 @@ export const dimensionProp = (props, propName, componentName) => {
   return error;
 };
 
+export const muiDimensionProp = (props, propName, componentName) => {
+  // mui accepts numbers as a number of measurement and
+  // 'px', 'em', '%' 'vh', 'vw', as unit of measurement for height and width prop.
+  let error;
+  const propToNum = props[propName];
+  if (
+    (propName === 'height' && isNaN(propToNum))
+    || (propName === 'width' && isNaN(propToNum))
+  ) {
+    error = dimensionProp(props, propName, componentName);
+  }
+  // error = dimensionProp(props, propName, componentName);
+  return error;
+};
+
 export const validComponents = (
   props,
   propName,
