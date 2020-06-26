@@ -1,20 +1,28 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
-
-const addDirToRoot = require('./utils/addDirToRoot');
-const asyncCmd = require('./utils/asyncCmd');
-const removeDirFromRoot = require('./utils/removeDirFromRoot');
+const { exec } = require('child_process');
 
 const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
 const fileNames = files.map(file => file.replace('.js', '')).filter(x => x != null).join();
 const cmd = `npx storyblok-migrate --component-migrations --components ${fileNames}`;
 
+const asyncCmd = (command) => {
+  console.log(command);
+  return new Promise((resolve, reject) => {
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        console.warn(error);
+        reject(error);
+      }
+      console.log(stdout || stderr);
+      resolve(stdout || stderr);
+    });
+  });
+};
+
 const migrateComponents = async (command) => {
-  const projectRoot = __dirname.replace('/node_modules/mui-storyblok/cli', '');
-  addDirToRoot(projectRoot, 'storyblok');
   await asyncCmd(command);
-  removeDirFromRoot(projectRoot, 'storyblok');
 };
 
 migrateComponents(cmd);
