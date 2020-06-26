@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import { AppBar, Toolbar } from '@material-ui/core';
 import {
   nestedComponentsProps,
   dimensionProp,
   muiStringProp,
 } from '../../utils/customProps';
+import AppBarOffset from './components/AppBarOffset/AppBarOffset';
 import Storyblok from '../../utils/Storyblok';
 import MuiButtonRedirect from '../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
@@ -50,22 +50,18 @@ const MuiAppBar = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
 
   return (
-    <AppBar
-      className={styles.root}
-      color={color}
-      position={position}
-    >
-      <Toolbar
-        variant={variant}
-        disableGutters={disableGutters}
-      >
-        <>
-          {content.map((item, index) => (
-            <Grid {...item} key={index} components={components} />
-          ))}
-        </>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar className={styles.root} color={color} position={position}>
+        <Toolbar variant={variant} disableGutters={disableGutters}>
+          <>
+            {content.map((item, index) => (
+              <Grid {...item} key={index} components={components} />
+            ))}
+          </>
+        </Toolbar>
+      </AppBar>
+      {position === 'fixed' && <AppBarOffset />}
+    </>
   );
 };
 

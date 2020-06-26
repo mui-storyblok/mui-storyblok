@@ -2,7 +2,7 @@
 
 exports[`<MuiAppBar /> snapshot 1`] = `
 <header
-  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-root-3 mui-fixed MuiPaper-elevation4"
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionRelative MuiAppBar-colorPrimary makeStyles-root-3 MuiPaper-elevation4"
 >
   <div
     className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"

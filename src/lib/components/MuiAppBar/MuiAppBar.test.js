@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiAppBar from './MuiAppBar';
 
+
 function setup() {
   const props = {
     content: [{
@@ -17,6 +18,7 @@ function setup() {
         href: 'cool.com',
       }],
     }],
+    position: 'relative',
   };
   const comp = shallow(<MuiAppBar {...props} />);
   return { comp, props };
