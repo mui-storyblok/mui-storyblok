@@ -1,16 +1,25 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
-  offset: {
-    ...theme.mixins.toolbar,
-    flexGrow: 1,
-  },
-}));
+export const styles = theme => (
+  {
+    offset: {
+      ...theme.mixins.toolbar,
+      flexGrow: 1,
+    },
+  });
 
-export const AppBarOffset = () => {
-  const classes = useStyles();
-  return <div className={classes.offset} />;
+export const AppBarOffset = ({ classes }) => (
+  <div className={classes.offset} />
+);
+
+export default withStyles(styles)(AppBarOffset);
+
+
+AppBarOffset.propTypes = {
+  classes: PropTypes.string.isRequired,
 };
 
-export default AppBarOffset;
+AppBarOffset.defaultProps = {
+};

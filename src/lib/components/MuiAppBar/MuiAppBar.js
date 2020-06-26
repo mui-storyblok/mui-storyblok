@@ -51,15 +51,8 @@ const MuiAppBar = ({
 
   return (
     <>
-      <AppBar
-        className={styles.root}
-        color={color}
-        position={position}
-      >
-        <Toolbar
-          variant={variant}
-          disableGutters={disableGutters}
-        >
+      <AppBar className={styles.root} color={color} position={position}>
+        <Toolbar variant={variant} disableGutters={disableGutters}>
           <>
             {content.map((item, index) => (
               <Grid {...item} key={index} components={components} />
@@ -67,7 +60,7 @@ const MuiAppBar = ({
           </>
         </Toolbar>
       </AppBar>
-      <AppBarOffset />
+      {position === 'fixed' && <AppBarOffset />}
     </>
   );
 };
