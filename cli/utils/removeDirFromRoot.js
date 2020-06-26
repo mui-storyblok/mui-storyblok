@@ -2,7 +2,7 @@ const rimraf = require('rimraf');
 
 const removeDirFromRoot = (projectRoot, dir) => {
   rimraf(`${projectRoot}/${dir}`, () => {
-    console.log(`${projectRoot} removed`);
+    console.log(`${dir} removed`);
   });
 };
 
