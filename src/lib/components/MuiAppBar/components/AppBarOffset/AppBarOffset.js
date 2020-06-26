@@ -16,10 +16,10 @@ export const AppBarOffset = ({ classes }) => (
 
 export default withStyles(styles)(AppBarOffset);
 
-
 AppBarOffset.propTypes = {
-  classes: PropTypes.string.isRequired,
+  classes: PropTypes.shape({
+    offset: PropTypes.string,
+  }).isRequired,
 };
 
-AppBarOffset.defaultProps = {
-};
+AppBarOffset.defaultProps = {};
