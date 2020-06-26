@@ -161,8 +161,7 @@
     "styleguide:build": "npx styleguidist build",
     "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "test-report": "react-scripts test --watchAll=false --coverage",
-    "export-storyblok-components": "npx storyblok-component-export",
-    "export-storyblok-stories": "npx storyblok-backup --stories"
+    "export-storyblok-components": "npx storyblok-component-export"
   },
   "bin": {
     "util-addDirToRoot": "./cli/utils/addDirToRoot.js",
