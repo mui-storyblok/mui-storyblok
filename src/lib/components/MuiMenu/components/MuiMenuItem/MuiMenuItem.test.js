@@ -1,7 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
 import renderer from 'react-test-renderer';
 import MuiMenuItem from './MuiMenuItem';
 

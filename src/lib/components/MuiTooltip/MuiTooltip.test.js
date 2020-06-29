@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiTooltip from './MuiTooltip';
 
@@ -25,13 +24,11 @@ describe('<MuiTooltip />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiTooltip {...props}>
-          <div>thing here</div>
-        </MuiTooltip>
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(
+      <MuiTooltip {...props}>
+        <div>thing here</div>
+      </MuiTooltip>,
+    );
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import GoogleSvg from './GoogleSvg';
 
@@ -21,11 +20,7 @@ describe('<GoogleSvg />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <GoogleSvg {...props} classes={{}} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<GoogleSvg {...props} classes={{}} />);
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiListItemButton } from './MuiListItemButton';
 
@@ -61,11 +60,7 @@ describe('<MuiListItemButton />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiListItemButton {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiListItemButton {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

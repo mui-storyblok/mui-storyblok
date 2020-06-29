@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import IconButton from './IconButton';
 
@@ -24,11 +23,7 @@ describe('<IconButton />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <IconButton {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<IconButton {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

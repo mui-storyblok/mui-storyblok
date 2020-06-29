@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiTable from './MuiTable';
 
@@ -69,11 +68,7 @@ function setup() {
 describe('<MuiTable />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiTable {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiTable {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

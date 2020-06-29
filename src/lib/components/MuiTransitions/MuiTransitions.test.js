@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiTransitions from './MuiTransitions';
 
@@ -40,11 +39,7 @@ function setup() {
 describe('<MuiTransitions />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiTransitions {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiTransitions {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

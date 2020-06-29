@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import TypographyText from './TypographyText';
 import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
@@ -49,11 +48,7 @@ describe('<TypographyText />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <TypographyText {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<TypographyText {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

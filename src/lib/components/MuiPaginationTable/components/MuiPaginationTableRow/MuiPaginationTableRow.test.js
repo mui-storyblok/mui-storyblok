@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiPaginationTableRow from './MuiPaginationTableRow';
 
@@ -35,11 +34,7 @@ function setup() {
 describe('<MuiPaginationTableRow />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiPaginationTableRow {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiPaginationTableRow {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

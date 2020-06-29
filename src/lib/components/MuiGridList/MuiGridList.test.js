@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiGridList from './MuiGridList';
 
@@ -54,11 +53,7 @@ function setup() {
 describe('<MuiGridList />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiGridList {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiGridList {...props} />);
     expect(tree).toMatchSnapshot();
   });
 
