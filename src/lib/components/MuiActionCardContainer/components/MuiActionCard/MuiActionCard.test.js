@@ -84,12 +84,12 @@ describe('<MuiActionCard />', () => {
         container,
       );
     });
-
+    window.location.assign = jest.fn();
     const btn = container.querySelector('#actionCard-test');
     act(() => {
       // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
-    expect(props.history.push).toBeCalled();
+    expect(window.location.assign).toBeCalled();
   });
 });

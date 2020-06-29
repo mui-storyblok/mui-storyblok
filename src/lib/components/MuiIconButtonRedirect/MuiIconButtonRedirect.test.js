@@ -35,9 +35,10 @@ describe('<MuiIconButtonRedirect />', () => {
 
   describe('clicks', () => {
     it('handleClick and calls history push ', async () => {
-      const { comp, props } = setup(false);
+      const { comp } = setup(false);
+      window.location.assign = jest.fn();
       comp.find('WithStyles(ForwardRef(IconButton))').at(0).simulate('click');
-      expect(props.history.push).toBeCalled();
+      expect(window.location.assign).toBeCalled();
     });
   });
 

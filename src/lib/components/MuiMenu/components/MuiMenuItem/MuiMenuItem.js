@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
-import { withRouter } from 'react-router-dom';
 import Storyblok from '../../../../utils/Storyblok';
+import appRedirect from '../../../../utils/appRedirect';
 
 const MuiMenuItem = ({
   redirectRoute,
   buttonText,
-  history,
   rootClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
-  const redirect = async () => {
-    return history.push(redirectRoute);
-  };
+  const redirect = () => appRedirect(redirectRoute);
 
   return (
     <MenuItem
@@ -26,8 +23,7 @@ const MuiMenuItem = ({
   );
 };
 
-export default withRouter(MuiMenuItem);
-
+export default MuiMenuItem;
 
 MuiMenuItem.propTypes = {
   /** stroyblok multiselect of css classes */
@@ -36,11 +32,6 @@ MuiMenuItem.propTypes = {
   buttonText: PropTypes.string.isRequired,
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
-
-  /** react prop not used in storyblok */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
 };
 
 MuiMenuItem.defaultProps = {
