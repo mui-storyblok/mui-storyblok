@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiContactButton } from './MuiContactButton';
 
@@ -21,11 +20,7 @@ function setup(email = '', phone = '') {
 describe('<MuiContactButton />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiContactButton {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiContactButton {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

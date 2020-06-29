@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import BBBSvg from './BBBSvg';
 
@@ -21,11 +20,7 @@ describe('<BBBSvg />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <BBBSvg {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<BBBSvg {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

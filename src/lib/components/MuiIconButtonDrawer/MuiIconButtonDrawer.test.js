@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiIconButtonDrawer from './MuiIconButtonDrawer';
 
@@ -55,22 +54,14 @@ function setup() {
       },
     ],
   };
-  const comp = mount(
-    <MemoryRouter>
-      <MuiIconButtonDrawer {...props} />
-    </MemoryRouter>,
-  );
+  const comp = mount(<MuiIconButtonDrawer {...props} />);
   return { comp, props };
 }
 
 describe('<MuiIconButtonDrawer />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiIconButtonDrawer {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiIconButtonDrawer {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

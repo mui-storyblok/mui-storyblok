@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiBottomNavigation from './MuiBottomNavigation';
 
@@ -34,22 +33,14 @@ function setup() {
     ],
   };
 
-  const comp = mount(
-    <MemoryRouter>
-      <MuiBottomNavigation {...props} />
-    </MemoryRouter>,
-  );
+  const comp = mount(<MuiBottomNavigation {...props} />);
   return { comp, props };
 }
 
 describe('<MuiBottomNavigation />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiBottomNavigation {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiBottomNavigation {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

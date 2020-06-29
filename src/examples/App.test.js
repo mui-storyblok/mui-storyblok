@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import App from './App';
 
@@ -12,11 +11,7 @@ describe('<MuiAppBar />', () => {
   });
 
   test('snapshot', () => {
-    const tree = renderer.create(
-      <MemoryRouter>
-        <App />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<App />);
     expect(tree).toMatchSnapshot();
   });
 });

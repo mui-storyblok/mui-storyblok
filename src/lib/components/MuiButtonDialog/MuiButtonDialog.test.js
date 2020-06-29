@@ -1,7 +1,6 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonDialog from './MuiButtonDialog';
 
@@ -42,11 +41,7 @@ describe('<MuiButtonDialog />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiButtonDialog {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiButtonDialog {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

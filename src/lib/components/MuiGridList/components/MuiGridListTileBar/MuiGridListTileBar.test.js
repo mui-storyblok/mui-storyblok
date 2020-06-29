@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiGridListTileBar from './MuiGridListTileBar';
 
@@ -35,11 +34,7 @@ function setup() {
 describe('<MuiGridListTileBar />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiGridListTileBar {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiGridListTileBar {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

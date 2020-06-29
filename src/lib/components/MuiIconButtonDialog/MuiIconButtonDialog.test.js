@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiIconButtonDialog from './MuiIconButtonDialog';
 
@@ -57,11 +56,7 @@ describe('<MuiIconButtonDialog />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiIconButtonDialog {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiIconButtonDialog {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.81",
+  "version": "1.0.83",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -123,7 +123,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "3.0.0-beta.5",
-    "react-router-dom": "^4.3.1",
     "react-scripts": "3.4.1",
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
@@ -137,7 +136,6 @@
     "@material-ui/icons": "^3.0.2",
     "node-sass": "^4.13.1",
     "storyblok-js-client": "^1.0.21",
-    "react-router-dom": "^4.3.1",
     "prop-types": "^15.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -149,7 +147,7 @@
     "build-examples": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-storyblok-schema": "babel storyblok --out-dir dist/storyblok",
+    "build-storyblok-schema": "babel storyblok --out-dir dist/storyblok && cp npmStoryblokConfig.js dist/storyblok/config.js",
     "build-storyblok-stories": "babel backup --out-dir dist/backup --copy-files",
     "build-cli-utils": "babel cliUtils --out-dir dist/cliUtils",
     "delete-test-from-dist": "del dist/**/**/*.test.js && del dist/**/**/*__snapshots__ && del dist/**/**/**/*.test.js && del dist/**/**/**/*__snapshots__",
@@ -165,9 +163,6 @@
     "export-storyblok-components": "npx storyblok-component-export"
   },
   "bin": {
-    "util-addDirToRoot": "./cli/utils/addDirToRoot.js",
-    "util-asyncCmd": "./cli/utils/asyncCmd.js",
-    "util-removeDirFromRoot": "./cli/utils/removeDirFromRoot.js",
     "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
     "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js"
   },
@@ -193,7 +188,6 @@
     "moxios": "^0.4.0",
     "node-sass": "^4.13.1",
     "react-player": "^2.1.0",
-    "react-router-dom": "^4.3.1",
     "react-swipeable-views": "^0.13.9",
     "rff-wrapper": "^1.0.13",
     "storyblok-migrate": "^0.3.3"

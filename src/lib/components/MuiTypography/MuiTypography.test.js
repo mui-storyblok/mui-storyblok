@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiTypography from './MuiTypography';
 
@@ -41,11 +40,7 @@ describe('<MuiTypography />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiTypography {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiTypography {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiFade from './MuiFade';
 
@@ -39,25 +38,12 @@ function setup() {
 describe('<MuiFade />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiFade {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiFade {...props} />);
     expect(tree).toMatchSnapshot();
   });
 
   it('should render MuiGridList', () => {
     const { comp } = setup();
     expect(comp).toMatchSnapshot();
-  });
-
-  it('should change state after transitionIn time is ran', () => {
-
-    // const { comp } = setup();
-    // expect(comp.find('WithStyles(ForwardRef(Fade))').first().props().in).toEqual(false);
-    // setTimeout(() => {
-    //   expect(comp.find('WithStyles(ForwardRef(Fade))').first().props().in).toEqual(true);
-    // }, 1000);
   });
 });

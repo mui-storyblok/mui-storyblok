@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiIconButtonHref from './MuiIconButtonHref';
 
@@ -40,11 +39,7 @@ describe('<MuiIconButtonHref />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiIconButtonHref {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiIconButtonHref {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

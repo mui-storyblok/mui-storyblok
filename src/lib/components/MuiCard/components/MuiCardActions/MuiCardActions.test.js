@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiCardActions from './MuiCardActions';
 
@@ -31,11 +30,7 @@ describe('<MuiCardActions />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiCardActions {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiCardActions {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });
