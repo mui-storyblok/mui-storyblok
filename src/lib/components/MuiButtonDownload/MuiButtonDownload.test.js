@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Storyblok from '../../utils/Storyblok';
 import MuiButtonDownload from './MuiButtonDownload';
@@ -28,11 +27,7 @@ describe('<MuiButtonDownload />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiButtonDownload {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiButtonDownload {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

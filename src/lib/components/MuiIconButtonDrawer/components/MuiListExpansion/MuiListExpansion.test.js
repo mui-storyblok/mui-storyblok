@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiListExpansion from './MuiListExpansion';
 
@@ -29,11 +28,7 @@ describe('<MuiListExpansion />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiListExpansion {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiListExpansion {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

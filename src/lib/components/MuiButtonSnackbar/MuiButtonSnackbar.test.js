@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiButtonSnackbar from './MuiButtonSnackbar';
 
@@ -29,22 +28,14 @@ function setup(closingIcon = initialClosingIcon) {
     ],
     closingIcon,
   };
-  const comp = mount(
-    <MemoryRouter>
-      <MuiButtonSnackbar {...props} />
-    </MemoryRouter>,
-  );
+  const comp = mount(<MuiButtonSnackbar {...props} />);
   return { comp, props };
 }
 
 describe('<MuiButtonSnackbar />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiButtonSnackbar {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiButtonSnackbar {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

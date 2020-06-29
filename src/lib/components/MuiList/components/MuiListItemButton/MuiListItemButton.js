@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
-
 import { validComponents, muiStringProp } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
+import appRedirect from '../../../../utils/appRedirect';
 import MuiListItemAvatar from '../MuiListItem/components/MuiListItemAvatar/MuiListItemAvatar';
 import MuiListItemIcon from '../MuiListItem/components/MuiListItemIcon/MuiListItemIcon';
 import MuiListItemText from '../MuiListItem/components/MuiListItemText/MuiListItemText';
@@ -17,9 +16,7 @@ export const MuiListItemButton = ({
   divider,
   selected,
   redirectRoute,
-  history,
   href,
-
   listItemAvatar,
   listItemIcon,
   listItemText,
@@ -31,7 +28,7 @@ export const MuiListItemButton = ({
   } else if (href !== undefined && href !== '') {
     handleClick = () => window.location.assign(href);
   } else if (redirectRoute !== undefined && redirectRoute !== '') {
-    handleClick = async () => history.push(redirectRoute);
+    handleClick = async () => appRedirect(redirectRoute);
   }
 
   const avatar = listItemAvatar[0];
@@ -55,7 +52,7 @@ export const MuiListItemButton = ({
   );
 };
 
-export default withRouter(MuiListItemButton);
+export default MuiListItemButton;
 
 MuiListItemButton.propTypes = {
   /** storyblok multiselect of css classes */
@@ -99,10 +96,6 @@ MuiListItemButton.propTypes = {
   listItemText(props, propName, componentName) {
     return validComponents(props, propName, componentName, ['MuiListItemText'], 1);
   },
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
 };
 
 MuiListItemButton.defaultProps = {

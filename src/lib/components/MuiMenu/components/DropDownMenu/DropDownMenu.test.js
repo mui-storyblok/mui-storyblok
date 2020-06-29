@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import DropDownMenu from './DropDownMenu';
 
@@ -24,11 +23,9 @@ describe('<DropDownMenu />', () => {
     const { props } = setup();
 
     const tree = renderer.create(
-      <MemoryRouter>
-        <DropDownMenu {...props}>
-          <p>here</p>
-        </DropDownMenu>
-      </MemoryRouter>,
+      <DropDownMenu {...props}>
+        <p>here</p>
+      </DropDownMenu>,
     );
     expect(tree).toMatchSnapshot();
   });

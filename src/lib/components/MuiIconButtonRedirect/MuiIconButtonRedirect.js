@@ -1,19 +1,18 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 import { validComponentsRequired } from '../../utils/customProps';
+import appRedirect from '../../utils/appRedirect';
 
 /**
  * MuiIconButtonRedirect is used in storyblok redirect to react routes
  */
 
 export const MuiIconButtonRedirect = ({
-  history,
   redirectRoute,
   iconButton,
 }) => {
-  const onClick = async () => history.push(redirectRoute);
+  const onClick = () => appRedirect(redirectRoute);
 
   const muiIconButton = iconButton[0];
 
@@ -25,7 +24,7 @@ export const MuiIconButtonRedirect = ({
   );
 };
 
-export default withRouter(MuiIconButtonRedirect);
+export default MuiIconButtonRedirect;
 
 MuiIconButtonRedirect.propTypes = {
   /** redirect route */
@@ -34,10 +33,6 @@ MuiIconButtonRedirect.propTypes = {
   iconButton(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['MuiIconButton'], 1);
   },
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
 };
 
 MuiIconButtonRedirect.defaultProps = {

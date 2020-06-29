@@ -6,6 +6,7 @@ import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import styles from './MuiActionCard.module.scss';
 import StoryBlok from '../../../../utils/Storyblok';
+import appRedirect from '../../../../utils/appRedirect';
 import {
   dimensionProp,
   validComponents,
@@ -19,10 +20,9 @@ export const MuiActionCard = ({
   width,
   rootClass,
   redirectRoute,
-  history,
 }) => {
   const classes = StoryBlok.anchorOrginToObj(rootClass);
-  const onClick = async () => history.push(redirectRoute);
+  const onClick = async () => appRedirect(redirectRoute);
 
   return (
     <div
@@ -67,10 +67,6 @@ MuiActionCard.propTypes = {
   },
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
   /**
    * Cards passed to MuiActionCard to render
    * Component: MuiTypography

@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiExpansionPanelDetails from './MuiExpansionPanelDetails';
 
@@ -27,11 +26,7 @@ describe('<MuiExpansionPanelDetails />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiExpansionPanelDetails {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiExpansionPanelDetails {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

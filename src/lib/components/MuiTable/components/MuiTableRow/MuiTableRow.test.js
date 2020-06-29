@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiTableRow from './MuiTableRow';
 
@@ -35,11 +34,7 @@ function setup() {
 describe('<MuiTableRow />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiTableRow {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiTableRow {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

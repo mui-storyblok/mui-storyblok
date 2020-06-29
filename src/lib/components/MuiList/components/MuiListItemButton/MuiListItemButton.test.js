@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { MuiListItemButton } from './MuiListItemButton';
 
@@ -44,9 +43,10 @@ describe('<MuiListItemButton />', () => {
   });
 
   it('handleClick and calls history push ', async () => {
-    const { comp, props } = setup(true, '/page-test');
+    const { comp } = setup(true, '/page-test');
+    window.location.assign = jest.fn();
     comp.find('WithStyles(ForwardRef(ListItem))').at(0).simulate('click');
-    expect(props.history.push).toBeCalled();
+    expect(window.location.assign).toBeCalled();
   });
 
   it('handleClick and calls history push ', async () => {
@@ -60,11 +60,7 @@ describe('<MuiListItemButton />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiListItemButton {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiListItemButton {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

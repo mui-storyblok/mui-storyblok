@@ -1,15 +1,12 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import MuiStoryblok from '../lib/index';
 
 const App = () => (
-  <BrowserRouter>
-    <MuiStoryblok
-      theme={{}}
-      accessToken="9K1dqG8gQkc1jeVbOWRDUAtt"
-      version="draft"
-    />
-  </BrowserRouter>
+  <MuiStoryblok
+    theme={{}}
+    accessToken="xxI9nWQgRHQvoxTRac2Hugtt"
+    version="draft"
+  />
 );
 
 export default App;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import MuiButton from '../MuiButton/MuiButton';
 import { validComponents } from '../../utils/customProps';
+import appRedirect from '../../utils/appRedirect';
 
 /**
  * MuiButtonRedirect onClick will redirect you to a new route in the current App
@@ -11,18 +11,17 @@ import { validComponents } from '../../utils/customProps';
  */
 
 export const MuiButtonRedirect = ({
-  history,
   redirectRoute,
   button,
 }) => {
-  const onClick = async () => history.push(redirectRoute);
+  const onClick = () => appRedirect(redirectRoute);
 
   const muibutton = button[0];
 
   return <MuiButton {...muibutton} onClick={onClick} />;
 };
 
-export default withRouter(MuiButtonRedirect);
+export default MuiButtonRedirect;
 
 MuiButtonRedirect.propTypes = {
   /** MuiButton Allowed maximum: 1 */
@@ -33,11 +32,6 @@ MuiButtonRedirect.propTypes = {
 
   /** redirect route */
   redirectRoute: PropTypes.string.isRequired,
-
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
 };
 
 MuiButtonRedirect.defaultProps = {

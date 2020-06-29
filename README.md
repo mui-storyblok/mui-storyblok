@@ -21,19 +21,16 @@ npm install --save mui-storyblok
 
 ```jsx
 import React, { Component } from 'react'
-import { BrowserRouter } from 'react-router-dom';
 import MuiStoryblok from 'mui-storyblok'
 
 class Page extends Component {
   render () {
     return (
-      <BrowserRouter>
-        <MuiStoryblok
-          theme={{}} // mui theme obj `https://material-ui.com/customization/theming/`
-          accessToken="sdcawrt23t32t23t" //storyblok public API-Key 
-          version="draft" // storyblok version [published or draft] in development use draft and published in production 
-        />
-      </BrowserRouter>
+      <MuiStoryblok
+        theme={{}} // mui theme obj `https://material-ui.com/customization/theming/`
+        accessToken="sdcawrt23t32t23t" //storyblok public API-Key 
+        version="draft" // storyblok version [published or draft] in development use draft and published in production 
+      />
     )
   }
 }

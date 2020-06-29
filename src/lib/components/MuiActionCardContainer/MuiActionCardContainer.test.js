@@ -2,7 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { MuiActionCardContainer } from './MuiActionCardContainer';
@@ -80,11 +79,7 @@ describe('<MuiActionCardContainer />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiActionCardContainer {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiActionCardContainer {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

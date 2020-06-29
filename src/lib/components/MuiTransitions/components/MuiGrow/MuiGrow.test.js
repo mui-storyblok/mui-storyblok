@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiGrow from './MuiGrow';
 
@@ -39,11 +38,7 @@ function setup(enterTime = 1500) {
 describe('<MuiGrow />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiGrow {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiGrow {...props} />);
     expect(tree).toMatchSnapshot();
   });
 

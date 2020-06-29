@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { MuiActionCard } from './MuiActionCard';
@@ -66,11 +65,7 @@ describe('<MuiActionCard />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiActionCard {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiActionCard {...props} />);
     expect(tree).toMatchSnapshot();
   });
 
@@ -78,18 +73,16 @@ describe('<MuiActionCard />', () => {
     const { props } = setup();
     act(() => {
       ReactDOM.render(
-        <MemoryRouter>
-          <MuiActionCard {...props} />
-        </MemoryRouter>,
+        <MuiActionCard {...props} />,
         container,
       );
     });
-
+    window.location.assign = jest.fn();
     const btn = container.querySelector('#actionCard-test');
     act(() => {
       // eslint-disable-next-line no-undef
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
-    expect(props.history.push).toBeCalled();
+    expect(window.location.assign).toBeCalled();
   });
 });

@@ -1,11 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
 import renderer from 'react-test-renderer';
 import MuiMenuItem from './MuiMenuItem';
-
-const mock = jest.fn();
 
 function setup(googleConversionTracking = '', legacyRedirect = true) {
   const props = {
@@ -14,16 +10,7 @@ function setup(googleConversionTracking = '', legacyRedirect = true) {
     legacyRedirect,
     googleConversionTracking,
   };
-  const comp = mount(
-    <Router
-      history={{
-        ...createMemoryHistory(),
-        push: mock,
-      }}
-    >
-      <MuiMenuItem {...props} />
-    </Router>,
-  );
+  const comp = mount(<MuiMenuItem {...props} />);
   return { comp, props };
 }
 
@@ -35,18 +22,15 @@ describe('<MuiMenuItem />', () => {
 
   it('handleClick and call GoogleHelpers contact ', async () => {
     const { comp } = setup('contact', false);
+    window.location.assign = jest.fn();
     comp.find('ForwardRef(MenuItem)').at(0).simulate('click');
-    expect(mock).toBeCalled();
+    expect(window.location.assign).toBeCalled();
   });
 
   test('snapshot with auth', () => {
     const { props } = setup();
 
-    const tree = renderer.create(
-      <Router history={createMemoryHistory()}>
-        <MuiMenuItem {...props} />
-      </Router>,
-    );
+    const tree = renderer.create(<MuiMenuItem {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiImage from './MuiImage';
 
@@ -23,11 +22,7 @@ describe('<MuiImage />', () => {
   test('snapshot with MuiImage', () => {
     const { props } = setup('/home');
 
-    const tree = renderer.create(
-      <MemoryRouter>
-        <MuiImage {...props} />
-      </MemoryRouter>,
-    );
+    const tree = renderer.create(<MuiImage {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

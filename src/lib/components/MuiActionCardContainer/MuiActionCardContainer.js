@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import {
   Grow,
   Paper,
@@ -98,8 +97,7 @@ export const MuiActionCardContainer = ({
   );
 };
 
-export default withRouter(MuiActionCardContainer);
-// export default MuiActionCardContainer;
+export default MuiActionCardContainer;
 
 MuiActionCardContainer.propTypes = {
   /**

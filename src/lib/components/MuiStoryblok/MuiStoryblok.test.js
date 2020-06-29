@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import MuiStoryblok from './MuiStoryblok';
 
@@ -21,11 +20,7 @@ describe('<MuiStoryblok />', () => {
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create((
-      <MemoryRouter>
-        <MuiStoryblok {...props} />
-      </MemoryRouter>
-    ));
+    const tree = renderer.create(<MuiStoryblok {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });
