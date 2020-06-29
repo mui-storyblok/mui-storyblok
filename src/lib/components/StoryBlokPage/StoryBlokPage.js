@@ -23,12 +23,6 @@ export class StoryBlokPage extends Component {
     await this.getPage();
   }
 
-  async componentDidUpdate(prevProps) {
-    if (prevProps.location.pathname !== this.props.location.pathname) {
-      await this.getPage();
-    }
-  }
-
   getPage = async () => {
     try {
       const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
@@ -89,7 +83,4 @@ export default StoryBlokPage;
 StoryBlokPage.propTypes = {
   accessToken: PropTypes.string.isRequired,
   version: PropTypes.string.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-  }).isRequired,
 };
