@@ -4,7 +4,7 @@ MuiAudioPlayer Example:
 
   <MuiAudioPlayer
     src='http://thebornreadies.rocks/songs/Automatic.mp3'
-    autoplay
+    autoplay={true}
   />
 
 ```
