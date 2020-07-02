@@ -7,6 +7,8 @@
 
 > [React ](https://reactjs.org/): A JavaScript library for building user interfaces
 
+> [React Router ](https://reacttraining.com/react-router/web/guides/quick-start): A JavaScript library for routes in React.
+
 > [Storyblok ](https://www.storyblok.com/): Managing digital content with a headless CMS
 
 > [Material-UI ](https://material-ui.com/): React components for faster and easier web development.
