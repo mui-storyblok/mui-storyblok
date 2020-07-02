@@ -19,7 +19,7 @@ import MuiImage from '../MuiImage/MuiImage';
 import MuiButtonHref from '../MuiButtonHref/MuiButtonHref';
 import MuiNotificationBanner from '../MuiNotificationBanner/MuiNotificationBanner';
 import BlokForm from '../BlokForm/BlokForm';
-import MUIAudioPlayer from '../MUIAudioPlayer/MUIAudioPlayer';
+import MuiAudioPlayer from '../MuiAudioPlayer/MuiAudioPlayer';
 
 const MuiGrid = (props) => {
   const components = {
@@ -42,7 +42,7 @@ const MuiGrid = (props) => {
     MuiButtonHref,
     MuiNotificationBanner,
     BlokForm,
-    MUIAudioPlayer,
+    MuiAudioPlayer,
   };
 
   return (
