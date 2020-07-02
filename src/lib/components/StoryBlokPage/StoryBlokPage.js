@@ -39,7 +39,7 @@ export class StoryBlokPage extends Component {
 
   pickTheme = async (urlTheme, theme) => {
     let muiTheme;
-    if (urlTheme) {
+    if (urlTheme && !this.props.useObjectTheme) {
       muiTheme = await this.getUrlTheme(urlTheme);
     } else {
       muiTheme = createMuiTheme(theme);
@@ -115,8 +115,13 @@ StoryBlokPage.propTypes = {
   accessToken: PropTypes.string.isRequired,
   /** theme for mui */
   theme: PropTypes.shape(),
+  /**
+   * override url theme to edit in mui-theme tool
+   */
+  useObjectTheme: PropTypes.bool,
 };
 
 StoryBlokPage.defaultProps = {
   theme: {},
+  useObjectTheme: false,
 };
