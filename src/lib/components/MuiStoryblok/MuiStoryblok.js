@@ -1,5 +1,4 @@
 import React from 'react';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
@@ -13,15 +12,12 @@ export const MuiStoryblok = ({
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
 
-  const muiTheme = createMuiTheme(theme);
   return (
-  // eslint-disable-next-line react/jsx-filename-extension
-    <MuiThemeProvider theme={muiTheme}>
-      <StoryBlokPage
-        accessToken={accessToken}
-        version={version}
-      />
-    </MuiThemeProvider>
+    <StoryBlokPage
+      theme={theme}
+      accessToken={accessToken}
+      version={version}
+    />
   );
 };
 

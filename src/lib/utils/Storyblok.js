@@ -62,13 +62,14 @@ export const setMetadata = (res) => {
   }
 };
 
-class StoryBlock {
+class StoryBlok {
   static async get(route, accesstoken, version, options = {}) {
     try {
       const client = storyblokClient(accesstoken);
       const res = await client.get(`cdn/stories/${route}`, Object.assign({ version }, options));
       setMetadata(res);
-      return res.data.story.content.body;
+      const { body, theme } = res.data.story.content;
+      return [body, theme.filename];
     } catch (err) {
       throw new Error(err);
     }
@@ -101,4 +102,4 @@ class StoryBlock {
 }
 
 
-export default StoryBlock;
+export default StoryBlok;

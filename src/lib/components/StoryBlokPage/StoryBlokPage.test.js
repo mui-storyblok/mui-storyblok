@@ -17,6 +17,34 @@ function setup() {
   return { comp, props };
 }
 
+describe('getUrlTheme', () => {
+  it('getUrlTheme return theme obj', async () => {
+    const { comp } = setup();
+    const theme = await comp.instance().getUrlTheme('', { cool: 'thing' });
+    expect(theme.cool).toEqual('thing');
+  });
+
+  it('getUrlTheme return theme url', async () => {
+    const { comp } = setup();
+    global.fetch = jest.fn(() => Promise.resolve({
+      json: () => Promise.resolve({ cool: 'thing' }),
+    }));
+    const theme = await comp.instance().getUrlTheme('cool.com', {});
+    expect(theme.cool).toEqual('thing');
+  });
+});
+
+describe('pickTheme', () => {
+  it('pickTheme return theme url', async () => {
+    const { comp } = setup();
+    global.fetch = jest.fn(() => Promise.resolve({
+      json: () => Promise.resolve({ cool: 'thing' }),
+    }));
+    const theme = await comp.instance().pickTheme('cool.com', {});
+    expect(theme.cool).toEqual('thing');
+  });
+});
+
 describe('<StoryBlokPage />', () => {
   beforeEach(() => {
     moxios.install();
@@ -34,8 +62,10 @@ describe('<StoryBlokPage />', () => {
   describe('lifecycle', () => {
     it('componentDidMount calls setStory', async () => {
       const { comp } = setup();
-      Storyblok.get = jest.fn(() => 'value');
+      Storyblok.get = jest.fn(() => ['value']);
+
       await comp.instance().componentDidMount();
+      expect(Storyblok.get).toBeCalled();
       expect(comp.instance().state.story).toEqual('value');
       expect(document.body.scrollTop).toEqual(0);
       expect(document.documentElement.scrollTop).toEqual(0);
@@ -48,7 +78,7 @@ describe('<StoryBlokPage />', () => {
       });
       await comp.instance().componentDidMount();
       expect(Storyblok.get).toBeCalled();
-      Storyblok.get = jest.fn(() => 'value');
+      Storyblok.get = jest.fn(() => ['value']);
       expect(document.body.scrollTop).toEqual(0);
       expect(document.documentElement.scrollTop).toEqual(0);
       expect(comp.instance().state.story).toEqual('value');
