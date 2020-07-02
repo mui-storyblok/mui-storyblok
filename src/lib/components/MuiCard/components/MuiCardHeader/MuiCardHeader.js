@@ -106,7 +106,7 @@ MuiCardHeader.propTypes = {
     return validComponents(props, propName, componentName, components, 1);
   },
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),

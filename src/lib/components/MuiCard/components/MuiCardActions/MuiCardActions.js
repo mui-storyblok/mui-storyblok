@@ -47,7 +47,7 @@ const MuiCardActions = ({
 export default MuiCardActions;
 
 MuiCardActions.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * mui prop: true | false
