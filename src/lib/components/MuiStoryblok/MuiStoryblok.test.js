@@ -7,6 +7,7 @@ function setup() {
   const props = {
     accessToken: '123',
     googleapisKey: '1234',
+    theme: { cool: 'value' },
   };
   const comp = shallow(<MuiStoryblok {...props} />);
   return { comp, props };
