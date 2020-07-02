@@ -1,4 +1,5 @@
 import React, { Component, createElement } from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
@@ -6,12 +7,14 @@ import Storyblok from '../../utils/Storyblok';
 import Blok from './components/Blok/Blok';
 import MuiTransitions from '../MuiTransitions/MuiTransitions';
 import styles from './StoryBlokPage.module.scss';
+import downloadSbAsset from '../../utils/json-sb-asset';
 
 export class StoryBlokPage extends Component {
   state = {
     story: [],
     loading: true,
     error: '',
+    muiTheme: undefined,
   };
 
   components = {
@@ -23,11 +26,36 @@ export class StoryBlokPage extends Component {
     await this.getPage();
   }
 
+  getUrlTheme = async (urlTheme, theme) => {
+    let res;
+    try {
+      res = await downloadSbAsset(urlTheme);
+      return createMuiTheme(res);
+    } catch (err) {
+      console.warn(`issue getting theme from ${urlTheme} using to ${theme ? 'theme passed by props' : 'mui default theme'}  `);
+      return createMuiTheme(theme);
+    }
+  };
+
+  pickTheme = async (urlTheme, theme) => {
+    let muiTheme;
+    if (urlTheme) {
+      muiTheme = await this.getUrlTheme(urlTheme);
+    } else {
+      muiTheme = createMuiTheme(theme);
+    }
+    return muiTheme;
+  };
+
   getPage = async () => {
     try {
       const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
-      this.setStory(story);
+
+      const muiTheme = await this.pickTheme(story[1], this.props.theme);
+      this.setState({ muiTheme });
+
+      this.setStory(story[0]);
     } catch (err) {
       await this.pageNotFound();
     }
@@ -64,6 +92,7 @@ export class StoryBlokPage extends Component {
         )}
         {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
         {!this.state.loading && (
+        <MuiThemeProvider theme={this.state.muiTheme}>
           <div className={styles.container}>
             {this.state.story && this.state.story.map((item, index) => (
               <div key={index}>
@@ -71,16 +100,23 @@ export class StoryBlokPage extends Component {
               </div>
             ))}
           </div>
+        </MuiThemeProvider>
         )}
       </Grid>
     );
   }
 }
 
-// export default withRouter(StoryBlokPage);
 export default StoryBlokPage;
 
 StoryBlokPage.propTypes = {
-  accessToken: PropTypes.string.isRequired,
   version: PropTypes.string.isRequired,
+  /** acess key from storyblok you can make them in storyblok settings */
+  accessToken: PropTypes.string.isRequired,
+  /** theme for mui */
+  theme: PropTypes.shape(),
+};
+
+StoryBlokPage.defaultProps = {
+  theme: {},
 };
