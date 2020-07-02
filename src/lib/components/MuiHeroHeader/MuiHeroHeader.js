@@ -13,6 +13,7 @@ import MuiPaginationTable from '../MuiPaginationTable/MuiPaginationTable';
 import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import MuiImage from '../MuiImage/MuiImage';
 import BlokForm from '../BlokForm/BlokForm';
+import MUIAudioPlayer from '../MUIAudioPlayer/MUIAudioPlayer';
 import { dimensionProp } from '../../utils/customProps';
 
 const MuiHeroHeader = (props) => {
@@ -29,6 +30,7 @@ const MuiHeroHeader = (props) => {
     MuiContactButton,
     BlokForm,
     MuiImage,
+    MUIAudioPlayer,
   };
 
   let heroClass = {
