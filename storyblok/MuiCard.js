@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCard",
   "display_name": null,
-  "updated_at": "2020-06-05T18:55:12.504Z",
+  "updated_at": "2020-07-02T22:08:22.934Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -44,6 +44,46 @@ module.exports = {
       "description": "If true, the card will use raised styling.",
       "pos": 1
     },
+    "variant": {
+      "type": "option",
+      "pos": 2,
+      "description": "* mui prop: 'elevation' | 'outlined'\n* The variant to use.",
+      "default_value": "elevation",
+      "use_uuid": true,
+      "options": [
+        {
+          "value": "elevation",
+          "name": "elevation"
+        },
+        {
+          "value": "outlined",
+          "name": "outlined"
+        }
+      ]
+    },
+    "elevation": {
+      "type": "number",
+      "pos": 3,
+      "description": "* It accepts values between 0 and 24 inclusive.\n* Shadow depth, corresponds to dp in the spec.\n* Set to 0 for no shadow.",
+      "default_value": "1"
+    },
+    "square": {
+      "type": "boolean",
+      "pos": 4,
+      "description": "* mui prop: true | false\n* If true, rounded corners are disabled."
+    },
+    "height": {
+      "type": "text",
+      "default_value": "100%",
+      "description": "Height of the card",
+      "pos": 5
+    },
+    "width": {
+      "type": "text",
+      "description": "Width of card",
+      "default_value": "100%",
+      "pos": 6
+    },
     "content": {
       "type": "bloks",
       "restrict_components": true,
@@ -54,17 +94,7 @@ module.exports = {
         "MuiCardActions",
         "MuiVideo"
       ],
-      "pos": 2
-    },
-    "height": {
-      "type": "text",
-      "default_value": "100%",
-      "description": "Height of the card"
-    },
-    "width": {
-      "type": "text",
-      "description": "Width of card",
-      "default_value": "100%"
+      "pos": 7
     }
   },
   "image": null,
