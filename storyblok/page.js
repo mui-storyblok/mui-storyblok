@@ -1,7 +1,7 @@
 module.exports = {
   "name": "page",
   "display_name": null,
-  "updated_at": "2020-05-12T19:37:20.045Z",
+  "updated_at": "2020-07-02T20:27:02.648Z",
   "schema": {
     "seo": {
       "type": "custom",
@@ -18,6 +18,10 @@ module.exports = {
       ],
       "pos": 1,
       "translatable": false
+    },
+    "theme": {
+      "type": "asset",
+      "filetypes": []
     }
   },
   "image": null,
