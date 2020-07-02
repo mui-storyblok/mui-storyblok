@@ -126,7 +126,8 @@
     "react-scripts": "3.4.1",
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
-    "rff-wrapper": "^1.0.13",
+    "rff-wrapper": "^1.0.15",
+    "material-ui-audio-player": "^1.1.9",
     "storyblok-js-client": "^1.0.21"
   },
   "peerDependencies": {
@@ -140,7 +141,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "rff-wrapper": "^1.0.13"
+    "rff-wrapper": "^1.0.13",
+    "material-ui-audio-player": "^1.1.9"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -185,6 +187,7 @@
     "del-cli": "^3.0.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
+    "material-ui-audio-player": "^1.1.9",
     "moxios": "^0.4.0",
     "node-sass": "^4.13.1",
     "react-player": "^2.1.0",
