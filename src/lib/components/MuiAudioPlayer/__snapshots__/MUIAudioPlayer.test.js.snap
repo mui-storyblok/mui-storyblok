@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiAudioPlayer /> snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiGrid-root makeStyles-root-1 makeStyles-root-34 makeStyles-elevation1-10 makeStyles-rounded-8 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-center MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <audio
+    hidden={true}
+    preload="none"
+  >
+    <source
+      src="http://thebornreadies.rocks/songs/Automatic.mp3"
+    />
+  </audio>
+  <div
+    className="MuiGrid-root makeStyles-commonContainer-5 MuiGrid-item"
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root makeStyles-icon-39 makeStyles-icon-40 MuiSvgIcon-fontSizeLarge"
+      focusable="false"
+      onClick={[Function]}
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M0 0h48v48H0z"
+        fill="none"
+        transform="scale(0.5, 0.5)"
+      />
+      <path
+        d="M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm-4 29V15l12 9-12 9z"
+        transform="scale(0.5, 0.5)"
+      />
+    </svg>
+  </div>
+  <div
+    className="MuiGrid-root makeStyles-commonContainer-43 makeStyles-volumeIconContainer-45 MuiGrid-item"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root makeStyles-icon-44 makeStyles-icon-48 MuiSvgIcon-fontSizeLarge"
+      focusable="false"
+      onClick={[Function]}
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+  </div>
+  <div
+    className="MuiGrid-root makeStyles-sliderContainerWrapper-2 makeStyles-sliderContainerWrapper-35 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item"
+  >
+    <div
+      className="MuiGrid-root makeStyles-commonContainer-5 MuiGrid-item"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+        00:00
+      </p>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-sliderContainer-3 MuiGrid-item"
+    >
+      <span
+        className="MuiSlider-root MuiSlider-colorPrimary makeStyles-slider-4 makeStyles-slider-36"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="MuiSlider-rail"
+        />
+        <span
+          className="MuiSlider-track"
+          style={
+            Object {
+              "left": "0%",
+              "width": "0%",
+            }
+          }
+        />
+        <input
+          type="hidden"
+          value="0"
+        />
+        <span
+          aria-orientation="horizontal"
+          aria-valuemax={100}
+          aria-valuemin={0}
+          aria-valuenow={0}
+          className="MuiSlider-thumb MuiSlider-thumbColorPrimary"
+          data-index={0}
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          role="slider"
+          style={
+            Object {
+              "left": "0%",
+            }
+          }
+          tabIndex={0}
+        />
+      </span>
+    </div>
+    <div
+      className="MuiGrid-root makeStyles-commonContainer-5 MuiGrid-item"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+        00:00
+      </p>
+    </div>
+  </div>
+</div>
+`;
