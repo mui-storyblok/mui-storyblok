@@ -44,6 +44,12 @@ MuiStoryblok.propTypes = {
   useObjectTheme: PropTypes.bool,
   /**
    * pass an array of icons to render custom icons in MuiIcon componet
+   * ex :
+   *  [{
+      iconName: 'cool_thing',
+      Component: MyCoolIcon,
+      props: {viewBox: '0 0 267.34 369.6' },
+   * }]
    */
   iconArray: PropTypes.arrayOf(
     PropTypes.shape({
