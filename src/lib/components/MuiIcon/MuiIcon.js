@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon';
 import Storyblok from '../../utils/Storyblok';
@@ -9,15 +9,8 @@ import GoogleSvg from './components/GoogleSvg/GoogleSvg';
 import LinkedinSvg from './components/LinkedinSvg/LinkedinSvg';
 // import styles for icons in styleguide
 import '../../styles/styles.scss';
-
 // import icons to use for custom icons passed down to app;
 import customIcons from '../../utils/customIcons';
-
-// import { icons } from '../MuiStoryblok/MuiStoryblok';
-// const icons = getIcons();
-/**
- * MuiIcon is used in storyblok redirect to react routes
- */
 
 export const MuiIcon = ({
   color,

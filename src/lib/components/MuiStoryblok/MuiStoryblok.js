@@ -14,6 +14,7 @@ export const MuiStoryblok = ({
 }) => {
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
+  // if iconArray is passed down push into customIcons array
   if (iconArray.length > 0) iconArray.forEach(icon => customIcons.push(icon));
 
   return (
@@ -47,7 +48,7 @@ MuiStoryblok.propTypes = {
   iconArray: PropTypes.arrayOf(
     PropTypes.shape({
       iconName: PropTypes.string.isRequired,
-      component: PropTypes.element.isRequired,
+      Component: PropTypes.element.isRequired,
       props: PropTypes.shape({}).isRequired,
     }),
   ),
