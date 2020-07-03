@@ -9,7 +9,7 @@ jest.mock('../../utils/customIcons', () => ([{
   iconName: 'cool',
   Component: <div id="cool"> something here </div>,
   props: {
-    'data-testid': 'cool'
+    'data-testid': 'cool',
   },
 }]));
 
