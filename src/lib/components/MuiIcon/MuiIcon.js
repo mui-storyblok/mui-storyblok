@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import Icon from '@material-ui/core/Icon';
 import Storyblok from '../../utils/Storyblok';
@@ -10,6 +10,11 @@ import LinkedinSvg from './components/LinkedinSvg/LinkedinSvg';
 // import styles for icons in styleguide
 import '../../styles/styles.scss';
 
+// import icons to use for custom icons passed down to app;
+import customIcons from '../../utils/customIcons';
+
+// import { icons } from '../MuiStoryblok/MuiStoryblok';
+// const icons = getIcons();
 /**
  * MuiIcon is used in storyblok redirect to react routes
  */
@@ -21,6 +26,19 @@ export const MuiIcon = ({
   rootClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+
+  const customIcon = customIcons.find(icon => icon.iconName === iconName);
+  if (customIcon) {
+    const Custom = customIcon.Component;
+    return (
+      <Custom
+        className={styles.root}
+        color={color}
+        fontSize={fontSize}
+        {...customIcon.props}
+      />
+    );
+  }
 
   switch (iconName) {
     case 'facebook':
