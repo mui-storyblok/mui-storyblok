@@ -16,6 +16,9 @@ const MuiCard = ({
   rootClass,
   raised,
   content,
+  elevation,
+  square,
+  variant,
   height,
   width,
 }) => {
@@ -31,6 +34,9 @@ const MuiCard = ({
     <Card
       className={styles.root}
       raised={raised}
+      variant={variant}
+      elevation={+elevation}
+      square={square}
     >
       {content.map((item, index) => createElement(
         components[item.component],
@@ -53,6 +59,21 @@ MuiCard.propTypes = {
    * If true, the card will use raised styling.
    */
   raised: PropTypes.bool,
+  /**
+   * It accepts values between 0 and 24 inclusive.
+   * Shadow depth, corresponds to dp in the spec.
+   */
+  elevation: PropTypes.string,
+  /**
+   * mui prop: true | false
+   * If true, rounded corners are disabled.
+   */
+  square: PropTypes.bool,
+  /**
+   * mui prop: 'elevation' | 'outlined'
+   * The variant to use.
+   */
+  variant: PropTypes.string,
   /**
    * Height of the card.
    */
@@ -90,4 +111,7 @@ MuiCard.defaultProps = {
   height: '100%',
   width: '100%',
   content: [],
+  elevation: 1,
+  square: false,
+  variant: 'elevation',
 };

@@ -3,7 +3,8 @@ import MuiStoryblok from '../lib/index';
 
 const App = () => (
   <MuiStoryblok
-    accessToken="xxI9nWQgRHQvoxTRac2Hugtt"
+    useObjectTheme={false}
+    accessToken="9K1dqG8gQkc1jeVbOWRDUAtt"
     version="draft"
   />
 );

@@ -1,9 +1,8 @@
 
-// import StoryblokClient from 'storyblok-js-client';
+import StoryblokClient from 'storyblok-js-client';
 import StoryBlok, { checkForMetaTag, setMetadata } from './Storyblok';
 
-// jest.mock('storyblok-js-client');
-
+jest.mock('storyblok-js-client');
 
 describe('StoryBlok', () => {
   it('should check for meta tag', () => {
@@ -46,19 +45,35 @@ describe('StoryBlok', () => {
     document.createElement = createElement;
   });
 
-  it.skip('StoryBlok.get', async () => {
-    // having a hard time mocking storyblok-js-client
-    const client = jest.genMockFromModule('storyblok-js-client');
-    client.get = jest.fn(() => ({
-      data: {
-        story: {
-          content: [],
+  it('StoryBlok.get', async () => {
+    StoryblokClient.mockImplementation(() => ({
+      get: () => Promise.resolve({
+        data: {
+          story: {
+            content: {
+              body: 'cool',
+              theme: {
+                filename: 'poop',
+              },
+            },
+          },
         },
-      },
+      }),
     }));
 
-    await StoryBlok.get('page-welcome', 'wasd123', 'draft');
-    expect(client.get).toBeCalled();
-    expect(true).toBe(false);
+    const res = await StoryBlok.get('page-welcome', 'wasd123', 'draft');
+    expect(res[0]).toBe('cool');
+    expect(res[1]).toBe('poop');
+  });
+
+  it('StoryBlok.get err', async () => {
+    StoryblokClient.mockImplementation(() => ({
+      get: () => Promise.reject('bad'),
+    }));
+    try {
+      await StoryBlok.get('page-welcome', 'wasd123', 'draft');
+    } catch (err) {
+      expect(err.toString()).toBe('Error: bad');
+    }
   });
 });
