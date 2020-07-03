@@ -9,10 +9,8 @@ import GoogleSvg from './components/GoogleSvg/GoogleSvg';
 import LinkedinSvg from './components/LinkedinSvg/LinkedinSvg';
 // import styles for icons in styleguide
 import '../../styles/styles.scss';
-
-/**
- * MuiIcon is used in storyblok redirect to react routes
- */
+// import icons to use for custom icons passed down to app;
+import customIcons from '../../utils/customIcons';
 
 export const MuiIcon = ({
   color,
@@ -21,6 +19,19 @@ export const MuiIcon = ({
   rootClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+
+  const customIcon = customIcons.find(icon => icon.iconName === iconName);
+  if (customIcon) {
+    const Custom = customIcon.Component;
+    return (
+      <Custom
+        className={styles.root}
+        color={color}
+        fontSize={fontSize}
+        {...customIcon.props}
+      />
+    );
+  }
 
   switch (iconName) {
     case 'facebook':

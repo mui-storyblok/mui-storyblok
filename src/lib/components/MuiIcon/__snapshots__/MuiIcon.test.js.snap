@@ -3,7 +3,7 @@
 exports[`<MuiIcon /> snapshot 1`] = `
 <span
   aria-hidden={true}
-  className="material-icons MuiIcon-root makeStyles-root-3 MuiIcon-colorSecondary"
+  className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
 >
   android
 </span>

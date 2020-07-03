@@ -3,6 +3,16 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import MuiIcon from './MuiIcon';
 
+// import customIcons from '../../utils/customIcons';
+
+jest.mock('../../utils/customIcons', () => ([{
+  iconName: 'cool',
+  Component: <div id="cool"> something here </div>,
+  props: {
+    'data-testid': 'cool',
+  },
+}]));
+
 function setup(iconName = 'android') {
   const props = {
     component: 'MuiIcon',
@@ -16,6 +26,12 @@ describe('<MuiIcon />', () => {
   it('renders MuiIcon', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
+  });
+
+  it('renders customIcon', () => {
+    const { comp } = setup('cool');
+    const icon = comp.find('[data-testid="cool"]');
+    expect(icon.length).toBe(1);
   });
 
   test('snapshot', () => {
