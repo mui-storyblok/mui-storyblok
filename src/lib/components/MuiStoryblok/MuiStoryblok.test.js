@@ -4,8 +4,6 @@ import renderer from 'react-test-renderer';
 import MuiStoryblok from './MuiStoryblok';
 import customIcons from '../../utils/customIcons';
 
-// const mock = jest.mock('../../utils/customIcons', () => []);
-
 function setup(iconArray = []) {
   const props = {
     accessToken: '123',
