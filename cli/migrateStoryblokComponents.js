@@ -4,7 +4,7 @@ const fs = require('fs');
 const { exec } = require('child_process');
 const rimraf = require('rimraf');
 
-const files = fs.readdirSync('node_modules/mui-storyblok/storyblok');
+const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
 const fileNames = files.map(file => file.replace('.js', '')).filter(x => x != null).join();
 const cmd = `npx storyblok-migrate --component-migrations --components ${fileNames}`;
 
