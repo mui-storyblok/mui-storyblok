@@ -154,12 +154,12 @@ GridItem.propTypes = {
 
   /**
    * Content passed to from api
+   * can also render any customCompnent passed in
    * will render any component in components prop
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-
   /** prop passed down from parent not in storyblok */
   sizeGrid: PropTypes.func.isRequired,
 };

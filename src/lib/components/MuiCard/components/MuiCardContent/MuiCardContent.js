@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import CardContent from '@material-ui/core/CardContent';
 import { validComponents } from '../../../../utils/customProps';
@@ -6,6 +6,7 @@ import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
 import MuiList from '../../../MuiList/MuiList';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const MuiCardContent = ({
   content,
@@ -23,10 +24,7 @@ const MuiCardContent = ({
     <CardContent
       className={styles.root}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </CardContent>
   );
 };
