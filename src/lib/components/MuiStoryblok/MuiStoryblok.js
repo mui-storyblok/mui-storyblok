@@ -62,6 +62,7 @@ MuiStoryblok.propTypes = {
     }),
   ),
   /**
+   * Important you can add and use customComponets to any sotyblok componet that uses content prop
    * ex [{ componentName: 'MyCoolComp', Component: MyCoolComp, props: {} }]
    */
   customComponents: PropTypes.arrayOf(

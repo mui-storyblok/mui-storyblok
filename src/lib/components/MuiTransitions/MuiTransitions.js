@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import StoryBlok from '../../utils/Storyblok';
 import MuiCollapse from './components/MuiCollapse/MuiCollapse';
