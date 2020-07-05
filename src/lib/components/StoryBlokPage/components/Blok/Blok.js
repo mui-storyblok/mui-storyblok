@@ -1,12 +1,12 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Hidden from '@material-ui/core/Hidden';
-
 import MuiGrid from '../../../MuiGrid/MuiGrid';
 import MuiTabs from '../../../MuiTabs/MuiTabs';
 import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 import MuiAppBar from '../../../MuiAppBar/MuiAppBar';
 import MuiBottomNavigation from '../../../MuiBottomNavigation/MuiBottomNavigation';
+import { renderComponents } from '../../../../utils/customComponents';
 
 export const Blok = ({
   content,
@@ -22,11 +22,7 @@ export const Blok = ({
 
   return (
     <Hidden only={only}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))
-    }
+      {content.map((component, key) => renderComponents(components, component, key)) }
     </Hidden>
   );
 };
