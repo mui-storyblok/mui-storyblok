@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 import customIcons from '../../utils/customIcons';
+import { pushToCustomComponets } from '../../utils/customComponents';
 
 export const MuiStoryblok = ({
   theme,
@@ -11,11 +12,13 @@ export const MuiStoryblok = ({
   googleapisKey,
   useObjectTheme,
   iconArray,
+  customComponents,
 }) => {
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
   // if iconArray is passed down push into customIcons array
   if (iconArray.length > 0) iconArray.forEach(icon => customIcons.push(icon));
+  pushToCustomComponets(customComponents);
 
   return (
     <StoryBlokPage
@@ -58,6 +61,16 @@ MuiStoryblok.propTypes = {
       props: PropTypes.shape({}).isRequired,
     }),
   ),
+  /**
+   * ex [{ componentName: 'MyCoolComp', Component: MyCoolComp, props: {} }]
+   */
+  customComponents: PropTypes.arrayOf(
+    PropTypes.shape({
+      componentName: PropTypes.string.isRequired,
+      Component: PropTypes.element.isRequired,
+      props: PropTypes.shape({}).isRequired,
+    }),
+  ),
 };
 
 MuiStoryblok.defaultProps = {
@@ -66,4 +79,5 @@ MuiStoryblok.defaultProps = {
   googleapisKey: '',
   useObjectTheme: false,
   iconArray: [],
+  customComponents: [],
 };
