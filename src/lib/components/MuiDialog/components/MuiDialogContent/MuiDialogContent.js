@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import DialogContent from '@material-ui/core/DialogContent';
 import Storyblok from '../../../../utils/Storyblok';
@@ -6,6 +6,7 @@ import { validComponents } from '../../../../utils/customProps';
 import BlokForm from '../../../BlokForm/BlokForm';
 import MuiDialogContentTypography from './components/MuiDialogContentTypography/MuiDialogContentTypography';
 import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const MuiDialogContent = ({
   dividers,
@@ -24,10 +25,7 @@ const MuiDialogContent = ({
       className={styles.root}
       dividers={dividers}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </DialogContent>
   );
 };
