@@ -68,7 +68,7 @@ MuiStoryblok.propTypes = {
   customComponents: PropTypes.arrayOf(
     PropTypes.shape({
       componentName: PropTypes.string.isRequired,
-      Component: PropTypes.element.isRequired,
+      Component: PropTypes.func.isRequired,
       props: PropTypes.shape({}).isRequired,
     }),
   ),
