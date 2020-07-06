@@ -1,4 +1,4 @@
-import React, { useState, createElement } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from '@material-ui/core';
 import StoryBlok from '../../utils/Storyblok';
@@ -7,6 +7,7 @@ import {
   validComponentsRequired,
   muiStringProp,
 } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import MuiList from '../MuiList/MuiList';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
 import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
@@ -49,10 +50,7 @@ const MuiIconButtonDrawer = ({
         variant={variant}
         onClose={e => handleToggleDrawer(e)}
       >
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
+        {content.map((component, key) => renderComponents(components, component, key))}
       </Drawer>
     </>
   );

@@ -4,6 +4,7 @@ import {
   validComponents,
   muiStringProp,
 } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import Storyblok from '../../utils/Storyblok';
 import DropDownMenu from './components/DropDownMenu/DropDownMenu';
 import MuiMenuItem from './components/MuiMenuItem/MuiMenuItem';
@@ -24,9 +25,7 @@ const MuiMenu = ({
       size={size}
       color={color}
     >
-      {content.map((item, index) => (
-        <MuiMenuItem {...item} key={index} />
-      ))}
+      {content.map((component, key) => renderComponents({ MuiMenuItem }, component, key))}
     </DropDownMenu>
   );
 };

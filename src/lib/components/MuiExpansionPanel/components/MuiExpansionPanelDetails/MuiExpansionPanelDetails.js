@@ -1,8 +1,9 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
 
 const MuiExpansionPanelDetails = ({ rootClass, content }) => {
@@ -16,10 +17,7 @@ const MuiExpansionPanelDetails = ({ rootClass, content }) => {
     <ExpansionPanelDetails
       className={styles.root}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </ExpansionPanelDetails>
   );
 };
@@ -31,7 +29,7 @@ MuiExpansionPanelDetails.propTypes = {
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** MuiTypography */
   content(props, propName, componentName) {
-    const components = ['MuiTypography'];
+    const components = ['MuiExpansionPanelTypography'];
     return validComponents(props, propName, componentName, components);
   },
 };

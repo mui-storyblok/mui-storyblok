@@ -5,6 +5,7 @@ import MuiListExpansion from '../MuiListExpansion/MuiListExpansion';
 import MuiList from '../../../MuiList/MuiList';
 import StoryBlok from '../../../../utils/Storyblok';
 import { validComponentsRequired, validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 
 export const MuiListDropdown = ({
   rootClass,
@@ -21,7 +22,7 @@ export const MuiListDropdown = ({
     <List className={styles.root}>
       <MuiListExpansion {...listExpansion[0]} handleClick={handleClick} open={open} />
       <Collapse in={open} timeout="auto" unmountOnExit>
-        {content.map((item, index) => (<MuiList {...item} key={index} />))}
+        {content.map((component, key) => renderComponents({ MuiList }, component, key))}
       </Collapse>
     </List>
   );
@@ -40,7 +41,7 @@ MuiListDropdown.propTypes = {
    * MuiListItem
    */
   content(props, propName, componentName) {
-    const components = ['MuiListItem'];
+    const components = ['MuiList'];
     return validComponents(props, propName, componentName, components);
   },
   /**

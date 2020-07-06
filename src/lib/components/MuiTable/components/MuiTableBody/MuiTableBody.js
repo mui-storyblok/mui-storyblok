@@ -3,6 +3,7 @@ import { TableBody } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 import MuiTableRow from '../MuiTableRow/MuiTableRow';
 
 const MuiTableBody = ({ rootClass, content }) => {
@@ -10,7 +11,7 @@ const MuiTableBody = ({ rootClass, content }) => {
 
   return (
     <TableBody className={styles.root}>
-      {content.map((item, index) => <MuiTableRow {...item} key={index} />)}
+      {content.map((component, key) => renderComponents({ MuiTableRow }, component, key))}
     </TableBody>
   );
 };

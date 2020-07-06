@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import { validComponents } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import Storyblok from '../../utils/Storyblok';
 import MuiListItem from './components/MuiListItem/MuiListItem';
 import MuiListItemButton from './components/MuiListItemButton/MuiListItemButton';
@@ -27,10 +28,7 @@ const MuiList = ({
       disablePadding={disablePadding}
       width={width}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </List>
   );
 };
@@ -55,7 +53,7 @@ MuiList.propTypes = {
 
   /** MuiListItem */
   content(props, propName, componentName) {
-    const components = ['MuiListItem'];
+    const components = ['MuiListItem', 'MuiListItemButton'];
     return validComponents(props, propName, componentName, components);
   },
 };

@@ -1,7 +1,6 @@
 import React, {
   useState,
   useEffect,
-  createElement,
 } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
@@ -15,6 +14,7 @@ import {
   muiStringProp,
   dimensionProp,
 } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import MuiIcon from '../MuiIcon/MuiIcon';
 import MuiGrid from '../MuiGrid/MuiGrid';
 
@@ -141,10 +141,7 @@ const MuiTabs = ({
               hidden={state.value !== index}
               style={{ overflow: 'hidden' }}
             >
-              {tab.content.map((item, i) => createElement(
-                components[item.component],
-                Object.assign(item, { key: i }),
-              ))}
+              {tab.content.map((component, key) => renderComponents(components, component, key))}
             </div>
           </AutoPlaySwipeableViews>
         ))}

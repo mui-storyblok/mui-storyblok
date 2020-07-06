@@ -5,6 +5,7 @@ import Storyblok from '../../../../utils/Storyblok';
 import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const MuiExpansionPanelSummary = ({
   rootClass,
@@ -23,10 +24,7 @@ const MuiExpansionPanelSummary = ({
       className={styles.root}
       expandIcon={createElement(components[expandIcon[0].component], expandIcon[0])}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </ExpansionPanelSummary>
   );
 };

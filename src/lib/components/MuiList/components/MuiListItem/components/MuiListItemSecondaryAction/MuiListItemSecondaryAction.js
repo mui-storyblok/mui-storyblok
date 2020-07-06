@@ -8,6 +8,7 @@ import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHre
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../../../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiExpansionPanel from '../../../../../MuiExpansionPanel/MuiExpansionPanel';
+import { renderComponents } from '../../../../../../utils/customComponents';
 
 /**
  * MuiListItemSecondaryAction is used in storyblok redirect to react routes
@@ -29,10 +30,7 @@ export const MuiListItemSecondaryAction = ({
 
   return (
     <ListItemSecondaryAction className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </ListItemSecondaryAction>
   );
 };
