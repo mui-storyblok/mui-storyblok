@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
-import customIcons from '../../utils/customIcons';
+import { pushToCustomIcons } from '../../utils/customIcons';
 import { pushToCustomComponets } from '../../utils/customComponents';
 
 export const MuiStoryblok = ({
@@ -16,8 +16,8 @@ export const MuiStoryblok = ({
 }) => {
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
-  // if iconArray is passed down push into customIcons array
-  if (iconArray.length > 0) iconArray.forEach(icon => customIcons.push(icon));
+
+  pushToCustomIcons(iconArray);
   pushToCustomComponets(customComponents);
 
   return (
