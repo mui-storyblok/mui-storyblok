@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Storyblok from '../../../../../../utils/Storyblok';
