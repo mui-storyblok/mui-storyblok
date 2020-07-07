@@ -114,7 +114,6 @@
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
     "@testing-library/react-hooks": "^3.2.1",
-    "axios": "^0.18.0",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -132,7 +131,6 @@
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
-    "axios": "^0.18.0",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
     "node-sass": "^4.13.1",
