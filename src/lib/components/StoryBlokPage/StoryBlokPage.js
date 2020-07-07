@@ -14,7 +14,7 @@ export class StoryBlokPage extends Component {
     story: [],
     loading: true,
     error: '',
-    muiTheme: undefined,
+    muiTheme: {},
   };
 
   components = {
@@ -24,6 +24,17 @@ export class StoryBlokPage extends Component {
 
   async componentDidMount() {
     await this.getPage();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.theme !== this.props.theme && this.props.useObjectTheme) {
+      this.setpropTheme(this.props.theme);
+    }
+  }
+
+  setpropTheme = (theme) => {
+    const muiTheme = createMuiTheme(theme);
+    this.setState({ muiTheme });
   }
 
   getUrlTheme = async (urlTheme, theme) => {

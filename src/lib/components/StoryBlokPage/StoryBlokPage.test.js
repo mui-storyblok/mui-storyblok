@@ -5,8 +5,10 @@ import moxios from 'moxios';
 import Storyblok from '../../utils/Storyblok';
 import { StoryBlokPage } from './StoryBlokPage';
 
-function setup() {
+function setup(useObjectTheme = false, theme = {}) {
   const props = {
+    useObjectTheme,
+    theme,
     accessToken: 'accessToken',
     version: 'draft',
     location: {
@@ -94,6 +96,18 @@ describe('<StoryBlokPage />', () => {
       expect(document.body.scrollTop).toEqual(0);
       expect(document.documentElement.scrollTop).toEqual(0);
       expect(comp.instance().state.error).toEqual('Unable to fetch page content please refresh and try again or check to make sure you are at the right url');
+    });
+
+
+    it('componentDidUpdate', async () => {
+      const theme = {
+        new: 'theme',
+      };
+
+      const { comp } = setup(true, theme);
+      expect(comp.instance().state.muiTheme).toEqual({});
+      comp.instance().componentDidUpdate({ theme: { old: 'theme' } });
+      expect(comp.instance().state.muiTheme.new).toEqual('theme');
     });
   });
 
