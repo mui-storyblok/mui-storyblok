@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiText",
   "display_name": null,
-  "updated_at": "2020-06-23T15:08:56.489Z",
+  "updated_at": "2020-07-06T00:26:58.196Z",
   "schema": {
     "align": {
       "type": "option",
@@ -161,7 +161,8 @@ module.exports = {
     "content": {
       "type": "text",
       "required": true,
-      "default_value": "text to display"
+      "default_value": "",
+      "description": "text to display"
     }
   },
   "image": null,
