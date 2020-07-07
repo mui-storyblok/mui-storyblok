@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { Typography } from '@material-ui/core';
 import {
   Form,
@@ -53,8 +53,7 @@ const BlokForm = ({
     };
 
     try {
-      await axios(options);
-
+      fetch(baseUrl, options);
       setState({
         successResponse: successResponseText,
         errorResponse: '',
