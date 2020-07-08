@@ -5,10 +5,10 @@ exports[`<BlokForm /> snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiGrid-root makeStyles-root-28 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    className="MuiGrid-root makeStyles-root-18 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
   >
     <div
-      className="MuiGrid-root makeStyles-root-29 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      className="MuiGrid-root makeStyles-root-19 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
     >
       <label
         className="MuiFormControlLabel-root"
