@@ -106,6 +106,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-class-properties": "^7.10.1",
+    "@babel/plugin-transform-regenerator": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
@@ -117,6 +118,7 @@
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "eslint-config-airbnb": "^17.1.0",
+    "material-ui-audio-player": "^1.1.9",
     "node-sass": "^4.13.1",
     "prop-types": "^15.5.4",
     "react": "^16.13.1",
@@ -125,8 +127,7 @@
     "react-scripts": "3.4.1",
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
-    "rff-wrapper": "^1.0.15",
-    "material-ui-audio-player": "^1.1.9",
+    "rff-wrapper": "^1.0.19",
     "storyblok-js-client": "^1.0.21"
   },
   "peerDependencies": {
@@ -139,7 +140,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "rff-wrapper": "^1.0.13",
+    "rff-wrapper": "^1.0.19",
     "material-ui-audio-player": "^1.1.9"
   },
   "scripts": {
@@ -182,17 +183,15 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
-    "axios": "^0.19.2",
     "del-cli": "^3.0.1",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "material-ui-audio-player": "^1.1.9",
-    "moxios": "^0.4.0",
     "node-sass": "^4.13.1",
     "react-player": "^2.1.0",
     "react-swipeable-views": "^0.13.9",
-    "rff-wrapper": "^1.0.13",
+    "rff-wrapper": "^1.0.19",
     "storyblok-migrate": "^0.3.3"
   }
 }
