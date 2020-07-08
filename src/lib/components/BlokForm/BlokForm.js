@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -50,23 +51,21 @@ const BlokForm = ({
       data: queryString,
     };
 
-    try {
-      // eslint-disable-next-line no-undef
-      const response = await fetch(baseUrl, options);
-      if (response.ok) {
-        setState({
-          successResponse: successResponseText,
-          errorResponse: '',
+    fetch(baseUrl, options)
+      .then((response) => {
+        if (response.ok) {
+          setState({
+            successResponse: successResponseText,
+            errorResponse: '',
+          });
+          return state;
+        }
+      }).catch(() => {
+        return setState({
+          successResponse: '',
+          errorResponse: errorResponseText,
         });
-        return state;
-      }
-    } catch {
-      setState({
-        successResponse: '',
-        errorResponse: errorResponseText,
       });
-      return state;
-    }
   };
 
   return (
