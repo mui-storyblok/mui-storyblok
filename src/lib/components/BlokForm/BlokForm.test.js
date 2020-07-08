@@ -51,7 +51,7 @@ describe('<BlokForm />', () => {
   });
 
 
-  describe('submits having an issue with act and async i think? state is not setting', () => {
+  describe('Fetch Request should set success and error responses based on request correctly', () => {
     let container;
 
     beforeEach(() => {
