@@ -60,12 +60,7 @@ const BlokForm = ({
           });
           return state;
         }
-      }).catch(() => {
-        return setState({
-          successResponse: '',
-          errorResponse: errorResponseText,
-        });
-      });
+      }).catch(() => setState({ successResponse: '', errorResponse: errorResponseText }));
   };
 
   return (
