@@ -61,10 +61,11 @@ const BlokForm = ({
         return state;
       }
     } catch {
-      return setState({
+      setState({
         successResponse: '',
         errorResponse: errorResponseText,
       });
+      return state;
     }
   };
 
