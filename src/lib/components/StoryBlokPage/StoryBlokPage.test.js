@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import moxios from 'moxios';
 import Storyblok from '../../utils/Storyblok';
 import { StoryBlokPage } from './StoryBlokPage';
 
@@ -48,14 +47,6 @@ describe('pickTheme', () => {
 });
 
 describe('<StoryBlokPage />', () => {
-  beforeEach(() => {
-    moxios.install();
-  });
-
-  afterEach(() => {
-    moxios.uninstall();
-  });
-
   it('renders', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();

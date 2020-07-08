@@ -114,7 +114,6 @@
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
     "@testing-library/react-hooks": "^3.2.1",
-    "axios": "^0.18.0",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -132,7 +131,6 @@
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
-    "axios": "^0.18.0",
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^3.0.2",
     "node-sass": "^4.13.1",
@@ -189,7 +187,6 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "material-ui-audio-player": "^1.1.9",
-    "moxios": "^0.4.0",
     "node-sass": "^4.13.1",
     "react-player": "^2.1.0",
     "react-swipeable-views": "^0.13.9",
