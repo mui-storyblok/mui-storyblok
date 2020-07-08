@@ -1,7 +1,7 @@
+/* eslint-disable no-undef */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { Typography } from '@material-ui/core';
 import {
   Form,
@@ -49,23 +49,18 @@ const BlokForm = ({
       method,
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
       data: queryString,
-      url: baseUrl,
     };
 
-    try {
-      await axios(options);
-
-      setState({
-        successResponse: successResponseText,
-        errorResponse: '',
-      });
-      return state;
-    } catch (err) {
-      return setState({
-        successResponse: '',
-        errorResponse: errorResponseText,
-      });
-    }
+    fetch(baseUrl, options)
+      .then((response) => {
+        if (response.ok) {
+          setState({
+            successResponse: successResponseText,
+            errorResponse: '',
+          });
+          return state;
+        }
+      }).catch(() => setState({ successResponse: '', errorResponse: errorResponseText }));
   };
 
   return (

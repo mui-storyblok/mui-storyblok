@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-06-22T17:05:45.867Z",
+  "updated_at": "2020-07-05T18:13:48.733Z",
   "schema": {
     "align": {
       "type": "option",
@@ -115,7 +115,8 @@ module.exports = {
         "MuiButtonDownload",
         "MuiButtonDialog",
         "MuiButtonHref",
-        "MuiText"
+        "MuiText",
+        "MyCoolComp"
       ],
       "required": true
     }
