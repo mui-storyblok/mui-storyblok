@@ -50,21 +50,22 @@ const BlokForm = ({
       data: queryString,
     };
 
-    fetch(baseUrl, options)
-      .then(response => {
-        if (response.ok) {
-          setState({
-            successResponse: successResponseText,
-            errorResponse: '',
-          });
-          return state;
-        }
-      }).catch((err) => {
+    try {
+      // eslint-disable-next-line no-undef
+      const response = await fetch(baseUrl, options);
+      if (response.ok) {
+        setState({
+          successResponse: successResponseText,
+          errorResponse: '',
+        });
+        return state;
+      }
+    } catch {
       return setState({
         successResponse: '',
         errorResponse: errorResponseText,
       });
-    })
+    }
   };
 
   return (
