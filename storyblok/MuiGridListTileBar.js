@@ -1,13 +1,16 @@
 module.exports = {
   "name": "MuiGridListTileBar",
   "display_name": null,
-  "updated_at": "2020-04-28T22:18:26.851Z",
+  "updated_at": "2020-07-09T19:30:48.492Z",
   "schema": {
     "actionIcon": {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiIconButtonRedirect"
+        "MuiIconButtonRedirect",
+        "MuiIconButton",
+        "MuiIconButtonDialog",
+        "MuiIconButtonHref"
       ],
       "maximum": "1",
       "required": false,
