@@ -7,6 +7,10 @@ import BBBSvg from './components/BBBSvg/BBBSvg';
 import FacebookSvg from './components/FacebookSvg/FacebookSvg';
 import GoogleSvg from './components/GoogleSvg/GoogleSvg';
 import LinkedinSvg from './components/LinkedinSvg/LinkedinSvg';
+import YouTubeSvg from './components/YouTubeSvg/YouTubeSvg';
+import InstagramSvg from './components/InstagramSvg/InstagramSvg';
+import TwitterSvg from './components/TwitterSvg/TwitterSvg';
+import YelpSvg from './components/YelpSvg/YelpSvg';
 // import styles for icons in styleguide
 import '../../styles/styles.scss';
 // import icons to use for custom icons passed down to app;
@@ -42,6 +46,14 @@ export const MuiIcon = ({
       return <LinkedinSvg color={color} fontSize={fontSize} className={styles.root} />;
     case 'google':
       return <GoogleSvg color={color} fontSize={fontSize} className={styles.root} />;
+    case 'youtube':
+      return <YouTubeSvg color={color} fontSize={fontSize} className={styles.root} />;
+    case 'instagram':
+      return <InstagramSvg color={color} fontSize={fontSize} className={styles.root} />;
+    case 'twitter':
+      return <TwitterSvg color={color} fontSize={fontSize} className={styles.root} />;
+    case 'yelp':
+      return <YelpSvg color={color} fontSize={fontSize} className={styles.root} />;
     default:
       return (
         <Icon
