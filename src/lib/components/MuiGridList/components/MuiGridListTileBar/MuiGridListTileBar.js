@@ -6,6 +6,9 @@ import {
   validComponents,
   muiStringProp,
 } from '../../../../utils/customProps';
+import MuiIconButton from '../../../MuiIconButton/MuiIconButton';
+import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
 
 const MuiGridListTileBar = ({
@@ -16,17 +19,33 @@ const MuiGridListTileBar = ({
   title,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+  let renderAction;
+  if (actionIcon.length !== 0) {
+    switch (actionIcon[0].component) {
+      case 'MuiIconButton':
+        renderAction = <MuiIconButton {...actionIcon[0]} />;
+        break;
+      case 'MuiIconButtonRedirect':
+        renderAction = <MuiIconButtonRedirect {...actionIcon[0]} />;
+        break;
+      case 'MuiIconButtonDialog':
+        renderAction = <MuiIconButtonDialog {...actionIcon[0]} />;
+        break;
+      case 'MuiIconButtonHref':
+        renderAction = <MuiIconButtonHref {...actionIcon[0]} />;
+        break;
+      default:
+        renderAction = null;
+        break;
+    }
+  } else { renderAction = null; }
 
   return (
     <>
       <GridListTileBar
         title={title}
         subtitle={<span>{subtitle}</span>}
-        actionIcon={
-          actionIcon.map(icon => (
-            <MuiIconButtonRedirect {...icon} />
-          ))
-        }
+        actionIcon={renderAction}
         titlePosition={titlePosition}
         className={styles.root}
       />
