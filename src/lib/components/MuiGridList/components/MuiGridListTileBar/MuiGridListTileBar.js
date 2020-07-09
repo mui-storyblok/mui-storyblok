@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { GridListTileBar } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
@@ -6,7 +6,6 @@ import {
   validComponents,
   muiStringProp,
 } from '../../../../utils/customProps';
-import MuiIconButton from '../../../MuiIconButton/MuiIconButton';
 import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
@@ -18,34 +17,22 @@ const MuiGridListTileBar = ({
   subtitle,
   title,
 }) => {
+  const components = {
+    MuiIconButtonDialog,
+    MuiIconButtonHref,
+    MuiIconButtonRedirect,
+  };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-  let renderAction;
-  if (actionIcon.length !== 0) {
-    switch (actionIcon[0].component) {
-      case 'MuiIconButton':
-        renderAction = <MuiIconButton {...actionIcon[0]} />;
-        break;
-      case 'MuiIconButtonRedirect':
-        renderAction = <MuiIconButtonRedirect {...actionIcon[0]} />;
-        break;
-      case 'MuiIconButtonDialog':
-        renderAction = <MuiIconButtonDialog {...actionIcon[0]} />;
-        break;
-      case 'MuiIconButtonHref':
-        renderAction = <MuiIconButtonHref {...actionIcon[0]} />;
-        break;
-      default:
-        renderAction = null;
-        break;
-    }
-  } else { renderAction = null; }
+  const renderAction = actionIcon.length !== 0 ? actionIcon[0] : null;
 
   return (
     <>
       <GridListTileBar
         title={title}
         subtitle={<span>{subtitle}</span>}
-        actionIcon={renderAction}
+        actionIcon={renderAction
+          && createElement(components[renderAction.component], { ...renderAction })
+        }
         titlePosition={titlePosition}
         className={styles.root}
       />
