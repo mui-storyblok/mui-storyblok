@@ -11,6 +11,8 @@ import YouTubeSvg from './components/YouTubeSvg/YouTubeSvg';
 import InstagramSvg from './components/InstagramSvg/InstagramSvg';
 import TwitterSvg from './components/TwitterSvg/TwitterSvg';
 import YelpSvg from './components/YelpSvg/YelpSvg';
+import GithubSvg from './components/GithubSvg/GithubSvg';
+
 // import styles for icons in styleguide
 import '../../styles/styles.scss';
 // import icons to use for custom icons passed down to app;
@@ -54,6 +56,8 @@ export const MuiIcon = ({
       return <TwitterSvg color={color} fontSize={fontSize} className={styles.root} />;
     case 'yelp':
       return <YelpSvg color={color} fontSize={fontSize} className={styles.root} />;
+    case 'github':
+      return <GithubSvg color={color} fontSize={fontSize} className={styles.root} />;
     default:
       return (
         <Icon
