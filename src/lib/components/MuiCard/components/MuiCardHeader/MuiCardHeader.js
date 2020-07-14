@@ -7,6 +7,7 @@ import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonR
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 
 /**
@@ -26,6 +27,7 @@ export const MuiCardHeader = ({
     MuiIconButtonDownload,
     MuiIconButtonDialog,
     MuiIcon,
+    GoogleConversions,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -77,7 +79,7 @@ MuiCardHeader.propTypes = {
   */
   subheader: PropTypes.string,
   /**
-   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog,
+   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, GoogleConversion
    * Allowed maximum: 1
    * The action to display in the card header.
    * */
@@ -87,12 +89,13 @@ MuiCardHeader.propTypes = {
       'MuiIconButtonHref',
       'MuiIconButtonDownload',
       'MuiIconButtonDialog',
+      'GoogleConversions',
     ];
     return validComponents(props, propName, componentName, components, 1);
   },
 
   /**
-   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog,
+   * MuiIconButtonRedirect, MuiIconButtonHref, MuiIconButtonDownload, MuiIconButtonDialog, GoogleConversion
    * Allowed maximum: 1
    * The Avatar for the Card Header.
    * */
@@ -102,11 +105,12 @@ MuiCardHeader.propTypes = {
       'MuiIconButtonHref',
       'MuiIconButtonDownload',
       'MuiIconButtonDialog',
+      'GoogleConversion',
     ];
     return validComponents(props, propName, componentName, components, 1);
   },
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),

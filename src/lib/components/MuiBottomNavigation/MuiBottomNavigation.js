@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import MuiIconButtonRedirect from '../MuiIconButtonRedirect/MuiIconButtonRedirect';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
+import GoogleConversions from '../GoogleConversions/GoogleConversions';
 import StoryBlok from '../../utils/Storyblok';
 import {
   dimensionProp,
@@ -21,6 +22,7 @@ const MuiBottomNavigation = ({
   const components = {
     MuiIconButton,
     MuiIconButtonRedirect,
+    GoogleConversions,
   };
 
   const styles = StoryBlok.arrayToMuiStyles(rootClass, {

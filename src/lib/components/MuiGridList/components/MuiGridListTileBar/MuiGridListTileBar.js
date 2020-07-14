@@ -9,6 +9,7 @@ import {
 import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 
 const MuiGridListTileBar = ({
   actionIcon,
@@ -21,6 +22,7 @@ const MuiGridListTileBar = ({
     MuiIconButtonDialog,
     MuiIconButtonHref,
     MuiIconButtonRedirect,
+    GoogleConversions,
   };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   const renderAction = actionIcon.length !== 0 ? actionIcon[0] : null;
