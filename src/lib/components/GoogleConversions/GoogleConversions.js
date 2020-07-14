@@ -10,9 +10,7 @@ import { validComponentsRequired } from '../../utils/customProps';
 
 
 const GoogleConversions = ({ sendTo, aWConversionID, button }) => {
-  if (!window.awConversionId) {
-    window.aWConversionID = aWConversionID;
-  }
+
 
   const components = {
     MuiButtonDownload,
@@ -24,11 +22,13 @@ const GoogleConversions = ({ sendTo, aWConversionID, button }) => {
   };
 
   const conversionCall = () => {
+    window.aWConversionID = aWConversionID;
     const callback = () => { console.log('Conversion Call back called: ', sendTo); };
     window.gtag('event', 'conversion', {
       send_to: sendTo,
       event_callback: callback,
     });
+    window.aWConversionID = undefined;
     return false;
   };
 
