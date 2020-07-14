@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCardActions",
   "display_name": null,
-  "updated_at": "2020-07-02T16:42:04.351Z",
+  "updated_at": "2020-07-14T17:25:11.806Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -25,7 +25,8 @@ module.exports = {
         "MuiButtonDownload",
         "MuiButtonDialog",
         "MuiExpansionPanel",
-        "MuiAudioPlayer"
+        "MuiAudioPlayer",
+        "GoogleConversions"
       ],
       "pos": 2,
       "required": true,

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiExpansionPanelTypography",
   "display_name": null,
-  "updated_at": "2020-06-11T16:51:03.308Z",
+  "updated_at": "2020-07-14T17:41:40.515Z",
   "schema": {
     "align": {
       "type": "option",
@@ -104,7 +104,8 @@ module.exports = {
         "MuiIconButtonDownload",
         "MuiButtonRedirect",
         "MuiButtonHref",
-        "MuiButtonDownload"
+        "MuiButtonDownload",
+        "GoogleConversions"
       ],
       "required": true
     }

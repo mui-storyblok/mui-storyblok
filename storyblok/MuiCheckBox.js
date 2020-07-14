@@ -1,7 +1,7 @@
 module.exports = {
-  "name": "MuiCheckBox",
+  "name": "MuiCheckbox",
   "display_name": null,
-  "updated_at": "2020-06-15T22:31:39.735Z",
+  "updated_at": "2020-06-01T17:27:25.123Z",
   "schema": {
     "name": {
       "type": "text",
@@ -74,6 +74,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiCheckBox",
+  "real_name": "MuiCheckbox",
   "component_group_uuid": null
 }

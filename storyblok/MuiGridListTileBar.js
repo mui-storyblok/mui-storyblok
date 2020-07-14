@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiGridListTileBar",
   "display_name": null,
-  "updated_at": "2020-07-09T19:30:48.492Z",
+  "updated_at": "2020-07-14T17:55:32.116Z",
   "schema": {
     "actionIcon": {
       "type": "bloks",
@@ -10,7 +10,8 @@ module.exports = {
         "MuiIconButtonRedirect",
         "MuiIconButton",
         "MuiIconButtonDialog",
-        "MuiIconButtonHref"
+        "MuiIconButtonHref",
+        "GoogleConversions"
       ],
       "maximum": "1",
       "required": false,

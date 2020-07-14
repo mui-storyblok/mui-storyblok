@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogContentTypography",
   "display_name": null,
-  "updated_at": "2020-06-11T17:07:23.317Z",
+  "updated_at": "2020-07-14T17:40:50.039Z",
   "schema": {
     "align": {
       "type": "option",
@@ -104,7 +104,8 @@ module.exports = {
         "MuiIconButtonDownload",
         "MuiButtonRedirect",
         "MuiButtonHref",
-        "MuiButtonDownload"
+        "MuiButtonDownload",
+        "GoogleConversions"
       ],
       "required": true
     }
