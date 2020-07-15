@@ -1,8 +1,8 @@
 import React, { Component, createElement } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import Storyblok from '../../utils/Storyblok';
 import Blok from './components/Blok/Blok';
 import MuiTransitions from '../MuiTransitions/MuiTransitions';
@@ -91,6 +91,7 @@ export class StoryBlokPage extends Component {
   };
 
   render() {
+    const { customLoader } = this.props;
     return (
       <Grid
         container
@@ -99,7 +100,7 @@ export class StoryBlokPage extends Component {
         alignItems="center"
       >
         {this.state.loading && !this.state.error && (
-          <CircularProgress />
+          <MuiCircularProgress customLoader={customLoader} />
         )}
         {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
         {!this.state.loading && (
@@ -126,6 +127,8 @@ StoryBlokPage.propTypes = {
   accessToken: PropTypes.string.isRequired,
   /** theme for mui */
   theme: PropTypes.shape(),
+  /** Custom Loader used instead of MuiCircularProgress */
+  customLoader: PropTypes.node,
   /**
    * override url theme to edit in mui-theme tool
    */
@@ -135,4 +138,5 @@ StoryBlokPage.propTypes = {
 StoryBlokPage.defaultProps = {
   theme: {},
   useObjectTheme: false,
+  customLoader: undefined,
 };

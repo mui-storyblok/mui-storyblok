@@ -11,6 +11,7 @@ export const MuiStoryblok = ({
   googleapisKey,
   useObjectTheme,
   iconArray,
+  customLoader,
 }) => {
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
@@ -23,6 +24,7 @@ export const MuiStoryblok = ({
       theme={theme}
       accessToken={accessToken}
       version={version}
+      customLoader={customLoader}
     />
   );
 };
@@ -34,16 +36,18 @@ MuiStoryblok.propTypes = {
   theme: PropTypes.shape(),
   /** storyblok prop  'published' : 'draft' */
   version: PropTypes.string,
-  /** acess key from storyblok you can make them in storyblok settings */
+  /** access key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
   /** key for google apis Key to use geocode if here will make  */
   googleapisKey: PropTypes.string,
+  /** Custom App Loader for storyblok */
+  customLoader: PropTypes.node,
   /**
    * override url theme to edit in mui-theme tool
    */
   useObjectTheme: PropTypes.bool,
   /**
-   * pass an array of icons to render custom icons in MuiIcon componet
+   * pass an array of icons to render custom icons in MuiIcon component
    * ex :
    *  [{
       iconName: 'cool_thing',
@@ -66,4 +70,5 @@ MuiStoryblok.defaultProps = {
   googleapisKey: '',
   useObjectTheme: false,
   iconArray: [],
+  customLoader: undefined,
 };
