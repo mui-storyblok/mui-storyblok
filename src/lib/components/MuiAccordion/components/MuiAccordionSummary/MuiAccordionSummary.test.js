@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import MuiExpansionPanelSummary from './MuiExpansionPanelSummary';
+import MuiAccordionSummary from './MuiAccordionSummary';
 
 function setup() {
   const props = {
-    component: 'MuiExpansionPanelSummarySummary',
+    component: 'MuiAccordionSummary',
     content: [{
       component: 'MuiIcon',
       iconName: 'android',
     }, {
-      component: 'MuiExpansionPanelTypography',
+      component: 'MuiAccordionTypography',
       content: [{
         component: 'MuiText',
         text: 'text',
@@ -21,12 +21,12 @@ function setup() {
       iconName: 'android',
     }],
   };
-  const comp = shallow(<MuiExpansionPanelSummary {...props} />);
+  const comp = shallow(<MuiAccordionSummary {...props} />);
   return { comp, props };
 }
 
-describe('<MuiExpansionPanelSummary />', () => {
-  it('renders MuiExpansionPanelSummary', () => {
+describe('<MuiAccordionSummary />', () => {
+  it('renders MuiAccordionSummary', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
@@ -34,7 +34,7 @@ describe('<MuiExpansionPanelSummary />', () => {
   test('snapshot', () => {
     const { props } = setup();
 
-    const tree = renderer.create(<MuiExpansionPanelSummary {...props} />);
+    const tree = renderer.create(<MuiAccordionSummary {...props} />);
     expect(tree).toMatchSnapshot();
   });
 });

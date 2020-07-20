@@ -1,25 +1,25 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import { AccordionSummary } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
-import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
+import MuiAccordionTypography from '../MuiAccordionTypography/MuiAccordionTypography';
 import MuiIcon from '../../../MuiIcon/MuiIcon';
 import { validComponents } from '../../../../utils/customProps';
 
-const MuiExpansionPanelSummary = ({
+const MuiAccordionSummary = ({
   rootClass,
   content,
   expandIcon,
 }) => {
   const components = {
-    MuiExpansionPanelTypography,
+    MuiAccordionTypography,
     MuiIcon,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <ExpansionPanelSummary
+    <AccordionSummary
       className={styles.root}
       expandIcon={createElement(components[expandIcon[0].component], expandIcon[0])}
     >
@@ -27,14 +27,14 @@ const MuiExpansionPanelSummary = ({
         components[item.component],
         Object.assign(item, { key: index }),
       ))}
-    </ExpansionPanelSummary>
+    </AccordionSummary>
   );
 };
 
-export default MuiExpansionPanelSummary;
+export default MuiAccordionSummary;
 
-MuiExpansionPanelSummary.propTypes = {
-  /** stroyblok multiselect of css classes */
+MuiAccordionSummary.propTypes = {
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** MuiIcon limit 1 */
   expandIcon(props, propName, componentName) {
@@ -48,7 +48,7 @@ MuiExpansionPanelSummary.propTypes = {
   },
 };
 
-MuiExpansionPanelSummary.defaultProps = {
+MuiAccordionSummary.defaultProps = {
   rootClass: [],
   content: [],
   expandIcon: [],

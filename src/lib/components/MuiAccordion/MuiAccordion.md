@@ -1,8 +1,8 @@
-MuiExpansionPanel example:
+MuiAccordion example:
 
 ```js
-    const expansionPanelSummary = [{
-       component: 'MuiExpansionPanelSummary',
+    const accordionSummary = [{
+       component: 'MuiAccordionSummary',
        expandIcon: [{
            component: 'MuiIcon',
            iconName: 'star',
@@ -16,8 +16,8 @@ MuiExpansionPanel example:
         }],
     }];
 
-    const expansionPanelDetails = [{
-        component: 'MuiExpansionPanelDetails',
+    const accordionDetails = [{
+        component: 'MuiAccordionDetails',
         content: [{
             component: 'MuiTypography',
             content: [{
@@ -27,8 +27,8 @@ MuiExpansionPanel example:
         }],
     }];
 
-  <MuiExpansionPanel
-    expansionPanelSummary={expansionPanelSummary}
-    expansionPanelDetails={expansionPanelDetails}
+  <MuiAccordion
+    accordionSummary={accordionSummary}
+    accordionDetails={accordionDetails}
   />
 ```

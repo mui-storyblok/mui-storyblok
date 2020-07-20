@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiBottomNavigationAction",
   "display_name": null,
-  "updated_at": "2020-05-01T20:08:18.588Z",
+  "updated_at": "2020-07-14T17:56:53.526Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -22,7 +22,8 @@ module.exports = {
       "restrict_components": true,
       "component_whitelist": [
         "MuiIconButtonRedirect",
-        "MuiIconButton"
+        "MuiIconButton",
+        "GoogleConversions"
       ],
       "required": true
     }

@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiHeroHeader",
   "display_name": null,
-  "updated_at": "2020-06-02T20:01:02.831Z",
+  "updated_at": "2020-07-11T00:04:22.240Z",
   "schema": {
     "backgroundImageUrl": {
       "type": "text",
@@ -82,28 +82,7 @@ module.exports = {
     },
     "rootClass": {
       "type": "options",
-      "options": [
-        {
-          "value": "background-color: black",
-          "name": "backgroundColor"
-        },
-        {
-          "value": "color: white",
-          "name": "color"
-        },
-        {
-          "value": "margin-top: 100px",
-          "name": "marginTop"
-        },
-        {
-          "value": "height: 300px",
-          "name": "height"
-        },
-        {
-          "value": "overflowX: hidden",
-          "name": "overflowX"
-        }
-      ],
+      "options": [],
       "pos": 4
     },
     "direction": {

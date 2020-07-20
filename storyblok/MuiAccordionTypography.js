@@ -1,7 +1,7 @@
 module.exports = {
-  "name": "MuiExpansionPanelTypography",
+  "name": "MuiAccordionTypography",
   "display_name": null,
-  "updated_at": "2020-07-14T17:41:40.515Z",
+  "updated_at": "2020-07-20T17:22:47.682Z",
   "schema": {
     "align": {
       "type": "option",
@@ -117,6 +117,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiExpansionPanelTypography",
+  "real_name": "MuiAccordionTypography",
   "component_group_uuid": null
 }

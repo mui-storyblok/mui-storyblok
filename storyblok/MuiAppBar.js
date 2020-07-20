@@ -1,18 +1,13 @@
 module.exports = {
   "name": "MuiAppBar",
   "display_name": null,
-  "updated_at": "2020-06-22T16:52:58.369Z",
+  "updated_at": "2020-07-13T20:29:35.311Z",
   "schema": {
     "rootClass": {
       "type": "options",
       "use_uuid": true,
       "description": "Override or extend the styles applied to the component.",
-      "options": [
-        {
-          "value": "height: 60px",
-          "name": "height"
-        }
-      ]
+      "options": []
     },
     "color": {
       "type": "option",
@@ -101,6 +96,12 @@ module.exports = {
       ],
       "required": true,
       "maximum": "1"
+    },
+    "height": {
+      "type": "text",
+      "description": "Height of the app bar.",
+      "display_name": "",
+      "default_value": "60px"
     }
   },
   "image": null,

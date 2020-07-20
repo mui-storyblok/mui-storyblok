@@ -9,8 +9,9 @@ import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
 import MuiButtonDialog from '../../../MuiButtonDialog/MuiButtonDialog';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiAccordion from '../../../MuiAccordion/MuiAccordion';
 import MuiAudioPlayer from '../../../MuiAudioPlayer/MuiAudioPlayer';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import Storyblok from '../../../../utils/Storyblok';
 
 const MuiCardActions = ({
@@ -27,8 +28,9 @@ const MuiCardActions = ({
     MuiButtonHref,
     MuiButtonDownload,
     MuiButtonDialog,
-    MuiExpansionPanel,
+    MuiAccordion,
     MuiAudioPlayer,
+    GoogleConversions,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -78,6 +80,7 @@ MuiCardActions.propTypes = {
       'MuiButtonHref',
       'MuiButtonDownload',
       'MuiButtonDialog',
+      'GoogleConversions',
     ];
     return validComponents(props, propName, componentName, validComponents);
   },

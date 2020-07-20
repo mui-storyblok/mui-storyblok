@@ -7,13 +7,14 @@ import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonD
 import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import { validComponents } from '../../../../utils/customProps';
 
 /**
- * MuiExpansionPanelTypography
+ * MuiAccordionTypography
  */
 
-export const MuiExpansionPanelTypography = (props) => {
+export const MuiAccordionTypography = (props) => {
   const components = {
     MuiIcon,
     MuiIconButtonRedirect,
@@ -22,6 +23,7 @@ export const MuiExpansionPanelTypography = (props) => {
     MuiButtonRedirect,
     MuiButtonHref,
     MuiButtonDownload,
+    GoogleConversions,
   };
 
   return (
@@ -32,9 +34,9 @@ export const MuiExpansionPanelTypography = (props) => {
   );
 };
 
-export default MuiExpansionPanelTypography;
+export default MuiAccordionTypography;
 
-MuiExpansionPanelTypography.propTypes = {
+MuiAccordionTypography.propTypes = {
   content(props, propName, componentName) {
     const components = [
       'MuiIcon',
@@ -44,12 +46,13 @@ MuiExpansionPanelTypography.propTypes = {
       'MuiButtonRedirect',
       'MuiButtonHref',
       'MuiButtonDownload',
+      'GoogleConversions',
       'MuiText', // not imported but used in TypographyText
     ];
     return validComponents(props, propName, componentName, components);
   },
 };
 
-MuiExpansionPanelTypography.defaultProps = {
+MuiAccordionTypography.defaultProps = {
   content: [],
 };
