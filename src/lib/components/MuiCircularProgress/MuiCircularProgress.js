@@ -18,7 +18,6 @@ export const MuiCircularProgress = ({
   customLoader,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-
   return (
     !customLoader
       ? (
