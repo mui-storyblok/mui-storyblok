@@ -11,8 +11,12 @@ import appRedirect from '../../utils/appRedirect';
 export const MuiIconButtonRedirect = ({
   redirectRoute,
   iconButton,
+  callback,
 }) => {
-  const onClick = () => appRedirect(redirectRoute);
+  const onClick = () => {
+    if (callback) callback();
+    appRedirect(redirectRoute);
+  };
 
   const muiIconButton = iconButton[0];
 
@@ -33,8 +37,10 @@ MuiIconButtonRedirect.propTypes = {
   iconButton(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['MuiIconButton'], 1);
   },
+  callback: PropTypes.func,
 };
 
 MuiIconButtonRedirect.defaultProps = {
   iconButton: [],
+  callback: undefined,
 };

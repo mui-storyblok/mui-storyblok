@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiDialogActions",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:06.361Z",
+  "updated_at": "2020-07-14T17:36:26.550Z",
   "schema": {
     "rootClass": {
       "type": "options"
@@ -15,7 +15,8 @@ module.exports = {
         "MuiIconButtonDownload",
         "MuiButtonRedirect",
         "MuiButtonDownload",
-        "MuiButtonHref"
+        "MuiButtonHref",
+        "GoogleConversions"
       ]
     }
   },

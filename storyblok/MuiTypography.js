@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiTypography",
   "display_name": null,
-  "updated_at": "2020-07-05T18:13:48.733Z",
+  "updated_at": "2020-07-14T17:25:27.261Z",
   "schema": {
     "align": {
       "type": "option",
@@ -71,16 +71,20 @@ module.exports = {
       "type": "options",
       "options": [
         {
-          "value": "color: white",
-          "name": "color white"
-        },
-        {
           "value": "margin-right: 15px",
           "name": "margin-right"
         },
         {
           "value": "margin-bottom: 15px",
           "name": "margin-bottom"
+        },
+        {
+          "value": "opacity: .7",
+          "name": "opacity"
+        },
+        {
+          "value": "background-color: #FFF",
+          "name": "bc white"
         }
       ],
       "folder_slug": "",
@@ -116,7 +120,8 @@ module.exports = {
         "MuiButtonDialog",
         "MuiButtonHref",
         "MuiText",
-        "MyCoolComp"
+        "MyCoolComp",
+        "GoogleConversions"
       ],
       "required": true
     }
