@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import MuiExpansionPanel from './MuiExpansionPanel';
+import MuiExpansionPanel from './MuiAccordion';
 
 function setup() {
   const props = {

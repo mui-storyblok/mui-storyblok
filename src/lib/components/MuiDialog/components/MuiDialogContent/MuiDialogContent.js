@@ -5,7 +5,7 @@ import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
 import BlokForm from '../../../BlokForm/BlokForm';
 import MuiDialogContentTypography from './components/MuiDialogContentTypography/MuiDialogContentTypography';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiAccordion';
 
 const MuiDialogContent = ({
   dividers,

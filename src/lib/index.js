@@ -11,7 +11,7 @@ import MuiCard from './components/MuiCard/MuiCard';
 import MuiCircularProgress from './components/MuiCircularProgress/MuiCircularProgress';
 import MuiContactButton from './components/MuiContactButton/MuiContactButton';
 import MuiDialog from './components/MuiDialog/MuiDialog';
-import MuiExpansionPanel from './components/MuiExpansionPanel/MuiExpansionPanel';
+import MuiExpansionPanel from './components/MuiExpansionPanel/MuiAccordion';
 import MuiGrid from './components/MuiGrid/MuiGrid';
 import MuiGridList from './components/MuiGridList/MuiGridList';
 import MuiHeroHeader from './components/MuiHeroHeader/MuiHeroHeader';

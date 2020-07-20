@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { validComponents } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiAccordion';
 import MuiList from '../../../MuiList/MuiList';
 
 const MuiCardContent = ({

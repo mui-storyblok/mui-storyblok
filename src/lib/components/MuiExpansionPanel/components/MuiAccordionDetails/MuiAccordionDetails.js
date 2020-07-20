@@ -1,33 +1,33 @@
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import { AccordionDetails } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
-import MuiExpansionPanelTypography from '../MuiExpansionPanelTypography/MuiExpansionPanelTypography';
+import MuiAccordionTypography from '../MuiAccordionTypography/MuiAccordionTypography';
 
-const MuiExpansionPanelDetails = ({ rootClass, content }) => {
+const MuiAccordionDetails = ({ rootClass, content }) => {
   const components = {
-    MuiExpansionPanelTypography,
+    MuiAccordionTypography,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <ExpansionPanelDetails
+    <AccordionDetails
       className={styles.root}
     >
       {content.map((item, index) => createElement(
         components[item.component],
         Object.assign(item, { key: index }),
       ))}
-    </ExpansionPanelDetails>
+    </AccordionDetails>
   );
 };
 
-export default MuiExpansionPanelDetails;
+export default MuiAccordionDetails;
 
-MuiExpansionPanelDetails.propTypes = {
-  /** stroyblok multiselect of css classes */
+MuiAccordionDetails.propTypes = {
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** MuiTypography */
   content(props, propName, componentName) {
@@ -36,7 +36,7 @@ MuiExpansionPanelDetails.propTypes = {
   },
 };
 
-MuiExpansionPanelDetails.defaultProps = {
+MuiAccordionDetails.defaultProps = {
   rootClass: [],
   content: [],
 };
