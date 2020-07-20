@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiCardContent",
   "display_name": null,
-  "updated_at": "2020-03-31T18:27:08.178Z",
+  "updated_at": "2020-07-20T17:00:14.646Z",
   "schema": {
     "rootClass": {
       "type": "options",
@@ -12,8 +12,8 @@ module.exports = {
       "restrict_components": true,
       "component_whitelist": [
         "MuiTypography",
-        "MuiExpansionPanel",
-        "MuiList"
+        "MuiList",
+        "MuiAccordion"
       ]
     }
   },

@@ -1,7 +1,7 @@
 MuiAccordion example:
 
 ```js
-    const expansionPanelSummary = [{
+    const accordionSummary = [{
        component: 'MuiAccordionSummary',
        expandIcon: [{
            component: 'MuiIcon',
@@ -16,7 +16,7 @@ MuiAccordion example:
         }],
     }];
 
-    const expansionPanelDetails = [{
+    const accordionDetails = [{
         component: 'MuiAccordionDetails',
         content: [{
             component: 'MuiTypography',
@@ -28,7 +28,7 @@ MuiAccordion example:
     }];
 
   <MuiAccordion
-    expansionPanelSummary={expansionPanelSummary}
-    expansionPanelDetails={expansionPanelDetails}
+    accordionSummary={accordionSummary}
+    accordionDetails={accordionDetails}
   />
 ```

@@ -1,22 +1,25 @@
 module.exports = {
-  "name": "MuiDialogActions",
+  "name": "MuiAccordionSummary",
   "display_name": null,
-  "updated_at": "2020-07-14T17:36:26.550Z",
+  "updated_at": "2020-07-20T17:43:17.498Z",
   "schema": {
     "rootClass": {
       "type": "options"
+    },
+    "expandIcon": {
+      "type": "bloks",
+      "max_length": "",
+      "maximum": "1",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIcon"
+      ]
     },
     "content": {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiIconButtonRedirect",
-        "MuiIconButtonHref",
-        "MuiIconButtonDownload",
-        "MuiButtonRedirect",
-        "MuiButtonDownload",
-        "MuiButtonHref",
-        "GoogleConversions"
+        "MuiAccordionTypography"
       ]
     }
   },
@@ -27,6 +30,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiDialogActions",
+  "real_name": "MuiAccordionSummary",
   "component_group_uuid": null
 }

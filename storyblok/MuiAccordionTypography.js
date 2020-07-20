@@ -1,7 +1,7 @@
 module.exports = {
-  "name": "MuiTypography",
+  "name": "MuiAccordionTypography",
   "display_name": null,
-  "updated_at": "2020-07-14T17:25:27.261Z",
+  "updated_at": "2020-07-20T17:22:47.682Z",
   "schema": {
     "align": {
       "type": "option",
@@ -71,20 +71,8 @@ module.exports = {
       "type": "options",
       "options": [
         {
-          "value": "margin-right: 15px",
-          "name": "margin-right"
-        },
-        {
-          "value": "margin-bottom: 15px",
-          "name": "margin-bottom"
-        },
-        {
-          "value": "opacity: .7",
-          "name": "opacity"
-        },
-        {
-          "value": "background-color: #FFF",
-          "name": "bc white"
+          "value": "color: white",
+          "name": "color white"
         }
       ],
       "folder_slug": "",
@@ -109,18 +97,14 @@ module.exports = {
       "maximum": "",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiLink",
+        "MuiText",
         "MuiIcon",
         "MuiIconButtonRedirect",
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
-        "MuiIconButtonDialog",
         "MuiButtonRedirect",
-        "MuiButtonDownload",
-        "MuiButtonDialog",
         "MuiButtonHref",
-        "MuiText",
-        "MyCoolComp",
+        "MuiButtonDownload",
         "GoogleConversions"
       ],
       "required": true
@@ -133,6 +117,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiTypography",
+  "real_name": "MuiAccordionTypography",
   "component_group_uuid": null
 }
