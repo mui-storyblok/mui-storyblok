@@ -31,7 +31,7 @@ export const MuiCircularProgress = ({
           variant={variant}
         />
       )
-      : <>{customLoader}</>
+      : (customLoader)
   );
 };
 

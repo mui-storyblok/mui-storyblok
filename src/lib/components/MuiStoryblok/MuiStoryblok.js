@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 import customIcons from '../../utils/customIcons';
+import { woodRiverLogo } from '../../utils/customLoader';
 
 export const MuiStoryblok = ({
   theme,
@@ -24,7 +25,7 @@ export const MuiStoryblok = ({
       theme={theme}
       accessToken={accessToken}
       version={version}
-      customLoader={customLoader}
+      customLoader={woodRiverLogo}
     />
   );
 };
