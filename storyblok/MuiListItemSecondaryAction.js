@@ -1,7 +1,7 @@
 module.exports = {
   "name": "MuiListItemSecondaryAction",
   "display_name": null,
-  "updated_at": "2020-07-14T17:52:32.953Z",
+  "updated_at": "2020-07-20T17:00:14.609Z",
   "schema": {
     "rootClass": {
       "type": "options"
@@ -16,8 +16,8 @@ module.exports = {
         "MuiIconButtonHref",
         "MuiIconButtonDownload",
         "MuiIconButtonDialog",
-        "MuiExpansionPanel",
-        "GoogleConversions"
+        "GoogleConversions",
+        "MuiAccordion"
       ]
     }
   },

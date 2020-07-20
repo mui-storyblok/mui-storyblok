@@ -5,7 +5,7 @@ import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
 import BlokForm from '../../../BlokForm/BlokForm';
 import MuiDialogContentTypography from './components/MuiDialogContentTypography/MuiDialogContentTypography';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiAccordion from '../../../MuiAccordion/MuiAccordion';
 
 const MuiDialogContent = ({
   dividers,
@@ -15,7 +15,7 @@ const MuiDialogContent = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   const components = {
     MuiDialogContentTypography,
-    MuiExpansionPanel,
+    MuiAccordion,
     BlokForm,
   };
 
@@ -45,9 +45,9 @@ MuiDialogContent.propTypes = {
    * Display the top and bottom dividers.
    * */
   dividers: PropTypes.bool,
-  /** 'MuiTypography', 'MuiExpansionPanel', 'BlokForm' */
+  /** 'MuiTypography', 'MuiAccordion', 'BlokForm' */
   content(props, propName, componentName) {
-    const components = ['MuiTypography', 'MuiExpansionPanel', 'BlokForm'];
+    const components = ['MuiTypography', 'MuiAccordion', 'BlokForm'];
     return validComponents(props, propName, componentName, components, 1);
   },
 };

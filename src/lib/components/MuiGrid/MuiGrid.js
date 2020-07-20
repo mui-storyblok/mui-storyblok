@@ -10,7 +10,7 @@ import MuiCard from '../MuiCard/MuiCard';
 import MuiTypography from '../MuiTypography/MuiTypography';
 import MuiMenu from '../MuiMenu/MuiMenu';
 import MuiIcon from '../MuiIcon/MuiIcon';
-import MuiExpansionPanel from '../MuiExpansionPanel/MuiExpansionPanel';
+import MuiAccordion from '../MuiAccordion/MuiAccordion';
 import MuiList from '../MuiList/MuiList';
 import MuiTable from '../MuiTable/MuiTable';
 import MuiPaginationTable from '../MuiPaginationTable/MuiPaginationTable';
@@ -34,7 +34,7 @@ const MuiGrid = (props) => {
     MuiTypography,
     MuiMenu,
     MuiIcon,
-    MuiExpansionPanel,
+    MuiAccordion,
     MuiList,
     MuiTable,
     MuiPaginationTable,

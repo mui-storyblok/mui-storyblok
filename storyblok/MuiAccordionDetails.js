@@ -1,19 +1,16 @@
 module.exports = {
-  "name": "MuiCardContent",
+  "name": "MuiAccordionDetails",
   "display_name": null,
-  "updated_at": "2020-07-20T17:00:14.646Z",
+  "updated_at": "2020-07-20T17:43:31.981Z",
   "schema": {
     "rootClass": {
-      "type": "options",
-      "description": "Mui Override or extend the styles applied to the component."
+      "type": "options"
     },
     "content": {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiTypography",
-        "MuiList",
-        "MuiAccordion"
+        "MuiAccordionTypography"
       ]
     }
   },
@@ -24,6 +21,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiCardContent",
+  "real_name": "MuiAccordionDetails",
   "component_group_uuid": null
 }

@@ -7,7 +7,7 @@ import MuiIconButtonRedirect from '../../../../../MuiIconButtonRedirect/MuiIconB
 import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../../../MuiIconButtonDialog/MuiIconButtonDialog';
-import MuiExpansionPanel from '../../../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiAccordion from '../../../../../MuiAccordion/MuiAccordion';
 import GoogleConversion from '../../../../../GoogleConversions/GoogleConversions';
 
 /**
@@ -23,7 +23,7 @@ export const MuiListItemSecondaryAction = ({
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
-    MuiExpansionPanel,
+    MuiAccordion,
     GoogleConversion,
   };
 
@@ -63,6 +63,7 @@ MuiListItemSecondaryAction.propTypes = {
       'MuiIconButtonDownload',
       'MuiIconButtonDialog',
       'GoogleConversion',
+      'MuiAccordion',
     ];
     return validComponents(props, propName, componentName, components, 1);
   },

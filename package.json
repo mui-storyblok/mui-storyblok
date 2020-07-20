@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.0.99",
+  "version": "1.1.00",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -111,7 +111,7 @@
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@babel/runtime": "^7.10.2",
-    "@material-ui/core": "^4.9.4",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^3.0.2",
     "@testing-library/react-hooks": "^3.2.1",
     "babel-loader": "^8.1.0",
@@ -131,7 +131,7 @@
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
-    "@material-ui/core": "^4.9.4",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^3.0.2",
     "node-sass": "^4.13.1",
     "storyblok-js-client": "^1.0.21",
@@ -180,7 +180,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.1",
-    "@material-ui/core": "^4.9.4",
+    "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^3.0.2",
     "del-cli": "^3.0.1",
     "dotenv": "^8.2.0",

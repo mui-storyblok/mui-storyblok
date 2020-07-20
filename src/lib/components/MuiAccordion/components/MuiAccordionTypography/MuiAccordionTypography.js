@@ -11,10 +11,10 @@ import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import { validComponents } from '../../../../utils/customProps';
 
 /**
- * MuiExpansionPanelTypography
+ * MuiAccordionTypography
  */
 
-export const MuiExpansionPanelTypography = (props) => {
+export const MuiAccordionTypography = (props) => {
   const components = {
     MuiIcon,
     MuiIconButtonRedirect,
@@ -34,9 +34,9 @@ export const MuiExpansionPanelTypography = (props) => {
   );
 };
 
-export default MuiExpansionPanelTypography;
+export default MuiAccordionTypography;
 
-MuiExpansionPanelTypography.propTypes = {
+MuiAccordionTypography.propTypes = {
   content(props, propName, componentName) {
     const components = [
       'MuiIcon',
@@ -53,6 +53,6 @@ MuiExpansionPanelTypography.propTypes = {
   },
 };
 
-MuiExpansionPanelTypography.defaultProps = {
+MuiAccordionTypography.defaultProps = {
   content: [],
 };

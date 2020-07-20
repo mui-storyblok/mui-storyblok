@@ -1,19 +1,25 @@
 module.exports = {
-  "name": "MuiCardContent",
+  "name": "MuiAccordionSummary",
   "display_name": null,
-  "updated_at": "2020-07-20T17:00:14.646Z",
+  "updated_at": "2020-07-20T17:43:17.498Z",
   "schema": {
     "rootClass": {
-      "type": "options",
-      "description": "Mui Override or extend the styles applied to the component."
+      "type": "options"
+    },
+    "expandIcon": {
+      "type": "bloks",
+      "max_length": "",
+      "maximum": "1",
+      "restrict_components": true,
+      "component_whitelist": [
+        "MuiIcon"
+      ]
     },
     "content": {
       "type": "bloks",
       "restrict_components": true,
       "component_whitelist": [
-        "MuiTypography",
-        "MuiList",
-        "MuiAccordion"
+        "MuiAccordionTypography"
       ]
     }
   },
@@ -24,6 +30,6 @@ module.exports = {
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "MuiCardContent",
+  "real_name": "MuiAccordionSummary",
   "component_group_uuid": null
 }

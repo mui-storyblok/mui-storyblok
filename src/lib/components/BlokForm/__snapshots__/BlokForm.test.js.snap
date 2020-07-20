@@ -226,12 +226,16 @@ exports[`<BlokForm /> snapshot 1`] = `
             />
           </div>
           <input
+            aria-hidden={true}
             autoComplete=""
             autoFocus={false}
+            className="MuiSelect-nativeInput"
             name="select"
             onAnimationStart={[Function]}
+            onChange={[Function]}
             placeholder=""
-            type="hidden"
+            required={false}
+            tabIndex={-1}
             value=""
           />
           <svg
