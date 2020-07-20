@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import MuiExpansionPanel from './MuiAccordion';
+import MuiAccordion from './MuiAccordion';
 
 function setup() {
   const props = {
-    expansionPanelSummary: [{
-      component: 'MuiExpansionPanelSummary',
+    accordionSummary: [{
+      component: 'MuiAccordionSummary',
       content: [{
         component: 'MuiIcon',
         iconName: 'android',
@@ -17,10 +17,10 @@ function setup() {
       }],
     }],
 
-    expansionPanelDetails: [{
-      component: 'MuiExpansionPanelDetails',
+    accordionDetails: [{
+      component: 'MuiAccordionDetails',
       content: [{
-        component: 'MuiExpansionPanelTypography',
+        component: 'MuiAccordionTypography',
         content: [{
           component: 'MuiText',
           text: 'text',
@@ -28,27 +28,28 @@ function setup() {
       }],
     }],
   };
-  const comp = shallow(<MuiExpansionPanel {...props} />);
+  const comp = shallow(<MuiAccordion {...props} />);
   return { comp, props };
 }
 
-describe('<MuiExpansionPanel />', () => {
-  it('renders MuiExpansionPanel', () => {
+describe('<MuiAccordion />', () => {
+  it('renders MuiAccordion', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
 
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(<MuiExpansionPanel {...props} />);
+    const tree = renderer.create(<MuiAccordion {...props} />);
     expect(tree).toMatchSnapshot();
   });
 
   it('should handle change and toggle the expansion panel', () => {
     const { comp } = setup();
-    const { expanded } = comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().props();
+    // console.log(comp.debug());
+    const { expanded } = comp.find('WithStyles(ForwardRef(Accordion))').first().props();
     expect(expanded).toEqual(false);
-    comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().prop('onChange')();
-    expect(comp.find('WithStyles(ForwardRef(ExpansionPanel))').first().props().expanded).toEqual(true);
+    comp.find('WithStyles(ForwardRef(Accordion))').first().prop('onChange')();
+    expect(comp.find('WithStyles(ForwardRef(Accordion))').first().props().expanded).toEqual(true);
   });
 });

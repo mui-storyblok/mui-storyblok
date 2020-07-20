@@ -40,8 +40,11 @@ exports[`<MuiTablePagination /> snapshot 1`] = `
         />
       </div>
       <input
+        aria-hidden={true}
+        className="MuiSelect-nativeInput"
         onAnimationStart={[Function]}
-        type="hidden"
+        onChange={[Function]}
+        tabIndex={-1}
         value={0}
       />
       <svg
