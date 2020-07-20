@@ -46,7 +46,6 @@ describe('<MuiAccordion />', () => {
 
   it('should handle change and toggle the expansion panel', () => {
     const { comp } = setup();
-    // console.log(comp.debug());
     const { expanded } = comp.find('WithStyles(ForwardRef(Accordion))').first().props();
     expect(expanded).toEqual(false);
     comp.find('WithStyles(ForwardRef(Accordion))').first().prop('onChange')();
