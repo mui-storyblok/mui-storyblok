@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { AccordionDetails } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
@@ -6,20 +6,13 @@ import { validComponents } from '../../../../utils/customProps';
 import MuiAccordionTypography from '../MuiAccordionTypography/MuiAccordionTypography';
 
 const MuiAccordionDetails = ({ rootClass, content }) => {
-  const components = {
-    MuiAccordionTypography,
-  };
-
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
     <AccordionDetails
       className={styles.root}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      <MuiAccordionTypography {...content[0]} />
     </AccordionDetails>
   );
 };
