@@ -8,6 +8,7 @@ import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHre
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../../../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiAccordion from '../../../../../MuiAccordion/MuiAccordion';
+import GoogleConversion from '../../../../../GoogleConversions/GoogleConversions';
 
 /**
  * MuiListItemSecondaryAction is used in storyblok redirect to react routes
@@ -23,6 +24,7 @@ export const MuiListItemSecondaryAction = ({
     MuiIconButtonDownload,
     MuiIconButtonDialog,
     MuiAccordion,
+    GoogleConversion,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -52,6 +54,7 @@ MuiListItemSecondaryAction.propTypes = {
     MuiIconButtonHref,
     MuiIconButtonDownload,
     MuiIconButtonDialog,
+    GoogleConversion,
    *  Allowed maximum: 1 */
   content(props, propName, componentName) {
     const components = [
@@ -59,6 +62,8 @@ MuiListItemSecondaryAction.propTypes = {
       'MuiIconButtonHref',
       'MuiIconButtonDownload',
       'MuiIconButtonDialog',
+      'GoogleConversion',
+      'MuiAccordion',
     ];
     return validComponents(props, propName, componentName, components, 1);
   },
