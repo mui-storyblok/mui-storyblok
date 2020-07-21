@@ -126,8 +126,6 @@ StoryBlokPage.propTypes = {
   accessToken: PropTypes.string.isRequired,
   /** theme for mui */
   theme: PropTypes.shape(),
-  /** Custom Loader used instead of MuiCircularProgress */
-  customLoader: PropTypes.node,
   /**
    * override url theme to edit in mui-theme tool
    */
@@ -137,5 +135,4 @@ StoryBlokPage.propTypes = {
 StoryBlokPage.defaultProps = {
   theme: {},
   useObjectTheme: false,
-  customLoader: undefined,
 };
