@@ -3,13 +3,15 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import MuiStoryblok from './MuiStoryblok';
 import customIcons from '../../utils/customIcons';
+import loader from '../../utils/customLoader';
 
-function setup(iconArray = []) {
+function setup(iconArray = [], customLoader = undefined) {
   const props = {
     accessToken: '123',
     googleapisKey: '1234',
     theme: { cool: 'value' },
     iconArray,
+    customLoader,
   };
   const comp = shallow(<MuiStoryblok {...props} />);
   return { comp, props };
@@ -30,6 +32,11 @@ describe('<MuiStoryblok />', () => {
     expect(customIcons).toEqual(icons);
   });
 
+  it('should set the custom loader if custom loader is passed down as a prop', () => {
+    const MockComponent = () => <div>Aloha</div>;
+    setup([], MockComponent);
+    expect(loader.length).toEqual(1);
+  });
 
   test('snapshot', () => {
     const { props } = setup();
