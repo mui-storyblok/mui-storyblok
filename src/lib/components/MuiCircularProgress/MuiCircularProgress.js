@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Storyblok from '../../utils/Storyblok';
 import { muiStringProp } from '../../utils/customProps';
+import loader from '../../utils/customLoader';
 /**
  * MuiCircularProgress is used in storyblok redirect to react routes
  */
@@ -15,22 +16,21 @@ export const MuiCircularProgress = ({
   size,
   thickness,
   variant,
-  customLoader,
 }) => {
+  if (loader.length) {
+    const CustomLoader = loader[0];
+    return (<CustomLoader />);
+  }
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   return (
-    !customLoader
-      ? (
-        <CircularProgress
-          className={styles.root}
-          color={color}
-          disableShrink={disableShrink}
-          size={parseInt(size, 10)}
-          thickness={parseInt(thickness, 10)}
-          variant={variant}
-        />
-      )
-      : (customLoader)
+    <CircularProgress
+      className={styles.root}
+      color={color}
+      disableShrink={disableShrink}
+      size={parseInt(size, 10)}
+      thickness={parseInt(thickness, 10)}
+      variant={variant}
+    />
   );
 };
 
@@ -62,10 +62,6 @@ MuiCircularProgress.propTypes = {
    * */
   thickness: PropTypes.string,
   /**
-   * Custom App Loader replacement for MuiCircularProgress loader
-   */
-  customLoader: PropTypes.node,
-  /**
    * mui prop: 'determinate', 'indeterminate', 'static'
    * The thickness of the circle.
    * */
@@ -87,5 +83,4 @@ MuiCircularProgress.defaultProps = {
   size: 40,
   thickness: 3.6,
   variant: 'indeterminate',
-  customLoader: undefined,
 };

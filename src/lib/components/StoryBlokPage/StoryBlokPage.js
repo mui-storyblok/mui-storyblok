@@ -91,7 +91,6 @@ export class StoryBlokPage extends Component {
   };
 
   render() {
-    const { customLoader } = this.props;
     return (
       <Grid
         container
@@ -100,7 +99,7 @@ export class StoryBlokPage extends Component {
         alignItems="center"
       >
         {this.state.loading && !this.state.error && (
-          <MuiCircularProgress customLoader={customLoader} />
+          <MuiCircularProgress />
         )}
         {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
         {!this.state.loading && (

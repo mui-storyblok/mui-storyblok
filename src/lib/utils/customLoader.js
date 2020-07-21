@@ -1,7 +1,9 @@
-export const setCustomLoader = loader => (
-  loader
+// Custom loader is an object being pushed into array
+const loader = [];
+
+export const setCustomLoader = customLoader => (
+  loader.push(customLoader)
 );
 
-export const loader = customLoader => setCustomLoader(customLoader);
 
 export default loader;
