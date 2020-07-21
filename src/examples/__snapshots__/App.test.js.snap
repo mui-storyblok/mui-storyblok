@@ -5,7 +5,7 @@ exports[`<MuiAppBar /> snapshot 1`] = `
   className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
 >
   <div
-    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+    className="MuiCircularProgress-root makeStyles-root-1 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
     role="progressbar"
     style={
       Object {
@@ -23,8 +23,8 @@ exports[`<MuiAppBar /> snapshot 1`] = `
         cx={44}
         cy={44}
         fill="none"
-        r={20.2}
-        strokeWidth={3.6}
+        r={20.5}
+        strokeWidth={3}
         style={Object {}}
       />
     </svg>
