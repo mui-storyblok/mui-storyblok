@@ -59,9 +59,6 @@ Set `STORYBLOK_OAUTH_TOKEN` and `STORYBLOK_SPACE_ID` in your `.env` file. link t
 
 > [STORYBLOK_SPACE_ID docs ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
-
-<!-- once env is configured run cmd: `npx migrate-storyblok-components` this will add all componets to your storyblok account -->
-
 ### CLI Commands
 
 ###### For new Storyblok spaces
