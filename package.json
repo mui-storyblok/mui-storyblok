@@ -149,7 +149,7 @@
     "build-examples": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-storyblok-schema": "mv ./storyblok dist/storyblok",
+    "build-storyblok-schema": "cp -a ./storyblok/ dist/storyblok",
     "build-cli-utils": "babel cliUtils --out-dir dist/cliUtils",
     "delete-test-from-dist": "del dist/**/**/*.test.js && del dist/**/**/*__snapshots__ && del dist/**/**/**/*.test.js && del dist/**/**/**/*__snapshots__",
     "delete-md-from-dist": "del dist/**/**/*.md && del dist/**/**/**/*.md",
