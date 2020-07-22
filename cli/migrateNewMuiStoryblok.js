@@ -4,8 +4,6 @@ require('dotenv').config();
 
 const { exec } = require('child_process');
 
-const cmd = `storyblok push-components ./storyblok/components.json --space ${process.env.STORYBLOK_SPACE_ID}`;
-
 const asyncCmd = (command) => {
   console.log(command);
   return new Promise((resolve, reject) => {
@@ -20,9 +18,9 @@ const asyncCmd = (command) => {
   });
 };
 
-const migrateComponents = async (command) => {
-  process.chdir('./node_modules/mui-storyblok/dist');
-  await asyncCmd(command);
+const migrateNewMuiStoryblok = async () => {
+  await asyncCmd('./cli/migrateStoryblokComponents.js');
+  await asyncCmd('./cli/migrateStoryblokStories.js');
 };
 
-migrateComponents(cmd);
+migrateNewMuiStoryblok();
