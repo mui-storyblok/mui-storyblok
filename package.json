@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.1.01",
+  "version": "1.1.02",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -127,7 +127,8 @@
     "react-test-renderer": "^16.3.2",
     "rff-wrapper": "^1.0.13",
     "material-ui-audio-player": "^1.1.9",
-    "storyblok-js-client": "^1.0.21"
+    "storyblok-js-client": "^1.0.21",
+    "storyblok": "^3.2.0"
   },
   "peerDependencies": {
     "react-hot-loader": "3.0.0-beta.5",
@@ -140,7 +141,8 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "rff-wrapper": "^1.0.13",
-    "material-ui-audio-player": "^1.1.9"
+    "material-ui-audio-player": "^1.1.9",
+    "storyblok": "^3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -160,11 +162,12 @@
     "styleguide:build": "npx styleguidist build",
     "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "test-report": "react-scripts test --watchAll=false --coverage",
-    "export-storyblok-components": "npx storyblok-component-export"
+    "export-storyblok-components": "./cli/exportStoryblokComponents"
   },
   "bin": {
+    "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js",
     "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
-    "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js"
+    "migrate-new-mui-storyblok": "./cli/migrateNewMuiStoryblok.js"
   },
   "browserslist": {
     "production": [
@@ -191,6 +194,6 @@
     "react-player": "^2.1.0",
     "react-swipeable-views": "^0.13.9",
     "rff-wrapper": "^1.0.13",
-    "storyblok-migrate": "^0.3.3"
+    "storyblok": "^3.2.0"
   }
 }
