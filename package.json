@@ -190,6 +190,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "material-ui-audio-player": "^1.1.9",
     "node-sass": "^4.13.1",
+    "react-google-recaptcha": "^2.1.0",
     "react-player": "^2.1.0",
     "react-swipeable-views": "^0.13.9",
     "rff-wrapper": "^1.0.13",

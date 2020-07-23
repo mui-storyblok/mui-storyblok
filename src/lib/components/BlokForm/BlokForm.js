@@ -11,6 +11,7 @@ import {
   MuiCheckbox,
   MuiRadio,
 } from 'rff-wrapper';
+import GoogleRecaptcha from './sharedComponents/GoogleRecaptcha/GoogleRecaptcha';
 import {
   nestedComponentsProps,
   validComponents,
@@ -21,6 +22,7 @@ import Grid from '../Grid/Grid';
 const BlokForm = ({
   content,
   submitButton,
+  googleRecaptcha,
   baseUrl,
   successResponseText,
   errorResponseText,
@@ -37,6 +39,7 @@ const BlokForm = ({
   const [state, setState] = useState({
     successResponse: '',
     errorResponse: '',
+    isABot: true,
   });
 
   const onSubmit = async (values) => {
@@ -71,7 +74,16 @@ const BlokForm = ({
         {content.map((item, index) => (
           <Grid {...item} key={index} components={components} />
         ))}
-        <MuiSubmit {...submitButton[0]} />
+        {googleRecaptcha.length
+          ? (
+            <>
+              <GoogleRecaptcha {...googleRecaptcha[0]} isABot={state.isABot} setIsABot={setState.isABot} />
+              <div style={isABot ? { display: none } : null}>
+                <MuiSubmit {...submitButton[0]} />
+              </div>
+            </>
+          )
+          : <MuiSubmit {...submitButton[0]} />}
         {state.successResponse && <Typography data-testid="successResponseTestID">{state.successResponse}</Typography>}
         {state.errorResponse && <Typography color="error" data-testid="errorResponseTestID">{state.errorResponse}</Typography>}
       </>
@@ -95,6 +107,10 @@ BlokForm.propTypes = {
     const components = ['MuiSubmit'];
     return validComponents(props, propName, componentName, components, 1);
   },
+  googleRecaptcha(props, propName, componentName) {
+    const components = ['GoogleRecaptcha'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   method(props, propName, componentName) {
     const validProps = ['POST', 'GET'];
     return muiStringProp(props, propName, componentName, validProps);
@@ -108,4 +124,5 @@ BlokForm.defaultProps = {
   method: 'POST',
   content: [],
   submitButton: [],
+  googleRecaptcha: [],
 };
