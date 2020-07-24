@@ -77,8 +77,8 @@ const BlokForm = ({
         {googleRecaptcha.length
           ? (
             <>
-              <GoogleRecaptcha {...googleRecaptcha[0]} isABot={state.isABot} setIsABot={setState.isABot} />
-              <div style={isABot ? { display: none } : null}>
+              <GoogleRecaptcha {...googleRecaptcha[0]} isABot={state.isABot} setIsABot={setState} />
+              <div style={state.isABot ? { display: 'none' } : null}>
                 <MuiSubmit {...submitButton[0]} />
               </div>
             </>
