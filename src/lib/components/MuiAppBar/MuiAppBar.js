@@ -21,6 +21,7 @@ import MuiActionCardContainer from '../MuiActionCardContainer/MuiActionCardConta
 import MuiImage from '../MuiImage/MuiImage';
 import MuiTypography from '../MuiTypography/MuiTypography';
 import MuiContactButton from '../MuiContactButton/MuiContactButton';
+import GoogleConversions from '../GoogleConversions/GoogleConversions';
 import Grid from '../Grid/Grid';
 
 const MuiAppBar = ({
@@ -45,6 +46,7 @@ const MuiAppBar = ({
     MuiActionCardContainer,
     MuiTypography,
     MuiContactButton,
+    GoogleConversions,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
@@ -121,6 +123,7 @@ MuiAppBar.propTypes = {
       'MuiButtonSnackbar',
       'MuiImage',
       'MuiActionCardContainer',
+      'GoogleConversions',
    */
   content(props, propName, componentName) {
     const validComponents = [
@@ -135,6 +138,7 @@ MuiAppBar.propTypes = {
       'MuiImage',
       'MuiActionCardContainer',
       'MuiContactButton',
+      'GoogleConversions',
     ];
     return nestedComponentsProps(props, propName, componentName, validComponents);
   },

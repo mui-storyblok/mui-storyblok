@@ -60,4 +60,29 @@ describe('<MuiIcon />', () => {
     const { comp } = setup('google');
     expect(comp.find('GoogleSvg').exists()).toEqual(true);
   });
+
+  it('should render social svgs return google svg if iconName is youtube', () => {
+    const { comp } = setup('youtube');
+    expect(comp.find('YouTubeSvg').exists()).toEqual(true);
+  });
+
+  it('should render social svgs return google svg if iconName is instagram', () => {
+    const { comp } = setup('instagram');
+    expect(comp.find('InstagramSvg').exists()).toEqual(true);
+  });
+
+  it('should render social svgs return google svg if iconName is twitter', () => {
+    const { comp } = setup('twitter');
+    expect(comp.find('TwitterSvg').exists()).toEqual(true);
+  });
+
+  it('should render social svgs return google svg if iconName is yelp', () => {
+    const { comp } = setup('yelp');
+    expect(comp.find('YelpSvg').exists()).toEqual(true);
+  });
+
+  it('should render social svgs return google svg if iconName is github', () => {
+    const { comp } = setup('github');
+    expect(comp.find('GithubSvg').exists()).toEqual(true);
+  });
 });

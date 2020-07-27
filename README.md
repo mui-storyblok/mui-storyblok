@@ -28,8 +28,8 @@ class Page extends Component {
     return (
       <MuiStoryblok
         theme={{}} // mui theme obj `https://material-ui.com/customization/theming/`
-        accessToken="sdcawrt23t32t23t" //storyblok public API-Key 
-        version="draft" // storyblok version [published or draft] in development use draft and published in production 
+        accessToken="sdcawrt23t32t23t" //storyblok public API-Key
+        version="draft" // storyblok version [published or draft] in development use draft and published in production
       />
     )
   }
@@ -43,7 +43,7 @@ export default Page;
   ⋅ ex [`page-welcome`, `page-about`, `page-whatever-dude`]
 
 > in your react project add this to your routes to get your pages from storyblok
-```jsx 
+```jsx
   import Page from 'PAGE_FILE_PATH';
 
   <Route path="/page**" component={Page} exact />
@@ -59,8 +59,24 @@ Set `STORYBLOK_OAUTH_TOKEN` and `STORYBLOK_SPACE_ID` in your `.env` file. link t
 
 > [STORYBLOK_SPACE_ID docs ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
+### CLI Commands
 
-once env is configured run cmd: `npx migrate-storyblok-components` this will add all componets to your storyblok account
+###### For new Storyblok spaces
+Once env is configured run cmd:
+`npx migrate-new-mui-storyblok`
+This will add all components to your storyblok account with three demo pages.
+⋅ [`page-welcome`, `page-demo`, `page-not-found`]
+
+###### For Storyblok page examples
+Once env is configured run cmd:
+`npx migrate-storyblok-stories`
+This will add three demo pages to storyblok space.
+⋅ [`page-welcome`, `page-demo`, `page-not-found`]
+
+###### To migrate mui-storyblok components to space
+Once env is configured run cmd:
+`npx migrate-storyblok-components`
+This will add all components to your storyblok account.
 
 
 ## License

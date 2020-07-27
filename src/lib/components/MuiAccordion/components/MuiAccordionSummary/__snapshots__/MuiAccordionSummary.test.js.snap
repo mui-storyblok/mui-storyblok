@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiAccordionSummary /> snapshot 1`] = `
+<div
+  aria-disabled={false}
+  className="MuiButtonBase-root MuiAccordionSummary-root makeStyles-root-3"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="MuiAccordionSummary-content"
+  >
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
+    >
+      android
+    </span>
+    <div
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
+    >
+      <span
+        className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+      >
+         undefined 
+      </span>
+    </div>
+  </div>
+  <div
+    aria-disabled={false}
+    aria-hidden={true}
+    className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    role={null}
+    tabIndex={null}
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
+      >
+        android
+      </span>
+    </span>
+  </div>
+</div>
+`;

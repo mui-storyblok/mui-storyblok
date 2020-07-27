@@ -48,9 +48,7 @@ exports[`<MuiGridListTileBar /> snapshot 1`] = `
         <span
           aria-hidden={true}
           className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
-        >
-          home
-        </span>
+        />
       </span>
     </button>
   </div>

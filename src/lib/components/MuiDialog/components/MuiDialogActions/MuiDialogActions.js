@@ -10,6 +10,7 @@ import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
 import { renderComponents } from '../../../../utils/customComponents';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 
 const MuiDialogActions = ({
   content,
@@ -22,6 +23,7 @@ const MuiDialogActions = ({
     MuiButtonRedirect,
     MuiButtonHref,
     MuiButtonDownload,
+    GoogleConversions,
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
@@ -48,6 +50,7 @@ MuiDialogActions.propTypes = {
     'MuiButtonRedirect',
     'MuiButtonHref',
     'MuiButtonDownload',
+    'GoogleConversions',
     */
   content(props, propName, componentName) {
     const components = [
@@ -57,6 +60,7 @@ MuiDialogActions.propTypes = {
       'MuiButtonRedirect',
       'MuiButtonHref',
       'MuiButtonDownload',
+      'GoogleConversion',
     ];
     return validComponents(props, propName, componentName, components);
   },

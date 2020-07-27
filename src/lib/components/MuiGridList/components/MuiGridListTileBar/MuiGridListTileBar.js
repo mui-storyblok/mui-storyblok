@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { GridListTileBar } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
@@ -6,7 +6,10 @@ import {
   validComponents,
   muiStringProp,
 } from '../../../../utils/customProps';
+import MuiIconButtonDialog from '../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiIconButtonHref from '../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
+import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 
 const MuiGridListTileBar = ({
   actionIcon,
@@ -15,17 +18,22 @@ const MuiGridListTileBar = ({
   subtitle,
   title,
 }) => {
+  const components = {
+    MuiIconButtonDialog,
+    MuiIconButtonHref,
+    MuiIconButtonRedirect,
+    GoogleConversions,
+  };
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const renderAction = actionIcon.length !== 0 ? actionIcon[0] : null;
 
   return (
     <>
       <GridListTileBar
         title={title}
         subtitle={<span>{subtitle}</span>}
-        actionIcon={
-          actionIcon.map(icon => (
-            <MuiIconButtonRedirect {...icon} />
-          ))
+        actionIcon={renderAction
+          && createElement(components[renderAction.component], { ...renderAction })
         }
         titlePosition={titlePosition}
         className={styles.root}

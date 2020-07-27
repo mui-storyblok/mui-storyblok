@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { validComponents } from '../../../../utils/customProps';
 import Storyblok from '../../../../utils/Storyblok';
 import MuiTypography from '../../../MuiTypography/MuiTypography';
-import MuiExpansionPanel from '../../../MuiExpansionPanel/MuiExpansionPanel';
+import MuiAccordion from '../../../MuiAccordion/MuiAccordion';
 import MuiList from '../../../MuiList/MuiList';
 import { renderComponents } from '../../../../utils/customComponents';
 
@@ -14,7 +14,7 @@ const MuiCardContent = ({
 }) => {
   const components = {
     MuiTypography,
-    MuiExpansionPanel,
+    MuiAccordion,
     MuiList,
   };
 
@@ -41,13 +41,13 @@ MuiCardContent.propTypes = {
    * Content passed to render
    * components:
     MuiTypography,
-    MuiExpansionPanel,
+    MuiAccordion,
     MuiList,
    */
   content(props, propName, componentName) {
     const components = [
       'MuiTypography',
-      'MuiExpansionPanel',
+      'MuiAccordion',
       'MuiList',
     ];
     return validComponents(props, propName, componentName, components);

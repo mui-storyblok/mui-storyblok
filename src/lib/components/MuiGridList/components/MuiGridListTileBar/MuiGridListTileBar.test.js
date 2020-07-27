@@ -3,28 +3,12 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import MuiGridListTileBar from './MuiGridListTileBar';
 
-function setup() {
+function setup(actionComponent = 'MuiIconButtonRedirect') {
   const props = {
     titlePosition: 'bottom',
     subtitle: 'wooooo',
     title: 'ayeeeee',
-    actionIcon: [
-      {
-        component: 'MuiIconButtonRedirect',
-        iconButton: [
-          {
-            component: 'MuiIconButton',
-            icon: [
-              {
-                component: 'MuiIcon',
-                iconName: 'home',
-              },
-            ],
-          },
-        ],
-        redirectRoute: 'home',
-      },
-    ],
+    actionIcon: [{ component: actionComponent }],
   };
 
   const comp = shallow(<MuiGridListTileBar {...props} />);

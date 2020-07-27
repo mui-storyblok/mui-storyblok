@@ -7,6 +7,7 @@ import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconB
 import MuiButtonRedirect from '../../../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../../../MuiButtonDownload/MuiButtonDownload';
+import GoogleConversions from '../../../../../GoogleConversions/GoogleConversions';
 import { validComponents } from '../../../../../../utils/customProps';
 /**
  * MuiDialogContentTypography
@@ -21,6 +22,7 @@ export const MuiDialogContentTypography = (props) => {
     MuiButtonRedirect,
     MuiButtonHref,
     MuiButtonDownload,
+    GoogleConversions,
   };
 
   return (
@@ -43,6 +45,7 @@ MuiDialogContentTypography.propTypes = {
       'MuiButtonRedirect',
       'MuiButtonHref',
       'MuiButtonDownload',
+      'GoogleConversions',
       'MuiText', // not imported but used in TypographyText
     ];
     return validComponents(props, propName, componentName, components);

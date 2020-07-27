@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import Storyblok from '../../utils/Storyblok';
 import Blok from './components/Blok/Blok';
 import MuiTransitions from '../MuiTransitions/MuiTransitions';
@@ -15,7 +15,7 @@ export class StoryBlokPage extends Component {
     story: [],
     loading: true,
     error: '',
-    muiTheme: undefined,
+    muiTheme: {},
   };
 
   components = {
@@ -25,6 +25,17 @@ export class StoryBlokPage extends Component {
 
   async componentDidMount() {
     await this.getPage();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.theme !== this.props.theme && this.props.useObjectTheme) {
+      this.setpropTheme(this.props.theme);
+    }
+  }
+
+  setpropTheme = (theme) => {
+    const muiTheme = createMuiTheme(theme);
+    this.setState({ muiTheme });
   }
 
   getUrlTheme = async (urlTheme, theme) => {
@@ -89,7 +100,7 @@ export class StoryBlokPage extends Component {
         alignItems="center"
       >
         {this.state.loading && !this.state.error && (
-          <CircularProgress />
+          <MuiCircularProgress />
         )}
         {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
         {!this.state.loading && (

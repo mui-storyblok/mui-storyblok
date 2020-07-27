@@ -12,9 +12,9 @@ function setup() {
         text: 'text',
       }],
     }, {
-      component: 'MuiExpansionPanel',
-      expansionPanelSummary: [{
-        component: 'MuiExpansionPanelSummary',
+      component: 'MuiAccordion',
+      accordionSummary: [{
+        component: 'MuiAccordionSummary',
         content: [{
           component: 'MuiIcon',
           iconName: 'android',
@@ -24,10 +24,10 @@ function setup() {
           iconName: 'android',
         }],
       }],
-      expansionPanelDetails: [{
-        component: 'MuiExpansionPanelDetails',
+      accordionDetails: [{
+        component: 'MuiAccordionDetails',
         content: [{
-          component: 'MuiExpansionPanelTypography',
+          component: 'MuiAccordionTypography',
           content: [{
             component: 'MuiText',
             text: 'text',

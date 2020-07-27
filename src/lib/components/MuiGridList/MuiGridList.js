@@ -44,7 +44,7 @@ const MuiGridList = ({
         spacing={+spacing}
       >
         {content.map(tile => (
-          <GridListTile key={tile.image} cols={+tile.cols}>
+          <GridListTile key={tile.image} cols={+tile.cols} rows={+tile.rows}>
             <img src={tile.image} alt={tile.title} />
             {tile.MuiGridListTileBar.length !== 0 ? (<MuiGridListTileBar {...tile.MuiGridListTileBar[0]} />) : null}
           </GridListTile>

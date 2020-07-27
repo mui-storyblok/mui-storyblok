@@ -4,6 +4,7 @@ import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 import { pushToCustomIcons } from '../../utils/customIcons';
 import { pushToCustomComponets } from '../../utils/customComponents';
+import { setCustomLoader } from '../../utils/customLoader';
 
 export const MuiStoryblok = ({
   theme,
@@ -13,10 +14,12 @@ export const MuiStoryblok = ({
   useObjectTheme,
   iconArray,
   customComponents,
+  customLoader,
 }) => {
   // set GoogleApis instance to window to use in GeocodeTabs
   if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
-
+  // If a custom loader is passed down push into customLoader variable
+  if (customLoader) setCustomLoader(customLoader);
   pushToCustomIcons(iconArray);
   pushToCustomComponets(customComponents);
 
@@ -37,16 +40,18 @@ MuiStoryblok.propTypes = {
   theme: PropTypes.shape(),
   /** storyblok prop  'published' : 'draft' */
   version: PropTypes.string,
-  /** acess key from storyblok you can make them in storyblok settings */
+  /** access key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
   /** key for google apis Key to use geocode if here will make  */
   googleapisKey: PropTypes.string,
+  /** Custom App Loader for storyblok */
+  customLoader: PropTypes.element,
   /**
    * override url theme to edit in mui-theme tool
    */
   useObjectTheme: PropTypes.bool,
   /**
-   * pass an array of icons to render custom icons in MuiIcon componet
+   * pass an array of icons to render custom icons in MuiIcon component
    * ex :
    *  [{
       iconName: 'cool_thing',
@@ -81,4 +86,5 @@ MuiStoryblok.defaultProps = {
   useObjectTheme: false,
   iconArray: [],
   customComponents: [],
+  customLoader: undefined,
 };

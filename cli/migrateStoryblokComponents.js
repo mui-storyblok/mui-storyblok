@@ -2,12 +2,9 @@
 
 require('dotenv').config();
 
-const fs = require('fs');
 const { exec } = require('child_process');
 
-const files = fs.readdirSync('node_modules/mui-storyblok/dist/storyblok');
-const fileNames = files.map(file => file.replace('.js', '')).filter(x => x != null).join();
-const cmd = `npx storyblok-migrate --component-migrations --components ${fileNames}`;
+const cmd = `storyblok push-components ./storyblok/components.json --space ${process.env.STORYBLOK_SPACE_ID}`;
 
 const asyncCmd = (command) => {
   console.log(command);

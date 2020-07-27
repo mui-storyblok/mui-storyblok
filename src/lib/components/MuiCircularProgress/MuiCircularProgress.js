@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Storyblok from '../../utils/Storyblok';
 import { muiStringProp } from '../../utils/customProps';
+import loader from '../../utils/customLoader';
 /**
  * MuiCircularProgress is used in storyblok redirect to react routes
  */
@@ -16,8 +17,11 @@ export const MuiCircularProgress = ({
   thickness,
   variant,
 }) => {
+  if (loader.length) {
+    const CustomLoader = loader[0];
+    return (<CustomLoader />);
+  }
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-
   return (
     <CircularProgress
       className={styles.root}
@@ -66,7 +70,7 @@ MuiCircularProgress.propTypes = {
     return muiStringProp(props, propName, componentName, validProp);
   },
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Override or extend the styles applied to the component
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
