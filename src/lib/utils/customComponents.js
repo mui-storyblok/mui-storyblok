@@ -2,7 +2,7 @@ import React, { createElement } from 'react';
 // [{ componentName: 'MyCoolComp', Component: MyCoolComp, props: {} }]
 export const customComponents = [];
 
-export const pushToCustomComponets = (components) => {
+export const pushToCustomComponents = (components) => {
   if (components.length > 0) components.forEach(component => customComponents.push(component));
 };
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 import { pushToCustomIcons } from '../../utils/customIcons';
-import { pushToCustomComponets } from '../../utils/customComponents';
+import { pushToCustomComponents } from '../../utils/customComponents';
 import { setCustomLoader } from '../../utils/customLoader';
 
 export const MuiStoryblok = ({
@@ -21,7 +21,7 @@ export const MuiStoryblok = ({
   // If a custom loader is passed down push into customLoader variable
   if (customLoader) setCustomLoader(customLoader);
   pushToCustomIcons(iconArray);
-  pushToCustomComponets(customComponents);
+  pushToCustomComponents(customComponents);
 
   return (
     <StoryBlokPage

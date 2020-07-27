@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { renderComponents, pushToCustomComponets, customComponents } from './customComponents';
+import { renderComponents, pushToCustomComponents, customComponents } from './customComponents';
 
 const N = () => (<p>normal</p>);
 
@@ -21,7 +21,7 @@ const Custom = () => (
 describe('customComponents', () => {
   it('renders normal componet', () => {
     const customComps = [];
-    pushToCustomComponets(customComps);
+    pushToCustomComponents(customComps);
     expect(customComponents).toEqual([]);
     const normalComponet = shallow(<Normal />);
     const normalComponetLength = normalComponet.find('N').length;
@@ -30,7 +30,7 @@ describe('customComponents', () => {
 
   it('renders custom componet', () => {
     const customComps = [{ componentName: 'Custom', Component: Custom, props: {} }];
-    pushToCustomComponets(customComps);
+    pushToCustomComponents(customComps);
     expect(customComponents).toEqual(customComps);
     const customComponet = shallow(<Custom />);
     const customComponetLength = customComponet.find('Custom').length;
