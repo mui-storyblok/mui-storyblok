@@ -1,7 +1,7 @@
 import React from 'react';
 import MuiStoryblok from '../lib/index';
 
-const MyCoolComp = () => <span>what?!</span>
+const MyCoolComp = () => <span>what?!</span>;
 
 const App = () => (
   <MuiStoryblok
