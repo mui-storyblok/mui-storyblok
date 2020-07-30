@@ -73,7 +73,7 @@
       "name": "BlokForm",
       "display_name": null,
       "created_at": "2020-05-22T22:14:06.183Z",
-      "updated_at": "2020-05-26T18:18:01.671Z",
+      "updated_at": "2020-07-29T16:12:08.336Z",
       "id": 930353,
       "schema": {
         "submitButton": {
@@ -1017,6 +1017,27 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "GoogleConversions",
+      "component_group_uuid": null
+    },
+    {
+      "name": "GoogleRecaptcha",
+      "display_name": null,
+      "created_at": "2020-07-23T17:37:08.905Z",
+      "updated_at": "2020-07-23T17:37:46.734Z",
+      "id": 1025951,
+      "schema": {
+        "siteKey": {
+          "type": "text"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "GoogleRecaptcha",
       "component_group_uuid": null
     },
     {
