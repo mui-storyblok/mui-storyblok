@@ -11,7 +11,7 @@ import {
   MuiCheckbox,
   MuiRadio,
 } from 'rff-wrapper';
-import GoogleRecaptcha from './sharedComponents/GoogleRecaptcha/GoogleRecaptcha';
+import GoogleRecaptcha from './components/GoogleRecaptcha/GoogleRecaptcha';
 import {
   nestedComponentsProps,
   validComponents,
