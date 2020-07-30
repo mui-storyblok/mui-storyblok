@@ -10,18 +10,19 @@ const asyncCmd = (command) => {
   console.log(command);
   return new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
-      if (error) {
+      try {
+        console.log(stdout || stderr);
+        resolve(stdout || stderr);
+      } catch (err) {
         console.warn(error);
         reject(error);
       }
-      console.log(stdout || stderr);
-      resolve(stdout || stderr);
     });
   });
 };
 
 const migrateComponents = async (command) => {
-  process.chdir('./node_modules/mui-storyblok/dist');
+  // process.chdir('./node_modules/mui-storyblok/dist');
   await asyncCmd(command);
 };
 
