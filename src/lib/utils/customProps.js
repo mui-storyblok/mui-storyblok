@@ -29,8 +29,7 @@ export const muiGridProp = (props, propName, componentName) => {
    *  */
   if (!['string', 'number', 'boolean'].includes(typeof props[propName])) {
     return new Error(
-      `${componentName}: ${propName} must be of type "string", "number" or "boolean".
-      received ${typeof props[propName]} of ${props[propName]}`,
+      `${componentName}: ${propName} must be of type "string", "number" or "boolean". received ${typeof props[propName]} of ${props[propName]}`,
     );
   }
 
@@ -41,9 +40,7 @@ export const muiGridProp = (props, propName, componentName) => {
 
   if (!validProps.includes(props[propName])) {
     return new Error(
-      `${componentName}: ${props[propName]} is a invalid Prop for ${propName}.
-          Must be string value of ${validProps.toString()}
-        `,
+      `${componentName}: ${props[propName]} is a invalid Prop for ${propName}. Must be string value of ${validProps.toString()}`,
     );
   }
 
