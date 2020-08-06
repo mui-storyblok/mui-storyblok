@@ -84,7 +84,6 @@ export const nestedComponentsProps = (
    * used for nested grid and typographyText to see if the componets passed down are able to render
    */
   let error;
-  console.log(props[propName]);
   const content = props[propName].map(x => x.content).flat().map(x => x.content).flat();
   content.forEach((comp) => {
     if (!components.includes(comp.component)) {

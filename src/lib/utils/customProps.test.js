@@ -62,7 +62,7 @@ describe('Custom Props', () => {
   });
 
   it.skip('should handle error of validComponentsRequired accordingly.', () => {
-    const result = validComponentsRequired({ apples: [{ component: 'invalid1234' }] }, 'apples', 'testComp', ['validComp'], 1);
+    // const result = validComponentsRequired({ apples: [{ component: 'invalid1234' }] }, 'apples', 'testComp', ['validComp'], 1);
     // Valid componenents Required is not returning error properly.
     // Have to look more into it.
   });
