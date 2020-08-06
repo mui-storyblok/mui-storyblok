@@ -84,6 +84,7 @@ export const nestedComponentsProps = (
    * used for nested grid and typographyText to see if the componets passed down are able to render
    */
   let error;
+  console.log(props[propName]);
   const content = props[propName].map(x => x.content).flat().map(x => x.content).flat();
   content.forEach((comp) => {
     if (!components.includes(comp.component)) {
@@ -115,7 +116,7 @@ export const dimensionProp = (props, propName, componentName) => {
         `${componentName}: ${propName} has to be one of these units of size px, em, %, vw`,
       );
     }
-  } else if (['height', 'width'].includes(propName)) {
+  } else if (!['height', 'width'].includes(propName)) {
     error = new Error(
       'dimensionProp needs to be used on proptype with name height or width',
     );
@@ -135,7 +136,6 @@ export const muiDimensionProp = (props, propName, componentName) => {
   ) {
     error = dimensionProp(props, propName, componentName);
   }
-  // error = dimensionProp(props, propName, componentName);
   return error;
 };
 
