@@ -47,7 +47,6 @@ describe('geoLocate util', () => {
       },
     }, tabs);
     expect(window.fetch).toBeCalled();
-    // expect(callBack).toBeCalledWith(mockSuccessResponse);
   });
 
   it('errorCallback returns data', async () => {
