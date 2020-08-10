@@ -28,7 +28,7 @@ describe('customComponents', () => {
     expect(normalComponetLength).toEqual(1);
   });
 
-  it('renders custom componet', () => {
+  it('renders custom component', () => {
     const customComps = [{ componentName: 'Custom', Component: Custom, props: {} }];
     pushToCustomComponents(customComps);
     expect(customComponents).toEqual(customComps);
