@@ -1,7 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-} from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
@@ -14,6 +11,7 @@ import {
   muiStringProp,
   dimensionProp,
 } from '../../utils/customProps';
+import { useSetGeoCode } from '../../utils/geoLocate';
 import { renderComponents } from '../../utils/customComponents';
 import MuiIcon from '../MuiIcon/MuiIcon';
 import MuiGrid from '../MuiGrid/MuiGrid';
@@ -39,9 +37,12 @@ const MuiTabs = ({
     MuiIcon,
   };
 
-  const [state, setState] = useState({ value: 0, autoplay, tabsLength: tabs.length });
+  console.log(tabs);
+
+  const [state, setState] = useState({ autoplay, tabsLength: tabs.length });
+  const [tabValue, setTabValue] = useState(0);
   const handleChange = (event, newValue) => {
-    setState({ ...state, value: newValue });
+    setTabValue(newValue);
   };
 
   const flexStyle = makeStyles(() => ({
@@ -50,10 +51,10 @@ const MuiTabs = ({
 
   const handleChangeIndex = () => {
     const tabsLength = tabs.length - 1;
-    if (state.value >= tabsLength) {
+    if (tabValue >= tabsLength) {
       return handleChange({}, 0);
     }
-    return handleChange({}, state.value);
+    return handleChange({}, tabValue);
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
@@ -72,24 +73,7 @@ const MuiTabs = ({
     }
   };
 
-  const setLocation = (json) => {
-    if (json.results.length) {
-      tabs.forEach((tab, i) => {
-        if (json.results[0].formatted_address.includes(tab.geocodeState)) {
-          return setState({ value: i });
-        }
-        return null;
-      });
-    }
-  };
-
-  useEffect(() => {
-    (async () => {
-      if (geocode) {
-        await window.muistoryblokgoogleapis.geocode(setLocation);
-      }
-    })();
-  }, [geocode]);
+  useSetGeoCode(geocode, tabs, setTabValue);
 
   return (
     <div
@@ -101,7 +85,7 @@ const MuiTabs = ({
       }}
     >
       <Tabs
-        value={state.value}
+        value={tabValue}
         className={styles.root}
         classes={flexClass}
         onChange={handleChange}
@@ -129,7 +113,7 @@ const MuiTabs = ({
         {tabs.map((tab, index) => (
           <AutoPlaySwipeableViews
             key={index}
-            index={state.value.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
+            index={tabValue.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
             onChangeIndex={handleChangeIndex}
             autoplay={autoplay}
             interval={typeof interval === 'string' ? Number(interval) : interval}
@@ -138,7 +122,7 @@ const MuiTabs = ({
           >
             <div
               role="tabpanel"
-              hidden={state.value !== index}
+              hidden={tabValue !== index}
               style={{ overflow: 'hidden' }}
             >
               {tab.content.map((component, key) => renderComponents(components, component, key))}
