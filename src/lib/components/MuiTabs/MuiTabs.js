@@ -37,8 +37,6 @@ const MuiTabs = ({
     MuiIcon,
   };
 
-  console.log(tabs);
-
   const [state, setState] = useState({ autoplay, tabsLength: tabs.length });
   const [tabValue, setTabValue] = useState(0);
   const handleChange = (event, newValue) => {
