@@ -5,7 +5,6 @@ import {
   dimensionProp,
   muiDimensionProp,
   validComponents,
-  validComponentsRequired,
 } from './customProps';
 
 describe('Custom Props', () => {
@@ -59,11 +58,5 @@ describe('Custom Props', () => {
     const result = validComponents({ apples: { length: 2 } }, 'apples', 'testComp', ['validComp'], 1);
     const expected = 'testComp: apples can only have a length of 1 but recived length of 2';
     expect(result.message).toEqual(expected);
-  });
-
-  it.skip('should handle error of validComponentsRequired accordingly.', () => {
-    // const result = validComponentsRequired({ apples: [{ component: 'invalid1234' }] }, 'apples', 'testComp', ['validComp'], 1);
-    // Valid componenents Required is not returning error properly.
-    // Have to look more into it.
   });
 });

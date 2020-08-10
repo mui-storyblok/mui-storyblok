@@ -83,7 +83,6 @@ describe('<MuiAccordion />', () => {
   it('should give proper warning for propTypes on MuiAccordionSummary if component is invalid.', () => {
     setup(true, 'invalidComp');
     const expected = 'Warning: Failed prop type: MuiAccordion: accordionSummary is required to have a length of 1 but recived length of 0\n    in MuiAccordion (at MuiAccordion.test.js:38)';
-    console.log(warningMsg[0]);
     expect(warningMsg[0]).toEqual(expected);
   });
 });
