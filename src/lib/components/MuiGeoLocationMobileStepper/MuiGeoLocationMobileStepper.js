@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { useSetGeoCode } from '../../utils/geoLocate';
 import {
   validComponentsRequired,
   muiStringProp,
@@ -12,11 +13,11 @@ import MuiIconButton from '../MuiIconButton/MuiIconButton';
 import MuiButton from '../MuiButton/MuiButton';
 import MuiHeroHeader from '../MuiHeroHeader/MuiHeroHeader';
 import Storyblok from '../../utils/Storyblok';
-import MuiMobileTab from './components/MuiMobileTab/MuiMobileTab';
+import MuiMobileTab from '../MuiMobileStepper/components/MuiMobileTab/MuiMobileTab';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const MuiMobileStepper = ({
+const MuiGeoLocationMobileStepper = ({
   tabs,
   nextBtn,
   backBtn,
@@ -25,6 +26,7 @@ const MuiMobileStepper = ({
   variant,
   autoplay,
   interval,
+  geocode,
 }) => {
   const components = {
     MuiIconButton,
@@ -69,6 +71,8 @@ const MuiMobileStepper = ({
     }
   };
 
+  useSetGeoCode(geocode, tabs, setActiveStep);
+
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   const back = backBtn[0];
@@ -87,9 +91,7 @@ const MuiMobileStepper = ({
         enableMouseEvents
       >
         {tabs.map(tab => (
-          <MuiMobileTab
-            tab={tab.tab[0]}
-          />
+          <MuiMobileTab tab={tab.tab[0]} />
         ))}
       </AutoPlaySwipeableViews>
 
@@ -101,27 +103,32 @@ const MuiMobileStepper = ({
         activeStep={activeStep}
         nextButton={(
           <>
-            {next ? createElement(
-              components[next.component],
-              { ...next, onClick: handleNext },
-            ) : null}
+            {next
+              ? createElement(components[next.component], {
+                ...next,
+                onClick: handleNext,
+              })
+              : null}
           </>
-      )}
+        )}
         backButton={(
           <>
-            {back ? createElement(
-              components[back.component], { ...back, onClick: handleBack },
-            ) : null}
+            {back
+              ? createElement(components[back.component], {
+                ...back,
+                onClick: handleBack,
+              })
+              : null}
           </>
-      )}
+        )}
       />
     </div>
   );
 };
 
-export default MuiMobileStepper;
+export default MuiGeoLocationMobileStepper;
 
-MuiMobileStepper.propTypes = {
+MuiGeoLocationMobileStepper.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Override or extend the styles applied to the component
@@ -147,6 +154,8 @@ MuiMobileStepper.propTypes = {
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
+  geocode: PropTypes.bool,
   /** MuiMobileTab */
   tabs(props, propName, componentName) {
     const components = ['MuiMobileTab'];
@@ -158,24 +167,37 @@ MuiMobileStepper.propTypes = {
    */
   nextBtn(props, propName, componentName) {
     const components = ['MuiIconButton', 'MuiButton'];
-    return validComponentsRequired(props, propName, componentName, components, 1);
+    return validComponentsRequired(
+      props,
+      propName,
+      componentName,
+      components,
+      1,
+    );
   },
   /**
    * MuiIconButton,
-  * MuiButton,
-  */
+   * MuiButton,
+   */
   backBtn(props, propName, componentName) {
     const components = ['MuiIconButton', 'MuiButton'];
-    return validComponentsRequired(props, propName, componentName, components, 1);
+    return validComponentsRequired(
+      props,
+      propName,
+      componentName,
+      components,
+      1,
+    );
   },
 };
 
-MuiMobileStepper.defaultProps = {
+MuiGeoLocationMobileStepper.defaultProps = {
   rootClass: [],
   position: 'static',
   variant: 'dots',
   autoplay: false,
   interval: 3000,
+  geocode: true,
   nextBtn: [],
   backBtn: [],
   tabs: [],
