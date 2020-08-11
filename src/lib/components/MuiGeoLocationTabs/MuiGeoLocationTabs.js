@@ -11,13 +11,14 @@ import {
   muiStringProp,
   dimensionProp,
 } from '../../utils/customProps';
+import { useSetGeoCode } from '../../utils/geoLocate';
 import { renderComponents } from '../../utils/customComponents';
 import MuiIcon from '../MuiIcon/MuiIcon';
 import MuiGrid from '../MuiGrid/MuiGrid';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const MuiTabs = ({
+const MuiGeoLocationTabs = ({
   rootClass,
   indicatorColor,
   orientation,
@@ -27,6 +28,7 @@ const MuiTabs = ({
   tabs,
   autoplay,
   interval,
+  geocode,
   height,
   justifyContent,
 }) => {
@@ -53,9 +55,10 @@ const MuiTabs = ({
     return handleChange({}, tabValue);
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
+  const styles = Storyblok.arrayToMuiStyles(rootClass, {
+    flexContainer: { justifyContent: 'space-around' },
+  });
   const flexClass = flexStyle();
-
 
   const onMouseEnter = () => {
     if (autoplay) {
@@ -68,6 +71,8 @@ const MuiTabs = ({
       setState({ ...state, autoplay: true });
     }
   };
+
+  useSetGeoCode(geocode, tabs, setTabValue);
 
   return (
     <div
@@ -99,7 +104,7 @@ const MuiTabs = ({
             disableFocusRipple={item.disableFocusRipple === 'true'}
             disableRipple={item.disableRipple}
             wrapped={item.wrapped}
-            icon={(item.icon && item.icon[0] && <MuiIcon {...item.icon[0]} />)}
+            icon={item.icon && item.icon[0] && <MuiIcon {...item.icon[0]} />}
           />
         ))}
       </Tabs>
@@ -110,7 +115,9 @@ const MuiTabs = ({
             index={tabValue.toString()} // throws warrning for invalid prop in AutoPlay expected number but view will now display when value is 0
             onChangeIndex={handleChangeIndex}
             autoplay={autoplay}
-            interval={typeof interval === 'string' ? Number(interval) : interval}
+            interval={
+              typeof interval === 'string' ? Number(interval) : interval
+            }
             enableMouseEvents
             id="swipeableViews-test"
           >
@@ -128,9 +135,9 @@ const MuiTabs = ({
   );
 };
 
-export default MuiTabs;
+export default MuiGeoLocationTabs;
 
-MuiTabs.propTypes = {
+MuiGeoLocationTabs.propTypes = {
   /**
    * storyblok multiselect of css classes
    * Override or extend the styles applied to the component
@@ -192,17 +199,25 @@ MuiTabs.propTypes = {
     return muiStringProp(props, propName, componentName, validProps);
   },
   /**
-   * Justify content flex styling for MuiTabs.
+   * Justify content flex styling for MuiGeoLocationTabs.
    * justifyContent: 'space-between', 'center', 'space-evenly', 'space-around'
    */
   justifyContent(props, propName, componentName) {
-    const validProps = ['space-between', 'center', 'space-evenly', 'space-around'];
+    const validProps = [
+      'space-between',
+      'center',
+      'space-evenly',
+      'space-around',
+    ];
     return muiStringProp(props, propName, componentName, validProps);
   },
   /** autoplay will incroment tabs by a interval */
   autoplay: PropTypes.bool,
   /** interval to increment tabs: time in milliseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
+  geocode: PropTypes.bool,
 
   /** MuiTab */
   tabs(props, propName, componentName) {
@@ -211,7 +226,7 @@ MuiTabs.propTypes = {
   },
 };
 
-MuiTabs.defaultProps = {
+MuiGeoLocationTabs.defaultProps = {
   rootClass: [],
   tabs: [],
   indicatorColor: 'secondary',
@@ -221,6 +236,7 @@ MuiTabs.defaultProps = {
   variant: 'standard',
   autoplay: false,
   interval: 3000,
+  geocode: true,
   height: '300px',
   justifyContent: 'center',
 };
