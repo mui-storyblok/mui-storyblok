@@ -4,7 +4,7 @@
       "name": "Blok",
       "display_name": "",
       "created_at": "2020-03-31T18:27:08.530Z",
-      "updated_at": "2020-06-23T21:07:37.481Z",
+      "updated_at": "2020-08-05T15:26:48.461Z",
       "id": 842333,
       "schema": {
         "only": {
@@ -42,7 +42,8 @@
             "MuiHeroHeader",
             "MuiAppBar",
             "MuiBottomNavigation",
-            "MuiTabs"
+            "MuiTabs",
+            "LoginComp"
           ]
         }
       },
@@ -53,14 +54,20 @@
       "is_nestable": true,
       "all_presets": [
         {
+          "id": 644763,
+          "name": "cool",
+          "component_id": 842333,
+          "image": ""
+        },
+        {
           "id": 644764,
           "name": "whatever",
           "component_id": 842333,
           "image": ""
         },
         {
-          "id": 644763,
-          "name": "cool",
+          "id": 689634,
+          "name": "Global App Bar",
           "component_id": 842333,
           "image": ""
         }
@@ -1038,6 +1045,23 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "GoogleRecaptcha",
+      "component_group_uuid": null
+    },
+    {
+      "name": "LoginComp",
+      "display_name": null,
+      "created_at": "2020-08-05T15:20:41.029Z",
+      "updated_at": "2020-08-05T15:20:41.029Z",
+      "id": 1043765,
+      "schema": {},
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "LoginComp",
       "component_group_uuid": null
     },
     {
@@ -3759,7 +3783,7 @@
       "name": "MuiDialogActions",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.361Z",
-      "updated_at": "2020-07-14T17:36:26.550Z",
+      "updated_at": "2020-08-05T15:53:59.869Z",
       "id": 842321,
       "schema": {
         "rootClass": {
@@ -4327,6 +4351,299 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "MuiFade",
+      "component_group_uuid": null
+    },
+    {
+      "name": "MuiGeoLocationMobileStepper",
+      "display_name": null,
+      "created_at": "2020-08-11T15:28:16.162Z",
+      "updated_at": "2020-08-11T18:10:59.905Z",
+      "id": 1051356,
+      "schema": {
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": []
+        },
+        "position": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "bottom",
+              "name": "bottom"
+            },
+            {
+              "value": "static",
+              "name": "static"
+            },
+            {
+              "value": "top",
+              "name": "top"
+            }
+          ],
+          "description": "Set the positioning type.",
+          "default_value": "static",
+          "required": true
+        },
+        "variant": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "dots",
+              "name": "dots"
+            },
+            {
+              "value": "progress",
+              "name": "progress"
+            },
+            {
+              "value": "text",
+              "name": "text"
+            }
+          ],
+          "description": "Set the variant type.",
+          "display_name": "",
+          "default_value": "dots",
+          "required": true
+        },
+        "autoplay": {
+          "type": "boolean"
+        },
+        "interval": {
+          "type": "text",
+          "required": true,
+          "default_value": "3000"
+        },
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiMobileTab"
+          ],
+          "required": true
+        },
+        "nextBtn": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true,
+          "maximum": "1"
+        },
+        "backBtn": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "MuiGeoLocationMobileStepper",
+      "component_group_uuid": null
+    },
+    {
+      "name": "MuiGeoLocationTabs",
+      "display_name": null,
+      "created_at": "2020-08-11T14:46:18.673Z",
+      "updated_at": "2020-08-11T16:56:05.370Z",
+      "id": 1051348,
+      "schema": {
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": [
+            {
+              "value": "justify-content: center",
+              "name": "center items"
+            },
+            {
+              "value": "margin-bottom: 25px",
+              "name": "margin-bottom"
+            }
+          ],
+          "pos": 0
+        },
+        "indicatorColor": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "secondary",
+              "name": "secondary"
+            },
+            {
+              "value": "primary",
+              "name": "primary"
+            }
+          ],
+          "required": true,
+          "description": "secondary",
+          "default_value": "secondary",
+          "pos": 1
+        },
+        "orientation": {
+          "type": "option",
+          "required": true,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "horizontal",
+              "name": "horizontal"
+            },
+            {
+              "value": "vertical",
+              "name": "vertical"
+            }
+          ],
+          "description": "The tabs orientation (layout flow direction).",
+          "default_value": "horizontal",
+          "pos": 2
+        },
+        "scrollButtons": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "desktop",
+              "name": "desktop"
+            },
+            {
+              "value": "on",
+              "name": "on"
+            },
+            {
+              "value": "off",
+              "name": "off"
+            }
+          ],
+          "required": true,
+          "description": "Determine behavior of scroll buttons when tabs are set to scroll: - auto will only present them when not all the items are visible. - desktop will only present them on medium and larger viewports. - on will always present them. - off will never present them.",
+          "default_value": "auto",
+          "pos": 3
+        },
+        "textColor": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "secondary",
+              "name": "secondary"
+            },
+            {
+              "value": "primary",
+              "name": "primary"
+            },
+            {
+              "value": "inherit",
+              "name": "inherit"
+            }
+          ],
+          "required": true,
+          "default_value": "inherit",
+          "description": "Determines the color of the Tab.",
+          "pos": 4
+        },
+        "variant": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "standard",
+              "name": "standard"
+            },
+            {
+              "value": "scrollable",
+              "name": "scrollable"
+            },
+            {
+              "value": "fullWidth",
+              "name": "fullWidth"
+            }
+          ],
+          "description": "Determines additional display behavior of the tabs: - scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar. -fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile. - standard will render the default state.",
+          "default_value": "standard",
+          "required": true,
+          "pos": 5
+        },
+        "height": {
+          "type": "text",
+          "default_value": "300px",
+          "description": "Height of the tabs container",
+          "pos": 6
+        },
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGrid",
+            "MuiIcon",
+            "MuiTab"
+          ],
+          "required": true,
+          "pos": 7
+        },
+        "autoplay": {
+          "type": "boolean",
+          "pos": 8
+        },
+        "interval": {
+          "type": "text",
+          "translatable": false,
+          "required": true,
+          "default_value": "3000",
+          "pos": 9
+        },
+        "justifyContent": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "space-between",
+              "name": "space-between"
+            },
+            {
+              "value": "space-around",
+              "name": "space-around"
+            },
+            {
+              "value": "space-evenly",
+              "name": "space-evenly"
+            }
+          ],
+          "description": "   * Justify content flex styling for MuiTabs.\n   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around",
+          "default_value": "center"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "MuiGeoLocationTabs",
       "component_group_uuid": null
     },
     {
@@ -6988,7 +7305,7 @@
       "name": "MuiMobileTab",
       "display_name": null,
       "created_at": "2020-03-31T18:27:00.955Z",
-      "updated_at": "2020-03-31T18:27:00.955Z",
+      "updated_at": "2020-08-11T18:16:13.449Z",
       "id": 842291,
       "schema": {
         "tab": {
@@ -7001,8 +7318,211 @@
           ]
         },
         "geocodeState": {
-          "type": "text",
-          "description": "State you would like to show if user is in this state need to have MuiTabs geocode true    * this prop is used in parent component"
+          "type": "option",
+          "description": "State you would like to show if user is in this state need to have MuiTabs  * this prop is used in parent component (MuiGeoLocationMobileStepper)",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "AL",
+              "name": "Alabama"
+            },
+            {
+              "value": "AK",
+              "name": "Alaska"
+            },
+            {
+              "value": "AZ",
+              "name": "Arizona"
+            },
+            {
+              "value": "AR",
+              "name": "Arkansas"
+            },
+            {
+              "value": "CA",
+              "name": "California"
+            },
+            {
+              "value": "CO",
+              "name": "Colorado"
+            },
+            {
+              "value": "CT",
+              "name": "Connecticut"
+            },
+            {
+              "value": "DE",
+              "name": "Delaware"
+            },
+            {
+              "value": "FL",
+              "name": "Florida"
+            },
+            {
+              "value": "GA",
+              "name": "Georgia"
+            },
+            {
+              "value": "HI",
+              "name": "Hawaii"
+            },
+            {
+              "value": "ID",
+              "name": "Idaho"
+            },
+            {
+              "value": "IL",
+              "name": "Illinois"
+            },
+            {
+              "value": "IN",
+              "name": "Indiana"
+            },
+            {
+              "value": "IA",
+              "name": "Iowa"
+            },
+            {
+              "value": "KS",
+              "name": "Kansas"
+            },
+            {
+              "value": "KY",
+              "name": "Kentucky"
+            },
+            {
+              "value": "LA",
+              "name": "Louisiana"
+            },
+            {
+              "value": "ME",
+              "name": "Maine"
+            },
+            {
+              "value": "MD",
+              "name": "Maryland"
+            },
+            {
+              "value": "MA",
+              "name": "Massachusetts"
+            },
+            {
+              "value": "MI",
+              "name": "Michigan"
+            },
+            {
+              "value": "MN",
+              "name": "Minnesota"
+            },
+            {
+              "value": "MS",
+              "name": "Mississippi"
+            },
+            {
+              "value": "MO",
+              "name": "Missouri"
+            },
+            {
+              "value": "MT",
+              "name": "Montana"
+            },
+            {
+              "value": "NE",
+              "name": "Nebraska"
+            },
+            {
+              "value": "NV",
+              "name": "Nevada"
+            },
+            {
+              "value": "NH",
+              "name": "New Hampshire"
+            },
+            {
+              "value": "NJ",
+              "name": "New Jersey"
+            },
+            {
+              "value": "NM",
+              "name": "New Mexico"
+            },
+            {
+              "value": "NY",
+              "name": "New York"
+            },
+            {
+              "value": "NC",
+              "name": "North Carolina"
+            },
+            {
+              "value": "ND",
+              "name": "North Dakota"
+            },
+            {
+              "value": "OH",
+              "name": "Ohio"
+            },
+            {
+              "value": "OK",
+              "name": "Oklahoma"
+            },
+            {
+              "value": "OR",
+              "name": "Oregon"
+            },
+            {
+              "value": "PA",
+              "name": "Pennsylvania"
+            },
+            {
+              "value": "RI",
+              "name": "Rhode Island"
+            },
+            {
+              "value": "SC",
+              "name": "South Carolina"
+            },
+            {
+              "value": "SD",
+              "name": "South Dakota"
+            },
+            {
+              "value": "TN",
+              "name": "Tennessee"
+            },
+            {
+              "value": "TX",
+              "name": "Texas"
+            },
+            {
+              "value": "UT",
+              "name": "Utah"
+            },
+            {
+              "value": "VT",
+              "name": "Vermont"
+            },
+            {
+              "value": "VA",
+              "name": "Virginia"
+            },
+            {
+              "value": "WA",
+              "name": "Washington"
+            },
+            {
+              "value": "WV",
+              "name": "West Virginia"
+            },
+            {
+              "value": "WI",
+              "name": "Wisconsin"
+            },
+            {
+              "value": "WY",
+              "name": "Wyoming"
+            }
+          ]
         }
       },
       "image": null,
@@ -7706,7 +8226,7 @@
       "name": "MuiTab",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.523Z",
-      "updated_at": "2020-06-02T22:31:31.291Z",
+      "updated_at": "2020-08-11T17:15:34.133Z",
       "id": 842305,
       "schema": {
         "label": {
@@ -7752,6 +8272,213 @@
             "MuiIcon"
           ],
           "required": true
+        },
+        "geocodeState": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "AL",
+              "name": "Alabama"
+            },
+            {
+              "value": "AK",
+              "name": "Alaska"
+            },
+            {
+              "value": "AZ",
+              "name": "Arizona"
+            },
+            {
+              "value": "AR",
+              "name": "Arkansas"
+            },
+            {
+              "value": "CA",
+              "name": "California"
+            },
+            {
+              "value": "CO",
+              "name": "Colorado"
+            },
+            {
+              "value": "CT",
+              "name": "Connecticut"
+            },
+            {
+              "value": "DE",
+              "name": "Delaware"
+            },
+            {
+              "value": "FL",
+              "name": "Florida"
+            },
+            {
+              "value": "GA",
+              "name": "Georgia"
+            },
+            {
+              "value": "HI",
+              "name": "Hawaii"
+            },
+            {
+              "value": "ID",
+              "name": "Idaho"
+            },
+            {
+              "value": "IL",
+              "name": "Illinois"
+            },
+            {
+              "value": "IN",
+              "name": "Indiana"
+            },
+            {
+              "value": "IA",
+              "name": "Iowa"
+            },
+            {
+              "value": "KS",
+              "name": "Kansas"
+            },
+            {
+              "value": "KT",
+              "name": "Kentucky"
+            },
+            {
+              "value": "LA",
+              "name": "Louisiana"
+            },
+            {
+              "value": "ME",
+              "name": "Maine"
+            },
+            {
+              "value": "MD",
+              "name": "Maryland"
+            },
+            {
+              "value": "MA",
+              "name": "Massachusetts"
+            },
+            {
+              "value": "MI",
+              "name": "Michigan"
+            },
+            {
+              "value": "MN",
+              "name": "Minnesota"
+            },
+            {
+              "value": "MS",
+              "name": "Mississippi"
+            },
+            {
+              "value": "MO",
+              "name": "Missouri"
+            },
+            {
+              "value": "MT",
+              "name": "Montana"
+            },
+            {
+              "value": "NE",
+              "name": "Nebraska"
+            },
+            {
+              "value": "NV",
+              "name": "Nevada"
+            },
+            {
+              "value": "NH",
+              "name": "New Hampshire"
+            },
+            {
+              "value": "NJ",
+              "name": "New Jersey"
+            },
+            {
+              "value": "NM",
+              "name": "New Mexico"
+            },
+            {
+              "value": "NY",
+              "name": "New York"
+            },
+            {
+              "value": "NC",
+              "name": "North Carolina"
+            },
+            {
+              "value": "ND",
+              "name": "North Dakota"
+            },
+            {
+              "value": "OH",
+              "name": "Ohio"
+            },
+            {
+              "value": "OK",
+              "name": "Oklahoma"
+            },
+            {
+              "value": "OR",
+              "name": "Oregon"
+            },
+            {
+              "value": "PA",
+              "name": "Pennsylvania"
+            },
+            {
+              "value": "RI",
+              "name": "Rhode Island"
+            },
+            {
+              "value": "SC",
+              "name": "South Carolina"
+            },
+            {
+              "value": "SD",
+              "name": "South Dakota"
+            },
+            {
+              "value": "TN",
+              "name": "Tennessee"
+            },
+            {
+              "value": "TX",
+              "name": "Texas"
+            },
+            {
+              "value": "UT",
+              "name": "Utah"
+            },
+            {
+              "value": "VT",
+              "name": "Vermont"
+            },
+            {
+              "value": "VA",
+              "name": "Virginia"
+            },
+            {
+              "value": "WA",
+              "name": "Washington"
+            },
+            {
+              "value": "WV",
+              "name": "West Virginia"
+            },
+            {
+              "value": "WI",
+              "name": "Wisconsin"
+            },
+            {
+              "value": "WY",
+              "name": "Wyoming"
+            }
+          ],
+          "description": "State for the geocode"
         }
       },
       "image": null,
@@ -8075,7 +8802,7 @@
       "name": "MuiTabs",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.338Z",
-      "updated_at": "2020-06-15T22:31:59.581Z",
+      "updated_at": "2020-08-11T14:47:44.728Z",
       "id": 842304,
       "schema": {
         "rootClass": {
@@ -8898,7 +9625,7 @@
       "name": "page",
       "display_name": null,
       "created_at": "2020-03-31T18:27:09.876Z",
-      "updated_at": "2020-07-02T20:27:02.648Z",
+      "updated_at": "2020-08-07T19:25:16.894Z",
       "id": 842340,
       "schema": {
         "seo": {
