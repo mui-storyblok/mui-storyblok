@@ -1,4 +1,5 @@
 MuiContactButton Examples:
+##### If both phone and email address provided, it will default to a phone call.
 
 ```js
 const phoneButton = [{
