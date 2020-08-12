@@ -39,9 +39,9 @@ MuiAccordionSummary.propTypes = {
     const components = ['MuiIcon'];
     return validComponents(props, propName, componentName, components, 1);
   },
-  /** MuiTypography */
+  /** MuiAccordionTypography */
   content(props, propName, componentName) {
-    const components = ['MuiTypography'];
+    const components = ['MuiAccordionTypography'];
     return validComponents(props, propName, componentName, components);
   },
 };
