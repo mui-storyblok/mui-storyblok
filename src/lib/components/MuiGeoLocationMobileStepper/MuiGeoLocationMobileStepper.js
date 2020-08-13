@@ -59,15 +59,11 @@ const MuiGeoLocationMobileStepper = ({
   };
 
   const onMouseEnter = () => {
-    if (autoplay) {
-      setState({ autoplay: false });
-    }
+    if (autoplay) setState({ autoplay: false });
   };
 
   const onMouseLeave = () => {
-    if (autoplay) {
-      setState({ autoplay: true });
-    }
+    if (autoplay) setState({ autoplay: true });
   };
 
   useSetGeoCode(geocode, tabs, setActiveStep);

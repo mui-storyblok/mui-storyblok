@@ -56,21 +56,15 @@ const MuiGeoLocationTabs = ({
     return handleChange({}, tabValue);
   };
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass, {
-    flexContainer: { justifyContent: 'space-around' },
-  });
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { flexContainer: { justifyContent: 'space-around' } });
   const flexClass = flexStyle();
 
   const onMouseEnter = () => {
-    if (autoplay) {
-      setState({ ...state, autoplay: false });
-    }
+    if (autoplay) setState({ ...state, autoplay: false });
   };
 
   const onMouseLeave = () => {
-    if (autoplay) {
-      setState({ ...state, autoplay: true });
-    }
+    if (autoplay) setState({ ...state, autoplay: true });
   };
 
   useSetGeoCode(geocode, tabs, setTabValue);
