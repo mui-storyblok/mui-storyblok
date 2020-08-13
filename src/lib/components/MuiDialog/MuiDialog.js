@@ -36,7 +36,7 @@ const MuiDialog = ({
 export default MuiDialog;
 
 MuiDialog.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** 'MuiDialogContent', 'MuiDialogActions' */
   content(props, propName, componentName) {
@@ -47,9 +47,9 @@ MuiDialog.propTypes = {
   dialogTitle(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['MuiDialogTitle'], 1);
   },
-  /** passed down from parent componet to hide or show Dialog */
+  /** passed down from parent component to hide or show Dialog */
   open: PropTypes.bool,
-  /** passed down from parent componet to hide or show Dialog */
+  /** passed down from parent component to hide or show Dialog */
   toggleDialog: PropTypes.func.isRequired,
 };
 
