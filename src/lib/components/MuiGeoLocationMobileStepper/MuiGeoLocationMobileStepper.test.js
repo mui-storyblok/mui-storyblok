@@ -2,44 +2,46 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import MuiGeoLocationMobileStepper from './MuiGeoLocationMobileStepper';
 
+const tabs = [{
+  component: 'MuiMobileTab',
+  tab: [{
+    component: 'MuiHeroHeader',
+    backgroundImageUrl: 'backgroundImageUrl.png',
+    content: [{
+      component: 'MuiGrid',
+      content: [{
+        component: 'MuiGridItem',
+        content: [{
+          component: 'MuiIcon',
+          iconName: 'android',
+        }],
+      }],
+    }],
+  }],
+},
+{
+  component: 'MuiMobileTab',
+  tab: [{
+    component: 'MuiHeroHeader',
+    backgroundImageUrl: 'backgroundImageUrl222.png',
+    content: [{
+      component: 'MuiGrid',
+      content: [{
+        component: 'MuiGridItem',
+        content: [{
+          component: 'MuiIcon',
+          iconName: 'menu',
+        }],
+      }],
+    }],
+  }],
+}];
+
 function setup() {
   const props = {
     autoplay: true,
     geocode: 'Colorado1234',
-    tabs: [{
-      component: 'MuiMobileTab',
-      tab: [{
-        component: 'MuiHeroHeader',
-        backgroundImageUrl: 'backgroundImageUrl.png',
-        content: [{
-          component: 'MuiGrid',
-          content: [{
-            component: 'MuiGridItem',
-            content: [{
-              component: 'MuiIcon',
-              iconName: 'android',
-            }],
-          }],
-        }],
-      }],
-    },
-    {
-      component: 'MuiMobileTab',
-      tab: [{
-        component: 'MuiHeroHeader',
-        backgroundImageUrl: 'backgroundImageUrl222.png',
-        content: [{
-          component: 'MuiGrid',
-          content: [{
-            component: 'MuiGridItem',
-            content: [{
-              component: 'MuiIcon',
-              iconName: 'menu',
-            }],
-          }],
-        }],
-      }],
-    }],
+    tabs: [...tabs],
 
     nextBtn: [{
       component: 'MuiButton',
