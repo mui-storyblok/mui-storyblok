@@ -50,7 +50,6 @@ const MuiAppBar = ({
   };
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
-  console.log(content);
 
   return (
     <>
