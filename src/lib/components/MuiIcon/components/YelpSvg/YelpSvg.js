@@ -2,7 +2,7 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 /**
- * YelpSvg takes the same props of an MuiIcon and renders a the Facebook svg
+ * YelpSvg takes the same props of an MuiIcon and renders a the Yelp svg
  */
 
 const YelpSvg = props => (

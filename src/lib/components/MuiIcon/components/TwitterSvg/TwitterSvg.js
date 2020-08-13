@@ -2,7 +2,7 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 /**
- * Twitter takes the same props of an MuiIcon and renders a the Facebook svg
+ * Twitter takes the same props of an MuiIcon and renders a the Twitter svg
  */
 
 const TwitterSvg = props => (
