@@ -33,6 +33,7 @@ const MuiGeoLocationMobileStepper = ({
     MuiButton,
     MuiHeroHeader,
   };
+  console.log(tabs);
 
   const [state, setState] = useState({ autoplay });
   const [activeStep, setActiveStep] = useState(0);

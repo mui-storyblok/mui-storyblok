@@ -4651,7 +4651,7 @@
       "name": "MuiGrid",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.919Z",
-      "updated_at": "2020-06-24T16:15:27.067Z",
+      "updated_at": "2020-08-13T15:45:46.825Z",
       "id": 842335,
       "schema": {
         "alignContent": {
@@ -4887,7 +4887,8 @@
             "MuiCircularProgress",
             "MuiGridList",
             "MuiHeroHeader",
-            "MuiNotificationBanner"
+            "MuiNotificationBanner",
+            "MuiGeoLocationMobileStepper"
           ],
           "pos": 12,
           "required": true
