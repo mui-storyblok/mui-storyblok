@@ -34,4 +34,14 @@ describe('<MuiGeoLocationTabs />', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });
+
+  it('should handleChangeIndex and change the tab value', () => {
+    const { comp } = setup();
+    const tabValue = comp.find('ForwardRef(Tab)').first().prop('value');
+    expect(tabValue).toEqual(0);
+    const reactSwipeable = comp.find('ReactSwipableView').first();
+    reactSwipeable.prop('onChangeIndex')();
+    const tabValue2 = comp.find('ForwardRef(Tab)').at(1).prop('value');
+    expect(tabValue2).toEqual(1);
+  });
 });
