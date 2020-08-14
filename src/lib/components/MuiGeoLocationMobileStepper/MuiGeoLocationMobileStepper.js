@@ -1,4 +1,4 @@
-import React, { createElement, useState } from 'react';
+import React, { createElement, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import MobileStepper from '@material-ui/core/MobileStepper';
 import SwipeableViews from 'react-swipeable-views';
@@ -26,7 +26,7 @@ const MuiGeoLocationMobileStepper = ({
   variant,
   autoplay,
   interval,
-  geocode,
+  googleApiKey,
 }) => {
   const components = {
     MuiIconButton,
@@ -35,8 +35,13 @@ const MuiGeoLocationMobileStepper = ({
   };
   const [state, setState] = useState({ autoplay });
   const [activeStep, setActiveStep] = useState(0);
+  const [googleKey, setGoogleApiKey] = useState(googleApiKey);
 
   const maxSteps = tabs.length;
+
+  useEffect(() => {
+    setGoogleApiKey(googleApiKey);
+  }, [googleApiKey]);
 
   const handleNext = () => {
     const nextStep = activeStep + 1;
@@ -66,7 +71,7 @@ const MuiGeoLocationMobileStepper = ({
     if (autoplay) setState({ autoplay: true });
   };
 
-  useSetGeoCode(geocode, tabs, setActiveStep);
+  useSetGeoCode(true, tabs, setActiveStep, googleKey);
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
@@ -149,8 +154,9 @@ MuiGeoLocationMobileStepper.propTypes = {
   autoplay: PropTypes.bool,
   /** interval to incroment tabs: time in millaseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
-  geocode: PropTypes.bool,
+
+  /** key for googleApisKey to use geocode */
+  googleApiKey: PropTypes.string,
   /** MuiMobileTab */
   tabs(props, propName, componentName) {
     const components = ['MuiMobileTab'];
@@ -192,8 +198,8 @@ MuiGeoLocationMobileStepper.defaultProps = {
   variant: 'dots',
   autoplay: false,
   interval: 3000,
-  geocode: true,
   nextBtn: [],
   backBtn: [],
   tabs: [],
+  googleApiKey: '',
 };
