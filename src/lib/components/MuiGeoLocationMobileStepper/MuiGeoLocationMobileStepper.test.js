@@ -4,6 +4,7 @@ import MuiGeoLocationMobileStepper from './MuiGeoLocationMobileStepper';
 
 const tabs = [{
   component: 'MuiMobileTab',
+  geocodeState: 'CO',
   tab: [{
     component: 'MuiHeroHeader',
     backgroundImageUrl: 'backgroundImageUrl.png',
@@ -21,6 +22,7 @@ const tabs = [{
 },
 {
   component: 'MuiMobileTab',
+  geocodeState: 'CO',
   tab: [{
     component: 'MuiHeroHeader',
     backgroundImageUrl: 'backgroundImageUrl222.png',
@@ -37,12 +39,11 @@ const tabs = [{
   }],
 }];
 
-function setup() {
+function setup(googleApiKey = '1234') {
   const props = {
     autoplay: true,
-    geocode: 'Colorado1234',
+    googleApiKey,
     tabs: [...tabs],
-
     nextBtn: [{
       component: 'MuiButton',
       buttonText: 'next',
