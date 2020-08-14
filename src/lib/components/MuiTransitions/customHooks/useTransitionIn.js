@@ -7,7 +7,7 @@ const useTransitionIn = (time) => {
     setTimeout(() => {
       setTransition(prev => !prev);
     }, +time);
-  }, []);
+  }, [time]);
 
   return transition;
 };
