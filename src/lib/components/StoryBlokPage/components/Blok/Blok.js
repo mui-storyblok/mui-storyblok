@@ -6,6 +6,7 @@ import MuiTabs from '../../../MuiTabs/MuiTabs';
 import MuiHeroHeader from '../../../MuiHeroHeader/MuiHeroHeader';
 import MuiAppBar from '../../../MuiAppBar/MuiAppBar';
 import MuiBottomNavigation from '../../../MuiBottomNavigation/MuiBottomNavigation';
+import MuiGeoLocationTabs from '../../../MuiGeoLocationTabs/MuiGeoLocationTabs';
 import { renderComponents } from '../../../../utils/customComponents';
 
 export const Blok = ({
@@ -18,6 +19,7 @@ export const Blok = ({
     MuiHeroHeader,
     MuiAppBar,
     MuiBottomNavigation,
+    MuiGeoLocationTabs,
   };
 
   return (
