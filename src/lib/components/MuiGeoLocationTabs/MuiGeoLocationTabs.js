@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
@@ -29,7 +29,7 @@ const MuiGeoLocationTabs = ({
   tabs,
   autoplay,
   interval,
-  geocode,
+  googleApiKey,
   height,
   justifyContent,
 }) => {
@@ -40,9 +40,14 @@ const MuiGeoLocationTabs = ({
 
   const [state, setState] = useState({ autoplay, tabsLength: tabs.length });
   const [tabValue, setTabValue] = useState(0);
+  const [googleKey, setGoogleApiKey] = useState(googleApiKey);
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
+
+  useEffect(() => {
+    setGoogleApiKey(googleApiKey);
+  }, [googleApiKey]);
 
   const flexStyle = makeStyles(() => ({
     flexContainer: { justifyContent },
@@ -67,7 +72,7 @@ const MuiGeoLocationTabs = ({
     if (autoplay) setState({ ...state, autoplay: true });
   };
 
-  useSetGeoCode(geocode, tabs, setTabValue);
+  useSetGeoCode(true, tabs, setTabValue, googleKey);
 
   return (
     <div
@@ -211,8 +216,8 @@ MuiGeoLocationTabs.propTypes = {
   /** interval to increment tabs: time in milliseconds */
   interval: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-  /** requires geocodeState if true tabs will geolocate to geocodeState if user is in that state */
-  geocode: PropTypes.bool,
+  /** key for googleApisKey to use geocode */
+  googleApiKey: PropTypes.string,
 
   /** MuiTab */
   tabs(props, propName, componentName) {
@@ -231,7 +236,7 @@ MuiGeoLocationTabs.defaultProps = {
   variant: 'standard',
   autoplay: false,
   interval: 3000,
-  geocode: true,
   height: '300px',
   justifyContent: 'center',
+  googleApiKey: '',
 };

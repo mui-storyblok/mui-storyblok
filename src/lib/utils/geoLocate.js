@@ -13,9 +13,9 @@ export const setGeoLocation = (json, tabs) => {
   }
 };
 
-export const successCallback = async (data, tabs) => {
+export const successCallback = async (data, tabs, googleApiKey) => {
   try {
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.coords.latitude},${data.coords.longitude}&key=${window.muistoryblokgoogleapis}`;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${data.coords.latitude},${data.coords.longitude}&key=${googleApiKey}`;
     const res = await window.fetch(url);
     const json = await res.json();
     return setGeoLocation(json, tabs);
@@ -24,10 +24,10 @@ export const successCallback = async (data, tabs) => {
   }
 };
 
-export const geoLocate = async (tabs) => {
+export const geoLocate = async (tabs, googleApiKey) => {
   if (window.navigator.geolocation) {
     await window.navigator.geolocation.getCurrentPosition(
-      data => successCallback(data, tabs),
+      data => successCallback(data, tabs, googleApiKey),
       errorCallback,
       {
         enableHighAccuracy: true,
@@ -38,10 +38,10 @@ export const geoLocate = async (tabs) => {
   }
 };
 
-export const useSetGeoCode = (geocode, tabs, setTabValue) => {
+export const useSetGeoCode = (geocode, tabs, setTabValue, googleApiKey) => {
   useEffect(() => {
     (async () => {
-      const index = await geoLocate(tabs);
+      const index = await geoLocate(tabs, googleApiKey);
       setTabValue(index || 0);
     })();
   }, [geocode]);

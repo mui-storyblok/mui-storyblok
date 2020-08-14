@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GoogleApis from '../../utils/GoogleApis';
 import StoryBlokPage from '../StoryBlokPage/StoryBlokPage';
 import { pushToCustomIcons } from '../../utils/customIcons';
 import { pushToCustomComponents } from '../../utils/customComponents';
@@ -10,14 +9,11 @@ export const MuiStoryblok = ({
   theme,
   accessToken,
   version,
-  googleapisKey,
   useObjectTheme,
   iconArray,
   customComponents,
   customLoader,
 }) => {
-  // set GoogleApis instance to window to use in GeocodeTabs
-  if (googleapisKey) window.muistoryblokgoogleapis = new GoogleApis(googleapisKey);
   // If a custom loader is passed down push into customLoader variable
   if (customLoader) setCustomLoader(customLoader);
   pushToCustomIcons(iconArray);
@@ -42,8 +38,6 @@ MuiStoryblok.propTypes = {
   version: PropTypes.string,
   /** access key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
-  /** key for google apis Key to use geocode if here will make  */
-  googleapisKey: PropTypes.string,
   /** Custom App Loader for storyblok */
   customLoader: PropTypes.element,
   /**
@@ -82,7 +76,6 @@ MuiStoryblok.propTypes = {
 MuiStoryblok.defaultProps = {
   theme: {},
   version: 'draft',
-  googleapisKey: '',
   useObjectTheme: false,
   iconArray: [],
   customComponents: [],
