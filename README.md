@@ -78,6 +78,16 @@ Once env is configured run cmd:
 `npx migrate-storyblok-components`
 This will add all components to your storyblok account.
 
+### Custom Components in MuiStoryblok
+###### Usage:
+* Create a custom component.
+* Pass custom component down as prop to `<MuiStoryblok />`.
+```js
+<MuiStoryblok
+  customComponents={[{ componentName: 'NameOfCustomComp', Component: **CompName**, props: {} }]}
+/>
+```
+* Create Custom Component in Storyblok space.
 
 ## License
 

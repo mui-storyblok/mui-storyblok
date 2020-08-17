@@ -1,3 +1,5 @@
+##### MuiList has the ability to render custom components.
+
 MuiList example:
 
 ```js

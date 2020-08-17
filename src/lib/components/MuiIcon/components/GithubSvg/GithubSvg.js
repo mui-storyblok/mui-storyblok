@@ -2,7 +2,7 @@ import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
 /**
- * GithubSvg takes the same props of an MuiIcon and renders a the Facebook svg
+ * GithubSvg takes the same props of an MuiIcon and renders the Github svg
  */
 
 const GithubSvg = props => (

@@ -6,6 +6,7 @@ import {
   validComponents,
   muiStringProp,
 } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import MuiList from '../MuiList/MuiList';
 import MuiButton from '../MuiButton/MuiButton';
 
@@ -43,9 +44,7 @@ const MuiButtonDrawer = ({
         variant={variant}
         onClose={e => handleToggleDrawer(e)}
       >
-        {content.map((item, index) => (
-          <MuiList {...item} key={index} />
-        ))}
+        {content.map((component, key) => renderComponents({ MuiList }, component, key))}
       </Drawer>
     </>
   );

@@ -1,3 +1,5 @@
+##### MuiTableHead has the ability to render custom components.
+
 MuiTableHead small example:
 
 ```js

@@ -84,7 +84,7 @@ IconButton.propTypes = {
   /** MuiIcon Allowed maximum: 1 */
   icon(props, propName, componentName) {
     let error;
-    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
+    error = componentsRequired(props, propName, componentName, 1);
     if (error) return error;
     const components = ['MuiIcon'];
     error = validComponents(props, propName, componentName, components);

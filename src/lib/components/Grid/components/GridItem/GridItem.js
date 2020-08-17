@@ -1,8 +1,9 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../../../utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const GridItem = ({
   alignContent,
@@ -39,10 +40,9 @@ const GridItem = ({
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
     >
-      {content.length > 0 && content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.length > 0
+       && content.map((component, key) => renderComponents(components, component, key))
+      }
     </Grid>
   );
 };
@@ -154,12 +154,12 @@ GridItem.propTypes = {
 
   /**
    * Content passed to from api
+   * can also render any customCompnent passed in
    * will render any component in components prop
    */
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-
   /** prop passed down from parent not in storyblok */
   sizeGrid: PropTypes.func.isRequired,
 };

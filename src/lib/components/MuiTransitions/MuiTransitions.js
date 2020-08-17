@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import StoryBlok from '../../utils/Storyblok';
 import MuiCollapse from './components/MuiCollapse/MuiCollapse';
@@ -7,6 +7,7 @@ import MuiFade from './components/MuiFade/MuiFade';
 import MuiZoom from './components/MuiZoom/MuiZoom';
 import MuiSlide from './components/MuiSlide/MuiSlide';
 import { validComponentsRequired } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 
 const MuiTransitions = ({
   content,
@@ -23,10 +24,7 @@ const MuiTransitions = ({
 
   return (
     <div className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key)) }
     </div>
   );
 };

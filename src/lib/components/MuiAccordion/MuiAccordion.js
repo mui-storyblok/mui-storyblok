@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 import { Accordion } from '@material-ui/core';
-import { validComponents, componentsRequired, dimensionProp } from '../../utils/customProps';
+import { dimensionProp, validComponentsRequired } from '../../utils/customProps';
 import Storyblok from '../../utils/Storyblok';
 import MuiAccordionSummary from './components/MuiAccordionSummary/MuiAccordionSummary';
 import MuiAccordionDetails from './components/MuiAccordionDetails/MuiAccordionDetails';
@@ -49,23 +49,13 @@ MuiAccordion.propTypes = {
   },
   /** MuiAccordionSummary Allowed maximum: 1 */
   accordionSummary(props, propName, componentName) {
-    let error;
-    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
-    if (error) return error;
     const components = ['MuiAccordionSummary'];
-    error = validComponents(props, propName, componentName, components);
-    if (error) return error;
-    return undefined;
+    return validComponentsRequired(props, propName, componentName, components, 1);
   },
   /** MuiAccordionDetails Allowed maximum: 1 */
   accordionDetails(props, propName, componentName) {
-    let error;
-    error = componentsRequired(props, propName, componentName, 1); if (error) return error;
-    if (error) return error;
     const components = ['MuiAccordionDetails'];
-    error = validComponents(props, propName, componentName, components);
-    if (error) return error;
-    return undefined;
+    return validComponentsRequired(props, propName, componentName, components, 1);
   },
 };
 

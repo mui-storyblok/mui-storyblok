@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 import { AccordionDetails } from '@material-ui/core';
 import Storyblok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 import MuiAccordionTypography from '../MuiAccordionTypography/MuiAccordionTypography';
 
 const MuiAccordionDetails = ({ rootClass, content }) => {
+  const components = {
+    MuiAccordionTypography,
+  };
+
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
     <AccordionDetails
       className={styles.root}
     >
-      <MuiAccordionTypography {...content[0]} />
+      {content.map((component, key) => renderComponents(components, component, key))}
     </AccordionDetails>
   );
 };

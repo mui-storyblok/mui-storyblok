@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 import Storyblok from '../../utils/Storyblok';
@@ -6,6 +6,7 @@ import { validComponents, validComponentsRequired } from '../../utils/customProp
 import MuiDialogActions from './components/MuiDialogActions/MuiDialogActions';
 import MuiDialogTitle from './components/MuiDialogTitle/MuiDialogTitle';
 import MuiDialogContent from './components/MuiDialogContent/MuiDialogContent';
+import { renderComponents } from '../../utils/customComponents';
 
 const MuiDialog = ({
   open,
@@ -27,10 +28,7 @@ const MuiDialog = ({
       open={open}
     >
       <MuiDialogTitle {...title} toggleDialog={toggleDialog} />
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </Dialog>
   );
 };
@@ -38,7 +36,7 @@ const MuiDialog = ({
 export default MuiDialog;
 
 MuiDialog.propTypes = {
-  /** stroyblok multiselect of css classes */
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** 'MuiDialogContent', 'MuiDialogActions' */
   content(props, propName, componentName) {
@@ -49,9 +47,9 @@ MuiDialog.propTypes = {
   dialogTitle(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['MuiDialogTitle'], 1);
   },
-  /** passed down from parent componet to hide or show Dialog */
+  /** passed down from parent component to hide or show Dialog */
   open: PropTypes.bool,
-  /** passed down from parent componet to hide or show Dialog */
+  /** passed down from parent component to hide or show Dialog */
   toggleDialog: PropTypes.func.isRequired,
 };
 

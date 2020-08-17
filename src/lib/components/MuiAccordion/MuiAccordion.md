@@ -5,13 +5,13 @@ MuiAccordion example:
        component: 'MuiAccordionSummary',
        expandIcon: [{
            component: 'MuiIcon',
-           iconName: 'star',
+           iconName: 'instagram',
        }],
         content: [{
-            component: 'MuiTypography',
+            component: 'MuiAccordionTypography',
             content: [{
                 component: 'MuiText',
-                text: 'something cool',
+                content: 'Expand ME!',
             }],
         }],
     }];
@@ -19,10 +19,10 @@ MuiAccordion example:
     const accordionDetails = [{
         component: 'MuiAccordionDetails',
         content: [{
-            component: 'MuiTypography',
+            component: 'MuiAccordionTypography',
             content: [{
                 component: 'MuiText',
-                text: 'lets talk more about that',
+                content: 'lets talk more about that',
             }],
         }],
     }];

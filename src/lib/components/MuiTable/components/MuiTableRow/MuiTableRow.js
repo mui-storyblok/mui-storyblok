@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TableRow } from '@material-ui/core';
 import MuiTableCell from './components/MuiTableCell/MuiTableCell';
 import StoryBlok from '../../../../utils/Storyblok';
+import { renderComponents } from '../../../../utils/customComponents';
 import { validComponents } from '../../../../utils/customProps';
 
 const MuiTableRow = ({
@@ -19,7 +20,7 @@ const MuiTableRow = ({
       hover={hover}
       selected={selected}
     >
-      {content.map((item, index) => <MuiTableCell {...item} key={index} />)}
+      {content.map((component, key) => renderComponents({ MuiTableCell }, component, key))}
     </TableRow>
   );
 };

@@ -37,6 +37,11 @@ Social Icons for MuiIcon examples:
 * iconName = 'bbb'
 * iconName = 'google'
 * iconName = 'linkedin'
+* iconName = 'youtube'
+* iconName = 'instagram'
+* iconName = 'twitter'
+* iconName = 'yelp'
+* iconName = 'github'
 
 ```js
   <div styles={{ display: 'flex', flexDirection: 'row' }}>
@@ -59,7 +64,32 @@ Social Icons for MuiIcon examples:
       iconName='linkedin'
       color='inherit'
       fontSize='large'
-      rootClass={['margin-left: 20px']}
+      rootClass={['margin-left: 10px', 'margin-right: 10px']}
+    />
+    <MuiIcon
+      iconName='youtube'
+      color='inherit'
+      fontSize='large'
+    />
+    <MuiIcon
+      iconName='instagram'
+      color='secondary'
+      fontSize='large'
+    />
+    <MuiIcon
+      iconName='twitter'
+      color='primary'
+      fontSize='large'
+    />
+    <MuiIcon
+      iconName='yelp'
+      color='secondary'
+      fontSize='large'
+    />
+    <MuiIcon
+      iconName='github'
+      color='inherit'
+      fontSize='large'
     />
   </div>
 ```

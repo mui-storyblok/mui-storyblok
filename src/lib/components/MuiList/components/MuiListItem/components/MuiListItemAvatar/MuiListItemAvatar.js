@@ -1,9 +1,10 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import { validComponentsRequired } from '../../../../../../utils/customProps';
 import Storyblok from '../../../../../../utils/Storyblok';
+import { renderComponents } from '../../../../../../utils/customComponents';
 import MuiIcon from '../../../../../MuiIcon/MuiIcon';
 
 /**
@@ -23,10 +24,7 @@ export const MuiListItemAvatar = ({
   return (
     <ListItemAvatar className={styles.root}>
       <Avatar>
-        {content.map((item, index) => createElement(
-          components[item.component],
-          Object.assign(item, { key: index }),
-        ))}
+        {content.map((component, key) => renderComponents(components, component, key))}
       </Avatar>
     </ListItemAvatar>
   );

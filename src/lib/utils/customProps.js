@@ -29,8 +29,7 @@ export const muiGridProp = (props, propName, componentName) => {
    *  */
   if (!['string', 'number', 'boolean'].includes(typeof props[propName])) {
     return new Error(
-      `${componentName}: ${propName} must be of type "string", "number" or "boolean".
-      received ${typeof props[propName]} of ${props[propName]}`,
+      `${componentName}: ${propName} must be of type "string", "number" or "boolean". received ${typeof props[propName]} of ${props[propName]}`,
     );
   }
 
@@ -41,9 +40,7 @@ export const muiGridProp = (props, propName, componentName) => {
 
   if (!validProps.includes(props[propName])) {
     return new Error(
-      `${componentName}: ${props[propName]} is a invalid Prop for ${propName}.
-          Must be string value of ${validProps.toString()}
-        `,
+      `${componentName}: ${props[propName]} is a invalid Prop for ${propName}. Must be string value of ${validProps.toString()}`,
     );
   }
 
@@ -118,7 +115,7 @@ export const dimensionProp = (props, propName, componentName) => {
         `${componentName}: ${propName} has to be one of these units of size px, em, %, vw`,
       );
     }
-  } else if (['height', 'width'].includes(propName)) {
+  } else if (!['height', 'width'].includes(propName)) {
     error = new Error(
       'dimensionProp needs to be used on proptype with name height or width',
     );
@@ -138,7 +135,6 @@ export const muiDimensionProp = (props, propName, componentName) => {
   ) {
     error = dimensionProp(props, propName, componentName);
   }
-  // error = dimensionProp(props, propName, componentName);
   return error;
 };
 

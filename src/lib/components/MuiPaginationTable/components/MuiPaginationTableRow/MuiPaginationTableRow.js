@@ -1,9 +1,9 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TableRow } from '@material-ui/core';
 import MuiTableCell from '../../../MuiTable/components/MuiTableRow/components/MuiTableCell/MuiTableCell';
 import { validComponents } from '../../../../utils/customProps';
-
+import { renderComponents } from '../../../../utils/customComponents';
 import StoryBlok from '../../../../utils/Storyblok';
 
 const MuiPaginationTableRow = ({
@@ -24,10 +24,7 @@ const MuiPaginationTableRow = ({
       hover={hover}
       selected={selected}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </TableRow>
   );
 };

@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import CardActions from '@material-ui/core/CardActions';
 import MuiIconButtonRedirect from '../../../MuiIconButtonRedirect/MuiIconButtonRedirect';
@@ -13,6 +13,7 @@ import MuiAccordion from '../../../MuiAccordion/MuiAccordion';
 import MuiAudioPlayer from '../../../MuiAudioPlayer/MuiAudioPlayer';
 import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import Storyblok from '../../../../utils/Storyblok';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const MuiCardActions = ({
   content,
@@ -40,10 +41,7 @@ const MuiCardActions = ({
       className={styles.root}
       disableSpacing={disableSpacing}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </CardActions>
   );
 };
@@ -60,6 +58,7 @@ MuiCardActions.propTypes = {
   disableSpacing: PropTypes.bool,
   /**
    * Content passed to render
+   * can also render any customCompnent passed in
    * components:
     MuiIconButtonRedirect,
     MuiIconButtonHref,

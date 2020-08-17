@@ -1,0 +1,1 @@
+##### MuiDialogContent has the ability to render custom components.

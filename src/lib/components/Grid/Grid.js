@@ -1,9 +1,10 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import MuiGrid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
 import sizeGrid from '../../utils/sizeGrid';
 import { muiStringProp } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 import GridItem from './components/GridItem/GridItem';
 
 const Grid = ({
@@ -31,22 +32,13 @@ const Grid = ({
       wrap={wrap}
       spacing={Number(spacing)}
     >
-      {content.map((item, index) => {
-        if (gridRender.includes(item.component)) {
-          return (
-            createElement(
-              components[item.component],
-              Object.assign(item, {
-                key: index,
-                sizeGrid,
-                components,
-              }),
-            )
-          );
+      {content.map((component, index) => {
+        if (gridRender.includes(component.component)) {
+          return renderComponents(components, { ...component, sizeGrid }, index);
         }
         return (
           <GridItem
-            {...item}
+            {...component}
             key={index}
             components={components}
             sizeGrid={sizeGrid}

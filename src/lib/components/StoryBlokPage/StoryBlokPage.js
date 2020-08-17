@@ -1,4 +1,4 @@
-import React, { Component, createElement } from 'react';
+import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
@@ -8,6 +8,7 @@ import Blok from './components/Blok/Blok';
 import MuiTransitions from '../MuiTransitions/MuiTransitions';
 import styles from './StoryBlokPage.module.scss';
 import downloadSbAsset from '../../utils/json-sb-asset';
+import { renderComponents } from '../../utils/customComponents';
 
 export class StoryBlokPage extends Component {
   state = {
@@ -107,7 +108,7 @@ export class StoryBlokPage extends Component {
           <div className={styles.container}>
             {this.state.story && this.state.story.map((item, index) => (
               <div key={index}>
-                {createElement(this.components[item.component], item)}
+                {renderComponents(this.components, item, index)}
               </div>
             ))}
           </div>

@@ -10,8 +10,6 @@ import { validComponentsRequired } from '../../utils/customProps';
 
 
 const GoogleConversions = ({ sendTo, aWConversionID, button }) => {
-
-
   const components = {
     MuiButtonDownload,
     MuiButtonHref,

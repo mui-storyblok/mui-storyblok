@@ -1,7 +1,8 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from '@material-ui/core';
 import Storyblok from '../../utils/Storyblok';
+import { renderComponents } from '../../utils/customComponents';
 import {
   validComponents,
   dimensionProp,
@@ -38,10 +39,7 @@ const MuiCard = ({
       elevation={+elevation}
       square={square}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </Card>
   );
 };
@@ -89,6 +87,7 @@ MuiCard.propTypes = {
 
   /**
    * Content passed to render
+   * can also render any customCompnent passed in
    * components:  MuiCardActions,
     MuiCardContent,
     MuiCardHeader,

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Icon } from '@material-ui/core';
+import { renderComponents } from '../../utils/customComponents';
 import { validComponents, muiStringProp } from '../../utils/customProps';
 import MuiTypography from '../MuiTypography/MuiTypography';
 import Storyblok from '../../utils/Storyblok';
@@ -26,7 +27,7 @@ export const MuiNotificationBanner = ({
           position="fixed"
         >
           <div style={{ position: 'relative' }}>
-            {content.map((item, index) => <MuiTypography {...item} key={index} />)}
+            {content.map((component, key) => renderComponents({ MuiTypography }, component, key))}
             <Icon
               onClick={() => handleClose()}
               style={{

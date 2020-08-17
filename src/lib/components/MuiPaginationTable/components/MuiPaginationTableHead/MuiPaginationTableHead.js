@@ -1,8 +1,9 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TableHead } from '@material-ui/core';
 import MuiPaginationTableRow from '../MuiPaginationTableRow/MuiPaginationTableRow';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 import StoryBlok from '../../../../utils/Storyblok';
 
 const MuiPaginationTableHead = ({
@@ -16,10 +17,7 @@ const MuiPaginationTableHead = ({
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   return (
     <TableHead className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </TableHead>
   );
 };

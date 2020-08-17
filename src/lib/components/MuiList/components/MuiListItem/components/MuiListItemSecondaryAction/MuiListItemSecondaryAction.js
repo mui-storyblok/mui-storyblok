@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Storyblok from '../../../../../../utils/Storyblok';
@@ -7,6 +7,7 @@ import MuiIconButtonRedirect from '../../../../../MuiIconButtonRedirect/MuiIconB
 import MuiIconButtonHref from '../../../../../MuiIconButtonHref/MuiIconButtonHref';
 import MuiIconButtonDownload from '../../../../../MuiIconButtonDownload/MuiIconButtonDownload';
 import MuiIconButtonDialog from '../../../../../MuiIconButtonDialog/MuiIconButtonDialog';
+import { renderComponents } from '../../../../../../utils/customComponents';
 import MuiAccordion from '../../../../../MuiAccordion/MuiAccordion';
 import GoogleConversion from '../../../../../GoogleConversions/GoogleConversions';
 
@@ -31,10 +32,7 @@ export const MuiListItemSecondaryAction = ({
 
   return (
     <ListItemSecondaryAction className={styles.root}>
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </ListItemSecondaryAction>
   );
 };

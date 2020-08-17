@@ -6,22 +6,22 @@ const dialog = [{
     content: [{
       component: 'MuiDialogContent',
       content: [{
-        component: 'MuiTypography',
+        component: 'MuiDialogContentTypography',
         content: [{
           component: 'MuiText',
-          text: 'text',
+          content: 'Dialog Content Typography',
         }],
       }],
     }],
     dialogTitle: [{
       component: 'MuiDialogTitle',
-      text: 'text',
+      text: 'Dialog Title',
     }],
   }];
 
 const button = [{
     component: 'MuiButton',
-    buttonText: 'buttonText',
+    buttonText: 'Open Dialog',
 }];
 
   <MuiButtonDialog

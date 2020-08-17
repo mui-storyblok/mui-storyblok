@@ -10,10 +10,6 @@ import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
 import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 import { validComponents } from '../../../../utils/customProps';
 
-/**
- * MuiAccordionTypography
- */
-
 export const MuiAccordionTypography = (props) => {
   const components = {
     MuiIcon,

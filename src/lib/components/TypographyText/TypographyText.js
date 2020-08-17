@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Storyblok from '../../utils/Storyblok';
@@ -6,6 +6,7 @@ import {
   dimensionProp,
   muiStringProp,
 } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 
 /**
  * TypographyText
@@ -48,7 +49,7 @@ export const TypographyText = ({
             </Typography>
           );
         }
-        return createElement(components[item.component], Object.assign(item, { key: index }));
+        return renderComponents(components, item, index);
       })}
     </Typography>
   );

@@ -1,4 +1,4 @@
-import React, { createElement } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import DialogActions from '@material-ui/core/DialogActions';
 import { validComponents } from '../../../../utils/customProps';
@@ -9,6 +9,7 @@ import MuiIconButtonDownload from '../../../MuiIconButtonDownload/MuiIconButtonD
 import MuiButtonRedirect from '../../../MuiButtonRedirect/MuiButtonRedirect';
 import MuiButtonHref from '../../../MuiButtonHref/MuiButtonHref';
 import MuiButtonDownload from '../../../MuiButtonDownload/MuiButtonDownload';
+import { renderComponents } from '../../../../utils/customComponents';
 import GoogleConversions from '../../../GoogleConversions/GoogleConversions';
 
 const MuiDialogActions = ({
@@ -31,10 +32,7 @@ const MuiDialogActions = ({
     <DialogActions
       className={styles.root}
     >
-      {content.map((item, index) => createElement(
-        components[item.component],
-        Object.assign(item, { key: index }),
-      ))}
+      {content.map((component, key) => renderComponents(components, component, key))}
     </DialogActions>
   );
 };

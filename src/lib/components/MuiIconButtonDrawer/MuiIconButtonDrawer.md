@@ -1,3 +1,5 @@
+##### MuiIconButtonDrawer has the ability to render custom components.
+
 MuiIconButtonDrawer Example:
 
 ```js

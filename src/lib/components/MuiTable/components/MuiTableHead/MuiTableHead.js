@@ -4,6 +4,7 @@ import { TableHead } from '@material-ui/core';
 import MuiTableRow from '../MuiTableRow/MuiTableRow';
 import StoryBlok from '../../../../utils/Storyblok';
 import { validComponents } from '../../../../utils/customProps';
+import { renderComponents } from '../../../../utils/customComponents';
 
 const MuiTableHead = ({
   rootClass,
@@ -13,7 +14,7 @@ const MuiTableHead = ({
 
   return (
     <TableHead className={styles.root}>
-      {content.map((item, index) => <MuiTableRow {...item} key={index} />)}
+      {content.map((component, key) => renderComponents({ MuiTableRow }, component, key))}
     </TableHead>
   );
 };
