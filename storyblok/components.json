@@ -4,7 +4,7 @@
       "name": "Blok",
       "display_name": "",
       "created_at": "2020-03-31T18:27:08.530Z",
-      "updated_at": "2020-08-05T15:26:48.461Z",
+      "updated_at": "2020-08-14T17:14:40.667Z",
       "id": 842333,
       "schema": {
         "only": {
@@ -43,7 +43,8 @@
             "MuiAppBar",
             "MuiBottomNavigation",
             "MuiTabs",
-            "LoginComp"
+            "LoginComp",
+            "MuiGeoLocationTabs"
           ]
         }
       },
@@ -4358,7 +4359,7 @@
       "name": "MuiGeoLocationMobileStepper",
       "display_name": null,
       "created_at": "2020-08-11T15:28:16.162Z",
-      "updated_at": "2020-08-11T18:10:59.905Z",
+      "updated_at": "2020-08-14T17:13:29.889Z",
       "id": 1051356,
       "schema": {
         "rootClass": {
@@ -4444,6 +4445,10 @@
             "MuiIconButton"
           ],
           "required": true
+        },
+        "googleApiKey": {
+          "type": "text",
+          "description": "Key for googleApisKey to use geocode"
         }
       },
       "image": null,
@@ -4460,7 +4465,7 @@
       "name": "MuiGeoLocationTabs",
       "display_name": null,
       "created_at": "2020-08-11T14:46:18.673Z",
-      "updated_at": "2020-08-11T16:56:05.370Z",
+      "updated_at": "2020-08-14T17:13:08.553Z",
       "id": 1051348,
       "schema": {
         "rootClass": {
@@ -4635,6 +4640,10 @@
           ],
           "description": "   * Justify content flex styling for MuiTabs.\n   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around",
           "default_value": "center"
+        },
+        "googleApiKey": {
+          "type": "text",
+          "description": "Key for googleApisKey to use geocode"
         }
       },
       "image": null,
