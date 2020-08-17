@@ -1,3 +1,5 @@
+##### MuiMenu has the ability to render custom components.
+
 MuiMenu example:
 
 ```js

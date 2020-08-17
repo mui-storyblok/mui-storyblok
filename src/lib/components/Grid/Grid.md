@@ -1,3 +1,5 @@
+##### MuiGrid has the ability to render custom components.
+
 MuiGrid available components:
 
 * MuiGridItem

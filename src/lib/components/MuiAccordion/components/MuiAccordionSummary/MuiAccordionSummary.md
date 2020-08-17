@@ -1,3 +1,5 @@
+##### MuiAccordionSummary has the ability to render custom components.
+
 MuiAccordionSummary Example:
 
 ```js

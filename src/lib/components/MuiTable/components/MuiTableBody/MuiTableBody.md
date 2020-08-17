@@ -1,3 +1,5 @@
+##### MuiTableBody has the ability to render custom components.
+
 MuiTableBody small example:
 
 ```js

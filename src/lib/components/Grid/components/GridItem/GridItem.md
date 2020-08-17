@@ -1,3 +1,5 @@
+##### MuiGridItem has the ability to render custom components.
+
 MuiGridItem available components:
 * MuiButtonRedirect
 * MuiCard

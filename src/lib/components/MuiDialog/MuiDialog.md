@@ -1,3 +1,5 @@
+##### MuiDialog has the ability to render custom components.
+
 MuiDialog Examples:
 
 ```js

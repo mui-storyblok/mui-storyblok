@@ -1,3 +1,5 @@
+##### MuiButtonDrawer has the ability to render custom components.
+
 MuiButtonDrawer Example:
 
 ```js

@@ -1,3 +1,5 @@
+##### MuiCardActions has the ability to render custom components.
+
 MuiCardActions Examples:
 
 ```js
