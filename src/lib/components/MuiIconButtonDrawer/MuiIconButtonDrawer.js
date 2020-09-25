@@ -10,7 +10,7 @@ import {
 import { renderComponents } from '../../utils/customComponents';
 import MuiList from '../MuiList/MuiList';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
-import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
+import MuiListDropdown from '../MuiListDropdown/MuiListDropdown';
 
 const MuiIconButtonDrawer = ({
   anchor,
@@ -97,7 +97,7 @@ MuiIconButtonDrawer.propTypes = {
    * MuiList
    */
   content(props, propName, componentName) {
-    const components = ['MuiList'];
+    const components = ['MuiList', 'MuiListDropdown'];
     return validComponents(props, propName, componentName, components);
   },
 };

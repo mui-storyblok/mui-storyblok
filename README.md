@@ -59,8 +59,15 @@ In your `.bash_profile` or `.bashrc` add two exports (remember to source it afte
 `export STORYBLOK_SPACE_ID="STORYBLOK_SPACE_ID"`
   - > [STORYBLOK_SPACE_ID DOCS ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
-### CLI Commands
 
+## Storyblok Command Line Interface 
+
+We are using the [Storyblok Command Line Interface  ](https://www.storyblok.com/docs/Guides/command-line-interface) and 
+need to log in before we can run the following cmds.
+ - install `npm i storyblok -g`
+ - run login `storyblok login` follow the props for email and password 
+
+### mui-sotryblok CLI Commands
 ###### For new Storyblok spaces
 Once env is configured run cmd:
 `npx migrate-new-mui-storyblok`

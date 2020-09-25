@@ -24,6 +24,7 @@ import GoogleConversions from '../GoogleConversions/GoogleConversions';
 import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
 import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import MuiGeoLocationMobileStepper from '../MuiGeoLocationMobileStepper/MuiGeoLocationMobileStepper';
+import MuiResponsiveDrawer from '../MuiResponsiveDrawer/MuiResponsiveDrawer';
 
 const MuiGrid = (props) => {
   const components = {
@@ -51,6 +52,7 @@ const MuiGrid = (props) => {
     MuiGeoLocationMobileStepper,
     MuiIconButtonDialog,
     MuiButtonDialog,
+    MuiResponsiveDrawer,
   };
 
   return (
