@@ -23,9 +23,11 @@ import MuiIconButtonDrawer from './components/MuiIconButtonDrawer/MuiIconButtonD
 import MuiIconButtonHref from './components/MuiIconButtonHref/MuiIconButtonHref';
 import MuiImage from './components/MuiImage/MuiImage';
 import MuiList from './components/MuiList/MuiList';
+import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
 import MuiMenu from './components/MuiMenu/MuiMenu';
 import MuiMobileStepper from './components/MuiMobileStepper/MuiMobileStepper';
 import MuiPaginationTable from './components/MuiPaginationTable/MuiPaginationTable';
+import MuiResponsiveDrawer from './components/MuiResponsiveDrawer/MuiResponsiveDrawer';
 import Pages, { MuiStoryblok } from './components/MuiStoryblok/MuiStoryblok';
 import MuiTable from './components/MuiTable/MuiTable';
 import MuiTabs from './components/MuiTabs/MuiTabs';
@@ -61,9 +63,11 @@ export {
   MuiIconButtonHref,
   MuiImage,
   MuiList,
+  MuiListDropdown,
   MuiMenu,
   MuiMobileStepper,
   MuiPaginationTable,
+  MuiResponsiveDrawer,
   MuiStoryblok,
   MuiTable,
   MuiTabs,

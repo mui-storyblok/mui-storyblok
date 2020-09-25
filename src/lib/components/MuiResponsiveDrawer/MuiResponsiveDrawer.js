@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
 import StoryBlok from '../../utils/Storyblok';
 import {
   validComponents,
-  validComponentsRequired,
   muiStringProp,
 } from '../../utils/customProps';
 import { renderComponents } from '../../utils/customComponents';
 import MuiList from '../MuiList/MuiList';
-import MuiIconButton from '../MuiIconButton/MuiIconButton';
 import MuiListDropdown from '../MuiListDropdown/MuiListDropdown';
 
-const MuiIconButtonDrawer = ({
+const MuiResponsiveDrawer = ({
   anchor,
   rootClass,
   elevation,
   variant,
-  icon,
   content,
+  only,
 }) => {
   const components = {
     MuiList,
@@ -28,42 +27,36 @@ const MuiIconButtonDrawer = ({
   let width = '100%';
   if (anchor === 'left' || anchor === 'right') width = '32vw';
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { minWidth: width });
-  const [isOpen, setOpen] = useState(false);
-
-  // eslint-disable-next-line no-multi-assign
-  const handleToggleDrawer = (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-    setOpen(!isOpen);
-  };
 
   return (
-    <>
-      <MuiIconButton {...icon[0]} onClick={e => handleToggleDrawer(e)} />
+    <Hidden only={only}>
       <Drawer
-        anchor={anchor}
         className={styles.root}
+        anchor={anchor}
         classes={{ paper: styles.root }}
-        open={isOpen}
         elevation={+elevation}
         variant={variant}
-        onClose={e => handleToggleDrawer(e)}
+        open
       >
-        {content.map((component, key) => renderComponents(components, component, key))}
+        {content.map((component, key) => renderComponents(components, component, key)) }
       </Drawer>
-    </>
+    </Hidden>
   );
 };
 
-export default MuiIconButtonDrawer;
+export default MuiResponsiveDrawer;
 
-MuiIconButtonDrawer.propTypes = {
+MuiResponsiveDrawer.propTypes = {
   /**
    * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+   * Hide the given breakpoint(s).
+   * */
+  only: PropTypes.arrayOf(PropTypes.string),
   /**
    * mui props: 'bottom', 'left', 'right', 'top'
    * Side from which the drawer will appear.
@@ -87,14 +80,8 @@ MuiIconButtonDrawer.propTypes = {
     return muiStringProp(props, propName, componentName, validProps);
   },
   /**
-   * mui component: MuiIcon
-   */
-  icon(props, propName, componentName) {
-    return validComponentsRequired(props, propName, componentName, ['MuiIcon'], 1);
-  },
-  /**
    * components:
-   * MuiList
+   * MuiList, MuiListDropdown
    */
   content(props, propName, componentName) {
     const components = ['MuiList', 'MuiListDropdown'];
@@ -102,11 +89,11 @@ MuiIconButtonDrawer.propTypes = {
   },
 };
 
-MuiIconButtonDrawer.defaultProps = {
+MuiResponsiveDrawer.defaultProps = {
   anchor: 'left',
   elevation: 16,
-  variant: 'temporary',
+  variant: 'permanent',
   rootClass: [],
-  icon: [],
   content: [],
+  only: [],
 };

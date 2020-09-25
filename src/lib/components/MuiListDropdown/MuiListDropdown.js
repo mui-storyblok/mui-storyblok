@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { List, Collapse } from '@material-ui/core';
-import MuiListExpansion from '../MuiListExpansion/MuiListExpansion';
-import MuiList from '../../../MuiList/MuiList';
-import StoryBlok from '../../../../utils/Storyblok';
-import { validComponentsRequired, validComponents } from '../../../../utils/customProps';
-import { renderComponents } from '../../../../utils/customComponents';
+import MuiListExpansion from './components/MuiListExpansion/MuiListExpansion';
+
+import MuiList from '../MuiList/MuiList';
+import StoryBlok from '../../utils/Storyblok';
+import { validComponentsRequired, validComponents } from '../../utils/customProps';
+import { renderComponents } from '../../utils/customComponents';
 
 export const MuiListDropdown = ({
   rootClass,
