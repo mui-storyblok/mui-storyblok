@@ -14,6 +14,8 @@ import MuiContactButton from '../MuiContactButton/MuiContactButton';
 import MuiImage from '../MuiImage/MuiImage';
 import BlokForm from '../BlokForm/BlokForm';
 import MuiAudioPlayer from '../MuiAudioPlayer/MuiAudioPlayer';
+import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import { dimensionProp } from '../../utils/customProps';
 
 const MuiHeroHeader = (props) => {
@@ -31,6 +33,8 @@ const MuiHeroHeader = (props) => {
     BlokForm,
     MuiImage,
     MuiAudioPlayer,
+    MuiIconButtonDialog,
+    MuiButtonDialog,
   };
 
   let heroClass = {
