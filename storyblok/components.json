@@ -61,14 +61,14 @@
           "image": ""
         },
         {
-          "id": 644764,
-          "name": "whatever",
+          "id": 689634,
+          "name": "Global App Bar",
           "component_id": 842333,
           "image": ""
         },
         {
-          "id": 689634,
-          "name": "Global App Bar",
+          "id": 644764,
+          "name": "whatever",
           "component_id": 842333,
           "image": ""
         }
@@ -1046,23 +1046,6 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "GoogleRecaptcha",
-      "component_group_uuid": null
-    },
-    {
-      "name": "LoginComp",
-      "display_name": null,
-      "created_at": "2020-08-05T15:20:41.029Z",
-      "updated_at": "2020-08-05T15:20:41.029Z",
-      "id": 1043765,
-      "schema": {},
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "LoginComp",
       "component_group_uuid": null
     },
     {
@@ -3949,7 +3932,7 @@
       "name": "MuiDialogContent",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.536Z",
-      "updated_at": "2020-08-13T15:20:26.029Z",
+      "updated_at": "2020-09-25T15:24:40.654Z",
       "id": 842322,
       "schema": {
         "dividers": {
@@ -3962,7 +3945,6 @@
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
-            "MuiTypography",
             "MuiGrid",
             "BlokForm",
             "MuiAccordion",
@@ -4917,7 +4899,7 @@
       "name": "MuiGridItem",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.721Z",
-      "updated_at": "2020-07-22T21:27:21.388Z",
+      "updated_at": "2020-09-25T16:17:22.639Z",
       "id": 842334,
       "schema": {
         "alignContent": {
@@ -5511,7 +5493,9 @@
             "MuiButtonHref",
             "MuiAudioPlayer",
             "GoogleConversions",
-            "MuiAccordion"
+            "MuiAccordion",
+            "MuiButtonDialog",
+            "MuiIconButtonDialog"
           ],
           "pos": 12,
           "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
@@ -6753,7 +6737,7 @@
       "name": "MuiListItem",
       "display_name": null,
       "created_at": "2020-03-31T18:27:05.135Z",
-      "updated_at": "2020-06-24T14:24:05.779Z",
+      "updated_at": "2020-08-20T17:39:02.244Z",
       "id": 842314,
       "schema": {
         "listItemText": {
@@ -6840,6 +6824,13 @@
         "href": {
           "type": "text",
           "description": "* url to redirect to"
+        },
+        "contactButton": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiContactButton"
+          ]
         }
       },
       "image": null,

@@ -21,6 +21,8 @@ import MuiNotificationBanner from '../MuiNotificationBanner/MuiNotificationBanne
 import BlokForm from '../BlokForm/BlokForm';
 import MuiAudioPlayer from '../MuiAudioPlayer/MuiAudioPlayer';
 import GoogleConversions from '../GoogleConversions/GoogleConversions';
+import MuiIconButtonDialog from '../MuiIconButtonDialog/MuiIconButtonDialog';
+import MuiButtonDialog from '../MuiButtonDialog/MuiButtonDialog';
 import MuiGeoLocationMobileStepper from '../MuiGeoLocationMobileStepper/MuiGeoLocationMobileStepper';
 
 const MuiGrid = (props) => {
@@ -47,6 +49,8 @@ const MuiGrid = (props) => {
     MuiAudioPlayer,
     GoogleConversions,
     MuiGeoLocationMobileStepper,
+    MuiIconButtonDialog,
+    MuiButtonDialog,
   };
 
   return (

@@ -22,6 +22,7 @@ const MuiDialog = ({
   };
   const dialogStyles = Storyblok.arrayToMuiStyles(rootClass);
   const title = dialogTitle[0];
+
   return (
     <Dialog
       className={dialogStyles.root}
