@@ -51,13 +51,13 @@ export default Page;
 
 ## Storyblok
 
-Set `STORYBLOK_OAUTH_TOKEN` and `STORYBLOK_SPACE_ID` in your `.env` file. link to docs below
+In your `.bash_profile` or `.bashrc` add two exports (remember to source it after you export vars)
 
-> [create-react-app custom environment variables docs ](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+`export  STORYBLOK_OAUTH_TOKEN="STORYBLOK_OAUTH_TOKEN"`
+ - > [STORYBLOK_OAUTH_TOKEN DOCS ](https://www.storyblok.com/docs/api/management#topics/authentication)
 
-> [STORYBLOK_OAUTH_TOKEN docs ](https://www.storyblok.com/docs/api/management#topics/authentication)
-
-> [STORYBLOK_SPACE_ID docs ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
+`export STORYBLOK_SPACE_ID="STORYBLOK_SPACE_ID"`
+  - > [STORYBLOK_SPACE_ID DOCS ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
 ### CLI Commands
 

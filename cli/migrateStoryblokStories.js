@@ -18,7 +18,7 @@ const getStory = async (page, client) => {
 
 const addStoryToSpace = async (story, client) => {
   try {
-    const res = await client.post(`spaces/${process.env.REACT_APP_STORYBLOK_SPACE_ID}/stories/`, { story });
+    const res = await client.post(`spaces/${process.env.STORYBLOK_SPACE_ID}/stories/`, { story });
     return res;
   } catch (err) {
     return err;
@@ -40,7 +40,7 @@ const getStories = async () => {
 
 const addStories = async (pageDemo, pageWelcome, pageNotFound) => {
   try {
-    const client = storyblokClient('', process.env.REACT_APP_STORYBLOK_OAUTH_TOKEN);
+    const client = storyblokClient('', process.env.STORYBLOK_OAUTH_TOKEN);
     return [
       await addStoryToSpace(pageDemo, client),
       await addStoryToSpace(pageWelcome, client),
