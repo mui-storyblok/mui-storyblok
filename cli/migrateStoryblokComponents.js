@@ -22,7 +22,7 @@ const asyncCmd = (command) => {
 };
 
 const migrateComponents = async (command) => {
-  // process.chdir('./node_modules/mui-storyblok/dist');
+  process.chdir('./node_modules/mui-storyblok/dist');
   await asyncCmd(command);
 };
 
