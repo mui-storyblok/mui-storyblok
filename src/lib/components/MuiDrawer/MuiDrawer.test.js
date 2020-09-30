@@ -1,10 +1,13 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
-import MuiResponsiveDrawer from './MuiResponsiveDrawer';
+import MuiDrawer from './MuiDrawer';
 
-function setup() {
+function setup(open = false) {
   const props = {
+    open,
+    onClose: jest.fn(),
     elevation: 16,
     variant: 'temporary',
     content: [
@@ -46,18 +49,38 @@ function setup() {
       },
     ],
   };
-  const comp = mount(<MuiResponsiveDrawer {...props} />);
+  const comp = mount(<MuiDrawer {...props} />);
   return { comp, props };
 }
 
-describe('<MuiResponsiveDrawer />', () => {
+describe('<MuiDrawer />', () => {
   test('snapshot', () => {
     const { props } = setup();
-    const tree = renderer.create(<MuiResponsiveDrawer {...props} />);
+    const tree = renderer.create(<MuiDrawer {...props} />);
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render MuiResponsiveDrawer', () => {
+  it('should handleClose and toggle drawer', () => {
+    const { comp, props } = setup(true);
+    const closeModal = comp.find('ForwardRef(Modal)').first().prop('onClose');
+    act(() => {
+      closeModal({ type: 'keydown', key: 'Tab' });
+    });
+    expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
+    expect(props.onClose).not.toHaveBeenCalled();
+    act(() => {
+      closeModal({ type: 'keydown', key: 'Shift' });
+    });
+    expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
+    expect(props.onClose).not.toHaveBeenCalled();
+
+    act(() => {
+      closeModal({ target: {} });
+    });
+    expect(props.onClose).toBeCalled();
+  });
+
+  it('should render MuiDrawer', () => {
     const { comp } = setup();
     expect(comp).toBeDefined();
   });

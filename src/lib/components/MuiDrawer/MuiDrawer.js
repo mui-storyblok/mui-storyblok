@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Drawer } from '@material-ui/core';
-import Hidden from '@material-ui/core/Hidden';
 import StoryBlok from '../../utils/Storyblok';
 import {
   validComponents,
@@ -11,13 +10,14 @@ import { renderComponents } from '../../utils/customComponents';
 import MuiList from '../MuiList/MuiList';
 import MuiListDropdown from '../MuiListDropdown/MuiListDropdown';
 
-const MuiResponsiveDrawer = ({
+const MuiDrawer = ({
   anchor,
   rootClass,
   elevation,
   variant,
   content,
-  only,
+  onClose,
+  open,
 }) => {
   const components = {
     MuiList,
@@ -28,35 +28,38 @@ const MuiResponsiveDrawer = ({
   if (anchor === 'left' || anchor === 'right') width = '32vw';
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { minWidth: width });
 
+  // eslint-disable-next-line no-multi-assign
+  const handleToggleDrawer = (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    onClose(event);
+  };
+
   return (
-    <Hidden only={only}>
-      <Drawer
-        className={styles.root}
-        anchor={anchor}
-        classes={{ paper: styles.root }}
-        elevation={+elevation}
-        variant={variant}
-        open
-      >
-        {content.map((component, key) => renderComponents(components, component, key)) }
-      </Drawer>
-    </Hidden>
+    <Drawer
+      className={styles.root}
+      anchor={anchor}
+      classes={{ paper: styles.root }}
+      elevation={+elevation}
+      variant={variant}
+      open={open}
+      onClose={e => handleToggleDrawer(e)}
+    >
+      {content.map((component, key) => renderComponents(components, component, key)) }
+    </Drawer>
   );
 };
 
-export default MuiResponsiveDrawer;
+export default MuiDrawer;
 
-MuiResponsiveDrawer.propTypes = {
+MuiDrawer.propTypes = {
   /**
    * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-  /**
-   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-   * Hide the given breakpoint(s).
-   * */
-  only: PropTypes.arrayOf(PropTypes.string),
+
   /**
    * mui props: 'bottom', 'left', 'right', 'top'
    * Side from which the drawer will appear.
@@ -87,13 +90,18 @@ MuiResponsiveDrawer.propTypes = {
     const components = ['MuiList', 'MuiListDropdown'];
     return validComponents(props, propName, componentName, components);
   },
+
+
+  open: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 
-MuiResponsiveDrawer.defaultProps = {
+MuiDrawer.defaultProps = {
   anchor: 'left',
   elevation: 16,
   variant: 'permanent',
   rootClass: [],
   content: [],
-  only: [],
+  open: false,
+  onClose: undefined,
 };

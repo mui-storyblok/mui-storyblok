@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Drawer } from '@material-ui/core';
-import StoryBlok from '../../utils/Storyblok';
 import {
   validComponents,
   validComponentsRequired,
   muiStringProp,
 } from '../../utils/customProps';
-import { renderComponents } from '../../utils/customComponents';
-import MuiList from '../MuiList/MuiList';
 import MuiIconButton from '../MuiIconButton/MuiIconButton';
-import MuiListDropdown from '../MuiListDropdown/MuiListDropdown';
+import MuiDrawer from '../MuiDrawer/MuiDrawer';
 
 const MuiIconButtonDrawer = ({
   anchor,
@@ -20,38 +16,25 @@ const MuiIconButtonDrawer = ({
   icon,
   content,
 }) => {
-  const components = {
-    MuiList,
-    MuiListDropdown,
-  };
-
-  let width = '100%';
-  if (anchor === 'left' || anchor === 'right') width = '32vw';
-  const styles = StoryBlok.arrayToMuiStyles(rootClass, { minWidth: width });
   const [isOpen, setOpen] = useState(false);
 
   // eslint-disable-next-line no-multi-assign
-  const handleToggleDrawer = (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
+  const handleToggleDrawer = () => {
     setOpen(!isOpen);
   };
 
   return (
     <>
-      <MuiIconButton {...icon[0]} onClick={e => handleToggleDrawer(e)} />
-      <Drawer
+      <MuiIconButton {...icon[0]} onClick={handleToggleDrawer} />
+      <MuiDrawer
         anchor={anchor}
-        className={styles.root}
-        classes={{ paper: styles.root }}
+        rootClass={rootClass}
         open={isOpen}
         elevation={+elevation}
         variant={variant}
-        onClose={e => handleToggleDrawer(e)}
-      >
-        {content.map((component, key) => renderComponents(components, component, key))}
-      </Drawer>
+        onClose={handleToggleDrawer}
+        content={content}
+      />
     </>
   );
 };

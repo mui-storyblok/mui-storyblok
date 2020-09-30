@@ -27,7 +27,7 @@ import MuiListDropdown from './components/MuiListDropdown/MuiListDropdown';
 import MuiMenu from './components/MuiMenu/MuiMenu';
 import MuiMobileStepper from './components/MuiMobileStepper/MuiMobileStepper';
 import MuiPaginationTable from './components/MuiPaginationTable/MuiPaginationTable';
-import MuiResponsiveDrawer from './components/MuiResponsiveDrawer/MuiResponsiveDrawer';
+import MuiDrawer from './components/MuiDrawer/MuiDrawer';
 import Pages, { MuiStoryblok } from './components/MuiStoryblok/MuiStoryblok';
 import MuiTable from './components/MuiTable/MuiTable';
 import MuiTabs from './components/MuiTabs/MuiTabs';
@@ -67,7 +67,7 @@ export {
   MuiMenu,
   MuiMobileStepper,
   MuiPaginationTable,
-  MuiResponsiveDrawer,
+  MuiDrawer,
   MuiStoryblok,
   MuiTable,
   MuiTabs,
