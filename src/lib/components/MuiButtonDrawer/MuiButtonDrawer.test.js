@@ -77,26 +77,4 @@ describe('<MuiButtonDrawer />', () => {
     btn.first().simulate('click');
     expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
   });
-
-  // it('should handleClose and toggle drawer', () => {
-  //   const { comp } = setup();
-  //   const btn = comp.find('[data-testid="muiButton"]');
-  //   btn.first().simulate('click');
-  //   expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
-  //   const closeModal = comp.find('ForwardRef(Modal)').first().prop('onClose');
-  //   act(() => {
-  //     closeModal({ type: 'keydown', key: 'Tab' });
-  //   });
-  //   expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
-  //   act(() => {
-  //     closeModal({ type: 'keydown', key: 'Shift' });
-  //   });
-  //   expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(true);
-  //   act(() => {
-  //     closeModal({ target: {} });
-  //   });
-  //   setTimeout(() => {
-  //     expect(comp.find('WithStyles(ForwardRef(Drawer))').first().props().open).toEqual(false);
-  //   }, 800);
-  // });
 });
