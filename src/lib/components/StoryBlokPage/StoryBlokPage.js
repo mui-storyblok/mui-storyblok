@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
@@ -105,6 +106,7 @@ export class StoryBlokPage extends Component {
         {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
         {!this.state.loading && (
         <MuiThemeProvider theme={this.state.muiTheme}>
+          <CssBaseline />
           <div className={styles.container}>
             {this.state.story && this.state.story.map((item, index) => (
               <div key={index}>
