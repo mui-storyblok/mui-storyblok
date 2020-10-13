@@ -7,6 +7,7 @@ import appRedirect from '../../../../utils/appRedirect';
 import MuiListItemAvatar from '../MuiListItem/components/MuiListItemAvatar/MuiListItemAvatar';
 import MuiListItemIcon from '../MuiListItem/components/MuiListItemIcon/MuiListItemIcon';
 import MuiListItemText from '../MuiListItem/components/MuiListItemText/MuiListItemText';
+import MuiContactButton from '../../../MuiContactButton/MuiContactButton';
 
 export const MuiListItemButton = ({
   rootClass,
@@ -16,6 +17,7 @@ export const MuiListItemButton = ({
   divider,
   selected,
   redirectRoute,
+  contactButton,
   href,
   listItemAvatar,
   listItemIcon,
@@ -24,7 +26,7 @@ export const MuiListItemButton = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass);
   let handleClick;
   if (href === undefined && redirectRoute === undefined) {
-    handleClick = () => { };
+    handleClick = () => {};
   } else if (href !== undefined && href !== '') {
     handleClick = () => window.location.assign(href);
   } else if (redirectRoute !== undefined && redirectRoute !== '') {
@@ -34,6 +36,7 @@ export const MuiListItemButton = ({
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
   const text = listItemText[0];
+  const contact = contactButton[0];
   return (
     <ListItem
       className={styles.root}
@@ -48,6 +51,7 @@ export const MuiListItemButton = ({
       {avatar ? <MuiListItemAvatar {...avatar} /> : null}
       {icon ? <MuiListItemIcon {...icon} /> : null}
       {text ? <MuiListItemText {...text} /> : null}
+      {contact ? <MuiContactButton {...contact} /> : null}
     </ListItem>
   );
 };
@@ -83,7 +87,11 @@ MuiListItemButton.propTypes = {
   redirectRoute: PropTypes.string,
   /** url to redirect to */
   href: PropTypes.string,
-
+  /** MuiListItemAvatar Allowed maximum: 1 */
+  contactButton(props, propName, componentName) {
+    const components = ['MuiListItemAvatar'];
+    return validComponents(props, propName, componentName, components, 1);
+  },
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar(props, propName, componentName) {
     return validComponents(props, propName, componentName, ['MuiListItemAvatar'], 1);
@@ -110,4 +118,5 @@ MuiListItemButton.defaultProps = {
   listItemAvatar: [],
   listItemIcon: [],
   listItemText: [],
+  contactButton: [],
 };
