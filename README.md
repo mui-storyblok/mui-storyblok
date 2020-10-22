@@ -1,6 +1,14 @@
-# mui-storyblok
+<p align="center">
+  <img width="300" src="./mui-storyblok-logo.svg " alt="wyg.js"/>
+  <h1 align="center">mui-storyblok</h1>
+</p>
 
-[![NPM](https://img.shields.io/npm/v/mui-storyblok.svg)](https://www.npmjs.com/package/mui-storyblok) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+[![NPM](https://img.shields.io/npm/v/mui-storyblok.svg)](https://www.npmjs.com/package/mui-storyblok) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Code Climate Grade](https://img.shields.io/codeclimate/coverage-letter/apjames93/mui-storyblok?color=%2345D198&label=Code%20Climate%20Grade)](https://codeclimate.com/github/apjames93/mui-storyblok)
+[![Circle CI](https://img.shields.io/circleci/build/github/mui-storyblok/mui-storyblok/master?color=%23DE89FF)](https://app.circleci.com/projects/project-dashboard/github/mui-storyblok/)
+
 
 
 > use react and mui to build pages with storyblok
