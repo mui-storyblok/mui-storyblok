@@ -4,9 +4,24 @@
       "name": "Blok",
       "display_name": "",
       "created_at": "2020-03-31T18:27:08.530Z",
-      "updated_at": "2020-08-14T17:14:40.667Z",
+      "updated_at": "2020-11-19T03:04:54.408Z",
       "id": 842333,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGrid",
+            "MuiHeroHeader",
+            "MuiAppBar",
+            "MuiBottomNavigation",
+            "MuiTabs",
+            "LoginComp",
+            "MuiGeoLocationTabs"
+          ],
+          "pos": 0
+        },
         "only": {
           "type": "options",
           "options": [
@@ -31,21 +46,8 @@
               "name": "xl"
             }
           ],
-          "default_value": " xs sm md  lg xl"
-        },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGrid",
-            "MuiHeroHeader",
-            "MuiAppBar",
-            "MuiBottomNavigation",
-            "MuiTabs",
-            "LoginComp",
-            "MuiGeoLocationTabs"
-          ]
+          "default_value": " xs sm md  lg xl",
+          "pos": 1
         }
       },
       "image": null,
@@ -81,9 +83,17 @@
       "name": "BlokForm",
       "display_name": null,
       "created_at": "2020-05-22T22:14:06.183Z",
-      "updated_at": "2020-07-29T16:12:08.336Z",
+      "updated_at": "2020-11-19T03:05:02.039Z",
       "id": 930353,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "FormGrid"
+          ],
+          "pos": 0
+        },
         "submitButton": {
           "type": "bloks",
           "required": true,
@@ -92,19 +102,23 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiSubmit"
-          ]
+          ],
+          "pos": 1
         },
         "baseUrl": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 2
         },
         "successResponseText": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 3
         },
         "errorResponseText": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 4
         },
         "method": {
           "type": "option",
@@ -120,14 +134,8 @@
               "name": "POST"
             }
           ],
-          "default_value": "POST"
-        },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "FormGrid"
-          ]
+          "default_value": "POST",
+          "pos": 5
         }
       },
       "image": null,
@@ -144,12 +152,23 @@
       "name": "FormGrid",
       "display_name": null,
       "created_at": "2020-05-26T15:56:32.685Z",
-      "updated_at": "2020-05-26T19:08:15.283Z",
+      "updated_at": "2020-11-19T03:05:09.251Z",
       "id": 935750,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "FormGridItem"
+          ],
+          "pos": 0,
+          "required": true,
+          "display_name": ""
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -208,30 +227,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
+          "pos": 2,
           "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [
-            {
-              "value": "background-color: black",
-              "name": "backgroundColor"
-            },
-            {
-              "value": "color: white",
-              "name": "color"
-            },
-            {
-              "value": "margin-top: 50px",
-              "name": "margin-top"
-            },
-            {
-              "value": "padding-top: 100px; padding-bottom: 100px",
-              "name": "paddingStrip"
-            }
-          ],
-          "pos": 2
         },
         "direction": {
           "type": "option",
@@ -344,7 +341,7 @@
           ],
           "default_value": "2",
           "required": true,
-          "pos": 8
+          "pos": 5
         },
         "wrap": {
           "type": "option",
@@ -366,18 +363,12 @@
           "required": true,
           "default_value": "wrap",
           "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
-          "pos": 9
+          "pos": 6
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "FormGridItem"
-          ],
-          "pos": 12,
-          "required": true,
-          "display_name": ""
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "pos": 7
         }
       },
       "image": null,
@@ -394,12 +385,26 @@
       "name": "FormGridItem",
       "display_name": null,
       "created_at": "2020-05-26T15:57:03.993Z",
-      "updated_at": "2020-06-01T17:27:25.231Z",
+      "updated_at": "2020-11-19T03:05:20.128Z",
       "id": 935751,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiInput",
+            "MuiSelect",
+            "MuiRadio",
+            "MuiCheckbox"
+          ],
+          "pos": 0,
+          "description": "Content passed to MuiGrid to render    * components: Input components ",
+          "required": true
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -458,22 +463,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
-          "description": "Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
           "pos": 2,
-          "options": [
-            {
-              "value": "color: blue",
-              "name": "whatever blue color"
-            },
-            {
-              "value": "",
-              "name": ""
-            }
-          ]
+          "description": "Defines the align-items style property. It's applied for all screen sizes."
         },
         "direction": {
           "type": "option",
@@ -961,19 +952,10 @@
           "default_value": "false",
           "pos": 11
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiInput",
-            "MuiSelect",
-            "MuiRadio",
-            "MuiCheckbox"
-          ],
+        "rootClass": {
+          "type": "options",
           "pos": 12,
-          "description": "Content passed to MuiGrid to render    * components: Input components ",
-          "required": true
+          "options": []
         }
       },
       "image": null,
@@ -990,19 +972,9 @@
       "name": "GoogleConversions",
       "display_name": null,
       "created_at": "2020-07-14T17:03:22.278Z",
-      "updated_at": "2020-07-14T18:11:17.436Z",
+      "updated_at": "2020-11-19T03:05:25.559Z",
       "id": 1012274,
       "schema": {
-        "sendTo": {
-          "type": "text",
-          "description": "Conversion Label for the conversion action.",
-          "default_value": ""
-        },
-        "aWConversionID": {
-          "type": "text",
-          "default_value": "",
-          "description": "Conversion ID provided by google ad analytics account setup. EX: UA-******-**"
-        },
         "button": {
           "type": "bloks",
           "restrict_components": true,
@@ -1014,7 +986,20 @@
             "MuiIconButtonHref",
             "MuiIconButtonRedirect"
           ],
-          "description": ""
+          "description": "",
+          "pos": 0
+        },
+        "sendTo": {
+          "type": "text",
+          "description": "Conversion Label for the conversion action.",
+          "default_value": "",
+          "pos": 1
+        },
+        "aWConversionID": {
+          "type": "text",
+          "default_value": "",
+          "description": "Conversion ID provided by google ad analytics account setup. EX: UA-******-**",
+          "pos": 2
         }
       },
       "image": null,
@@ -1052,21 +1037,9 @@
       "name": "MuiAccordion",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.893Z",
-      "updated_at": "2020-07-20T17:18:43.429Z",
+      "updated_at": "2020-11-19T03:05:36.278Z",
       "id": 842324,
       "schema": {
-        "rootClass": {
-          "type": "options"
-        },
-        "defaultExpanded": {
-          "type": "boolean"
-        },
-        "width": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%",
-          "description": "width of panel"
-        },
         "accordionSummary": {
           "type": "bloks",
           "required": true,
@@ -1074,7 +1047,8 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiAccordionSummary"
-          ]
+          ],
+          "pos": 0
         },
         "accordionDetails": {
           "type": "bloks",
@@ -1083,7 +1057,23 @@
             "MuiAccordionDetails"
           ],
           "maximum": "1",
-          "required": true
+          "required": true,
+          "pos": 1
+        },
+        "defaultExpanded": {
+          "type": "boolean",
+          "pos": 2
+        },
+        "width": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "description": "width of panel",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 4
         }
       },
       "image": null,
@@ -1100,18 +1090,20 @@
       "name": "MuiAccordionDetails",
       "display_name": null,
       "created_at": "2020-03-31T18:27:07.109Z",
-      "updated_at": "2020-07-20T17:43:31.981Z",
+      "updated_at": "2020-11-19T03:05:46.069Z",
       "id": 842325,
       "schema": {
-        "rootClass": {
-          "type": "options"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiAccordionTypography"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 1
         }
       },
       "image": null,
@@ -1128,11 +1120,16 @@
       "name": "MuiAccordionSummary",
       "display_name": null,
       "created_at": "2020-03-31T18:27:07.290Z",
-      "updated_at": "2020-07-20T17:43:17.498Z",
+      "updated_at": "2020-11-19T03:05:56.055Z",
       "id": 842326,
       "schema": {
-        "rootClass": {
-          "type": "options"
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiAccordionTypography"
+          ],
+          "pos": 0
         },
         "expandIcon": {
           "type": "bloks",
@@ -1141,14 +1138,12 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiIcon"
-          ]
+          ],
+          "pos": 1
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiAccordionTypography"
-          ]
+        "rootClass": {
+          "type": "options",
+          "pos": 2
         }
       },
       "image": null,
@@ -1165,9 +1160,27 @@
       "name": "MuiAccordionTypography",
       "display_name": null,
       "created_at": "2020-06-11T16:49:32.021Z",
-      "updated_at": "2020-07-20T17:22:47.682Z",
+      "updated_at": "2020-11-19T03:06:05.901Z",
       "id": 961986,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiText",
+            "MuiIcon",
+            "MuiIconButtonRedirect",
+            "MuiIconButtonHref",
+            "MuiIconButtonDownload",
+            "MuiButtonRedirect",
+            "MuiButtonHref",
+            "MuiButtonDownload",
+            "GoogleConversions"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "align": {
           "type": "option",
           "use_uuid": true,
@@ -1194,7 +1207,8 @@
             }
           ],
           "default_value": "inherit",
-          "required": true
+          "required": true,
+          "pos": 1
         },
         "color": {
           "type": "option",
@@ -1230,49 +1244,31 @@
             }
           ],
           "default_value": "initial",
-          "required": true
+          "required": true,
+          "pos": 2
+        },
+        "width": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 3
+        },
+        "height": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 4
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ],
+          "options": [],
           "folder_slug": "",
           "description": "",
           "display_name": "",
           "translatable": false,
           "required": false,
-          "external_datasource": ""
-        },
-        "width": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "height": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiText",
-            "MuiIcon",
-            "MuiIconButtonRedirect",
-            "MuiIconButtonHref",
-            "MuiIconButtonDownload",
-            "MuiButtonRedirect",
-            "MuiButtonHref",
-            "MuiButtonDownload",
-            "GoogleConversions"
-          ],
-          "required": true
+          "external_datasource": "",
+          "pos": 5
         }
       },
       "image": null,
@@ -1289,16 +1285,26 @@
       "name": "MuiActionCard",
       "display_name": null,
       "created_at": "2020-06-03T15:49:41.781Z",
-      "updated_at": "2020-06-15T22:31:33.399Z",
+      "updated_at": "2020-11-19T03:06:17.264Z",
       "id": 949230,
       "schema": {
+        "text": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiTypography"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "header": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiTypography"
           ],
-          "required": true
+          "required": true,
+          "pos": 1
         },
         "icon": {
           "type": "bloks",
@@ -1306,21 +1312,15 @@
           "component_whitelist": [
             "MuiIcon"
           ],
-          "required": true
-        },
-        "text": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiTypography"
-          ],
-          "required": true
+          "required": true,
+          "pos": 2
         },
         "redirectRoute": {
           "type": "text",
           "required": true,
           "description": "Redirect Route",
-          "default_value": ""
+          "default_value": "",
+          "pos": 3
         }
       },
       "image": null,
@@ -1337,13 +1337,9 @@
       "name": "MuiActionCardContainer",
       "display_name": null,
       "created_at": "2020-06-01T23:04:11.938Z",
-      "updated_at": "2020-06-09T16:20:01.920Z",
+      "updated_at": "2020-11-19T03:06:47.144Z",
       "id": 945842,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component"
-        },
         "menuName": {
           "type": "bloks",
           "description": "* Text Displayed for menu",
@@ -1353,7 +1349,8 @@
             "MuiTypography"
           ],
           "required": true,
-          "maximum": "1"
+          "maximum": "1",
+          "pos": 0
         },
         "actionCards": {
           "type": "bloks",
@@ -1362,17 +1359,25 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiActionCard"
-          ]
+          ],
+          "pos": 1
         },
         "height": {
           "type": "text",
           "description": "* Height of the each Action Card.",
-          "default_value": "100px"
+          "default_value": "100px",
+          "pos": 2
         },
         "width": {
           "type": "text",
           "description": "* Width of the each Action Card.",
-          "default_value": "200px"
+          "default_value": "200px",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component",
+          "pos": 4
         }
       },
       "image": null,
@@ -1389,14 +1394,18 @@
       "name": "MuiAppBar",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.751Z",
-      "updated_at": "2020-07-13T20:29:35.311Z",
+      "updated_at": "2020-11-19T03:07:03.049Z",
       "id": 842301,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "use_uuid": true,
-          "description": "Override or extend the styles applied to the component.",
-          "options": []
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiAppBarGrid"
+          ],
+          "required": true,
+          "maximum": "1",
+          "pos": 0
         },
         "color": {
           "type": "option",
@@ -1425,7 +1434,8 @@
           ],
           "required": true,
           "default_value": "primary",
-          "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component."
+          "description": "AppBar: The color of the component. It supports those theme colors that make sense for this component.",
+          "pos": 1
         },
         "position": {
           "type": "option",
@@ -1454,7 +1464,8 @@
           ],
           "default_value": "fixed",
           "required": true,
-          "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable."
+          "description": "AppBar: The positioning type. The behavior of the different options is described in the MDN web docs.    * Note: sticky is not universally supported and will fall back to static when unavailable.",
+          "pos": 2
         },
         "variant": {
           "type": "option",
@@ -1471,26 +1482,27 @@
           ],
           "required": true,
           "default_value": "regular",
-          "description": "ToolBar: The variant to use."
+          "description": "ToolBar: The variant to use.",
+          "pos": 3
         },
         "disableGutters": {
           "type": "boolean",
-          "description": "Toolbar: If true, disables gutter padding."
-        },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiAppBarGrid"
-          ],
-          "required": true,
-          "maximum": "1"
+          "description": "Toolbar: If true, disables gutter padding.",
+          "pos": 4
         },
         "height": {
           "type": "text",
           "description": "Height of the app bar.",
           "display_name": "",
-          "default_value": "60px"
+          "default_value": "60px",
+          "pos": 5
+        },
+        "rootClass": {
+          "type": "options",
+          "use_uuid": true,
+          "description": "Override or extend the styles applied to the component.",
+          "options": [],
+          "pos": 6
         }
       },
       "image": null,
@@ -1507,12 +1519,22 @@
       "name": "MuiAppBarGrid",
       "display_name": null,
       "created_at": "2020-06-08T19:09:29.844Z",
-      "updated_at": "2020-06-08T19:17:40.101Z",
+      "updated_at": "2020-11-19T03:07:09.724Z",
       "id": 956356,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiAppBarGridItem"
+          ],
+          "pos": 0,
+          "required": true
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -1571,30 +1593,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
+          "pos": 2,
           "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [
-            {
-              "value": "background-color: black",
-              "name": "backgroundColor"
-            },
-            {
-              "value": "color: white",
-              "name": "color"
-            },
-            {
-              "value": "margin-top: 50px",
-              "name": "margin-top"
-            },
-            {
-              "value": "padding-top: 100px; padding-bottom: 100px",
-              "name": "paddingStrip"
-            }
-          ],
-          "pos": 2
         },
         "direction": {
           "type": "option",
@@ -1707,7 +1707,7 @@
           ],
           "default_value": "2",
           "required": true,
-          "pos": 8
+          "pos": 5
         },
         "wrap": {
           "type": "option",
@@ -1729,17 +1729,12 @@
           "required": true,
           "default_value": "wrap",
           "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
-          "pos": 9
+          "pos": 6
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiAppBarGridItem"
-          ],
-          "pos": 12,
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "pos": 7
         }
       },
       "image": null,
@@ -1756,12 +1751,35 @@
       "name": "MuiAppBarGridItem",
       "display_name": null,
       "created_at": "2020-06-08T19:15:19.687Z",
-      "updated_at": "2020-07-14T17:38:35.010Z",
+      "updated_at": "2020-11-19T03:07:27.549Z",
       "id": 956387,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButtonRedirect",
+            "MuiButtonHref",
+            "MuiIconButtonRedirect",
+            "MuiIconButtonHref",
+            "MuiMenu",
+            "MuiButtonDrawer",
+            "MuiIconButtonDrawer",
+            "MuiButtonSnackbar",
+            "MuiImage",
+            "MuiActionCardContainer",
+            "MuiContactButton",
+            "MuiTypography",
+            "GoogleConversions"
+          ],
+          "pos": 0,
+          "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
+          "required": true
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -1820,22 +1838,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
-          "description": "Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
           "pos": 2,
-          "options": [
-            {
-              "value": "color: blue",
-              "name": "whatever blue color"
-            },
-            {
-              "value": "min-width: 100vw",
-              "name": "width"
-            }
-          ]
+          "description": "Defines the align-items style property. It's applied for all screen sizes."
         },
         "direction": {
           "type": "option",
@@ -2323,28 +2327,10 @@
           "default_value": "1",
           "pos": 11
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButtonRedirect",
-            "MuiButtonHref",
-            "MuiIconButtonRedirect",
-            "MuiIconButtonHref",
-            "MuiMenu",
-            "MuiButtonDrawer",
-            "MuiIconButtonDrawer",
-            "MuiButtonSnackbar",
-            "MuiImage",
-            "MuiActionCardContainer",
-            "MuiContactButton",
-            "MuiTypography",
-            "GoogleConversions"
-          ],
+        "rootClass": {
+          "type": "options",
           "pos": 12,
-          "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
-          "required": true
+          "options": []
         }
       },
       "image": null,
@@ -2513,29 +2499,27 @@
       "name": "MuiBottomNavigation",
       "display_name": null,
       "created_at": "2020-05-01T19:38:26.400Z",
-      "updated_at": "2020-05-07T19:11:29.231Z",
+      "updated_at": "2020-11-19T03:07:45.756Z",
       "id": 895729,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
-          "options": []
-        },
-        "showLabels": {
-          "type": "boolean",
-          "description": "* mui prop: boolean\n* If true, all BottomNavigationActions will show their labels.\n* By default, only the selected BottomNavigationAction will show its label."
-        },
         "navActions": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiBottomNavigationAction"
-          ]
+          ],
+          "pos": 0
+        },
+        "showLabels": {
+          "type": "boolean",
+          "description": "* mui prop: boolean\n* If true, all BottomNavigationActions will show their labels.\n* By default, only the selected BottomNavigationAction will show its label.",
+          "pos": 1
         },
         "width": {
           "type": "number",
           "description": "Width of the bottom navigation bar",
-          "default_value": "500"
+          "default_value": "500",
+          "pos": 2
         },
         "position": {
           "type": "option",
@@ -2551,12 +2535,20 @@
             }
           ],
           "description": "Position of Bottom Navigation",
-          "default_value": "fixed"
+          "default_value": "fixed",
+          "pos": 3
         },
         "bottom": {
           "type": "number",
           "description": "Number of pixels from the bottom of the page.",
-          "default_value": "30"
+          "default_value": "30",
+          "pos": 4
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "options": [],
+          "pos": 5
         }
       },
       "image": null,
@@ -2573,23 +2565,9 @@
       "name": "MuiBottomNavigationAction",
       "display_name": null,
       "created_at": "2020-05-01T19:39:00.932Z",
-      "updated_at": "2020-07-14T17:56:53.526Z",
+      "updated_at": "2020-11-19T03:07:53.967Z",
       "id": 895730,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
-        "label": {
-          "type": "text",
-          "description": "* mui prop: any\n* The label element.",
-          "required": true
-        },
-        "value": {
-          "type": "text",
-          "description": "* mui prop: any\n* You can provide your own value. Otherwise, we fallback to the child position index.",
-          "required": true
-        },
         "icon": {
           "type": "bloks",
           "restrict_components": true,
@@ -2598,7 +2576,25 @@
             "MuiIconButton",
             "GoogleConversions"
           ],
-          "required": true
+          "required": true,
+          "pos": 0
+        },
+        "label": {
+          "type": "text",
+          "description": "* mui prop: any\n* The label element.",
+          "required": true,
+          "pos": 1
+        },
+        "value": {
+          "type": "text",
+          "description": "* mui prop: any\n* You can provide your own value. Otherwise, we fallback to the child position index.",
+          "required": true,
+          "pos": 2
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 3
         }
       },
       "image": null,
@@ -2615,7 +2611,7 @@
       "name": "MuiButton",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.571Z",
-      "updated_at": "2020-06-11T21:21:40.545Z",
+      "updated_at": "2020-11-19T03:08:17.437Z",
       "id": 842300,
       "schema": {
         "buttonText": {
@@ -2623,18 +2619,6 @@
           "required": true,
           "description": "button text",
           "pos": 0
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "     * Override or extend the styles applied to the component      * expecting array of string ex: ['color: black', 'font-Size: 20px' ]",
-          "pos": 1,
-          "min_options": "",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ]
         },
         "color": {
           "type": "option",
@@ -2660,7 +2644,7 @@
           "required": true,
           "description": "The color of the component. It supports those theme colors that make sense for this component.",
           "default_value": "secondary",
-          "pos": 2
+          "pos": 1
         },
         "disableElevation": {
           "type": "boolean",
@@ -2680,32 +2664,22 @@
             }
           ],
           "required": false,
-          "pos": 3
+          "pos": 2
         },
         "disableFocusRipple": {
           "type": "boolean",
           "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true.",
-          "pos": 4
+          "pos": 3
         },
         "disableRipple": {
           "type": "boolean",
           "description": "If true, the ripple effect will be disabled.      * Without a ripple there is no styling for :focus-visible by default. Be sure to highlight the element by applying separate styles with the focusVisibleClassName.",
-          "pos": 5
-        },
-        "endIcon": {
-          "type": "bloks",
-          "description": "Element placed after the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-          "pos": 6,
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiIcon"
-          ],
-          "maximum": "1"
+          "pos": 4
         },
         "fullWidth": {
           "type": "boolean",
           "description": "If true, the button will take up the full width of its container.",
-          "pos": 8
+          "pos": 5
         },
         "size": {
           "type": "option",
@@ -2727,7 +2701,7 @@
           "description": "The size of the button. small is equivalent to the dense button styling.",
           "default_value": "medium",
           "required": true,
-          "pos": 9
+          "pos": 6
         },
         "variant": {
           "type": "option",
@@ -2748,7 +2722,7 @@
           ],
           "required": true,
           "default_value": "text",
-          "pos": 12
+          "pos": 7
         },
         "startIcon": {
           "type": "bloks",
@@ -2757,7 +2731,25 @@
           "component_whitelist": [
             "MuiIcon"
           ],
+          "maximum": "1",
+          "pos": 8
+        },
+        "endIcon": {
+          "type": "bloks",
+          "description": "Element placed after the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
+          "pos": 9,
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiIcon"
+          ],
           "maximum": "1"
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "     * Override or extend the styles applied to the component      * expecting array of string ex: ['color: black', 'font-Size: 20px' ]",
+          "pos": 10,
+          "min_options": "",
+          "options": []
         }
       },
       "image": null,
@@ -2810,13 +2802,9 @@
       "name": "MuiButtonDownload",
       "display_name": null,
       "created_at": "2020-03-31T18:27:04.416Z",
-      "updated_at": "2020-03-31T18:27:04.416Z",
+      "updated_at": "2020-11-19T03:08:39.512Z",
       "id": 842310,
       "schema": {
-        "fileName": {
-          "type": "text",
-          "required": true
-        },
         "button": {
           "type": "bloks",
           "maximum": "1",
@@ -2824,12 +2812,19 @@
           "component_whitelist": [
             "MuiButton"
           ],
-          "required": true
+          "required": true,
+          "pos": 0
+        },
+        "fileName": {
+          "type": "text",
+          "required": true,
+          "pos": 1
         },
         "href": {
           "type": "text",
           "required": true,
-          "description": "url of the file you want to be downloaded"
+          "description": "url of the file you want to be downloaded",
+          "pos": 2
         }
       },
       "image": null,
@@ -2846,7 +2841,7 @@
       "name": "MuiButtonDrawer",
       "display_name": null,
       "created_at": "2020-04-24T21:29:11.218Z",
-      "updated_at": "2020-04-24T22:08:33.421Z",
+      "updated_at": "2020-11-19T02:34:24.041Z",
       "id": 883782,
       "schema": {
         "button": {
@@ -2918,12 +2913,7 @@
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "padding-right: 100px;",
-              "name": "paddingRight"
-            }
-          ]
+          "options": []
         }
       },
       "image": null,
@@ -3002,14 +2992,24 @@
       "name": "MuiButtonSnackbar",
       "display_name": null,
       "created_at": "2020-04-29T18:11:56.326Z",
-      "updated_at": "2020-05-04T23:06:01.079Z",
+      "updated_at": "2020-11-19T03:09:23.115Z",
       "id": 892269,
       "schema": {
+        "button": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton"
+          ],
+          "required": true,
+          "description": "",
+          "pos": 0
+        },
         "message": {
           "type": "text",
           "description": "* mui prop: node\n* The message to be displayed.",
           "default_value": "",
-          "pos": 0
+          "pos": 1
         },
         "anchorOrigin": {
           "type": "options",
@@ -3044,41 +3044,24 @@
           "default_value": "vertical: bottom, horizontal: center",
           "min_options": "0",
           "max_options": "1",
-          "pos": 1
+          "pos": 2
         },
         "autoHideDuration": {
           "type": "number",
           "description": "   * mui prop: number\n   * The number of milliseconds to wait before automatically calling the onClose function.\n   * onClose should then set the state of the open prop to hide the Snackbar.\n   * This behavior is disabled by default with the null value.",
           "default_value": "6000",
-          "pos": 2
+          "pos": 3
         },
         "disableWindowBlurListener": {
           "type": "boolean",
           "description": "   * mui prop: true | false\n   * If true, the autoHideDuration timer will expire even if the window is not focused.",
-          "pos": 3
+          "pos": 4
         },
         "resumeHideDuration": {
           "type": "number",
           "description": "   * mui prop: number\n   * The number of milliseconds to wait before dismissing after user interaction.\n   * If autoHideDuration prop isn't specified, it does nothing.\n   * If autoHideDuration prop is specified but resumeHideDuration isn't,\n   * we default to autoHideDuration / 2 ms.",
           "default_value": "0",
-          "pos": 4
-        },
-        "button": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton"
-          ],
-          "required": true,
-          "description": "",
           "pos": 5
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
-          "min_options": "",
-          "options": [],
-          "pos": 6
         },
         "closingIcon": {
           "type": "bloks",
@@ -3086,6 +3069,13 @@
           "component_whitelist": [
             "MuiIconButton"
           ],
+          "pos": 6
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "min_options": "",
+          "options": [],
           "pos": 7
         }
       },
@@ -3103,7 +3093,7 @@
       "name": "MuiCard",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.357Z",
-      "updated_at": "2020-07-02T22:08:22.934Z",
+      "updated_at": "2020-11-19T02:35:04.397Z",
       "id": 842332,
       "schema": {
         "rootClass": {
@@ -3111,36 +3101,7 @@
           "pos": 0,
           "min_options": "",
           "max_options": "",
-          "options": [
-            {
-              "value": "box-shadow: 5px 10px #FFF",
-              "name": "box-shadow: 5px 10px;"
-            },
-            {
-              "value": "background-color: #000",
-              "name": "background-color black"
-            },
-            {
-              "value": "color: #000",
-              "name": "color-black"
-            },
-            {
-              "value": "border-style: solid",
-              "name": "border"
-            },
-            {
-              "value": "max-width: 500",
-              "name": "maxWidth"
-            },
-            {
-              "value": "display: flex",
-              "name": "flex"
-            },
-            {
-              "value": "justify-content: center",
-              "name": "justify center"
-            }
-          ]
+          "options": []
         },
         "raised": {
           "type": "boolean",
@@ -3214,18 +3175,9 @@
       "name": "MuiCardActions",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.695Z",
-      "updated_at": "2020-07-20T17:00:14.587Z",
+      "updated_at": "2020-11-19T03:09:38.856Z",
       "id": 842306,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "pos": 0
-        },
-        "disableSpacing": {
-          "type": "boolean",
-          "description": "If true, the actions do not have additional margin.",
-          "pos": 1
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -3242,9 +3194,18 @@
             "GoogleConversions",
             "MuiAccordion"
           ],
-          "pos": 2,
+          "pos": 0,
           "required": true,
           "description": "   * Content passed to MuiGrid to render    * components: MuiIconButtonRedirect,     MuiIconButtonHref,     MuiIconButtonDownload,     MuiIconButtonDialog,     MuiButtonRedirect,     MuiButtonHref,     MuiButtonDownload,     MuiButtonDialog,"
+        },
+        "disableSpacing": {
+          "type": "boolean",
+          "description": "If true, the actions do not have additional margin.",
+          "pos": 1
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 2
         }
       },
       "image": null,
@@ -3261,13 +3222,9 @@
       "name": "MuiCardContent",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.178Z",
-      "updated_at": "2020-07-20T17:00:14.646Z",
+      "updated_at": "2020-11-19T03:09:43.964Z",
       "id": 842331,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -3275,7 +3232,13 @@
             "MuiTypography",
             "MuiList",
             "MuiAccordion"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "Mui Override or extend the styles applied to the component.",
+          "pos": 1
         }
       },
       "image": null,
@@ -3473,87 +3436,6 @@
       "component_group_uuid": null
     },
     {
-      "name": "MuiCheckBox",
-      "display_name": null,
-      "created_at": "2020-06-15T22:31:39.735Z",
-      "updated_at": "2020-06-15T22:31:39.735Z",
-      "id": 967331,
-      "schema": {
-        "name": {
-          "type": "text",
-          "description": "   * The name of your field. Field values may be deeply nested using dot-and-bracket syntax.\n",
-          "required": true
-        },
-        "label": {
-          "type": "text",
-          "required": true,
-          "description": " * The label content.\n"
-        },
-        "color": {
-          "type": "option",
-          "description": " * The color of the component. It supports those theme colors that make sense for this component.\n * mui prop: 'default' | 'primary' | 'secondary'",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "default",
-              "name": "default"
-            },
-            {
-              "value": "primary",
-              "name": "primary"
-            },
-            {
-              "value": "secondary",
-              "name": "secondary"
-            }
-          ],
-          "required": true,
-          "default_value": "default"
-        },
-        "disabled": {
-          "type": "boolean",
-          "description": " * If true, the checkbox will be disabled.\n"
-        },
-        "disableRipple": {
-          "type": "boolean",
-          "description": " * If true, the ripple effect will be disabled.\n"
-        },
-        "indeterminate": {
-          "type": "boolean",
-          "description": "   * If true, the component appears indeterminate.\n   * This does not set the native input element to indeterminate\n   * due to inconsistent behavior across browsers.\n   * However, we set a data-indeterminate attribute on the input."
-        },
-        "size": {
-          "type": "option",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "medium",
-              "name": "medium"
-            },
-            {
-              "value": "small",
-              "name": "small"
-            },
-            {
-              "value": "",
-              "name": ""
-            }
-          ],
-          "default_value": "medium",
-          "description": "     * The size of the checkbox. small is equivalent to the dense checkbox styling.\n     * mui prop: 'medium'| 'small'"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "MuiCheckBox",
-      "component_group_uuid": null
-    },
-    {
       "name": "MuiCircularProgress",
       "display_name": null,
       "created_at": "2020-04-17T21:57:33.908Z",
@@ -3636,17 +3518,14 @@
       "name": "MuiCollapse",
       "display_name": null,
       "created_at": "2020-05-12T18:54:56.769Z",
-      "updated_at": "2020-05-18T22:15:46.051Z",
+      "updated_at": "2020-11-19T03:10:17.141Z",
       "id": 912737,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "collapsedHeight": {
           "type": "text",
           "description": "* mui props: number | string\n* The height of the container when collapsed.",
-          "default_value": "0px"
+          "default_value": "0px",
+          "pos": 0
         },
         "content": {
           "type": "bloks",
@@ -3656,24 +3535,33 @@
             "Blok"
           ],
           "required": true,
-          "description": ""
+          "description": "",
+          "pos": 1
         },
         "transitionIn": {
           "type": "number",
           "description": "Number of milliseconds for component to transition in.",
-          "default_value": "300"
+          "default_value": "300",
+          "pos": 2
         },
         "enter": {
           "type": "number",
           "description": "* Duration in milliseconds to enter the screen.\n* Set to 0 to automatically calculate transition time based on height.",
           "display_name": "",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 3
         },
         "exit": {
           "type": "number",
           "description": "* mui props: number\n* Duration in milliseconds to leave the screen.",
           "display_name": "",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 4
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 5
         }
       },
       "image": null,
@@ -3729,11 +3617,17 @@
       "name": "MuiDialog",
       "display_name": null,
       "created_at": "2020-03-31T18:27:04.586Z",
-      "updated_at": "2020-08-13T15:19:15.763Z",
+      "updated_at": "2020-11-19T03:10:28.853Z",
       "id": 842311,
       "schema": {
-        "rootClass": {
-          "type": "options"
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiDialogContent",
+            "MuiDialogActions"
+          ],
+          "pos": 0
         },
         "dialogTitle": {
           "type": "bloks",
@@ -3742,15 +3636,12 @@
           "component_whitelist": [
             "MuiDialogTitle"
           ],
-          "maximum": "1"
+          "maximum": "1",
+          "pos": 1
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiDialogContent",
-            "MuiDialogActions"
-          ]
+        "rootClass": {
+          "type": "options",
+          "pos": 2
         }
       },
       "image": null,
@@ -3767,12 +3658,9 @@
       "name": "MuiDialogActions",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.361Z",
-      "updated_at": "2020-08-05T15:53:59.869Z",
+      "updated_at": "2020-11-19T03:10:40.800Z",
       "id": 842321,
       "schema": {
-        "rootClass": {
-          "type": "options"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -3784,7 +3672,12 @@
             "MuiButtonDownload",
             "MuiButtonHref",
             "GoogleConversions"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 1
         }
       },
       "image": null,
@@ -3801,9 +3694,43 @@
       "name": "MuiDialogButton",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.185Z",
-      "updated_at": "2020-03-31T18:27:06.185Z",
+      "updated_at": "2020-11-19T03:11:15.646Z",
       "id": 842320,
       "schema": {
+        "buttonText": {
+          "type": "text",
+          "required": true,
+          "pos": 0
+        },
+        "dialogTitle": {
+          "type": "bloks",
+          "restrict_components": true,
+          "maximum": "1",
+          "component_whitelist": [
+            "MuiDialogTitle"
+          ],
+          "required": true,
+          "pos": 1
+        },
+        "dialogContent": {
+          "type": "bloks",
+          "restrict_components": true,
+          "maximum": "1",
+          "component_whitelist": [
+            "MuiDialogContent"
+          ],
+          "required": true,
+          "pos": 2
+        },
+        "dialogActions": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiDialogActions"
+          ],
+          "pos": 3
+        },
         "color": {
           "type": "option",
           "use_uuid": true,
@@ -3825,7 +3752,8 @@
               "name": "secondary"
             }
           ],
-          "default_value": "secondary"
+          "default_value": "secondary",
+          "pos": 4
         },
         "size": {
           "type": "option",
@@ -3844,7 +3772,8 @@
               "name": "large"
             }
           ],
-          "default_value": "medium"
+          "default_value": "medium",
+          "pos": 5
         },
         "variant": {
           "type": "option",
@@ -3863,24 +3792,24 @@
               "name": "contained"
             }
           ],
-          "default_value": "text"
+          "default_value": "text",
+          "pos": 6
         },
         "startIcon": {
           "type": "text",
           "default_value": "",
-          "description": "https://material.io/resources/icons/?icon=backup&style=baseline"
+          "description": "https://material.io/resources/icons/?icon=backup&style=baseline",
+          "pos": 7
         },
         "endIcon": {
           "type": "text",
           "default_value": "",
-          "description": "https://material.io/resources/icons/?icon=backup&style=baseline"
-        },
-        "buttonText": {
-          "type": "text",
-          "required": true
+          "description": "https://material.io/resources/icons/?icon=backup&style=baseline",
+          "pos": 8
         },
         "btnRootClass": {
-          "type": "options"
+          "type": "options",
+          "pos": 9
         },
         "dialogRootClass": {
           "type": "options",
@@ -3889,33 +3818,8 @@
               "value": "color: blue",
               "name": "color: blue"
             }
-          ]
-        },
-        "dialogContent": {
-          "type": "bloks",
-          "restrict_components": true,
-          "maximum": "1",
-          "component_whitelist": [
-            "MuiDialogContent"
           ],
-          "required": true
-        },
-        "dialogTitle": {
-          "type": "bloks",
-          "restrict_components": true,
-          "maximum": "1",
-          "component_whitelist": [
-            "MuiDialogTitle"
-          ],
-          "required": true
-        },
-        "dialogActions": {
-          "type": "bloks",
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiDialogActions"
-          ]
+          "pos": 10
         }
       },
       "image": null,
@@ -3932,15 +3836,9 @@
       "name": "MuiDialogContent",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.536Z",
-      "updated_at": "2020-09-25T15:24:40.654Z",
+      "updated_at": "2020-11-19T03:11:28.411Z",
       "id": 842322,
       "schema": {
-        "dividers": {
-          "type": "boolean"
-        },
-        "rootClass": {
-          "type": "options"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -3949,7 +3847,16 @@
             "BlokForm",
             "MuiAccordion",
             "MuiDialogContentTypography"
-          ]
+          ],
+          "pos": 0
+        },
+        "dividers": {
+          "type": "boolean",
+          "pos": 1
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 2
         }
       },
       "image": null,
@@ -3966,9 +3873,27 @@
       "name": "MuiDialogContentTypography",
       "display_name": null,
       "created_at": "2020-06-11T17:05:42.603Z",
-      "updated_at": "2020-07-14T17:40:50.039Z",
+      "updated_at": "2020-11-19T03:11:40.408Z",
       "id": 961996,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiText",
+            "MuiIcon",
+            "MuiIconButtonRedirect",
+            "MuiIconButtonHref",
+            "MuiIconButtonDownload",
+            "MuiButtonRedirect",
+            "MuiButtonHref",
+            "MuiButtonDownload",
+            "GoogleConversions"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "align": {
           "type": "option",
           "use_uuid": true,
@@ -3995,7 +3920,8 @@
             }
           ],
           "default_value": "inherit",
-          "required": true
+          "required": true,
+          "pos": 1
         },
         "color": {
           "type": "option",
@@ -4031,49 +3957,31 @@
             }
           ],
           "default_value": "initial",
-          "required": true
+          "required": true,
+          "pos": 2
+        },
+        "width": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 3
+        },
+        "height": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 4
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ],
+          "options": [],
           "folder_slug": "",
           "description": "",
           "display_name": "",
           "translatable": false,
           "required": false,
-          "external_datasource": ""
-        },
-        "width": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "height": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiText",
-            "MuiIcon",
-            "MuiIconButtonRedirect",
-            "MuiIconButtonHref",
-            "MuiIconButtonDownload",
-            "MuiButtonRedirect",
-            "MuiButtonHref",
-            "MuiButtonDownload",
-            "GoogleConversions"
-          ],
-          "required": true
+          "external_datasource": "",
+          "pos": 5
         }
       },
       "image": null,
@@ -4090,16 +3998,18 @@
       "name": "MuiDialogTitle",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.714Z",
-      "updated_at": "2020-03-31T18:27:06.714Z",
+      "updated_at": "2020-11-19T03:11:56.109Z",
       "id": 842323,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "max_length": ""
-        },
         "text": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "max_length": "",
+          "pos": 1
         }
       },
       "image": null,
@@ -4116,9 +4026,19 @@
       "name": "MuiDownloadIconButton",
       "display_name": null,
       "created_at": "2020-03-31T18:27:07.815Z",
-      "updated_at": "2020-03-31T18:27:07.815Z",
+      "updated_at": "2020-11-19T02:38:47.781Z",
       "id": 842329,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiIcon"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "color": {
           "type": "option",
           "use_uuid": true,
@@ -4141,13 +4061,16 @@
             }
           ],
           "required": true,
-          "default_value": "default"
+          "default_value": "default",
+          "pos": 1
         },
         "disableFocusRipple": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 2
         },
         "disableRipple": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 3
         },
         "edge": {
           "type": "option",
@@ -4165,7 +4088,8 @@
               "value": "false",
               "name": "false"
             }
-          ]
+          ],
+          "pos": 4
         },
         "size": {
           "type": "option",
@@ -4179,16 +4103,8 @@
               "value": "medium",
               "name": "medium"
             }
-          ]
-        },
-        "content": {
-          "type": "bloks",
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiIcon"
           ],
-          "required": true
+          "pos": 5
         }
       },
       "image": null,
@@ -4204,10 +4120,22 @@
     {
       "name": "MuiDrawer",
       "display_name": null,
-      "created_at": "2020-05-22T16:12:04.288Z",
-      "updated_at": "2020-05-22T16:12:04.288Z",
-      "id": 929700,
+      "created_at": "2020-09-25T19:17:56.574Z",
+      "updated_at": "2020-11-19T03:12:27.728Z",
+      "id": 1117201,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "required": true,
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiList",
+            "MuiListDropdown"
+          ],
+          "description": "  /**\n   * components:\n   * MuiList, MuiListDropdown\n   */",
+          "pos": 0
+        },
         "anchor": {
           "type": "option",
           "options": [
@@ -4228,17 +4156,16 @@
               "name": "top"
             }
           ],
-          "required": true,
-          "description": "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
-          "display_name": "",
-          "default_value": "left",
-          "use_uuid": true
+          "description": "   * mui props: 'bottom', 'left', 'right', 'top'\n   * Side from which the drawer will appear.",
+          "display_name": "left",
+          "use_uuid": true,
+          "pos": 1
         },
         "elevation": {
           "type": "number",
-          "description": "The elevation of the drawer.",
-          "display_name": "",
-          "default_value": "16"
+          "description": "   * number\n   * The elevation of the drawer.\n   * storyblok type is a number",
+          "default_value": "16",
+          "pos": 2
         },
         "variant": {
           "type": "option",
@@ -4246,7 +4173,7 @@
           "options": [
             {
               "value": "permanent",
-              "name": "permanenet"
+              "name": "permanent"
             },
             {
               "value": "persistent",
@@ -4257,24 +4184,20 @@
               "name": "temporary"
             }
           ],
-          "description": "The variant to use.",
-          "default_value": "temporary"
+          "description": "  /**\n   * mui props: 'permanent', 'persistent', 'temporary'\n   * The variant to use.\n   */",
+          "default_value": "permanent",
+          "pos": 3
         },
-        "buttonProps": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton"
-          ],
-          "required": true
+        "open": {
+          "type": "boolean",
+          "description": "if the drawer is open or not ",
+          "pos": 4
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiList"
-          ],
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "description": "   * storyblok multiselect of css classes\n   * Mui Override or extend the styles applied to the component.",
+          "pos": 5
         }
       },
       "image": null,
@@ -4291,13 +4214,9 @@
       "name": "MuiFade",
       "display_name": null,
       "created_at": "2020-05-12T19:43:19.829Z",
-      "updated_at": "2020-05-13T01:35:51.733Z",
+      "updated_at": "2020-11-19T03:13:03.572Z",
       "id": 912778,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "default_value": "",
@@ -4307,24 +4226,33 @@
           ],
           "maximum": "1",
           "required": true,
-          "description": ""
+          "description": "",
+          "pos": 0
         },
         "fadeIn": {
           "type": "number",
           "description": "Number of milliseconds for component to transition in.",
-          "default_value": "300"
+          "default_value": "300",
+          "pos": 1
         },
         "enter": {
           "type": "number",
           "description": "Number of milliseconds for component transition to effect on screen.",
           "display_name": "",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 2
         },
         "exit": {
           "type": "number",
           "description": "Number of milliseconds for component transition to effect off screen.",
           "display_name": "",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 4
         }
       },
       "image": null,
@@ -4341,13 +4269,43 @@
       "name": "MuiGeoLocationMobileStepper",
       "display_name": null,
       "created_at": "2020-08-11T15:28:16.162Z",
-      "updated_at": "2020-08-14T17:13:29.889Z",
+      "updated_at": "2020-11-19T03:13:18.110Z",
       "id": 1051356,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "Override or extend the styles applied to the component",
-          "options": []
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiMobileTab"
+          ],
+          "required": true,
+          "pos": 0
+        },
+        "nextBtn": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true,
+          "maximum": "1",
+          "pos": 1
+        },
+        "backBtn": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true,
+          "pos": 2
+        },
+        "autoplay": {
+          "type": "boolean",
+          "pos": 3
         },
         "position": {
           "type": "option",
@@ -4368,7 +4326,8 @@
           ],
           "description": "Set the positioning type.",
           "default_value": "static",
-          "required": true
+          "required": true,
+          "pos": 4
         },
         "variant": {
           "type": "option",
@@ -4390,47 +4349,25 @@
           "description": "Set the variant type.",
           "display_name": "",
           "default_value": "dots",
-          "required": true
-        },
-        "autoplay": {
-          "type": "boolean"
+          "required": true,
+          "pos": 5
         },
         "interval": {
           "type": "text",
           "required": true,
-          "default_value": "3000"
-        },
-        "tabs": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiMobileTab"
-          ],
-          "required": true
-        },
-        "nextBtn": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton",
-            "MuiIconButton"
-          ],
-          "required": true,
-          "maximum": "1"
-        },
-        "backBtn": {
-          "type": "bloks",
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton",
-            "MuiIconButton"
-          ],
-          "required": true
+          "default_value": "3000",
+          "pos": 6
         },
         "googleApiKey": {
           "type": "text",
-          "description": "Key for googleApisKey to use geocode"
+          "description": "Key for googleApisKey to use geocode",
+          "pos": 7
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": [],
+          "pos": 8
         }
       },
       "image": null,
@@ -4447,23 +4384,23 @@
       "name": "MuiGeoLocationTabs",
       "display_name": null,
       "created_at": "2020-08-11T14:46:18.673Z",
-      "updated_at": "2020-08-14T17:13:08.553Z",
+      "updated_at": "2020-11-19T03:13:31.199Z",
       "id": 1051348,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "Override or extend the styles applied to the component",
-          "options": [
-            {
-              "value": "justify-content: center",
-              "name": "center items"
-            },
-            {
-              "value": "margin-bottom: 25px",
-              "name": "margin-bottom"
-            }
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGrid",
+            "MuiIcon",
+            "MuiTab"
           ],
+          "required": true,
           "pos": 0
+        },
+        "autoplay": {
+          "type": "boolean",
+          "pos": 1
         },
         "indicatorColor": {
           "type": "option",
@@ -4481,7 +4418,7 @@
           "required": true,
           "description": "secondary",
           "default_value": "secondary",
-          "pos": 1
+          "pos": 2
         },
         "orientation": {
           "type": "option",
@@ -4499,7 +4436,7 @@
           ],
           "description": "The tabs orientation (layout flow direction).",
           "default_value": "horizontal",
-          "pos": 2
+          "pos": 3
         },
         "scrollButtons": {
           "type": "option",
@@ -4525,7 +4462,7 @@
           "required": true,
           "description": "Determine behavior of scroll buttons when tabs are set to scroll: - auto will only present them when not all the items are visible. - desktop will only present them on medium and larger viewports. - on will always present them. - off will never present them.",
           "default_value": "auto",
-          "pos": 3
+          "pos": 4
         },
         "textColor": {
           "type": "option",
@@ -4547,7 +4484,7 @@
           "required": true,
           "default_value": "inherit",
           "description": "Determines the color of the Tab.",
-          "pos": 4
+          "pos": 5
         },
         "variant": {
           "type": "option",
@@ -4569,35 +4506,20 @@
           "description": "Determines additional display behavior of the tabs: - scrollable will invoke scrolling properties and allow for horizontally scrolling (or swiping) of the tab bar. -fullWidth will make the tabs grow to use all the available space, which should be used for small views, like on mobile. - standard will render the default state.",
           "default_value": "standard",
           "required": true,
-          "pos": 5
+          "pos": 6
         },
         "height": {
           "type": "text",
           "default_value": "300px",
           "description": "Height of the tabs container",
-          "pos": 6
-        },
-        "tabs": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGrid",
-            "MuiIcon",
-            "MuiTab"
-          ],
-          "required": true,
           "pos": 7
-        },
-        "autoplay": {
-          "type": "boolean",
-          "pos": 8
         },
         "interval": {
           "type": "text",
           "translatable": false,
           "required": true,
           "default_value": "3000",
-          "pos": 9
+          "pos": 8
         },
         "justifyContent": {
           "type": "option",
@@ -4621,11 +4543,19 @@
             }
           ],
           "description": "   * Justify content flex styling for MuiTabs.\n   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around",
-          "default_value": "center"
+          "default_value": "center",
+          "pos": 9
         },
         "googleApiKey": {
           "type": "text",
-          "description": "Key for googleApisKey to use geocode"
+          "description": "Key for googleApisKey to use geocode",
+          "pos": 10
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": [],
+          "pos": 11
         }
       },
       "image": null,
@@ -4642,12 +4572,30 @@
       "name": "MuiGrid",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.919Z",
-      "updated_at": "2020-08-13T15:45:46.825Z",
+      "updated_at": "2020-11-19T02:40:12.838Z",
       "id": 842335,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGridItem",
+            "MuiAppBar",
+            "MuiTabs",
+            "MuiMobileStepper",
+            "MuiCircularProgress",
+            "MuiGridList",
+            "MuiHeroHeader",
+            "MuiNotificationBanner",
+            "MuiGeoLocationMobileStepper"
+          ],
+          "pos": 0,
+          "required": true
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -4706,30 +4654,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
+          "pos": 2,
           "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [
-            {
-              "value": "background-color: black",
-              "name": "backgroundColor"
-            },
-            {
-              "value": "color: white",
-              "name": "color"
-            },
-            {
-              "value": "margin-top: 50px",
-              "name": "margin-top"
-            },
-            {
-              "value": "padding-top: 100px; padding-bottom: 100px",
-              "name": "paddingStrip"
-            }
-          ],
-          "pos": 2
         },
         "direction": {
           "type": "option",
@@ -4842,7 +4768,7 @@
           ],
           "default_value": "2",
           "required": true,
-          "pos": 8
+          "pos": 5
         },
         "wrap": {
           "type": "option",
@@ -4864,25 +4790,12 @@
           "required": true,
           "default_value": "wrap",
           "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
-          "pos": 9
+          "pos": 6
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGridItem",
-            "MuiAppBar",
-            "MuiTabs",
-            "MuiMobileStepper",
-            "MuiCircularProgress",
-            "MuiGridList",
-            "MuiHeroHeader",
-            "MuiNotificationBanner",
-            "MuiGeoLocationMobileStepper"
-          ],
-          "pos": 12,
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "pos": 7
         }
       },
       "image": null,
@@ -4899,12 +4812,40 @@
       "name": "MuiGridItem",
       "display_name": null,
       "created_at": "2020-03-31T18:27:08.721Z",
-      "updated_at": "2020-09-25T19:29:17.827Z",
+      "updated_at": "2020-11-19T02:40:27.592Z",
       "id": 842334,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButtonRedirect",
+            "MuiCard",
+            "MuiTypography",
+            "MuiMenu",
+            "MuiIcon",
+            "MuiList",
+            "MuiTable",
+            "MuiPaginationTable",
+            "MuiContactButton",
+            "BlokForm",
+            "MuiImage",
+            "MuiButtonHref",
+            "MuiAudioPlayer",
+            "GoogleConversions",
+            "MuiAccordion",
+            "MuiButtonDialog",
+            "MuiIconButtonDialog",
+            "MuiDrawer"
+          ],
+          "pos": 0,
+          "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
+          "required": true
+        },
         "alignContent": {
           "type": "option",
-          "pos": 0,
+          "pos": 1,
           "use_uuid": true,
           "options": [
             {
@@ -4963,30 +4904,8 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 1,
-          "description": "Defines the align-items style property. It's applied for all screen sizes."
-        },
-        "rootClass": {
-          "type": "options",
           "pos": 2,
-          "options": [
-            {
-              "value": "color: blue",
-              "name": "whatever blue color"
-            },
-            {
-              "value": "min-width: 100vw",
-              "name": "width"
-            },
-            {
-              "value": "background-color: #E8E8E8",
-              "name": "background grey"
-            },
-            {
-              "value": "opacity: .8",
-              "name": "80 opacity"
-            }
-          ]
+          "description": "Defines the align-items style property. It's applied for all screen sizes."
         },
         "direction": {
           "type": "option",
@@ -5474,33 +5393,10 @@
           "default_value": "false",
           "pos": 11
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButtonRedirect",
-            "MuiCard",
-            "MuiTypography",
-            "MuiMenu",
-            "MuiIcon",
-            "MuiList",
-            "MuiTable",
-            "MuiPaginationTable",
-            "MuiContactButton",
-            "BlokForm",
-            "MuiImage",
-            "MuiButtonHref",
-            "MuiAudioPlayer",
-            "GoogleConversions",
-            "MuiAccordion",
-            "MuiButtonDialog",
-            "MuiIconButtonDialog",
-            "MuiResponsiveDrawer"
-          ],
+        "rootClass": {
+          "type": "options",
           "pos": 12,
-          "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
-          "required": true
+          "options": []
         }
       },
       "image": null,
@@ -5517,7 +5413,7 @@
       "name": "MuiGridList",
       "display_name": null,
       "created_at": "2020-04-28T15:57:07.740Z",
-      "updated_at": "2020-04-28T21:56:46.486Z",
+      "updated_at": "2020-11-19T02:40:48.064Z",
       "id": 889768,
       "schema": {
         "content": {
@@ -5526,40 +5422,47 @@
           "component_whitelist": [
             "MuiTileData"
           ],
-          "required": false
+          "required": false,
+          "pos": 0
         },
         "cellHeight": {
           "type": "number",
           "description": "* mui prop: number | 'auto'\n* Number of px for one cell height.\n* You can set 'auto' if you want to let the children determine the height.",
           "display_name": "",
-          "default_value": "180"
+          "default_value": "180",
+          "pos": 1
         },
         "cols": {
           "type": "number",
           "description": "* mui prop: number\n* Number of columns.",
-          "default_value": "2"
+          "default_value": "2",
+          "pos": 2
         },
         "spacing": {
           "type": "number",
           "description": "* mui prop: number\n* Number of px for the spacing between tiles.",
-          "default_value": "4"
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [],
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details.",
-          "min_options": ""
+          "default_value": "4",
+          "pos": 3
         },
         "height": {
           "type": "text",
           "description": "Height of the gridList container",
           "max_length": "",
-          "default_value": "500"
+          "default_value": "500",
+          "pos": 4
         },
         "width": {
           "type": "text",
           "description": "Width of the GridList container.",
-          "default_value": "450"
+          "default_value": "450",
+          "pos": 5
+        },
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details.",
+          "min_options": "",
+          "pos": 6
         }
       },
       "image": null,
@@ -5576,7 +5479,7 @@
       "name": "MuiGridListTileBar",
       "display_name": null,
       "created_at": "2020-04-28T21:30:35.410Z",
-      "updated_at": "2020-07-14T17:55:32.116Z",
+      "updated_at": "2020-11-19T02:40:55.834Z",
       "id": 890319,
       "schema": {
         "actionIcon": {
@@ -5591,27 +5494,32 @@
           ],
           "maximum": "1",
           "required": false,
-          "description": ""
+          "description": "",
+          "pos": 0
         },
         "titlePosition": {
           "type": "text",
           "required": true,
           "description": "mui prop: 'bottom' | 'top'\nPosition of the title bar.",
-          "default_value": "bottom"
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details."
+          "default_value": "bottom",
+          "pos": 1
         },
         "subtitle": {
           "type": "text",
           "description": "* mui prop: node\n* String or element serving as subtitle (support text).",
           "default_value": "",
-          "required": false
+          "required": false,
+          "pos": 2
         },
         "title": {
           "type": "text",
-          "description": "* mui prop: node\n* Title to be displayed on tile."
+          "description": "* mui prop: node\n* Title to be displayed on tile.",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details.",
+          "pos": 4
         }
       },
       "image": null,
@@ -5628,13 +5536,9 @@
       "name": "MuiGrow",
       "display_name": null,
       "created_at": "2020-05-12T19:45:13.216Z",
-      "updated_at": "2020-05-15T20:45:19.327Z",
+      "updated_at": "2020-11-19T02:41:12.400Z",
       "id": 912779,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -5642,22 +5546,31 @@
             "Blok"
           ],
           "maximum": "1",
-          "required": true
+          "required": true,
+          "pos": 0
         },
         "growIn": {
           "type": "number",
           "description": "Number of milliseconds for component to transition in.",
-          "default_value": "300"
+          "default_value": "300",
+          "pos": 1
         },
         "enter": {
           "type": "number",
           "description": "Duration in milliseconds to enter the screen.",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 2
         },
         "exit": {
           "type": "number",
           "description": "Duration in milliseconds to leave the screen.",
-          "default_value": "1500"
+          "default_value": "1500",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 4
         }
       },
       "image": null,
@@ -5674,18 +5587,28 @@
       "name": "MuiHeroHeader",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.157Z",
-      "updated_at": "2020-07-11T00:04:22.240Z",
+      "updated_at": "2020-11-19T02:41:26.373Z",
       "id": 842303,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGridItem"
+          ],
+          "pos": 0,
+          "required": true
+        },
         "backgroundImageUrl": {
           "type": "text",
-          "pos": 0,
+          "pos": 1,
           "required": false,
           "description": "url for background img"
         },
         "alignContent": {
           "type": "option",
-          "pos": 1,
+          "pos": 2,
           "use_uuid": true,
           "options": [
             {
@@ -5744,20 +5667,15 @@
           ],
           "default_value": "center",
           "required": true,
-          "pos": 2,
+          "pos": 3,
           "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes."
         },
         "height": {
           "type": "text",
           "required": true,
           "default_value": "100%",
-          "pos": 3,
+          "pos": 4,
           "description": "Height of the container."
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [],
-          "pos": 4
         },
         "direction": {
           "type": "option",
@@ -5894,15 +5812,10 @@
           "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
           "pos": 8
         },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGridItem"
-          ],
-          "pos": 9,
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "pos": 9
         }
       },
       "image": null,
@@ -5919,7 +5832,7 @@
       "name": "MuiIcon",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.209Z",
-      "updated_at": "2020-03-31T18:27:02.209Z",
+      "updated_at": "2020-11-19T02:41:36.793Z",
       "id": 842298,
       "schema": {
         "iconName": {
@@ -5985,12 +5898,7 @@
         "rootClass": {
           "type": "options",
           "min_options": "",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ]
+          "options": []
         }
       },
       "image": null,
@@ -6007,11 +5915,18 @@
       "name": "MuiIconButton",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.029Z",
-      "updated_at": "2020-06-11T21:21:52.053Z",
+      "updated_at": "2020-11-19T02:41:47.374Z",
       "id": 842297,
       "schema": {
-        "rootClass": {
-          "type": "options"
+        "icon": {
+          "type": "bloks",
+          "required": true,
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiIcon"
+          ],
+          "pos": 0
         },
         "color": {
           "type": "option",
@@ -6035,15 +5950,18 @@
             }
           ],
           "default_value": "default",
-          "description": "The color of the component. It supports those theme colors that make sense for this component."
+          "description": "The color of the component. It supports those theme colors that make sense for this component.",
+          "pos": 1
         },
         "disableFocusRipple": {
           "type": "boolean",
-          "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true."
+          "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true.",
+          "pos": 2
         },
         "disableRipple": {
           "type": "boolean",
-          "description": "If true, the ripple effect will be disabled."
+          "description": "If true, the ripple effect will be disabled.",
+          "pos": 3
         },
         "edge": {
           "type": "option",
@@ -6063,7 +5981,8 @@
             }
           ],
           "default_value": "false",
-          "description": "If given, uses a negative margin to counteract the padding on one side (this is often helpful for aligning the left or right side of the icon with content above or below, without ruining the border size and shape)."
+          "description": "If given, uses a negative margin to counteract the padding on one side (this is often helpful for aligning the left or right side of the icon with content above or below, without ruining the border size and shape).",
+          "pos": 4
         },
         "size": {
           "type": "option",
@@ -6078,16 +5997,12 @@
               "name": "medium"
             }
           ],
-          "default_value": "medium"
+          "default_value": "medium",
+          "pos": 5
         },
-        "icon": {
-          "type": "bloks",
-          "required": true,
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiIcon"
-          ]
+        "rootClass": {
+          "type": "options",
+          "pos": 6
         }
       },
       "image": null,
@@ -6140,18 +6055,9 @@
       "name": "MuiIconButtonDownload",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.949Z",
-      "updated_at": "2020-03-31T18:27:02.949Z",
+      "updated_at": "2020-11-19T02:42:09.571Z",
       "id": 842302,
       "schema": {
-        "fileName": {
-          "type": "text",
-          "required": true
-        },
-        "href": {
-          "type": "text",
-          "description": "url of the file you want to be downloaded",
-          "required": true
-        },
         "iconButton": {
           "type": "bloks",
           "required": true,
@@ -6159,7 +6065,19 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiIconButton"
-          ]
+          ],
+          "pos": 0
+        },
+        "fileName": {
+          "type": "text",
+          "required": true,
+          "pos": 1
+        },
+        "href": {
+          "type": "text",
+          "description": "url of the file you want to be downloaded",
+          "required": true,
+          "pos": 2
         }
       },
       "image": null,
@@ -6176,9 +6094,19 @@
       "name": "MuiIconButtonDrawer",
       "display_name": null,
       "created_at": "2020-04-24T21:30:38.574Z",
-      "updated_at": "2020-06-01T16:54:30.541Z",
+      "updated_at": "2020-11-19T02:42:21.242Z",
       "id": 883783,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiList",
+            "MuiListDropdown"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "icon": {
           "type": "bloks",
           "restrict_components": true,
@@ -6186,7 +6114,8 @@
             "MuiIconButton"
           ],
           "required": true,
-          "maximum": "1"
+          "maximum": "1",
+          "pos": 1
         },
         "anchor": {
           "type": "option",
@@ -6212,17 +6141,14 @@
           "required": true,
           "description": "* mui props: 'bottom' | 'left' | 'right' | 'top'\n* Side from which the drawer will appear.",
           "display_name": "",
-          "default_value": "left"
+          "default_value": "left",
+          "pos": 2
         },
         "elevation": {
           "type": "number",
           "description": "* number\n* The elevation of the drawer.",
-          "default_value": "16"
-        },
-        "rootClass": {
-          "type": "options",
-          "default_value": "",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
+          "default_value": "16",
+          "pos": 3
         },
         "variant": {
           "type": "option",
@@ -6242,16 +6168,14 @@
             }
           ],
           "description": "* mui props: 'permanent' | 'persistent' | 'temporary'\n* The variant to use.",
-          "default_value": "temporary"
+          "default_value": "temporary",
+          "pos": 4
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiList",
-            "MuiListDropdown"
-          ],
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "default_value": "",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 5
         }
       },
       "image": null,
@@ -6268,12 +6192,9 @@
       "name": "MuiIconButtonHref",
       "display_name": null,
       "created_at": "2020-03-31T18:27:01.670Z",
-      "updated_at": "2020-06-22T16:20:23.553Z",
+      "updated_at": "2020-11-19T02:42:32.909Z",
       "id": 842295,
       "schema": {
-        "rootClass": {
-          "type": "options"
-        },
         "iconButton": {
           "type": "bloks",
           "restrict_components": true,
@@ -6281,11 +6202,17 @@
             "MuiIconButton"
           ],
           "maximum": "1",
-          "required": true
+          "required": true,
+          "pos": 0
         },
         "href": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 1
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 2
         }
       },
       "image": null,
@@ -6302,13 +6229,9 @@
       "name": "MuiIconButtonRedirect",
       "display_name": null,
       "created_at": "2020-03-31T18:27:04.758Z",
-      "updated_at": "2020-06-22T16:47:24.062Z",
+      "updated_at": "2020-11-19T02:42:40.561Z",
       "id": 842312,
       "schema": {
-        "redirectRoute": {
-          "type": "text",
-          "required": true
-        },
         "iconButton": {
           "type": "bloks",
           "maximum": "1",
@@ -6316,7 +6239,13 @@
           "component_whitelist": [
             "MuiIconButton"
           ],
-          "required": true
+          "required": true,
+          "pos": 0
+        },
+        "redirectRoute": {
+          "type": "text",
+          "required": true,
+          "pos": 1
         }
       },
       "image": null,
@@ -6333,41 +6262,35 @@
       "name": "MuiImage",
       "display_name": null,
       "created_at": "2020-05-29T18:06:53.049Z",
-      "updated_at": "2020-06-15T22:31:49.875Z",
+      "updated_at": "2020-11-19T02:42:57.741Z",
       "id": 942623,
       "schema": {
         "hrefLink": {
           "type": "text",
           "default_value": "",
-          "description": "Link to redirect on click"
-        },
-        "imageStyle": {
-          "type": "options",
-          "description": "Styling for the image",
-          "min_options": "",
-          "options": [
-            {
-              "value": "height: 25px",
-              "name": "height"
-            }
-          ]
+          "description": "Link to redirect on click",
+          "pos": 0
         },
         "image": {
           "type": "text",
           "description": "Url to the image",
           "regex": "",
           "default_value": "",
-          "required": true
+          "required": true,
+          "pos": 1
+        },
+        "imageStyle": {
+          "type": "options",
+          "description": "Styling for the image",
+          "min_options": "",
+          "options": [],
+          "pos": 2
         },
         "rootClass": {
           "type": "options",
           "description": "Styling for the container of image\n",
-          "options": [
-            {
-              "value": "position: absolute; right: 10",
-              "name": "position right"
-            }
-          ]
+          "options": [],
+          "pos": 3
         }
       },
       "image": null,
@@ -6616,23 +6539,16 @@
       "name": "MuiList",
       "display_name": null,
       "created_at": "2020-03-31T18:27:04.949Z",
-      "updated_at": "2020-06-24T17:14:00.665Z",
+      "updated_at": "2020-11-19T02:43:44.687Z",
       "id": 842313,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "options": [
-            {
-              "value": "padding-right: 100px",
-              "name": "paddingRight"
-            }
-          ]
-        },
         "disablePadding": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 0
         },
         "dense": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 1
         },
         "content": {
           "type": "bloks",
@@ -6641,13 +6557,20 @@
             "MuiListItem",
             "MuiListItemButton"
           ],
-          "required": true
+          "required": true,
+          "pos": 2
         },
         "width": {
           "type": "text",
           "required": true,
           "description": "* width of list",
-          "default_value": "100%"
+          "default_value": "100%",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "pos": 4
         }
       },
       "image": null,
@@ -6664,12 +6587,17 @@
       "name": "MuiListDropdown",
       "display_name": null,
       "created_at": "2020-06-01T16:50:27.822Z",
-      "updated_at": "2020-06-01T16:52:02.823Z",
+      "updated_at": "2020-11-19T02:43:52.171Z",
       "id": 945652,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component"
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiList"
+          ],
+          "required": true,
+          "pos": 0
         },
         "listExpansion": {
           "type": "bloks",
@@ -6677,15 +6605,13 @@
           "component_whitelist": [
             "MuiListExpansion"
           ],
-          "required": true
+          "required": true,
+          "pos": 1
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiList"
-          ],
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component",
+          "pos": 2
         }
       },
       "image": null,
@@ -6702,13 +6628,9 @@
       "name": "MuiListExpansion",
       "display_name": null,
       "created_at": "2020-06-01T16:45:39.858Z",
-      "updated_at": "2020-06-03T17:27:30.523Z",
+      "updated_at": "2020-11-19T02:44:00.841Z",
       "id": 945643,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component"
-        },
         "icon": {
           "type": "bloks",
           "restrict_components": true,
@@ -6716,12 +6638,19 @@
           "required": false,
           "component_whitelist": [
             "MuiListItemIcon"
-          ]
+          ],
+          "pos": 0
         },
         "primaryText": {
           "type": "text",
           "description": "* Text of the List item dropdown",
-          "required": true
+          "required": true,
+          "pos": 1
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component",
+          "pos": 2
         }
       },
       "image": null,
@@ -6738,7 +6667,7 @@
       "name": "MuiListItem",
       "display_name": null,
       "created_at": "2020-03-31T18:27:05.135Z",
-      "updated_at": "2020-08-20T17:39:02.244Z",
+      "updated_at": "2020-11-19T02:44:26.165Z",
       "id": 842314,
       "schema": {
         "listItemText": {
@@ -6751,9 +6680,40 @@
           "required": true,
           "pos": 0
         },
-        "rootClass": {
-          "type": "options",
+        "contactButton": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiContactButton"
+          ],
           "pos": 1
+        },
+        "listItemAvatar": {
+          "type": "bloks",
+          "restrict_components": true,
+          "maximum": "1",
+          "component_whitelist": [
+            "MuiListItemAvatar"
+          ],
+          "pos": 2
+        },
+        "listItemIcon": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiListItemIcon"
+          ],
+          "maximum": "1",
+          "pos": 3
+        },
+        "listItemSecondaryAction": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiListItemSecondaryAction"
+          ],
+          "pos": 4
         },
         "alignItems": {
           "type": "option",
@@ -6769,69 +6729,43 @@
             }
           ],
           "default_value": "center",
-          "pos": 2
+          "pos": 5
         },
         "dense": {
           "type": "boolean",
-          "pos": 3
+          "pos": 6
         },
         "disableGutters": {
           "type": "boolean",
-          "pos": 4
+          "pos": 7
         },
         "divider": {
           "type": "boolean",
-          "pos": 5
+          "pos": 8
         },
         "selected": {
           "type": "boolean",
-          "pos": 6
-        },
-        "listItemAvatar": {
-          "type": "bloks",
-          "restrict_components": true,
-          "maximum": "1",
-          "component_whitelist": [
-            "MuiListItemAvatar"
-          ],
-          "pos": 7
-        },
-        "listItemIcon": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiListItemIcon"
-          ],
-          "maximum": "1",
-          "pos": 8
-        },
-        "listItemSecondaryAction": {
-          "type": "bloks",
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiListItemSecondaryAction"
-          ]
+          "pos": 9
         },
         "isButton": {
           "type": "boolean",
-          "description": "If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem."
+          "description": "If true, the list item will be a button (using ButtonBase). Props intended for ButtonBase can then be applied to ListItem.",
+          "pos": 10
         },
         "redirectRoute": {
           "type": "text",
           "default_value": "",
-          "description": "redirect route\n* If provided redirect route and href, href is be called"
+          "description": "redirect route\n* If provided redirect route and href, href is be called",
+          "pos": 11
         },
         "href": {
           "type": "text",
-          "description": "* url to redirect to"
+          "description": "* url to redirect to",
+          "pos": 12
         },
-        "contactButton": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiContactButton"
-          ]
+        "rootClass": {
+          "type": "options",
+          "pos": 13
         }
       },
       "image": null,
@@ -6878,7 +6812,7 @@
       "name": "MuiListItemButton",
       "display_name": null,
       "created_at": "2020-06-24T17:06:03.143Z",
-      "updated_at": "2020-06-24T17:13:43.706Z",
+      "updated_at": "2020-11-19T02:44:59.968Z",
       "id": 981232,
       "schema": {
         "listItemText": {
@@ -6891,8 +6825,14 @@
           "required": true,
           "pos": 0
         },
-        "rootClass": {
-          "type": "options",
+        "contactButton": {
+          "type": "bloks",
+          "default_value": "",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiContactButton"
+          ],
           "pos": 1
         },
         "alignItems": {
@@ -6948,11 +6888,17 @@
         "redirectRoute": {
           "type": "text",
           "default_value": "",
-          "description": "redirect route\n* If provided redirect route and href, href is be called"
+          "description": "redirect route\n* If provided redirect route and href, href is be called",
+          "pos": 9
         },
         "href": {
           "type": "text",
-          "description": "* url to redirect to"
+          "description": "* url to redirect to",
+          "pos": 10
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 11
         }
       },
       "image": null,
@@ -7061,18 +7007,20 @@
       "name": "MuiMenu",
       "display_name": null,
       "created_at": "2020-03-31T18:27:09.530Z",
-      "updated_at": "2020-05-29T15:12:44.331Z",
+      "updated_at": "2020-11-19T02:45:39.862Z",
       "id": 842338,
       "schema": {
-        "btnText": {
-          "type": "text"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiMenuItem"
-          ]
+          ],
+          "pos": 0
+        },
+        "btnText": {
+          "type": "text",
+          "pos": 1
         },
         "size": {
           "type": "option",
@@ -7092,7 +7040,8 @@
             }
           ],
           "description": "The size of the button. small is equivalent to the dense button styling.",
-          "default_value": "medium"
+          "default_value": "medium",
+          "pos": 2
         },
         "color": {
           "type": "option",
@@ -7120,18 +7069,15 @@
             }
           ],
           "default_value": "default",
-          "description": "The color of the component. It supports those theme colors that make sense for this component."
+          "description": "The color of the component. It supports those theme colors that make sense for this component.",
+          "pos": 3
         },
         "rootClass": {
           "type": "options",
           "translatable": false,
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ],
-          "min_options": ""
+          "options": [],
+          "min_options": "",
+          "pos": 4
         }
       },
       "image": null,
@@ -7148,7 +7094,7 @@
       "name": "MuiMenuItem",
       "display_name": null,
       "created_at": "2020-03-31T18:27:09.704Z",
-      "updated_at": "2020-03-31T18:27:09.704Z",
+      "updated_at": "2020-11-19T02:45:53.217Z",
       "id": 842339,
       "schema": {
         "tab-aa85d3e7-f662-456c-8014-90ade7f002f1": {
@@ -7184,12 +7130,7 @@
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ]
+          "options": []
         }
       },
       "image": null,
@@ -7206,13 +7147,39 @@
       "name": "MuiMobileStepper",
       "display_name": null,
       "created_at": "2020-03-31T18:27:01.310Z",
-      "updated_at": "2020-06-01T22:38:12.963Z",
+      "updated_at": "2020-11-19T02:46:08.879Z",
       "id": 842293,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "Override or extend the styles applied to the component",
-          "options": []
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiMobileTab"
+          ],
+          "required": true,
+          "pos": 0
+        },
+        "nextBtn": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true,
+          "maximum": "1",
+          "pos": 1
+        },
+        "backBtn": {
+          "type": "bloks",
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiButton",
+            "MuiIconButton"
+          ],
+          "required": true,
+          "pos": 2
         },
         "position": {
           "type": "option",
@@ -7233,7 +7200,8 @@
           ],
           "description": "Set the positioning type.",
           "default_value": "static",
-          "required": true
+          "required": true,
+          "pos": 3
         },
         "variant": {
           "type": "option",
@@ -7255,43 +7223,24 @@
           "description": "Set the variant type.",
           "display_name": "",
           "default_value": "dots",
-          "required": true
+          "required": true,
+          "pos": 4
         },
         "autoplay": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 5
         },
         "interval": {
           "type": "text",
           "required": true,
-          "default_value": "3000"
+          "default_value": "3000",
+          "pos": 6
         },
-        "tabs": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiMobileTab"
-          ],
-          "required": true
-        },
-        "nextBtn": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton",
-            "MuiIconButton"
-          ],
-          "required": true,
-          "maximum": "1"
-        },
-        "backBtn": {
-          "type": "bloks",
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiButton",
-            "MuiIconButton"
-          ],
-          "required": true
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": [],
+          "pos": 7
         }
       },
       "image": null,
@@ -7542,12 +7491,19 @@
       "name": "MuiNotificationBanner",
       "display_name": null,
       "created_at": "2020-06-24T15:59:24.109Z",
-      "updated_at": "2020-06-24T19:33:37.606Z",
+      "updated_at": "2020-11-19T02:46:30.903Z",
       "id": 981139,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component."
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiTypography"
+          ],
+          "maximum": "",
+          "required": true,
+          "description": "",
+          "pos": 0
         },
         "color": {
           "type": "option",
@@ -7575,21 +7531,18 @@
               "name": "transparent"
             }
           ],
-          "default_value": "primary"
-        },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiTypography"
-          ],
-          "maximum": "",
-          "required": true,
-          "description": ""
+          "default_value": "primary",
+          "pos": 1
         },
         "top": {
           "type": "text",
-          "default_value": "60px"
+          "default_value": "60px",
+          "pos": 2
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Override or extend the styles applied to the component.",
+          "pos": 3
         }
       },
       "image": null,
@@ -7606,34 +7559,17 @@
       "name": "MuiPaginationTable",
       "display_name": null,
       "created_at": "2020-04-21T20:36:11.906Z",
-      "updated_at": "2020-04-22T16:56:36.911Z",
+      "updated_at": "2020-11-19T02:46:47.502Z",
       "id": 877565,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
-        "padding": {
-          "type": "text",
-          "description": "* mui props: 'default' | 'checkbox' | 'none'\n* Allows TableCells to inherit padding of the Table.",
-          "default_value": "default"
-        },
-        "size": {
-          "type": "text",
-          "description": "* mui props: 'small' | 'medium'\n* Allows TableCells to inherit size of the Table.",
-          "default_value": "medium"
-        },
-        "stickyHeader": {
-          "type": "boolean",
-          "description": "* mui props: true | false\n* set the header sticky. (It doesn't work with IE 11)"
-        },
         "tHead": {
           "type": "bloks",
           "restrict_components": true,
           "required": true,
           "component_whitelist": [
             "MuiPaginationTableHead"
-          ]
+          ],
+          "pos": 0
         },
         "tBody": {
           "type": "bloks",
@@ -7642,13 +7578,32 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiPaginationTableBody"
-          ]
+          ],
+          "pos": 1
+        },
+        "padding": {
+          "type": "text",
+          "description": "* mui props: 'default' | 'checkbox' | 'none'\n* Allows TableCells to inherit padding of the Table.",
+          "default_value": "default",
+          "pos": 2
+        },
+        "size": {
+          "type": "text",
+          "description": "* mui props: 'small' | 'medium'\n* Allows TableCells to inherit size of the Table.",
+          "default_value": "medium",
+          "pos": 3
+        },
+        "stickyHeader": {
+          "type": "boolean",
+          "description": "* mui props: true | false\n* set the header sticky. (It doesn't work with IE 11)",
+          "pos": 4
         },
         "labelRowsPerPage": {
           "type": "text",
           "max_length": "",
           "description": "* mui prop: 'Rows per page:'\n* Customize the rows per page label.",
-          "default_value": "Rows per page:"
+          "default_value": "Rows per page:",
+          "pos": 5
         },
         "rowsPerPageOptions": {
           "type": "options",
@@ -7671,7 +7626,13 @@
             }
           ],
           "description": "   * Customizes the options of the rows per page select field.\n   * If less than two options are available, no select field will be displayed.",
-          "default_value": ""
+          "default_value": "",
+          "pos": 6
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 7
         }
       },
       "image": null,
@@ -7688,19 +7649,21 @@
       "name": "MuiPaginationTableBody",
       "display_name": null,
       "created_at": "2020-04-21T20:49:51.178Z",
-      "updated_at": "2020-04-21T20:50:41.315Z",
+      "updated_at": "2020-11-19T02:46:59.300Z",
       "id": 877598,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiPaginationTableRow"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 1
         }
       },
       "image": null,
@@ -7717,19 +7680,21 @@
       "name": "MuiPaginationTableHead",
       "display_name": null,
       "created_at": "2020-04-21T20:42:17.301Z",
-      "updated_at": "2020-04-21T21:30:50.127Z",
+      "updated_at": "2020-11-19T02:47:06.818Z",
       "id": 877595,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiPaginationTableRow"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 1
         }
       },
       "image": null,
@@ -7746,29 +7711,33 @@
       "name": "MuiPaginationTableRow",
       "display_name": null,
       "created_at": "2020-04-21T20:43:24.855Z",
-      "updated_at": "2020-04-22T14:03:39.670Z",
+      "updated_at": "2020-11-19T02:47:14.336Z",
       "id": 877596,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
-          "min_options": "",
-          "options": []
-        },
-        "hover": {
-          "type": "boolean",
-          "description": "* mui prop: true | false\n* If true, the table row will shade on hover."
-        },
-        "selected": {
-          "type": "boolean",
-          "description": "* mui prop: true | false\n* If true, the table row will have the selected shading."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiTableCell"
-          ]
+          ],
+          "pos": 0
+        },
+        "hover": {
+          "type": "boolean",
+          "description": "* mui prop: true | false\n* If true, the table row will shade on hover.",
+          "pos": 1
+        },
+        "selected": {
+          "type": "boolean",
+          "description": "* mui prop: true | false\n* If true, the table row will have the selected shading.",
+          "pos": 2
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "min_options": "",
+          "options": [],
+          "pos": 3
         }
       },
       "image": null,
@@ -7861,134 +7830,43 @@
       "component_group_uuid": null
     },
     {
-      "name": "MuiResponsiveDrawer",
-      "display_name": null,
-      "created_at": "2020-09-25T19:17:56.574Z",
-      "updated_at": "2020-09-25T19:35:48.764Z",
-      "id": 1117201,
-      "schema": {
-        "rootClass": {
-          "type": "options",
-          "options": [],
-          "description": "   * storyblok multiselect of css classes\n   * Mui Override or extend the styles applied to the component."
-        },
-        "only": {
-          "type": "options",
-          "options": [
-            {
-              "value": "xs",
-              "name": "xs"
-            },
-            {
-              "value": "sm",
-              "name": "sm"
-            },
-            {
-              "value": "md",
-              "name": "md"
-            },
-            {
-              "value": "lg",
-              "name": "lg"
-            },
-            {
-              "value": "xl",
-              "name": "xl"
-            }
-          ],
-          "description": "   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'\n   * Hide the given breakpoint(s)."
-        },
-        "anchor": {
-          "type": "option",
-          "options": [
-            {
-              "value": "bottom",
-              "name": "bottom"
-            },
-            {
-              "value": "left",
-              "name": "left"
-            },
-            {
-              "value": "right",
-              "name": "right"
-            },
-            {
-              "value": "top",
-              "name": "top"
-            }
-          ],
-          "description": "   * mui props: 'bottom', 'left', 'right', 'top'\n   * Side from which the drawer will appear.",
-          "display_name": "left",
-          "use_uuid": true
-        },
-        "elevation": {
-          "type": "number",
-          "description": "   * number\n   * The elevation of the drawer.\n   * storyblok type is a number",
-          "default_value": "16"
-        },
-        "variant": {
-          "type": "option",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "permanent",
-              "name": "permanent"
-            },
-            {
-              "value": "persistent",
-              "name": "persistent"
-            },
-            {
-              "value": "temporary",
-              "name": "temporary"
-            }
-          ],
-          "description": "  /**\n   * mui props: 'permanent', 'persistent', 'temporary'\n   * The variant to use.\n   */",
-          "default_value": "permanent"
-        },
-        "content": {
-          "type": "bloks",
-          "required": true,
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiList",
-            "MuiListDropdown"
-          ],
-          "description": "  /**\n   * components:\n   * MuiList, MuiListDropdown\n   */"
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "MuiResponsiveDrawer",
-      "component_group_uuid": null
-    },
-    {
       "name": "MuiSelect",
       "display_name": null,
       "created_at": "2020-05-22T22:18:37.325Z",
-      "updated_at": "2020-05-23T19:31:49.811Z",
+      "updated_at": "2020-11-19T02:47:30.497Z",
       "id": 930355,
       "schema": {
+        "options": {
+          "type": "options",
+          "required": true,
+          "options": [
+            {
+              "value": "one",
+              "name": "one"
+            },
+            {
+              "value": "two",
+              "name": "two"
+            }
+          ],
+          "pos": 0
+        },
         "name": {
           "type": "text",
           "required": true,
           "description": "The name of your field. no spaces in the name ",
-          "default_value": ""
+          "default_value": "",
+          "pos": 1
         },
         "label": {
           "type": "text",
           "required": true,
-          "description": "lable for the input field"
+          "description": "lable for the input field",
+          "pos": 2
         },
         "autoFocus": {
-          "type": "boolean"
+          "type": "boolean",
+          "pos": 3
         },
         "color": {
           "type": "option",
@@ -8005,20 +7883,24 @@
           ],
           "required": true,
           "description": " * The color of the component. It supports those theme colors that make sense for this component.\n * mui prop: 'primary' | 'secondary'",
-          "default_value": "primary"
+          "default_value": "primary",
+          "pos": 4
         },
         "disabled": {
           "type": "boolean",
-          "description": " * If true, the input element will be disabled."
+          "description": " * If true, the input element will be disabled.",
+          "pos": 5
         },
         "fullWidth": {
           "type": "boolean",
-          "description": " * If true, the input will take up the full width of its container.\n"
+          "description": " * If true, the input will take up the full width of its container.\n",
+          "pos": 6
         },
         "helperText": {
           "type": "text",
           "default_value": "",
-          "description": " * The helper text content."
+          "description": " * The helper text content.",
+          "pos": 7
         },
         "margin": {
           "type": "option",
@@ -8039,11 +7921,13 @@
           ],
           "default_value": "normal",
           "description": " *  If dense or normal, will adjust vertical spacing of this and contained components.\n * ex 'dense' | 'none' | 'normal'",
-          "required": true
+          "required": true,
+          "pos": 8
         },
         "placeholder": {
           "type": "text",
-          "description": " * The short hint displayed in the input before the user enters a value.\n"
+          "description": " * The short hint displayed in the input before the user enters a value.\n",
+          "pos": 9
         },
         "size": {
           "type": "option",
@@ -8059,7 +7943,8 @@
             }
           ],
           "required": true,
-          "default_value": "medium"
+          "default_value": "medium",
+          "pos": 10
         },
         "variant": {
           "type": "option",
@@ -8079,21 +7964,8 @@
             }
           ],
           "required": true,
-          "default_value": "standard"
-        },
-        "options": {
-          "type": "options",
-          "required": true,
-          "options": [
-            {
-              "value": "one",
-              "name": "one"
-            },
-            {
-              "value": "two",
-              "name": "two"
-            }
-          ]
+          "default_value": "standard",
+          "pos": 11
         }
       },
       "image": null,
@@ -8110,12 +7982,18 @@
       "name": "MuiSlide",
       "display_name": null,
       "created_at": "2020-05-12T19:50:52.432Z",
-      "updated_at": "2020-05-13T00:22:50.129Z",
+      "updated_at": "2020-11-19T02:47:41.118Z",
       "id": 912780,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Blok"
+          ],
+          "maximum": "1",
+          "required": true,
+          "pos": 0
         },
         "direction": {
           "type": "option",
@@ -8139,39 +8017,40 @@
               "value": "right",
               "name": "right"
             }
-          ]
+          ],
+          "pos": 1
         },
         "timeout": {
           "type": "text",
           "description": "* mui props: number | string\n* The duration for the transition, in milliseconds.\n* You may specify a single timeout for all transitions, or individually with an object.\n* Set to 'auto' to automatically calculate transition time based on height.",
           "default_value": "auto",
-          "display_name": ""
-        },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "Blok"
-          ],
-          "maximum": "1",
-          "required": true
+          "display_name": "",
+          "pos": 2
         },
         "slideIn": {
           "type": "number",
           "default_value": "300",
           "display_name": "",
-          "description": "* Number of milliseconds for component to transition in."
+          "description": "* Number of milliseconds for component to transition in.",
+          "pos": 3
         },
         "enter": {
           "type": "number",
           "description": "Duration in milliseconds to enter the screen.",
           "display_name": "",
-          "default_value": "800"
+          "default_value": "800",
+          "pos": 4
         },
         "exit": {
           "type": "number",
           "description": "Duration in milliseconds to exit the screen.",
-          "default_value": "800"
+          "default_value": "800",
+          "pos": 5
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 6
         }
       },
       "image": null,
@@ -8188,7 +8067,7 @@
       "name": "MuiSubmit",
       "display_name": null,
       "created_at": "2020-05-22T22:15:31.127Z",
-      "updated_at": "2020-05-22T22:16:09.681Z",
+      "updated_at": "2020-11-19T02:47:51.854Z",
       "id": 930354,
       "schema": {
         "buttonText": {
@@ -8196,18 +8075,6 @@
           "required": true,
           "description": "button text",
           "pos": 0
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "     * Override or extend the styles applied to the component      * expecting array of string ex: ['color: black', 'font-Size: 20px' ]",
-          "pos": 1,
-          "min_options": "",
-          "options": [
-            {
-              "value": "color: white",
-              "name": "color white"
-            }
-          ]
         },
         "color": {
           "type": "option",
@@ -8233,7 +8100,7 @@
           "required": true,
           "description": "The color of the component. It supports those theme colors that make sense for this component.",
           "default_value": "secondary",
-          "pos": 2
+          "pos": 1
         },
         "disableElevation": {
           "type": "boolean",
@@ -8253,27 +8120,27 @@
             }
           ],
           "required": false,
-          "pos": 3
+          "pos": 2
         },
         "disableFocusRipple": {
           "type": "boolean",
           "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true.",
-          "pos": 4
+          "pos": 3
         },
         "disableRipple": {
           "type": "boolean",
           "description": "If true, the ripple effect will be disabled.      * Without a ripple there is no styling for :focus-visible by default. Be sure to highlight the element by applying separate styles with the focusVisibleClassName.",
-          "pos": 5
+          "pos": 4
         },
         "endIcon": {
           "type": "text",
           "description": "Element placed after the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-          "pos": 6
+          "pos": 5
         },
         "fullWidth": {
           "type": "boolean",
           "description": "If true, the button will take up the full width of its container.",
-          "pos": 7
+          "pos": 6
         },
         "size": {
           "type": "option",
@@ -8295,12 +8162,12 @@
           "description": "The size of the button. small is equivalent to the dense button styling.",
           "default_value": "medium",
           "required": true,
-          "pos": 8
+          "pos": 7
         },
         "startIcon": {
           "type": "text",
           "description": "Element placed before the children. renders icon      * any icon from https://material.io/resources/icons/?style=baseline",
-          "pos": 9
+          "pos": 8
         },
         "variant": {
           "type": "option",
@@ -8321,7 +8188,14 @@
           ],
           "required": true,
           "default_value": "text",
-          "pos": 10
+          "pos": 9
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "     * Override or extend the styles applied to the component      * expecting array of string ex: ['color: black', 'font-Size: 20px' ]",
+          "pos": 10,
+          "min_options": "",
+          "options": []
         }
       },
       "image": null,
@@ -8338,31 +8212,34 @@
       "name": "MuiTab",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.523Z",
-      "updated_at": "2020-08-11T17:15:34.133Z",
+      "updated_at": "2020-11-19T02:48:12.690Z",
       "id": 842305,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGrid",
+            "MuiIcon"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "label": {
           "type": "text",
           "required": true,
-          "description": "mui prop sting for tab lable"
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [
-            {
-              "value": "overflow: hidden",
-              "name": "hide overflow"
-            }
-          ],
-          "min_options": ""
+          "description": "mui prop sting for tab lable",
+          "pos": 1
         },
         "disableFocusRipple": {
           "type": "boolean",
-          "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true."
+          "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true.",
+          "pos": 2
         },
         "disableRipple": {
           "type": "boolean",
-          "description": "If true, the ripple effect will be disabled."
+          "description": "If true, the ripple effect will be disabled.",
+          "pos": 3
         },
         "icon": {
           "type": "bloks",
@@ -8371,19 +8248,12 @@
           "restrict_components": true,
           "component_whitelist": [
             "MuiIcon"
-          ]
+          ],
+          "pos": 4
         },
         "wrapped": {
-          "type": "boolean"
-        },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGrid",
-            "MuiIcon"
-          ],
-          "required": true
+          "type": "boolean",
+          "pos": 5
         },
         "geocodeState": {
           "type": "option",
@@ -8590,7 +8460,14 @@
               "name": "Wyoming"
             }
           ],
-          "description": "State for the geocode"
+          "description": "State for the geocode",
+          "pos": 6
+        },
+        "rootClass": {
+          "type": "options",
+          "options": [],
+          "min_options": "",
+          "pos": 7
         }
       },
       "image": null,
@@ -8607,12 +8484,28 @@
       "name": "MuiTable",
       "display_name": null,
       "created_at": "2020-04-20T17:03:14.087Z",
-      "updated_at": "2020-04-21T17:26:30.043Z",
+      "updated_at": "2020-11-19T02:48:29.492Z",
       "id": 874990,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "default_value": "* stroyblok multiselect of css classes \n* Mui Override or extend the styles applied to the component."
+        "tHead": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiTableHead"
+          ],
+          "required": true,
+          "maximum": "1",
+          "pos": 0
+        },
+        "tBody": {
+          "type": "bloks",
+          "required": true,
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiTableBody"
+          ],
+          "pos": 1
         },
         "padding": {
           "type": "option",
@@ -8633,7 +8526,8 @@
           ],
           "required": true,
           "default_value": "default",
-          "description": "   * mui props: 'default' | 'checkbox' | 'none'\n   * Allows TableCells to inherit padding of the Table."
+          "description": "   * mui props: 'default' | 'checkbox' | 'none'\n   * Allows TableCells to inherit padding of the Table.",
+          "pos": 2
         },
         "size": {
           "type": "option",
@@ -8650,30 +8544,19 @@
             }
           ],
           "description": "   * mui props: 'small' | 'medium'\n   * Allows TableCells to inherit size of the Table.",
-          "default_value": "medium"
+          "default_value": "medium",
+          "pos": 3
         },
         "stickyHeader": {
           "type": "boolean",
           "use_uuid": true,
-          "description": "   * mui props: true | false\n   * set the header sticky. (It doesn't work with IE 11)"
+          "description": "   * mui props: true | false\n   * set the header sticky. (It doesn't work with IE 11)",
+          "pos": 4
         },
-        "tHead": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiTableHead"
-          ],
-          "required": true,
-          "maximum": "1"
-        },
-        "tBody": {
-          "type": "bloks",
-          "required": true,
-          "maximum": "1",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiTableBody"
-          ]
+        "rootClass": {
+          "type": "options",
+          "default_value": "* stroyblok multiselect of css classes \n* Mui Override or extend the styles applied to the component.",
+          "pos": 5
         }
       },
       "image": null,
@@ -8720,7 +8603,7 @@
       "name": "MuiTableCell",
       "display_name": null,
       "created_at": "2020-04-20T16:58:37.736Z",
-      "updated_at": "2020-04-20T17:46:56.399Z",
+      "updated_at": "2020-11-19T02:48:44.634Z",
       "id": 874986,
       "schema": {
         "content": {
@@ -8730,10 +8613,8 @@
             "MuiTypography"
           ],
           "maximum": "1",
-          "required": true
-        },
-        "rootClass": {
-          "type": "options"
+          "required": true,
+          "pos": 0
         },
         "align": {
           "type": "option",
@@ -8761,7 +8642,8 @@
               "name": "right"
             }
           ],
-          "default_value": "center"
+          "default_value": "center",
+          "pos": 1
         },
         "padding": {
           "type": "option",
@@ -8782,7 +8664,8 @@
           ],
           "description": "   * mui prop: 'checkbox' | 'default' | 'none'\n   * Sets the padding applied to the cell.",
           "default_value": "default",
-          "required": true
+          "required": true,
+          "pos": 2
         },
         "size": {
           "type": "option",
@@ -8799,7 +8682,8 @@
               "name": "medium"
             }
           ],
-          "required": true
+          "required": true,
+          "pos": 3
         },
         "sortDirection": {
           "type": "option",
@@ -8820,7 +8704,12 @@
               "value": "false",
               "name": "false"
             }
-          ]
+          ],
+          "pos": 4
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 5
         }
       },
       "image": null,
@@ -8837,19 +8726,21 @@
       "name": "MuiTableHead",
       "display_name": null,
       "created_at": "2020-04-20T17:00:06.004Z",
-      "updated_at": "2020-04-20T17:01:20.599Z",
+      "updated_at": "2020-11-19T02:48:52.694Z",
       "id": 874987,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "   * stroyblok multiselect of css classes\n  * Mui Override or extend the styles applied to the component.\n"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiTableRow"
-          ]
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "   * stroyblok multiselect of css classes\n  * Mui Override or extend the styles applied to the component.\n",
+          "pos": 1
         }
       },
       "image": null,
@@ -8866,38 +8757,33 @@
       "name": "MuiTableRow",
       "display_name": null,
       "created_at": "2020-04-20T16:55:40.779Z",
-      "updated_at": "2020-04-21T17:36:51.186Z",
+      "updated_at": "2020-11-19T02:49:04.604Z",
       "id": 874985,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
-          "options": [
-            {
-              "value": "font-weight: bolder",
-              "name": "font-weight"
-            },
-            {
-              "value": "",
-              "name": ""
-            }
-          ]
-        },
-        "hover": {
-          "type": "boolean",
-          "description": "  * mui prop: true | false\n   * If true, the table row will shade on hover."
-        },
-        "selected": {
-          "type": "boolean",
-          "description": "   * mui prop: true | false\n   * If true, the table row will have the selected shading.\n"
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiTableCell"
           ],
-          "required": true
+          "required": true,
+          "pos": 0
+        },
+        "hover": {
+          "type": "boolean",
+          "description": "  * mui prop: true | false\n   * If true, the table row will shade on hover.",
+          "pos": 1
+        },
+        "selected": {
+          "type": "boolean",
+          "description": "   * mui prop: true | false\n   * If true, the table row will have the selected shading.\n",
+          "pos": 2
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "options": [],
+          "pos": 3
         }
       },
       "image": null,
@@ -8914,22 +8800,18 @@
       "name": "MuiTabs",
       "display_name": null,
       "created_at": "2020-03-31T18:27:03.338Z",
-      "updated_at": "2020-08-11T14:47:44.728Z",
+      "updated_at": "2020-11-19T02:49:25.654Z",
       "id": 842304,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "Override or extend the styles applied to the component",
-          "options": [
-            {
-              "value": "justify-content: center",
-              "name": "center items"
-            },
-            {
-              "value": "margin-bottom: 25px",
-              "name": "margin-bottom"
-            }
+        "tabs": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiGrid",
+            "MuiIcon",
+            "MuiTab"
           ],
+          "required": true,
           "pos": 0
         },
         "indicatorColor": {
@@ -9044,27 +8926,16 @@
           "description": "Height of the tabs container",
           "pos": 6
         },
-        "tabs": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiGrid",
-            "MuiIcon",
-            "MuiTab"
-          ],
-          "required": true,
-          "pos": 7
-        },
         "autoplay": {
           "type": "boolean",
-          "pos": 8
+          "pos": 7
         },
         "interval": {
           "type": "text",
           "translatable": false,
           "required": true,
           "default_value": "3000",
-          "pos": 9
+          "pos": 8
         },
         "justifyContent": {
           "type": "option",
@@ -9088,7 +8959,14 @@
             }
           ],
           "description": "   * Justify content flex styling for MuiTabs.\n   * justifyContent: 'space-between' | 'center' | 'space-evenly' | 'space-around",
-          "default_value": "center"
+          "default_value": "center",
+          "pos": 9
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "Override or extend the styles applied to the component",
+          "options": [],
+          "pos": 10
         }
       },
       "image": null,
@@ -9105,9 +8983,16 @@
       "name": "MuiText",
       "display_name": null,
       "created_at": "2020-05-29T16:39:06.708Z",
-      "updated_at": "2020-07-06T00:26:58.196Z",
+      "updated_at": "2020-11-19T02:49:56.116Z",
       "id": 942519,
       "schema": {
+        "content": {
+          "type": "textarea",
+          "required": true,
+          "default_value": "",
+          "description": "text to display",
+          "pos": 0
+        },
         "align": {
           "type": "option",
           "use_uuid": true,
@@ -9134,7 +9019,8 @@
             }
           ],
           "default_value": "inherit",
-          "required": false
+          "required": false,
+          "pos": 1
         },
         "color": {
           "type": "option",
@@ -9170,7 +9056,8 @@
             }
           ],
           "default_value": "initial",
-          "required": false
+          "required": false,
+          "pos": 2
         },
         "variant": {
           "type": "option",
@@ -9238,36 +9125,19 @@
             }
           ],
           "default_value": "body1",
-          "required": false
+          "required": false,
+          "pos": 3
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "color: blue",
-              "name": "color blue"
-            },
-            {
-              "value": "font-size: 12px",
-              "name": "12 font size"
-            },
-            {
-              "value": "padding-right: 15px",
-              "name": "padding-right"
-            }
-          ],
+          "options": [],
           "folder_slug": "",
           "description": "",
           "display_name": "",
           "translatable": false,
           "required": false,
-          "external_datasource": ""
-        },
-        "content": {
-          "type": "text",
-          "required": true,
-          "default_value": "",
-          "description": "text to display"
+          "external_datasource": "",
+          "pos": 4
         }
       },
       "image": null,
@@ -9284,40 +9154,46 @@
       "name": "MuiTileData",
       "display_name": null,
       "created_at": "2020-04-28T16:22:30.098Z",
-      "updated_at": "2020-04-28T21:57:52.804Z",
+      "updated_at": "2020-11-19T02:50:30.192Z",
       "id": 889807,
       "schema": {
-        "cols": {
-          "type": "number",
-          "description": "* mui prop: number\n* width of the tile in number of grid cells.",
-          "display_name": "",
-          "default_value": "1"
-        },
-        "rows": {
-          "type": "number",
-          "description": "* mui prop: number\n* Height of the tile in number of grid cells.",
-          "default_value": "1"
-        },
-        "image": {
-          "type": "text",
-          "description": "* mui prop: string\n* Title of image.",
-          "default_value": "https://www.lifeloveandsugar.com/wp-content/uploads/2018/01/Chocolate-Covered-Strawberry-Cupcakes4.jpg"
-        },
-        "title": {
-          "type": "text",
-          "description": "* mui prop: string\n* Title of image.",
-          "default_value": "Cupcake"
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details."
-        },
         "MuiGridListTileBar": {
           "type": "bloks",
           "restrict_components": true,
           "component_whitelist": [
             "MuiGridListTileBar"
-          ]
+          ],
+          "pos": 0
+        },
+        "cols": {
+          "type": "number",
+          "description": "* mui prop: number\n* width of the tile in number of grid cells.",
+          "display_name": "",
+          "default_value": "1",
+          "pos": 1
+        },
+        "rows": {
+          "type": "number",
+          "description": "* mui prop: number\n* Height of the tile in number of grid cells.",
+          "default_value": "1",
+          "pos": 2
+        },
+        "image": {
+          "type": "text",
+          "description": "* mui prop: string\n* Title of image.",
+          "default_value": "https://www.lifeloveandsugar.com/wp-content/uploads/2018/01/Chocolate-Covered-Strawberry-Cupcakes4.jpg",
+          "pos": 3
+        },
+        "title": {
+          "type": "text",
+          "description": "* mui prop: string\n* Title of image.",
+          "default_value": "Cupcake",
+          "pos": 4
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* storyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component. See CSS API below for more details.",
+          "pos": 5
         }
       },
       "image": null,
@@ -9334,19 +9210,32 @@
       "name": "MuiTooltip",
       "display_name": null,
       "created_at": "2020-03-31T18:27:06.005Z",
-      "updated_at": "2020-06-11T21:22:05.134Z",
+      "updated_at": "2020-11-19T02:50:42.546Z",
       "id": 842319,
       "schema": {
-        "rootClass": {
-          "type": "options"
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiIconButtonRedirect",
+            "MuiIconButtonHref",
+            "MuiIconButtonDownload",
+            "MuiIconButtonDialog",
+            "MuiButtonRedirect"
+          ],
+          "required": true,
+          "maximum": "1",
+          "pos": 0
         },
         "title": {
           "type": "text",
-          "required": true
+          "required": true,
+          "pos": 1
         },
         "arrow": {
           "type": "boolean",
-          "description": "f true, adds an arrow to the tooltip."
+          "description": "f true, adds an arrow to the tooltip.",
+          "pos": 2
         },
         "placement": {
           "type": "option",
@@ -9402,20 +9291,12 @@
             }
           ],
           "required": true,
-          "default_value": "bottom"
+          "default_value": "bottom",
+          "pos": 3
         },
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiIconButtonRedirect",
-            "MuiIconButtonHref",
-            "MuiIconButtonDownload",
-            "MuiIconButtonDialog",
-            "MuiButtonRedirect"
-          ],
-          "required": true,
-          "maximum": "1"
+        "rootClass": {
+          "type": "options",
+          "pos": 4
         }
       },
       "image": null,
@@ -9466,9 +9347,31 @@
       "name": "MuiTypography",
       "display_name": null,
       "created_at": "2020-03-31T18:27:02.388Z",
-      "updated_at": "2020-07-14T17:25:27.261Z",
+      "updated_at": "2020-11-19T02:51:10.869Z",
       "id": 842299,
       "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiLink",
+            "MuiIcon",
+            "MuiIconButtonRedirect",
+            "MuiIconButtonHref",
+            "MuiIconButtonDownload",
+            "MuiIconButtonDialog",
+            "MuiButtonRedirect",
+            "MuiButtonDownload",
+            "MuiButtonDialog",
+            "MuiButtonHref",
+            "MuiText",
+            "MyCoolComp",
+            "GoogleConversions"
+          ],
+          "required": true,
+          "pos": 0
+        },
         "align": {
           "type": "option",
           "use_uuid": true,
@@ -9495,7 +9398,8 @@
             }
           ],
           "default_value": "inherit",
-          "required": true
+          "required": true,
+          "pos": 1
         },
         "color": {
           "type": "option",
@@ -9531,65 +9435,31 @@
             }
           ],
           "default_value": "initial",
-          "required": true
+          "required": true,
+          "pos": 2
+        },
+        "width": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 3
+        },
+        "height": {
+          "type": "text",
+          "required": true,
+          "default_value": "100%",
+          "pos": 4
         },
         "rootClass": {
           "type": "options",
-          "options": [
-            {
-              "value": "margin-right: 15px",
-              "name": "margin-right"
-            },
-            {
-              "value": "margin-bottom: 15px",
-              "name": "margin-bottom"
-            },
-            {
-              "value": "opacity: .7",
-              "name": "opacity"
-            },
-            {
-              "value": "background-color: #FFF",
-              "name": "bc white"
-            }
-          ],
+          "options": [],
           "folder_slug": "",
           "description": "",
           "display_name": "",
           "translatable": false,
           "required": false,
-          "external_datasource": ""
-        },
-        "width": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "height": {
-          "type": "text",
-          "required": true,
-          "default_value": "100%"
-        },
-        "content": {
-          "type": "bloks",
-          "maximum": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiLink",
-            "MuiIcon",
-            "MuiIconButtonRedirect",
-            "MuiIconButtonHref",
-            "MuiIconButtonDownload",
-            "MuiIconButtonDialog",
-            "MuiButtonRedirect",
-            "MuiButtonDownload",
-            "MuiButtonDialog",
-            "MuiButtonHref",
-            "MuiText",
-            "MyCoolComp",
-            "GoogleConversions"
-          ],
-          "required": true
+          "external_datasource": "",
+          "pos": 5
         }
       },
       "image": null,
@@ -9672,13 +9542,9 @@
       "name": "MuiZoom",
       "display_name": null,
       "created_at": "2020-05-12T19:53:59.701Z",
-      "updated_at": "2020-05-13T18:41:57.250Z",
+      "updated_at": "2020-11-19T02:51:27.256Z",
       "id": 912781,
       "schema": {
-        "rootClass": {
-          "type": "options",
-          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component."
-        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -9686,24 +9552,33 @@
             "Blok"
           ],
           "required": true,
-          "maximum": "1"
+          "maximum": "1",
+          "pos": 0
         },
         "zoomIn": {
           "type": "number",
           "max_length": "",
           "description": "* mui props: number\n* Number of milliseconds for component to transition in.",
-          "default_value": "300"
+          "default_value": "300",
+          "pos": 1
         },
         "enter": {
           "type": "number",
           "description": "* mui props: number\n* Number of milliseconds for component to effect on screen.",
           "display_name": "",
-          "default_value": "1000"
+          "default_value": "1000",
+          "pos": 2
         },
         "exit": {
           "type": "number",
           "description": "* mui props: number\n* Number of milliseconds for component to effect off screen.",
-          "default_value": "1000"
+          "default_value": "1000",
+          "pos": 3
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* stroyblok multiselect of css classes\n* Mui Override or extend the styles applied to the component.",
+          "pos": 4
         }
       },
       "image": null,
@@ -9714,23 +9589,6 @@
       "all_presets": [],
       "preset_id": null,
       "real_name": "MuiZoom",
-      "component_group_uuid": null
-    },
-    {
-      "name": "MyCoolComp",
-      "display_name": null,
-      "created_at": "2020-07-05T18:13:35.050Z",
-      "updated_at": "2020-07-05T18:13:35.050Z",
-      "id": 997083,
-      "schema": {},
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "MyCoolComp",
       "component_group_uuid": null
     },
     {
