@@ -161,7 +161,7 @@
     "styleguide:build": "npx styleguidist build",
     "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "test-report": "react-scripts test --watchAll=false --coverage",
-    "export-storyblok-components": "./cli/exportStoryblokComponents"
+    "export-storyblok-components": "./cli/exportStoryblokComponents.js"
   },
   "bin": {
     "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js",
