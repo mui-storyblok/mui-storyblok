@@ -25,12 +25,36 @@ export class StoryBlokPage extends Component {
   }
 
   async componentDidMount() {
+    this.appendStoryblokBridgeScript(this.props.accessToken);
     await this.getPage();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.theme !== this.props.theme && this.props.useObjectTheme) {
       this.setpropTheme(this.props.theme);
+    }
+  }
+
+  appendStoryblokBridgeScript = (accessToken) => {
+    if (process.env.REACT_APP_ENV !== 'production') {
+      const existingScript = document.getElementById('storyblokBridge');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = `//app.storyblok.com/f/storyblok-latest.js?t=${accessToken}`;
+        script.id = 'storyblokBridge';
+        document.body.appendChild(script);
+        script.onload = () => {
+          // Initialize the Storyblok JS Bridge
+          window.storyblok.init({ accessToken });
+
+          // Ping the Visual Editor and enter Editmode manually
+          window.storyblok.pingEditor(() => {
+            if (window.storyblok.inEditor) {
+              window.storyblok.enterEditmode();
+            }
+          });
+        };
+      }
     }
   }
 
@@ -64,7 +88,6 @@ export class StoryBlokPage extends Component {
     try {
       const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
-
       const muiTheme = await this.pickTheme(story[1], this.props.theme);
       this.setState({ muiTheme });
 
