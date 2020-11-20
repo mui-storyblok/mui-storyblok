@@ -12,13 +12,18 @@ exports[`<MuiNotificationBanner /> snapshot 1`] = `
     }
   >
     <div
-      className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
+      className="MuiTypography storyblok--outline"
+      data-blok-c="{\\"name\\": \\"MuiTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
     >
-      <span
-        className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
+      <div
+        className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
       >
-         Banner text 
-      </span>
+        <span
+          className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
+        >
+           Banner text 
+        </span>
+      </div>
     </div>
     <span
       aria-hidden={true}

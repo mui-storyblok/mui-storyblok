@@ -5,80 +5,110 @@ exports[`<MuiCard /> snapshot 1`] = `
   className="MuiPaper-root MuiCard-root makeStyles-root-3 MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
-    className="MuiCardActions-root makeStyles-root-4 MuiCardActions-spacing"
-  >
-    <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-5 MuiButton-textSecondary MuiButton-fullWidth"
-      data-testid="muiButton"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
-    >
-      <span
-        className="MuiButton-label"
-      >
-        buttonText
-      </span>
-    </button>
-  </div>
-  <div
-    className="MuiCardContent-root makeStyles-root-6"
+    className="MuiCardActions storyblok--outline"
+    data-blok-c="{\\"name\\": \\"MuiCardActions\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
   >
     <div
-      className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
+      className="MuiCardActions-root makeStyles-root-4 MuiCardActions-spacing"
     >
-      <span
-        className="MuiTypography-root makeStyles-root-8 MuiTypography-body1"
+      <div
+        className="MuiButtonRedirect storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiButtonRedirect\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-         undefined 
-      </span>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-5 MuiButton-textSecondary MuiButton-fullWidth"
+          data-testid="muiButton"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            buttonText
+          </span>
+        </button>
+      </div>
     </div>
   </div>
   <div
-    className="MuiCardHeader-root makeStyles-root-9"
+    className="MuiCardContent storyblok--outline"
+    data-blok-c="{\\"name\\": \\"MuiCardContent\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
   >
     <div
-      className="MuiCardHeader-avatar"
-    />
-    <div
-      className="MuiCardHeader-content"
+      className="MuiCardContent-root makeStyles-root-6"
     >
-      <span
-        className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+      <div
+        className="MuiTypography storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        title
-      </span>
-      <span
-        className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
-      >
-        
-      </span>
+        <div
+          className="MuiTypography-root makeStyles-root-7 MuiTypography-body1"
+        >
+          <span
+            className="MuiTypography-root makeStyles-root-8 MuiTypography-body1"
+          >
+             undefined 
+          </span>
+        </div>
+      </div>
     </div>
-    <div
-      className="MuiCardHeader-action"
-    />
   </div>
   <div
-    alt="alt"
-    className="MuiCardMedia-root makeStyles-root-10"
-    style={
-      Object {
-        "backgroundImage": "url(\\"img.com\\")",
+    className="MuiCardHeader storyblok--outline"
+    data-blok-c="{\\"name\\": \\"MuiCardHeader\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+  >
+    <div
+      className="MuiCardHeader-root makeStyles-root-9"
+    >
+      <div
+        className="MuiCardHeader-avatar"
+      />
+      <div
+        className="MuiCardHeader-content"
+      >
+        <span
+          className="MuiTypography-root MuiCardHeader-title MuiTypography-body2 MuiTypography-displayBlock"
+        >
+          title
+        </span>
+        <span
+          className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="MuiCardHeader-action"
+      />
+    </div>
+  </div>
+  <div
+    className="MuiCardMedia storyblok--outline"
+    data-blok-c="{\\"name\\": \\"MuiCardMedia\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+  >
+    <div
+      alt="alt"
+      className="MuiCardMedia-root makeStyles-root-10"
+      style={
+        Object {
+          "backgroundImage": "url(\\"img.com\\")",
+        }
       }
-    }
-    title="title"
-  />
+      title="title"
+    />
+  </div>
 </div>
 `;

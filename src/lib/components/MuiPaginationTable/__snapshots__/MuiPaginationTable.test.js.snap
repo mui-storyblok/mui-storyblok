@@ -9,26 +9,36 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
     className="MuiTableHead-root makeStyles-root-102"
     role={null}
   >
-    <tr
-      className="MuiTableRow-root makeStyles-root-103 MuiTableRow-head"
-      role={null}
+    <div
+      className="MuiPaginationTableRow storyblok--outline"
+      data-blok-c="{\\"name\\": \\"MuiPaginationTableRow\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
     >
-      <th
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-head makeStyles-root-104"
-        scope="col"
+      <tr
+        className="MuiTableRow-root makeStyles-root-103 MuiTableRow-head"
+        role={null}
       >
         <div
-          className="MuiTypography-root makeStyles-root-105 MuiTypography-body1"
+          className="MuiTableCell storyblok--outline"
+          data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-106 MuiTypography-body1"
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-head makeStyles-root-104"
+            scope="col"
           >
-             undefined 
-          </span>
+            <div
+              className="MuiTypography-root makeStyles-root-105 MuiTypography-body1"
+            >
+              <span
+                className="MuiTypography-root makeStyles-root-106 MuiTypography-body1"
+              >
+                 undefined 
+              </span>
+            </div>
+          </th>
         </div>
-      </th>
-    </tr>
+      </tr>
+    </div>
   </thead>
   <tbody
     className="MuiTableBody-root makeStyles-root-107"
@@ -38,191 +48,241 @@ exports[`<MuiPaginationTable /> snapshot 1`] = `
       className="MuiTableRow-root makeStyles-root-108"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-109"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-110 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-109"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-111 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-110 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-111 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-112"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-113"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-114 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-113"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-115 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-114 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-115 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-116"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-117"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-118 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-117"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-119 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-118 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-119 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-120"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-121"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-122 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-121"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-123 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-122 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-123 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-124"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-125"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-126 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-125"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-127 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-126 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-127 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-128"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-129"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-130 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-129"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-131 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-130 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-131 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-132"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-133"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-134 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-133"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-135 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-134 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-135 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-136"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-137"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-138 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-137"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-139 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-138 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-139 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-140"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-141"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-142 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-141"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-143 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-142 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-143 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
     <tr
       className="MuiTableRow-root makeStyles-root-144"
       role={null}
     >
-      <td
-        aria-sort={null}
-        className="MuiTableCell-root MuiTableCell-body makeStyles-root-145"
+      <div
+        className="MuiTableCell storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        <div
-          className="MuiTypography-root makeStyles-root-146 MuiTypography-body1"
+        <td
+          aria-sort={null}
+          className="MuiTableCell-root MuiTableCell-body makeStyles-root-145"
         >
-          <span
-            className="MuiTypography-root makeStyles-root-147 MuiTypography-body1"
+          <div
+            className="MuiTypography-root makeStyles-root-146 MuiTypography-body1"
           >
-             undefined 
-          </span>
-        </div>
-      </td>
+            <span
+              className="MuiTypography-root makeStyles-root-147 MuiTypography-body1"
+            >
+               undefined 
+            </span>
+          </div>
+        </td>
+      </div>
     </tr>
   </tbody>
   <tfoot

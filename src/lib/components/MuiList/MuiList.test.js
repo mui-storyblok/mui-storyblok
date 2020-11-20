@@ -5,9 +5,12 @@ import MuiList from './MuiList';
 
 function setup() {
   const props = {
+    _editable: '<!--#storyblok#{"name": "MuiList", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
     content: [{
+      _editable: '<!--#storyblok#{"name": "MuiListItem", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'MuiListItem',
       listItemText: [{
+        _editable: '<!--#storyblok#{"name": "MuiListItemText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'MuiListItemText',
         primary: 'primary',
       }],

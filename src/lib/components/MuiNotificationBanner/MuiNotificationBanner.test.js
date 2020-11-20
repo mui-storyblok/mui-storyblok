@@ -5,9 +5,12 @@ import MuiNotificationBanner from './MuiNotificationBanner';
 
 function setup() {
   const props = {
+    _editable: '<!--#storyblok#{"name": "MuiNotificationBanner", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
     content: [{
+      _editable: '<!--#storyblok#{"name": "MuiTypography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'MuiTypography',
       content: [{
+        _editable: '<!--#storyblok#{"name": "MuiText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'MuiText',
         content: 'Banner text',
       }],

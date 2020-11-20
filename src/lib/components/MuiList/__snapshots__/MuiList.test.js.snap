@@ -5,24 +5,29 @@ exports[`<MuiList /> snapshot 1`] = `
   className="MuiList-root makeStyles-root-3 MuiList-padding"
   width="100%"
 >
-  <li
-    className="MuiListItem-root makeStyles-root-4 MuiListItem-gutters"
-    disabled={false}
+  <div
+    className="MuiListItem storyblok--outline"
+    data-blok-c="{\\"name\\": \\"MuiListItem\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
   >
-    <div
-      className="MuiListItemText-root makeStyles-root-5 MuiListItemText-multiline"
+    <li
+      className="MuiListItem-root makeStyles-root-4 MuiListItem-gutters"
+      disabled={false}
     >
-      <span
-        className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+      <div
+        className="MuiListItemText-root makeStyles-root-5 MuiListItemText-multiline"
       >
-        primary
-      </span>
-      <p
-        className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
-      >
-        
-      </p>
-    </div>
-  </li>
+        <span
+          className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+        >
+          primary
+        </span>
+        <p
+          className="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+        >
+          
+        </p>
+      </div>
+    </li>
+  </div>
 </ul>
 `;

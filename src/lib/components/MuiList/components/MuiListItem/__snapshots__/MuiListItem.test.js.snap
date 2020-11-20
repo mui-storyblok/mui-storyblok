@@ -11,12 +11,17 @@ exports[`<MuiListItem /> snapshot 1`] = `
     <div
       className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
     >
-      <span
-        aria-hidden={true}
-        className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
+      <div
+        className="MuiIcon storyblok--outline"
+        data-blok-c="{\\"name\\": \\"MuiIcon\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
       >
-        android
-      </span>
+        <span
+          aria-hidden={true}
+          className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
+        >
+          android
+        </span>
+      </div>
     </div>
   </div>
   <div
@@ -46,36 +51,41 @@ exports[`<MuiListItem /> snapshot 1`] = `
   <div
     className="MuiListItemSecondaryAction-root makeStyles-root-9"
   >
-    <button
-      className="MuiButtonBase-root MuiIconButton-root makeStyles-root-10"
-      data-testid="muiIconButton"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <div
+      className="MuiIconButtonRedirect storyblok--outline"
+      data-blok-c="{\\"name\\": \\"MuiIconButtonRedirect\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
     >
-      <span
-        className="MuiIconButton-label"
+      <button
+        className="MuiButtonBase-root MuiIconButton-root makeStyles-root-10"
+        data-testid="muiIconButton"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
       >
         <span
-          aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-11 MuiIcon-colorSecondary"
+          className="MuiIconButton-label"
         >
-          star
+          <span
+            aria-hidden={true}
+            className="material-icons MuiIcon-root makeStyles-root-11 MuiIcon-colorSecondary"
+          >
+            star
+          </span>
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
   </div>
 </li>
 `;
