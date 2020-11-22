@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Span /> snapshot 1`] = `
+<span
+  className="MuiTypography-root makeStyles-root-3 undefined MuiTypography-body1"
+>
+   wooo 
+</span>
+`;

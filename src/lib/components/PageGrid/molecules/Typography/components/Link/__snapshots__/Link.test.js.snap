@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> snapshot 1`] = `
+<a
+  className="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-root-4 MuiTypography-colorPrimary"
+  href="#"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+>
+  wooo
+</a>
+`;
