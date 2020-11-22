@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationBanner /> snapshot 1`] = `
+<header
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-root-5 undefined mui-fixed MuiPaper-elevation4"
+>
+  <div
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="MuiTypography-root makeStyles-root-6 Typography storyblok--outline MuiTypography-body1"
+      data-blok-c="{\\"name\\": \\"Typography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+    />
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "red",
+          "cursor": "pointer",
+          "position": "absolute",
+          "right": "15px",
+          "top": "15px",
+        }
+      }
+    >
+      clear
+    </span>
+  </div>
+</header>
+`;
