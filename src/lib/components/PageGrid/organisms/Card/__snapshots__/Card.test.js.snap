@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-root-3 undefined MuiPaper-elevation1 MuiPaper-rounded"
+/>
+`;
