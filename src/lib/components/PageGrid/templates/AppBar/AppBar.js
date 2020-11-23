@@ -10,14 +10,14 @@ import {
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 import Storyblok from 'lib/utils/Storyblok';
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
-import PageGridItem from 'lib/components/PageGrid/templates/PageGridItem/PageGridItem';
+import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 import AppBarOffset from './components/AppBarOffset/AppBarOffset';
 
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 
 const components = {
   Typography,
-  AppBarGridItem: PageGridItem,
+  AppBarGridItem: GridItem,
 };
 
 const AppBar = ({
@@ -104,7 +104,7 @@ AppBar.propTypes = {
   /**
    * Content passed to AppBar to render
    * components:
-      'PageGridItem',
+      'GridItem',
    */
   content(props, propName, componentName) {
     const validComponents = [

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
 
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
-import PageGridItem from 'lib/components/PageGrid/templates/PageGridItem/PageGridItem';
+import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 
 /* istanbul ignore next */
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
@@ -19,7 +19,7 @@ const components = {
   List,
   Card,
   ButtonRedirect,
-  HeroHeaderGridItem: PageGridItem,
+  HeroHeaderGridItem: GridItem,
 };
 
 const HeroHeader = (props) => {
@@ -42,7 +42,6 @@ const HeroHeader = (props) => {
       },
     };
   }
-
 
   return <Grid {...props} components={components} style={heroClass} />;
 };

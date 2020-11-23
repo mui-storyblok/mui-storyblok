@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridItem /> snapshot 1`] = `
+<div
+  className="MuiGrid-root makeStyles-root-3 undefined MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+>
+  <span
+    aria-hidden={true}
+    className="material-icons MuiIcon-root makeStyles-root-4 MuiIcon-colorSecondary"
+  >
+    android
+  </span>
+</div>
+`;
