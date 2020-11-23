@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> snapshot 1`] = `
+<li
+  className="MuiListItem-root makeStyles-root-3 undefined MuiListItem-gutters"
+  disabled={false}
+/>
+`;
