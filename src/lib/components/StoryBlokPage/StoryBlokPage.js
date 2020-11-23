@@ -11,6 +11,8 @@ import styles from './StoryBlokPage.module.scss';
 import downloadSbAsset from '../../utils/json-sb-asset';
 import { renderComponents } from '../../utils/customComponents';
 
+import PageGrid from '../PageGrid/PageGrid';
+
 export class StoryBlokPage extends Component {
   state = {
     story: [],
@@ -22,6 +24,7 @@ export class StoryBlokPage extends Component {
   components = {
     Blok,
     MuiTransitions,
+    PageGrid,
   }
 
   async componentDidMount() {
