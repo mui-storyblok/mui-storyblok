@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Video /> should render Video 1`] = `ShallowWrapper {}`;
+
+exports[`<Video /> snapshot 1`] = `
+<div
+  style={
+    Object {
+      "height": "500px",
+      "margin": "0",
+      "width": "640px",
+    }
+  }
+/>
+`;
