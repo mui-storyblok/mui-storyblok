@@ -1,19 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { validComponents } from 'lib/utils/customProps';
+import { validComponentsRequired } from 'lib/utils/customProps';
 import appRedirect from 'lib/utils/appRedirect';
-import Button from '../Button/Button';
+import IconButton from '../IconButton/IconButton';
 
 /**
- * ButtonRedirect onClick will redirect you to a new route in the current App
- * More docs and demos at https://material-ui.com/api/button/
- * cant redirect in docs
+ * IconButtonRedirect is used in storyblok redirect to react routes
  */
 
-export const ButtonRedirect = ({
+export const IconButtonRedirect = ({
   href,
+  iconButton,
   external,
-  button,
   callback,
 }) => {
   const externalRedirect = () => {
@@ -32,35 +30,37 @@ export const ButtonRedirect = ({
     return internalRedirect(href);
   };
 
-  const muibutton = button[0];
+  const btn = iconButton[0];
 
-  return <Button {...muibutton} onClick={onClick} />;
+  return (
+    <IconButton
+      {...btn}
+      onClick={onClick}
+    />
+  );
 };
 
-export default ButtonRedirect;
+export default IconButtonRedirect;
 
-ButtonRedirect.propTypes = {
-  /** MuiButton Allowed maximum: 1 */
-  button(props, propName, componentName) {
-    const components = ['Button'];
-    return validComponents(props, propName, componentName, components, 1);
-  },
-
+IconButtonRedirect.propTypes = {
   /** redirect route */
   href: PropTypes.string.isRequired,
-
+  /** IconButton Allowed maximum: 1 */
+  iconButton(props, propName, componentName) {
+    return validComponentsRequired(props, propName, componentName, ['IconButton'], 1);
+  },
+  // callback to run before redirect
+  callback: PropTypes.func,
   /**
    * if false will redirect to a page in the app and should use '/page-whatever'
    *
    *  if true will redirect to another site 'https://www.google.com/'
    * */
   external: PropTypes.bool,
-  // callback to run before redirect
-  callback: PropTypes.func,
 };
 
-ButtonRedirect.defaultProps = {
-  button: [],
+IconButtonRedirect.defaultProps = {
+  iconButton: [],
   callback: undefined,
   external: false,
 };
