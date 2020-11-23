@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import MuiIcon from '../../../MuiIcon/MuiIcon';
+import Typography from 'lib/components/PageGrid/molecules/Typography/Typography';
 import GridItem from './GridItem';
 
 function setup() {
@@ -9,7 +9,7 @@ function setup() {
     _editable: '<!--#storyblok#{"name": "GridItem", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
     sizeGrid: jest.fn(),
     components: {
-      MuiIcon,
+      Typography,
     },
     content: [{
       _editable: '<!--#storyblok#{"name": "Typography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
