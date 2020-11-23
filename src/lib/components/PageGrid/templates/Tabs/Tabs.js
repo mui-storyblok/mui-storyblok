@@ -13,7 +13,7 @@ import {
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
-import PageGridItem from 'lib/components/PageGrid/templates/PageGridItem/PageGridItem';
+import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
 
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
@@ -24,7 +24,7 @@ const components = {
   Typography,
   List,
   Card,
-  TabGridItem: PageGridItem,
+  TabGridItem: GridItem,
 };
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
