@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DialogContent /> snapshot 1`] = `
+<div
+  className="MuiDialogContent-root makeStyles-root-3 undefined"
+/>
+`;
