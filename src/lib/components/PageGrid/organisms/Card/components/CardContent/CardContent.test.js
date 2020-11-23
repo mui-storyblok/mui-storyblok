@@ -10,9 +10,9 @@ function setup() {
       _editable: '<!--#storyblok#{"name": "Typography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'Typography',
       content: [{
-        _editable: '<!--#storyblok#{"name": "Text", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
-        component: 'Text',
-        text: 'text',
+        _editable: '<!--#storyblok#{"name": "Span", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+        component: 'Span',
+        content: 'text',
       }],
     }],
   };

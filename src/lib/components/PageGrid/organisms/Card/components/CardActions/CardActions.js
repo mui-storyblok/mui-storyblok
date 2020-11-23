@@ -8,7 +8,7 @@ import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
 
 const components = {
-  ButtonRedirect
+  ButtonRedirect,
 };
 
 const CardActions = ({
@@ -20,7 +20,6 @@ const CardActions = ({
   dataBlokUid,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-
   return (
     <MuiCardActions
       className={`${styles.root} ${storyblokClass}`}
@@ -51,11 +50,11 @@ CardActions.propTypes = {
    * Content passed to render
    * can also render any customCompnent passed in
    * components:
-    MuiIconButtonDownload,
+    ButtonRedirect,
    */
   content(props, propName, componentName) {
     const validComponents = [
-      'MuiIconButtonDownload',
+      'ButtonRedirect',
     ];
     return validComponents(props, propName, componentName, validComponents);
   },

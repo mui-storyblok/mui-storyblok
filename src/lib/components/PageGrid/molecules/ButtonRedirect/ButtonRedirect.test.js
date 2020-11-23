@@ -23,14 +23,14 @@ describe('<ButtonRedirect />', () => {
     expect(comp).toBeDefined();
   });
 
-  it('handleClick and call GoogleHelpers contact ', async () => {
+  it('handleClick and call  external false ', async () => {
     const { comp } = setup(false);
     window.location.assign = jest.fn();
     comp.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
     expect(window.location.assign).toBeCalled();
   });
 
-  it('handleClick and call GoogleHelpers contact ', async () => {
+  it.skip('handleClick and call GoogleHelpers external true ', async () => {
     const { comp } = setup(true);
     window.location.assign = jest.fn();
     comp.find('WithStyles(ForwardRef(Button))').at(0).simulate('click');
