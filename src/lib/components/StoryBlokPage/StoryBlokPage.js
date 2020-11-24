@@ -54,6 +54,10 @@ export class StoryBlokPage extends Component {
           window.storyblok.pingEditor(() => {
             if (window.storyblok.inEditor) {
               window.storyblok.enterEditmode();
+
+              window.storyblok.on(['change', 'saved'], () => {
+                window.location.reload(true);
+              });
             }
           });
         };
