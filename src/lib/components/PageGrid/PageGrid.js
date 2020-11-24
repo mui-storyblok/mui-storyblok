@@ -5,6 +5,7 @@ import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 
 // atoms
+const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
 const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
 
@@ -16,34 +17,41 @@ const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
 
 // organisms
-const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
 const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
+const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 
 // templates
 const AppBar = lazy(() => import('lib/components/PageGrid/templates/AppBar/AppBar'));
 const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
+const ButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/ButtonDrawer/ButtonDrawer'));
 const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
 const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
+const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/IconButtonDrawer/IconButtonDrawer'));
 const MobileStepper = lazy(() => import('lib/components/PageGrid/templates/MobileStepper/MobileStepper'));
 const NotificationBanner = lazy(() => import('lib/components/PageGrid/templates/NotificationBanner/NotificationBanner'));
 const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
 
 const components = {
+  Icon,
   Image,
   Video,
   Typography,
   ButtonDownload,
+  ButtonDrawer,
   ButtonRedirect,
   IconButtonDownload,
   IconButtonRedirect,
-  List,
+  Accordion,
   Card,
   GridList,
+  List,
   AppBar,
   ButtonDialog,
   HeroHeader,
   IconButtonDialog,
+  IconButtonDrawer,
   MobileStepper,
   NotificationBanner,
   Tabs,

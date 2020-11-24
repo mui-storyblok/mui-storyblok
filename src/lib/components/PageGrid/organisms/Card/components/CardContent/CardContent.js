@@ -7,11 +7,17 @@ import Storyblok from 'lib/utils/Storyblok';
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
+const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+/* istanbul ignore next */
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 /* istanbul ignore next */
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+/* istanbul ignore next */
+const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 
 const components = {
+  Video,
+  Accordion,
   Typography,
   List,
 };

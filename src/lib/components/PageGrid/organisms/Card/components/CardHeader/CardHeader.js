@@ -7,9 +7,18 @@ import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
+/* istanbul ignore next */
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+/* istanbul ignore next */
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+/* istanbul ignore next */
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
 
 const components = {
   Icon,
+  IconButtonDownload,
+  IconButtonRedirect,
+  IconButtonDialog,
 };
 
 /**

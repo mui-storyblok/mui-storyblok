@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StoryBlok from 'lib/utils/Storyblok';
+import { dimensionProp } from 'lib/utils/customProps';
 
 const Image = ({
   href,
@@ -10,6 +11,8 @@ const Image = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  height,
+  width,
 }) => {
   const styles = StoryBlok.anchorOrginToObj(rootClass);
   const imageStyles = StoryBlok.anchorOrginToObj(imageStyle);
@@ -19,6 +22,10 @@ const Image = ({
       className={storyblokClass}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
+      style={{
+        height,
+        width,
+      }}
     >
       { href && (
       <a href={href} target="_self">
@@ -47,6 +54,21 @@ Image.propTypes = {
    * Url for image to be displayed.
    */
   href: PropTypes.string,
+
+  /**
+   * Height of the App Bar must use 'px', 'em', '%' 'vh', 'vw', as unit of measurement
+   * */
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
+
+  /**
+   * 'px', 'em', '%' 'vh', 'vw', as unit of measurement
+   */
+  width(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
+
   /**
    * Css Styles for the image.
    */
@@ -58,6 +80,8 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
+  height: '500px',
+  width: '500px',
   imageStyle: [],
   rootClass: [],
   href: null,

@@ -24,7 +24,7 @@ const AccordionSummary = ({
 
   return (
     <MuiAccordionSummary
-      expandIcon={expandIcon ? (<Icon iconName="expand_more" />) : null}
+      expandIcon={expandIcon ? (<Icon iconName="expand_more" color="action" />) : null}
       className={`${styles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}

@@ -22,9 +22,7 @@ const Accordion = ({
   storyblokClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { width });
-
-  const expand = defaultExpanded === 'true';
-  const [expanded, setExpanded] = useState(expand);
+  const [expanded, setExpanded] = useState(defaultExpanded);
   const handleChange = () => setExpanded(!expanded);
 
   const panelSummary = accordionSummary[0];

@@ -4,6 +4,8 @@ import ReactPlayer from 'react-player';
 import StoryBlok from 'lib/utils/Storyblok';
 import { dimensionProp } from 'lib/utils/customProps';
 
+
+// TODO: bug the props dont seem to do anytning
 const Video = ({
   url,
   height,

@@ -6,9 +6,11 @@ import { validComponents } from 'lib/utils/customProps';
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
+const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 
 const components = {
   Typography,
+  List,
 };
 
 const AccordionDetails = ({
