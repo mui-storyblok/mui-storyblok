@@ -49,14 +49,14 @@ IconButtonRedirect.propTypes = {
   iconButton(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['IconButton'], 1);
   },
-  // callback to run before redirect
-  callback: PropTypes.func,
   /**
-   * if false will redirect to a page in the app and should use '/page-whatever'
-   *
-   *  if true will redirect to another site 'https://www.google.com/'
+   * If checked you will be directed to another website (ex: ‘https://google.com’)
+   *  If unchecked you will be directed to a page on your site (ex: ‘.page-welcome’)
    * */
   external: PropTypes.bool,
+  // callback to run before redirect
+  callback: PropTypes.func,
+
 };
 
 IconButtonRedirect.defaultProps = {

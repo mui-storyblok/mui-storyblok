@@ -56,12 +56,12 @@ CardContent.propTypes = {
     MuiList,
    */
   content(props, propName, componentName) {
-    const components = [
-      'MuiTypography',
-      'MuiAccordion',
-      'MuiList',
+    const comps = [
+      'Typography',
+      'Accordion',
+      'List',
     ];
-    return validComponents(props, propName, componentName, components);
+    return validComponents(props, propName, componentName, comps);
   },
 };
 

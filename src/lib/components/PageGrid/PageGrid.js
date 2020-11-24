@@ -4,15 +4,48 @@ import { muiStringProp } from 'lib/utils/customProps';
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 
+// atoms
+const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
+const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+
+// molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
+const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
+const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+
+// organisms
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
+const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
+
+// templates
+const AppBar = lazy(() => import('lib/components/PageGrid/templates/AppBar/AppBar'));
+const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
+const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
+const MobileStepper = lazy(() => import('lib/components/PageGrid/templates/MobileStepper/MobileStepper'));
+const NotificationBanner = lazy(() => import('lib/components/PageGrid/templates/NotificationBanner/NotificationBanner'));
 const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
 
 const components = {
+  Image,
+  Video,
   Typography,
+  ButtonDownload,
+  ButtonRedirect,
+  IconButtonDownload,
+  IconButtonRedirect,
   List,
   Card,
+  GridList,
+  AppBar,
+  ButtonDialog,
+  HeroHeader,
+  IconButtonDialog,
+  MobileStepper,
+  NotificationBanner,
   Tabs,
   PageGridItem: GridItem,
 };

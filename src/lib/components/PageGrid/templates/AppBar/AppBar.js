@@ -13,10 +13,25 @@ import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 import AppBarOffset from './components/AppBarOffset/AppBarOffset';
 
+// atoms
+const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
+
+// molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
+const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+
+// templates
+const ButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/ButtonDrawer/ButtonDrawer'));
+const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/IconButtonDrawer/IconButtonDrawer'));
 
 const components = {
+  Image,
   Typography,
+  ButtonRedirect,
+  IconButtonRedirect,
+  ButtonDrawer,
+  IconButtonDrawer,
   AppBarGridItem: GridItem,
 };
 

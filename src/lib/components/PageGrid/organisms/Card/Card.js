@@ -37,11 +37,11 @@ const Card = ({
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height, width });
   return (
     <MuiCard
-      className={`${styles.root} ${storyblokClass}`}
       raised={raised}
       variant={variant}
       elevation={+elevation}
       square={square}
+      className={`${styles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >

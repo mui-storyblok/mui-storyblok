@@ -5,20 +5,39 @@ import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 
-/* istanbul ignore next */
+// atoms
+const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
+const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+
+// molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
-/* istanbul ignore next */
+const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
-/* istanbul ignore next */
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+
+// organisms
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
-/* istanbul ignore next */
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
+const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
+
+// templates
+const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
 
 const components = {
+  Image,
+  Video,
   Typography,
+  ButtonDownload,
+  ButtonRedirect,
+  IconButtonDownload,
+  IconButtonRedirect,
   List,
   Card,
-  ButtonRedirect,
+  GridList,
+  ButtonDialog,
+  IconButtonDialog,
   HeroHeaderGridItem: GridItem,
 };
 

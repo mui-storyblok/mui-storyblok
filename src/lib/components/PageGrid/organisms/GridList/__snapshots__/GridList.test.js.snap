@@ -5,7 +5,7 @@ exports[`<GridList /> snapshot 1`] = `
   className="makeStyles-root-1"
 >
   <ul
-    className="MuiGridList-root makeStyles-root-4"
+    className="MuiGridList-root makeStyles-root-4 undefined"
     style={
       Object {
         "margin": -2,

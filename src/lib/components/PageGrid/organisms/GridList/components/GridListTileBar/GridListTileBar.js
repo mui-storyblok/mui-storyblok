@@ -7,10 +7,17 @@ import {
   muiStringProp,
 } from 'lib/utils/customProps';
 
-const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
+/* istanbul ignore next */
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+/* istanbul ignore next */
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+/* istanbul ignore next */
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
 
 const components = {
-  Icon,
+  IconButtonRedirect,
+  IconButtonDownload,
+  IconButtonDialog,
 };
 
 const MuiGridListTileBar = ({
@@ -24,21 +31,19 @@ const MuiGridListTileBar = ({
   const renderAction = actionIcon.length !== 0 ? actionIcon[0] : null;
 
   return (
-    <>
-      <GridListTileBar
-        title={title}
-        subtitle={<span>{subtitle}</span>}
-        actionIcon={renderAction
-          && (
-            <Suspense fallback={<></>}>
-              {createElement(components[renderAction.component], { ...renderAction })}
-            </Suspense>
-          )
-        }
-        titlePosition={titlePosition}
-        className={styles.root}
-      />
-    </>
+    <GridListTileBar
+      title={title}
+      subtitle={<span>{subtitle}</span>}
+      actionIcon={renderAction
+        && (
+          <Suspense fallback={<></>}>
+            {createElement(components[renderAction.component], { ...renderAction })}
+          </Suspense>
+        )
+      }
+      titlePosition={titlePosition}
+      className={styles.root}
+    />
   );
 };
 

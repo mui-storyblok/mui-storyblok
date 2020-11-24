@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
-import { AppBar, Icon } from '@material-ui/core';
+import { AppBar, Icon as MuiIcon } from '@material-ui/core';
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 import { validComponents, muiStringProp } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
-import Typography from 'lib/components/PageGrid/molecules/Typography/Typography';
+
+/* istanbul ignore next */
+const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
+/* istanbul ignore next */
+const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+/* istanbul ignore next */
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+/* istanbul ignore next */
+const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
+
+const components = {
+  Typography,
+  ButtonRedirect,
+  IconButtonRedirect,
+  Icon,
+};
 
 export const NotificationBanner = ({
   rootClass,
@@ -33,9 +48,13 @@ export const NotificationBanner = ({
         >
           <div style={{ position: 'relative' }}>
             {content.map(
-              (component, key) => renderComponentsWithBridg({ Typography }, component, key),
+              (component, key) => (
+                <Suspense fallback={<></>}>
+                  {renderComponentsWithBridg(components, component, key)}
+                </Suspense>
+              ),
             )}
-            <Icon
+            <MuiIcon
               onClick={handleClose}
               style={{
                 cursor: 'pointer',
@@ -46,7 +65,7 @@ export const NotificationBanner = ({
               }}
             >
               clear
-            </Icon>
+            </MuiIcon>
           </div>
         </AppBar>
       ) : null
@@ -78,12 +97,10 @@ NotificationBanner.propTypes = {
    * Components: MuiTypography
    */
   content(props, propName, componentName) {
-    const components = ['MuiTypography'];
-    return validComponents(props, propName, componentName, components);
+    const comps = ['Typography'];
+    return validComponents(props, propName, componentName, comps);
   },
-  // content: PropTypes.arrayOf(PropTypes.shape({
-  //   component: PropTypes.string.isRequired,
-  // })).isRequired,
+
 };
 
 NotificationBanner.defaultProps = {

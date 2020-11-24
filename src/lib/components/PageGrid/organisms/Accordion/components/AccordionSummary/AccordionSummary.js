@@ -24,7 +24,7 @@ const AccordionSummary = ({
 
   return (
     <MuiAccordionSummary
-      expandIcon={<Icon {...expandIcon[0]} />}
+      expandIcon={expandIcon ? (<Icon iconName="expand_more" />) : null}
       className={`${styles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
@@ -44,10 +44,7 @@ AccordionSummary.propTypes = {
   /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /** Icon limit 1 */
-  expandIcon(props, propName, componentName) {
-    const comps = ['Icon'];
-    return validComponents(props, propName, componentName, comps, 1);
-  },
+  expandIcon: PropTypes.bool,
   /** Typography */
   content(props, propName, componentName) {
     const comps = ['Typography'];
@@ -58,5 +55,5 @@ AccordionSummary.propTypes = {
 AccordionSummary.defaultProps = {
   rootClass: [],
   content: [],
-  expandIcon: [],
+  expandIcon: false,
 };

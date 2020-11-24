@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import StoryBlok from 'lib/utils/Storyblok';
 
 const Image = ({
-  hrefLink,
+  href,
   imageStyle,
   image,
   rootClass,
@@ -20,14 +20,14 @@ const Image = ({
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >
-      { hrefLink && (
-      <a href={hrefLink} target="_self">
+      { href && (
+      <a href={href} target="_self">
         <picture style={styles}>
           <img src={image} style={imageStyles} alt={image} />
         </picture>
       </a>
       )}
-      { !hrefLink && (
+      { !href && (
         <picture style={styles}>
           <img src={image} style={imageStyles} alt={image} />
         </picture>
@@ -46,7 +46,7 @@ Image.propTypes = {
   /**
    * Url for image to be displayed.
    */
-  hrefLink: PropTypes.string,
+  href: PropTypes.string,
   /**
    * Css Styles for the image.
    */
@@ -60,5 +60,5 @@ Image.propTypes = {
 Image.defaultProps = {
   imageStyle: [],
   rootClass: [],
-  hrefLink: null,
+  href: null,
 };

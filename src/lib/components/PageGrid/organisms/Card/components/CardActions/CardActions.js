@@ -6,9 +6,24 @@ import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+/* istanbul ignore next */
+const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
+/* istanbul ignore next */
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+/* istanbul ignore next */
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+/* istanbul ignore next */
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
+/* istanbul ignore next */
+const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
 
 const components = {
   ButtonRedirect,
+  ButtonDownload,
+  ButtonDialog,
+  IconButtonRedirect,
+  IconButtonDownload,
+  IconButtonDialog,
 };
 
 const CardActions = ({

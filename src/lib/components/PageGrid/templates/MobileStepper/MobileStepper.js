@@ -4,7 +4,7 @@ import React, {
   Suspense,
 } from 'react';
 import PropTypes from 'prop-types';
-import { MobileStepper as MuiMobileStepper } from '@material-ui/core/MobileStepper';
+import { MobileStepper as MuiMobileStepper } from '@material-ui/core';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {

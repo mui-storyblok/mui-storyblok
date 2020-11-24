@@ -1,15 +1,21 @@
 import React, { Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
-import { DialogActions as MuiDialogActions } from '@material-ui/core/DialogActions';
+import { DialogActions as MuiDialogActions } from '@material-ui/core';
 import { validComponents } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
 import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
 
 const components = {
   ButtonRedirect,
+  ButtonDownload,
+  IconButtonRedirect,
+  IconButtonDownload,
 };
 
 const DialogActions = ({
