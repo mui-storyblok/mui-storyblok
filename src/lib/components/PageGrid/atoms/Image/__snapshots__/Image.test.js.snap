@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MuiImage /> snapshot with MuiImage 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "height": "500px",
+      "width": "500px",
+    }
+  }
+>
   <picture
     style={Object {}}
   >
