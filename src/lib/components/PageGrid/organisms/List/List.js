@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { List as MuiList } from '@material-ui/core';
 import { validComponents } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Storyblok from 'lib/utils/Storyblok';
 
 const ListItem = lazy(() => import('./components/ListItem/ListItem'));
@@ -35,7 +35,7 @@ const List = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ...components }, component, key)}
+          {renderComponentsWithBridge({ ...components }, component, key)}
         </Suspense>
       ))}
     </MuiList>

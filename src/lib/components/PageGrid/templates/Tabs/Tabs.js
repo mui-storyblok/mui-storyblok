@@ -10,7 +10,7 @@ import {
   muiStringProp,
   dimensionProp,
 } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
@@ -134,7 +134,7 @@ const Tabs = ({
             >
               {tab.content.map((component, key) => (
                 <Suspense fallback={<></>}>
-                  {renderComponentsWithBridg({ TabGrid: Grid, ...components }, {
+                  {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
                     ...component,
                     components,
                     key,

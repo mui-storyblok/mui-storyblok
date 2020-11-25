@@ -7,7 +7,7 @@ import {
   dimensionProp,
   muiStringProp,
 } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Storyblok from 'lib/utils/Storyblok';
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
@@ -61,7 +61,7 @@ const AppBar = ({
         data-blok-uid={dataBlokUid}
       >
         <Toolbar variant={variant} disableGutters={disableGutters}>
-          {renderComponentsWithBridg({ AppBarGrid: Grid }, {
+          {renderComponentsWithBridge({ AppBarGrid: Grid }, {
             ...grid,
             components,
           })}

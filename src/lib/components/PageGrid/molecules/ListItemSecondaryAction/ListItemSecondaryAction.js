@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ListItemSecondaryAction as MuiListItemSecondaryAction } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
 import { validComponents } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
@@ -31,7 +31,7 @@ export const ListItemSecondaryAction = ({
   return (
     <MuiListItemSecondaryAction className={styles.root}>
       <Suspense fallback={<></>}>
-        {renderComponentsWithBridg(components, content[0])}
+        {renderComponentsWithBridge(components, content[0])}
       </Suspense>
     </MuiListItemSecondaryAction>
   );

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MuiGrid from '@material-ui/core/Grid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 
 const comps = {
@@ -43,7 +43,7 @@ const Grid = ({
       {content.map((component, key) => (
         <>
           <Suspense fallback={<></>}>
-            {renderComponentsWithBridg({ ...comps, ...components }, {
+            {renderComponentsWithBridge({ ...comps, ...components }, {
               ...component,
               components,
               key,

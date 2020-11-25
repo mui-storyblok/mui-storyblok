@@ -6,7 +6,7 @@ import {
   dimensionProp,
   muiStringProp,
 } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const Link = lazy(() => import('./components/Link/Link'));
@@ -49,7 +49,7 @@ export const Typography = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, component, key)}
+          {renderComponentsWithBridge(components, component, key)}
         </Suspense>
       ))}
     </MuiTypography>

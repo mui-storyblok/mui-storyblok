@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
 import { CardActions as MuiCardActions } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
@@ -44,7 +44,7 @@ const CardActions = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, component, key)}
+          {renderComponentsWithBridge(components, component, key)}
         </Suspense>
       ))}
     </MuiCardActions>

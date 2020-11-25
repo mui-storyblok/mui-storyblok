@@ -4,7 +4,7 @@ import ListItem from '@material-ui/core/ListItem';
 import { validComponents, muiStringProp } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
 import appRedirect from 'lib/utils/appRedirect';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 const ListItemAvatar = lazy(() => import('lib/components/PageGrid/molecules/ListItemAvatar/ListItemAvatar'));
 const ListItemIcon = lazy(() => import('lib/components/PageGrid/molecules/ListItemIcon/ListItemIcon'));
@@ -52,25 +52,25 @@ export const ListItemButton = ({
     >
       {avatar ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemAvatar }, avatar)}
+          {renderComponentsWithBridge({ ListItemAvatar }, avatar)}
         </Suspense>
       ) : null}
 
       {icon ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemIcon }, icon)}
+          {renderComponentsWithBridge({ ListItemIcon }, icon)}
         </Suspense>
       ) : null}
 
       {text ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemText }, text)}
+          {renderComponentsWithBridge({ ListItemText }, text)}
         </Suspense>
       ) : null}
 
       {contact ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ContactButton }, contact)}
+          {renderComponentsWithBridge({ ContactButton }, contact)}
         </Suspense>
       ) : null}
 

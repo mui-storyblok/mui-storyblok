@@ -13,7 +13,7 @@ import {
   validComponents,
 } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import MobileTab from './components/MobileTab/MobileTab';
 
 /* istanbul ignore next */
@@ -113,7 +113,7 @@ const MobileStepper = ({
         activeStep={activeStep}
         nextButton={next ? (
           <Suspense fallback={<></>}>
-            {renderComponentsWithBridg(
+            {renderComponentsWithBridge(
               components[next.component],
               { ...next, onClick: handleNext },
             )}
@@ -121,7 +121,7 @@ const MobileStepper = ({
         ) : null}
         backButton={back ? (
           <Suspense fallback={<></>}>
-            {renderComponentsWithBridg(
+            {renderComponentsWithBridge(
               components[back.component],
               { ...back, onClick: handleBack },
             )}

@@ -6,7 +6,7 @@ import {
   muiStringProp,
   validComponentsRequired,
 } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Storyblok from 'lib/utils/Storyblok';
 
 const ListItemAvatar = lazy(() => import('lib/components/PageGrid/molecules/ListItemAvatar/ListItemAvatar'));
@@ -51,31 +51,31 @@ const ListItem = ({
     >
       {avatar ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemAvatar }, avatar)}
+          {renderComponentsWithBridge({ ListItemAvatar }, avatar)}
         </Suspense>
       ) : null}
 
       {icon ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemIcon }, icon)}
+          {renderComponentsWithBridge({ ListItemIcon }, icon)}
         </Suspense>
       ) : null}
 
       {text ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemText }, text)}
+          {renderComponentsWithBridge({ ListItemText }, text)}
         </Suspense>
       ) : null}
 
       {secondaryAction ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemSecondaryAction }, secondaryAction)}
+          {renderComponentsWithBridge({ ListItemSecondaryAction }, secondaryAction)}
         </Suspense>
       ) : null}
 
       {contact ? (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ContactButton }, contact)}
+          {renderComponentsWithBridge({ ContactButton }, contact)}
         </Suspense>
       ) : null}
 

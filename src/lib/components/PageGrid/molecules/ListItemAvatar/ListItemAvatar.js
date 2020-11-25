@@ -4,7 +4,7 @@ import { ListItemAvatar as MuiListItemAvatar } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import { validComponentsRequired } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
 
 /**
@@ -20,7 +20,7 @@ export const ListItemAvatar = ({
   return (
     <MuiListItemAvatar className={styles.root}>
       <Avatar>
-        {renderComponentsWithBridg({ Icon }, content[0])}
+        {renderComponentsWithBridge({ Icon }, content[0])}
       </Avatar>
     </MuiListItemAvatar>
   );

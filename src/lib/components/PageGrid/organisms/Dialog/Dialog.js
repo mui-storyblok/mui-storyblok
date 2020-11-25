@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Dialog as MuiDialog } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
 import { validComponents } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const DialogActions = lazy(() => import('./components/DialogActions/DialogActions'));
@@ -39,7 +39,7 @@ const Dialog = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, { ...component, toggleDialog }, key)}
+          {renderComponentsWithBridge(components, { ...component, toggleDialog }, key)}
         </Suspense>
       ))}
     </MuiDialog>

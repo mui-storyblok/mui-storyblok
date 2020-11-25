@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import sizeGrid from 'lib/utils/sizeGrid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 const GridItem = ({
   components,
@@ -48,7 +48,7 @@ const GridItem = ({
       {content.length > 0
         && content.map((component, key) => (
           <Suspense fallback={<></>}>
-            {renderComponentsWithBridg({ TabGrid: Grid, ...components }, {
+            {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
               ...component,
               components,
               key,

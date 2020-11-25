@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { AccordionSummary as MuiAccordionSummary } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
 import { validComponents } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
 
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
@@ -31,7 +31,7 @@ const AccordionSummary = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, component, key)}
+          {renderComponentsWithBridge(components, component, key)}
         </Suspense>
       ))}
     </MuiAccordionSummary>

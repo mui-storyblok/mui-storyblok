@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CardHeader as MuiCardHeader } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
 import { validComponents } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
@@ -50,7 +50,7 @@ export const CardHeader = ({
         muiavatar
           ? (
             <Suspense fallback={<></>}>
-              {renderComponentsWithBridg(components, muiavatar)}
+              {renderComponentsWithBridge(components, muiavatar)}
             </Suspense>
           )
           : null
@@ -59,7 +59,7 @@ export const CardHeader = ({
         muiaction
           ? (
             <Suspense fallback={<></>}>
-              {renderComponentsWithBridg(components, muiaction)}
+              {renderComponentsWithBridge(components, muiaction)}
             </Suspense>
           )
           : null

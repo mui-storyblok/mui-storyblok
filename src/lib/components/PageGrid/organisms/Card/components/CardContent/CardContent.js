@@ -4,7 +4,7 @@ import { CardContent as MuiCardContent } from '@material-ui/core';
 import { validComponents } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
 
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 /* istanbul ignore next */
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
@@ -39,7 +39,7 @@ const CardContent = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, component, key)}
+          {renderComponentsWithBridge(components, component, key)}
         </Suspense>
       ))}
     </MuiCardContent>

@@ -37,7 +37,7 @@ export const storyBlokClickableProps = ({ _editable, component, _uid }) => {
   };
 };
 
-export const renderComponentsWithBridg = (components, component, key = undefined) => {
+export const renderComponentsWithBridge = (components, component, key = undefined) => {
   const customComponent = customComponents.find(comp => comp.componentName === component.component);
   if (customComponent) {
     return createElement(

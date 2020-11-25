@@ -1,7 +1,7 @@
 import React, { useState, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Icon as MuiIcon } from '@material-ui/core';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import { validComponents, muiStringProp } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
 
@@ -50,7 +50,7 @@ export const NotificationBanner = ({
             {content.map(
               (component, key) => (
                 <Suspense fallback={<></>}>
-                  {renderComponentsWithBridg(components, component, key)}
+                  {renderComponentsWithBridge(components, component, key)}
                 </Suspense>
               ),
             )}

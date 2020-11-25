@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
 import { Card as MuiCard } from '@material-ui/core';
 import Storyblok from 'lib/utils/Storyblok';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import { validComponents, dimensionProp } from 'lib/utils/customProps';
 
 /* istanbul ignore next */
@@ -47,7 +47,7 @@ const Card = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ...components }, component, key)}
+          {renderComponentsWithBridge({ ...components }, component, key)}
         </Suspense>
       ))}
     </MuiCard>

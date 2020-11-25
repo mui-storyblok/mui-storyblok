@@ -5,7 +5,7 @@ import {
   validComponents,
   muiStringProp,
 } from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import StoryBlok from 'lib/utils/Storyblok';
 
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
@@ -52,7 +52,7 @@ const Drawer = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridg(components, { ...component, toggleDrawer }, key)}
+          {renderComponentsWithBridge(components, { ...component, toggleDrawer }, key)}
         </Suspense>
       ))}
     </MuiDrawer>
