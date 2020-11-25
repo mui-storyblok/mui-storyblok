@@ -29,7 +29,9 @@ const List = ({
       className={`${styles.root} ${storyblokClass}`}
       dense={dense}
       disablePadding={disablePadding}
-      width={width}
+      style={{
+        width,
+      }}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >

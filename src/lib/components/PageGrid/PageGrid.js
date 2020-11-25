@@ -18,6 +18,8 @@ const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/
 
 // organisms
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
+const ActionCardContainer = lazy(() => import('lib/components/PageGrid/organisms/ActionCardContainer/ActionCardContainer'));
+const AudioPlayer = lazy(() => import('lib/components/PageGrid/organisms/AudioPlayer/AudioPlayer'));
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
 const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
@@ -51,6 +53,8 @@ const components = {
   IconButtonDownload,
   IconButtonRedirect,
   Accordion,
+  ActionCardContainer,
+  AudioPlayer,
   Card,
   GridList,
   List,
