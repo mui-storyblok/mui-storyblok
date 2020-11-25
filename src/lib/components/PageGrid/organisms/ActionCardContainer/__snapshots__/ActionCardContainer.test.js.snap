@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionCardContainer /> snapshot 1`] = `
+<div>
+  <button
+    aria-haspopup="true"
+    className="MuiButtonBase-root MuiButton-root MuiButton-text"
+    data-testid="menuButton"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      <div
+        className="MuiTypography-root makeStyles-root-8 undefined MuiTypography-body1"
+      >
+        <span
+          className="MuiTypography-root makeStyles-root-9  MuiTypography-body1"
+          data-blok-c=""
+          data-blok-uid=""
+        >
+           Action Card Menu 
+        </span>
+      </div>
+    </span>
+  </button>
+</div>
+`;
