@@ -13,6 +13,8 @@ const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typograp
 /* istanbul ignore next */
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 /* istanbul ignore next */
+const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
+/* istanbul ignore next */
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 
 const components = {
@@ -20,6 +22,7 @@ const components = {
   Accordion,
   Typography,
   List,
+  ListDropdown,
 };
 
 const CardContent = ({

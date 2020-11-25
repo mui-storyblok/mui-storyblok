@@ -115,7 +115,7 @@ const MobileStepper = ({
         nextButton={next ? (
           <Suspense fallback={<></>}>
             {renderComponentsWithBridge(
-              components[next.component],
+              components,
               { ...next, onClick: handleNext },
             )}
           </Suspense>
@@ -123,7 +123,7 @@ const MobileStepper = ({
         backButton={back ? (
           <Suspense fallback={<></>}>
             {renderComponentsWithBridge(
-              components[back.component],
+              components,
               { ...back, onClick: handleBack },
             )}
           </Suspense>

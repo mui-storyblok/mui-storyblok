@@ -5,12 +5,17 @@ import Storyblok from 'lib/utils/Storyblok';
 import { validComponents } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
+/* istanbul ignore next */
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
+/* istanbul ignore next */
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+/* istanbul ignore next */
+const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
 
 const components = {
   Typography,
   List,
+  ListDropdown,
 };
 
 const DialogContent = ({

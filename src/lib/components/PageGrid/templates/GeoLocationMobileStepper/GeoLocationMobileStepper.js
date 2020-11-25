@@ -4,7 +4,7 @@ import { useSetGeoCode } from 'lib/utils/geoLocate';
 import { validComponentsRequired } from 'lib/utils/customProps';
 import MobileStepper from 'lib/components/PageGrid/templates/MobileStepper/MobileStepper';
 
-const MuiGeoLocationMobileStepper = ({
+const GeoLocationMobileStepper = ({
   tabs,
   googleApiKey,
 }) => {
@@ -20,9 +20,9 @@ const MuiGeoLocationMobileStepper = ({
   return (<MobileStepper {...tabs[0]} tabIndex={activeStep} />);
 };
 
-export default MuiGeoLocationMobileStepper;
+export default GeoLocationMobileStepper;
 
-MuiGeoLocationMobileStepper.propTypes = {
+GeoLocationMobileStepper.propTypes = {
   /** key for googleApisKey to use geocode */
   googleApiKey: PropTypes.string,
   /** MobileStepper */
@@ -32,7 +32,7 @@ MuiGeoLocationMobileStepper.propTypes = {
   },
 };
 
-MuiGeoLocationMobileStepper.defaultProps = {
+GeoLocationMobileStepper.defaultProps = {
   tabs: [],
   googleApiKey: '',
 };

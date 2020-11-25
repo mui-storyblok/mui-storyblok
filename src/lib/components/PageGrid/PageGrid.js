@@ -21,11 +21,15 @@ const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
 const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
 
 // templates
 const AppBar = lazy(() => import('lib/components/PageGrid/templates/AppBar/AppBar'));
 const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
 const ButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/ButtonDrawer/ButtonDrawer'));
+const Form = lazy(() => import('lib/components/PageGrid/templates/Form/Form'));
+const GeoLocationMobileStepper = lazy(() => import('lib/components/PageGrid/templates/GeoLocationMobileStepper/GeoLocationMobileStepper'));
+const GeoLocationTabs = lazy(() => import('lib/components/PageGrid/templates/GeoLocationTabs/GeoLocationTabs'));
 const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
 const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
 const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/IconButtonDrawer/IconButtonDrawer'));
@@ -40,6 +44,9 @@ const components = {
   Typography,
   ButtonDownload,
   ButtonDrawer,
+  Form,
+  GeoLocationMobileStepper,
+  GeoLocationTabs,
   ButtonRedirect,
   IconButtonDownload,
   IconButtonRedirect,
@@ -47,6 +54,7 @@ const components = {
   Card,
   GridList,
   List,
+  ListDropdown,
   AppBar,
   ButtonDialog,
   HeroHeader,

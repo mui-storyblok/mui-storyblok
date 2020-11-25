@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import GridListTileBar from './GridListTileBar';
 
-function setup(actionComponent = 'Icon') {
+function setup(actionComponent = 'IconButtonRedirect') {
   const props = {
     titlePosition: 'bottom',
     subtitle: 'wooooo',

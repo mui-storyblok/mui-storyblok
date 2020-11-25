@@ -42,7 +42,6 @@ const GridList = ({
 }) => {
   const classes = useStyles();
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { width: +width, height: +height });
-
   return (
     <div className={classes.root}>
       <MuiGridList
@@ -63,7 +62,7 @@ const GridList = ({
             data-blok-uid={tile.dataBlokUid}
           >
             <img src={tile.image} alt={tile.title} />
-            {tile.gridListTileBar.length !== 0 ? (<GridListTileBar {...tile.gridListTileBar[0]} />) : null}
+            {tile.gridlistTileBar.length !== 0 ? (<GridListTileBar {...tile.gridlistTileBar[0]} />) : null}
           </MuiGridListTile>
         ))}
       </MuiGridList>
@@ -114,7 +113,7 @@ GridList.propTypes = {
    * components: MuiTitleData
    */
   content(props, propName, componentName) {
-    const components = ['MuiTitleData'];
+    const components = ['TitleData'];
     return validComponents(props, propName, componentName, components);
   },
 };

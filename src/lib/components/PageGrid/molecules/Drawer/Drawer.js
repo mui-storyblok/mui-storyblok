@@ -9,9 +9,11 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import StoryBlok from 'lib/utils/Storyblok';
 
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
 
 const components = {
   List,
+  ListDropdown,
 };
 
 const Drawer = ({

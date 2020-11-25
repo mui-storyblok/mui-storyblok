@@ -5,7 +5,7 @@ import Tabs from 'lib/components/PageGrid/templates/Tabs/Tabs';
 import { validComponentsRequired } from 'lib/utils/customProps';
 import { useSetGeoCode } from 'lib/utils/geoLocate';
 
-const MuiGeoLocationTabs = ({
+const GeoLocationTabs = ({
   tabs,
   googleApiKey,
 
@@ -22,9 +22,9 @@ const MuiGeoLocationTabs = ({
   return (<Tabs {...tabs[0]} tabIndex={tabValue} />);
 };
 
-export default MuiGeoLocationTabs;
+export default GeoLocationTabs;
 
-MuiGeoLocationTabs.propTypes = {
+GeoLocationTabs.propTypes = {
   /** key for googleApisKey to use geocode */
   googleApiKey: PropTypes.string,
 
@@ -35,7 +35,7 @@ MuiGeoLocationTabs.propTypes = {
   },
 };
 
-MuiGeoLocationTabs.defaultProps = {
+GeoLocationTabs.defaultProps = {
   tabs: [],
   googleApiKey: '',
 };

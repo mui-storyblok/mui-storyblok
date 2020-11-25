@@ -12,11 +12,11 @@ function setup() {
     height: '500',
     content: [
       {
-        gridListTileBar: [
+        gridlistTileBar: [
           {
             actionIcon: [
               {
-                component: 'Icon',
+                component: 'IconButtonRedirect',
                 iconName: 'home',
               },
             ],

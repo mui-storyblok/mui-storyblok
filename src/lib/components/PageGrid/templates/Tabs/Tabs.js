@@ -19,11 +19,13 @@ import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
+const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
 
 const components = {
   Typography,
   List,
   Card,
+  HeroHeader,
   TabGridItem: GridItem,
 };
 

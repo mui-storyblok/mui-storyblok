@@ -27,6 +27,7 @@ const components = {
   MuiSubmit,
   MuiCheckbox,
   MuiRadio,
+  FormGrid: Grid,
   FormGridItem: GridItem,
 };
 
