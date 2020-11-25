@@ -26,12 +26,12 @@ const List = ({
 
   return (
     <MuiList
-      className={`${styles.root} ${storyblokClass}`}
       dense={dense}
       disablePadding={disablePadding}
       style={{
         width,
       }}
+      className={`${styles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >

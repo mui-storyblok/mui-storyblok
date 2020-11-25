@@ -118,8 +118,6 @@ AppBar.propTypes = {
   },
   /**
    * Content passed to AppBar to render
-   * components:
-      'GridItem',
    */
   content(props, propName, componentName) {
     const validComponents = [
@@ -127,6 +125,13 @@ AppBar.propTypes = {
     ];
     return validComponentsRequired(props, propName, componentName, validComponents, 1);
   },
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 AppBar.defaultProps = {
@@ -137,4 +142,7 @@ AppBar.defaultProps = {
   disableGutters: false,
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

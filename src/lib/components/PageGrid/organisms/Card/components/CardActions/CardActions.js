@@ -73,10 +73,19 @@ CardActions.propTypes = {
     ];
     return validComponents(props, propName, componentName, validComponents);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 CardActions.defaultProps = {
   rootClass: [],
   disableSpacing: false,
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

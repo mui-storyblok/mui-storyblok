@@ -62,10 +62,19 @@ DialogContent.propTypes = {
     const comps = ['Typography', 'List'];
     return validComponents(props, propName, componentName, comps, 1);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 DialogContent.defaultProps = {
   dividers: false,
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

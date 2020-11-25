@@ -92,6 +92,13 @@ Typography.propTypes = {
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })),
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Typography.defaultProps = {
@@ -101,4 +108,7 @@ Typography.defaultProps = {
   color: 'initial',
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

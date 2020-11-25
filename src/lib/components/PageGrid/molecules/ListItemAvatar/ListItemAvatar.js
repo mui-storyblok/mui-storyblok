@@ -14,11 +14,18 @@ import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
 export const ListItemAvatar = ({
   content,
   rootClass,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <MuiListItemAvatar className={styles.root}>
+    <MuiListItemAvatar
+      className={`${styles.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+    >
       <Avatar>
         {renderComponentsWithBridge({ Icon }, content[0])}
       </Avatar>
@@ -39,9 +46,19 @@ ListItemAvatar.propTypes = {
   content(props, propName, componentName) {
     return validComponentsRequired(props, propName, componentName, ['MuiIcon'], 1);
   },
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 ListItemAvatar.defaultProps = {
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

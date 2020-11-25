@@ -40,9 +40,18 @@ ListItemText.propTypes = {
    * Override or extend the styles applied to the component
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };
 
 ListItemText.defaultProps = {
   rootClass: [],
   secondary: '',
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };

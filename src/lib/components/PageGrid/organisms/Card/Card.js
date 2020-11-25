@@ -112,6 +112,12 @@ Card.propTypes = {
     ];
     return validComponents(props, propName, componentName, comps);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Card.defaultProps = {
@@ -123,4 +129,7 @@ Card.defaultProps = {
   elevation: 1,
   square: false,
   variant: 'elevation',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

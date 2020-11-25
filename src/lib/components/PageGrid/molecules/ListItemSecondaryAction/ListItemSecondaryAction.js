@@ -25,11 +25,18 @@ const components = {
 export const ListItemSecondaryAction = ({
   content,
   rootClass,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <MuiListItemSecondaryAction className={styles.root}>
+    <MuiListItemSecondaryAction
+      className={`${styles.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+    >
       <Suspense fallback={<></>}>
         {renderComponentsWithBridge(components, content[0])}
       </Suspense>
@@ -59,9 +66,18 @@ ListItemSecondaryAction.propTypes = {
     ];
     return validComponents(props, propName, componentName, comp, 1);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 ListItemSecondaryAction.defaultProps = {
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

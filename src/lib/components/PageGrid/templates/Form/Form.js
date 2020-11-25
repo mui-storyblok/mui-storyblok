@@ -128,6 +128,13 @@ Form.propTypes = {
   baseUrl: PropTypes.string.isRequired,
   successResponseText: PropTypes.string.isRequired,
   errorResponseText: PropTypes.string.isRequired,
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Form.defaultProps = {
@@ -135,4 +142,7 @@ Form.defaultProps = {
   content: [],
   submitButton: [],
   googleRecaptcha: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

@@ -11,6 +11,9 @@ export const ListDropdown = ({
   rootClass,
   listExpansion,
   content,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const styles = StoryBlok.arrayToMuiStyles(rootClass);
   const [open, setOpen] = useState(false);
@@ -19,7 +22,11 @@ export const ListDropdown = ({
   };
 
   return (
-    <MuiList className={styles.root}>
+    <MuiList
+      className={`${styles.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+    >
       <ListExpansion {...listExpansion[0]} handleClick={handleClick} open={open} />
       <Collapse in={open} timeout="auto" unmountOnExit>
         {content.map((component, key) => renderComponents({ List }, component, key))}
@@ -52,10 +59,19 @@ ListDropdown.propTypes = {
     const components = ['ListExpansion'];
     return validComponentsRequired(props, propName, componentName, components, 1);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 ListDropdown.defaultProps = {
   rootClass: [],
   content: [],
   listExpansion: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

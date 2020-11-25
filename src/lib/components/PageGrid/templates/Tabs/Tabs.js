@@ -235,6 +235,12 @@ Tabs.propTypes = {
   },
   /** pass down and will set the current tab */
   tabIndex: PropTypes.number,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Tabs.defaultProps = {
@@ -250,4 +256,7 @@ Tabs.defaultProps = {
   height: '300px',
   justifyContent: 'center',
   tabIndex: 0,
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

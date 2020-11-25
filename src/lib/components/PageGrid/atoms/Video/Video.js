@@ -99,6 +99,13 @@ Video.propTypes = {
    * Only available when playing file URLs in certain browsers
    */
   pip: PropTypes.bool,
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Video.defaultProps = {
@@ -112,4 +119,7 @@ Video.defaultProps = {
   playsinline: false,
   pip: false,
   rootClass: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

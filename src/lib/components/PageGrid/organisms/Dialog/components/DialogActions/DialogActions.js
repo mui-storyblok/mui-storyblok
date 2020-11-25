@@ -58,9 +58,22 @@ DialogActions.propTypes = {
     ];
     return validComponents(props, propName, componentName, comps);
   },
+
+  disableSpacing: PropTypes.bool,
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 DialogActions.defaultProps = {
   rootClass: [],
   content: [],
+  disableSpacing: false,
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

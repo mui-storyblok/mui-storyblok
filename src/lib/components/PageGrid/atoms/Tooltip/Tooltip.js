@@ -63,11 +63,19 @@ MuiTooltip.propTypes = {
     ];
     return muiStringProp(props, propName, componentName, validProps);
   },
-
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 MuiTooltip.defaultProps = {
   arrow: false,
   placement: 'bottom',
   rootClass: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

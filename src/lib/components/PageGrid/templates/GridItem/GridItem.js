@@ -171,6 +171,13 @@ GridItem.propTypes = {
   })).isRequired,
   /** prop passed down from parent not in storyblok */
   sizeGrid: PropTypes.func.isRequired,
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 GridItem.defaultProps = {
@@ -186,4 +193,7 @@ GridItem.defaultProps = {
   wrap: 'wrap',
   xl: false,
   xs: false,
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

@@ -32,8 +32,8 @@ const Dialog = ({
   return (
     <MuiDialog
       open={open}
-      className={`${dialogStyles.root} ${storyblokClass}`}
       onClose={toggleDialog}
+      className={`${dialogStyles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >
@@ -60,10 +60,19 @@ Dialog.propTypes = {
   open: PropTypes.bool,
   /** passed down from parent component to hide or show Dialog */
   toggleDialog: PropTypes.func.isRequired,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Dialog.defaultProps = {
   open: false,
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

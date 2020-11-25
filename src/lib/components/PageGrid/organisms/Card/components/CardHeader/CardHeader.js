@@ -107,6 +107,13 @@ CardHeader.propTypes = {
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 CardHeader.defaultProps = {
@@ -114,4 +121,7 @@ CardHeader.defaultProps = {
   avatar: [],
   rootClass: [],
   subheader: '',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

@@ -22,7 +22,9 @@ export const ActionCardContainer = ({
   actionCards,
   height,
   width,
-  history,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
@@ -49,7 +51,11 @@ export const ActionCardContainer = ({
   };
 
   return (
-    <div>
+    <div
+      className={`${styles.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+    >
       <Button
         ref={anchorRef}
         aria-controls={open ? 'menu-list-grow' : undefined}
@@ -84,7 +90,6 @@ export const ActionCardContainer = ({
                       key={index}
                       height={height}
                       width={width}
-                      history={history}
                     />
                   ))}
                 </MenuList>
@@ -132,10 +137,12 @@ ActionCardContainer.propTypes = {
     return validComponents(props, propName, componentName, ['ActionCard']);
   },
 
-  /** react history not a storyblok prop */
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }).isRequired,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 ActionCardContainer.defaultProps = {
@@ -144,4 +151,7 @@ ActionCardContainer.defaultProps = {
   width: '200px',
   menuName: [],
   actionCards: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

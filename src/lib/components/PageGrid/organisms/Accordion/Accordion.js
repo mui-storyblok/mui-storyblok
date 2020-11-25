@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { Accordion as MuiAccordion } from '@material-ui/core';
 import { dimensionProp, validComponentsRequired } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 const AccordionSummary = lazy(() => import('./components/AccordionSummary/AccordionSummary'));
 const AccordionDetails = lazy(() => import('./components/AccordionDetails/AccordionDetails'));
@@ -36,10 +37,14 @@ const Accordion = ({
       data-blok-uid={dataBlokUid}
     >
       <Suspense fallback={<></>}>
-        <AccordionSummary {...panelSummary} />
+        {renderComponentsWithBridge({ AccordionSummary }, {
+          ...panelSummary,
+        })}
       </Suspense>
       <Suspense fallback={<></>}>
-        <AccordionDetails {...panelDetails} />
+        {renderComponentsWithBridge({ AccordionDetails }, {
+          ...panelDetails,
+        })}
       </Suspense>
     </MuiAccordion>
   );
@@ -67,6 +72,12 @@ Accordion.propTypes = {
     const components = ['AccordionDetails'];
     return validComponentsRequired(props, propName, componentName, components, 1);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Accordion.defaultProps = {
@@ -75,4 +86,7 @@ Accordion.defaultProps = {
   rootClass: [],
   accordionSummary: [],
   accordionDetails: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

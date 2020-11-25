@@ -23,6 +23,9 @@ const MuiAudioPlayer = ({
   order,
   loop,
   preload,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => (
   <AudioPlayer
     src={src}
@@ -36,6 +39,9 @@ const MuiAudioPlayer = ({
     order={order}
     loop={loop}
     preload={preload}
+    className={storyblokClass}
+    data-blok-c={dataBlokC}
+    data-blok-uid={dataBlokUid}
   />
 );
 
@@ -104,6 +110,13 @@ MuiAudioPlayer.propTypes = {
     const validProp = ['auto', 'metadata', 'none'];
     return muiStringProp(props, propName, componentName, validProp);
   },
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 MuiAudioPlayer.defaultProps = {
@@ -117,4 +130,7 @@ MuiAudioPlayer.defaultProps = {
   loop: false,
   order: 'standart',
   preload: 'none',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

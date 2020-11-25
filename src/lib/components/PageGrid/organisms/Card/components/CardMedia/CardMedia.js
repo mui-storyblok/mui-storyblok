@@ -14,15 +14,20 @@ export const CardMedia = ({
   height,
   image,
   title,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
 
   return (
     <MuiCardMedia
-      className={styles.root}
       alt={alt}
       image={image}
       title={title}
+      className={`${styles.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
     />
   );
 };
@@ -51,9 +56,18 @@ CardMedia.propTypes = {
    * Image to be displayed as a background image
    * */
   image: PropTypes.string.isRequired,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 CardMedia.defaultProps = {
   rootClass: [],
   height: '140px',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

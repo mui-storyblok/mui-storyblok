@@ -43,14 +43,17 @@ const GridList = ({
   const classes = useStyles();
   const styles = StoryBlok.arrayToMuiStyles(rootClass, { width: +width, height: +height });
   return (
-    <div className={classes.root}>
+    <div
+      className={`${classes.root} ${storyblokClass}`}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+    >
       <MuiGridList
         cols={+cols}
         cellHeight={+cellHeight}
         spacing={+spacing}
-        className={`${styles.root} ${storyblokClass}`}
-        data-blok-c={dataBlokC}
-        data-blok-uid={dataBlokUid}
+        className={styles.root}
+
       >
         {content.map(tile => (
           <MuiGridListTile
@@ -116,6 +119,13 @@ GridList.propTypes = {
     const components = ['TitleData'];
     return validComponents(props, propName, componentName, components);
   },
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 GridList.defaultProps = {
@@ -126,4 +136,7 @@ GridList.defaultProps = {
   height: 500,
   width: 450,
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

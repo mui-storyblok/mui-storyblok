@@ -119,6 +119,13 @@ Grid.propTypes = {
 
   /** style obj to pass to grid */
   style: PropTypes.shape(),
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Grid.defaultProps = {
@@ -130,4 +137,7 @@ Grid.defaultProps = {
   spacing: '2',
   wrap: 'wrap',
   style: {},
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

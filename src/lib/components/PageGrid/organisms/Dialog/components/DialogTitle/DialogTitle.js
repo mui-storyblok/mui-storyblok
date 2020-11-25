@@ -30,8 +30,17 @@ DialogTitle.propTypes = {
   text: PropTypes.string.isRequired,
   /** stroyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 DialogTitle.defaultProps = {
   rootClass: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

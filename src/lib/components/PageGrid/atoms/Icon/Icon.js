@@ -40,7 +40,6 @@ export const Icon = ({
   dataBlokC,
   dataBlokUid,
 }) => {
-
   const Sus = props => (
     <Suspense fallback={<></>}>
       <props.Comp
@@ -129,10 +128,20 @@ Icon.propTypes = {
    * Override or extend the styles applied to the component
    * */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Icon.defaultProps = {
   rootClass: [],
   color: 'secondary',
   fontSize: 'default',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

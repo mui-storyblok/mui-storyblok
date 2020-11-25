@@ -62,7 +62,7 @@ const Drawer = ({
 };
 
 export default Drawer;
- Drawer.propTypes = {
+Drawer.propTypes = {
   /**
    * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
@@ -98,11 +98,20 @@ export default Drawer;
     const components = ['MuiList', 'MuiListDropdown'];
     return validComponents(props, propName, componentName, components);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
- Drawer.defaultProps = {
+Drawer.defaultProps = {
   anchor: 'left',
   elevation: 16,
   variant: 'temporary',
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

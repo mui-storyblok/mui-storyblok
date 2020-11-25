@@ -77,6 +77,9 @@ Image.propTypes = {
    * Css Styles for the image.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };
 
 Image.defaultProps = {
@@ -85,4 +88,7 @@ Image.defaultProps = {
   imageStyle: [],
   rootClass: [],
   href: null,
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };
