@@ -1,53 +1,54 @@
 import React, { lazy, Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { ListItem as MuiListItem } from '@material-ui/core';
-import {
-  validComponents,
-  muiStringProp,
-  validComponentsRequired,
-} from 'lib/utils/customProps';
-import { renderComponentsWithBridg } from 'lib/utils/customComponents';
+import ListItem from '@material-ui/core/ListItem';
+import { validComponents, muiStringProp } from 'lib/utils/customProps';
 import Storyblok from 'lib/utils/Storyblok';
+import appRedirect from 'lib/utils/appRedirect';
+import { renderComponentsWithBridg } from 'lib/utils/customComponents';
 
 const ListItemAvatar = lazy(() => import('lib/components/PageGrid/molecules/ListItemAvatar/ListItemAvatar'));
 const ListItemIcon = lazy(() => import('lib/components/PageGrid/molecules/ListItemIcon/ListItemIcon'));
-const ListItemSecondaryAction = lazy(() => import('lib/components/PageGrid/molecules/ListItemSecondaryAction/ListItemSecondaryAction'));
 const ListItemText = lazy(() => import('lib/components/PageGrid/atoms/ListItemText/ListItemText'));
 const ContactButton = lazy(() => import('lib/components/PageGrid/molecules/ContactButton/ContactButton'));
 
-const ListItem = ({
+export const ListItemButton = ({
   rootClass,
   alignItems,
   dense,
   disableGutters,
   divider,
   selected,
+  redirectRoute,
   contactButton,
+  href,
   listItemAvatar,
   listItemIcon,
-  listItemSecondaryAction,
   listItemText,
-  storyblokClass,
-  dataBlokC,
-  dataBlokUid,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-  const text = listItemText[0];
+  let handleClick;
+  if (href === undefined && redirectRoute === undefined) {
+    handleClick = () => {};
+  } else if (href !== undefined && href !== '') {
+    handleClick = () => window.location.assign(href);
+  } else if (redirectRoute !== undefined && redirectRoute !== '') {
+    handleClick = async () => appRedirect(redirectRoute);
+  }
+
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
-  const secondaryAction = listItemSecondaryAction[0];
+  const text = listItemText[0];
   const contact = contactButton[0];
-
   return (
-    <MuiListItem
-      className={`${styles.root} ${storyblokClass}`}
+    <ListItem
+      className={styles.root}
       dense={dense}
       alignItems={alignItems}
       disableGutters={disableGutters}
       divider={divider}
       selected={selected}
-      data-blok-c={dataBlokC}
-      data-blok-uid={dataBlokUid}
+      button={true}
+      onClick={handleClick}
     >
       {avatar ? (
         <Suspense fallback={<></>}>
@@ -67,33 +68,26 @@ const ListItem = ({
         </Suspense>
       ) : null}
 
-      {secondaryAction ? (
-        <Suspense fallback={<></>}>
-          {renderComponentsWithBridg({ ListItemSecondaryAction }, secondaryAction)}
-        </Suspense>
-      ) : null}
-
       {contact ? (
         <Suspense fallback={<></>}>
           {renderComponentsWithBridg({ ContactButton }, contact)}
         </Suspense>
       ) : null}
 
-    </MuiListItem>
+    </ListItem>
   );
 };
 
-export default ListItem;
+export default ListItemButton;
 
-ListItem.propTypes = {
-  /** stroyblok multiselect of css classes */
+ListItemButton.propTypes = {
+  /** storyblok multiselect of css classes */
   rootClass: PropTypes.arrayOf(PropTypes.string),
-  /** mui prop: 'flex-start', 'center'
+  /** mui prop: 'flex-start'| 'center'
    * Defines the align-items style property.
   */
   alignItems(props, propName, componentName) {
-    const validProps = ['flex-start', 'center'];
-    return muiStringProp(props, propName, componentName, validProps);
+    return muiStringProp(props, propName, componentName, ['flex-start', 'center']);
   },
   /** mui prop: true | false
    * If true, compact vertical padding designed for keyboard and mouse input will be used.
@@ -111,42 +105,40 @@ ListItem.propTypes = {
    * Use to apply selected styling.
    * */
   selected: PropTypes.bool,
-  /** MuiListItemAvatar Allowed maximum: 1 */
-  listItemAvatar(props, propName, componentName) {
-    const components = ['MuiListItemAvatar'];
-    return validComponents(props, propName, componentName, components, 1);
-  },
+  /** redirect route */
+  redirectRoute: PropTypes.string,
+  /** url to redirect to */
+  href: PropTypes.string,
   /** MuiListItemAvatar Allowed maximum: 1 */
   contactButton(props, propName, componentName) {
     const components = ['MuiListItemAvatar'];
     return validComponents(props, propName, componentName, components, 1);
   },
+  /** MuiListItemAvatar Allowed maximum: 1 */
+  listItemAvatar(props, propName, componentName) {
+    return validComponents(props, propName, componentName, ['MuiListItemAvatar'], 1);
+  },
   /** MuiListItemIcon Allowed maximum: 1 */
   listItemIcon(props, propName, componentName) {
-    const components = ['MuiListItemIcon'];
-    return validComponents(props, propName, componentName, components, 1);
+    return validComponents(props, propName, componentName, ['MuiListItemIcon'], 1);
   },
   /** MuiListItemText Allowed maximum: 1 */
   listItemText(props, propName, componentName) {
-    return validComponentsRequired(props, propName, componentName, ['MuiListItemText'], 1);
-  },
-  /** MuiListItemSecondaryAction Allowed maximum: 1 */
-  listItemSecondaryAction(props, propName, componentName) {
-    const components = ['MuiListItemSecondaryAction'];
-    return validComponents(props, propName, componentName, components, 1);
+    return validComponents(props, propName, componentName, ['MuiListItemText'], 1);
   },
 };
 
-ListItem.defaultProps = {
+ListItemButton.defaultProps = {
   alignItems: 'center',
   dense: false,
   disableGutters: false,
   divider: false,
   selected: false,
+  redirectRoute: undefined,
+  href: undefined,
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],
-  listItemSecondaryAction: [],
-  contactButton: [],
   listItemText: [],
+  contactButton: [],
 };

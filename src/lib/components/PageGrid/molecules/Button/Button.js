@@ -2,8 +2,9 @@ import React from 'react';
 import {
   validComponents,
 } from 'lib/utils/customProps';
-import Tooltip from '../../atoms/Tooltip/Tooltip';
-import Button from './components/Button/Button';
+import Tooltip from 'lib/components/PageGrid/atoms/Tooltip/Tooltip';
+import Button from 'lib/components/PageGrid/atoms/Button/Button';
+
 /**
    * MuiButton controls Dialog open state from true to false.
    * More docs and demos at https://material-ui.com/api/button/
