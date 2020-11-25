@@ -2,6 +2,9 @@
 
 exports[`<MuiImage /> snapshot with MuiImage 1`] = `
 <div
+  className=""
+  data-blok-c=""
+  data-blok-uid=""
   style={
     Object {
       "height": "500px",

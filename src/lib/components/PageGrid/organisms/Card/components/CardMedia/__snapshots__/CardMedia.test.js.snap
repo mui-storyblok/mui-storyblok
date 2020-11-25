@@ -3,7 +3,9 @@
 exports[`<CardMedia /> snapshot 1`] = `
 <div
   alt="alt"
-  className="MuiCardMedia-root makeStyles-root-3"
+  className="MuiCardMedia-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
   style={
     Object {
       "backgroundImage": "url(\\"img.com\\")",

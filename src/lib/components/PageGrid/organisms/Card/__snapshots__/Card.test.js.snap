@@ -2,6 +2,8 @@
 
 exports[`<Card /> snapshot 1`] = `
 <div
-  className="MuiPaper-root MuiCard-root makeStyles-root-3 undefined MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root makeStyles-root-3  MuiPaper-elevation1 MuiPaper-rounded"
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;

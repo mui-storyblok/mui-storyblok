@@ -2,7 +2,9 @@
 
 exports[`<NotificationBanner /> snapshot 1`] = `
 <header
-  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-root-5 undefined mui-fixed MuiPaper-elevation4"
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-root-5  mui-fixed MuiPaper-elevation4"
+  data-blok-c=""
+  data-blok-uid=""
 >
   <div
     style={

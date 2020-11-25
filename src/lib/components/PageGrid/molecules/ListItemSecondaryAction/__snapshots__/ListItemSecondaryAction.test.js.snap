@@ -2,6 +2,8 @@
 
 exports[`<ListItemSecondaryAction /> snapshot 1`] = `
 <div
-  className="MuiListItemSecondaryAction-root makeStyles-root-3"
+  className="MuiListItemSecondaryAction-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;

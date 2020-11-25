@@ -4,6 +4,9 @@ exports[`<Video /> should render Video 1`] = `ShallowWrapper {}`;
 
 exports[`<Video /> snapshot 1`] = `
 <div
+  className=""
+  data-blok-c=""
+  data-blok-uid=""
   style={
     Object {
       "height": "500px",

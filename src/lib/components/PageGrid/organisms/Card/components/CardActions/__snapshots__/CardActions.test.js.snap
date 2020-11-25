@@ -2,6 +2,8 @@
 
 exports[`<CardActions /> snapshot 1`] = `
 <div
-  className="MuiCardActions-root makeStyles-root-3 undefined MuiCardActions-spacing"
+  className="MuiCardActions-root makeStyles-root-3  MuiCardActions-spacing"
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;

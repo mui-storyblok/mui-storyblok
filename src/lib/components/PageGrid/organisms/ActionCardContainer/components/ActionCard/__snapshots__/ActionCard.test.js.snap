@@ -17,12 +17,16 @@ exports[`<ActionCard /> snapshot 1`] = `
   >
     <span
       aria-hidden={true}
-      className="material-icons MuiIcon-root makeStyles-root-11 undefined MuiIcon-colorSecondary"
+      className="material-icons MuiIcon-root makeStyles-root-11  MuiIcon-colorSecondary"
+      data-blok-c=""
+      data-blok-uid=""
     >
       star
     </span>
     <div
-      className="MuiTypography-root makeStyles-root-12 undefined MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-12  MuiTypography-body1"
+      data-blok-c=""
+      data-blok-uid=""
     >
       <span
         className="MuiTypography-root makeStyles-root-13  MuiTypography-body1"
@@ -37,7 +41,9 @@ exports[`<ActionCard /> snapshot 1`] = `
     className="actionBody"
   >
     <div
-      className="MuiTypography-root makeStyles-root-14 undefined MuiTypography-body1"
+      className="MuiTypography-root makeStyles-root-14  MuiTypography-body1"
+      data-blok-c=""
+      data-blok-uid=""
     >
       <span
         className="MuiTypography-root makeStyles-root-15  MuiTypography-body1"

@@ -2,7 +2,9 @@
 
 exports[`<DialogTitle /> snapshot 1`] = `
 <div
-  className="MuiDialogTitle-root makeStyles-root-3 undefined"
+  className="MuiDialogTitle-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
 >
   text
 </div>

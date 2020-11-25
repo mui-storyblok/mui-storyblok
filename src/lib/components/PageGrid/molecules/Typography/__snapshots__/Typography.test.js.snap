@@ -2,6 +2,8 @@
 
 exports[`<Typography /> snapshot 1`] = `
 <div
-  className="MuiTypography-root makeStyles-root-3 undefined MuiTypography-body1"
+  className="MuiTypography-root makeStyles-root-3  MuiTypography-body1"
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;

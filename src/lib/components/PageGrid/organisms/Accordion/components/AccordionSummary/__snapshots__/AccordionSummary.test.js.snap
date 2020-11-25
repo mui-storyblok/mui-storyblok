@@ -3,7 +3,9 @@
 exports[`<AccordionSummary /> snapshot 1`] = `
 <div
   aria-disabled={false}
-  className="MuiButtonBase-root MuiAccordionSummary-root makeStyles-root-3 undefined"
+  className="MuiButtonBase-root MuiAccordionSummary-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
   onBlur={[Function]}
   onClick={[Function]}
   onDragLeave={[Function]}

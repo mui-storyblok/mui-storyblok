@@ -2,10 +2,12 @@
 
 exports[`<GridList /> snapshot 1`] = `
 <div
-  className="makeStyles-root-1"
+  className="makeStyles-root-1 "
+  data-blok-c=""
+  data-blok-uid=""
 >
   <ul
-    className="MuiGridList-root makeStyles-root-4 undefined"
+    className="MuiGridList-root makeStyles-root-4"
     style={
       Object {
         "margin": -2,

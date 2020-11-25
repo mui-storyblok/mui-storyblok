@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ActionCardContainer /> snapshot 1`] = `
-<div>
+<div
+  className="makeStyles-root-7 "
+  data-blok-c=""
+  data-blok-uid=""
+>
   <button
     aria-haspopup="true"
     className="MuiButtonBase-root MuiButton-root MuiButton-text"
@@ -26,7 +30,9 @@ exports[`<ActionCardContainer /> snapshot 1`] = `
       className="MuiButton-label"
     >
       <div
-        className="MuiTypography-root makeStyles-root-8 undefined MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-8  MuiTypography-body1"
+        data-blok-c=""
+        data-blok-uid=""
       >
         <span
           className="MuiTypography-root makeStyles-root-9  MuiTypography-body1"

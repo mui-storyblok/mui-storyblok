@@ -2,7 +2,9 @@
 
 exports[`<AppBar /> snapshot 1`] = `
 <header
-  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionRelative MuiAppBar-colorPrimary makeStyles-root-3 undefined MuiPaper-elevation4"
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionRelative MuiAppBar-colorPrimary makeStyles-root-3  MuiPaper-elevation4"
+  data-blok-c=""
+  data-blok-uid=""
 >
   <div
     className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
@@ -10,6 +12,7 @@ exports[`<AppBar /> snapshot 1`] = `
     <div
       className="MuiGrid-root makeStyles-root-4 AppBarGrid storyblok--outline MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
       data-blok-c="{\\"name\\": \\"AppBarGridItem\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+      data-blok-uid=""
       style={Object {}}
     >
       <div

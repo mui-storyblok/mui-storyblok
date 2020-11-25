@@ -2,7 +2,9 @@
 
 exports[`<CardHeader /> snapshot 1`] = `
 <div
-  className="MuiCardHeader-root makeStyles-root-3 undefined"
+  className="MuiCardHeader-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
 >
   <div
     className="MuiCardHeader-content"

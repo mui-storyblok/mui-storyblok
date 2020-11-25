@@ -2,7 +2,9 @@
 
 exports[`<ListItemText /> snapshot 1`] = `
 <div
-  className="MuiListItemText-root makeStyles-root-3 undefined MuiListItemText-multiline"
+  className="MuiListItemText-root makeStyles-root-3 function () { [native code] } MuiListItemText-multiline"
+  data-blok-c={[Function]}
+  data-blok-uid={[Function]}
 >
   <span
     className="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"

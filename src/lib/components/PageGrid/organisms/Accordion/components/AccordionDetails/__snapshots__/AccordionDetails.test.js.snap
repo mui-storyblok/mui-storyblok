@@ -2,6 +2,8 @@
 
 exports[`<AccordionDetails /> snapshot 1`] = `
 <div
-  className="MuiAccordionDetails-root makeStyles-root-3 undefined"
+  className="MuiAccordionDetails-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;
