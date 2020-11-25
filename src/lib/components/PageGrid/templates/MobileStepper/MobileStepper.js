@@ -40,9 +40,10 @@ const MobileStepper = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  tabIndex,
 }) => {
   const [state, setState] = useState({ autoplay });
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(tabIndex);
 
   const maxSteps = tabs.length;
 
@@ -167,20 +168,23 @@ MobileStepper.propTypes = {
   },
   /**
    * IconButton,
-    Button,
+   * Button,
    */
   nextBtn(props, propName, componentName) {
     const comps = ['IconButton', 'Button'];
     return validComponentsRequired(props, propName, componentName, comps, 1);
   },
   /**
-   * MuiIconButton,
-  * MuiButton,
+  * IconButton,
+  * Button,
   */
   backBtn(props, propName, componentName) {
     const comps = ['IconButton', 'Button'];
     return validComponentsRequired(props, propName, componentName, comps, 1);
   },
+
+  /** pass down and will set the current tab */
+  tabIndex: PropTypes.number,
 };
 
 MobileStepper.defaultProps = {
@@ -192,4 +196,5 @@ MobileStepper.defaultProps = {
   nextBtn: [],
   backBtn: [],
   tabs: [],
+  tabIndex: 0,
 };

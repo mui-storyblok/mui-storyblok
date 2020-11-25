@@ -44,9 +44,10 @@ const Tabs = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  tabIndex,
 }) => {
   const [state, setState] = useState({ autoplay, tabsLength: tabs.length });
-  const [tabValue, setTabValue] = useState(0);
+  const [tabValue, setTabValue] = useState(tabIndex);
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
@@ -227,9 +228,11 @@ Tabs.propTypes = {
 
   /** MuiTab */
   tabs(props, propName, componentName) {
-    const comps = ['MuiTab'];
+    const comps = ['Tab'];
     return validComponents(props, propName, componentName, comps);
   },
+  /** pass down and will set the current tab */
+  tabIndex: PropTypes.number,
 };
 
 Tabs.defaultProps = {
@@ -244,4 +247,5 @@ Tabs.defaultProps = {
   interval: 3000,
   height: '300px',
   justifyContent: 'center',
+  tabIndex: 0,
 };
