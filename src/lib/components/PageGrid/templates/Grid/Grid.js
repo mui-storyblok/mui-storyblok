@@ -1,6 +1,8 @@
+
 import React, { Suspense } from 'react';
+import { Grid as MuiGrid, Box } from '@material-ui/core';
+import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
 import PropTypes from 'prop-types';
-import MuiGrid from '@material-ui/core/Grid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
@@ -25,33 +27,37 @@ const Grid = ({
   dataBlokUid,
   storyblokClass,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px', ...style });
+  let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
+  gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...style });
+
   return (
-    <MuiGrid
-      container
-      alignContent={alignContent}
-      alignItems={alignItems}
-      className={`${styles.root} ${storyblokClass}`}
-      direction={direction}
-      justify={justify}
-      wrap={wrap}
-      spacing={Number(spacing)}
-      data-blok-c={dataBlokC}
-      data-blok-uid={dataBlokUid}
-      style={style}
-    >
-      {content.map((component, key) => (
-        <>
-          <Suspense fallback={<></>}>
+    <Box width={{ xs: '100%' }}>
+      <MuiGrid
+        container
+        alignContent={alignContent}
+        alignItems={alignItems}
+        direction={direction}
+        justify={justify}
+        wrap={wrap}
+        spacing={Number(spacing)}
+        data-blok-c={dataBlokC}
+        data-blok-uid={dataBlokUid}
+        className={`${styles.root} ${storyblokClass}`}
+        classes={gridClass}
+      >
+        {content.map((component, key) => (
+          <Suspense fallback={<Box width={{ xs: '100%' }} />}>
             {renderComponentsWithBridge({ ...comps, ...components }, {
               ...component,
               components,
               key,
             }, key)}
           </Suspense>
-        </>
-      ))}
-    </MuiGrid>
+        ))}
+      </MuiGrid>
+    </Box>
   );
 };
 
@@ -126,6 +132,8 @@ Grid.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  /**  components to render in the GridItem */
+  components: PropTypes.shape(),
 };
 
 Grid.defaultProps = {
@@ -140,4 +148,5 @@ Grid.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  components: {},
 };

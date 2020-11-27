@@ -5,6 +5,8 @@ import sizeGrid from 'lib/utils/sizeGrid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
+import Box from '@material-ui/core/Box';
+import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
 
 const GridItem = ({
   components,
@@ -25,26 +27,31 @@ const GridItem = ({
   dataBlokUid,
   storyblokClass,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
+  let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
+  gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+
+  const styles = Storyblok.arrayToMuiStyles(rootClass);
   return (
     <Grid
       item
       container
       alignContent={alignContent}
       alignItems={alignItems}
-      className={`${styles.root} ${storyblokClass}`}
       direction={direction}
       justify={justify}
-      lg={sizeGrid(lg)}
-      md={sizeGrid(md)}
-      sm={sizeGrid(sm)}
       wrap={wrap}
       spacing={Number(spacing)}
       xs={sizeGrid(xs)}
+      sm={sizeGrid(sm)}
+      md={sizeGrid(md)}
+      lg={sizeGrid(lg)}
       xl={sizeGrid(xl)}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
+      className={`${styles.root} ${storyblokClass}`}
+      classes={gridClass}
     >
+      {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
       {content.length > 0
         && content.map((component, key) => (
           <Suspense fallback={<></>}>
@@ -56,6 +63,7 @@ const GridItem = ({
           </Suspense>
         ))
       }
+
     </Grid>
   );
 };
@@ -169,8 +177,6 @@ GridItem.propTypes = {
   content: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-  /** prop passed down from parent not in storyblok */
-  sizeGrid: PropTypes.func.isRequired,
 
   /** storyblok prop for when in editor to allow click bridge */
   dataBlokC: PropTypes.string,
@@ -178,6 +184,8 @@ GridItem.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  /**  components to render in the GridItem */
+  components: PropTypes.shape(),
 };
 
 GridItem.defaultProps = {
@@ -196,4 +204,6 @@ GridItem.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  components: {},
+
 };
