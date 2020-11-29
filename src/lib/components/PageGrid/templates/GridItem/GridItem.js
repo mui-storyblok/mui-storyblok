@@ -54,7 +54,7 @@ const GridItem = ({
       {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
       {content.length > 0
         && content.map((component, key) => (
-          <Suspense fallback={<></>}>
+          <Suspense fallback={<></>} key={key}>
             {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
               ...component,
               components,

@@ -48,7 +48,7 @@ const Grid = ({
         classes={gridClass}
       >
         {content.map((component, key) => (
-          <Suspense fallback={<Box width={{ xs: '100%' }} />}>
+          <Suspense fallback={<Box width={{ xs: '100%' }} key={key} />}>
             {renderComponentsWithBridge({ ...comps, ...components }, {
               ...component,
               components,

@@ -76,9 +76,9 @@ HeroHeader.propTypes = {
     return dimensionProp(props, propName, componentName);
   },
   /**
-     * stroyblok multiselect of css classes
-     * Mui Override or extend the styles applied to the component. See CSS API below for more details.
-     */
+   * stroyblok multiselect of css classes
+   * Mui Override or extend the styles applied to the component. See CSS API below for more details.
+   */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
      * mui prop: 'stretch', 'center', 'flex-start', 'flex-end', 'space-between', 'space-around'

@@ -8,16 +8,17 @@ export const pushToCustomComponents = (components) => {
 
 export const StoryBlokClickableItem = (props) => {
   if (process.env.REACT_APP_ENV !== 'production' && props._editable) {
+    console.log(props, '@@@@@');
     const cName = `${props.component.component} storyblok--outline`;
     const escapedJSONData = props._editable.substring(props._editable.lastIndexOf('{'), props._editable.lastIndexOf('}') + 1);
 
     return (
-      <div className={cName} data-blok-c={escapedJSONData} data-blok-uid={props._uid}>
+      <div className={cName} data-blok-c={escapedJSONData} data-blok-uid={props._uid} key={props?._uid}>
         {createElement(props.components[props.component.component], props)}
       </div>
     );
   }
-  return createElement(props.components[props.component.component], props);
+  return createElement(props.components[props.component.component], { ...props });
 };
 
 export const storyBlokClickableProps = ({ _editable, component, _uid }) => {
