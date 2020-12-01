@@ -16,6 +16,8 @@ const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
 /* istanbul ignore next */
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
+/* istanbul ignore next */
+const TextInfo = lazy(() => import('lib/components/PageGrid/atoms/TextInfo/TextInfo'));
 
 const components = {
   Video,
@@ -23,6 +25,7 @@ const components = {
   Typography,
   List,
   ListDropdown,
+  TextInfo,
 };
 
 const CardContent = ({
@@ -54,15 +57,15 @@ export default CardContent;
 CardContent.propTypes = {
   /**
    * stroyblok multiselect of css classes
-   * Mui Override or extend the styles applied to the component.
+   * Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
   /**
    * Content passed to render
    * components:
-    MuiTypography,
-    MuiAccordion,
-    MuiList,
+    Typography,
+    Accordion,
+    List,
    */
   content(props, propName, componentName) {
     const comps = [

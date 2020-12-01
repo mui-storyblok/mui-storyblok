@@ -8,7 +8,6 @@ export const pushToCustomComponents = (components) => {
 
 export const StoryBlokClickableItem = (props) => {
   if (process.env.REACT_APP_ENV !== 'production' && props._editable) {
-    console.log(props, '@@@@@');
     const cName = `${props.component.component} storyblok--outline`;
     const escapedJSONData = props._editable.substring(props._editable.lastIndexOf('{'), props._editable.lastIndexOf('}') + 1);
 

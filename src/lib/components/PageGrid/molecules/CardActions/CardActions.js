@@ -33,8 +33,10 @@ const CardActions = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  style,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...style });
+
   return (
     <MuiCardActions
       className={`${styles.root} ${storyblokClass}`}

@@ -6,13 +6,13 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import { validComponents, dimensionProp } from 'lib/utils/customProps';
 
 /* istanbul ignore next */
-const CardActions = lazy(() => import('./components/CardActions/CardActions'));
+const CardActions = lazy(() => import('lib/components/PageGrid/molecules/CardActions/CardActions'));
 /* istanbul ignore next */
 const CardContent = lazy(() => import('./components/CardContent/CardContent'));
 /* istanbul ignore next */
 const CardHeader = lazy(() => import('./components/CardHeader/CardHeader'));
 /* istanbul ignore next */
-const CardMedia = lazy(() => import('./components/CardMedia/CardMedia'));
+const CardMedia = lazy(() => import('lib/components/PageGrid/atoms/CardMedia/CardMedia'));
 
 const components = {
   CardActions,
@@ -34,7 +34,11 @@ const Card = ({
   dataBlokC,
   dataBlokUid,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { height, width });
+  const styles = Storyblok.arrayToMuiStyles(rootClass, {
+    height,
+    width,
+  });
+
   return (
     <MuiCard
       raised={raised}

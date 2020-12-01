@@ -39,6 +39,7 @@ export const Icon = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  style,
 }) => {
   const Sus = props => (
     <Suspense fallback={<></>}>
@@ -49,7 +50,7 @@ export const Icon = ({
       />
     </Suspense>
   );
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...style });
 
   const customIcon = customIcons.find(icon => icon.iconName === iconName);
   if (customIcon) {

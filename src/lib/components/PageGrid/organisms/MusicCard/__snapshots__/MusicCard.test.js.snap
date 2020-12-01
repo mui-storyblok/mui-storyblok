@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MusicCard /> snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-root-1 makeStyles-root-8 makeStyles-root-13 MuiPaper-elevation1 MuiPaper-rounded"
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    alt="cool"
+    className="MuiCardMedia-root makeStyles-root-14 "
+    data-blok-c=""
+    data-blok-uid=""
+    style={
+      Object {
+        "backgroundImage": "url(\\"cool.jpg\\")",
+      }
+    }
+    title="imgTitle"
+  />
+  <div
+    className="MuiCardContent-root"
+  >
+    <span
+      className="MuiTypography-root TextInfoContent-overline-15 N04TextInfoContent-overline-5 MuiTypography-body1"
+    >
+      overline
+    </span>
+    <h4
+      className="MuiTypography-root TextInfoContent-heading-16 N04TextInfoContent-heading-6 MuiTypography-body1"
+    >
+      heading
+    </h4>
+    <p
+      className="MuiTypography-root TextInfoContent-body-17 N04TextInfoContent-body-7 MuiTypography-body1"
+    >
+      body
+    </p>
+  </div>
+</div>
+`;

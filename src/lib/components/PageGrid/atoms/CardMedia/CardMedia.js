@@ -17,9 +17,10 @@ export const CardMedia = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  style,
+  classes,
 }) => {
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
-
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...style, height });
   return (
     <MuiCardMedia
       alt={alt}
@@ -28,6 +29,7 @@ export const CardMedia = ({
       className={`${styles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
+      classes={classes}
     />
   );
 };
@@ -62,6 +64,8 @@ CardMedia.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+
+  classes: PropTypes.shape()
 };
 
 CardMedia.defaultProps = {
@@ -70,4 +74,5 @@ CardMedia.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  classes: {},
 };
