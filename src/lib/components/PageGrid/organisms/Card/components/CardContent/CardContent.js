@@ -18,6 +18,8 @@ const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDr
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 /* istanbul ignore next */
 const TextInfo = lazy(() => import('lib/components/PageGrid/atoms/TextInfo/TextInfo'));
+/* istanbul ignore next */
+const StyledList = lazy(() => import('lib/components/PageGrid/organisms/StyledList/StyledList'));
 
 const components = {
   Video,
@@ -26,6 +28,7 @@ const components = {
   List,
   ListDropdown,
   TextInfo,
+  StyledList,
 };
 
 const CardContent = ({

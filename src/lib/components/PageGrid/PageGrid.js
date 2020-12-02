@@ -28,6 +28,7 @@ const MusicCard = lazy(() => import('lib/components/PageGrid/organisms/MusicCard
 const ReviewCard = lazy(() => import('lib/components/PageGrid/organisms/ReviewCard/ReviewCard'));
 const PostCard = lazy(() => import('lib/components/PageGrid/organisms/PostCard/PostCard'));
 const PricingCard = lazy(() => import('lib/components/PageGrid/organisms/PricingCard/PricingCard'));
+const StyledList = lazy(() => import('lib/components/PageGrid/organisms/StyledList/StyledList'));
 
 // templates
 const AppBar = lazy(() => import('lib/components/PageGrid/templates/AppBar/AppBar'));
@@ -67,6 +68,7 @@ const components = {
   ReviewCard,
   PostCard,
   PricingCard,
+  StyledList,
   AppBar,
   ButtonDialog,
   HeroHeader,
