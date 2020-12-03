@@ -3,19 +3,18 @@ import PropTypes from 'prop-types';
 import { muiStringProp } from 'lib/utils/customProps';
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
+import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 // atoms
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
 const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
-
 // molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
 const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
-
 // organisms
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 const ActionCardContainer = lazy(() => import('lib/components/PageGrid/organisms/ActionCardContainer/ActionCardContainer'));
@@ -29,7 +28,6 @@ const ReviewCard = lazy(() => import('lib/components/PageGrid/organisms/ReviewCa
 const PostCard = lazy(() => import('lib/components/PageGrid/organisms/PostCard/PostCard'));
 const PricingCard = lazy(() => import('lib/components/PageGrid/organisms/PricingCard/PricingCard'));
 const StyledList = lazy(() => import('lib/components/PageGrid/organisms/StyledList/StyledList'));
-
 // templates
 const AppBar = lazy(() => import('lib/components/PageGrid/templates/AppBar/AppBar'));
 const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
@@ -37,7 +35,6 @@ const ButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/Button
 const Form = lazy(() => import('lib/components/PageGrid/templates/Form/Form'));
 const GeoLocationMobileStepper = lazy(() => import('lib/components/PageGrid/templates/GeoLocationMobileStepper/GeoLocationMobileStepper'));
 const GeoLocationTabs = lazy(() => import('lib/components/PageGrid/templates/GeoLocationTabs/GeoLocationTabs'));
-const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
 const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
 const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/IconButtonDrawer/IconButtonDrawer'));
 const MobileStepper = lazy(() => import('lib/components/PageGrid/templates/MobileStepper/MobileStepper'));
@@ -71,17 +68,19 @@ const components = {
   StyledList,
   AppBar,
   ButtonDialog,
-  HeroHeader,
   IconButtonDialog,
   IconButtonDrawer,
   MobileStepper,
   NotificationBanner,
   Tabs,
   PageGridItem: GridItem,
+  PageGrid: Grid,
 };
 
+
 const PageGrid = (props) => {
-  return <Grid {...props} components={components} />;
+  const p = { ...props.component, components };
+  return renderComponentsWithBridge({ ...{ PageGrid: Grid } }, p);
 };
 
 export default PageGrid;

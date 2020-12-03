@@ -4,13 +4,9 @@ import { Grid as MuiGrid, Box } from '@material-ui/core';
 import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
 import PropTypes from 'prop-types';
 import Storyblok from 'lib/utils/Storyblok';
-import { muiStringProp } from 'lib/utils/customProps';
+import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
-
-const comps = {
-  GridItem,
-};
 
 const Grid = ({
   alignContent,
@@ -26,12 +22,34 @@ const Grid = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  height,
+  backgroundImageUrl,
 }) => {
   let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
   gridClass = window?.Storyblok?.inEditor ? gridClass : {};
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...style });
+  let heroClass = {
+    ...style,
+    height,
+  };
 
+  if (backgroundImageUrl) {
+    heroClass = {
+      ...heroClass,
+      ...{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative',
+        padding: 0,
+        margin: 0,
+      },
+    };
+  }
+
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
+  console.log('!!!!!!!!!!', styles, heroClass)
   return (
     <Box width={{ xs: '100%' }}>
       <MuiGrid
@@ -49,7 +67,7 @@ const Grid = ({
       >
         {content.map((component, key) => (
           <Suspense fallback={<Box width={{ xs: '100%' }} key={key} />}>
-            {renderComponentsWithBridge({ ...comps, ...components }, {
+            {renderComponentsWithBridge({ ...{ GridItem }, ...components }, {
               ...component,
               components,
               key,
@@ -64,6 +82,12 @@ const Grid = ({
 export default Grid;
 
 Grid.propTypes = {
+  /** url for background img */
+  backgroundImageUrl: PropTypes.string,
+  /** height of the container */
+  height(props, propName, componentName) {
+    return dimensionProp(props, propName, componentName);
+  },
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
@@ -149,4 +173,6 @@ Grid.defaultProps = {
   dataBlokUid: '',
   storyblokClass: '',
   components: {},
+  height: '100%',
+  backgroundImageUrl: '',
 };

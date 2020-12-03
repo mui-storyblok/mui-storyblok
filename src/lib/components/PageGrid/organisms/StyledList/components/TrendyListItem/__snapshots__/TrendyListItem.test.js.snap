@@ -3,6 +3,8 @@
 exports[`<TrendyListItem /> snapshot 1`] = `
 <div
   className="MuiBox-root MuiBox-root-5 FlexItem FlexColumn"
+  data-blok-c=""
+  data-blok-uid=""
 >
   <div
     className="MuiBox-root MuiBox-root-6 FlexItem FlexRow"

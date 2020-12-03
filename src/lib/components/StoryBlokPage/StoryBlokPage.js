@@ -93,7 +93,7 @@ export class StoryBlokPage extends Component {
 
   getPage = async () => {
     try {
-      const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
+      const route = window.location.pathname === '/' ? this.props.dynamicSlug : window.location.pathname.slice(1);
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
       const muiTheme = await this.pickTheme(story[1], this.props.theme);
       this.setState({ muiTheme });
@@ -154,6 +154,7 @@ export class StoryBlokPage extends Component {
 export default StoryBlokPage;
 
 StoryBlokPage.propTypes = {
+  dynamicSlug: PropTypes.string,
   version: PropTypes.string.isRequired,
   /** acess key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
@@ -168,4 +169,5 @@ StoryBlokPage.propTypes = {
 StoryBlokPage.defaultProps = {
   theme: {},
   useObjectTheme: false,
+  dynamicSlug: 'page-welcome',
 };

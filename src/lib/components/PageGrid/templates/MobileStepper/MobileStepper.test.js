@@ -9,16 +9,13 @@ function setup() {
     tabs: [{
       component: 'MobileTab',
       tab: [{
-        component: 'HeroHeader',
+        component: 'MobileTabGrid',
         backgroundImageUrl: 'backgroundImageUrl.png',
         content: [{
-          component: 'HeroHeaderGrid',
+          component: 'MobileTabGridItem',
           content: [{
-            component: 'HeroHeaderGridItem',
-            content: [{
-              component: 'Icon',
-              iconName: 'android',
-            }],
+            component: 'Icon',
+            iconName: 'android',
           }],
         }],
       }],
@@ -26,27 +23,22 @@ function setup() {
     {
       component: 'MobileTab',
       tab: [{
-        component: 'HeroHeader',
-        backgroundImageUrl: 'backgroundImageUrl222.png',
+        component: 'MobileTabGrid',
+        backgroundImageUrl: 'backgroundImageUrl.png',
         content: [{
-          component: 'HeroHeaderGrid',
+          component: 'MobileTabGridItem',
           content: [{
-            component: 'HeroHeaderGridItem',
-            content: [{
-              component: 'Icon',
-              iconName: 'menu',
-            }],
+            component: 'Icon',
+            iconName: 'android',
           }],
         }],
       }],
     }],
-
     nextBtn: [{
       component: 'Button',
       buttonText: 'next',
       onClick: jest.fn(),
     }],
-
     backBtn: [{
       component: 'Button',
       buttonText: 'previous',

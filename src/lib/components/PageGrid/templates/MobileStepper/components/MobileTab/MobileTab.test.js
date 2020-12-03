@@ -6,9 +6,9 @@ function setup() {
   const props = {
     tab: {
       backgroundImageUrl: 'www.aoisdjfasd.com',
-      component: 'HeroHeader',
+      component: 'MobileTabGrid',
       content: [{
-        component: 'HeroHeaderGridItem',
+        component: 'MobileTabGridItem',
         content: [{
           component: 'Typography',
           content: [{

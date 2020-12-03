@@ -11,21 +11,66 @@ import {
   dimensionProp,
 } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
-
 import Grid from 'lib/components/PageGrid/templates/Grid/Grid';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
-import Icon from 'lib/components/PageGrid/atoms/Icon/Icon';
+import Box from '@material-ui/core/Box';
 
+// atoms
+const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
+const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
+const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+// molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
-const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
+const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
+const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
+const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+// organisms
+const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
+const ActionCardContainer = lazy(() => import('lib/components/PageGrid/organisms/ActionCardContainer/ActionCardContainer'));
+const AudioPlayer = lazy(() => import('lib/components/PageGrid/organisms/AudioPlayer/AudioPlayer'));
 const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
-const HeroHeader = lazy(() => import('lib/components/PageGrid/templates/HeroHeader/HeroHeader'));
+const GridList = lazy(() => import('lib/components/PageGrid/organisms/GridList/GridList'));
+const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
+const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
+const MusicCard = lazy(() => import('lib/components/PageGrid/organisms/MusicCard/MusicCard'));
+const ReviewCard = lazy(() => import('lib/components/PageGrid/organisms/ReviewCard/ReviewCard'));
+const PostCard = lazy(() => import('lib/components/PageGrid/organisms/PostCard/PostCard'));
+const PricingCard = lazy(() => import('lib/components/PageGrid/organisms/PricingCard/PricingCard'));
+const StyledList = lazy(() => import('lib/components/PageGrid/organisms/StyledList/StyledList'));
+// templates
+const ButtonDialog = lazy(() => import('lib/components/PageGrid/templates/ButtonDialog/ButtonDialog'));
+const ButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/ButtonDrawer/ButtonDrawer'));
+const Form = lazy(() => import('lib/components/PageGrid/templates/Form/Form'));
+const IconButtonDialog = lazy(() => import('lib/components/PageGrid/templates/IconButtonDialog/IconButtonDialog'));
+const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/IconButtonDrawer/IconButtonDrawer'));
 
 const components = {
+  Icon,
+  Image,
+  Video,
   Typography,
-  List,
+  ButtonDownload,
+  ButtonDrawer,
+  Form,
+  ButtonRedirect,
+  IconButtonDownload,
+  IconButtonRedirect,
+  Accordion,
+  ActionCardContainer,
+  AudioPlayer,
   Card,
-  HeroHeader,
+  GridList,
+  List,
+  ListDropdown,
+  MusicCard,
+  ReviewCard,
+  PostCard,
+  PricingCard,
+  StyledList,
+  ButtonDialog,
+  IconButtonDialog,
+  IconButtonDrawer,
   TabGridItem: GridItem,
 };
 
@@ -119,7 +164,7 @@ const Tabs = ({
           />
         ))}
       </MuiTabs>
-      <div style={{ height }}>
+      <div p={3} style={{ height, padding: '15px' }}>
         {tabs.map((tab, index) => (
           <AutoPlaySwipeableViews
             key={index}
@@ -135,15 +180,17 @@ const Tabs = ({
               hidden={tabValue !== index}
               style={{ overflow: 'hidden' }}
             >
-              {tab.content.map((component, key) => (
-                <Suspense fallback={<></>}>
-                  {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
-                    ...component,
-                    components,
-                    key,
-                  }, key)}
-                </Suspense>
-              ))}
+              <Box p={3} style={{ height, padding: '15px' }}>
+                {tab.content.map((component, key) => (
+                  <Suspense fallback={<></>}>
+                    {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
+                      ...component,
+                      components,
+                      key,
+                    }, key)}
+                  </Suspense>
+                ))}
+              </Box>
             </div>
           </AutoPlaySwipeableViews>
         ))}

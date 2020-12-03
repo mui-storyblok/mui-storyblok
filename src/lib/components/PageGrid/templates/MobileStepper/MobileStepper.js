@@ -88,6 +88,9 @@ const MobileStepper = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       style={{ width: '100%' }}
+      className={storyblokClass}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
     >
       <AutoPlaySwipeableViews
         autoplay={state.autoplay}
@@ -105,9 +108,7 @@ const MobileStepper = ({
 
       <MuiMobileStepper
         id="MuiMobileStepper"
-        className={`${styles.root} ${storyblokClass}`}
-        data-blok-c={dataBlokC}
-        data-blok-uid={dataBlokUid}
+        className={styles.root}
         steps={maxSteps}
         position={position}
         variant={variant}

@@ -7,9 +7,11 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Storyblok from 'lib/utils/Storyblok';
 
 const ListItem = lazy(() => import('./components/ListItem/ListItem'));
+const ListItemButton = lazy(() => import('./components/ListItemButton/ListItemButton'));
 
 const components = {
   ListItem,
+  ListItemButton,
 };
 
 const List = ({
@@ -61,12 +63,17 @@ List.propTypes = {
   dense: PropTypes.bool,
   /** width of list */
   width: PropTypes.string,
-
   /** MuiListItem */
   content(props, propName, componentName) {
     const comps = ['ListItem'];
     return validComponents(props, propName, componentName, comps);
   },
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 List.defaultProps = {
@@ -75,4 +82,7 @@ List.defaultProps = {
   disablePadding: false,
   rootClass: [],
   content: [],
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
 };

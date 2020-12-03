@@ -9,7 +9,6 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 const ListItemAvatar = lazy(() => import('lib/components/PageGrid/molecules/ListItemAvatar/ListItemAvatar'));
 const ListItemIcon = lazy(() => import('lib/components/PageGrid/molecules/ListItemIcon/ListItemIcon'));
 const ListItemText = lazy(() => import('lib/components/PageGrid/atoms/ListItemText/ListItemText'));
-const ContactButton = lazy(() => import('lib/components/PageGrid/molecules/ContactButton/ContactButton'));
 
 export const ListItemButton = ({
   rootClass,
@@ -18,27 +17,32 @@ export const ListItemButton = ({
   disableGutters,
   divider,
   selected,
-  redirectRoute,
-  contactButton,
   href,
+  external,
   listItemAvatar,
   listItemIcon,
   listItemText,
+  callback,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass);
-  let handleClick;
-  if (href === undefined && redirectRoute === undefined) {
-    handleClick = () => {};
-  } else if (href !== undefined && href !== '') {
-    handleClick = () => window.location.assign(href);
-  } else if (redirectRoute !== undefined && redirectRoute !== '') {
-    handleClick = async () => appRedirect(redirectRoute);
-  }
+
+  const externalRedirect = () => {
+    window.location.replace(href);
+  };
+
+  const internalRedirect = () => {
+    appRedirect(href);
+  };
+
+  const handleClick = () => {
+    if (callback) callback();
+    if (external) return externalRedirect();
+    return internalRedirect();
+  };
 
   const avatar = listItemAvatar[0];
   const icon = listItemIcon[0];
   const text = listItemText[0];
-  const contact = contactButton[0];
   return (
     <ListItem
       className={styles.root}
@@ -65,12 +69,6 @@ export const ListItemButton = ({
       {text ? (
         <Suspense fallback={<></>}>
           {renderComponentsWithBridge({ ListItemText }, text)}
-        </Suspense>
-      ) : null}
-
-      {contact ? (
-        <Suspense fallback={<></>}>
-          {renderComponentsWithBridge({ ContactButton }, contact)}
         </Suspense>
       ) : null}
 
@@ -105,15 +103,10 @@ ListItemButton.propTypes = {
    * Use to apply selected styling.
    * */
   selected: PropTypes.bool,
-  /** redirect route */
-  redirectRoute: PropTypes.string,
+
   /** url to redirect to */
-  href: PropTypes.string,
-  /** MuiListItemAvatar Allowed maximum: 1 */
-  contactButton(props, propName, componentName) {
-    const components = ['MuiListItemAvatar'];
-    return validComponents(props, propName, componentName, components, 1);
-  },
+  href: PropTypes.string.isRequired,
+
   /** MuiListItemAvatar Allowed maximum: 1 */
   listItemAvatar(props, propName, componentName) {
     return validComponents(props, propName, componentName, ['MuiListItemAvatar'], 1);
@@ -126,6 +119,13 @@ ListItemButton.propTypes = {
   listItemText(props, propName, componentName) {
     return validComponents(props, propName, componentName, ['MuiListItemText'], 1);
   },
+  /**
+   * if false will redirect to a page in the app and should use '/page-whatever'
+   *  if true will redirect to another site 'https://www.google.com/'
+   * */
+  external: PropTypes.bool,
+  // callback to run before redirect
+  callback: PropTypes.func,
 };
 
 ListItemButton.defaultProps = {
@@ -134,11 +134,10 @@ ListItemButton.defaultProps = {
   disableGutters: false,
   divider: false,
   selected: false,
-  redirectRoute: undefined,
-  href: undefined,
   rootClass: [],
   listItemAvatar: [],
   listItemIcon: [],
   listItemText: [],
-  contactButton: [],
+  external: false,
+  callback: undefined,
 };

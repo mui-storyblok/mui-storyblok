@@ -26,10 +26,8 @@ export const ButtonRedirect = ({
 
   const onClick = () => {
     if (callback) callback();
-    if (external) {
-      return externalRedirect();
-    }
-    return internalRedirect(href);
+    if (external) return externalRedirect();
+    return internalRedirect();
   };
 
   const muibutton = button[0];

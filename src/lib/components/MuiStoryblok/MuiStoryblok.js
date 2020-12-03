@@ -13,6 +13,7 @@ export const MuiStoryblok = ({
   iconArray,
   customComponents,
   customLoader,
+  dynamicSlug,
 }) => {
   // If a custom loader is passed down push into customLoader variable
   if (customLoader) setCustomLoader(customLoader);
@@ -25,6 +26,7 @@ export const MuiStoryblok = ({
       theme={theme}
       accessToken={accessToken}
       version={version}
+      dynamicSlug={dynamicSlug}
     />
   );
 };
@@ -32,6 +34,8 @@ export const MuiStoryblok = ({
 export default MuiStoryblok;
 
 MuiStoryblok.propTypes = {
+  dynamicSlug: PropTypes.string,
+
   /** theme for mui */
   theme: PropTypes.shape(),
   /** storyblok prop  'published' : 'draft' */
@@ -80,4 +84,5 @@ MuiStoryblok.defaultProps = {
   iconArray: [],
   customComponents: [],
   customLoader: undefined,
+  dynamicSlug: 'page-welcome',
 };

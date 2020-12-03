@@ -3,5 +3,7 @@
 exports[`<StyledList /> snapshot 1`] = `
 <div
   className="MuiBox-root MuiBox-root-1 FlexItem FlexColumn"
+  data-blok-c=""
+  data-blok-uid=""
 />
 `;
