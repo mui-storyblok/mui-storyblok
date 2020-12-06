@@ -1,4 +1,6 @@
 import React, { createElement } from 'react';
+import ErrorBoundry from 'lib/utils/ErrorBoundry';
+
 // [{ componentName: 'MyCoolComp', Component: MyCoolComp, props: {} }]
 export const customComponents = [];
 
@@ -38,17 +40,30 @@ export const storyBlokClickableProps = ({ _editable, component, _uid }) => {
 };
 
 export const renderComponentsWithBridge = (components, component, key = undefined) => {
-  const customComponent = customComponents.find(comp => comp.componentName === component.component);
-  if (customComponent) {
-    return createElement(
-      customComponent.Component,
-      { ...Object.assign(customComponent.props, component, { key }) },
+  try {
+    const customComponent = customComponents.find(comp => comp.componentName === component.component);
+    if (customComponent) {
+      return (
+        <ErrorBoundry component={component}>
+        {createElement(
+          customComponent.Component,
+          { ...Object.assign(customComponent.props, component, { key }) },
+        )}
+        </ErrorBoundry>
+      );
+    }
+
+    return (
+      <ErrorBoundry component={component}>
+        {createElement(
+          components[component.component],
+          { ...component, key, ...storyBlokClickableProps(component) },
+        )}
+      </ErrorBoundry>
     );
+  } catch (error) {
+    console.error('Error in renderComponentsWithBridge', error)
   }
-  return createElement(
-    components[component.component],
-    { ...component, key, ...storyBlokClickableProps(component) },
-  );
 };
 
 export const renderComponents = (components, component, key = undefined) => {
