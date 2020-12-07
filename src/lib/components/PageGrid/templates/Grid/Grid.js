@@ -1,7 +1,5 @@
-
 import React, { Suspense } from 'react';
 import { Grid as MuiGrid, Box } from '@material-ui/core';
-import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
 import PropTypes from 'prop-types';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
@@ -25,8 +23,13 @@ const Grid = ({
   height,
   backgroundImageUrl,
 }) => {
-  let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
-  gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+  // let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
+  // gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+  const gridClass = window?.Storyblok?.inEditor ? {
+    borderStyle: 'solid',
+    borderColor: '#FF2020',
+    borderWidth: '.1em',
+  } : {};
 
   let heroClass = {
     ...style,
@@ -49,7 +52,7 @@ const Grid = ({
   }
 
   const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
-  console.log('!!!!!!!!!!', styles, heroClass)
+
   return (
     <Box width={{ xs: '100%' }}>
       <MuiGrid
@@ -63,9 +66,10 @@ const Grid = ({
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
         className={`${styles.root} ${storyblokClass}`}
-        classes={gridClass}
+        style={gridClass}
       >
-        {content.map((component, key) => (
+        {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
+        {content.length > 0 && content.map((component, key) => (
           <Suspense fallback={<Box width={{ xs: '100%' }} key={key} />}>
             {renderComponentsWithBridge({ ...{ GridItem }, ...components }, {
               ...component,
@@ -166,7 +170,7 @@ Grid.defaultProps = {
   rootClass: [],
   direction: 'row',
   justify: 'center',
-  spacing: '2',
+  spacing: '0',
   wrap: 'wrap',
   style: {},
   dataBlokC: '',

@@ -40,7 +40,6 @@ const IconButtonDrawer = lazy(() => import('lib/components/PageGrid/templates/Ic
 const MobileStepper = lazy(() => import('lib/components/PageGrid/templates/MobileStepper/MobileStepper'));
 const NotificationBanner = lazy(() => import('lib/components/PageGrid/templates/NotificationBanner/NotificationBanner'));
 const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
-const NestedGrid = lazy(() => import('lib/components/PageGrid/templates/NestedGrid/NestedGrid'));
 
 const components = {
   Icon,
@@ -72,23 +71,20 @@ const components = {
   IconButtonDialog,
   IconButtonDrawer,
   MobileStepper,
-  NestedGrid,
   NotificationBanner,
   Tabs,
-  PageGridItem: GridItem,
-  PageGrid: Grid,
   NestedGridItem: GridItem,
+  NestedGrid: Grid,
 };
 
-
-const PageGrid = (props) => {
-  const p = { ...props.component, components };
-  return renderComponentsWithBridge({ ...{ PageGrid: Grid } }, p);
+const NestedGrid = (props) => {
+  const p = { ...props, components };
+  return renderComponentsWithBridge(components, p);
 };
 
-export default PageGrid;
+export default NestedGrid;
 
-PageGrid.propTypes = {
+NestedGrid.propTypes = {
   /**
    * stroyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component. See CSS API below for more details.
@@ -152,7 +148,7 @@ PageGrid.propTypes = {
   style: PropTypes.shape(),
 };
 
-PageGrid.defaultProps = {
+NestedGrid.defaultProps = {
   alignContent: 'stretch',
   alignItems: 'center',
   rootClass: [],

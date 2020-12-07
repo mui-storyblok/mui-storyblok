@@ -11,7 +11,7 @@ const App = () => (
         },
       },
     }}
-    accessToken="9K1dqG8gQkc1jeVbOWRDUAtt"
+    accessToken="fa2Qt4skFijvgTqoT2xYrAtt"
     version="draft"
   />
 );

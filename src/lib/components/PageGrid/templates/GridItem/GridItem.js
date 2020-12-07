@@ -6,7 +6,6 @@ import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import Box from '@material-ui/core/Box';
-import { useFullBorderedGridStyles } from '@mui-treasury/styles/grid/fullBordered';
 
 const GridItem = ({
   components,
@@ -27,10 +26,14 @@ const GridItem = ({
   dataBlokUid,
   storyblokClass,
 }) => {
-  let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
-  gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+  const gridClass = window?.Storyblok?.inEditor ? {
+    borderStyle: 'solid',
+    borderColor: '#3889FF',
+    borderWidth: '.1em',
+  } : {};
 
   const styles = Storyblok.arrayToMuiStyles(rootClass);
+
   return (
     <Grid
       item
@@ -49,13 +52,13 @@ const GridItem = ({
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
       className={`${styles.root} ${storyblokClass}`}
-      classes={gridClass}
+      style={gridClass}
     >
       {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
       {content.length > 0
         && content.map((component, key) => (
           <Suspense fallback={<></>} key={key}>
-            {renderComponentsWithBridge({ TabGrid: Grid, ...components }, {
+            {renderComponentsWithBridge({ ...components }, {
               ...component,
               components,
               key,
@@ -63,7 +66,6 @@ const GridItem = ({
           </Suspense>
         ))
       }
-
     </Grid>
   );
 };
