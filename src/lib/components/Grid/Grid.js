@@ -4,7 +4,7 @@ import MuiGrid from '@material-ui/core/Grid';
 import Storyblok from '../../utils/Storyblok';
 import sizeGrid from '../../utils/sizeGrid';
 import { muiStringProp } from '../../utils/customProps';
-import { renderComponents } from '../../utils/customComponents';
+import { renderComponents, storyBlokClickableProps } from '../../utils/customComponents';
 import GridItem from './components/GridItem/GridItem';
 
 const Grid = ({
@@ -18,30 +18,46 @@ const Grid = ({
   content,
   components,
   style,
+  _editable,
+  _uid,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px', ...style });
   const gridRender = Object.keys(components);
+  const clickable = storyBlokClickableProps({
+    _editable,
+    component: 'MuiGrid',
+    _uid,
+  });
+
   return (
     <MuiGrid
       container
       alignContent={alignContent}
       alignItems={alignItems}
-      className={styles.root}
       direction={direction}
       justify={justify}
       wrap={wrap}
       spacing={Number(spacing)}
+      data-blok-c={clickable.dataBlokC}
+      data-blok-uid={clickable.dataBlokUid}
+      className={`${styles.root} ${clickable.storyblokClass}`}
     >
-      {content.map((component, index) => {
+      {content.map((component, key) => {
+        const sbClickable = storyBlokClickableProps(component);
+
         if (gridRender.includes(component.component)) {
-          return renderComponents(components, { ...component, sizeGrid }, index);
+          return renderComponents(components, { ...component, sizeGrid }, key);
         }
+
         return (
           <GridItem
             {...component}
-            key={index}
+            key={key}
             components={components}
             sizeGrid={sizeGrid}
+            dataBlokC={sbClickable.dataBlokC}
+            dataBlokUid={sbClickable.dataBlokUid}
+            storyblokClass={sbClickable.storyblokClass}
           />
         );
       })}

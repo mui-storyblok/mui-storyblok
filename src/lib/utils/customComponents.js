@@ -8,22 +8,6 @@ export const pushToCustomComponents = (components) => {
   if (components.length > 0) components.forEach(component => customComponents.push(component));
 };
 
-export const StoryBlokClickableItem = (props) => {
-
-  console.log('!!!!!', props)
-  if (process.env.REACT_APP_ENV !== 'production' && props._editable) {
-    const cName = `${props.component} storyblok--outline`;
-    const escapedJSONData = props._editable.substring(props._editable.lastIndexOf('{'), props._editable.lastIndexOf('}') + 1);
-
-    return (
-      <div className={cName} data-blok-c={escapedJSONData} data-blok-uid={props._uid} key={props?._uid}>
-        {createElement(props.components[props.component], props)}
-      </div>
-    );
-  }
-  return createElement(props.components[props.component.component], { ...props });
-};
-
 export const storyBlokClickableProps = ({ _editable, component, _uid }) => {
   if (process.env.REACT_APP_ENV !== 'production' && _editable) {
     const storyblokClass = `${component} storyblok--outline`;
@@ -73,11 +57,7 @@ export const renderComponents = (components, component, key = undefined) => {
     return <CustomComponent {...customProps} />;
   }
 
-  if (process.env.REACT_APP_ENV === 'production') {
-    return createElement(components[component.component], props);
-  }
-
-  return <StoryBlokClickableItem {...props} />;
+  return createElement(components[component.component], props);
 };
 
 export default renderComponents;

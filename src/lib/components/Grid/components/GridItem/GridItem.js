@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Storyblok from '../../../../utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from '../../../../utils/customProps';
-import { renderComponents } from '../../../../utils/customComponents';
+import { renderComponents, storyBlokClickableProps } from '../../../../utils/customComponents';
 
 const GridItem = ({
   alignContent,
@@ -21,15 +21,24 @@ const GridItem = ({
   sizeGrid,
   content,
   components,
+  dataBlokC,
+  dataBlokUid,
+  storyblokClass,
 }) => {
   const styles = Storyblok.arrayToMuiStyles(rootClass, { padding: '25px' });
+  // const sbClickable = storyBlokClickableProps({
+  //   _editable,
+  //   component,
+  //   _uid,
+  // });
+
+
   return (
     <Grid
       item
       container
       alignContent={alignContent}
       alignItems={alignItems}
-      className={styles.root}
       direction={direction}
       justify={justify}
       lg={sizeGrid(lg)}
@@ -39,9 +48,12 @@ const GridItem = ({
       spacing={Number(spacing)}
       xs={sizeGrid(xs)}
       xl={sizeGrid(xl)}
+      data-blok-c={dataBlokC}
+      data-blok-uid={dataBlokUid}
+      className={`${styles.root} ${storyblokClass}`}
     >
       {content.length > 0
-       && content.map((component, key) => renderComponents(components, component, key))
+       && content.map((comp, key) => renderComponents(components, comp, key))
       }
     </Grid>
   );
