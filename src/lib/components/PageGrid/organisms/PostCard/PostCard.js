@@ -106,8 +106,6 @@ PostCard.propTypes = {
   icon: PropTypes.arrayOf(PropTypes.shape()),
   /** actions to add in card */
   cardActions: PropTypes.arrayOf(PropTypes.shape()),
-  /** overline text */
-  overline: PropTypes.string.isRequired,
   /** overline heading  */
   heading: PropTypes.string.isRequired,
   /** overline body  */
@@ -121,6 +119,8 @@ PostCard.propTypes = {
    * Image to be displayed as a background image
    * */
   image: PropTypes.string.isRequired,
+  /** overline text */
+  overline: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   dataBlokC: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
@@ -136,4 +136,5 @@ PostCard.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  overline: '',
 };

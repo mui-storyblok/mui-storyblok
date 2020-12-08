@@ -15,6 +15,7 @@ const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/Butt
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
 const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+const ContactButton = lazy(() => import('lib/components/PageGrid/molecules/ContactButton/ContactButton'));
 // organisms
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 const ActionCardContainer = lazy(() => import('lib/components/PageGrid/organisms/ActionCardContainer/ActionCardContainer'));
@@ -46,6 +47,7 @@ const components = {
   Image,
   Video,
   Typography,
+  ContactButton,
   ButtonDownload,
   ButtonDrawer,
   Form,
