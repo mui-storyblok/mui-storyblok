@@ -83,11 +83,7 @@ const components = {
   NestedGridItem: GridItem,
 };
 
-
-const PageGrid = (props) => {
-  const p = { ...props.component, components };
-  return renderComponentsWithBridge({ ...{ PageGrid: Grid } }, p);
-};
+const PageGrid = props => renderComponentsWithBridge({ PageGrid: Grid }, { ...props, components });
 
 export default PageGrid;
 

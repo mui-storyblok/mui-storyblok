@@ -138,11 +138,8 @@ export class StoryBlokPage extends Component {
         <MuiThemeProvider theme={this.state.muiTheme}>
           <CssBaseline />
           <div className={styles.container}>
-            {this.state.story && this.state.story.map((item, index) => (
-              <div key={index}>
-                {renderComponents(this.components, item, index)}
-              </div>
-            ))}
+            {this.state.story
+            && this.state.story.map((item, index) => renderComponents(this.components, item, index))}
           </div>
         </MuiThemeProvider>
         )}
