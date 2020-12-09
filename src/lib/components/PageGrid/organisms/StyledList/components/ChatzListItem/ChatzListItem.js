@@ -138,7 +138,7 @@ ChatzListItem.defaultProps = {
   imageSize: 75,
   storyblokClass: '',
   dataBlokUid: '',
-  titleSize: '1rem',
-  subtitleSize: '1rem',
-  bodySize: '1rem',
+  titleSize: '0.875rem',
+  subtitleSize: '0.875rem',
+  bodySize: '0.875rem',
 };

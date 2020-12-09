@@ -44,6 +44,8 @@ const TrendyListItem = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  titleSize,
+  subtitleSize,
 }) => {
   const avatarStyles = useDynamicAvatarStyles({ size: 48, radius: 6 });
   const icontBtn = iconButton[0];
@@ -63,8 +65,8 @@ const TrendyListItem = ({
           />
         </Item>
         <Info useStyles={useTrendInfoStyles} style={{ textAlign: 'left' }}>
-          <InfoTitle>{title}</InfoTitle>
-          <InfoSubtitle>{subtitle}</InfoSubtitle>
+          <InfoTitle style={{ fontSize: titleSize }}>{title}</InfoTitle>
+          <InfoSubtitle style={{ fontSize: subtitleSize }}>{subtitle}</InfoSubtitle>
           <InfoCaption>
             {infoText}
           </InfoCaption>
@@ -86,6 +88,8 @@ export default TrendyListItem;
 TrendyListItem.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  titleSize: PropTypes.string,
+  subtitleSize: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
   infoText: PropTypes.string,
   iconButton: PropTypes.arrayOf(PropTypes.shape()),
@@ -103,4 +107,6 @@ TrendyListItem.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  titleSize: '0.875rem',
+  subtitleSize: '0.875rem',
 };
