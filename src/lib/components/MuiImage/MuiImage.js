@@ -7,8 +7,6 @@ const MuiImage = ({
   imageStyle,
   image,
   rootClass,
-  height,
-  width,
 }) => {
   const styles = StoryBlok.anchorOrginToObj(rootClass);
   const imageStyles = StoryBlok.anchorOrginToObj(imageStyle);
