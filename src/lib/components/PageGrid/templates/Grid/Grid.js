@@ -22,6 +22,7 @@ const Grid = ({
   storyblokClass,
   height,
   backgroundImageUrl,
+  transition,
 }) => {
   // let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
   // gridClass = window?.Storyblok?.inEditor ? gridClass : {};
@@ -65,7 +66,7 @@ const Grid = ({
         spacing={Number(spacing)}
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
-        className={`${styles.root} ${storyblokClass}`}
+        className={`${styles.root} ${storyblokClass} ${transition}`}
         style={gridClass}
       >
         {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
@@ -151,6 +152,8 @@ Grid.propTypes = {
     component: PropTypes.string.isRequired,
   })).isRequired,
 
+  /** Transition desired to apply on grid item. */
+  transition: PropTypes.string,
   /** style obj to pass to grid */
   style: PropTypes.shape(),
 
@@ -179,4 +182,5 @@ Grid.defaultProps = {
   components: {},
   height: '100%',
   backgroundImageUrl: '',
+  transition: '',
 };
