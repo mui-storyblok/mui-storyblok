@@ -22,21 +22,17 @@ const Image = ({
       className={storyblokClass}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
-      style={{
-        height,
-        width,
-      }}
     >
       { href && (
       <a href={href} target="_self">
         <picture style={styles}>
-          <img src={image} style={imageStyles} alt={image} />
+          <img src={image} style={{ ...imageStyles, height, width }} alt={image} />
         </picture>
       </a>
       )}
       { !href && (
         <picture style={styles}>
-          <img src={image} style={imageStyles} alt={image} />
+          <img src={image} style={{ ...imageStyles, height, width }} alt={image} />
         </picture>
       )}
     </div>

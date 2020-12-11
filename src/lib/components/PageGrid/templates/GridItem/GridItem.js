@@ -25,6 +25,7 @@ const GridItem = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  transition,
 }) => {
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
@@ -51,7 +52,7 @@ const GridItem = ({
       xl={sizeGrid(xl)}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
-      className={`${styles.root} ${storyblokClass}`}
+      className={`${styles.root} ${storyblokClass} ${transition}`}
       style={gridClass}
     >
       {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
@@ -186,6 +187,8 @@ GridItem.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  /** Transition desired to apply on grid item. */
+  transition: PropTypes.string,
   /**  components to render in the GridItem */
   components: PropTypes.shape(),
 };
@@ -207,5 +210,5 @@ GridItem.defaultProps = {
   dataBlokUid: '',
   storyblokClass: '',
   components: {},
-
+  transition: '',
 };
