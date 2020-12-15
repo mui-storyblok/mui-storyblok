@@ -29,7 +29,7 @@ const GridItem = ({
   transition,
   only,
 }) => {
-  const { ref, inView } = useInView({ threshold: 0 });
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#3889FF',
@@ -56,7 +56,7 @@ const GridItem = ({
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
         className={`${styles.root} ${storyblokClass} ${inView && transition}`}
-        style={gridClass}
+        style={{ ...gridClass, opacity: inView ? 1 : 0 }}
         inView={inView}
         ref={ref}
       >
@@ -64,7 +64,8 @@ const GridItem = ({
         {content.length > 0
           && content.map((component, key) => (
             <Suspense fallback={<></>} key={key}>
-              {console.log(inView)}
+              {console.log('Key: ', component)}
+              {console.log('inView: ', inView)}
               {renderComponentsWithBridge({ ...components }, {
                 ...component,
                 components,

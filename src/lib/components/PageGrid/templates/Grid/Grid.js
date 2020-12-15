@@ -5,6 +5,7 @@ import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
+import { useInView } from 'react-intersection-observer';
 
 const Grid = ({
   alignContent,
@@ -26,6 +27,7 @@ const Grid = ({
 }) => {
   // let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
   // gridClass = window?.Storyblok?.inEditor ? gridClass : {};
+  const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#FF2020',
@@ -66,8 +68,10 @@ const Grid = ({
         spacing={Number(spacing)}
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
-        className={`${styles.root} ${storyblokClass}`}
-        style={gridClass}
+        className={`${styles.root} ${storyblokClass} ${inView && transition}`}
+        style={{ ...gridClass, opacity: inView ? 1 : 0 }}
+        inView={inView}
+        ref={ref}
       >
         {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
         {content.length > 0 && content.map((component, key) => (
