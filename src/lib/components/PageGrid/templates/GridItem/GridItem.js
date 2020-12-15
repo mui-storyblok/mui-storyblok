@@ -64,8 +64,6 @@ const GridItem = ({
         {content.length > 0
           && content.map((component, key) => (
             <Suspense fallback={<></>} key={key}>
-              {console.log('Key: ', component)}
-              {console.log('inView: ', inView)}
               {renderComponentsWithBridge({ ...components }, {
                 ...component,
                 components,
