@@ -7,7 +7,11 @@ const App = () => (
     theme={{
       palette: {
         primary: {
-          main: '#42B540',
+          main: '#70AE6E',
+          light: '#88BC86',
+          dark: '#3E855E',
+          contrastText: '#FEFEFF',
+          backgroundColor: '#70AE6E',
         },
       },
     }}

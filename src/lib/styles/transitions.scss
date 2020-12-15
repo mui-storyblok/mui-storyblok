@@ -1,4 +1,3 @@
-
 .slideInBottom {
   -webkit-animation: slideInBottom 2s forwards;
   animation: slideInBottom 2s forwards;
@@ -30,8 +29,8 @@
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 2s ease-in-out 500ms;
-  animation: fadeIn 2s ease-in-out 500ms;
+  -webkit-animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .fadeSlideInBottom {

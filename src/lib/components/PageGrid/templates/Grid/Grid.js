@@ -66,7 +66,7 @@ const Grid = ({
         spacing={Number(spacing)}
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
-        className={`${styles.root} ${storyblokClass} ${transition}`}
+        className={`${styles.root} ${storyblokClass}`}
         style={gridClass}
       >
         {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}

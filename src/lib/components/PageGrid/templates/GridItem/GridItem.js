@@ -5,7 +5,8 @@ import sizeGrid from 'lib/utils/sizeGrid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
-import Box from '@material-ui/core/Box';
+import { Box, Hidden } from '@material-ui/core';
+import { useInView } from 'react-intersection-observer';
 
 const GridItem = ({
   components,
@@ -26,48 +27,54 @@ const GridItem = ({
   dataBlokUid,
   storyblokClass,
   transition,
+  only,
 }) => {
+  const { ref, inView } = useInView({ threshold: 0 });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#3889FF',
     borderWidth: '.1em',
   } : {};
-
   const styles = Storyblok.arrayToMuiStyles(rootClass);
 
   return (
-    <Grid
-      item
-      container
-      alignContent={alignContent}
-      alignItems={alignItems}
-      direction={direction}
-      justify={justify}
-      wrap={wrap}
-      spacing={Number(spacing)}
-      xs={sizeGrid(xs)}
-      sm={sizeGrid(sm)}
-      md={sizeGrid(md)}
-      lg={sizeGrid(lg)}
-      xl={sizeGrid(xl)}
-      data-blok-c={dataBlokC}
-      data-blok-uid={dataBlokUid}
-      className={`${styles.root} ${storyblokClass} ${transition}`}
-      style={gridClass}
-    >
-      {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
-      {content.length > 0
-        && content.map((component, key) => (
-          <Suspense fallback={<></>} key={key}>
-            {renderComponentsWithBridge({ ...components }, {
-              ...component,
-              components,
-              key,
-            }, key)}
-          </Suspense>
-        ))
-      }
-    </Grid>
+    <Hidden only={only}>
+      <Grid
+        item
+        container
+        alignContent={alignContent}
+        alignItems={alignItems}
+        direction={direction}
+        justify={justify}
+        wrap={wrap}
+        spacing={Number(spacing)}
+        xs={sizeGrid(xs)}
+        sm={sizeGrid(sm)}
+        md={sizeGrid(md)}
+        lg={sizeGrid(lg)}
+        xl={sizeGrid(xl)}
+        data-blok-c={dataBlokC}
+        data-blok-uid={dataBlokUid}
+        className={`${styles.root} ${storyblokClass} ${inView && transition}`}
+        style={gridClass}
+        inView={inView}
+        ref={ref}
+      >
+        {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
+        {content.length > 0
+          && content.map((component, key) => (
+            <Suspense fallback={<></>} key={key}>
+              {console.log(inView)}
+              {renderComponentsWithBridge({ ...components }, {
+                ...component,
+                components,
+                key,
+              }, key)}
+            </Suspense>
+          ))
+        }
+      </Grid>
+    </Hidden>
   );
 };
 
@@ -191,6 +198,11 @@ GridItem.propTypes = {
   transition: PropTypes.string,
   /**  components to render in the GridItem */
   components: PropTypes.shape(),
+  /**
+   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+   * Hide the given breakpoint(s).
+   * */
+  only: PropTypes.arrayOf(PropTypes.string),
 };
 
 GridItem.defaultProps = {
@@ -211,4 +223,5 @@ GridItem.defaultProps = {
   storyblokClass: '',
   components: {},
   transition: '',
+  only: [],
 };
