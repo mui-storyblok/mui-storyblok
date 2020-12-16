@@ -32,6 +32,7 @@ export const Typography = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  transition,
 }) => {
   const defaultStyles = {
     height,
@@ -49,7 +50,12 @@ export const Typography = ({
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
-          {renderComponentsWithBridge(components, component, key)}
+          {
+            renderComponentsWithBridge(components, {
+              ...component,
+              transitionClass: transition,
+            }, key)
+          }
         </Suspense>
       ))}
     </MuiTypography>
@@ -99,6 +105,7 @@ Typography.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  transition: PropTypes.string,
 };
 
 Typography.defaultProps = {
@@ -111,4 +118,5 @@ Typography.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  transition: '',
 };

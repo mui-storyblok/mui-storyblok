@@ -24,6 +24,7 @@ export const Span = ({
   storyblokClass,
   dataBlokC,
   dataBlokUid,
+  transitionClass,
 }) => {
   const defaultStyles = {
     height,
@@ -35,7 +36,7 @@ export const Span = ({
     <MuiTypography
       component="span"
       key={key}
-      className={`${styles.root} ${storyblokClass}`}
+      className={`${styles.root} ${storyblokClass} ${transitionClass}`}
       variant={variant}
       align={align}
       color={color}
@@ -81,6 +82,7 @@ Span.propTypes = {
   },
 
   content: PropTypes.string.isRequired,
+  transitionClass: PropTypes.string,
 };
 
 Span.defaultProps = {
@@ -89,4 +91,5 @@ Span.defaultProps = {
   align: 'inherit',
   color: 'initial',
   rootClass: [],
+  transitionClass: '',
 };

@@ -43,6 +43,7 @@ const MobileStepper = lazy(() => import('lib/components/PageGrid/templates/Mobil
 const NotificationBanner = lazy(() => import('lib/components/PageGrid/templates/NotificationBanner/NotificationBanner'));
 const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
 const NestedGrid = lazy(() => import('lib/components/PageGrid/templates/NestedGrid/NestedGrid'));
+const ImageScrollBar = lazy(() => import('lib/components/PageGrid/templates/ImageScrollBar/ImageScrollBar'));
 
 const components = {
   Icon,
@@ -78,6 +79,7 @@ const components = {
   NestedGrid,
   NotificationBanner,
   Tabs,
+  ImageScrollBar,
   PageGridItem: GridItem,
   PageGrid: Grid,
   NestedGridItem: GridItem,
