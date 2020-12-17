@@ -6,6 +6,7 @@ import {
   dimensionProp,
   muiStringProp,
 } from 'lib/utils/customProps';
+import { useInView } from 'react-intersection-observer';
 
 /**
  * Typography
@@ -26,6 +27,7 @@ export const Span = ({
   dataBlokUid,
   transitionClass,
 }) => {
+  const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const defaultStyles = {
     height,
     width,
@@ -36,12 +38,15 @@ export const Span = ({
     <MuiTypography
       component="span"
       key={key}
-      className={`${styles.root} ${storyblokClass} ${transitionClass}`}
+      className={`${styles.root} ${storyblokClass} ${inView && transitionClass}`}
       variant={variant}
       align={align}
       color={color}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
+      inView={inView}
+      ref={ref}
+      style={{ opacity: inView ? 1 : 0 }}
     >
       {` ${content} `}
     </MuiTypography>

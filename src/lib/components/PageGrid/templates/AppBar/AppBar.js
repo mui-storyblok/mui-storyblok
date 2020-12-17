@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, { lazy } from 'react';
 import PropTypes from 'prop-types';
-import { AppBar as MuiAppBar, Toolbar } from '@material-ui/core';
+import { AppBar as MuiAppBar, Toolbar, useScrollTrigger } from '@material-ui/core';
 import {
   validComponentsRequired,
   dimensionProp,
@@ -46,25 +46,31 @@ const AppBar = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  appBarColorScroll,
 }) => {
+  const trigger = useScrollTrigger({
+    threshold: window.innerHeight - 5,
+  });
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
-
   const grid = content[0];
 
   return (
     <>
       <MuiAppBar
-        color={color}
+        color={!trigger && appBarColorScroll ? 'transparent' : color}
         position={position}
         className={`${styles.root} ${storyblokClass}`}
         data-blok-c={dataBlokC}
         data-blok-uid={dataBlokUid}
       >
         <Toolbar variant={variant} disableGutters={disableGutters}>
-          {renderComponentsWithBridge({ AppBarGrid: Grid }, {
-            ...grid,
-            components,
-          })}
+          {renderComponentsWithBridge(
+            { AppBarGrid: Grid },
+            {
+              ...grid,
+              components,
+            },
+          )}
         </Toolbar>
       </MuiAppBar>
       {position === 'fixed' && <AppBarOffset />}
@@ -132,6 +138,12 @@ AppBar.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  /**
+   * If true, App Bar will start as transparent and once the app bar is scrolled past the entire vh
+   * of the first page, it will revert to the original app bar.
+   * This was designed for pages with a background image taking 100vh of the screen.
+   */
+  appBarColorScroll: PropTypes.bool,
 };
 
 AppBar.defaultProps = {
@@ -145,4 +157,5 @@ AppBar.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  appBarColorScroll: false,
 };

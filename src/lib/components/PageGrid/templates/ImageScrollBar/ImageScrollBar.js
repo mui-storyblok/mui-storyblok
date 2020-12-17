@@ -34,11 +34,4 @@ ImageScrollBar.propTypes = {
   imageScrollBarRow: PropTypes.arrayOf(PropTypes.shape({
     component: PropTypes.string.isRequired,
   })).isRequired,
-  imageShape: PropTypes.string,
-  height: PropTypes.string,
-};
-
-ImageScrollBar.defaultProps = {
-  imageShape: 'hexagon',
-  height: '120px',
 };
