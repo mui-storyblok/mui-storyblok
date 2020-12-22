@@ -14,6 +14,7 @@ export const MuiStoryblok = ({
   customComponents,
   customLoader,
   dynamicSlug,
+  staticSlug,
 }) => {
   // If a custom loader is passed down push into customLoader variable
   if (customLoader) setCustomLoader(customLoader);
@@ -27,6 +28,7 @@ export const MuiStoryblok = ({
       accessToken={accessToken}
       version={version}
       dynamicSlug={dynamicSlug}
+      staticSlug={staticSlug}
     />
   );
 };
@@ -34,6 +36,7 @@ export const MuiStoryblok = ({
 export default MuiStoryblok;
 
 MuiStoryblok.propTypes = {
+  staticSlug: PropTypes.string,
   dynamicSlug: PropTypes.string,
 
   /** theme for mui */
@@ -62,7 +65,7 @@ MuiStoryblok.propTypes = {
       iconName: PropTypes.string.isRequired,
       Component: PropTypes.element.isRequired,
       props: PropTypes.shape({}).isRequired,
-    }),
+    })
   ),
   /**
    * Important you can add and use customComponets to any sotyblok componet that uses content prop
@@ -73,7 +76,7 @@ MuiStoryblok.propTypes = {
       componentName: PropTypes.string.isRequired,
       Component: PropTypes.func.isRequired,
       props: PropTypes.shape({}).isRequired,
-    }),
+    })
   ),
 };
 
@@ -85,4 +88,5 @@ MuiStoryblok.defaultProps = {
   customComponents: [],
   customLoader: undefined,
   dynamicSlug: 'page-welcome',
+  staticSlug: '',
 };
