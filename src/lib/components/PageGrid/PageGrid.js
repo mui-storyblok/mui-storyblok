@@ -9,6 +9,8 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
 const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+const Divider = lazy(() => import('lib/components/PageGrid/atoms/Divider/Divider'));
+
 // molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
@@ -57,6 +59,7 @@ const components = {
   GeoLocationMobileStepper,
   GeoLocationTabs,
   ButtonRedirect,
+  Divider,
   IconButtonDownload,
   IconButtonRedirect,
   Accordion,

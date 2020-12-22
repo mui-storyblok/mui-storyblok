@@ -49,7 +49,8 @@ const AppBar = ({
   appBarColorScroll,
 }) => {
   const trigger = useScrollTrigger({
-    threshold: window.innerHeight - 5,
+    threshold: window.innerHeight - parseInt(height, 10),
+    disableHysteresis: true,
   });
   const styles = Storyblok.arrayToMuiStyles(rootClass, { height });
   const grid = content[0];

@@ -49,6 +49,7 @@ export const PostCard = React.memo(({
   icon,
   imgAlt,
   imgTitle,
+  preStyledOptions,
 }) => {
   const cardStyles = useStyles();
   const mediaStyles = useSlopeCardMediaStyles();
@@ -59,7 +60,7 @@ export const PostCard = React.memo(({
 
   return (
     <Card
-      className={cx(cardStyles.root, shadowStyles.root, storyblokClass)}
+      className={cx(cardStyles.root, shadowStyles.root, storyblokClass, preStyledOptions)}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >
@@ -119,6 +120,8 @@ PostCard.propTypes = {
    * Image to be displayed as a background image
    * */
   image: PropTypes.string.isRequired,
+  /** Pre made css styling options  */
+  preStyledOptions: PropTypes.string,
   /** overline text */
   overline: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
@@ -137,4 +140,5 @@ PostCard.defaultProps = {
   dataBlokUid: '',
   storyblokClass: '',
   overline: '',
+  preStyledOptions: '',
 };

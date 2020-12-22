@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Grid as MuiGrid, Box } from '@material-ui/core';
+import { Grid as MuiGrid, Box, Hidden } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, dimensionProp } from 'lib/utils/customProps';
@@ -24,15 +24,16 @@ const Grid = ({
   height,
   backgroundImageUrl,
   transition,
+  only,
+  backgroundColor,
 }) => {
-  // let gridClass = useFullBorderedGridStyles({ borderColor: 'primary.main' });
-  // gridClass = window?.Storyblok?.inEditor ? gridClass : {};
   const { ref, inView } = useInView({ threshold: 0, triggerOnce: true });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#FF2020',
     borderWidth: '.1em',
   } : {};
+  let gridBackgroundColor = {};
 
   let heroClass = {
     ...style,
@@ -54,37 +55,45 @@ const Grid = ({
     };
   }
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
+  if (backgroundColor && !backgroundImageUrl) {
+    gridBackgroundColor = { backgroundColor: backgroundColor.color };
+  }
+
+  console.log(backgroundColor);
+
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass, ...gridBackgroundColor });
 
   return (
-    <Box width={{ xs: '100%' }}>
-      <MuiGrid
-        container
-        alignContent={alignContent}
-        alignItems={alignItems}
-        direction={direction}
-        justify={justify}
-        wrap={wrap}
-        spacing={Number(spacing)}
-        data-blok-c={dataBlokC}
-        data-blok-uid={dataBlokUid}
-        className={`${styles.root} ${storyblokClass} ${inView && transition}`}
-        style={{ ...gridClass, opacity: inView ? 1 : 0 }}
-        inView={inView}
-        ref={ref}
-      >
-        {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
-        {content.length > 0 && content.map((component, key) => (
-          <Suspense fallback={<Box width={{ xs: '100%' }} key={key} />}>
-            {renderComponentsWithBridge({ ...{ GridItem }, ...components }, {
-              ...component,
-              components,
-              key,
-            }, key)}
-          </Suspense>
-        ))}
-      </MuiGrid>
-    </Box>
+    <Hidden only={only}>
+      <Box width={{ xs: '100%' }}>
+        <MuiGrid
+          container
+          alignContent={alignContent}
+          alignItems={alignItems}
+          direction={direction}
+          justify={justify}
+          wrap={wrap}
+          spacing={Number(spacing)}
+          data-blok-c={dataBlokC}
+          data-blok-uid={dataBlokUid}
+          className={`${styles.root} ${storyblokClass} ${inView && transition}`}
+          style={{ ...gridClass, opacity: inView ? 1 : 0 }}
+          inView={inView}
+          ref={ref}
+        >
+          {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
+          {content.length > 0 && content.map((component, key) => (
+            <Suspense fallback={<Box width={{ xs: '100%' }} key={key} />}>
+              {renderComponentsWithBridge({ ...{ GridItem }, ...components }, {
+                ...component,
+                components,
+                key,
+              }, key)}
+            </Suspense>
+          ))}
+        </MuiGrid>
+      </Box>
+    </Hidden>
   );
 };
 
@@ -169,6 +178,14 @@ Grid.propTypes = {
   storyblokClass: PropTypes.string,
   /**  components to render in the GridItem */
   components: PropTypes.shape(),
+  /**
+   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+   * Hide the given breakpoint(s).
+   * */
+  only: PropTypes.arrayOf(PropTypes.string),
+  backgroundColor: PropTypes.shape({
+    color: PropTypes.string,
+  }),
 };
 
 Grid.defaultProps = {
@@ -187,4 +204,6 @@ Grid.defaultProps = {
   height: '100%',
   backgroundImageUrl: '',
   transition: '',
+  only: [],
+  backgroundColor: { color: '#FFFFF' },
 };

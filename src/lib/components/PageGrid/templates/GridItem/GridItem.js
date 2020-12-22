@@ -28,14 +28,31 @@ const GridItem = ({
   storyblokClass,
   transition,
   only,
+  backgroundImageUrl,
 }) => {
+  let heroClass;
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#3889FF',
     borderWidth: '.1em',
   } : {};
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+
+
+  if (backgroundImageUrl) {
+    heroClass = {
+      ...{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative',
+        padding: 0,
+        margin: 0,
+      },
+    };
+  }
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
 
   return (
     <Hidden only={only}>
@@ -81,7 +98,7 @@ export default GridItem;
 
 GridItem.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
@@ -202,6 +219,8 @@ GridItem.propTypes = {
    * Hide the given breakpoint(s).
    * */
   only: PropTypes.arrayOf(PropTypes.string),
+  /** url for background img */
+  backgroundImageUrl: PropTypes.string,
 };
 
 GridItem.defaultProps = {
@@ -223,4 +242,5 @@ GridItem.defaultProps = {
   components: {},
   transition: '',
   only: [],
+  backgroundImageUrl: '',
 };
