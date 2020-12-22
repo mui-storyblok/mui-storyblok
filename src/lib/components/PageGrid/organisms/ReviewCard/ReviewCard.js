@@ -95,13 +95,11 @@ export default ReviewCard;
 ReviewCard.propTypes = {
   /** actions to add in card */
   cardActions: PropTypes.arrayOf(PropTypes.shape()),
-  /** overline text */
-  overline: PropTypes.string.isRequired,
   /** overline heading  */
   heading: PropTypes.string.isRequired,
   /** overline body  */
   body: PropTypes.string.isRequired,
-  /** alt text for the image if url cant display  */
+  /** alt text for the image if url cant display */
   imgAlt: PropTypes.string.isRequired,
   /** the title for the image */
   imgTitle: PropTypes.string.isRequired,
@@ -110,6 +108,8 @@ ReviewCard.propTypes = {
    * Image to be displayed as a background image
    * */
   image: PropTypes.string.isRequired,
+  /** overline text */
+  overline: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   dataBlokC: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
@@ -124,4 +124,5 @@ ReviewCard.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  overline: '',
 };

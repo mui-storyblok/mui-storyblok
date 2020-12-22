@@ -9,12 +9,14 @@ import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
 const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
+const Divider = lazy(() => import('lib/components/PageGrid/atoms/Divider/Divider'));
 // molecules
 const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typography/Typography'));
 const ButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/ButtonDownload/ButtonDownload'));
 const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/ButtonRedirect/ButtonRedirect'));
 const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
+const ContactButton = lazy(() => import('lib/components/PageGrid/molecules/ContactButton/ContactButton'));
 // organisms
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
 const ActionCardContainer = lazy(() => import('lib/components/PageGrid/organisms/ActionCardContainer/ActionCardContainer'));
@@ -46,8 +48,10 @@ const components = {
   Image,
   Video,
   Typography,
+  ContactButton,
   ButtonDownload,
   ButtonDrawer,
+  Divider,
   Form,
   GeoLocationMobileStepper,
   GeoLocationTabs,

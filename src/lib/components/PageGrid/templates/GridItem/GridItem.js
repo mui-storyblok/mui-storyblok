@@ -5,7 +5,8 @@ import sizeGrid from 'lib/utils/sizeGrid';
 import Storyblok from 'lib/utils/Storyblok';
 import { muiStringProp, muiGridProp, muiBlokNumberProp } from 'lib/utils/customProps';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
-import Box from '@material-ui/core/Box';
+import { Box, Hidden } from '@material-ui/core';
+import { useInView } from 'react-intersection-observer';
 
 const GridItem = ({
   components,
@@ -25,48 +26,71 @@ const GridItem = ({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  transition,
+  only,
+  backgroundImageUrl,
 }) => {
+  let heroClass;
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const gridClass = window?.Storyblok?.inEditor ? {
     borderStyle: 'solid',
     borderColor: '#3889FF',
     borderWidth: '.1em',
   } : {};
 
-  const styles = Storyblok.arrayToMuiStyles(rootClass);
+
+  if (backgroundImageUrl) {
+    heroClass = {
+      ...{
+        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        position: 'relative',
+        padding: 0,
+        margin: 0,
+      },
+    };
+  }
+  const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
 
   return (
-    <Grid
-      item
-      container
-      alignContent={alignContent}
-      alignItems={alignItems}
-      direction={direction}
-      justify={justify}
-      wrap={wrap}
-      spacing={Number(spacing)}
-      xs={sizeGrid(xs)}
-      sm={sizeGrid(sm)}
-      md={sizeGrid(md)}
-      lg={sizeGrid(lg)}
-      xl={sizeGrid(xl)}
-      data-blok-c={dataBlokC}
-      data-blok-uid={dataBlokUid}
-      className={`${styles.root} ${storyblokClass}`}
-      style={gridClass}
-    >
-      {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
-      {content.length > 0
-        && content.map((component, key) => (
-          <Suspense fallback={<></>} key={key}>
-            {renderComponentsWithBridge({ ...components }, {
-              ...component,
-              components,
-              key,
-            }, key)}
-          </Suspense>
-        ))
-      }
-    </Grid>
+    <Hidden only={only}>
+      <Grid
+        item
+        container
+        alignContent={alignContent}
+        alignItems={alignItems}
+        direction={direction}
+        justify={justify}
+        wrap={wrap}
+        spacing={Number(spacing)}
+        xs={sizeGrid(xs)}
+        sm={sizeGrid(sm)}
+        md={sizeGrid(md)}
+        lg={sizeGrid(lg)}
+        xl={sizeGrid(xl)}
+        data-blok-c={dataBlokC}
+        data-blok-uid={dataBlokUid}
+        className={`${styles.root} ${storyblokClass} ${inView && transition}`}
+        style={{ ...gridClass, opacity: inView ? 1 : 0 }}
+        inView={inView}
+        ref={ref}
+      >
+        {!content.length && <Box minHeight={200} width={{ xs: '100%' }} />}
+        {content.length > 0
+          && content.map((component, key) => (
+            <Suspense fallback={<></>} key={key}>
+              {renderComponentsWithBridge({ ...components }, {
+                ...component,
+                components,
+                key,
+              }, key)}
+            </Suspense>
+          ))
+        }
+      </Grid>
+    </Hidden>
   );
 };
 
@@ -74,7 +98,7 @@ export default GridItem;
 
 GridItem.propTypes = {
   /**
-   * stroyblok multiselect of css classes
+   * storyblok multiselect of css classes
    * Mui Override or extend the styles applied to the component.
    */
   rootClass: PropTypes.arrayOf(PropTypes.string),
@@ -186,8 +210,17 @@ GridItem.propTypes = {
   dataBlokUid: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   storyblokClass: PropTypes.string,
+  /** Transition desired to apply on grid item. */
+  transition: PropTypes.string,
   /**  components to render in the GridItem */
   components: PropTypes.shape(),
+  /**
+   * mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+   * Hide the given breakpoint(s).
+   * */
+  only: PropTypes.arrayOf(PropTypes.string),
+  /** url for background img */
+  backgroundImageUrl: PropTypes.string,
 };
 
 GridItem.defaultProps = {
@@ -207,5 +240,7 @@ GridItem.defaultProps = {
   dataBlokUid: '',
   storyblokClass: '',
   components: {},
-
+  transition: '',
+  only: [],
+  backgroundImageUrl: '',
 };

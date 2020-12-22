@@ -36,6 +36,7 @@ export const MusicCard = React.memo(({
   dataBlokC,
   dataBlokUid,
   storyblokClass,
+  preStyledOptions,
 }) => {
   const styles = useStyles();
   const mediaStyles = useFourThreeCardMediaStyles();
@@ -45,7 +46,7 @@ export const MusicCard = React.memo(({
 
   return (
     <Card
-      className={cx(styles.root, shadowStyles.root, storyblokClass)}
+      className={cx(styles.root, shadowStyles.root, storyblokClass, preStyledOptions)}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >
@@ -77,8 +78,6 @@ export default MusicCard;
 MusicCard.propTypes = {
   /** actions to add in card */
   cardActions: PropTypes.arrayOf(PropTypes.shape()),
-  /** overline text */
-  overline: PropTypes.string.isRequired,
   /** overline heading  */
   heading: PropTypes.string.isRequired,
   /** overline body  */
@@ -92,6 +91,10 @@ MusicCard.propTypes = {
    * Image to be displayed as a background image
    * */
   image: PropTypes.string.isRequired,
+  /** Pre made css styling options  */
+  preStyledOptions: PropTypes.string,
+  /** overline text */
+  overline: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
   dataBlokC: PropTypes.string,
   /** storyblok prop for when in editor to allow click bridge */
@@ -106,4 +109,6 @@ MusicCard.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  overline: '',
+  preStyledOptions: '',
 };

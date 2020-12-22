@@ -1,0 +1,25 @@
+$default-line-width: 100%;
+
+.fadeInOut {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000, rgba(0, 0, 0, 0));
+}
+
+.expandIn {
+  animation: expandIn 1s ease-out forwards;
+}
+
+@keyframes expandIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: $default-line-width;
+  }
+}
+
+
+:export {
+  lineWidth: $default-line-width;
+}

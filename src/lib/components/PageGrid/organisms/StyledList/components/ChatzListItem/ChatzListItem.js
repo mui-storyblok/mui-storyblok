@@ -58,10 +58,15 @@ const ChatzListItem = ({
   infoText,
   infoIcon,
   storyblokClass,
+  imageSize,
   dataBlokC,
   dataBlokUid,
+  body,
+  titleSize,
+  subtitleSize,
+  bodySize,
 }) => {
-  const avatarStyles = useDynamicAvatarStyles({ size: 72 });
+  const avatarStyles = useDynamicAvatarStyles({ size: +imageSize });
   const styles = useStyles();
   const icontBtn = iconButton[0];
   const iconInfo = infoIcon[0];
@@ -81,8 +86,9 @@ const ChatzListItem = ({
           />
         </Item>
         <Info useStyles={useChatzInfoStyles} style={{ textAlign: 'left' }}>
-          <InfoTitle>{title}</InfoTitle>
-          <InfoSubtitle>{subtitle}</InfoSubtitle>
+          <InfoTitle style={{ fontSize: titleSize }}>{title}</InfoTitle>
+          <InfoSubtitle style={{ fontSize: subtitleSize }}>{subtitle}</InfoSubtitle>
+          <InfoTitle style={{ fontSize: bodySize }}>{body}</InfoTitle>
           <InfoCaption className={styles.text}>
             {iconInfo && (
               <Suspense fallback={<></>}>
@@ -109,12 +115,30 @@ export default ChatzListItem;
 ChatzListItem.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  infoText: PropTypes.string,
+  titleSize: PropTypes.string,
+  body: PropTypes.string,
+  bodySize: PropTypes.string,
+  storyblokClass: PropTypes.string,
+  dataBlokUid: PropTypes.string,
+  dataBlokC: PropTypes.string,
   subtitle: PropTypes.string.isRequired,
+  subtitleSize: PropTypes.string,
   iconButton: PropTypes.arrayOf(PropTypes.shape()),
   infoIcon: PropTypes.arrayOf(PropTypes.shape()),
+  imageSize: PropTypes.number,
 };
 
 ChatzListItem.defaultProps = {
+  body: '',
   iconButton: [],
   infoIcon: [],
+  infoText: '',
+  dataBlokC: '',
+  imageSize: 75,
+  storyblokClass: '',
+  dataBlokUid: '',
+  titleSize: '0.875rem',
+  subtitleSize: '0.875rem',
+  bodySize: '0.875rem',
 };
