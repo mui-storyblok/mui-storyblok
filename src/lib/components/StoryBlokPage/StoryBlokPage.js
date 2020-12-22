@@ -93,7 +93,12 @@ export class StoryBlokPage extends Component {
 
   getPage = async () => {
     try {
-      const route = window.location.pathname === '/' ? this.props.dynamicSlug : window.location.pathname.slice(1);
+      let route;
+      if (window.location.pathname === '/') {
+        route = window.location.pathname === '/' ? this.props.dynamicSlug : window.location.pathname.slice(1);
+      } else if (this.props.staticSlug) {
+        route = this.props.staticSlug;
+      }
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
       const muiTheme = await this.pickTheme(story[1], this.props.theme);
       this.setState({ muiTheme });
@@ -139,7 +144,8 @@ export class StoryBlokPage extends Component {
           <CssBaseline />
           <div className={styles.container}>
             {this.state.story
-            && this.state.story.map((item, index) => renderComponents(this.components, item, index))}
+                && this.state.story
+                  .map((item, index) => renderComponents(this.components, item, index))}
           </div>
         </MuiThemeProvider>
         )}
@@ -151,6 +157,9 @@ export class StoryBlokPage extends Component {
 export default StoryBlokPage;
 
 StoryBlokPage.propTypes = {
+  /** If Static Slug is provided storyblok will only load the page provided */
+  staticSlug: PropTypes.string,
+  /** Override for default route page */
   dynamicSlug: PropTypes.string,
   version: PropTypes.string.isRequired,
   /** acess key from storyblok you can make them in storyblok settings */
@@ -167,4 +176,5 @@ StoryBlokPage.defaultProps = {
   theme: {},
   useObjectTheme: false,
   dynamicSlug: 'page-welcome',
+  staticSlug: '',
 };
