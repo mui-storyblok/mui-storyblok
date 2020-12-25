@@ -65,7 +65,7 @@ MuiStoryblok.propTypes = {
       iconName: PropTypes.string.isRequired,
       Component: PropTypes.element.isRequired,
       props: PropTypes.shape({}).isRequired,
-    })
+    }),
   ),
   /**
    * Important you can add and use customComponets to any sotyblok componet that uses content prop
@@ -76,7 +76,7 @@ MuiStoryblok.propTypes = {
       componentName: PropTypes.string.isRequired,
       Component: PropTypes.func.isRequired,
       props: PropTypes.shape({}).isRequired,
-    })
+    }),
   ),
 };
 

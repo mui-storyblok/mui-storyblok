@@ -98,6 +98,8 @@ export class StoryBlokPage extends Component {
         route = window.location.pathname === '/' ? this.props.dynamicSlug : window.location.pathname.slice(1);
       } else if (this.props.staticSlug) {
         route = this.props.staticSlug;
+      } else {
+        route = window.location.pathname.slice(1);
       }
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
       const muiTheme = await this.pickTheme(story[1], this.props.theme);

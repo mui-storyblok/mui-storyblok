@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useInView } from 'react-intersection-observer';
 import Storyblok from 'lib/utils/Storyblok';
-import transitions from './Divider.module.scss';
 
 export const Divider = ({
   width,
@@ -12,33 +10,37 @@ export const Divider = ({
   lineStyle,
   color,
   borderRadius,
-  transition,
   preSetStyle,
   rootClass,
   lineHeight,
 }) => {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
   const border = thickness.concat(' ', lineStyle, ' ', color);
   const customStyles = Storyblok.anchorOrginToObj(rootClass);
-  const backgroundImage = `linear-gradient(to right ${color}, ${color}, ${color}`;
-
-  const styles = {
-    border,
-    width,
-    borderRadius,
-    lineHeight,
-    ...customStyles,
-    backgroundImage: preSetStyle ? backgroundImage : '',
-  };
+  const backgroundImage = `linear-gradient(to right, rgba(0, 0, 0, 0), ${color}, rgba(0, 0, 0, 0))`;
+  let styles;
+  if (preSetStyle === 'fadeInOut') {
+    styles = {
+      border: 0,
+      backgroundImage,
+      height: thickness,
+      width,
+    };
+  } else {
+    styles = {
+      border,
+      width,
+      borderRadius,
+      lineHeight,
+      ...customStyles,
+      backgroundImage: preSetStyle ? backgroundImage : '',
+    };
+  }
 
   return (
     <hr
       style={styles}
-      className={`${transition && inView ? transitions[transition] : ''}`}
       dataBlokC={dataBlokC}
       dataBlokUid={dataBlokUid}
-      inView={inView}
-      ref={ref}
       id="hrDivider"
     />
   );
@@ -55,7 +57,6 @@ Divider.propTypes = {
   color: PropTypes.string,
   borderRadius: PropTypes.string,
   preSetStyle: PropTypes.string,
-  transition: PropTypes.string,
   dataBlokC: PropTypes.string,
   dataBlokUid: PropTypes.string,
 };
@@ -69,7 +70,6 @@ Divider.defaultProps = {
   lineStyle: 'solid',
   color: '#000',
   borderRadius: '1px',
-  transition: '',
   preSetStyle: '',
   lineHeight: '1.2',
 };

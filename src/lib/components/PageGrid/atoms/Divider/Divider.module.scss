@@ -1,5 +1,11 @@
 $default-line-width: 100%;
 
+.tester {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000, rgba(0, 0, 0, 0));
+}
+
 .fadeInOut {
   border: 0;
   height: 1px;
@@ -18,7 +24,6 @@ $default-line-width: 100%;
     width: $default-line-width;
   }
 }
-
 
 :export {
   lineWidth: $default-line-width;
