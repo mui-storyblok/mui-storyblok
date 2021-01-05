@@ -85,9 +85,38 @@ Span.propTypes = {
   width(props, propName, componentName) {
     return dimensionProp(props, propName, componentName);
   },
+  /** Applies the theme typography styles */
+  variant(props, propName, componentName) {
+    const validProps = [
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
+      'subtitle1',
+      'subtitle2',
+      'body1',
+      'body2',
+      'caption',
+      'button',
+      'overline',
+      'srOnly',
+      'inherit',
+    ];
+    return muiStringProp(props, propName, componentName, validProps);
+  },
 
+  /** Index being passed down from parent component */
+  key: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   transitionClass: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokC: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  dataBlokUid: PropTypes.string,
+  /** storyblok prop for when in editor to allow click bridge */
+  storyblokClass: PropTypes.string,
 };
 
 Span.defaultProps = {
@@ -97,4 +126,8 @@ Span.defaultProps = {
   color: 'initial',
   rootClass: [],
   transitionClass: '',
+  dataBlokC: '',
+  dataBlokUid: '',
+  storyblokClass: '',
+  variant: 'body1',
 };

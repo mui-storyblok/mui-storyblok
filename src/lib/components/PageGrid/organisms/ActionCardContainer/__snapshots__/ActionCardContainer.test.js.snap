@@ -35,13 +35,13 @@ exports[`<ActionCardContainer /> snapshot 1`] = `
         data-blok-uid=""
       >
         <span
-          className="MuiTypography-root makeStyles-root-9  false MuiTypography-body1"
+          className="MuiTypography-root makeStyles-root-9   MuiTypography-body1"
           data-blok-c=""
           data-blok-uid=""
-          inView={false}
+          inView={true}
           style={
             Object {
-              "opacity": 0,
+              "opacity": 1,
             }
           }
         >

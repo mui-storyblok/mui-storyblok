@@ -2,7 +2,15 @@
 
 exports[`<Span /> snapshot 1`] = `
 <span
-  className="MuiTypography-root makeStyles-root-3 undefined MuiTypography-body1"
+  className="MuiTypography-root makeStyles-root-3   MuiTypography-body1"
+  data-blok-c=""
+  data-blok-uid=""
+  inView={true}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
 >
    wooo 
 </span>

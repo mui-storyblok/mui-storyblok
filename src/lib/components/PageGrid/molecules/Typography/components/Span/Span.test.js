@@ -3,6 +3,10 @@ import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { Span } from './Span';
 
+jest.mock('react-intersection-observer', () => ({
+  useInView: () => ({ inView: true, ref: {} }),
+}));
+
 function setup(external = true) {
   const props = {
     content: 'wooo',

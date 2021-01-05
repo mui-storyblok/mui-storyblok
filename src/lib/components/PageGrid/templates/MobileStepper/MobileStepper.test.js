@@ -59,10 +59,10 @@ describe('<MobileStepper />', () => {
     const { comp } = setup();
     const firstStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(firstStep).toEqual(0);
-    comp.find('#MuiMobileStepper').first().prop('nextButton').props.children.props.onClick();
+    comp.find('#MuiMobileStepper').first().prop('nextButton').props.children.props.component.onClick();
     const secondStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(secondStep).toEqual(1);
-    comp.find('#MuiMobileStepper').first().prop('nextButton').props.children.props.onClick();
+    comp.find('#MuiMobileStepper').first().prop('nextButton').props.children.props.component.onClick();
     const lastStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(lastStep).toEqual(0);
   });
@@ -71,10 +71,10 @@ describe('<MobileStepper />', () => {
     const { comp } = setup();
     const firstStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(firstStep).toEqual(0);
-    comp.find('#MuiMobileStepper').first().prop('backButton').props.children.props.onClick();
+    comp.find('#MuiMobileStepper').first().prop('backButton').props.children.props.component.onClick();
     const secondStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(secondStep).toEqual(1);
-    comp.find('#MuiMobileStepper').first().prop('backButton').props.children.props.onClick();
+    comp.find('#MuiMobileStepper').first().prop('backButton').props.children.props.component.onClick();
     const lastStep = comp.find('#MuiMobileStepper').prop('activeStep');
     expect(lastStep).toEqual(0);
   });

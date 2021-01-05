@@ -6,6 +6,10 @@ import { act } from 'react-dom/test-utils';
 import renderer from 'react-test-renderer';
 import { ActionCardContainer } from './ActionCardContainer';
 
+jest.mock('react-intersection-observer', () => ({
+  useInView: () => ({ inView: true, ref: { } }),
+}));
+
 function setup() {
   const props = {
     menuName: [{
@@ -17,9 +21,6 @@ function setup() {
     }],
     height: '100px',
     width: '100px',
-    history: {
-      push: jest.fn(),
-    },
     actionCards: [{
       component: 'ActionCard',
       header: [{
@@ -41,9 +42,6 @@ function setup() {
         }],
       }],
       redirectRoute: '/page-welcome',
-      history: {
-        push: jest.fn(),
-      },
     }],
   };
   const comp = mount(<ActionCardContainer {...props} />);
@@ -94,7 +92,7 @@ describe('<ActionCardContainer />', () => {
     act(() => {
       btn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
-
+    console.log(container.innerHTML);
     expect(container.innerHTML.includes('Action card body test')).toEqual(true);
   });
 
