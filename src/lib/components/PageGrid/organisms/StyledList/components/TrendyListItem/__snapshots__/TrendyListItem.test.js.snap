@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TrendyListItem /> snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-5 FlexItem FlexColumn"
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    className="MuiBox-root MuiBox-root-6 FlexItem FlexRow"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-7 FlexItem"
+    >
+      <div
+        className="MuiAvatar-root DynamicAvatar-root-1 DynamicAvatar-root-4 MuiAvatar-circle"
+      >
+        <img
+          className="MuiAvatar-img"
+          src="cool.png"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-10 FlexItem Info"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
+    >
+      <h6
+        className="MuiTypography-root InfoTitle TrendInfo-title-8 MuiTypography-h6"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
+      >
+        title
+      </h6>
+      <p
+        className="MuiTypography-root InfoSubtitle TrendInfo-subtitle-9 MuiTypography-body1"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
+      >
+        subtitle
+      </p>
+      <p
+        className="MuiTypography-root InfoCaption MuiTypography-body1"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-11 FlexItem"
+    />
+  </div>
+</div>
+`;

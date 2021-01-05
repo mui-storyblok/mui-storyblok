@@ -6,23 +6,30 @@ import MuiButtonDialog from './MuiButtonDialog';
 
 function setup() {
   const props = {
+    _editable: '<!--#storyblok#{"name": "MuiButtonDialog", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
     button: [{
+      _editable: '<!--#storyblok#{"name": "MuiButton", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'MuiButton',
       buttonText: 'buttonText',
     }],
     dialog: [{
+      _editable: '<!--#storyblok#{"name": "MuiDialog", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'MuiDialog',
       content: [{
+        _editable: '<!--#storyblok#{"name": "MuiDialogContent", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'MuiDialogContent',
         content: [{
+          _editable: '<!--#storyblok#{"name": "MuiDialogContentTypography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiDialogContentTypography',
           content: [{
+            _editable: '<!--#storyblok#{"name": "MuiText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
             component: 'MuiText',
             content: 'text',
           }],
         }],
       }],
       dialogTitle: [{
+        _editable: '<!--#storyblok#{"name": "MuiDialogTitle", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'MuiDialogTitle',
         text: 'text',
       }],

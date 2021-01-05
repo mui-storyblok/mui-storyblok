@@ -4,15 +4,23 @@ import renderer from 'react-test-renderer';
 import MuiPaginationTable from './MuiPaginationTable';
 
 const row = {
+  _editable: '<!--#storyblok#{"name": "MuiPaginationTable", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
   component: 'MuiPaginationTableRow',
   content: [
     {
+      _editable: '<!--#storyblok#{"name": "MuiTableCell", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
       component: 'MuiTableCell',
       content: [
         {
+          _editable: '<!--#storyblok#{"name": "MuiTypography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
           component: 'MuiTypography',
           content: [
             {
+              _editable: '<!--#storyblok#{"name": "MuiText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
               component: 'MuiText',
               text: 'wooo',
             },
@@ -31,19 +39,29 @@ do {
 
 function setup(tBody = rows) {
   const props = {
+    _editable: '<!--#storyblok#{"name": "MuiPaginationTable", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
     tHead: [
       {
         content: [
           {
+            _editable: '<!--#storyblok#{"name": "MuiPaginationTableRow", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
             component: 'MuiPaginationTableRow',
             content: [
               {
+                _editable: '<!--#storyblok#{"name": "MuiTableCell", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
                 component: 'MuiTableCell',
                 content: [
                   {
+                    _editable: '<!--#storyblok#{"name": "MuiTypography", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
                     component: 'MuiTypography',
                     content: [
                       {
+                        _editable: '<!--#storyblok#{"name": "MuiText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
                         component: 'MuiText',
                         text: 'wooo',
                       },
@@ -58,6 +76,7 @@ function setup(tBody = rows) {
     ],
     tBody: [
       {
+        _editable: '<!--#storyblok#{"name": "MuiPaginationTableBody", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'MuiPaginationTableBody',
         content: tBody,
       },

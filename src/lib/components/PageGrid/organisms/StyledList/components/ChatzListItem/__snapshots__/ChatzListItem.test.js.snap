@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChatzListItem /> snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-6 FlexItem FlexColumn"
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    className="MuiBox-root MuiBox-root-7 FlexItem FlexRow"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-8 FlexItem"
+    >
+      <div
+        className="MuiAvatar-root DynamicAvatar-root-1 DynamicAvatar-root-5 MuiAvatar-circle"
+      >
+        <img
+          className="MuiAvatar-img"
+          src="cool.png"
+        />
+      </div>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-12 FlexItem Info"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
+    >
+      <h6
+        className="MuiTypography-root InfoTitle ChatzInfo-title-9 MuiTypography-h6"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
+      >
+        title
+      </h6>
+      <p
+        className="MuiTypography-root InfoSubtitle ChatzInfo-subtitle-10 MuiTypography-body1"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
+      >
+        subtitle
+      </p>
+      <h6
+        className="MuiTypography-root InfoTitle ChatzInfo-title-9 MuiTypography-h6"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
+      >
+        
+      </h6>
+      <p
+        className="MuiTypography-root InfoCaption ChatzInfo-caption-11 makeStyles-text-3 MuiTypography-body1"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-13 FlexItem"
+    />
+  </div>
+</div>
+`;

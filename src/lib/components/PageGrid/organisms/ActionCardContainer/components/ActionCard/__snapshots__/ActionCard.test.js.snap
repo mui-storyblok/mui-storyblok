@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionCard /> snapshot 1`] = `
+<div
+  className="actionCard"
+  id="actionCard-test"
+  onClick={[Function]}
+  style={
+    Object {
+      "height": "100px",
+      "width": "100px",
+    }
+  }
+>
+  <div
+    className="actionHeader"
+  >
+    <span
+      aria-hidden={true}
+      className="material-icons MuiIcon-root makeStyles-root-11  MuiIcon-colorSecondary"
+      data-blok-c=""
+      data-blok-uid=""
+    >
+      star
+    </span>
+    <div
+      className="MuiTypography-root makeStyles-root-12  MuiTypography-body1"
+      data-blok-c=""
+      data-blok-uid=""
+    >
+      <span
+        className="MuiTypography-root makeStyles-root-13  false MuiTypography-body1"
+        data-blok-c=""
+        data-blok-uid=""
+        inView={false}
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+         Header of a card 
+      </span>
+    </div>
+  </div>
+  <div
+    className="actionBody"
+  >
+    <div
+      className="MuiTypography-root makeStyles-root-14  MuiTypography-body1"
+      data-blok-c=""
+      data-blok-uid=""
+    >
+      <span
+        className="MuiTypography-root makeStyles-root-15  false MuiTypography-body1"
+        data-blok-c=""
+        data-blok-uid=""
+        inView={false}
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
+      >
+         this is the text of an action card body. 
+      </span>
+    </div>
+  </div>
+</div>
+`;

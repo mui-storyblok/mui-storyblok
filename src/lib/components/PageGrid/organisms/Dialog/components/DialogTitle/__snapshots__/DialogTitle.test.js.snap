@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DialogTitle /> snapshot 1`] = `
+<div
+  className="MuiDialogTitle-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
+>
+  text
+</div>
+`;

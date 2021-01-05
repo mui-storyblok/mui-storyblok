@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardHeader /> snapshot 1`] = `
+<div
+  className="MuiCardHeader-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    className="MuiCardHeader-content"
+  >
+    <span
+      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
+    >
+      title
+    </span>
+    <span
+      className="MuiTypography-root MuiCardHeader-subheader MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+    >
+      
+    </span>
+  </div>
+</div>
+`;

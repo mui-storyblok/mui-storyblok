@@ -11,6 +11,8 @@ import styles from './StoryBlokPage.module.scss';
 import downloadSbAsset from '../../utils/json-sb-asset';
 import { renderComponents } from '../../utils/customComponents';
 
+import PageGrid from '../PageGrid/PageGrid';
+
 export class StoryBlokPage extends Component {
   state = {
     story: [],
@@ -22,15 +24,44 @@ export class StoryBlokPage extends Component {
   components = {
     Blok,
     MuiTransitions,
+    PageGrid,
   }
 
   async componentDidMount() {
+    this.appendStoryblokBridgeScript(this.props.accessToken);
     await this.getPage();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.theme !== this.props.theme && this.props.useObjectTheme) {
       this.setpropTheme(this.props.theme);
+    }
+  }
+
+  appendStoryblokBridgeScript = (accessToken) => {
+    if (process.env.REACT_APP_ENV !== 'production') {
+      const existingScript = document.getElementById('storyblokBridge');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = `//app.storyblok.com/f/storyblok-latest.js?t=${accessToken}`;
+        script.id = 'storyblokBridge';
+        document.body.appendChild(script);
+        script.onload = () => {
+          // Initialize the Storyblok JS Bridge
+          window.storyblok.init({ accessToken });
+
+          // Ping the Visual Editor and enter Editmode manually
+          window.storyblok.pingEditor(() => {
+            if (window.storyblok.inEditor) {
+              window.storyblok.enterEditmode();
+
+              window.storyblok.on(['change', 'saved'], () => {
+                window.location.reload(true);
+              });
+            }
+          });
+        };
+      }
     }
   }
 
@@ -62,9 +93,15 @@ export class StoryBlokPage extends Component {
 
   getPage = async () => {
     try {
-      const route = window.location.pathname === '/' ? 'page-welcome' : window.location.pathname.slice(1);
+      let route;
+      if (window.location.pathname === '/') {
+        route = window.location.pathname === '/' ? this.props.dynamicSlug : window.location.pathname.slice(1);
+      } else if (this.props.staticSlug) {
+        route = this.props.staticSlug;
+      } else {
+        route = window.location.pathname.slice(1);
+      }
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
-
       const muiTheme = await this.pickTheme(story[1], this.props.theme);
       this.setState({ muiTheme });
 
@@ -108,11 +145,9 @@ export class StoryBlokPage extends Component {
         <MuiThemeProvider theme={this.state.muiTheme}>
           <CssBaseline />
           <div className={styles.container}>
-            {this.state.story && this.state.story.map((item, index) => (
-              <div key={index}>
-                {renderComponents(this.components, item, index)}
-              </div>
-            ))}
+            {this.state.story
+                && this.state.story
+                  .map((item, index) => renderComponents(this.components, item, index))}
           </div>
         </MuiThemeProvider>
         )}
@@ -124,6 +159,10 @@ export class StoryBlokPage extends Component {
 export default StoryBlokPage;
 
 StoryBlokPage.propTypes = {
+  /** If Static Slug is provided storyblok will only load the page provided */
+  staticSlug: PropTypes.string,
+  /** Override for default route page */
+  dynamicSlug: PropTypes.string,
   version: PropTypes.string.isRequired,
   /** acess key from storyblok you can make them in storyblok settings */
   accessToken: PropTypes.string.isRequired,
@@ -138,4 +177,6 @@ StoryBlokPage.propTypes = {
 StoryBlokPage.defaultProps = {
   theme: {},
   useObjectTheme: false,
+  dynamicSlug: 'page-welcome',
+  staticSlug: '',
 };

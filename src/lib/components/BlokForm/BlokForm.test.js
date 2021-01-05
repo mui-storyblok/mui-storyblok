@@ -7,25 +7,33 @@ import BlokForm from './BlokForm';
 
 function setup() {
   const props = {
+    _editable: '<!--#storyblok#{"name": "BlokForm", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
     content: [{
+      _editable: '<!--#storyblok#{"name": "FormGrid", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
       component: 'FormGrid',
       content: [{
+        _editable: '<!--#storyblok#{"name": "FormGridItem", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
         component: 'FormGridItem',
         content: [{
+          _editable: '<!--#storyblok#{"name": "MuiCheckbox", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiCheckbox',
           name: 'checkbox',
         }, {
+          _editable: '<!--#storyblok#{"name": "MuiInput", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiInput',
           name: 'input',
         }, {
+          _editable: '<!--#storyblok#{"name": "MuiSelect", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiSelect',
           name: 'select',
           options: ['one', 'two', 'three'],
         }, {
+          _editable: '<!--#storyblok#{"name": "MuiRadio", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiRadio',
           name: 'radio',
           value: 'radio1',
         }, {
+          _editable: '<!--#storyblok#{"name": "MuiRadio", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
           component: 'MuiRadio',
           name: 'radio',
           value: 'radio2',
@@ -42,7 +50,6 @@ function setup() {
   const comp = mount(<BlokForm {...props} />);
   return { comp, props };
 }
-
 
 describe('<BlokForm />', () => {
   it('renders BlokForm', () => {

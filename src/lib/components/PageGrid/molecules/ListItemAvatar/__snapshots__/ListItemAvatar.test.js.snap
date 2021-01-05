@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItemAvatar /> snapshot 1`] = `
+<div
+  className="MuiListItemAvatar-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
+  />
+</div>
+`;

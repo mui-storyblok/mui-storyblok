@@ -5,10 +5,12 @@ exports[`<BlokForm /> snapshot 1`] = `
   onSubmit={[Function]}
 >
   <div
-    className="MuiGrid-root makeStyles-root-28 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    className="MuiGrid-root makeStyles-root-28 MuiGrid storyblok--outline MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    data-blok-c="{\\"name\\": \\"FormGrid\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
   >
     <div
-      className="MuiGrid-root makeStyles-root-29 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      className="MuiGrid-root makeStyles-root-29 FormGridItem storyblok--outline MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      data-blok-c="{\\"name\\": \\"FormGridItem\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
     >
       <label
         className="MuiFormControlLabel-root"
@@ -46,7 +48,7 @@ exports[`<BlokForm /> snapshot 1`] = `
             },
           }
         }
-        id="checkbox"
+        type="text"
       >
         <span
           aria-disabled={false}
@@ -71,9 +73,10 @@ exports[`<BlokForm /> snapshot 1`] = `
               className="PrivateSwitchBase-input-6"
               data-indeterminate={false}
               disabled={false}
+              name="checkbox"
               onChange={[Function]}
               type="checkbox"
-              value={null}
+              value={false}
             />
             <svg
               aria-hidden={true}
@@ -131,12 +134,7 @@ exports[`<BlokForm /> snapshot 1`] = `
           }
         }
       >
-        <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-          data-shrink={false}
-        >
-          input
-        </label>
+        
         <div
           className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
@@ -162,46 +160,8 @@ exports[`<BlokForm /> snapshot 1`] = `
       </div>
       <div
         className="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal"
-        field={
-          Object {
-            "input": Object {
-              "checked": undefined,
-              "name": "select",
-              "onBlur": [Function],
-              "onChange": [Function],
-              "onFocus": [Function],
-              "value": "",
-            },
-            "meta": Object {
-              "active": false,
-              "data": Object {},
-              "dirty": false,
-              "dirtySinceLastSubmit": false,
-              "error": undefined,
-              "initial": undefined,
-              "invalid": false,
-              "length": undefined,
-              "modified": false,
-              "modifiedSinceLastSubmit": false,
-              "pristine": true,
-              "submitError": undefined,
-              "submitFailed": false,
-              "submitSucceeded": false,
-              "submitting": false,
-              "touched": false,
-              "valid": true,
-              "validating": false,
-              "visited": false,
-            },
-          }
-        }
       >
-        <label
-          className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
-          data-shrink={false}
-        >
-          select
-        </label>
+        
         <div
           className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
           onClick={[Function]}
@@ -288,7 +248,7 @@ exports[`<BlokForm /> snapshot 1`] = `
             },
           }
         }
-        id="radio"
+        type="text"
       >
         <span
           aria-disabled={false}
@@ -313,6 +273,7 @@ exports[`<BlokForm /> snapshot 1`] = `
               checked={false}
               className="PrivateSwitchBase-input-6"
               disabled={false}
+              name="radio"
               onChange={[Function]}
               type="radio"
               value="radio1"
@@ -386,7 +347,7 @@ exports[`<BlokForm /> snapshot 1`] = `
             },
           }
         }
-        id="radio"
+        type="text"
       >
         <span
           aria-disabled={false}
@@ -411,6 +372,7 @@ exports[`<BlokForm /> snapshot 1`] = `
               checked={false}
               className="PrivateSwitchBase-input-6"
               disabled={false}
+              name="radio"
               onChange={[Function]}
               type="radio"
               value="radio2"

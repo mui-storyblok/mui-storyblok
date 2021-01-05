@@ -27,7 +27,7 @@ export const MuiCircularProgress = ({
       className={styles.root}
       color={color}
       disableShrink={disableShrink}
-      size={parseInt(size, 10)}
+      size={size}
       thickness={parseInt(thickness, 10)}
       variant={variant}
     />
@@ -80,7 +80,7 @@ MuiCircularProgress.defaultProps = {
   rootClass: [],
   color: 'primary',
   disableShrink: false,
-  size: 40,
-  thickness: 3.6,
+  size: '40',
+  thickness: '3.6',
   variant: 'indeterminate',
 };

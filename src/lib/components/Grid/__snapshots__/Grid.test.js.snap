@@ -2,10 +2,12 @@
 
 exports[`<Grid /> snapshot 1`] = `
 <div
-  className="MuiGrid-root makeStyles-root-3 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  className="MuiGrid-root makeStyles-root-3 MuiGrid storyblok--outline MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  data-blok-c="{\\"name\\": \\"Grid\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
 >
   <div
-    className="MuiGrid-root makeStyles-root-4 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    className="MuiGrid-root makeStyles-root-4 GridItem storyblok--outline MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+    data-blok-c="{\\"name\\": \\"GridItem\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
   >
     <span
       aria-hidden={true}

@@ -5,23 +5,35 @@ import { MuiListItemButton } from './MuiListItemButton';
 
 function setup(isButton = false, redirectRoute = undefined, href = undefined) {
   const props = {
+    _editable: '<!--#storyblok#{"name": "MuiListItemButton", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
     listItemAvatar: [{
+      _editable: '<!--#storyblok#{"name": "MuiListItemAvatar", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
       component: 'MuiListItemAvatar',
       content: [{
+        _editable: '<!--#storyblok#{"name": "MuiIcon", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
         component: 'MuiIcon',
         iconName: 'android',
       }],
     }],
 
     listItemIcon: [{
+      _editable: '<!--#storyblok#{"name": "MuiListItemIcon", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
       component: 'MuiListItemIcon',
       content: [{
+        _editable: '<!--#storyblok#{"name": "MuiIcon", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
         component: 'MuiIcon',
         iconName: 'android',
       }],
     }],
 
     listItemText: [{
+      _editable: '<!--#storyblok#{"name": "MuiListItemText", "space": "48408", "uid": "947be9f0-47c3-4315-a95a-550f0c560eb5", "id": "307934"}-->',
+
       component: 'MuiListItemText',
       primary: 'primary',
     }],

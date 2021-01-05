@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItemIcon /> snapshot 1`] = `
+<div
+  className="MuiListItemIcon-root makeStyles-root-3 "
+  data-blok-c=""
+  data-blok-uid=""
+/>
+`;

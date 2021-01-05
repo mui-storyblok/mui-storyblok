@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-fullWidth"
+    data-testid="Button"
+    disabled={false}
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="submit"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      submit
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+  
+  
+</form>
+`;

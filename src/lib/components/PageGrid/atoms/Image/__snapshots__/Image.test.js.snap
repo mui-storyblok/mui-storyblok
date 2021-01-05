@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MuiImage /> snapshot with MuiImage 1`] = `
+<div
+  className=""
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <picture
+    style={Object {}}
+  >
+    <img
+      alt="www.applejuice.com"
+      src="www.applejuice.com"
+      style={
+        Object {
+          "height": "500px",
+          "width": "500px",
+        }
+      }
+    />
+  </picture>
+</div>
+`;

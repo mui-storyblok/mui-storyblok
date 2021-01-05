@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridList /> snapshot 1`] = `
+<div
+  className="makeStyles-root-1 "
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <ul
+    className="MuiGridList-root makeStyles-root-4"
+    style={
+      Object {
+        "margin": -2,
+      }
+    }
+  >
+    <li
+      className="MuiGridListTile-root"
+      style={
+        Object {
+          "height": 184,
+          "padding": 2,
+          "width": "33.333333333333336%",
+        }
+      }
+    >
+      <div
+        className="MuiGridListTile-tile"
+      >
+        <img
+          alt="bubble gum"
+          src="www.test.com"
+        />
+        <div
+          className="MuiGridListTileBar-root makeStyles-root-5 MuiGridListTileBar-titlePositionBottom MuiGridListTileBar-rootSubtitle"
+        >
+          <div
+            className="MuiGridListTileBar-titleWrap MuiGridListTileBar-titleWrapActionPosRight"
+          >
+            <div
+              className="MuiGridListTileBar-title"
+            >
+              home
+            </div>
+            <div
+              className="MuiGridListTileBar-subtitle"
+            >
+              <span>
+                test1
+              </span>
+            </div>
+          </div>
+          <div
+            className="MuiGridListTileBar-actionIcon"
+          />
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

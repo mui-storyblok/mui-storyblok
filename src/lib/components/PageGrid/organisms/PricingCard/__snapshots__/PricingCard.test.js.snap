@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PricingCard /> snapshot 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root makeStyles-root-1 MuiPaper-elevation1 MuiPaper-rounded"
+  data-blok-c=""
+  data-blok-uid=""
+>
+  <div
+    className="MuiCardHeader-root makeStyles-header-2"
+  >
+    <div
+      className="MuiCardHeader-content"
+    >
+      <span
+        className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
+      >
+        title
+      </span>
+    </div>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-middle"
+  />
+  <div
+    className="MuiCardContent-root"
+  >
+    <h4
+      className="MuiTypography-root MuiTypography-h4 MuiTypography-alignCenter"
+    >
+      subTitle
+    </h4>
+    <span
+      className="MuiTypography-root TextInfoContent-overline-9 N01TextInfoContent-overline-6 MuiTypography-body1"
+    >
+      overline
+    </span>
+    <h4
+      className="MuiTypography-root TextInfoContent-heading-10 N01TextInfoContent-heading-7 MuiTypography-body1"
+    >
+      heading
+    </h4>
+    <p
+      className="MuiTypography-root TextInfoContent-body-11 N01TextInfoContent-body-8 MuiTypography-body1"
+    >
+      body
+    </p>
+  </div>
+  <hr
+    className="MuiDivider-root MuiDivider-middle"
+  />
+</div>
+`;

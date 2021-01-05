@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> snapshot 1`] = `
+<ul
+  className="MuiList-root makeStyles-root-3  MuiList-padding"
+  data-blok-c=""
+  data-blok-uid=""
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+/>
+`;

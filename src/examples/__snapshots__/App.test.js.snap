@@ -9,8 +9,8 @@ exports[`<MuiAppBar /> snapshot 1`] = `
     role="progressbar"
     style={
       Object {
-        "height": 40,
-        "width": 40,
+        "height": "40",
+        "width": "40",
       }
     }
   >
