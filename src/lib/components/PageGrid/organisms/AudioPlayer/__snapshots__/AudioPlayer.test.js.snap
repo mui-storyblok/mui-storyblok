@@ -62,6 +62,7 @@ exports[`<AudioPlayer /> snapshot 1`] = `
     >
       <p
         className="MuiTypography-root MuiTypography-body1"
+        onClick={[Function]}
       >
         00:00
       </p>
