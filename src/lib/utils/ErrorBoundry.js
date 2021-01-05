@@ -1,13 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ErrorBoundary extends React.Component {
   state = { error: null, errorInfo: null };
 
   componentDidCatch(error, errorInfo) {
-    console.log('in componentDidCatch', {error, errorInfo})
+    console.log('in componentDidCatch', { error, errorInfo });
     this.setState({
-      error: error,
-      errorInfo: errorInfo
+      error,
+      errorInfo,
     });
   }
 
@@ -16,8 +17,7 @@ class ErrorBoundary extends React.Component {
       return (
         <div>
           <h2>Something went wrong.</h2>
-          {console.log(this.props)}
-          <details style={{ whiteSpace: "pre-wrap" }}>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfo.componentStack}
@@ -31,3 +31,7 @@ class ErrorBoundary extends React.Component {
 }
 
 export default ErrorBoundary;
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
+};
