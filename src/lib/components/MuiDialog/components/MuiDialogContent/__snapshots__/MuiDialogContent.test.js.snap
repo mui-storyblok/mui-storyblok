@@ -5,18 +5,13 @@ exports[`<MuiDialogContent /> snapshot 1`] = `
   className="MuiDialogContent-root makeStyles-root-3"
 >
   <div
-    className="MuiDialogContentTypography storyblok--outline"
-    data-blok-c="{\\"name\\": \\"MuiDialogContentTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+    className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
   >
-    <div
-      className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+    <span
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
     >
-      <span
-        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
-      >
-         undefined 
-      </span>
-    </div>
+       undefined 
+    </span>
   </div>
 </div>
 `;

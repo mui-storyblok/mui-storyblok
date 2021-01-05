@@ -25,17 +25,12 @@ exports[`<MuiListItemButton /> snapshot 1`] = `
     <div
       className="MuiAvatar-root MuiAvatar-circle MuiAvatar-colorDefault"
     >
-      <div
-        className="MuiIcon storyblok--outline"
-        data-blok-c="{\\"name\\": \\"MuiIcon\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
       >
-        <span
-          aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-7 MuiIcon-colorSecondary"
-        >
-          android
-        </span>
-      </div>
+        android
+      </span>
     </div>
   </div>
   <div

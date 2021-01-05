@@ -5,35 +5,25 @@ exports[`<MuiTableHead /> snapshot 1`] = `
   className="MuiTableHead-root makeStyles-root-2"
   role={null}
 >
-  <div
-    className="MuiTableRow storyblok--outline"
-    data-blok-c="{\\"name\\": \\"MuiTableRow\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+  <tr
+    className="MuiTableRow-root makeStyles-root-3 MuiTableRow-head"
+    role={null}
   >
-    <tr
-      className="MuiTableRow-root makeStyles-root-3 MuiTableRow-head"
-      role={null}
+    <th
+      aria-sort={null}
+      className="MuiTableCell-root MuiTableCell-head makeStyles-root-4"
+      scope="col"
     >
       <div
-        className="MuiTableCell storyblok--outline"
-        data-blok-c="{\\"name\\": \\"MuiTableCell\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
       >
-        <th
-          aria-sort={null}
-          className="MuiTableCell-root MuiTableCell-head makeStyles-root-4"
-          scope="col"
+        <span
+          className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
         >
-          <div
-            className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
-          >
-            <span
-              className="MuiTypography-root makeStyles-root-6 MuiTypography-body1"
-            >
-               undefined 
-            </span>
-          </div>
-        </th>
+           undefined 
+        </span>
       </div>
-    </tr>
-  </div>
+    </th>
+  </tr>
 </thead>
 `;

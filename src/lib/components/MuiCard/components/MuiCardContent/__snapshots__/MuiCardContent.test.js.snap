@@ -5,32 +5,51 @@ exports[`<MuiCardContent /> snapshot 1`] = `
   className="MuiCardContent-root makeStyles-root-3"
 >
   <div
-    className="MuiTypography storyblok--outline"
-    data-blok-c="{\\"name\\": \\"MuiTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+    className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
   >
-    <div
-      className="MuiTypography-root makeStyles-root-4 MuiTypography-body1"
+    <span
+      className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
     >
-      <span
-        className="MuiTypography-root makeStyles-root-5 MuiTypography-body1"
-      >
-         undefined 
-      </span>
-    </div>
+       undefined 
+    </span>
   </div>
   <div
-    className="MuiAccordion storyblok--outline"
-    data-blok-c="{\\"name\\": \\"MuiAccordion\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+    className="MuiPaper-root MuiAccordion-root makeStyles-root-6 MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      className="MuiPaper-root MuiAccordion-root makeStyles-root-6 MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
+      aria-disabled={false}
+      aria-expanded={false}
+      className="MuiButtonBase-root MuiAccordionSummary-root makeStyles-root-7"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex={0}
     >
       <div
+        className="MuiAccordionSummary-content"
+      >
+        <span
+          aria-hidden={true}
+          className="material-icons MuiIcon-root makeStyles-root-8 MuiIcon-colorSecondary"
+        >
+          android
+        </span>
+      </div>
+      <div
         aria-disabled={false}
-        aria-expanded={false}
-        className="MuiButtonBase-root MuiAccordionSummary-root makeStyles-root-7"
+        aria-hidden={true}
+        className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
         onBlur={[Function]}
-        onClick={[Function]}
         onDragLeave={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
@@ -41,88 +60,49 @@ exports[`<MuiCardContent /> snapshot 1`] = `
         onTouchEnd={[Function]}
         onTouchMove={[Function]}
         onTouchStart={[Function]}
-        role="button"
-        tabIndex={0}
+        role={null}
+        tabIndex={null}
       >
-        <div
-          className="MuiAccordionSummary-content"
-        >
-          <div
-            className="MuiIcon storyblok--outline"
-            data-blok-c="{\\"name\\": \\"MuiIcon\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
-          >
-            <span
-              aria-hidden={true}
-              className="material-icons MuiIcon-root makeStyles-root-8 MuiIcon-colorSecondary"
-            >
-              android
-            </span>
-          </div>
-        </div>
-        <div
-          aria-disabled={false}
-          aria-hidden={true}
-          className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon MuiIconButton-edgeEnd"
-          onBlur={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          role={null}
-          tabIndex={null}
+        <span
+          className="MuiIconButton-label"
         >
           <span
-            className="MuiIconButton-label"
+            aria-hidden={true}
+            className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
           >
-            <span
-              aria-hidden={true}
-              className="material-icons MuiIcon-root makeStyles-root-9 MuiIcon-colorSecondary"
-            >
-              android
-            </span>
+            android
           </span>
-        </div>
+        </span>
       </div>
-      <div
-        className="MuiCollapse-container MuiCollapse-hidden"
-        style={
-          Object {
-            "minHeight": "0px",
-          }
+    </div>
+    <div
+      className="MuiCollapse-container MuiCollapse-hidden"
+      style={
+        Object {
+          "minHeight": "0px",
         }
+      }
+    >
+      <div
+        className="MuiCollapse-wrapper"
       >
         <div
-          className="MuiCollapse-wrapper"
+          className="MuiCollapse-wrapperInner"
         >
           <div
-            className="MuiCollapse-wrapperInner"
+            role="region"
           >
             <div
-              role="region"
+              className="MuiAccordionDetails-root makeStyles-root-10"
             >
               <div
-                className="MuiAccordionDetails-root makeStyles-root-10"
+                className="MuiTypography-root makeStyles-root-11 MuiTypography-body1"
               >
-                <div
-                  className="MuiAccordionTypography storyblok--outline"
-                  data-blok-c="{\\"name\\": \\"MuiAccordionTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+                <span
+                  className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
                 >
-                  <div
-                    className="MuiTypography-root makeStyles-root-11 MuiTypography-body1"
-                  >
-                    <span
-                      className="MuiTypography-root makeStyles-root-12 MuiTypography-body1"
-                    >
-                       undefined 
-                    </span>
-                  </div>
-                </div>
+                   undefined 
+                </span>
               </div>
             </div>
           </div>

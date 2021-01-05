@@ -4,35 +4,30 @@ exports[`<MuiDialogActions /> snapshot 1`] = `
 <div
   className="MuiDialogActions-root makeStyles-root-3 MuiDialogActions-spacing"
 >
-  <div
-    className="MuiButtonRedirect storyblok--outline"
-    data-blok-c="{\\"name\\": \\"MuiButtonRedirect\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-4 MuiButton-textSecondary MuiButton-fullWidth"
+    data-testid="muiButton"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
   >
-    <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root-4 MuiButton-textSecondary MuiButton-fullWidth"
-      data-testid="muiButton"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <span
+      className="MuiButton-label"
     >
-      <span
-        className="MuiButton-label"
-      >
-        buttonText
-      </span>
-    </button>
-  </div>
+      buttonText
+    </span>
+  </button>
 </div>
 `;

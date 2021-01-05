@@ -5,12 +5,6 @@ exports[`<MuiImage /> snapshot with MuiImage 1`] = `
   className=""
   data-blok-c=""
   data-blok-uid=""
-  style={
-    Object {
-      "height": "500px",
-      "width": "500px",
-    }
-  }
 >
   <picture
     style={Object {}}
@@ -18,7 +12,12 @@ exports[`<MuiImage /> snapshot with MuiImage 1`] = `
     <img
       alt="www.applejuice.com"
       src="www.applejuice.com"
-      style={Object {}}
+      style={
+        Object {
+          "height": "500px",
+          "width": "500px",
+        }
+      }
     />
   </picture>
 </div>

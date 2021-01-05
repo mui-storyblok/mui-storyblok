@@ -29,9 +29,15 @@ exports[`<ActionCard /> snapshot 1`] = `
       data-blok-uid=""
     >
       <span
-        className="MuiTypography-root makeStyles-root-13  MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-13  false MuiTypography-body1"
         data-blok-c=""
         data-blok-uid=""
+        inView={false}
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
       >
          Header of a card 
       </span>
@@ -46,9 +52,15 @@ exports[`<ActionCard /> snapshot 1`] = `
       data-blok-uid=""
     >
       <span
-        className="MuiTypography-root makeStyles-root-15  MuiTypography-body1"
+        className="MuiTypography-root makeStyles-root-15  false MuiTypography-body1"
         data-blok-c=""
         data-blok-uid=""
+        inView={false}
+        style={
+          Object {
+            "opacity": 0,
+          }
+        }
       >
          this is the text of an action card body. 
       </span>

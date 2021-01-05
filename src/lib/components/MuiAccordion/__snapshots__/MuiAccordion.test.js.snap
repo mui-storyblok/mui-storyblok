@@ -26,17 +26,12 @@ exports[`<MuiAccordion /> snapshot 1`] = `
     <div
       className="MuiAccordionSummary-content"
     >
-      <div
-        className="MuiIcon storyblok--outline"
-        data-blok-c="{\\"name\\": \\"MuiIcon\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+      <span
+        aria-hidden={true}
+        className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
       >
-        <span
-          aria-hidden={true}
-          className="material-icons MuiIcon-root makeStyles-root-5 MuiIcon-colorSecondary"
-        >
-          android
-        </span>
-      </div>
+        android
+      </span>
     </div>
     <div
       aria-disabled={false}
@@ -89,18 +84,13 @@ exports[`<MuiAccordion /> snapshot 1`] = `
             className="MuiAccordionDetails-root makeStyles-root-7"
           >
             <div
-              className="MuiAccordionTypography storyblok--outline"
-              data-blok-c="{\\"name\\": \\"MuiAccordionTypography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
+              className="MuiTypography-root makeStyles-root-8 MuiTypography-body1"
             >
-              <div
-                className="MuiTypography-root makeStyles-root-8 MuiTypography-body1"
+              <span
+                className="MuiTypography-root makeStyles-root-9 MuiTypography-body1"
               >
-                <span
-                  className="MuiTypography-root makeStyles-root-9 MuiTypography-body1"
-                >
-                   undefined 
-                </span>
-              </div>
+                 undefined 
+              </span>
             </div>
           </div>
         </div>

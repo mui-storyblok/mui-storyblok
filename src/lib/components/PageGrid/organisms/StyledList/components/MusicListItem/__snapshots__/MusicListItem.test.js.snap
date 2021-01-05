@@ -37,11 +37,21 @@ exports[`<MusicListItem /> snapshot 1`] = `
     >
       <h6
         className="MuiTypography-root InfoTitle MusicInfo-title-9 MuiTypography-h6"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
       >
         title
       </h6>
       <p
         className="MuiTypography-root InfoSubtitle MusicInfo-subtitle-10 MuiTypography-body1"
+        style={
+          Object {
+            "fontSize": "0.875rem",
+          }
+        }
       >
         subtitle
       </p>
