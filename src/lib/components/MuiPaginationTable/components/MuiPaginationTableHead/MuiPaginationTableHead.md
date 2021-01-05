@@ -1,1 +1,0 @@
-##### MuiPaginationTableHead has the ability to render custom components.

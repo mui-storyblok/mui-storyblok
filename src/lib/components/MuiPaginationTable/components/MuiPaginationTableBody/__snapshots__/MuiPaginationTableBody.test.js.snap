@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<MuiPaginationTableBody /> snapshot 1`] = `
-<tbody
-  className="MuiTableBody-root makeStyles-root-2"
-  role={null}
-/>
-`;
