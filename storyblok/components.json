@@ -4,7 +4,7 @@
       "name": "Accordion",
       "display_name": null,
       "created_at": "2020-11-24T04:11:25.949Z",
-      "updated_at": "2020-11-26T16:11:10.692Z",
+      "updated_at": "2020-12-07T19:08:11.676Z",
       "id": 1204869,
       "schema": {
         "accordionSummary": {
@@ -70,8 +70,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805360,
+          "name": "Basic",
+          "component_id": 1204869,
+          "image": ""
+        }
+      ],
+      "preset_id": 805360,
       "real_name": "Accordion",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -205,7 +212,7 @@
       "name": "ActionCardContainer",
       "display_name": null,
       "created_at": "2020-11-25T20:24:54.272Z",
-      "updated_at": "2020-11-25T20:26:34.301Z",
+      "updated_at": "2020-12-07T19:08:23.730Z",
       "id": 1207661,
       "schema": {
         "menuName": {
@@ -270,8 +277,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805315,
+          "name": "Basic",
+          "component_id": 1207661,
+          "image": ""
+        }
+      ],
+      "preset_id": 805315,
       "real_name": "ActionCardContainer",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -280,7 +294,7 @@
       "name": "AppBar",
       "display_name": null,
       "created_at": "2020-11-22T19:20:49.839Z",
-      "updated_at": "2020-11-22T19:20:49.839Z",
+      "updated_at": "2020-12-17T00:26:18.148Z",
       "id": 1202902,
       "schema": {
         "content": {
@@ -389,6 +403,18 @@
           "description": "Override or extend the styles applied to the component.",
           "options": [],
           "pos": 6
+        },
+        "tab-82922642-87ef-4fa6-8efd-84beebf56df3": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "appBarColorScroll"
+          ],
+          "pos": 0
+        },
+        "appBarColorScroll": {
+          "type": "boolean",
+          "description": "If true, App Bar will start as transparent and once the app bar is scrolled past the entire vh of the first page, it will revert to the original app bar.\nThis was designed for pages with a background image taking 100vh of the screen."
         }
       },
       "image": null,
@@ -396,8 +422,21 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 801542,
+          "name": "Basic",
+          "component_id": 1202902,
+          "image": ""
+        },
+        {
+          "id": 801546,
+          "name": "Basic w/ Icon Drawer",
+          "component_id": 1202902,
+          "image": ""
+        }
+      ],
+      "preset_id": 801542,
       "real_name": "AppBar",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -1229,7 +1268,7 @@
       "name": "AudioPlayer",
       "display_name": null,
       "created_at": "2020-11-25T20:17:54.338Z",
-      "updated_at": "2020-11-25T20:18:19.252Z",
+      "updated_at": "2020-12-03T03:16:58.441Z",
       "id": 1207627,
       "schema": {
         "src": {
@@ -1372,8 +1411,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800614,
+          "name": "basic",
+          "component_id": 1207627,
+          "image": ""
+        }
+      ],
+      "preset_id": 800614,
       "real_name": "AudioPlayer",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -1511,7 +1557,7 @@
       "name": "Button",
       "display_name": null,
       "created_at": "2020-11-22T19:20:52.274Z",
-      "updated_at": "2020-11-24T06:16:15.356Z",
+      "updated_at": "2021-01-05T18:10:35.371Z",
       "id": 1202905,
       "schema": {
         "buttonText": {
@@ -1568,6 +1614,16 @@
           "required": true,
           "pos": 2
         },
+        "startIcon": {
+          "type": "bloks",
+          "description": "* name of Icon uses MuiIcon\n* Element placed before the children. renders icon\n* any icon from https://material.io/resources/icons/?style=baseline",
+          "restrict_components": true,
+          "component_whitelist": [
+            "MuiIcon"
+          ],
+          "maximum": "1",
+          "pos": 3
+        },
         "variant": {
           "type": "option",
           "use_uuid": true,
@@ -1587,7 +1643,7 @@
           ],
           "required": true,
           "default_value": "text",
-          "pos": 3
+          "pos": 4
         },
         "disableElevation": {
           "type": "boolean",
@@ -1607,31 +1663,21 @@
             }
           ],
           "required": false,
-          "pos": 4
+          "pos": 5
         },
         "disableFocusRipple": {
           "type": "boolean",
           "description": "If true, the keyboard focus ripple will be disabled. disableRipple must also be true.",
-          "pos": 5
+          "pos": 6
         },
         "disableRipple": {
           "type": "boolean",
           "description": "If true, the ripple effect will be disabled.      * Without a ripple there is no styling for :focus-visible by default. Be sure to highlight the element by applying separate styles with the focusVisibleClassName.",
-          "pos": 6
+          "pos": 7
         },
         "fullWidth": {
           "type": "boolean",
           "description": "If true, the button will take up the full width of its container.",
-          "pos": 7
-        },
-        "startIcon": {
-          "type": "bloks",
-          "description": "* name of Icon uses MuiIcon\n* Element placed before the children. renders icon\n* any icon from https://material.io/resources/icons/?style=baseline",
-          "restrict_components": true,
-          "component_whitelist": [
-            "MuiIcon"
-          ],
-          "maximum": "1",
           "pos": 8
         },
         "endIcon": {
@@ -1659,7 +1705,38 @@
           "description": "     * Override or extend the styles applied to the component      * expecting array of string ex: ['color: black', 'font-Size: 20px' ]",
           "pos": 11,
           "min_options": "",
-          "options": []
+          "options": [
+            {
+              "value": "color: #FFF",
+              "name": "White Text"
+            },
+            {
+              "value": "margin-top: 25px",
+              "name": "Margin Top 25px"
+            },
+            {
+              "value": "margin-right: 75px",
+              "name": "Margin Right 75px"
+            }
+          ]
+        },
+        "tab-a51e70bc-9e41-4832-b214-7c1a3340ecce": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "tooltip",
+            "endIcon",
+            "startIcon"
+          ],
+          "pos": 12
+        },
+        "tab-cf1ea5cd-8b95-4de2-837f-6f468e59a647": {
+          "type": "tab",
+          "display_name": "Advance",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 13
         }
       },
       "image": null,
@@ -1677,7 +1754,7 @@
       "name": "ButtonDialog",
       "display_name": null,
       "created_at": "2020-11-24T04:11:29.955Z",
-      "updated_at": "2020-11-24T04:11:29.955Z",
+      "updated_at": "2020-12-03T05:53:29.678Z",
       "id": 1204872,
       "schema": {
         "dialog": {
@@ -1704,8 +1781,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800665,
+          "name": "Basic",
+          "component_id": 1204872,
+          "image": ""
+        }
+      ],
+      "preset_id": 800665,
       "real_name": "ButtonDialog",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -1774,7 +1858,7 @@
       "name": "ButtonDrawer",
       "display_name": null,
       "created_at": "2020-11-24T04:11:30.763Z",
-      "updated_at": "2020-11-24T04:11:30.763Z",
+      "updated_at": "2020-12-07T19:20:32.803Z",
       "id": 1204874,
       "schema": {
         "button": {
@@ -1801,8 +1885,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800664,
+          "name": "Basic",
+          "component_id": 1204874,
+          "image": ""
+        }
+      ],
+      "preset_id": 800664,
       "real_name": "ButtonDrawer",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -1811,7 +1902,7 @@
       "name": "ButtonRedirect",
       "display_name": null,
       "created_at": "2020-11-22T19:20:52.523Z",
-      "updated_at": "2020-11-22T19:20:52.523Z",
+      "updated_at": "2020-12-03T03:15:10.018Z",
       "id": 1202906,
       "schema": {
         "href": {
@@ -1842,8 +1933,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800613,
+          "name": "basic",
+          "component_id": 1202906,
+          "image": ""
+        }
+      ],
+      "preset_id": 800613,
       "real_name": "ButtonRedirect",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -1852,9 +1950,27 @@
       "name": "Card",
       "display_name": null,
       "created_at": "2020-11-22T19:20:53.141Z",
-      "updated_at": "2020-11-24T04:11:31.704Z",
+      "updated_at": "2021-01-04T19:41:30.598Z",
       "id": 1202907,
       "schema": {
+        "rootClass": {
+          "type": "options",
+          "pos": 0,
+          "min_options": "",
+          "max_options": "",
+          "options": [
+            {
+              "value": "padding: 0 20px",
+              "name": "Inner Padding 20px"
+            },
+            {
+              "value": "margin-top: 20px",
+              "name": "Margin Top 20px"
+            }
+          ],
+          "default_value": "",
+          "description": "* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components "
+        },
         "content": {
           "type": "bloks",
           "restrict_components": true,
@@ -1864,17 +1980,17 @@
             "CardMedia",
             "CardHeader"
           ],
-          "pos": 0,
+          "pos": 1,
           "description": "The different sections of a card to render\n"
         },
         "raised": {
           "type": "boolean",
           "description": "If checked, the card will have shadow under it.\n",
-          "pos": 1
+          "pos": 2
         },
         "variant": {
           "type": "option",
-          "pos": 2,
+          "pos": 3,
           "description": "Elevation will keep appear more elevated\nOutlined will add a solid border ",
           "default_value": "elevation",
           "use_uuid": true,
@@ -1891,36 +2007,35 @@
         },
         "elevation": {
           "type": "number",
-          "pos": 3,
+          "pos": 4,
           "description": "* It accepts values between 0 and 24 inclusive.\n* Shadow depth, corresponds to dp in the spec.\n* Set to 0 for no shadow.",
           "default_value": "1"
         },
         "square": {
           "type": "boolean",
-          "pos": 4,
+          "pos": 5,
           "description": "If checked, Cards corners will be at a 90 degree angle."
         },
         "height": {
           "type": "text",
           "default_value": "100%",
           "description": "Height of the card values can be in (px, em, %, vh)",
-          "pos": 5,
+          "pos": 6,
           "regex": ""
         },
         "width": {
           "type": "text",
           "description": "Width of the card values can be in (px, em, %, vw)",
           "default_value": "100%",
-          "pos": 6
+          "pos": 7
         },
-        "rootClass": {
-          "type": "options",
-          "pos": 7,
-          "min_options": "",
-          "max_options": "",
-          "options": [],
-          "default_value": "",
-          "description": "* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components "
+        "tab-45591956-9d70-4bb1-826f-45fec2af1618": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 8
         }
       },
       "image": null,
@@ -1928,8 +2043,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805316,
+          "name": "Basic / Borderless / Text",
+          "component_id": 1202907,
+          "image": ""
+        }
+      ],
+      "preset_id": 805316,
       "real_name": "Card",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -1938,7 +2060,7 @@
       "name": "CardActions",
       "display_name": null,
       "created_at": "2020-11-22T19:20:53.386Z",
-      "updated_at": "2020-11-24T19:41:15.684Z",
+      "updated_at": "2021-01-05T18:11:53.246Z",
       "id": 1202908,
       "schema": {
         "content": {
@@ -1964,7 +2086,13 @@
         "rootClass": {
           "type": "options",
           "pos": 2,
-          "description": "* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components "
+          "description": "* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components ",
+          "options": [
+            {
+              "value": "justify-content: center",
+              "name": "justify center"
+            }
+          ]
         }
       },
       "image": null,
@@ -1972,7 +2100,32 @@
       "is_root": false,
       "preview_tmpl": "",
       "is_nestable": true,
-      "all_presets": [],
+      "all_presets": [
+        {
+          "id": 805356,
+          "name": "Basic w/ Button DIalog",
+          "component_id": 1202908,
+          "image": ""
+        },
+        {
+          "id": 805358,
+          "name": "Basic w/ Button Redirect",
+          "component_id": 1202908,
+          "image": ""
+        },
+        {
+          "id": 805357,
+          "name": "Basic w/ Icon Dialog",
+          "component_id": 1202908,
+          "image": ""
+        },
+        {
+          "id": 805359,
+          "name": "Basic w/ Icon Redirect",
+          "component_id": 1202908,
+          "image": ""
+        }
+      ],
       "preset_id": null,
       "real_name": "CardActions",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
@@ -2011,7 +2164,44 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
+      "all_presets": [
+        {
+          "id": 805361,
+          "name": "Basic w/ Accordion",
+          "component_id": 1202909,
+          "image": ""
+        },
+        {
+          "id": 805362,
+          "name": "Basic w/ List Dropdown",
+          "component_id": 1202909,
+          "image": ""
+        },
+        {
+          "id": 805370,
+          "name": "Basic w/ Styled List",
+          "component_id": 1202909,
+          "image": ""
+        },
+        {
+          "id": 805440,
+          "name": "Basic w/ Text Info",
+          "component_id": 1202909,
+          "image": ""
+        },
+        {
+          "id": 805401,
+          "name": "Basic w/ Typography",
+          "component_id": 1202909,
+          "image": ""
+        },
+        {
+          "id": 805439,
+          "name": "Basic w/ Video",
+          "component_id": 1202909,
+          "image": ""
+        }
+      ],
       "preset_id": null,
       "real_name": "CardContent",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
@@ -2070,7 +2260,20 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
+      "all_presets": [
+        {
+          "id": 805355,
+          "name": "Basic w/ Action Icon",
+          "component_id": 1202910,
+          "image": ""
+        },
+        {
+          "id": 805354,
+          "name": "Basic w/ Avatar",
+          "component_id": 1202910,
+          "image": ""
+        }
+      ],
       "preset_id": null,
       "real_name": "CardHeader",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
@@ -2080,7 +2283,7 @@
       "name": "CardMedia",
       "display_name": null,
       "created_at": "2020-11-22T19:20:54.760Z",
-      "updated_at": "2020-11-24T04:11:33.083Z",
+      "updated_at": "2020-12-07T23:14:04.296Z",
       "id": 1202911,
       "schema": {
         "image": {
@@ -2114,8 +2317,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805441,
+          "name": "Basic",
+          "component_id": 1202911,
+          "image": ""
+        }
+      ],
+      "preset_id": 805441,
       "real_name": "CardMedia",
       "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
       "component_group_name": "Atoms"
@@ -2124,12 +2334,30 @@
       "name": "ChatzListItem",
       "display_name": null,
       "created_at": "2020-12-01T23:22:46.507Z",
-      "updated_at": "2020-12-01T23:23:05.558Z",
+      "updated_at": "2020-12-09T17:05:10.904Z",
       "id": 1215456,
       "schema": {
         "src": {
           "type": "text",
           "pos": 0
+        },
+        "imageSize": {
+          "type": "number",
+          "description": "Size of the image, must be a whole number",
+          "default_value": "75",
+          "pos": 1
+        },
+        "title": {
+          "type": "text",
+          "pos": 2
+        },
+        "subtitle": {
+          "type": "text",
+          "pos": 3
+        },
+        "body": {
+          "type": "text",
+          "pos": 4
         },
         "iconButton": {
           "type": "bloks",
@@ -2141,15 +2369,7 @@
             "IconButtonRedirect"
           ],
           "maximum": "1",
-          "pos": 1
-        },
-        "title": {
-          "type": "text",
-          "pos": 2
-        },
-        "subtitle": {
-          "type": "text",
-          "pos": 3
+          "pos": 5
         },
         "infoIcon": {
           "type": "bloks",
@@ -2159,11 +2379,11 @@
           "component_whitelist": [
             "Icon"
           ],
-          "pos": 4
+          "pos": 6
         },
         "infoText": {
           "type": "text",
-          "pos": 5
+          "pos": 7
         },
         "tab-1850230c-dd3c-4d58-920e-13399544e450": {
           "type": "tab",
@@ -2171,15 +2391,34 @@
           "keys": [
             "infoText",
             "infoIcon",
-            "iconButton"
+            "iconButton",
+            "body",
+            "size",
+            "titleSize",
+            "subtitleSize",
+            "imageSize"
           ],
-          "pos": 6
+          "pos": 8
         },
         "tab-064636fd-c59e-4144-962c-b38cb9aaa9ae": {
           "type": "tab",
           "display_name": "Advance",
           "keys": [],
-          "pos": 7
+          "pos": 9
+        },
+        "titleSize": {
+          "type": "text",
+          "default_value": "0.875rem",
+          "display_name": "",
+          "description": "Font size of the title text",
+          "pos": 10
+        },
+        "subtitleSize": {
+          "type": "text",
+          "description": "Font size of the subtitle",
+          "default_value": "0.875rem",
+          "display_name": "",
+          "pos": 11
         }
       },
       "image": null,
@@ -2187,8 +2426,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800608,
+          "name": "basic",
+          "component_id": 1215456,
+          "image": ""
+        }
+      ],
+      "preset_id": 800608,
       "real_name": "ChatzListItem",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -2246,28 +2492,10 @@
       "component_group_name": "Molecules"
     },
     {
-      "name": "Cool",
-      "display_name": null,
-      "created_at": "2020-12-01T19:04:37.949Z",
-      "updated_at": "2020-12-01T19:04:37.949Z",
-      "id": 1215027,
-      "schema": {},
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "Cool",
-      "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
-      "component_group_name": "Atoms"
-    },
-    {
       "name": "Dialog",
       "display_name": null,
       "created_at": "2020-11-24T04:11:33.322Z",
-      "updated_at": "2020-11-24T04:11:33.322Z",
+      "updated_at": "2020-12-03T05:37:45.108Z",
       "id": 1204875,
       "schema": {
         "content": {
@@ -2292,8 +2520,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800660,
+          "name": "basic",
+          "component_id": 1204875,
+          "image": ""
+        }
+      ],
+      "preset_id": 800660,
       "real_name": "Dialog",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -2405,10 +2640,137 @@
       "component_group_name": "Atoms"
     },
     {
+      "name": "Divider",
+      "display_name": null,
+      "created_at": "2020-12-17T17:50:57.366Z",
+      "updated_at": "2021-01-05T17:41:34.018Z",
+      "id": 1240956,
+      "schema": {
+        "width": {
+          "type": "text",
+          "default_value": "100%",
+          "description": "Width of the horizontal rule.",
+          "display_name": "",
+          "pos": 1
+        },
+        "thickness": {
+          "type": "text",
+          "description": "Thickness of the Horizontal Rule Line.",
+          "display_name": "",
+          "default_value": ".7px",
+          "pos": 2
+        },
+        "lineStyle": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "solid",
+              "name": "solid"
+            },
+            {
+              "value": "dashed",
+              "name": "dashed"
+            },
+            {
+              "value": "dotted",
+              "name": "dotted"
+            }
+          ],
+          "description": "The styling of the Horizontal line rule.\n",
+          "default_value": "solid",
+          "pos": 3
+        },
+        "color": {
+          "type": "text",
+          "description": "Color of the Horizontal Rule line.",
+          "display_name": "",
+          "default_value": "#000",
+          "pos": 4
+        },
+        "borderRadius": {
+          "type": "text",
+          "description": "Border Radius takes a px or percentage and rounds the border based on input.",
+          "display_name": "",
+          "default_value": "1px",
+          "pos": 5
+        },
+        "tab-384bfe8c-f325-494d-af82-4973263e50de": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "rootClass",
+            "transition",
+            "preSetStyle"
+          ],
+          "pos": 7
+        },
+        "preSetStyle": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "fadeInOut",
+              "name": "Fade in & Out"
+            }
+          ],
+          "description": "Styles pre made for Divider"
+        },
+        "tab-fbe35d4a-1805-4e37-864b-35952dc7df45": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass",
+            "centeredText"
+          ],
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "Custom css styles applied to Divider.",
+          "regex": "",
+          "max_length": "",
+          "options": [
+            {
+              "value": "margin-top: 25px",
+              "name": "Margin Top 25px"
+            },
+            {
+              "value": "margin-bottom: 25px",
+              "name": "Margin Bottom 25px"
+            },
+            {
+              "value": "position: relative",
+              "name": "Position relative"
+            },
+            {
+              "value": "left: 0",
+              "name": "Left"
+            }
+          ]
+        },
+        "lineHeight": {
+          "type": "text",
+          "description": "Specifies the height of the line",
+          "default_value": "1"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "Divider",
+      "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
+      "component_group_name": "Atoms"
+    },
+    {
       "name": "Drawer",
       "display_name": null,
       "created_at": "2020-11-24T04:11:35.242Z",
-      "updated_at": "2020-11-25T16:23:45.648Z",
+      "updated_at": "2020-12-03T05:47:26.941Z",
       "id": 1204879,
       "schema": {
         "content": {
@@ -2488,8 +2850,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800662,
+          "name": "basic",
+          "component_id": 1204879,
+          "image": ""
+        }
+      ],
+      "preset_id": 800662,
       "real_name": "Drawer",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -3564,7 +3933,7 @@
       "name": "GridList",
       "display_name": null,
       "created_at": "2020-11-24T04:11:37.019Z",
-      "updated_at": "2020-11-24T04:11:37.019Z",
+      "updated_at": "2020-12-08T23:29:13.950Z",
       "id": 1204880,
       "schema": {
         "content": {
@@ -3596,16 +3965,17 @@
           "pos": 3
         },
         "height": {
-          "type": "text",
-          "description": "Height of the Gridlist values can be in (px, em, %, vh)\n",
+          "type": "number",
+          "description": "Height of the Gridlist values must be a whole number\n",
           "max_length": "",
-          "default_value": "500px",
-          "pos": 4
+          "default_value": "500",
+          "pos": 4,
+          "display_name": ""
         },
         "width": {
-          "type": "text",
-          "description": "Width of the Gridlist values can be in (px, em, %, vw)\n",
-          "default_value": "450px",
+          "type": "number",
+          "description": "Width of the Gridlist values must be a whole number\n",
+          "default_value": "450",
           "pos": 5
         },
         "rootClass": {
@@ -3621,8 +3991,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805450,
+          "name": "Basic",
+          "component_id": 1204880,
+          "image": ""
+        }
+      ],
+      "preset_id": 805450,
       "real_name": "GridList",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -3687,7 +4064,7 @@
       "name": "Icon",
       "display_name": null,
       "created_at": "2020-11-22T19:20:57.950Z",
-      "updated_at": "2020-11-22T19:20:57.950Z",
+      "updated_at": "2020-12-08T20:54:50.933Z",
       "id": 1202915,
       "schema": {
         "iconName": {
@@ -3753,7 +4130,12 @@
         "rootClass": {
           "type": "options",
           "min_options": "",
-          "options": []
+          "options": [
+            {
+              "value": "color: #FFF",
+              "name": "White Icon"
+            }
+          ]
         }
       },
       "image": null,
@@ -3761,8 +4143,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800654,
+          "name": "basic",
+          "component_id": 1202915,
+          "image": ""
+        }
+      ],
+      "preset_id": 800654,
       "real_name": "Icon",
       "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
       "component_group_name": "Atoms"
@@ -3771,7 +4160,7 @@
       "name": "IconButton",
       "display_name": null,
       "created_at": "2020-11-24T04:11:39.039Z",
-      "updated_at": "2020-11-24T05:43:53.968Z",
+      "updated_at": "2020-12-03T05:39:13.419Z",
       "id": 1204882,
       "schema": {
         "icon": {
@@ -3878,8 +4267,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800661,
+          "name": "basic",
+          "component_id": 1204882,
+          "image": ""
+        }
+      ],
+      "preset_id": 800661,
       "real_name": "IconButton",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -3888,7 +4284,7 @@
       "name": "IconButtonDialog",
       "display_name": null,
       "created_at": "2020-11-24T04:11:39.379Z",
-      "updated_at": "2020-11-24T19:51:38.171Z",
+      "updated_at": "2020-12-03T03:12:37.818Z",
       "id": 1204883,
       "schema": {
         "dialog": {
@@ -3916,8 +4312,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800612,
+          "name": "basic",
+          "component_id": 1204883,
+          "image": ""
+        }
+      ],
+      "preset_id": 800612,
       "real_name": "IconButtonDialog",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -3926,7 +4329,7 @@
       "name": "IconButtonDownload",
       "display_name": null,
       "created_at": "2020-11-24T04:11:39.663Z",
-      "updated_at": "2020-11-24T04:11:39.663Z",
+      "updated_at": "2020-12-03T03:04:07.826Z",
       "id": 1204884,
       "schema": {
         "iconButton": {
@@ -3959,8 +4362,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800611,
+          "name": "basic",
+          "component_id": 1204884,
+          "image": ""
+        }
+      ],
+      "preset_id": 800611,
       "real_name": "IconButtonDownload",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -3969,7 +4379,7 @@
       "name": "IconButtonDrawer",
       "display_name": null,
       "created_at": "2020-11-24T04:11:40.100Z",
-      "updated_at": "2020-11-24T04:11:40.100Z",
+      "updated_at": "2020-12-07T19:28:28.630Z",
       "id": 1204885,
       "schema": {
         "button": {
@@ -3998,8 +4408,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805568,
+          "name": "Basic",
+          "component_id": 1204885,
+          "image": ""
+        }
+      ],
+      "preset_id": 805568,
       "real_name": "IconButtonDrawer",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -4008,7 +4425,7 @@
       "name": "IconButtonRedirect",
       "display_name": null,
       "created_at": "2020-11-24T04:11:40.570Z",
-      "updated_at": "2020-11-24T04:11:40.570Z",
+      "updated_at": "2020-12-03T02:51:39.753Z",
       "id": 1204886,
       "schema": {
         "iconButton": {
@@ -4038,8 +4455,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800610,
+          "name": "basic",
+          "component_id": 1204886,
+          "image": ""
+        }
+      ],
+      "preset_id": 800610,
       "real_name": "IconButtonRedirect",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -4048,7 +4472,7 @@
       "name": "Image",
       "display_name": null,
       "created_at": "2020-11-24T04:11:40.841Z",
-      "updated_at": "2020-11-24T05:30:56.133Z",
+      "updated_at": "2021-01-04T19:41:11.078Z",
       "id": 1204887,
       "schema": {
         "image": {
@@ -4064,16 +4488,24 @@
           "description": "Link to redirect on click\nIf provided clicking the image will redirect you to a new url (http://google.com)\n",
           "pos": 1
         },
+        "imageStyle": {
+          "type": "options",
+          "description": "Styling for the image\n\n* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components ",
+          "min_options": "",
+          "options": [],
+          "pos": 2,
+          "default_value": ""
+        },
         "height": {
           "type": "text",
-          "pos": 2,
+          "pos": 3,
           "default_value": "500px",
           "description": "height of the image 'px', 'em', '%' 'vh', 'vh', as unit of measurement",
           "required": true
         },
         "width": {
           "type": "text",
-          "pos": 3,
+          "pos": 4,
           "required": true,
           "default_value": "500px",
           "description": "height of the width 'px', 'em', '%' 'vh', 'vh', as unit of measurement"
@@ -4082,15 +4514,16 @@
           "type": "options",
           "description": "Styling for the container of image\n\n* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components \n",
           "options": [],
-          "pos": 4
+          "pos": 5
         },
-        "imageStyle": {
-          "type": "options",
-          "description": "Styling for the image\n\n* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components ",
-          "min_options": "",
-          "options": [],
-          "pos": 5,
-          "default_value": ""
+        "tab-4367439b-34b5-42ab-8224-8b75ef6c259e": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass",
+            "imageStyle"
+          ],
+          "pos": 6
         }
       },
       "image": null,
@@ -4103,6 +4536,135 @@
       "real_name": "Image",
       "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
       "component_group_name": "Atoms"
+    },
+    {
+      "name": "ImageScrollBar",
+      "display_name": null,
+      "created_at": "2020-12-15T21:05:14.277Z",
+      "updated_at": "2020-12-16T17:04:26.829Z",
+      "id": 1236963,
+      "schema": {
+        "height": {
+          "type": "text",
+          "pos": 1
+        },
+        "imageScrollBarRow": {
+          "type": "bloks",
+          "options": [
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/surveymonkey.png",
+              "name": "image 1"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/slack.png",
+              "name": "image 2"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/ms-teams.png",
+              "name": "image 3"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/hubspot.png",
+              "name": "image 4"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/dropbox.png",
+              "name": "image 5"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/gmail.png",
+              "name": "image 6"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/copper.png",
+              "name": "image 7"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/mailchimp.png",
+              "name": "image 8"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/facebook.png",
+              "name": "image 9"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/typeform.png",
+              "name": "image 10"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/jira.png",
+              "name": "image 11"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/jotform.png",
+              "name": "image 12"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/github.png",
+              "name": "image 13"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/facebook-ads.png",
+              "name": "image 14"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/twilio.png",
+              "name": "image 15"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/shopify.png",
+              "name": "image 16"
+            },
+            {
+              "value": "https://dapulse-res.cloudinary.com/image/upload/f_auto,q_auto/remote_mondaycom_static/img/segment-layout-default-images/floating-integrations/excel.png",
+              "name": "image 17"
+            }
+          ],
+          "restrict_components": true,
+          "component_whitelist": [
+            "ImageScrollBarRow"
+          ],
+          "description": "The images set in a row. Multiple rows will stack on the image scroll bar.",
+          "required": true,
+          "pos": 0
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ImageScrollBar",
+      "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
+      "component_group_name": "Templates"
+    },
+    {
+      "name": "ImageScrollBarRow",
+      "display_name": null,
+      "created_at": "2020-12-16T16:41:34.304Z",
+      "updated_at": "2020-12-16T16:48:13.824Z",
+      "id": 1238657,
+      "schema": {
+        "images": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Image"
+          ],
+          "description": "Image provided to scroll bar."
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "ImageScrollBarRow",
+      "component_group_uuid": null
     },
     {
       "name": "Link",
@@ -4194,7 +4756,7 @@
       "name": "List",
       "display_name": null,
       "created_at": "2020-11-22T19:20:58.634Z",
-      "updated_at": "2020-12-01T21:59:00.523Z",
+      "updated_at": "2020-12-03T05:36:02.418Z",
       "id": 1202917,
       "schema": {
         "content": {
@@ -4202,7 +4764,7 @@
           "restrict_components": true,
           "component_whitelist": [
             "ListItem",
-            "MusicListItem"
+            "ListItemButton"
           ],
           "required": true,
           "pos": 0
@@ -4233,8 +4795,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800659,
+          "name": "basic",
+          "component_id": 1202917,
+          "image": ""
+        }
+      ],
+      "preset_id": 800659,
       "real_name": "List",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -4243,7 +4812,7 @@
       "name": "ListDropdown",
       "display_name": null,
       "created_at": "2020-11-25T16:14:53.039Z",
-      "updated_at": "2020-11-25T16:21:49.712Z",
+      "updated_at": "2020-12-07T19:07:48.426Z",
       "id": 1207341,
       "schema": {
         "content": {
@@ -4289,8 +4858,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805488,
+          "name": "Basic",
+          "component_id": 1207341,
+          "image": ""
+        }
+      ],
+      "preset_id": 805488,
       "real_name": "ListDropdown",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -4353,22 +4929,12 @@
       "name": "ListItem",
       "display_name": null,
       "created_at": "2020-11-22T19:20:58.953Z",
-      "updated_at": "2020-11-25T16:09:39.347Z",
+      "updated_at": "2020-12-03T05:35:02.246Z",
       "id": 1202918,
       "schema": {
-        "listItemText": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "ListItemText"
-          ],
-          "maximum": "1",
-          "required": true,
-          "pos": 0
-        },
         "listItemAvatar": {
           "type": "bloks",
-          "pos": 1,
+          "pos": 0,
           "maximum": "1",
           "restrict_components": true,
           "component_whitelist": [
@@ -4377,7 +4943,7 @@
         },
         "listItemIcon": {
           "type": "bloks",
-          "pos": 2,
+          "pos": 1,
           "restrict_components": true,
           "maximum": "1",
           "component_whitelist": [
@@ -4386,7 +4952,7 @@
         },
         "listItemSecondaryAction": {
           "type": "bloks",
-          "pos": 3,
+          "pos": 2,
           "restrict_components": true,
           "component_whitelist": [
             "ListItemSecondaryAction"
@@ -4400,7 +4966,24 @@
           "component_whitelist": [
             "ContactButton"
           ],
-          "pos": 4
+          "pos": 3
+        },
+        "alignItems": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            }
+          ],
+          "default_value": "center",
+          "pos": 4,
+          "required": true
         },
         "selected": {
           "type": "boolean",
@@ -4418,35 +5001,33 @@
           "type": "boolean",
           "pos": 8
         },
-        "alignItems": {
-          "type": "option",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "flex-start",
-              "name": "flex-start"
-            },
-            {
-              "value": "center",
-              "name": "center"
-            }
-          ],
-          "default_value": "center",
-          "pos": 9
-        },
         "rootClass": {
           "type": "options",
+          "pos": 9
+        },
+        "listItemText": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "ListItemText"
+          ],
+          "maximum": "1",
+          "required": true,
           "pos": 10
         },
         "tab-00e4ac81-9b08-4d62-9f31-7feac9500940": {
           "type": "tab",
           "display_name": "Optional",
           "keys": [
-            "alignItems",
             "dense",
             "disableGutters",
             "divider",
-            "selected"
+            "selected",
+            "listItemSecondaryAction",
+            "listItemAvatar",
+            "listItemIcon",
+            "contactButton",
+            "alignItems"
           ],
           "pos": 11
         },
@@ -4464,8 +5045,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800657,
+          "name": "basic",
+          "component_id": 1202918,
+          "image": ""
+        }
+      ],
+      "preset_id": 800657,
       "real_name": "ListItem",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
@@ -4474,7 +5062,7 @@
       "name": "ListItemAvatar",
       "display_name": null,
       "created_at": "2020-11-25T15:56:32.159Z",
-      "updated_at": "2020-11-25T15:56:52.767Z",
+      "updated_at": "2020-12-03T06:19:10.212Z",
       "id": 1207275,
       "schema": {
         "content": {
@@ -4495,9 +5083,143 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800667,
+          "name": "basic",
+          "component_id": 1207275,
+          "image": ""
+        }
+      ],
+      "preset_id": 800667,
       "real_name": "ListItemAvatar",
+      "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
+      "component_group_name": "Molecules"
+    },
+    {
+      "name": "ListItemButton",
+      "display_name": null,
+      "created_at": "2020-12-03T05:18:20.285Z",
+      "updated_at": "2020-12-03T05:35:39.144Z",
+      "id": 1217412,
+      "schema": {
+        "listItemText": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "ListItemText"
+          ],
+          "maximum": "1",
+          "required": true,
+          "pos": 0
+        },
+        "href": {
+          "type": "text",
+          "required": true,
+          "description": "url to redirect to\nexternal true: https://google.com\nexternal false: /page-welcome\n",
+          "regex": "",
+          "pos": 1
+        },
+        "external": {
+          "type": "boolean",
+          "description": "   * if false will redirect to a page in the app and should use '/page-whatever'\n   *  if true will redirect to another site 'https://www.google.com/'",
+          "pos": 2
+        },
+        "listItemAvatar": {
+          "type": "bloks",
+          "pos": 3,
+          "maximum": "1",
+          "restrict_components": true,
+          "component_whitelist": [
+            "ListItemAvatar"
+          ]
+        },
+        "listItemIcon": {
+          "type": "bloks",
+          "pos": 4,
+          "restrict_components": true,
+          "maximum": "1",
+          "component_whitelist": [
+            "ListItemIcon"
+          ]
+        },
+        "alignItems": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            }
+          ],
+          "default_value": "center",
+          "pos": 5,
+          "required": true
+        },
+        "selected": {
+          "type": "boolean",
+          "pos": 6
+        },
+        "divider": {
+          "type": "boolean",
+          "pos": 7
+        },
+        "disableGutters": {
+          "type": "boolean",
+          "pos": 8
+        },
+        "dense": {
+          "type": "boolean",
+          "pos": 9
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 10
+        },
+        "tab-00e4ac81-9b08-4d62-9f31-7feac9500940": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "dense",
+            "disableGutters",
+            "divider",
+            "selected",
+            "listItemSecondaryAction",
+            "listItemAvatar",
+            "listItemIcon",
+            "contactButton",
+            "alignItems"
+          ],
+          "pos": 11
+        },
+        "tab-558ea6f9-a1c8-4e71-9d9e-2767a37ee138": {
+          "type": "tab",
+          "display_name": "Advance",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 12
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 800658,
+          "name": "basic",
+          "component_id": 1217412,
+          "image": ""
+        }
+      ],
+      "preset_id": 800658,
+      "real_name": "ListItemButton",
       "component_group_uuid": "d7f43e83-11b3-4c16-818f-e8804971d452",
       "component_group_name": "Molecules"
     },
@@ -4505,7 +5227,7 @@
       "name": "ListItemIcon",
       "display_name": null,
       "created_at": "2020-11-25T15:56:32.603Z",
-      "updated_at": "2020-11-25T15:58:00.704Z",
+      "updated_at": "2020-12-03T06:22:57.853Z",
       "id": 1207278,
       "schema": {
         "content": {
@@ -4527,8 +5249,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800668,
+          "name": "basic",
+          "component_id": 1207278,
+          "image": ""
+        }
+      ],
+      "preset_id": 800668,
       "real_name": "ListItemIcon",
       "component_group_uuid": null
     },
@@ -4585,7 +5314,7 @@
       "name": "ListItemText",
       "display_name": null,
       "created_at": "2020-11-22T19:20:59.201Z",
-      "updated_at": "2020-11-22T19:20:59.201Z",
+      "updated_at": "2020-12-03T06:16:08.116Z",
       "id": 1202919,
       "schema": {
         "primary": {
@@ -4604,8 +5333,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800666,
+          "name": "basic",
+          "component_id": 1202919,
+          "image": ""
+        }
+      ],
+      "preset_id": 800666,
       "real_name": "ListItemText",
       "component_group_uuid": "abb10f27-f870-46b0-aa21-4373983026e0",
       "component_group_name": "Atoms"
@@ -4614,7 +5350,7 @@
       "name": "MobileStepper",
       "display_name": null,
       "created_at": "2020-11-24T04:11:42.395Z",
-      "updated_at": "2020-11-25T18:33:46.820Z",
+      "updated_at": "2020-12-07T22:16:21.129Z",
       "id": 1204888,
       "schema": {
         "tabs": {
@@ -4715,8 +5451,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805700,
+          "name": "Basic",
+          "component_id": 1204888,
+          "image": ""
+        }
+      ],
+      "preset_id": 805700,
       "real_name": "MobileStepper",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -14505,12 +15248,12 @@
       "name": "MusicCard",
       "display_name": null,
       "created_at": "2020-11-29T19:50:34.176Z",
-      "updated_at": "2020-12-01T17:56:18.052Z",
+      "updated_at": "2021-01-04T16:16:14.262Z",
       "id": 1211905,
       "schema": {
         "overline": {
           "type": "text",
-          "required": true,
+          "required": false,
           "max_length": "",
           "pos": 0
         },
@@ -14519,24 +15262,24 @@
           "required": true,
           "pos": 1
         },
-        "image": {
-          "type": "text",
-          "required": true,
-          "pos": 2
-        },
-        "imgAlt": {
-          "type": "text",
-          "required": true,
-          "pos": 3
-        },
-        "imgTitle": {
-          "type": "text",
-          "required": true,
-          "pos": 4
-        },
         "body": {
           "type": "textarea",
           "required": true,
+          "pos": 2
+        },
+        "image": {
+          "type": "text",
+          "required": false,
+          "pos": 3
+        },
+        "imgAlt": {
+          "type": "text",
+          "required": false,
+          "pos": 4
+        },
+        "imgTitle": {
+          "type": "text",
+          "required": false,
           "pos": 5
         },
         "cardActions": {
@@ -14545,7 +15288,59 @@
           "component_whitelist": [
             "CardActions"
           ],
-          "maximum": "1"
+          "maximum": "1",
+          "pos": 6
+        },
+        "tab-545662ee-d3eb-4c7b-a939-771c40915633": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "preStyledOptions"
+          ],
+          "pos": 0
+        },
+        "preStyledOptions": {
+          "type": "option",
+          "use_uuid": true,
+          "description": "Pre made style effects to apply to Card.",
+          "options": [
+            {
+              "value": "shadowTop",
+              "name": "Shadow Top"
+            },
+            {
+              "value": "shadowBottom",
+              "name": "Shadow Bottom"
+            },
+            {
+              "value": "shadowRight",
+              "name": "Shadow Right"
+            },
+            {
+              "value": "shadowLeft",
+              "name": "Shadow Left"
+            },
+            {
+              "value": "shadowCenter",
+              "name": "Shadow Center"
+            },
+            {
+              "value": "shadow3dTR",
+              "name": "Shadow Pop Top-Right"
+            },
+            {
+              "value": "shadow3dBR",
+              "name": "Shadow Pop Bottom-Right"
+            },
+            {
+              "value": "shadow3dBL",
+              "name": "Shadow Pop Bottom-Left"
+            },
+            {
+              "value": "shadow3dTL",
+              "name": "Shadow Pop Top-Left"
+            }
+          ]
         }
       },
       "image": null,
@@ -14553,8 +15348,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805489,
+          "name": "Basic",
+          "component_id": 1211905,
+          "image": ""
+        }
+      ],
+      "preset_id": 805489,
       "real_name": "MusicCard",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -14563,7 +15365,7 @@
       "name": "MusicListItem",
       "display_name": null,
       "created_at": "2020-12-01T21:16:04.083Z",
-      "updated_at": "2020-12-01T21:45:39.926Z",
+      "updated_at": "2020-12-09T17:04:23.158Z",
       "id": 1215330,
       "schema": {
         "src": {
@@ -14610,7 +15412,9 @@
           "keys": [
             "infoText",
             "infoIcon",
-            "iconButton"
+            "iconButton",
+            "titleSize",
+            "subtitleSize"
           ],
           "pos": 6
         },
@@ -14619,6 +15423,17 @@
           "display_name": "Advance",
           "keys": [],
           "pos": 7
+        },
+        "titleSize": {
+          "type": "text",
+          "default_value": "0.875rem",
+          "description": "Size of the title text"
+        },
+        "subtitleSize": {
+          "type": "text",
+          "description": "Text size of the subtitle",
+          "display_name": "",
+          "default_value": "0.875rem"
         }
       },
       "image": null,
@@ -14626,141 +15441,35 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800607,
+          "name": "basic",
+          "component_id": 1215330,
+          "image": ""
+        }
+      ],
+      "preset_id": 800607,
       "real_name": "MusicListItem",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
     },
     {
-      "name": "NotificationBanner",
+      "name": "NestedGrid",
       "display_name": null,
-      "created_at": "2020-11-24T04:12:21.131Z",
-      "updated_at": "2020-11-24T04:12:21.131Z",
-      "id": 1204890,
-      "schema": {
-        "content": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "Typography",
-            "ButtonRedirect",
-            "IconButtonRedirect",
-            "Icon"
-          ],
-          "maximum": "",
-          "required": true,
-          "description": "The content you want to show in the banner",
-          "pos": 0
-        },
-        "color": {
-          "type": "option",
-          "description": "-primary is the primary themes color\n-secondary is the secondary themes color\n-Inherit will be the color of the parent block \n-transparent will make the background transparent\n",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "default",
-              "name": "default"
-            },
-            {
-              "value": "primary",
-              "name": "primary"
-            },
-            {
-              "value": "secondary",
-              "name": "secondary"
-            },
-            {
-              "value": "inherit",
-              "name": "inherit"
-            },
-            {
-              "value": "transparent",
-              "name": "transparent"
-            }
-          ],
-          "default_value": "primary",
-          "pos": 1
-        },
-        "top": {
-          "type": "text",
-          "default_value": "60px",
-          "pos": 2,
-          "description": "Positioning of the banner from the top of the page."
-        },
-        "rootClass": {
-          "type": "options",
-          "description": "This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components \n",
-          "pos": 3
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": false,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "NotificationBanner",
-      "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
-      "component_group_name": "Templates"
-    },
-    {
-      "name": "page",
-      "display_name": null,
-      "created_at": "2020-11-22T19:12:02.890Z",
-      "updated_at": "2020-11-25T20:53:30.669Z",
-      "id": 1202761,
-      "schema": {
-        "seo": {
-          "type": "custom",
-          "pos": 0,
-          "field_type": "seo-metatags",
-          "options": []
-        },
-        "body": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "Blok",
-            "MuiTransitions",
-            "PageGrid"
-          ],
-          "pos": 1,
-          "translatable": false,
-          "required": true
-        },
-        "theme": {
-          "type": "asset",
-          "filetypes": []
-        }
-      },
-      "image": null,
-      "preview_field": null,
-      "is_root": true,
-      "preview_tmpl": null,
-      "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
-      "real_name": "page",
-      "component_group_uuid": null
-    },
-    {
-      "name": "PageGrid",
-      "display_name": null,
-      "created_at": "2020-11-22T19:21:24.305Z",
-      "updated_at": "2020-12-02T19:00:16.123Z",
-      "id": 1202920,
+      "created_at": "2020-12-04T17:20:07.259Z",
+      "updated_at": "2020-12-04T17:20:54.900Z",
+      "id": 1220069,
       "schema": {
         "content": {
           "type": "bloks",
           "maximum": "",
           "restrict_components": true,
           "component_whitelist": [
-            "PageGridItem"
+            "NestedGridItem"
           ],
           "pos": 0,
-          "required": true
+          "required": false
         },
         "direction": {
           "type": "option",
@@ -15003,6 +15712,1240 @@
       "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
+      "real_name": "NestedGrid",
+      "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
+      "component_group_name": "Templates"
+    },
+    {
+      "name": "NestedGridItem",
+      "display_name": null,
+      "created_at": "2020-12-04T17:20:07.526Z",
+      "updated_at": "2020-12-30T18:11:19.847Z",
+      "id": 1220070,
+      "schema": {
+        "backgroundImageUrl": {
+          "type": "text",
+          "pos": 1,
+          "description": "/** url for background img */"
+        },
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Typography",
+            "List",
+            "Card",
+            "Tabs",
+            "Image",
+            "Video",
+            "ButtonDownload",
+            "ButtonRedirect",
+            "IconButtonDownload",
+            "IconButtonRedirect",
+            "GridList",
+            "AppBar",
+            "ButtonDialog",
+            "HeroHeader",
+            "IconButtonDialog",
+            "MobileStepper",
+            "NotificationBanner",
+            "Icon",
+            "ButtonDrawer",
+            "IconButtonDrawer",
+            "Accordion",
+            "SbComponentDocumentation",
+            "ListDropdown",
+            "Form",
+            "GeoLocationMobileStepper",
+            "GeoLocationTabs",
+            "AudioPlayer",
+            "ActionCardContainer",
+            "MusicCard",
+            "ReviewCard",
+            "PostCard",
+            "PricingCard",
+            "Cool",
+            "StyledList",
+            "ContactButton",
+            "Divider"
+          ],
+          "pos": 2,
+          "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
+          "required": false
+        },
+        "direction": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "row",
+              "name": "row"
+            },
+            {
+              "value": "row-reverse",
+              "name": "row-reverse"
+            },
+            {
+              "value": "column",
+              "name": "column"
+            },
+            {
+              "value": "column-reverse",
+              "name": "column-reverse"
+            }
+          ],
+          "default_value": "row",
+          "required": true,
+          "pos": 3,
+          "description": "Specifies the direction of the grid items."
+        },
+        "alignContent": {
+          "type": "option",
+          "pos": 4,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "stretch",
+              "name": "stretch"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "space-between",
+              "name": "space-between"
+            },
+            {
+              "value": "space-around",
+              "name": "space-around"
+            }
+          ],
+          "required": true,
+          "description": "Determines the spacing between lines. Does not interfere with items in a rows/columns but with the rows/columns itself. Depends on 'direction' prop (row/column/row-reverse/column-reverse)",
+          "default_value": "stretch"
+        },
+        "justify": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "space-between",
+              "name": "space-between"
+            },
+            {
+              "value": "space-around",
+              "name": "space-around"
+            },
+            {
+              "value": "space-evenly",
+              "name": "space-evenly"
+            }
+          ],
+          "description": "Defines the alignment along the main axis. Distributes free space accordingly.",
+          "default_value": "center",
+          "required": true,
+          "pos": 5
+        },
+        "alignItems": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "stretch",
+              "name": "stretch"
+            },
+            {
+              "value": "baseline",
+              "name": "baseline"
+            }
+          ],
+          "default_value": "center",
+          "required": true,
+          "pos": 6,
+          "description": "Used for items in a single row. Single row elements on the main axis will align respectively of each other."
+        },
+        "spacing": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "0",
+              "name": "0"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            }
+          ],
+          "display_name": "",
+          "default_value": "0",
+          "required": true,
+          "pos": 7,
+          "description": "Defines the space between items. Ranges from (0-10)"
+        },
+        "wrap": {
+          "type": "option",
+          "pos": 8,
+          "use_uuid": true,
+          "description": "Defines whether the items are forced in a single line or can be flowed into multiple lines.",
+          "options": [
+            {
+              "value": "nowrap",
+              "name": "nowrap"
+            },
+            {
+              "value": "wrap",
+              "name": "wrap"
+            },
+            {
+              "value": "wrap-reverse",
+              "name": "wrap-reverse"
+            }
+          ],
+          "required": true,
+          "default_value": "wrap"
+        },
+        "xs": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 9
+        },
+        "sm": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 10,
+          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
+        },
+        "md": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 11,
+          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
+        },
+        "lg": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 12,
+          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
+        },
+        "xl": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 13,
+          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
+        },
+        "rootClass": {
+          "type": "options",
+          "pos": 14,
+          "options": []
+        },
+        "tab-4b854fa1-a822-4b5a-ad7c-1f53fb0bec69": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "backgroundImageUrl",
+            "height"
+          ],
+          "pos": 15
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "NestedGridItem",
+      "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
+      "component_group_name": "Templates"
+    },
+    {
+      "name": "NotificationBanner",
+      "display_name": null,
+      "created_at": "2020-11-24T04:12:21.131Z",
+      "updated_at": "2020-12-07T19:42:33.909Z",
+      "id": 1204890,
+      "schema": {
+        "content": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Typography",
+            "ButtonRedirect",
+            "IconButtonRedirect",
+            "Icon"
+          ],
+          "maximum": "",
+          "required": true,
+          "description": "The content you want to show in the banner",
+          "pos": 0
+        },
+        "color": {
+          "type": "option",
+          "description": "-primary is the primary themes color\n-secondary is the secondary themes color\n-Inherit will be the color of the parent block \n-transparent will make the background transparent\n",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "default",
+              "name": "default"
+            },
+            {
+              "value": "primary",
+              "name": "primary"
+            },
+            {
+              "value": "secondary",
+              "name": "secondary"
+            },
+            {
+              "value": "inherit",
+              "name": "inherit"
+            },
+            {
+              "value": "transparent",
+              "name": "transparent"
+            }
+          ],
+          "default_value": "primary",
+          "pos": 1
+        },
+        "top": {
+          "type": "text",
+          "default_value": "60px",
+          "pos": 2,
+          "description": "Positioning of the banner from the top of the page."
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components \n",
+          "pos": 3
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 805570,
+          "name": "Basic",
+          "component_id": 1204890,
+          "image": ""
+        }
+      ],
+      "preset_id": 805570,
+      "real_name": "NotificationBanner",
+      "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
+      "component_group_name": "Templates"
+    },
+    {
+      "name": "page",
+      "display_name": null,
+      "created_at": "2020-11-22T19:12:02.890Z",
+      "updated_at": "2020-12-30T17:42:03.460Z",
+      "id": 1202761,
+      "schema": {
+        "seo": {
+          "type": "custom",
+          "pos": 0,
+          "field_type": "seo-metatags",
+          "options": []
+        },
+        "body": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Blok",
+            "MuiTransitions",
+            "PageGrid"
+          ],
+          "pos": 1,
+          "translatable": false,
+          "required": true
+        },
+        "theme": {
+          "type": "asset",
+          "filetypes": []
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [
+        {
+          "id": 833621,
+          "name": "aboutDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833617,
+          "name": "choiceagricultureDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833619,
+          "name": "choiceprogramDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833620,
+          "name": "energymanagementDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833616,
+          "name": "faqDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833614,
+          "name": "landingDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833618,
+          "name": "naturalgasprogramsDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833622,
+          "name": "pagenotfoundDemo",
+          "component_id": 1202761,
+          "image": ""
+        },
+        {
+          "id": 833615,
+          "name": "wreservicesDemo",
+          "component_id": 1202761,
+          "image": ""
+        }
+      ],
+      "preset_id": null,
+      "real_name": "page",
+      "component_group_uuid": null
+    },
+    {
+      "name": "PageGrid",
+      "display_name": null,
+      "created_at": "2020-11-22T19:21:24.305Z",
+      "updated_at": "2021-01-04T22:06:55.958Z",
+      "id": 1202920,
+      "schema": {
+        "content": {
+          "type": "bloks",
+          "maximum": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "PageGridItem"
+          ],
+          "pos": 0,
+          "required": false
+        },
+        "direction": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "row",
+              "name": "row"
+            },
+            {
+              "value": "row-reverse",
+              "name": "row-reverse"
+            },
+            {
+              "value": "column",
+              "name": "column"
+            },
+            {
+              "value": "column-reverse",
+              "name": "column-reverse"
+            }
+          ],
+          "default_value": "row",
+          "required": true,
+          "description": "   * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'    * Defines the align-content style property. It's applied for all screen sizes.",
+          "pos": 1
+        },
+        "backgroundImageUrl": {
+          "type": "text",
+          "description": "url to add a background image to the grid container",
+          "pos": 2
+        },
+        "alignContent": {
+          "type": "option",
+          "pos": 3,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "stretch",
+              "name": "stretch"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "space-between",
+              "name": "space-between"
+            },
+            {
+              "value": "space-around",
+              "name": "space-around"
+            }
+          ],
+          "required": true,
+          "default_value": "stretch",
+          "description": "   * mui prop: 'stretch'| 'center'| 'flex-start'| 'flex-end'| 'space-between'| 'space-around'    * Defines the align-content style property. It's applied for all screen sizes."
+        },
+        "alignItems": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "stretch",
+              "name": "stretch"
+            },
+            {
+              "value": "baseline",
+              "name": "baseline"
+            }
+          ],
+          "default_value": "center",
+          "required": true,
+          "pos": 4,
+          "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'stretch' | 'baseline'    * Defines the align-items style property. It's applied for all screen sizes."
+        },
+        "justify": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "flex-start",
+              "name": "flex-start"
+            },
+            {
+              "value": "center",
+              "name": "center"
+            },
+            {
+              "value": "flex-end",
+              "name": "flex-end"
+            },
+            {
+              "value": "space-between",
+              "name": "space-between"
+            },
+            {
+              "value": "space-around",
+              "name": "space-around"
+            },
+            {
+              "value": "space-evenly",
+              "name": "space-evenly"
+            }
+          ],
+          "default_value": "center",
+          "required": true,
+          "pos": 5,
+          "description": "   * mui prop: 'flex-start' | 'center' | 'flex-end' | 'space-between' | 'space-around' | 'space-evenly'    * Defines the justify-content style property. It is applied for all screen sizes."
+        },
+        "spacing": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "0",
+              "name": "0"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            }
+          ],
+          "default_value": "0",
+          "required": true,
+          "pos": 6
+        },
+        "wrap": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "nowrap",
+              "name": "nowrap"
+            },
+            {
+              "value": "wrap",
+              "name": "wrap"
+            },
+            {
+              "value": "wrap-reverse",
+              "name": "wrap-reverse"
+            }
+          ],
+          "required": true,
+          "default_value": "wrap",
+          "description": "Defines the flex-wrap style property. It's applied for all screen sizes.",
+          "pos": 7
+        },
+        "height": {
+          "type": "text",
+          "description": "height of the grid",
+          "default_value": "100%",
+          "required": true,
+          "pos": 8
+        },
+        "rootClass": {
+          "type": "options",
+          "options": [
+            {
+              "value": "margin-top: 50px",
+              "name": "Margin 50px top"
+            },
+            {
+              "value": "margin-bottom: 50px",
+              "name": "Margin 50px bottom"
+            },
+            {
+              "value": "margin-top: -64px",
+              "name": "Align AppBar"
+            },
+            {
+              "value": "background-color: #70AE6E",
+              "name": "BG Color WR"
+            },
+            {
+              "value": "padding-top: 50px",
+              "name": "Padding 50px top"
+            },
+            {
+              "value": "padding-bottom: 50px",
+              "name": "Padding 50px bottom"
+            },
+            {
+              "value": "max-width: 75vw",
+              "name": "maxWidth 75vw"
+            },
+            {
+              "value": "padding-left: 25px",
+              "name": "Padding Left 25px"
+            },
+            {
+              "value": "padding-right: 25px",
+              "name": "Padding Right 25px"
+            },
+            {
+              "value": "padding: 0 10%",
+              "name": "Padding L/R 10%"
+            }
+          ],
+          "pos": 9
+        },
+        "tab-f370be87-a2a2-4b59-b59c-c5575eec13e7": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "height",
+            "backgroundImageUrl",
+            "transition",
+            "only",
+            "backgroundColor",
+            "backgroundColor"
+          ],
+          "pos": 10
+        },
+        "tab-aa49e191-d2b4-4283-9b32-6cc49efc5c7c": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass",
+            "appBarColorScroll"
+          ],
+          "pos": 11
+        },
+        "transition": {
+          "type": "option",
+          "use_uuid": true,
+          "description": "Transition Effect applied to Grid",
+          "options": [
+            {
+              "value": "slideInBottom",
+              "name": "Slide In Bottom"
+            },
+            {
+              "value": "slideInTop",
+              "name": "Slide In Top"
+            },
+            {
+              "value": "slideInLeft",
+              "name": "Slide In Left"
+            },
+            {
+              "value": "slideInRight",
+              "name": "Slide In Right"
+            },
+            {
+              "value": "bounceInTop",
+              "name": "Bounce In Top"
+            },
+            {
+              "value": "zoom",
+              "name": "Zoom"
+            },
+            {
+              "value": "fadeIn",
+              "name": "Fade In"
+            },
+            {
+              "value": "fadeSlideInBottom",
+              "name": "Fade + Slide Bottom"
+            },
+            {
+              "value": "fadeSlideInTop",
+              "name": "Fade + Slide Top"
+            },
+            {
+              "value": "fadeSlideInLeft",
+              "name": "Fade + Slide Left"
+            },
+            {
+              "value": "fadeSlideInRight",
+              "name": "Fade + Slide Right"
+            },
+            {
+              "value": "zoomFadeIn",
+              "name": "Fade + Zoom"
+            },
+            {
+              "value": "rotateLeft",
+              "name": "Rotate Left"
+            },
+            {
+              "value": "rotateRight",
+              "name": "Rotate Right"
+            },
+            {
+              "value": "rotateVertCenter",
+              "name": "Rotate Vert Center"
+            },
+            {
+              "value": "rotateDiagonalBottom",
+              "name": "Rotate Diagonal Bottom"
+            },
+            {
+              "value": "rollInLeft",
+              "name": "Roll In Left"
+            },
+            {
+              "value": "rollInRight",
+              "name": "Roll In Right"
+            },
+            {
+              "value": "rollInTop",
+              "name": "Roll In Top"
+            },
+            {
+              "value": "rollInBottom",
+              "name": "Roll In Bottom"
+            },
+            {
+              "value": "swingIn",
+              "name": "Swing In"
+            }
+          ]
+        },
+        "only": {
+          "type": "options",
+          "description": "mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'\nHide the given breakpoint(s). The sizes that are checked will be hidden, where as the sizes left unchecked will be displayed based on the screen size.",
+          "options": [
+            {
+              "value": "xs",
+              "name": "xs"
+            },
+            {
+              "value": "sm",
+              "name": "sm"
+            },
+            {
+              "value": "md",
+              "name": "md"
+            },
+            {
+              "value": "lg",
+              "name": "lg"
+            },
+            {
+              "value": "xl",
+              "name": "xl"
+            }
+          ]
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": false,
+      "preview_tmpl": null,
+      "is_nestable": true,
+      "all_presets": [],
+      "preset_id": null,
       "real_name": "PageGrid",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -15011,7 +16954,7 @@
       "name": "PageGridItem",
       "display_name": null,
       "created_at": "2020-11-22T19:21:24.596Z",
-      "updated_at": "2020-12-01T23:09:10.113Z",
+      "updated_at": "2021-01-04T22:46:03.296Z",
       "id": 1202921,
       "schema": {
         "content": {
@@ -15052,7 +16995,11 @@
             "PostCard",
             "PricingCard",
             "Cool",
-            "StyledList"
+            "StyledList",
+            "NestedGrid",
+            "ContactButton",
+            "ImageScrollBar",
+            "Divider"
           ],
           "pos": 0,
           "description": "Content passed to MuiGrid to render    * components: MuiButtonRedirect,     MuiCard,     MuiTypography,     MuiMenu,     MuiIcon,     MuiExpansionPanel,     MuiList,",
@@ -15182,6 +17129,36 @@
           "pos": 4,
           "description": "Used for items in a single row. Single row elements on the main axis will align respectively of each other."
         },
+        "rootClass": {
+          "type": "options",
+          "pos": 5,
+          "options": [
+            {
+              "value": "margin-left: 9%",
+              "name": "Margin Left"
+            },
+            {
+              "value": "margin-top: 25px",
+              "name": "Margin Top 25px"
+            },
+            {
+              "value": "margin-bottom: 25px",
+              "name": "Margin Bottom 25px"
+            },
+            {
+              "value": "padding-left: 10px",
+              "name": "Padding Left 10px"
+            },
+            {
+              "value": "padding-right: 10px",
+              "name": "Padding Right 10px"
+            },
+            {
+              "value": "margin-right: 20px",
+              "name": "Margin RIght 20px"
+            }
+          ]
+        },
         "spacing": {
           "type": "option",
           "use_uuid": true,
@@ -15234,12 +17211,12 @@
           "display_name": "",
           "default_value": "0",
           "required": true,
-          "pos": 5,
+          "pos": 6,
           "description": "Defines the space between items. Ranges from (0-10)"
         },
         "wrap": {
           "type": "option",
-          "pos": 6,
+          "pos": 7,
           "use_uuid": true,
           "description": "Defines whether the items are forced in a single line or can be flowed into multiple lines.",
           "options": [
@@ -15326,79 +17303,9 @@
           ],
           "required": true,
           "default_value": "false",
-          "pos": 7
+          "pos": 8
         },
         "sm": {
-          "type": "option",
-          "use_uuid": true,
-          "options": [
-            {
-              "value": "false",
-              "name": "false"
-            },
-            {
-              "value": "auto",
-              "name": "auto"
-            },
-            {
-              "value": "true",
-              "name": "true"
-            },
-            {
-              "value": "1",
-              "name": "1"
-            },
-            {
-              "value": "2",
-              "name": "2"
-            },
-            {
-              "value": "3",
-              "name": "3"
-            },
-            {
-              "value": "4",
-              "name": "4"
-            },
-            {
-              "value": "5",
-              "name": "5"
-            },
-            {
-              "value": "6",
-              "name": "6"
-            },
-            {
-              "value": "7",
-              "name": "7"
-            },
-            {
-              "value": "8",
-              "name": "8"
-            },
-            {
-              "value": "9",
-              "name": "9"
-            },
-            {
-              "value": "10",
-              "name": "10"
-            },
-            {
-              "value": "11",
-              "name": "11"
-            },
-            {
-              "value": "12",
-              "name": "12"
-            }
-          ],
-          "required": true,
-          "default_value": "false",
-          "pos": 8,
-          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
-        },
-        "md": {
           "type": "option",
           "use_uuid": true,
           "options": [
@@ -15468,6 +17375,76 @@
           "pos": 9,
           "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
         },
+        "md": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "auto",
+              "name": "auto"
+            },
+            {
+              "value": "true",
+              "name": "true"
+            },
+            {
+              "value": "1",
+              "name": "1"
+            },
+            {
+              "value": "2",
+              "name": "2"
+            },
+            {
+              "value": "3",
+              "name": "3"
+            },
+            {
+              "value": "4",
+              "name": "4"
+            },
+            {
+              "value": "5",
+              "name": "5"
+            },
+            {
+              "value": "6",
+              "name": "6"
+            },
+            {
+              "value": "7",
+              "name": "7"
+            },
+            {
+              "value": "8",
+              "name": "8"
+            },
+            {
+              "value": "9",
+              "name": "9"
+            },
+            {
+              "value": "10",
+              "name": "10"
+            },
+            {
+              "value": "11",
+              "name": "11"
+            },
+            {
+              "value": "12",
+              "name": "12"
+            }
+          ],
+          "required": true,
+          "default_value": "false",
+          "pos": 10,
+          "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
+        },
         "lg": {
           "type": "option",
           "use_uuid": true,
@@ -15535,7 +17512,7 @@
           ],
           "required": true,
           "default_value": "false",
-          "pos": 10,
+          "pos": 11,
           "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
         },
         "xl": {
@@ -15605,13 +17582,151 @@
           ],
           "required": true,
           "default_value": "false",
-          "pos": 11,
+          "pos": 12,
           "description": "Defines the number of grids the component is going to use. It's applied for the breakpoint and wider screens if not overridden."
         },
-        "rootClass": {
+        "transition": {
+          "type": "option",
+          "pos": 13,
+          "use_uuid": true,
+          "description": "Transition Effect applied to Grid Item",
+          "default_value": "",
+          "options": [
+            {
+              "value": "slideInBottom",
+              "name": "Slide In Bottom"
+            },
+            {
+              "value": "slideInLeft",
+              "name": "Slide In Left"
+            },
+            {
+              "value": "slideInRight",
+              "name": "Slide In Right"
+            },
+            {
+              "value": "bounceInTop",
+              "name": "Bounce In Top"
+            },
+            {
+              "value": "zoom",
+              "name": "Zoom"
+            },
+            {
+              "value": "fadeIn",
+              "name": "Fade In"
+            },
+            {
+              "value": "fadeSlideInBottom",
+              "name": "Fade + Slide Bottom"
+            },
+            {
+              "value": "fadeSlideInTop",
+              "name": "Fade + Slide Top"
+            },
+            {
+              "value": "fadeSlideInLeft",
+              "name": "Fade + Slide Left"
+            },
+            {
+              "value": "fadeSlideInRight",
+              "name": "Fade + Slide Right"
+            },
+            {
+              "value": "zoomFadeIn",
+              "name": "Fade + Zoom"
+            },
+            {
+              "value": "rotateLeft",
+              "name": "Rotate Left"
+            },
+            {
+              "value": "rotateRight",
+              "name": "Rotate Right"
+            },
+            {
+              "value": "rotateVertCenter",
+              "name": "Rotate Vert Center"
+            },
+            {
+              "value": "rotateDiagonalBottom",
+              "name": "Rotate Diagonal Bottom"
+            },
+            {
+              "value": "rollInLeft",
+              "name": "Roll In Left"
+            },
+            {
+              "value": "rollInRight",
+              "name": "Roll In Right"
+            },
+            {
+              "value": "rollInTop",
+              "name": "Roll In Top"
+            },
+            {
+              "value": "rollInBottom",
+              "name": "Roll In Bottom"
+            },
+            {
+              "value": "swingIn",
+              "name": "Swing In"
+            },
+            {
+              "value": "blurIn",
+              "name": "Blur In"
+            }
+          ]
+        },
+        "tab-bbeb0a89-cc9d-4eb6-a2f0-9543a0b613e5": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "transition",
+            "only",
+            "backgroundImageUrl"
+          ],
+          "pos": 14
+        },
+        "only": {
           "type": "options",
-          "pos": 12,
-          "options": []
+          "description": "mui prop array of: 'xs' | 'sm' | 'md' | 'lg' | 'xl'\nHide the given breakpoint(s). The sizes that are checked will be hidden, where as the sizes left unchecked will be displayed based on the screen size.",
+          "options": [
+            {
+              "value": "xs",
+              "name": "xs"
+            },
+            {
+              "value": "sm",
+              "name": "sm"
+            },
+            {
+              "value": "md",
+              "name": "md"
+            },
+            {
+              "value": "lg",
+              "name": "lg"
+            },
+            {
+              "value": "xl",
+              "name": "xl"
+            }
+          ],
+          "pos": 15
+        },
+        "tab-b4fea6d7-f9bb-41ff-ae09-10d775d48b4d": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 16
+        },
+        "backgroundImageUrl": {
+          "type": "text",
+          "regex": "",
+          "description": "url for background img"
         }
       },
       "image": null,
@@ -15620,7 +17735,7 @@
       "preview_tmpl": null,
       "is_nestable": true,
       "all_presets": [],
-      "preset_id": null,
+      "preset_id": 805490,
       "real_name": "PageGridItem",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -15629,12 +17744,12 @@
       "name": "PostCard",
       "display_name": null,
       "created_at": "2020-11-29T20:59:53.612Z",
-      "updated_at": "2020-12-01T17:50:41.024Z",
+      "updated_at": "2020-12-18T21:03:13.389Z",
       "id": 1211941,
       "schema": {
         "overline": {
           "type": "text",
-          "required": true,
+          "required": false,
           "pos": 0
         },
         "heading": {
@@ -15642,28 +17757,37 @@
           "required": true,
           "pos": 1
         },
+        "icon": {
+          "type": "bloks",
+          "restrict_components": true,
+          "component_whitelist": [
+            "Icon"
+          ],
+          "maximum": "1",
+          "pos": 2
+        },
         "body": {
           "type": "textarea",
           "required": true,
-          "pos": 2
+          "pos": 3
         },
         "image": {
           "type": "text",
           "required": true,
-          "pos": 3
+          "pos": 4
         },
         "imgAlt": {
           "type": "text",
           "required": true,
           "default_value": "",
           "description": "alt text for the image if url cant display",
-          "pos": 4
+          "pos": 5
         },
         "imgTitle": {
           "type": "text",
           "required": true,
           "description": "the title for the image",
-          "pos": 5
+          "pos": 6
         },
         "cardActions": {
           "type": "bloks",
@@ -15673,16 +17797,66 @@
           "component_whitelist": [
             "CardActions"
           ],
-          "pos": 6
-        },
-        "icon": {
-          "type": "bloks",
-          "restrict_components": true,
-          "component_whitelist": [
-            "Icon"
-          ],
-          "maximum": "1",
           "pos": 7
+        },
+        "tab-8750c155-7e93-4683-8fbb-01753f768f36": {
+          "type": "tab",
+          "display_name": "Optional",
+          "keys": [
+            "cardActions",
+            "icon",
+            "preStyledOptions"
+          ],
+          "pos": 8
+        },
+        "tab-157fdc1f-649a-44c9-883d-6d37bcfe5c14": {
+          "type": "tab",
+          "display_name": "Advance",
+          "keys": [],
+          "pos": 9
+        },
+        "preStyledOptions": {
+          "type": "option",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "shadowCenter",
+              "name": "Shadow Center"
+            },
+            {
+              "value": "shadowTop",
+              "name": "Shadow Top"
+            },
+            {
+              "value": "shadowBottom",
+              "name": "Shadow Bottom"
+            },
+            {
+              "value": "shadowLeft",
+              "name": "Shadow Left"
+            },
+            {
+              "value": "shadowRight",
+              "name": "Shadow RIght"
+            },
+            {
+              "value": "shadow3dTR",
+              "name": "Shadow Pop TR"
+            },
+            {
+              "value": "shadow3dBR",
+              "name": "Shadow Pop BR"
+            },
+            {
+              "value": "shadow3dBL",
+              "name": "Shadow Pop BL"
+            },
+            {
+              "value": "shadow3dTL",
+              "name": "Shadow Pop TL"
+            }
+          ],
+          "description": "Pre made css styling options"
         }
       },
       "image": null,
@@ -15690,8 +17864,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805491,
+          "name": "Basic",
+          "component_id": 1211941,
+          "image": ""
+        }
+      ],
+      "preset_id": 805491,
       "real_name": "PostCard",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -15700,7 +17881,7 @@
       "name": "PricingCard",
       "display_name": null,
       "created_at": "2020-11-30T21:08:47.797Z",
-      "updated_at": "2020-11-30T21:11:40.844Z",
+      "updated_at": "2020-12-07T19:09:33.168Z",
       "id": 1213508,
       "schema": {
         "title": {
@@ -15742,8 +17923,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805492,
+          "name": "Basic",
+          "component_id": 1213508,
+          "image": ""
+        }
+      ],
+      "preset_id": 805492,
       "real_name": "PricingCard",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -15752,12 +17940,12 @@
       "name": "ReviewCard",
       "display_name": null,
       "created_at": "2020-11-29T20:22:18.210Z",
-      "updated_at": "2020-12-01T17:52:18.103Z",
+      "updated_at": "2020-12-07T23:45:53.217Z",
       "id": 1211915,
       "schema": {
         "overline": {
           "type": "text",
-          "required": true,
+          "required": false,
           "pos": 0
         },
         "heading": {
@@ -15803,8 +17991,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800655,
+          "name": "Basic",
+          "component_id": 1211915,
+          "image": ""
+        }
+      ],
+      "preset_id": 800655,
       "real_name": "ReviewCard",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -15831,7 +18026,7 @@
       "name": "Span",
       "display_name": null,
       "created_at": "2020-11-22T19:21:24.863Z",
-      "updated_at": "2020-11-22T19:21:24.863Z",
+      "updated_at": "2020-12-08T22:13:06.991Z",
       "id": 1202922,
       "schema": {
         "content": {
@@ -15978,14 +18173,44 @@
         },
         "rootClass": {
           "type": "options",
-          "options": [],
+          "options": [
+            {
+              "value": "color: #FFF",
+              "name": "White Font"
+            },
+            {
+              "value": "font-weight: bold",
+              "name": "Bold"
+            },
+            {
+              "value": "font-style: italic",
+              "name": "Italic"
+            },
+            {
+              "value": "font-weight: 600",
+              "name": "font weight 600"
+            },
+            {
+              "value": "text-decoration: underline",
+              "name": "Underline"
+            },
+            {
+              "value": "text-decoration: overline",
+              "name": "Overline"
+            },
+            {
+              "value": "text-decoration: underline overline",
+              "name": "Overline / Underline"
+            }
+          ],
           "folder_slug": "",
           "description": "",
           "display_name": "",
           "translatable": false,
           "required": false,
           "external_datasource": "",
-          "pos": 4
+          "pos": 4,
+          "min_options": ""
         }
       },
       "image": null,
@@ -16003,7 +18228,7 @@
       "name": "StyledList",
       "display_name": null,
       "created_at": "2020-12-01T21:15:17.701Z",
-      "updated_at": "2020-12-01T23:41:55.929Z",
+      "updated_at": "2020-12-07T19:10:17.943Z",
       "id": 1215329,
       "schema": {
         "width": {
@@ -16028,8 +18253,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805493,
+          "name": "Basic",
+          "component_id": 1215329,
+          "image": ""
+        }
+      ],
+      "preset_id": 805493,
       "real_name": "StyledList",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -17201,7 +19433,7 @@
       "name": "Tabs",
       "display_name": null,
       "created_at": "2020-11-22T19:21:25.959Z",
-      "updated_at": "2020-11-22T19:21:25.959Z",
+      "updated_at": "2020-12-07T19:45:07.231Z",
       "id": 1202926,
       "schema": {
         "tabs": {
@@ -17373,8 +19605,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 805571,
+          "name": "Basic",
+          "component_id": 1202926,
+          "image": ""
+        }
+      ],
+      "preset_id": 805571,
       "real_name": "Tabs",
       "component_group_uuid": "4eca10b1-f74c-417f-989b-427013e8af54",
       "component_group_name": "Templates"
@@ -17583,7 +19822,7 @@
       "name": "TrendyListItem",
       "display_name": null,
       "created_at": "2020-12-01T23:41:16.289Z",
-      "updated_at": "2020-12-01T23:50:24.639Z",
+      "updated_at": "2020-12-09T17:09:22.158Z",
       "id": 1215458,
       "schema": {
         "src": {
@@ -17608,7 +19847,10 @@
         },
         "subtitle": {
           "type": "text",
-          "pos": 3
+          "pos": 3,
+          "default_value": "0.875rem",
+          "description": "Font size of subtitle text.",
+          "display_name": ""
         },
         "tab-1850230c-dd3c-4d58-920e-13399544e450": {
           "type": "tab",
@@ -17617,7 +19859,9 @@
             "infoText",
             "infoIcon",
             "iconButton",
-            "infoText"
+            "infoText",
+            "titleSize",
+            "subtitleSize"
           ],
           "pos": 6
         },
@@ -17629,6 +19873,18 @@
         },
         "infoText": {
           "type": "text"
+        },
+        "titleSize": {
+          "type": "text",
+          "description": "Font size of title text",
+          "display_name": "",
+          "default_value": "0.875rem"
+        },
+        "subtitleSize": {
+          "type": "text",
+          "description": "Font size of subtitle text.",
+          "display_name": "",
+          "default_value": "0.875rem"
         }
       },
       "image": null,
@@ -17636,8 +19892,15 @@
       "is_root": false,
       "preview_tmpl": null,
       "is_nestable": true,
-      "all_presets": [],
-      "preset_id": null,
+      "all_presets": [
+        {
+          "id": 800609,
+          "name": "basic",
+          "component_id": 1215458,
+          "image": ""
+        }
+      ],
+      "preset_id": 800609,
       "real_name": "TrendyListItem",
       "component_group_uuid": "8bb47191-4e7a-4cb5-8978-23011e5d9958",
       "component_group_name": "Organisms"
@@ -17646,7 +19909,7 @@
       "name": "Typography",
       "display_name": null,
       "created_at": "2020-11-22T19:21:26.203Z",
-      "updated_at": "2020-11-24T21:06:52.854Z",
+      "updated_at": "2021-01-04T22:30:26.912Z",
       "id": 1202927,
       "schema": {
         "content": {
@@ -17659,6 +19922,26 @@
           ],
           "required": true,
           "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "options": [
+            {
+              "value": "margin-top: 10px",
+              "name": "Margin Top 10px"
+            },
+            {
+              "value": "margin-bottom: 10px",
+              "name": "Margin Bottom 10px"
+            }
+          ],
+          "folder_slug": "",
+          "description": "",
+          "display_name": "",
+          "translatable": false,
+          "required": false,
+          "external_datasource": "",
+          "pos": 1
         },
         "align": {
           "type": "option",
@@ -17687,7 +19970,7 @@
           ],
           "default_value": "left",
           "required": true,
-          "pos": 1
+          "pos": 2
         },
         "color": {
           "type": "option",
@@ -17724,30 +20007,54 @@
           ],
           "default_value": "initial",
           "required": true,
-          "pos": 2
+          "pos": 3
         },
         "width": {
           "type": "text",
           "required": true,
           "default_value": "100%",
-          "pos": 3
+          "pos": 4
         },
         "height": {
           "type": "text",
           "required": true,
           "default_value": "100%",
-          "pos": 4
-        },
-        "rootClass": {
-          "type": "options",
-          "options": [],
-          "folder_slug": "",
-          "description": "",
-          "display_name": "",
-          "translatable": false,
-          "required": false,
-          "external_datasource": "",
           "pos": 5
+        },
+        "transition": {
+          "type": "option",
+          "pos": 6,
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "textExpand",
+              "name": "Expand"
+            },
+            {
+              "value": "textFocusIn",
+              "name": "Focus In"
+            },
+            {
+              "value": "textExpandFwdTop",
+              "name": "Expand Forward Top"
+            }
+          ]
+        },
+        "tab-f8d31b58-16f4-4396-b57f-8b0ed18585df": {
+          "type": "tab",
+          "display_name": "optional",
+          "keys": [
+            "transition"
+          ],
+          "pos": 7
+        },
+        "tab-9d92ec54-303a-463c-b978-6a9f66a2b07b": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 8
         }
       },
       "image": null,
@@ -17765,56 +20072,81 @@
       "name": "Video",
       "display_name": null,
       "created_at": "2020-11-24T04:12:26.607Z",
-      "updated_at": "2020-11-24T04:12:26.607Z",
+      "updated_at": "2021-01-04T17:08:44.522Z",
       "id": 1204892,
       "schema": {
         "url": {
           "type": "text",
-          "description": "Url for the video"
+          "description": "Url for the video",
+          "pos": 0
+        },
+        "rootClass": {
+          "type": "options",
+          "description": "* StoryBlok multiselect of CSS Classes\n* Applied to video Div",
+          "pos": 1,
+          "options": [
+            {
+              "value": "margin-top: 50px",
+              "name": "Margin Top 50px"
+            }
+          ]
         },
         "height": {
           "type": "text",
           "description": "Height of the video",
-          "default_value": "500px"
+          "default_value": "500px",
+          "pos": 2
         },
         "width": {
           "type": "text",
           "description": "Width of the video.",
-          "default_value": "500px"
+          "default_value": "500px",
+          "pos": 3
         },
         "controls": {
           "type": "boolean",
           "description": "   * Set to true or false to display native player controls\n   * Controls cannot be hidden for Wistia videos",
-          "display_name": ""
+          "display_name": "",
+          "pos": 4
         },
         "playing": {
           "type": "boolean",
-          "description": "* Set to true or false to pause or play the media."
+          "description": "* Set to true or false to pause or play the media.",
+          "pos": 5
         },
         "loop": {
           "type": "boolean",
-          "description": "* Set to true or false to loop the media."
+          "description": "* Set to true or false to loop the media.",
+          "pos": 6
         },
         "light": {
           "type": "boolean",
-          "description": "   * Set to true to show just the video thumbnail, which loads the full player on click\n   * Pass in an image URL to override the preview image"
+          "description": "   * Set to true to show just the video thumbnail, which loads the full player on click\n   * Pass in an image URL to override the preview image",
+          "pos": 7
         },
         "playbackRate": {
           "type": "number",
           "description": "   * Set the playback rate of the player\n   * Only supported by YouTube, Wistia, and file paths",
-          "default_value": "1"
+          "default_value": "1",
+          "pos": 8
         },
         "playsinline": {
           "type": "boolean",
-          "description": "* Applies the playsinline attribute where supported."
+          "description": "* Applies the playsinline attribute where supported.",
+          "pos": 9
         },
         "pip": {
           "type": "boolean",
-          "description": "   * Set to true or false to enable or disable picture-in-picture mode\n   * Only available when playing file URLs in certain browsers"
+          "description": "   * Set to true or false to enable or disable picture-in-picture mode\n   * Only available when playing file URLs in certain browsers",
+          "pos": 10
         },
-        "rootClass": {
-          "type": "options",
-          "description": "* StoryBlok multiselect of CSS Classes\n* Applied to video Div"
+        "tab-b7e9e9f6-5dfd-446f-9d62-1e2fc08ba863": {
+          "type": "tab",
+          "display_name": "Advanced",
+          "keys": [
+            "rootClass"
+          ],
+          "pos": 11
         }
       },
       "image": null,
