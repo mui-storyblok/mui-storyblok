@@ -126,7 +126,7 @@ ChatzListItem.propTypes = {
   subtitleSize: PropTypes.string,
   iconButton: PropTypes.arrayOf(PropTypes.shape()),
   infoIcon: PropTypes.arrayOf(PropTypes.shape()),
-  imageSize: PropTypes.number,
+  imageSize: PropTypes.string,
 };
 
 ChatzListItem.defaultProps = {

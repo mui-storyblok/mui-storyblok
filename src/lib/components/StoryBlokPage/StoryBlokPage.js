@@ -101,12 +101,14 @@ export class StoryBlokPage extends Component {
       } else {
         route = window.location.pathname.slice(1);
       }
+      console.log('********************* ROUTE **************** ', route);
       const story = await Storyblok.get(route, this.props.accessToken, this.props.version);
       const muiTheme = await this.pickTheme(story[1], this.props.theme);
       this.setState({ muiTheme });
 
       this.setStory(story[0]);
     } catch (err) {
+      console.log('CATCH BLOCK ENTERED get Page -------------------------', err);
       await this.pageNotFound();
     }
   };

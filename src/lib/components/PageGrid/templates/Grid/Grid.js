@@ -59,8 +59,6 @@ const Grid = ({
     gridBackgroundColor = { backgroundColor: backgroundColor.color };
   }
 
-  console.log(backgroundColor);
-
   const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass, ...gridBackgroundColor });
 
   return (

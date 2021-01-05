@@ -1,15 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GridItem /> snapshot 1`] = `
-<div
-  className="MuiGrid-root makeStyles-root-11  MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
-  data-blok-c=""
-  data-blok-uid=""
->
-  <div
-    className="MuiTypography-root makeStyles-root-12 Typography storyblok--outline MuiTypography-body1"
-    data-blok-c="{\\"name\\": \\"Typography\\", \\"space\\": \\"48408\\", \\"uid\\": \\"947be9f0-47c3-4315-a95a-550f0c560eb5\\", \\"id\\": \\"307934\\"}"
-    data-blok-uid=""
-  />
-</div>
-`;
+exports[`<GridItem /> snapshot 1`] = `null`;

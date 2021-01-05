@@ -16,6 +16,17 @@ $default-line-width: 100%;
   animation: expandIn 1s ease-out forwards;
 }
 
+.textCenterHR {
+  display: flex;
+  flex-direction: row;
+
+  &:before, &:after {
+    content: "";
+    flex: 1 1;
+    margin: auto;
+  }
+}
+
 @keyframes expandIn {
   0% {
     width: 0;

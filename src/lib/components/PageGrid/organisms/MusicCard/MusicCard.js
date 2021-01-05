@@ -50,12 +50,16 @@ export const MusicCard = React.memo(({
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
     >
-      <CardMedia
-        image={image}
-        style={{ ...styles.media, ...mediaStyles.root }}
-        alt={imgAlt}
-        title={imgTitle}
-      />
+      { image
+        && (
+        <CardMedia
+          image={image}
+          style={{ ...styles.media, ...mediaStyles.root }}
+          alt={imgAlt}
+          title={imgTitle}
+        />
+        )
+      }
       <CardContent>
         <TextInfo
           classes={textCardContentStyles}
@@ -83,14 +87,14 @@ MusicCard.propTypes = {
   /** overline body  */
   body: PropTypes.string.isRequired,
   /** imgAlt text  */
-  imgAlt: PropTypes.string.isRequired,
+  imgAlt: PropTypes.string,
   /** imgTitle text  */
-  imgTitle: PropTypes.string.isRequired,
+  imgTitle: PropTypes.string,
   /**
    * url for image
    * Image to be displayed as a background image
    * */
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string,
   /** Pre made css styling options  */
   preStyledOptions: PropTypes.string,
   /** overline text */
@@ -111,4 +115,7 @@ MusicCard.defaultProps = {
   storyblokClass: '',
   overline: '',
   preStyledOptions: '',
+  image: '',
+  imgAlt: '',
+  imgTitle: '',
 };

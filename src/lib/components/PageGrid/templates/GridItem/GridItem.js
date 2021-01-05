@@ -52,6 +52,7 @@ const GridItem = ({
       },
     };
   }
+
   const styles = Storyblok.arrayToMuiStyles(rootClass, { ...heroClass });
 
   return (
@@ -232,7 +233,7 @@ GridItem.defaultProps = {
   lg: false,
   md: false,
   sm: false,
-  spacing: '2',
+  spacing: '0',
   wrap: 'wrap',
   xl: false,
   xs: false,
