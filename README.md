@@ -67,6 +67,8 @@ In your `.bash_profile` or `.bashrc` add two exports (remember to source it afte
 `export STORYBLOK_SPACE_ID="STORYBLOK_SPACE_ID"`
   - > [STORYBLOK_SPACE_ID DOCS ](https://www.storyblok.com/docs/api/management#core-resources/spaces/spaces)
 
+`export STORYBLOK_ACCESS_TOKEN="STORYBLOK_ACCESS_TOKEN"`
+  - > [STORYBLOK_ACCESS_TOKEN DOCS ](https://www.storyblok.com/docs/api/content-delivery#topics/authentication)
 
 ## Storyblok Command Line Interface 
 
@@ -92,6 +94,12 @@ This will add three demo pages to storyblok space.
 Once env is configured run cmd:
 `npx migrate-storyblok-components`
 This will add all components to your storyblok account.
+
+###### To migrate mui-storyblok presets to space
+###### WARNING!!: only do this on a new space alittle hacky will not override existing presets with same name but will update all presets defaults
+Once env is configured run cmd:
+`npx migrate-storyblok-presets`
+This will add all presets to the components in your storyblok account.
 
 ### Custom Components in MuiStoryblok
 ###### Usage:
