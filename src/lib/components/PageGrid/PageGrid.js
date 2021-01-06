@@ -47,7 +47,7 @@ const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
 const NestedGrid = lazy(() => import('lib/components/PageGrid/templates/NestedGrid/NestedGrid'));
 const ImageScrollBar = lazy(() => import('lib/components/PageGrid/templates/ImageScrollBar/ImageScrollBar'));
 
-const components = {
+export const components = {
   Icon,
   Image,
   Video,
