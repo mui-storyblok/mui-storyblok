@@ -21,6 +21,7 @@ const asyncCmd = (command) => {
 
 const migrateNewMuiStoryblok = async () => {
   await asyncCmd('npx migrate-storyblok-components');
+  await asyncCmd('migrate-storyblok-presets');
   await asyncCmd('npx migrate-storyblok-stories');
 };
 
