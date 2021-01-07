@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import MuiCircularProgress from '../MuiCircularProgress/MuiCircularProgress';
 import Storyblok from '../../utils/Storyblok';
-import Blok from './components/Blok/Blok';
-import MuiTransitions from '../MuiTransitions/MuiTransitions';
 import styles from './StoryBlokPage.module.scss';
 import downloadSbAsset from '../../utils/json-sb-asset';
 import { renderComponents } from '../../utils/customComponents';
@@ -22,8 +20,6 @@ export class StoryBlokPage extends Component {
   };
 
   components = {
-    Blok,
-    MuiTransitions,
     PageGrid,
   }
 

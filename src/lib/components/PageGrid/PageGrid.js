@@ -6,6 +6,7 @@ import GridItem from 'lib/components/PageGrid/templates/GridItem/GridItem';
 import { renderComponentsWithBridge } from 'lib/utils/customComponents';
 
 // atoms
+const Button = lazy(() => import('lib/components/PageGrid/atoms/Button/Button'));
 const Icon = lazy(() => import('lib/components/PageGrid/atoms/Icon/Icon'));
 const Image = lazy(() => import('lib/components/PageGrid/atoms/Image/Image'));
 const Video = lazy(() => import('lib/components/PageGrid/atoms/Video/Video'));
@@ -47,7 +48,8 @@ const Tabs = lazy(() => import('lib/components/PageGrid/templates/Tabs/Tabs'));
 const NestedGrid = lazy(() => import('lib/components/PageGrid/templates/NestedGrid/NestedGrid'));
 const ImageScrollBar = lazy(() => import('lib/components/PageGrid/templates/ImageScrollBar/ImageScrollBar'));
 
-const components = {
+export const components = {
+  Button,
   Icon,
   Image,
   Video,

@@ -1,6 +1,6 @@
 {
   "name": "mui-storyblok",
-  "version": "1.9.1",
+  "version": "2.0.0",
   "description": "use react and mui to build pages with storyblok",
   "author": "apjames93",
   "license": "MIT",
@@ -162,11 +162,13 @@
     "build-styleguide": "babel src/lib --out-dir dist --copy-files && npm run styleguide:build",
     "deploy-style-guide": "npm run styleguide:build && aws s3 sync styleguide/ s3://mui-storyblok-style-guide.com/ --delete",
     "test-report": "react-scripts test --watchAll=false --coverage",
-    "export-storyblok-components": "./cli/exportStoryblokComponents.js"
+    "export-storyblok-components": "./cli/exportStoryblokComponents.js",
+    "export-storyblok-exportPresets": "./cli/exportPresets.js"
   },
   "bin": {
     "migrate-storyblok-stories": "./cli/migrateStoryblokStories.js",
     "migrate-storyblok-components": "./cli/migrateStoryblokComponents.js",
+    "migrate-storyblok-presets": "./cli/migratePresets.js",
     "migrate-new-mui-storyblok": "./cli/migrateNewMuiStoryblok.js"
   },
   "browserslist": {
