@@ -4,12 +4,13 @@ import renderer from 'react-test-renderer';
 import ScrollButton from './ScrollButton';
 
 
-function setup() {
+function setup(tooltip = []) {
   const props = {
     button: [{
       component: 'MuiButton',
       buttonText: 'buttonText',
     }],
+    tooltip,
   };
   const comp = mount(<ScrollButton {...props} />);
   return { comp, props };
@@ -31,10 +32,15 @@ describe('<ScrollButton />', () => {
     const originalWindow = window.scrollBy;
     window.scrollBy = jest.fn();
     const { comp } = setup();
-    // console.log(comp.debug());
     const button = comp.find('Button').first();
     button.simulate('click');
     expect(window.scrollBy).toHaveBeenCalled();
     window.scrollBy = originalWindow;
+  });
+
+  it('renders tooltip if tooltip is provided to sroll button', () => {
+    const { comp } = setup([{ text: 'apples' }]);
+    const tooltip = comp.find('MuiTooltip').first();
+    expect(tooltip).toBeDefined();
   });
 });
