@@ -19,6 +19,7 @@ const ButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/Butt
 const IconButtonDownload = lazy(() => import('lib/components/PageGrid/molecules/IconButtonDownload/IconButtonDownload'));
 const IconButtonRedirect = lazy(() => import('lib/components/PageGrid/molecules/IconButtonRedirect/IconButtonRedirect'));
 const ContactButton = lazy(() => import('lib/components/PageGrid/molecules/ContactButton/ContactButton'));
+const ScrollButton = lazy(() => import('lib/components/PageGrid/molecules/ScrollButton/ScrollButton'));
 
 // organisms
 const Accordion = lazy(() => import('lib/components/PageGrid/organisms/Accordion/Accordion'));
@@ -82,6 +83,7 @@ export const components = {
   IconButtonDrawer,
   MobileStepper,
   NestedGrid,
+  ScrollButton,
   NotificationBanner,
   Tabs,
   ImageScrollBar,
