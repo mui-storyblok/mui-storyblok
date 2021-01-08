@@ -132,7 +132,7 @@ export class StoryBlokPage extends Component {
         direction="row"
         justify="center"
         alignItems="center"
-        styles={this.props.pageStyles}
+        style={this.props.pageStyles}
       >
         {this.state.loading && !this.state.error && (
           <MuiCircularProgress />
