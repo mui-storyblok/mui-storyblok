@@ -3,6 +3,7 @@
 exports[`<MuiAppBar /> snapshot 1`] = `
 <div
   className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  styles={Object {}}
 >
   <div
     className="MuiCircularProgress-root makeStyles-root-1 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"

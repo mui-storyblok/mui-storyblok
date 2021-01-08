@@ -132,6 +132,7 @@ export class StoryBlokPage extends Component {
         direction="row"
         justify="center"
         alignItems="center"
+        styles={this.props.pageStyles}
       >
         {this.state.loading && !this.state.error && (
           <MuiCircularProgress />
@@ -168,6 +169,7 @@ StoryBlokPage.propTypes = {
    * override url theme to edit in mui-theme tool
    */
   useObjectTheme: PropTypes.bool,
+  pageStyles: PropTypes.shape({}),
 };
 
 StoryBlokPage.defaultProps = {
@@ -175,4 +177,5 @@ StoryBlokPage.defaultProps = {
   useObjectTheme: false,
   dynamicSlug: 'page-welcome',
   staticSlug: '',
+  pageStyles: {},
 };
