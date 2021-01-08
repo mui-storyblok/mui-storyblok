@@ -3,16 +3,33 @@
 exports[`<StoryBlokPage /> snapshot 1`] = `
 <div
   className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
-  styles={Object {}}
+  style={Object {}}
 >
-  <span
+  <div
+    className="MuiCircularProgress-root makeStyles-root-1 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+    role="progressbar"
     style={
       Object {
-        "color": "red",
+        "height": "40",
+        "width": "40",
       }
     }
   >
-    Unable to fetch page content please refresh and try again or check to make sure you are at the right url
-  </span>
+    <svg
+      className="MuiCircularProgress-svg"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+        cx={44}
+        cy={44}
+        fill="none"
+        r={20.5}
+        strokeWidth={3}
+        style={Object {}}
+      />
+    </svg>
+  </div>
+  
 </div>
 `;
