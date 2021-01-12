@@ -11,11 +11,14 @@ const Typography = lazy(() => import('lib/components/PageGrid/molecules/Typograp
 const List = lazy(() => import('lib/components/PageGrid/organisms/List/List'));
 /* istanbul ignore next */
 const ListDropdown = lazy(() => import('lib/components/PageGrid/organisms/ListDropdown/ListDropdown'));
+/* istanbul ignore next */
+const Card = lazy(() => import('lib/components/PageGrid/organisms/Card/Card'));
 
 const components = {
   Typography,
   List,
   ListDropdown,
+  Card,
 };
 
 const DialogContent = ({
@@ -59,7 +62,7 @@ DialogContent.propTypes = {
   dividers: PropTypes.bool,
   /** 'MuiTypography', 'MuiAccordion', 'BlokForm' */
   content(props, propName, componentName) {
-    const comps = ['Typography', 'List'];
+    const comps = ['Typography', 'List', 'Card'];
     return validComponents(props, propName, componentName, comps, 1);
   },
   /** storyblok prop for when in editor to allow click bridge */
