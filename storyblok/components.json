@@ -2443,7 +2443,7 @@
       "name": "DialogContent",
       "display_name": null,
       "created_at": "2020-11-24T04:11:34.357Z",
-      "updated_at": "2020-11-25T16:42:26.671Z",
+      "updated_at": "2021-01-12T23:02:59.089Z",
       "id": 1204877,
       "schema": {
         "content": {
@@ -2452,7 +2452,8 @@
           "component_whitelist": [
             "Typography",
             "List",
-            "ListDropdown"
+            "ListDropdown",
+            "Card"
           ],
           "pos": 0,
           "description": "content to render in Dialog"
