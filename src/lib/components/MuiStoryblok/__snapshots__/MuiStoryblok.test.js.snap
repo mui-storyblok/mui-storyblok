@@ -2,12 +2,15 @@
 
 exports[`<MuiStoryblok /> snapshot 1`] = `
 <div
-  className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
   style={Object {}}
 >
-  <div>
-    Aloha
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+  >
+    <div>
+      Aloha
+    </div>
+    
   </div>
-  
 </div>
 `;
