@@ -22,6 +22,9 @@ const Dialog = ({
   open,
   toggleDialog,
   rootClass,
+  fullWidth,
+  fullScreen,
+  maxWidth,
   content,
   dataBlokC,
   dataBlokUid,
@@ -36,6 +39,9 @@ const Dialog = ({
       className={`${dialogStyles.root} ${storyblokClass}`}
       data-blok-c={dataBlokC}
       data-blok-uid={dataBlokUid}
+      fullWidth={fullWidth}
+      fullScreen={fullScreen}
+      maxWidth={maxWidth}
     >
       {content.map((component, key) => (
         <Suspense fallback={<></>}>
@@ -58,6 +64,14 @@ Dialog.propTypes = {
   },
   /** passed down from parent component to hide or show Dialog */
   open: PropTypes.bool,
+  /** If true, the dialog will be full-screen */
+  fullWidth: PropTypes.bool,
+  /** If true, the dialog stretches to maxWidth. */
+  fullScreen: PropTypes.bool,
+  /** Determine the max-width of the dialog.
+   * The dialog width grows with the size of the screen. Set to false to disable maxWidth.
+  */
+  maxWidth: PropTypes.string,
   /** passed down from parent component to hide or show Dialog */
   toggleDialog: PropTypes.func.isRequired,
   /** storyblok prop for when in editor to allow click bridge */
@@ -75,4 +89,7 @@ Dialog.defaultProps = {
   dataBlokC: '',
   dataBlokUid: '',
   storyblokClass: '',
+  fullWidth: false,
+  fullScreen: false,
+  maxWidth: 'sm',
 };
