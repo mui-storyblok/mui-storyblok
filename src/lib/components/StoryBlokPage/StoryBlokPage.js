@@ -127,28 +127,29 @@ export class StoryBlokPage extends Component {
 
   render() {
     return (
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        style={this.props.pageStyles}
-      >
-        {this.state.loading && !this.state.error && (
-          <MuiCircularProgress />
-        )}
-        {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
-        {!this.state.loading && (
-        <MuiThemeProvider theme={this.state.muiTheme}>
-          <CssBaseline />
-          <div className={styles.container}>
-            {this.state.story
-                && this.state.story
-                  .map((item, index) => renderComponents(this.components, item, index))}
-          </div>
-        </MuiThemeProvider>
-        )}
-      </Grid>
+      <div style={this.props.pageStyles}>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
+          {this.state.loading && !this.state.error && (
+            <MuiCircularProgress />
+          )}
+          {this.state.error && <span style={{ color: 'red' }}>{this.state.error}</span>}
+          {!this.state.loading && (
+          <MuiThemeProvider theme={this.state.muiTheme}>
+            <CssBaseline />
+            <div className={styles.container}>
+              {this.state.story
+                  && this.state.story
+                    .map((item, index) => renderComponents(this.components, item, index))}
+            </div>
+          </MuiThemeProvider>
+          )}
+        </Grid>
+      </div>
     );
   }
 }
