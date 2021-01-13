@@ -2366,7 +2366,7 @@
       "name": "Dialog",
       "display_name": null,
       "created_at": "2020-11-24T04:11:33.322Z",
-      "updated_at": "2020-12-03T05:37:45.108Z",
+      "updated_at": "2021-01-13T00:21:11.764Z",
       "id": 1204875,
       "schema": {
         "content": {
@@ -2384,6 +2384,46 @@
           "type": "options",
           "pos": 2,
           "description": "* This takes pure css and will override or extend the styles applied to the component. Talk to a dev about setting up root classes for specific components "
+        },
+        "fullWidth": {
+          "type": "boolean",
+          "description": "If true, the dialog will be full-screen"
+        },
+        "fullScreen": {
+          "type": "boolean",
+          "description": "If true, the dialog stretches to maxWidth."
+        },
+        "maxWidth": {
+          "type": "option",
+          "default_value": "sm",
+          "use_uuid": true,
+          "options": [
+            {
+              "value": "false",
+              "name": "false"
+            },
+            {
+              "value": "xs",
+              "name": "xs"
+            },
+            {
+              "value": "xl",
+              "name": "xl"
+            },
+            {
+              "value": "sm",
+              "name": "sm"
+            },
+            {
+              "value": "md",
+              "name": "md"
+            },
+            {
+              "value": "lg",
+              "name": "lg"
+            }
+          ],
+          "description": "Determine the max-width of the dialog. The dialog width grows with the size of the screen. Set to false to disable maxWidth."
         }
       },
       "image": null,
