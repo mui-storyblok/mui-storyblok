@@ -123,7 +123,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "3.0.0-beta.5",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-styleguidist": "^11.0.4",
     "react-test-renderer": "^16.3.2",
     "rff-wrapper": "^1.0.13",
@@ -139,7 +139,7 @@
     "prop-types": "^15.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "rff-wrapper": "^1.0.13",
     "material-ui-audio-player": "^1.1.9",
     "storyblok": "^3.2.0"
